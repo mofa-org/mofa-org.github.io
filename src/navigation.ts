@@ -40,6 +40,6 @@ export const headerData = {
 };
 export const footerData = {
   footNote: `
-    Created by <a class="text-blue-600 underline dark:text-muted" href="https://relevantstudy.com/"> Relevant Study LLC </a> · All rights reserved.
+    Created by <a class="text-blue-600 underline dark:text-muted" href="https://mofa.ai/"> Relevant Study LLC </a> · All rights reserved.
   `,
 };

@@ -1,6 +1,6 @@
 site:
-  name: RelevantStudy
-  site: 'https://relevantstudy.com'
+  name: MoFA, Everything Agent
+  site: 'https://mofa.ai'
   base: '/'
   trailingSlash: false
 
@@ -9,9 +9,9 @@ site:
 # Default SEO metadata
 metadata:
   title:
-    default: Relevant Study
-    template: '%s — Relevant Study'
-  description: "\U0001F680 Suitable for Startups, Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages & Blogs."
+    default: MoFA, Everything Agent
+    template: '%s — MoFA'
+  description: "\U0001F680 An Agent Framework for Composition AI."
   robots:
     index: true
     follow: true
