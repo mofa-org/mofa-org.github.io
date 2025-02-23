@@ -1,0 +1,41 @@
+---
+import Layout from '~/layouts/LandingLayout.astro';
+
+import Hero from '~/components/widgets/Hero.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Agentic Red Alert Hackathon',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero2 Widget ******************* -->
+
+  <Hero
+    tagline="A GOSIM Super Agent Hackathon"
+    title="Red Alert - AI uprising"
+    subtitle="Red Alert with AI Copilot: You Command, It Conquer"
+    actions={[
+      { variant: 'primary', text: 'Call to Action', href: '#', icon: 'tabler:square-rounded-arrow-right' },
+      { text: 'Learn more', href: 'mofa-ora-detail' },
+    ]}
+    image={{
+      src: '~/assets/images/ora.jpg',
+      alt: 'Open Ret Alert',
+    }}
+  />
+
+  <CallToAction
+    title="Coming soon"
+    subtitle="We are working on the content of this Hackathon. You will see them very soon. Stay tuned Stay tuned!"
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Download Template',
+        href: 'https://github.com/onwidget/astrowind',
+        icon: 'tabler:download',
+      },
+    ]}
+  />
+</Layout>

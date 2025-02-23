@@ -1,0 +1,40 @@
+---
+import Layout from '~/layouts/LandingLayout.astro';
+
+import Hero2 from '~/components/widgets/Hero2.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'MoFA Voice Hackathon',
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero2
+    tagline="A GOSIM Super Agent Hacakthon"
+    title="MoFA Voice: Building Conversational AI"
+    subtitle="with fastest TTS engine, and most composable Agent Framework"
+    actions={[
+      { variant: 'primary', text: 'Call to Action', href: '#', icon: 'tabler:square-rounded-arrow-right' },
+      // { text: 'Learn more', href: 'mofa-voice-detail' },
+      { text: 'Learn more', href: new URL('mofa-voice-detail', Astro.url).pathname  },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1621452773781-0f992fd1f5cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1626&q=80',
+      alt: 'Conversational AI',
+    }}
+  />
+
+  <CallToAction
+    title="Coming soon"
+    subtitle="We are working on the content of these demo pages. You will see them very soon. Stay tuned Stay tuned!"
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Download Template',
+        href: 'https://github.com/onwidget/astrowind',
+        icon: 'tabler:download',
+      },
+    ]}
+  />
+</Layout>
