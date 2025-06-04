@@ -1,65 +1,363 @@
 ---
+import { getCollection } from 'astro:content';
 import BaseLayout from './BaseLayout.astro';
 
 export interface Props {
   title: string;
   description?: string;
+  currentSlug?: string;
 }
 
-const { title, description } = Astro.props;
-const { base } = import.meta.env;
+const { title, description, currentSlug } = Astro.props;
 
-// 文档导航结构
-const docNav = [
-  {
-    title: '快速开始',
-    items: [
-      { title: '安装', href: '/docs/quick-start' },
-      { title: '第一个代理', href: '/docs/first-agent' },
-    ]
-  },
-  {
-    title: '核心概念',
-    items: [
-      { title: '代理 (Agent)', href: '/docs/concepts/agent' },
-      { title: '管道 (Pipeline)', href: '/docs/concepts/pipeline' },
-    ]
+// 获取所有文档并构建目录结构
+const allDocs = await getCollection('docs');
+
+// 构建嵌套的文档结构
+const docsStructure = {};
+allDocs.forEach(doc => {
+  const pathParts = doc.slug.split('/');
+  let current = docsStructure;
+  
+  pathParts.forEach((part, index) => {
+    if (index === pathParts.length - 1) {
+      // 这是文件
+      current[part] = doc;
+    } else {
+      // 这是文件夹
+      if (!current[part]) {
+        current[part] = {};
+      }
+      current = current[part];
+    }
+  });
+});
+
+// 渲染侧边栏项目的递归函数
+function renderSidebarItem(key, item, basePath = '') {
+  const fullPath = basePath ? `${basePath}/${key}` : key;
+  
+  if (item.data) {
+    // 这是一个文档文件
+    const isActive = currentSlug === item.slug;
+    return `
+      <li>
+        <a href="/docs/${item.slug}" 
+           class="sidebar-link ${isActive ? 'active' : ''}"
+           style="display: block; padding: 8px 16px; text-decoration: none; color: ${isActive ? '#0066cc' : '#374151'}; font-weight: ${isActive ? '600' : '400'}; border-radius: 4px; transition: all 0.2s ease;"
+           onmouseover="if (!this.classList.contains('active')) { this.style.background = '#f3f4f6'; this.style.color = '#0066cc'; }"
+           onmouseout="if (!this.classList.contains('active')) { this.style.background = 'transparent'; this.style.color = '#374151'; }">
+          ${item.data.title}
+        </a>
+      </li>
+    `;
+  } else {
+    // 这是一个文件夹
+    const folderItems = Object.entries(item).map(([subKey, subItem]) => 
+      renderSidebarItem(subKey, subItem, fullPath)
+    ).join('');
+    
+    return `
+      <li style="margin-bottom: 16px;">
+        <div style="padding: 8px 16px; font-weight: 600; color: #111827; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.05em;">
+          ${key.replace('-', ' ')}
+        </div>
+        <ul style="list-style: none; margin: 0; padding: 0;">
+          ${folderItems}
+        </ul>
+      </li>
+    `;
   }
-];
+}
+
+const sidebarContent = Object.entries(docsStructure).map(([key, item]) => 
+  renderSidebarItem(key, item)
+).join('');
 ---
 
 <BaseLayout title={title} description={description}>
-  <div class="container mx-auto px-4 py-8">
-    <div class="flex gap-8">
-      <!-- 左侧导航 -->
-      <aside class="w-64 flex-shrink-0 hidden lg:block">
-        <nav class="sticky top-20">
-          {docNav.map((section) => (
-            <div class="mb-6">
-              <h3 class="font-semibold text-gray-900 mb-2">{section.title}</h3>
-              <ul class="space-y-1">
-                {section.items.map((item) => (
-                  <li>
-                    <a 
-                      href={`${base}${item.href}`}
-                      class="block px-3 py-2 text-sm text-gray-600 hover:text-mondrian-red hover:bg-gray-50 rounded transition-colors"
-                    >
-                      {item.title}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+  <div style="display: flex; min-height: calc(100vh - 140px);">
+    
+    <!-- 左侧侧边栏 -->
+    <aside style="width: 280px; background: #f8fafc; border-right: 1px solid #e5e7eb; padding: 32px 0; flex-shrink: 0; overflow-y: auto; max-height: calc(100vh - 140px); position: sticky; top: 140px;">
+      <div style="padding: 0 24px;">
+        <h2 style="font-size: 1.125rem; font-weight: 700; color: #111827; margin: 0 0 24px 0;">
+          Documentation
+        </h2>
+        <nav>
+          <ul style="list-style: none; margin: 0; padding: 0;" set:html={sidebarContent}>
+          </ul>
         </nav>
-      </aside>
+      </div>
+    </aside>
 
-      <!-- 主内容区 -->
-      <main class="flex-1 max-w-4xl">
-        <article class="prose prose-lg max-w-none">
-          <slot />
-        </article>
-      </main>
-    </div>
+    <!-- 右侧内容区域 -->
+    <main style="flex: 1; padding: 40px; max-width: calc(100% - 280px); overflow-x: auto;">
+      <div style="max-width: 800px;">
+        <slot />
+      </div>
+    </main>
+
   </div>
+
+  <!-- 文档样式 -->
+  <style>
+    .sidebar-link.active {
+      background: #eff6ff !important;
+      color: #0066cc !important;
+      border-left: 3px solid #0066cc;
+      padding-left: 13px !important;
+    }
+
+    /* 文档内容样式 */
+    .prose {
+      max-width: none;
+      color: #374151;
+      line-height: 1.7;
+    }
+
+    /* 标题样式 */
+    .prose h1 {
+      font-size: 2.25rem;
+      font-weight: 800;
+      margin: 0 0 2rem 0;
+      line-height: 1.2;
+      color: #111827;
+      border-bottom: 2px solid #e5e7eb;
+      padding-bottom: 1rem;
+    }
+
+    .prose h2 {
+      font-size: 1.875rem;
+      font-weight: 700;
+      margin: 2rem 0 1rem 0;
+      line-height: 1.3;
+      color: #111827;
+      border-bottom: 1px solid #e5e7eb;
+      padding-bottom: 0.5rem;
+    }
+
+    .prose h3 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin: 1.5rem 0 0.75rem 0;
+      line-height: 1.4;
+      color: #111827;
+    }
+
+    .prose h4 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin: 1.25rem 0 0.5rem 0;
+      line-height: 1.4;
+      color: #111827;
+    }
+
+    .prose h5 {
+      font-size: 1.125rem;
+      font-weight: 600;
+      margin: 1rem 0 0.5rem 0;
+      line-height: 1.4;
+      color: #111827;
+    }
+
+    .prose h6 {
+      font-size: 1rem;
+      font-weight: 600;
+      margin: 1rem 0 0.5rem 0;
+      line-height: 1.4;
+      color: #111827;
+    }
+
+    /* 段落和文本 */
+    .prose p {
+      margin: 1rem 0;
+      line-height: 1.7;
+    }
+
+    .prose strong {
+      font-weight: 600;
+      color: #111827;
+    }
+
+    .prose em {
+      font-style: italic;
+    }
+
+    .prose del {
+      text-decoration: line-through;
+      color: #6b7280;
+    }
+
+    /* 链接 */
+    .prose a {
+      color: #2563eb;
+      text-decoration: underline;
+      font-weight: 500;
+    }
+
+    .prose a:hover {
+      color: #1d4ed8;
+    }
+
+    /* 列表 */
+    .prose ul, .prose ol {
+      margin: 1rem 0;
+      padding-left: 1.5rem;
+    }
+
+    .prose ul {
+      list-style-type: disc;
+    }
+
+    .prose ol {
+      list-style-type: decimal;
+    }
+
+    .prose li {
+      margin: 0.5rem 0;
+      line-height: 1.6;
+    }
+
+    .prose ul ul, .prose ol ol, .prose ul ol, .prose ol ul {
+      margin: 0.5rem 0;
+    }
+
+    /* 代码 */
+    .prose code {
+      background: #f3f4f6;
+      padding: 0.125rem 0.25rem;
+      border-radius: 0.25rem;
+      font-size: 0.875rem;
+      font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+      color: #374151;
+    }
+
+    .prose pre {
+      background: #1f2937;
+      color: #f9fafb;
+      padding: 1rem;
+      border-radius: 0.5rem;
+      overflow-x: auto;
+      margin: 1.5rem 0;
+      font-size: 0.875rem;
+      line-height: 1.5;
+    }
+
+    .prose pre code {
+      background: transparent;
+      padding: 0;
+      color: inherit;
+      font-size: inherit;
+    }
+
+    /* 引用块 */
+    .prose blockquote {
+      border-left: 4px solid #e5e7eb;
+      padding-left: 1rem;
+      margin: 1.5rem 0;
+      font-style: italic;
+      color: #6b7280;
+      background: #f9fafb;
+      padding: 1rem;
+      border-radius: 0.25rem;
+    }
+
+    .prose blockquote p {
+      margin: 0.5rem 0;
+    }
+
+    /* 表格 */
+    .prose table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5rem 0;
+    }
+
+    .prose th, .prose td {
+      border: 1px solid #e5e7eb;
+      padding: 0.75rem;
+      text-align: left;
+    }
+
+    .prose th {
+      background: #f9fafb;
+      font-weight: 600;
+      color: #111827;
+    }
+
+    .prose tr:nth-child(even) {
+      background: #f9fafb;
+    }
+
+    /* 分隔线 */
+    .prose hr {
+      border: none;
+      border-top: 2px solid #e5e7eb;
+      margin: 2rem 0;
+    }
+
+    /* 图片 */
+    .prose img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 0.5rem;
+      margin: 1.5rem 0;
+    }
+
+    /* HTML 元素 */
+    .prose kbd {
+      background: #374151;
+      color: white;
+      padding: 0.125rem 0.25rem;
+      border-radius: 0.25rem;
+      font-size: 0.875rem;
+      font-family: monospace;
+    }
+
+    .prose mark {
+      background: #fef3c7;
+      padding: 0.125rem 0.25rem;
+      border-radius: 0.125rem;
+    }
+
+    .prose sub {
+      font-size: 0.75rem;
+      vertical-align: sub;
+    }
+
+    .prose sup {
+      font-size: 0.75rem;
+      vertical-align: super;
+    }
+
+    /* 任务列表 */
+    .prose input[type="checkbox"] {
+      margin-right: 0.5rem;
+    }
+
+    /* 响应式设计 */
+    @media (max-width: 768px) {
+      .prose {
+        font-size: 0.9rem;
+      }
+
+      .prose h1 {
+        font-size: 1.875rem;
+      }
+
+      .prose h2 {
+        font-size: 1.5rem;
+      }
+
+      .prose h3 {
+        font-size: 1.25rem;
+      }
+
+      .prose pre {
+        font-size: 0.8rem;
+        padding: 0.75rem;
+      }
+    }
+  </style>
 </BaseLayout> 

@@ -1,0 +1,44 @@
+name: Build Test
+
+on:
+  # 在推送到除main以外的分支时触发
+  push:
+    branches-ignore: [ main ]
+  # 在所有拉取请求时触发
+  pull_request:
+    branches: [ '**' ]
+
+jobs:
+  build-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+          cache-dependency-path: './mofa-website/package-lock.json'
+          
+      - name: Install dependencies
+        run: npm ci
+        working-directory: ./mofa-website
+        
+      - name: Build with Astro
+        run: npm run build
+        working-directory: ./mofa-website
+        
+      - name: Check build output
+        run: |
+          if [ -d "./docs" ]; then
+            echo "✅ Build successful - docs directory created"
+            ls -la ./docs
+            echo "📊 Build statistics:"
+            echo "Files: $(find ./docs -type f | wc -l)"
+            echo "Size: $(du -sh ./docs | cut -f1)"
+          else
+            echo "❌ Build failed - docs directory not found"
+            exit 1
+          fi 

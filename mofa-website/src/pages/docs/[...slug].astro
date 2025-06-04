@@ -14,6 +14,259 @@ const { doc } = Astro.props;
 const { Content } = await doc.render();
 ---
 
-<DocsLayout title={doc.data.title} description={doc.data.description}>
-  <Content />
-</DocsLayout> 
+<DocsLayout title={doc.data.title} description={doc.data.description} currentSlug={doc.slug}>
+  <article class="prose">
+    <h1>{doc.data.title}</h1>
+    <Content />
+  </article>
+</DocsLayout>
+
+<style>
+  .prose {
+    max-width: none;
+    color: #374151;
+    line-height: 1.7;
+  }
+
+  /* 标题样式 */
+  .prose h1 {
+    font-size: 2.25rem;
+    font-weight: 800;
+    margin: 2rem 0 1rem 0;
+    line-height: 1.2;
+    color: #111827;
+  }
+
+  .prose h2 {
+    font-size: 1.875rem;
+    font-weight: 700;
+    margin: 2rem 0 1rem 0;
+    line-height: 1.3;
+    color: #111827;
+    border-bottom: 2px solid #e5e7eb;
+    padding-bottom: 0.5rem;
+  }
+
+  .prose h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 1.5rem 0 0.75rem 0;
+    line-height: 1.4;
+    color: #111827;
+  }
+
+  .prose h4 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 1.25rem 0 0.5rem 0;
+    line-height: 1.4;
+    color: #111827;
+  }
+
+  .prose h5 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin: 1rem 0 0.5rem 0;
+    line-height: 1.4;
+    color: #111827;
+  }
+
+  .prose h6 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 1rem 0 0.5rem 0;
+    line-height: 1.4;
+    color: #111827;
+  }
+
+  /* 段落和文本 */
+  .prose p {
+    margin: 1rem 0;
+    line-height: 1.7;
+  }
+
+  .prose strong {
+    font-weight: 600;
+    color: #111827;
+  }
+
+  .prose em {
+    font-style: italic;
+  }
+
+  .prose del {
+    text-decoration: line-through;
+    color: #6b7280;
+  }
+
+  /* 链接 */
+  .prose a {
+    color: #2563eb;
+    text-decoration: underline;
+    font-weight: 500;
+  }
+
+  .prose a:hover {
+    color: #1d4ed8;
+  }
+
+  /* 列表 */
+  .prose ul, .prose ol {
+    margin: 1rem 0;
+    padding-left: 1.5rem;
+  }
+
+  .prose ul {
+    list-style-type: disc;
+  }
+
+  .prose ol {
+    list-style-type: decimal;
+  }
+
+  .prose li {
+    margin: 0.5rem 0;
+    line-height: 1.6;
+  }
+
+  .prose ul ul, .prose ol ol, .prose ul ol, .prose ol ul {
+    margin: 0.5rem 0;
+  }
+
+  /* 代码 */
+  .prose code {
+    background: #f3f4f6;
+    padding: 0.125rem 0.25rem;
+    border-radius: 0.25rem;
+    font-size: 0.875rem;
+    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+    color: #374151;
+  }
+
+  .prose pre {
+    background: #1f2937;
+    color: #f9fafb;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    overflow-x: auto;
+    margin: 1.5rem 0;
+    font-size: 0.875rem;
+    line-height: 1.5;
+  }
+
+  .prose pre code {
+    background: transparent;
+    padding: 0;
+    color: inherit;
+    font-size: inherit;
+  }
+
+  /* 引用块 */
+  .prose blockquote {
+    border-left: 4px solid #e5e7eb;
+    padding-left: 1rem;
+    margin: 1.5rem 0;
+    font-style: italic;
+    color: #6b7280;
+    background: #f9fafb;
+    padding: 1rem;
+    border-radius: 0.25rem;
+  }
+
+  .prose blockquote p {
+    margin: 0.5rem 0;
+  }
+
+  /* 表格 */
+  .prose table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+  }
+
+  .prose th, .prose td {
+    border: 1px solid #e5e7eb;
+    padding: 0.75rem;
+    text-align: left;
+  }
+
+  .prose th {
+    background: #f9fafb;
+    font-weight: 600;
+    color: #111827;
+  }
+
+  .prose tr:nth-child(even) {
+    background: #f9fafb;
+  }
+
+  /* 分隔线 */
+  .prose hr {
+    border: none;
+    border-top: 2px solid #e5e7eb;
+    margin: 2rem 0;
+  }
+
+  /* 图片 */
+  .prose img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+    margin: 1.5rem 0;
+  }
+
+  /* HTML 元素 */
+  .prose kbd {
+    background: #374151;
+    color: white;
+    padding: 0.125rem 0.25rem;
+    border-radius: 0.25rem;
+    font-size: 0.875rem;
+    font-family: monospace;
+  }
+
+  .prose mark {
+    background: #fef3c7;
+    padding: 0.125rem 0.25rem;
+    border-radius: 0.125rem;
+  }
+
+  .prose sub {
+    font-size: 0.75rem;
+    vertical-align: sub;
+  }
+
+  .prose sup {
+    font-size: 0.75rem;
+    vertical-align: super;
+  }
+
+  /* 任务列表 */
+  .prose input[type="checkbox"] {
+    margin-right: 0.5rem;
+  }
+
+  /* 响应式调整 */
+  @media (max-width: 768px) {
+    .prose {
+      font-size: 0.9rem;
+    }
+
+    .prose h1 {
+      font-size: 1.875rem;
+    }
+
+    .prose h2 {
+      font-size: 1.5rem;
+    }
+
+    .prose h3 {
+      font-size: 1.25rem;
+    }
+
+    .prose pre {
+      font-size: 0.8rem;
+      padding: 0.75rem;
+    }
+  }
+</style> 

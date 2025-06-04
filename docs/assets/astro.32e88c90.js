@@ -1421,4 +1421,4 @@ function renderUniqueStylesheet(result, sheet) {
   }
 }
 
-export { AstroError as A, UnknownContentCollectionError as U, createComponent as a, addAttribute as b, createAstro as c, renderHead as d, renderComponent as e, renderSlot as f, renderUniqueStylesheet as g, renderScriptElement as h, createHeadAndContent as i, maybeRenderHead as m, renderTemplate as r, unescapeHTML as u };
+export { AstroError as A, UnknownContentCollectionError as U, createAstro as a, addAttribute as b, createComponent as c, renderHead as d, renderComponent as e, renderSlot as f, renderUniqueStylesheet as g, renderScriptElement as h, createHeadAndContent as i, maybeRenderHead as m, renderTemplate as r, unescapeHTML as u };

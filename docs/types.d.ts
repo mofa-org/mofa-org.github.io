@@ -175,6 +175,13 @@ declare module 'astro:content' {
 
 	type ContentEntryMap = {
 		"blog": {
+"introducing-mofa copy.md": {
+	id: "introducing-mofa copy.md";
+  slug: "introducing-mofa-copy";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "introducing-mofa.md": {
 	id: "introducing-mofa.md";
   slug: "introducing-mofa";
@@ -184,9 +191,30 @@ declare module 'astro:content' {
 } & { render(): Render[".md"] };
 };
 "docs": {
-"quick-start.md": {
-	id: "quick-start.md";
-  slug: "quick-start";
+"0.overview.md": {
+	id: "0.overview.md";
+  slug: "0overview";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
+"1. concepts/agents.md": {
+	id: "1. concepts/agents.md";
+  slug: "1-concepts/agents";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
+"2. getting-started/first-agent.md": {
+	id: "2. getting-started/first-agent.md";
+  slug: "2-getting-started/first-agent";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
+"2. getting-started/installation.md": {
+	id: "2. getting-started/installation.md";
+  slug: "2-getting-started/installation";
   body: string;
   collection: "docs";
   data: InferEntrySchema<"docs">

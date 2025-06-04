@@ -1,0 +1,48 @@
+name: Build to Docs
+
+on:
+  # 在每次推送到main分支时触发
+  push:
+    branches: [ main ]
+  # 在每次拉取请求到main分支时触发
+  pull_request:
+    branches: [ main ]
+  # 允许手动触发
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+        
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+          cache-dependency-path: './mofa-website/package-lock.json'
+          
+      - name: Install dependencies
+        run: npm ci
+        working-directory: ./mofa-website
+        
+      - name: Build with Astro
+        run: npm run build
+        working-directory: ./mofa-website
+        
+      - name: Commit and push docs
+        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+        run: |
+          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add docs/
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "🚀 Auto-build: Update docs from latest changes"
+            git push
+          fi

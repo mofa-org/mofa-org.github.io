@@ -1,5 +1,5 @@
 async function getMod() {
-						return import('./quick-start.9acb7182.js');
+						return import('./agents.c3a5804b.js');
 					}
 					const collectedLinks = "@@ASTRO-LINKS@@";
 					const collectedStyles = "@@ASTRO-STYLES@@";

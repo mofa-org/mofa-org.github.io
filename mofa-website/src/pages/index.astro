@@ -6,31 +6,33 @@ import WorkflowShowcase from '../components/WorkflowShowcase.astro';
 <!DOCTYPE html>
 <html lang="en" id="html-root" style="scroll-behavior: smooth;">
 	<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title id="page-title">MoFA - Make Ordinary Developers Full-stack AI Engineers</title>
+		<meta charset="utf-8" />
+		<meta name="description" content="MoFA - Make Ordinary Developers Full-stack AI Engineers. A modular framework for AI agents that enables developers to build complex AI applications." />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title id="page-title">MoFA - Make Ordinary Developers Full-stack AI Engineers</title>
   
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="/mofa/favicon-32x32.png" />
-  <link rel="shortcut icon" href="/mofa/favicon-32x32.png" />
-  <link rel="apple-touch-icon" href="/mofa/apple-touch-icon.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="/mofa/favicon-16x16.png" />
-  <link rel="icon" type="image/png" sizes="32x32" href="/mofa/favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="48x48" href="/mofa/favicon-48x48.png" />
-  <meta name="theme-color" content="#6366F1" />
+		<!-- Favicon -->
+		<link rel="icon" type="image/png" href="/favicon-32x32.png" />
+		<link rel="shortcut icon" href="/favicon-32x32.png" />
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+		<link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png" />
+		<meta name="theme-color" content="#6366F1" />
 	</head>
 	<body>
   <header style="position: sticky; top: 0; background: white; border-bottom: 4px solid var(--mondrian-black); box-shadow: 0 2px 4px rgba(0,0,0,0.1); z-index: 50;">
     <nav class="container" style="padding: 16px; display: flex; align-items: center; justify-content: space-between;">
       <a href="https://mofa.ai" style="display: flex; align-items: center; gap: 8px; text-decoration: none;" target="_blank" rel="noopener noreferrer">
-        <img src="/mofa/mofa-logo.png" alt="MoFA Logo" style="width: 40px; height: 40px; border-radius: 8px; object-fit: cover;" />
+        <img src="/mofa-logo.png" alt="MoFA Logo" style="width: 40px; height: 40px; border-radius: 8px; object-fit: cover;" />
         <span class="gradient-text" style="font-size: 1.5rem; font-weight: 700;">MoFA</span>
       </a>
       
       <div style="display: flex; align-items: center; gap: 32px;">
-        <a href="https://github.com/moxin-org/mofa/tree/main/Gosim_2024_Hackathon/documents" class="nav-link" target="_blank" rel="noopener noreferrer" data-en="Docs" data-zh="文档">Docs</a>
-        <a href="https://demo.mofa.ai" class="nav-link" target="_blank" rel="noopener noreferrer" data-en="Examples" data-zh="示例">Examples</a>
-        <a href="http://blog.mofa.ai/" class="nav-link" target="_blank" rel="noopener noreferrer" data-en="Blog" data-zh="博客">Blog</a>
+        <a href="/docs" class="nav-link" data-en="Docs" data-zh="文档">Docs</a>
+        <!-- 临时隐藏 Examples 链接 -->
+        <!-- <a href="https://demo.mofa.ai" class="nav-link" target="_blank" rel="noopener noreferrer" data-en="Examples" data-zh="示例">Examples</a> -->
+        <a href="/blog" class="nav-link" data-en="Blog" data-zh="博客">Blog</a>
         
         <!-- 语言切换按钮 -->
         <div style="display: flex; align-items: center; gap: 8px;">
@@ -82,7 +84,7 @@ import WorkflowShowcase from '../components/WorkflowShowcase.astro';
           <!-- Logo -->
           <div style="display: flex; justify-content: center; margin-bottom: 32px;">
             <div style="width: 200px; height: 200px; transition: all 0.3s ease; position: relative; overflow: hidden; border-radius: 20px;" onmouseover="this.style.transform='scale(1.1)'; this.style.boxShadow='0 15px 40px rgba(0, 0, 0, 0.25)'" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='none'">
-              <img src="/mofa/mofa-logo.png" alt="MoFA Logo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 20px;" />
+              <img src="/mofa-logo.png" alt="MoFA Logo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 20px;" />
               <div style="position: absolute; inset: 0; background: linear-gradient(135deg, transparent 30%, rgba(255, 255, 255, 0.2) 50%, transparent 70%); opacity: 0; transition: opacity 0.3s ease;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0'"></div>
             </div>
           </div>
@@ -509,7 +511,7 @@ import WorkflowShowcase from '../components/WorkflowShowcase.astro';
     <div class="container py-12">
       <div class="text-center">
         <div style="display: flex; align-items: center; justify-content: center; gap: 8px; margin-bottom: 16px;">
-          <img src="/mofa/mofa-logo.png" alt="MoFA Logo" style="width: 32px; height: 32px; border-radius: 6px; object-fit: cover;" />
+          <img src="/mofa-logo.png" alt="MoFA Logo" style="width: 32px; height: 32px; border-radius: 6px; object-fit: cover;" />
           <span style="font-size: 1.25rem; font-weight: 700;">MoFA</span>
         </div>
         <p style="color: #9ca3af; margin-bottom: 8px;" 
@@ -529,9 +531,9 @@ import WorkflowShowcase from '../components/WorkflowShowcase.astro';
               data-en="Docs" data-zh="文档">Docs</a>
         </div>
         <p style="color: #6b7280; font-size: 0.875rem;" 
-           data-en="&copy; 2025 MoFA. All rights reserved. | Made with ❤️ by MoFA Team"
-           data-zh="&copy; 2025 MoFA. 保留所有权利. | Made with ❤️ by MoFA Team">
-          &copy; 2024 MoFA. All rights reserved. | Made with ❤️ by MoFA Team
+           data-en="&copy; 2025 MoFA. All rights reserved."
+           data-zh="&copy; 2025 MoFA. 保留所有权利.">
+          &copy; 2024 MoFA. All rights reserved.
         </p>
       </div>
     </div>
