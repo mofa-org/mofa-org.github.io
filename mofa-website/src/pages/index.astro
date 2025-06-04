@@ -1,0 +1,655 @@
+---
+import '../styles/global.css';
+import WorkflowShowcase from '../components/WorkflowShowcase.astro';
+---
+
+<!DOCTYPE html>
+<html lang="en" id="html-root" style="scroll-behavior: smooth;">
+	<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title id="page-title">MoFA - Make Ordinary Developers Full-stack AI Engineers</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/mofa/favicon-32x32.png" />
+  <link rel="shortcut icon" href="/mofa/favicon-32x32.png" />
+  <link rel="apple-touch-icon" href="/mofa/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/mofa/favicon-16x16.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/mofa/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="48x48" href="/mofa/favicon-48x48.png" />
+  <meta name="theme-color" content="#6366F1" />
+	</head>
+	<body>
+  <header style="position: sticky; top: 0; background: white; border-bottom: 4px solid var(--mondrian-black); box-shadow: 0 2px 4px rgba(0,0,0,0.1); z-index: 50;">
+    <nav class="container" style="padding: 16px; display: flex; align-items: center; justify-content: space-between;">
+      <a href="https://mofa.ai" style="display: flex; align-items: center; gap: 8px; text-decoration: none;" target="_blank" rel="noopener noreferrer">
+        <img src="/mofa/mofa-logo.png" alt="MoFA Logo" style="width: 40px; height: 40px; border-radius: 8px; object-fit: cover;" />
+        <span class="gradient-text" style="font-size: 1.5rem; font-weight: 700;">MoFA</span>
+      </a>
+      
+      <div style="display: flex; align-items: center; gap: 32px;">
+        <a href="https://github.com/moxin-org/mofa/tree/main/Gosim_2024_Hackathon/documents" class="nav-link" target="_blank" rel="noopener noreferrer" data-en="Docs" data-zh="文档">Docs</a>
+        <a href="https://demo.mofa.ai" class="nav-link" target="_blank" rel="noopener noreferrer" data-en="Examples" data-zh="示例">Examples</a>
+        <a href="http://blog.mofa.ai/" class="nav-link" target="_blank" rel="noopener noreferrer" data-en="Blog" data-zh="博客">Blog</a>
+        
+        <!-- 语言切换按钮 -->
+        <div style="display: flex; align-items: center; gap: 8px;">
+          <button id="lang-toggle" style="
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            padding: 8px 12px;
+            background: transparent;
+            border: 2px solid var(--mondrian-gray);
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: var(--mondrian-black);
+          " onmouseover="this.style.borderColor='var(--mondrian-red)'" onmouseout="this.style.borderColor='var(--mondrian-gray)'">
+            <span id="current-lang">🇺🇸 EN</span>
+            <span style="font-size: 0.75rem; opacity: 0.6;">▼</span>
+          </button>
+        </div>
+        
+        <a href="https://github.com/moxin-org/mofa" class="btn-primary" target="_blank" rel="noopener noreferrer" style="display: flex; align-items: center; gap: 8px;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="flex-shrink: 0;">
+            <path d="M12 0C5.374 0 0 5.373 0 12 0 17.302 3.438 21.8 8.207 23.387c.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/>
+          </svg>
+          GitHub
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- 主要内容 -->
+  <main style="flex: 1;">
+    <!-- Hero 区域 -->
+    <section class="py-20" style="position: relative; overflow: hidden;">
+      <!-- 蒙德里安背景 -->
+      <div style="position: absolute; inset: 0; opacity: 0.1;">
+        <div class="mondrian-grid" style="grid-template-columns: repeat(12, 1fr); grid-template-rows: repeat(8, 1fr); height: 100%;">
+          <div class="mondrian-block animate-grid-float" style="background-color: var(--mondrian-red); grid-column: span 3; grid-row: span 2;"></div>
+          <div class="mondrian-block animate-grid-float" style="background-color: var(--mondrian-blue); grid-column: span 2; grid-row: span 3; animation-delay: 0.5s;"></div>
+          <div class="mondrian-block animate-grid-float" style="background-color: var(--mondrian-yellow); grid-column: span 4; grid-row: span 2; animation-delay: 1s;"></div>
+          <div class="mondrian-block" style="background-color: var(--mondrian-white); grid-column: span 3; grid-row: span 3;"></div>
+        </div>
+      </div>
+
+      <div class="container" style="position: relative; z-index: 10;">
+        <div class="max-w-4xl mx-auto text-center">
+          <!-- Logo -->
+          <div style="display: flex; justify-content: center; margin-bottom: 32px;">
+            <div style="width: 200px; height: 200px; transition: all 0.3s ease; position: relative; overflow: hidden; border-radius: 20px;" onmouseover="this.style.transform='scale(1.1)'; this.style.boxShadow='0 15px 40px rgba(0, 0, 0, 0.25)'" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='none'">
+              <img src="/mofa/mofa-logo.png" alt="MoFA Logo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 20px;" />
+              <div style="position: absolute; inset: 0; background: linear-gradient(135deg, transparent 30%, rgba(255, 255, 255, 0.2) 50%, transparent 70%); opacity: 0; transition: opacity 0.3s ease;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0'"></div>
+            </div>
+          </div>
+
+          <!-- 副标题 -->
+          <p class="text-2xl font-medium mb-4" style="color: var(--mondrian-black);" 
+             data-en="Make Ordinary Developers Full-stack AI Engineers"
+             data-zh="让普通开发者成为全栈 AI 工程师">
+            Make Ordinary Developers Full-stack AI Engineers
+          </p>
+          <p class="text-xl mb-8 text-gray-600" 
+             data-en="Modular Framework for AI Agents"
+             data-zh="模块化 AI 代理框架">
+            Modular Framework for AI Agents
+          </p>
+
+          <!-- 描述 -->
+          <p class="text-xl text-gray-700 mb-12 max-w-2xl mx-auto" 
+             data-en="A composable AI agent framework that enables every developer to easily build, debug, and deploy complex AI applications"
+             data-zh="通过可组合的 AI 代理框架，让每个开发者都能轻松构建、调试和部署复杂的 AI 应用">
+            A composable AI agent framework that enables every developer to easily build, debug, and deploy complex AI applications
+          </p>
+
+          <!-- CTA 按钮 -->
+          <div style="display: flex; flex-direction: column; gap: 16px; justify-content: center; margin-bottom: 64px;">
+            <div style="display: flex; flex-wrap: wrap; gap: 16px; justify-content: center;">
+              <a href="https://github.com/moxin-org/mofa/blob/main/python/README.md#2-quick-start-guide" target="_blank" rel="noopener noreferrer" class="btn-primary" style="font-size: 1.125rem; padding: 16px 32px;" 
+                 data-en="🚀 Quick Start"
+                 data-zh="🚀 快速开始">
+                🚀 Quick Start
+              </a>
+              <a href="#why-mofa" rel="noopener noreferrer" class="btn-outline" style="font-size: 1.125rem; padding: 16px 32px;"
+                 data-en="💡 Learn More"
+                 data-zh="💡 了解更多">
+                💡 Learn More
+              </a>
+            </div>
+          </div>
+
+          <!-- 快速统计 -->
+          <div class="grid grid-cols-3 gap-8 max-w-2xl mx-auto">
+            <div class="text-center">
+              <div class="text-3xl font-bold" style="color: var(--mondrian-red);" 
+                   data-en="5 min"
+                   data-zh="5分钟">5 min</div>
+              <div class="text-sm text-gray-600" 
+                   data-en="Quick Setup"
+                   data-zh="快速上手">Quick Setup</div>
+            </div>
+            <div class="text-center">
+              <div class="text-3xl font-bold" style="color: var(--mondrian-blue);">100+</div>
+              <div class="text-sm text-gray-600" 
+                   data-en="Built-in Agents"
+                   data-zh="内置代理">Built-in Agents</div>
+            </div>
+            <div class="text-center">
+              <div class="text-3xl font-bold" style="color: var(--mondrian-yellow);">∞</div>
+              <div class="text-sm text-gray-600" 
+                   data-en="Combinations"
+                   data-zh="组合可能">Combinations</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 小型分隔线 -->
+    <div class="mini-divider">
+      <div class="mini-line red-line"></div>
+      <div class="mini-line blue-line"></div>
+      <div class="mini-line yellow-line"></div>
+    </div>
+
+    <!-- 核心优势 -->
+    <section id="why-mofa" class="py-20" style="background-color: #f9fafb;">
+      <div class="container">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold mb-4" 
+              data-en="Why Choose <span class='gradient-text'>MoFA</span>"
+              data-zh="为什么选择 <span class='gradient-text'>MoFA</span>">
+            Why Choose <span class="gradient-text">MoFA</span>
+          </h2>
+          <p class="text-xl text-gray-600 max-w-2xl mx-auto" 
+             data-en="Making AI development simple, efficient, and enjoyable"
+             data-zh="让 AI 开发变得简单、高效、有趣">
+            Making AI development simple, efficient, and enjoyable
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          <div class="card" style="border: 2px solid var(--mondrian-black); transition: border-width 0.2s ease;" onmouseover="this.style.borderWidth='4px'" onmouseout="this.style.borderWidth='2px'">
+            <div style="display: flex; align-items: flex-start; gap: 16px;">
+              <div style="padding: 12px; border-radius: 8px; background-color: var(--mondrian-red); color: white; flex-shrink: 0;">
+                🧩
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold mb-2" 
+                    data-en="Composable Agent Architecture"
+                    data-zh="可组合的代理架构">Composable Agent Architecture</h3>
+                <p class="text-gray-600" 
+                   data-en="Build complex AI applications by connecting agents via YAML-defined flows. Leverage a core kernel with modules for RAG (embedding, splitting, vector stores), planning, and tool integration. Easily orchestrate data flow between agents."
+                   data-zh="通过 YAML 定义的工作流连接代理，构建复杂的 AI 应用。利用包含 RAG（嵌入、分割、向量存储）、规划和工具集成等模块的核心内核。轻松编排代理间的数据流动。">
+                  Build complex AI applications by connecting agents via YAML-defined flows. Leverage a core kernel with modules for RAG (embedding, splitting, vector stores), planning, and tool integration. Easily orchestrate data flow between agents.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card" style="border: 2px solid var(--mondrian-black); transition: border-width 0.2s ease;" onmouseover="this.style.borderWidth='4px'" onmouseout="this.style.borderWidth='2px'">
+            <div style="display: flex; align-items: flex-start; gap: 16px;">
+              <div style="padding: 12px; border-radius: 8px; background-color: var(--mondrian-blue); color: white; flex-shrink: 0;">
+                ⚡
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold mb-2" 
+                    data-en="Rapid Agent Development"
+                    data-zh="快速代理开发">Rapid Agent Development</h3>
+                <p class="text-gray-600" 
+                   data-en="MoFA offers a clear structure for agent development, significantly reducing boilerplate and letting you focus on core logic. The MoFA Stage visual IDE further accelerates the entire development cycle, from creation to debugging. Get started in just 5 minutes."
+                   data-zh="MoFA 提供清晰的代理开发结构，大幅减少样板代码，让您专注于核心业务逻辑。结合 MoFA Stage 可视化 IDE，可进一步加速从创建到调试的完整开发周期。5分钟即可快速上手。">
+                  MoFA offers a clear structure for agent development, significantly reducing boilerplate and letting you focus on core logic. The MoFA Stage visual IDE further accelerates the entire development cycle, from creation to debugging. Get started in just 5 minutes.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card" style="border: 2px solid var(--mondrian-black); transition: border-width 0.2s ease;" onmouseover="this.style.borderWidth='4px'" onmouseout="this.style.borderWidth='2px'">
+            <div style="display: flex; align-items: flex-start; gap: 16px;">
+              <div style="padding: 12px; border-radius: 8px; background-color: var(--mondrian-yellow); color: var(--mondrian-black); flex-shrink: 0;">
+                🚀
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold mb-2" 
+                    data-en="Rich Agent Hub &amp; Dev Tools"
+                    data-zh="丰富代理中心与开发工具">Rich Agent Hub &amp; Dev Tools</h3>
+                <p class="text-gray-600" 
+                   data-en="Access 100+ pre-built agents from our Agent Hub, covering data connectors, LLM integrations, and specialized tools. MoFA Stage further enhances development with visual agent management, an integrated terminal, and an advanced code editor."
+                   data-zh="从我们的代理中心获取100+预构建代理，涵盖数据连接器、LLM 集成和专用工具。MoFA Stage 通过可视化代理管理、集成终端和高级代码编辑器进一步增强开发体验。">
+                  Access 100+ pre-built agents from our Agent Hub, covering data connectors, LLM integrations, and specialized tools. MoFA Stage further enhances development with visual agent management, an integrated terminal, and an advanced code editor.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card" style="border: 2px solid var(--mondrian-black); transition: border-width 0.2s ease;" onmouseover="this.style.borderWidth='4px'" onmouseout="this.style.borderWidth='2px'">
+            <div style="display: flex; align-items: flex-start; gap: 16px;">
+              <div style="padding: 12px; border-radius: 8px; background-color: var(--mondrian-black); color: white; flex-shrink: 0;">
+                🔧
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold mb-2" 
+                    data-en="Highly Extensible Framework"
+                    data-zh="高度可扩展框架">Highly Extensible Framework</h3>
+                <p class="text-gray-600" 
+                   data-en="Easily write custom Python agents. Integrate third-party tools, models, and data sources through well-defined interfaces. Extend core functionalities like memory (e.g., Mem0 integration) or RAG strategies by implementing custom components."
+                   data-zh="轻松编写自定义 Python 代理。通过定义良好的接口集成第三方工具、模型和数据源。通过实现自定义组件来扩展核心功能，如记忆（例如 Mem0 集成）或 RAG 策略。">
+                  Easily write custom Python agents. Integrate third-party tools, models, and data sources through well-defined interfaces. Extend core functionalities like memory (e.g., Mem0 integration) or RAG strategies by implementing custom components.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-16 mb-8" style="display: none;">
+            <h3 class="text-3xl font-bold"
+                data-en="Highlight: Your AI Agent IDE - <span class='gradient-text'>MoFA Stage</span>"
+                data-zh="核心功能：你的 AI Agent IDE - <span class='gradient-text'>MoFA Stage</span>">
+                Highlight: Your AI Agent IDE - <span class="gradient-text">MoFA Stage</span>
+            </h3>
+        </div>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto text-center mb-12" style="display: none;"
+             data-en="A visual management platform for MoFA - your web-based IDE for AI agents."
+             data-zh="MoFA 的可视化管理平台 - 你的Agent专属 Web IDE.">
+            A visual management platform for MoFA - your web-based IDE.
+          </p>
+        <div class="max-w-6xl mx-auto" style="display: none;">
+          <!-- 平台特色展示 -->
+          <div class="grid md:grid-cols-3 gap-8 mb-16">
+                         <div class="card" style="border: 2px solid var(--mondrian-black); transition: all 0.3s ease; padding: 16px;" onmouseover="this.style.borderWidth='4px'; this.style.transform='translateY(-8px)'" onmouseout="this.style.borderWidth='2px'; this.style.transform='translateY(0)'">
+               <div style="text-align: center;">
+                 <div style="
+                   width: 48px;
+                   height: 48px;
+                   margin: 0 auto 12px;
+                   background: linear-gradient(135deg, var(--mondrian-red), #8B5CF6);
+                   border-radius: 12px;
+                   display: flex;
+                   align-items: center;
+                   justify-content: center;
+                   font-size: 1.5rem;
+                   color: white;
+                   box-shadow: 0 6px 18px rgba(99, 102, 241, 0.3);
+                 ">💻</div>
+                 <h3 class="text-base font-semibold mb-1" 
+                     data-en="Visual Agent Management"
+                     data-zh="可视化代理管理">Visual Agent Management</h3>
+                 <p class="text-gray-600 text-xs leading-snug" 
+                    data-en="Create, edit, and manage AI agents through an intuitive web interface"
+                    data-zh="通过直观的网页界面创建、编辑和管理 AI 代理">
+                   Create, edit, and manage AI agents through an intuitive web interface - no command line expertise required
+                 </p>
+               </div>
+             </div>
+
+                         <div class="card" style="border: 2px solid var(--mondrian-black); transition: all 0.3s ease; padding: 16px;" onmouseover="this.style.borderWidth='4px'; this.style.transform='translateY(-8px)'" onmouseout="this.style.borderWidth='2px'; this.style.transform='translateY(0)'">
+               <div style="text-align: center;">
+                 <div style="
+                   width: 48px;
+                   height: 48px;
+                   margin: 0 auto 12px;
+                   background: linear-gradient(135deg, var(--mondrian-blue), #06B6D4);
+                   border-radius: 12px;
+                   display: flex;
+                   align-items: center;
+                   justify-content: center;
+                   font-size: 1.5rem;
+                   color: white;
+                   box-shadow: 0 6px 18px rgba(14, 165, 233, 0.3);
+                 ">🖥️</div>
+                 <h3 class="text-base font-semibold mb-1" 
+                     data-en="Integrated Terminal"
+                     data-zh="集成终端">Integrated Terminal</h3>
+                 <p class="text-gray-600 text-xs leading-snug" 
+                    data-en="Built-in web terminal with SSH access - execute commands and monitor agents directly from your browser"
+                    data-zh="内置网页终端支持 SSH 访问 - 直接在浏览器中执行命令和监控代理">
+                   Built-in web terminal with SSH access - execute commands and monitor agents directly from your browser
+                 </p>
+               </div>
+             </div>
+
+                         <div class="card" style="border: 2px solid var(--mondrian-black); transition: all 0.3s ease; padding: 16px;" onmouseover="this.style.borderWidth='4px'; this.style.transform='translateY(-8px)'" onmouseout="this.style.borderWidth='2px'; this.style.transform='translateY(0)'">
+               <div style="text-align: center;">
+                 <div style="
+                   width: 48px;
+                   height: 48px;
+                   margin: 0 auto 12px;
+                   background: linear-gradient(135deg, var(--mondrian-yellow), #FBBF24);
+                   border-radius: 12px;
+                   display: flex;
+                   align-items: center;
+                   justify-content: center;
+                   font-size: 1.5rem;
+                   color: var(--mondrian-black);
+                   box-shadow: 0 6px 18px rgba(245, 158, 11, 0.3);
+                 ">📝</div>
+                 <h3 class="text-base font-semibold mb-1" 
+                     data-en="Advanced Code Editor"
+                     data-zh="代码编辑器">Code Editor</h3>
+                 <p class="text-gray-600 text-xs leading-snug" 
+                    data-en="Monaco-powered editor with syntax highlighting, auto-completion, and instant Markdown preview"
+                    data-zh="基于 Monaco 的编辑器，支持语法高亮、自动补全和 Markdown 即时预览">
+                   Monaco-powered editor with syntax highlighting, auto-completion, and instant Markdown preview - just like VS Code
+                 </p>
+               </div>
+             </div>
+          </div>
+
+          <!-- 平台架构展示 -->
+          <div class="bg-white rounded-lg shadow-lg p-8" style="border: 2px solid var(--mondrian-black); display: none;">
+            <div class="text-center mb-8">
+              <h3 class="text-2xl font-bold mb-4" 
+                  data-en="Full-Stack Architecture"
+                  data-zh="全栈架构">Full-Stack Architecture</h3>
+              <p class="text-gray-600" 
+                 data-en="Built with modern technologies for optimal performance and developer experience"
+                 data-zh="使用现代技术构建，确保最佳性能和开发体验">
+                Built with modern technologies for optimal performance and developer experience
+              </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12">
+              <!-- 前端技术栈 -->
+              <div>
+                <h4 class="text-lg font-semibold mb-4 flex items-center gap-2" 
+                    data-en="🎨 Frontend Stack"
+                    data-zh="🎨 前端技术栈">
+                  🎨 Frontend Stack
+                </h4>
+                <div class="space-y-3">
+                  <div class="flex items-center gap-3">
+                    <div style="width: 12px; height: 12px; background: #42b883; border-radius: 50%;"></div>
+                    <span class="font-medium">Vue 3</span>
+                    <span class="text-sm text-gray-500" 
+                          data-en="Progressive Framework"
+                          data-zh="渐进式框架">Progressive Framework</span>
+                  </div>
+                  <div class="flex items-center gap-3">
+                    <div style="width: 12px; height: 12px; background: #409eff; border-radius: 50%;"></div>
+                    <span class="font-medium">Element Plus</span>
+                    <span class="text-sm text-gray-500" 
+                          data-en="UI Components"
+                          data-zh="UI 组件库">UI Components</span>
+                  </div>
+                  <div class="flex items-center gap-3">
+                    <div style="width: 12px; height: 12px; background: var(--mondrian-blue); border-radius: 50%;"></div>
+                    <span class="font-medium">Monaco Editor</span>
+                    <span class="text-sm text-gray-500" 
+                          data-en="VS Code Engine"
+                          data-zh="VS Code 引擎">VS Code Engine</span>
+                  </div>
+                  <div class="flex items-center gap-3">
+                    <div style="width: 12px; height: 12px; background: #000; border-radius: 50%;"></div>
+                    <span class="font-medium">XTerm.js</span>
+                    <span class="text-sm text-gray-500" 
+                          data-en="Terminal Emulation"
+                          data-zh="终端模拟">Terminal Emulation</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 后端技术栈 -->
+              <div>
+                <h4 class="text-lg font-semibold mb-4 flex items-center gap-2" 
+                    data-en="⚙️ Backend Stack"
+                    data-zh="⚙️ 后端技术栈">
+                  ⚙️ Backend Stack
+                </h4>
+                <div class="space-y-3">
+                  <div class="flex items-center gap-3">
+                    <div style="width: 12px; height: 12px; background: #306998; border-radius: 50%;"></div>
+                    <span class="font-medium">Python + Flask</span>
+                    <span class="text-sm text-gray-500" 
+                          data-en="RESTful API"
+                          data-zh="RESTful API">RESTful API</span>
+                  </div>
+                  <div class="flex items-center gap-3">
+                    <div style="width: 12px; height: 12px; background: var(--mondrian-red); border-radius: 50%;"></div>
+                    <span class="font-medium">WebSocket</span>
+                    <span class="text-sm text-gray-500" 
+                          data-en="Real-time Communication"
+                          data-zh="实时通信">Real-time Communication</span>
+                  </div>
+                  <div class="flex items-center gap-3">
+                    <div style="width: 12px; height: 12px; background: #ff6b35; border-radius: 50%;"></div>
+                    <span class="font-medium">SSH Integration</span>
+                    <span class="text-sm text-gray-500" 
+                          data-en="Terminal Access"
+                          data-zh="终端访问">Terminal Access</span>
+                  </div>
+                  <div class="flex items-center gap-3">
+                    <div style="width: 12px; height: 12px; background: var(--mondrian-yellow); border-radius: 50%;"></div>
+                    <span class="font-medium">ttyd Service</span>
+                    <span class="text-sm text-gray-500" 
+                          data-en="Web Terminal"
+                          data-zh="网页终端">Web Terminal</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 快速开始按钮 -->
+          <div class="text-center mt-12">
+            <a href="https://github.com/moxin-org/mofa/tree/main/MoFA_stage" target="_blank" rel="noopener noreferrer" class="btn-primary" style="font-size: 1.125rem; padding: 16px 32px; margin-right: 16px;" 
+               data-en="🚀 Explore MoFA_Stage"
+               data-zh="🚀 探索 MoFA_Stage">
+              🚀 Explore MoFA_Stage
+            </a>
+            <a href="https://github.com/moxin-org/mofa/tree/main/MoFA_stage#quick-start" target="_blank" rel="noopener noreferrer" class="btn-outline" style="font-size: 1.125rem; padding: 16px 32px;"
+               data-en="📖 Quick Start Guide"
+               data-zh="📖 快速开始指南">
+              📖 Quick Start Guide
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 小型分隔线 -->
+    <div class="mini-divider">
+      <div class="mini-line blue-line"></div>
+      <div class="mini-line yellow-line"></div>
+      <div class="mini-line red-line"></div>
+    </div>
+
+    <!-- 新的工作流展示组件 -->
+    <WorkflowShowcase />
+
+    <!-- 小型分隔线 -->
+    <div class="mini-divider">
+      <div class="mini-line yellow-line"></div>
+      <div class="mini-line red-line"></div>
+      <div class="mini-line blue-line"></div>
+    </div>
+
+    <!-- Demo Video Section -->
+    <section class="py-20" style="background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);">
+      <div class="container">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold mb-4" 
+              data-en="See MoFA in <span class='gradient-text'>Action</span>"
+              data-zh="观看 MoFA <span class='gradient-text'>实战演示</span>">
+            See MoFA in <span class="gradient-text">Action</span>
+          </h2>
+          <p class="text-xl text-gray-600 max-w-2xl mx-auto"
+             data-en="Watch how developers use MoFA to build sophisticated AI applications in minutes"
+             data-zh="观看开发者如何在几分钟内使用 MoFA 构建复杂的人工智能应用">Watch how developers use MoFA to build sophisticated AI applications in minutes</p>
+        
+        <!-- Video Embed -->
+        <div class="video-container rounded-lg shadow-2xl overflow-hidden mx-auto" style="max-width: 800px; background-color: #2d3748;">
+          <iframe 
+            id="demo-video-iframe" 
+            width="100%" 
+            style="aspect-ratio: 16/9; display: block;"
+            src="https://www.youtube.com/embed/YOUR_PLACEHOLDER_VIDEO_ID" 
+            title="MoFA in Action Demo Video" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- 小型分隔线 -->
+    <div class="mini-divider">
+      <div class="mini-line red-line"></div>
+      <div class="mini-line blue-line"></div>
+      <div class="mini-line yellow-line"></div>
+    </div>
+  </main>
+
+  <footer style="background-color: var(--mondrian-black); color: white;">
+    <div class="container py-12">
+      <div class="text-center">
+        <div style="display: flex; align-items: center; justify-content: center; gap: 8px; margin-bottom: 16px;">
+          <img src="/mofa/mofa-logo.png" alt="MoFA Logo" style="width: 32px; height: 32px; border-radius: 6px; object-fit: cover;" />
+          <span style="font-size: 1.25rem; font-weight: 700;">MoFA</span>
+        </div>
+        <p style="color: #9ca3af; margin-bottom: 8px;" 
+           data-en="Make Ordinary Developers Full-stack AI Engineers"
+           data-zh="让普通开发者成为全栈 AI 工程师">
+          Make Ordinary Developers Full-stack AI Engineers
+        </p>
+        <p style="color: #9ca3af; margin-bottom: 24px;" 
+           data-en="Modular Framework for AI Agents"
+           data-zh="模块化 AI 代理框架">
+          Modular Framework for AI Agents
+        </p>
+        <div style="display: flex; justify-content: center; gap: 32px; margin-bottom: 16px;">
+          <a href="https://github.com/moxin-org/mofa" target="_blank" rel="noopener noreferrer" style="color: #9ca3af; text-decoration: none; transition: color 0.2s ease;" onmouseover="this.style.color='white'" onmouseout="this.style.color='#9ca3af'">GitHub</a>
+          <a href="https://discord.gg/mofa-ai" target="_blank" rel="noopener noreferrer" style="color: #9ca3af; text-decoration: none; transition: color 0.2s ease;" onmouseover="this.style.color='white'" onmouseout="this.style.color='#9ca3af'">Discord</a>
+          <a href="https://github.com/moxin-org/mofa/tree/main/Gosim_2024_Hackathon/documents" target="_blank" rel="noopener noreferrer" style="color: #9ca3af; text-decoration: none; transition: color 0.2s ease;" onmouseover="this.style.color='white'" onmouseout="this.style.color='#9ca3af'" 
+              data-en="Docs" data-zh="文档">Docs</a>
+        </div>
+        <p style="color: #6b7280; font-size: 0.875rem;" 
+           data-en="&copy; 2025 MoFA. All rights reserved. | Made with ❤️ by MoFA Team"
+           data-zh="&copy; 2025 MoFA. 保留所有权利. | Made with ❤️ by MoFA Team">
+          &copy; 2024 MoFA. All rights reserved. | Made with ❤️ by MoFA Team
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 返回顶部按钮 -->
+  <button id="back-to-top" title="Go to top" style="
+    display: none; /* Hidden by default */
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: var(--mondrian-red);
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 50%;
+    font-size: 18px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: background-color 0.3s, opacity 0.3s, visibility 0.3s;
+  ">
+    ↑
+  </button>
+
+  <!-- 语言切换脚本 -->
+  <script is:inline>
+    // 返回顶部按钮逻辑
+    const backToTopButton = document.getElementById('back-to-top');
+
+    window.onscroll = function() {
+      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        backToTopButton.style.display = "block";
+      } else {
+        backToTopButton.style.display = "none";
+      }
+    };
+
+    backToTopButton.addEventListener('click', function(){
+      window.scrollTo({top: 0, behavior: 'smooth'});
+    });
+
+    // 语言数据和切换逻辑
+    const languages = {
+      en: {
+        flag: '🇺🇸',
+        name: 'EN',
+        title: 'MoFA - Make Ordinary Developers Full-stack AI Engineers'
+      },
+      zh: {
+        flag: '🇨🇳',
+        name: '中文',
+        title: 'MoFA - 让普通开发者成为全栈 AI 工程师'
+      }
+    };
+
+    let currentLang = 'en'; // 默认英文
+
+    function updateLanguage(lang) {
+      currentLang = lang;
+      
+      // 更新页面title
+      document.getElementById('page-title').textContent = languages[lang].title;
+      
+      // 更新html lang属性
+      document.getElementById('html-root').setAttribute('lang', lang === 'zh' ? 'zh-CN' : 'en');
+      
+      // 更新语言切换按钮显示
+      const currentLangEl = document.getElementById('current-lang');
+      const otherLang = lang === 'en' ? 'zh' : 'en';
+      currentLangEl.textContent = `${languages[otherLang].flag} ${languages[otherLang].name}`;
+      
+      // 更新所有带有data-en和data-zh属性的元素
+      const elements = document.querySelectorAll('[data-en][data-zh]');
+      elements.forEach(element => {
+        const text = element.getAttribute(`data-${lang}`);
+        if (text) {
+          element.innerHTML = text;
+        }
+      });
+
+      // 更新视频iframe的src
+      const videoIframe = document.getElementById('demo-video-iframe');
+      if (videoIframe) {
+        if (lang === 'zh') {
+          videoIframe.src = "//player.bilibili.com/player.html?bvid=BV15fQPY6EnD&page=1&high_quality=1&danmaku=0";
+        } else { // 'en' or default
+          videoIframe.src = "https://www.youtube.com/embed/YOUR_PLACEHOLDER_VIDEO_ID"; // TODO: Replace with actual English video when ready
+        }
+      }
+      
+      // 保存语言设置到localStorage
+      localStorage.setItem('mofa-language', lang);
+    }
+
+    // 初始化语言
+    function initLanguage() {
+      // 从localStorage读取保存的语言设置
+      const savedLang = localStorage.getItem('mofa-language');
+      
+      if (savedLang && languages[savedLang]) {
+        updateLanguage(savedLang);
+      } else {
+        // 默认英文
+        updateLanguage('en');
+      }
+    }
+
+    // 语言切换事件
+    document.getElementById('lang-toggle').addEventListener('click', () => {
+      const newLang = currentLang === 'en' ? 'zh' : 'en';
+      updateLanguage(newLang);
+    });
+
+    // 页面加载时初始化语言
+    document.addEventListener('DOMContentLoaded', initLanguage);
+  </script>
+
+	</body>
+</html>

@@ -1,0 +1,742 @@
+---
+// 工作流配置数据
+const workflows = [
+  {
+    id: 'hello-world',
+    title: {
+      en: 'Hello World',
+      zh: 'Hello World'
+    },
+    description: {
+      en: 'Simplest AI agent workflow for beginners',
+      zh: '最简单的 AI 代理工作流'
+    },
+    category: 'Basic',
+    color: 'mofa-color-1',
+    scale: 0.3,
+    mermaidGraph: `
+    flowchart TB
+      terminal-input[🖥️ Terminal Input<br/>User Query]
+      agent[🤖 Agent<br/>Process & Respond]
+      
+      terminal-input --> agent
+      agent --> terminal-input
+      
+      classDef inputNode fill:#e1f5fe,stroke:#0277bd,stroke-width:2px
+      classDef agentNode fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px
+      
+      class terminal-input inputNode
+      class agent agentNode`
+  },
+  {
+    id: 'arxiv-research',
+    title: {
+      en: 'ArXiv Research',
+      zh: 'ArXiv 研究'
+    },
+    description: {
+      en: 'Automated research workflow with paper analysis and report generation',
+      zh: '自动化研究工作流，包含论文分析和报告生成'
+    },
+    category: 'Research',
+    color: 'mofa-color-2',
+    scale: 1.0,
+    mermaidGraph: `
+    flowchart TB
+      terminal[🖥️ Terminal Input<br/>Research Task]
+      extractor[🔍 Keyword Extractor<br/>Extract Keywords]
+      downloader[📥 Paper Downloader<br/>Download Papers]
+      analyzer[🔬 Paper Analyzer<br/>Analyze Content]
+      writer[✍️ Report Writer<br/>Generate Report]
+      feedback[💬 Feedback Agent<br/>Review & Suggest]
+      refinement[🔧 Refinement Agent<br/>Improve Report]
+      
+      terminal --> extractor
+      extractor --> downloader
+      downloader --> analyzer
+      terminal --> analyzer
+      analyzer --> writer
+      terminal --> writer
+      writer --> feedback
+      terminal --> feedback
+      feedback --> refinement
+      terminal --> refinement
+      
+      classDef inputNode fill:#e8f5e8,stroke:#2e7d32,stroke-width:2px
+      classDef processNode fill:#fff3e0,stroke:#f57c00,stroke-width:2px
+      classDef analysisNode fill:#e3f2fd,stroke:#1976d2,stroke-width:2px
+      classDef outputNode fill:#fce4ec,stroke:#c2185b,stroke-width:2px
+      
+      class terminal inputNode
+      class extractor,downloader processNode
+      class analyzer,feedback analysisNode
+      class writer,refinement outputNode`
+  },
+  {
+    id: 'rag-system',
+    title: {
+      en: 'RAG System',
+      zh: 'RAG 系统'
+    },
+    description: {
+      en: 'Retrieval-Augmented Generation for intelligent Q&A',
+      zh: '检索增强生成系统，用于智能问答'
+    },
+    category: 'AI',
+    color: 'mofa-color-3',
+    scale: 0.5,
+    mermaidGraph: `
+    flowchart TB
+      terminal[🖥️ Terminal Input<br/>User Question]
+      retrieval[🔍 RAG Retrieval<br/>Search Knowledge]
+      reasoner[🧠 Reasoner Agent<br/>Generate Answer]
+      
+      terminal --> retrieval
+      retrieval --> reasoner
+      terminal --> reasoner
+      retrieval --> terminal
+      reasoner --> terminal
+      
+      classDef inputNode fill:#e8f5e8,stroke:#2e7d32,stroke-width:2px
+      classDef retrievalNode fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px
+      classDef reasoningNode fill:#e1f5fe,stroke:#0277bd,stroke-width:2px
+      
+      class terminal inputNode
+      class retrieval retrievalNode
+      class reasoner reasoningNode`
+  },
+  {
+    id: 'gosim-pedia',
+    title: {
+      en: 'GoSim Pedia',
+      zh: 'GoSim 百科'
+    },
+    description: {
+      en: 'Multi-agent system with web scraping and search capabilities',
+      zh: '具有网页抓取和搜索能力的多代理系统'
+    },
+    category: 'Web',
+    color: 'mofa-color-4',
+    scale: 0.9,
+    mermaidGraph: `
+    flowchart TB
+      openai[🤖 OpenAI Server<br/>Chat Interface]
+      gosim[🎮 GoSim Pedia Agent<br/>Main Controller]
+      firecrawl[🕷️ Firecrawl Agent<br/>Web Scraping]
+      rag[🧠 GoSim RAG Agent<br/>Knowledge Retrieval]
+      serper[🔍 Serper Search Agent<br/>Web Search]
+      
+      openai <--> gosim
+      gosim --> firecrawl
+      firecrawl --> gosim
+      gosim --> rag
+      rag --> gosim
+      gosim --> serper
+      serper --> gosim
+      
+      classDef serverNode fill:#e8f5e8,stroke:#2e7d32,stroke-width:2px
+      classDef mainNode fill:#e1f5fe,stroke:#0277bd,stroke-width:2px
+      classDef toolNode fill:#fff3e0,stroke:#f57c00,stroke-width:2px
+      
+      class openai serverNode
+      class gosim mainNode
+      class firecrawl,rag,serper toolNode`
+  },
+  {
+    id: 'mem0-dataflow',
+    title: {
+      en: 'Mem0 Memory System',
+      zh: 'Mem0 记忆系统'
+    },
+    description: {
+      en: 'Memory-enhanced AI workflow with retrieval and recording',
+      zh: '具有记忆检索和记录能力的增强AI工作流'
+    },
+    category: 'Memory',
+    color: 'mofa-color-1',
+    scale: 0.75,
+    mermaidGraph: `
+    flowchart TB
+      terminal[🖥️ Terminal Input<br/>User Task]
+      retrieval[🧠 Memory Retrieval<br/>Fetch Context]
+      reasoner[🤔 Reasoner<br/>Process & Think]
+      record[💾 Memory Record<br/>Store Results]
+      
+      terminal --> retrieval
+      retrieval --> reasoner
+      terminal --> reasoner
+      reasoner --> record
+      terminal --> record
+      retrieval --> terminal
+      reasoner --> terminal
+      record --> terminal
+      
+      classDef inputNode fill:#e8f5e8,stroke:#2e7d32,stroke-width:2px
+      classDef memoryNode fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px
+      classDef processNode fill:#e1f5fe,stroke:#0277bd,stroke-width:2px
+      classDef storageNode fill:#fff3e0,stroke:#f57c00,stroke-width:2px
+      
+      class terminal inputNode
+      class retrieval memoryNode
+      class reasoner processNode
+      class record storageNode`
+  },
+  {
+    id: 'intelligent-agent-creation',
+    title: {
+      en: 'Agent Creation System',
+      zh: '代理创建系统'
+    },
+    description: {
+      en: 'Intelligent system for generating AI agents automatically',
+      zh: '自动生成AI代理的智能系统'
+    },
+    category: 'Meta-AI',
+    color: 'mofa-color-2',
+    scale: 0.75,
+    mermaidGraph: `
+    flowchart TB
+      openai[🤖 OpenAI Server<br/>API Interface]
+      config[⚙️ Config Generator<br/>Generate Settings]
+      code[👨‍💻 Code Generator<br/>Write Agent Code]
+      dependency[📦 Dependency Generator<br/>Manage Dependencies]
+      
+      openai --> config
+      openai --> code
+      config --> code
+      openai --> dependency
+      code --> dependency
+      config --> dependency
+      dependency --> openai
+      
+      classDef serverNode fill:#e8f5e8,stroke:#2e7d32,stroke-width:2px
+      classDef generatorNode fill:#e1f5fe,stroke:#0277bd,stroke-width:2px
+      classDef codeNode fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px
+      classDef depNode fill:#fff3e0,stroke:#f57c00,stroke-width:2px
+      
+      class openai serverNode
+      class config generatorNode
+      class code codeNode
+      class dependency depNode`
+  },
+  {
+    id: 'xiaowang-workflow',
+    title: {
+      en: 'XiaoWang Multi-Agent',
+      zh: '多代理系统'
+    },
+    description: {
+      en: 'Complex multi-agent workflow with reflection and generation',
+      zh: '具有反思和生成能力的复杂多代理工作流'
+    },
+    category: 'Complex',
+    color: 'mofa-color-3',
+    scale: 0.75,
+    mermaidGraph: `
+    flowchart TB
+      terminal[🖥️ XiaoWang Terminal<br/>Task Input]
+      dlc[🎯 Agent DLC<br/>Task Processing]
+      generate[🔧 Agent Generate<br/>Content Creation]
+      reflection[🤔 Agent Reflection<br/>Self-Improvement]
+      
+      terminal --> dlc
+      dlc --> generate
+      generate --> reflection
+      reflection --> generate
+      generate --> dlc
+      dlc --> terminal
+      generate --> terminal
+      reflection --> terminal
+      
+      classDef inputNode fill:#e8f5e8,stroke:#2e7d32,stroke-width:2px
+      classDef taskNode fill:#e1f5fe,stroke:#0277bd,stroke-width:2px
+      classDef generateNode fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px
+      classDef reflectNode fill:#fff3e0,stroke:#f57c00,stroke-width:2px
+      
+      class terminal inputNode
+      class dlc taskNode
+      class generate generateNode
+      class reflection reflectNode`
+  }
+];
+---
+
+<section class="py-20" style="background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-bold mb-4" 
+          data-en="Real Examples: <span class='gradient-text'>AI Workflows</span> in Action"
+          data-zh="实际案例：<span class='gradient-text'>AI 工作流</span>实战">
+        Real Examples: <span class="gradient-text">AI Workflows</span> in Action
+      </h2>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto" 
+         data-en="Explore different types of AI workflows - from simple hello world to complex research automation"
+         data-zh="探索不同类型的 AI 工作流 - 从简单的问候到复杂的研究自动化">
+        Explore different types of AI workflows - from simple hello world to complex research automation
+      </p>
+    </div>
+
+    <!-- Workflow Horizontal Scroll Container -->
+    <div class="workflow-container">
+      <div class="workflow-scroll">
+        {workflows.map((workflow) => (
+          <div class="workflow-card bg-white rounded-lg shadow-lg border-4 border-gray-300 hover:border-4 hover:border-indigo-500 transition-all duration-300 overflow-hidden">
+            <!-- Header -->
+            <div class={`${workflow.color} p-6 text-white`}>
+              <h3 class="text-2xl font-bold mb-2" 
+                  data-en={workflow.title.en}
+                  data-zh={workflow.title.zh}>
+                {workflow.title.en}
+              </h3>
+              <p class="text-white text-opacity-90" 
+                 data-en={workflow.description.en}
+                 data-zh={workflow.description.zh}>
+                {workflow.description.en}
+              </p>
+            </div>
+
+            <!-- Mermaid Graph -->
+            <div class="chart-container">
+              <div class={`mermaid-container-${workflow.id} bg-gray-50 rounded-lg p-4 border-2 border-gray-200`} data-scale={workflow.scale}>
+                <div class={`mermaid mermaid-${workflow.id}`}>
+                  {workflow.mermaidGraph}
+                </div>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <!-- Scroll hint -->
+    <div class="text-center mt-8">
+      <p class="text-sm text-gray-500" 
+         data-en="← Scroll horizontally to explore more workflows →"
+         data-zh="← 水平滚动以探索更多工作流 →">
+        ← Scroll horizontally to explore more workflows →
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Mermaid Script -->
+<script>
+  // Import and initialize Mermaid
+  import('https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs').then((mermaid) => {
+    mermaid.default.initialize({
+      startOnLoad: true,
+      theme: 'base',
+      themeVariables: {
+        primaryColor: '#6366F1',
+        primaryTextColor: '#1F2937',
+        primaryBorderColor: '#6366F1',
+        lineColor: '#0EA5E9',
+        sectionBkgColor: '#F8FAFC',
+        altSectionBkgColor: '#FFFFFF',
+        gridColor: '#E5E7EB',
+        secondaryColor: '#F59E0B',
+        tertiaryColor: '#F59E0B'
+      },
+      fontFamily: 'Inter, system-ui, -apple-system, sans-serif',
+      fontSize: 24,
+      flowchart: {
+        htmlLabels: true,
+        curve: 'basis',
+        useMaxWidth: true,
+        rankdir: 'TB',
+        padding: 25
+      },
+      security: {
+        level: 'loose'
+      },
+      // 添加全局缩放设置
+      maxTextSize: 90000,
+      maxEdges: 500
+    });
+
+    // Render all mermaid diagrams
+    setTimeout(() => {
+      mermaid.default.run();
+      
+      // 自动调整图表大小以适应容器
+      setTimeout(() => {
+        document.querySelectorAll('.mermaid').forEach(element => {
+          const svg = element.querySelector('svg');
+          const container = element.closest('[data-scale]');
+          const scale = container ? parseFloat(container.getAttribute('data-scale')) : 1;
+          
+          if (svg) {
+            // 移除固定的宽高，使用viewBox进行缩放
+            svg.removeAttribute('height');
+            svg.removeAttribute('width');
+            svg.style.maxWidth = '100%';
+            svg.style.maxHeight = '100%';
+            
+            // 确保viewBox存在并设置preserveAspectRatio
+            if (!svg.getAttribute('viewBox')) {
+              const bbox = svg.getBBox();
+              svg.setAttribute('viewBox', `0 0 ${bbox.width + 20} ${bbox.height + 20}`);
+            }
+            svg.setAttribute('preserveAspectRatio', 'xMidYMid meet');
+            
+            // 应用个别缩放
+            svg.style.width = `${scale * 100}%`;
+            svg.style.height = `${scale * 100}%`;
+            svg.style.transform = 'none';
+          }
+        });
+      }, 500);
+    }, 100);
+  }).catch(error => {
+    console.error('Failed to load Mermaid:', error);
+  });
+</script>
+
+<style>
+/* MoFA 品牌颜色定义 */
+.mofa-color-1 {
+  background: linear-gradient(135deg, #FC6A59, #E55A4A);
+}
+
+.mofa-color-2 {
+  background: linear-gradient(135deg, #FFC53D, #E6B034);
+}
+
+.mofa-color-3 {
+  background: linear-gradient(135deg, #FD543F, #E64936);
+}
+
+.mofa-color-4 {
+  background: linear-gradient(135deg, #6CCBCD, #5BB7B9);
+}
+
+.workflow-container {
+  position: relative;
+  max-width: 100vw;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.workflow-scroll {
+  display: flex;
+  gap: 2rem;
+  overflow-x: auto;
+  padding: 1rem 0;
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: #cbd5e1 #f1f5f9;
+}
+
+.workflow-scroll::-webkit-scrollbar {
+  height: 8px;
+}
+
+.workflow-scroll::-webkit-scrollbar-track {
+  background: #f1f5f9;
+  border-radius: 4px;
+}
+
+.workflow-scroll::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+.workflow-scroll::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+.workflow-card {
+  flex: 0 0 auto;
+  width: 650px;
+  height: 800px;
+  transform: translateY(0);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.workflow-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.chart-container {
+  flex: 1;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.chart-container > div {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.mermaid {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  font-size: 24px;
+}
+
+.mermaid svg {
+  max-width: 100% !important;
+  max-height: 100% !important;
+  width: auto !important;
+  height: auto !important;
+}
+
+/* Custom mermaid styling */
+.mermaid .node rect,
+.mermaid .node circle,
+.mermaid .node ellipse,
+.mermaid .node polygon {
+  stroke-width: 2px;
+}
+
+.mermaid .node text {
+  font-size: 22px !important;
+  font-weight: 600 !important;
+  font-family: 'Inter', system-ui, sans-serif !important;
+}
+
+.mermaid .edgePath path {
+  stroke-width: 2px;
+}
+
+.mermaid .edgeLabel {
+  background-color: white;
+  border-radius: 6px;
+  padding: 5px 10px;
+  font-size: 18px;
+  font-weight: 500;
+  font-family: 'Inter', system-ui, sans-serif;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* 禁用Mermaid容器中的mondrian-block动画效果 */
+.mermaid-container-hello-world::after,
+.mermaid-container-arxiv-research::after,
+.mermaid-container-rag-system::after,
+.mermaid-container-gosim-pedia::after,
+.mermaid-container-mem0-dataflow::after,
+.mermaid-container-intelligent-agent-creation::after,
+.mermaid-container-xiaowang-workflow::after,
+.chart-container::after,
+.chart-container > div::after {
+  display: none !important;
+}
+
+/* 更全面地禁用工作流卡片中的所有伪元素 */
+.workflow-card *::after,
+.workflow-card *::before,
+.workflow-card::after,
+.workflow-card::before {
+  animation: none !important;
+  display: none !important;
+}
+
+/* 确保Mermaid容器不受全局mondrian样式影响 */
+.mermaid,
+.mermaid *,
+.chart-container,
+.chart-container * {
+  position: relative;
+}
+
+.mermaid::after,
+.mermaid::before,
+.mermaid *::after,
+.mermaid *::before {
+  display: none !important;
+}
+
+/* 隐藏可能的橙色标记元素 */
+.workflow-card [style*="orange"],
+.workflow-card [style*="#FFA500"],
+.workflow-card [style*="#FF6600"],
+.workflow-card [style*="#F59E0B"],
+.workflow-card [style*="rgb(245, 158, 11)"],
+.workflow-card .bg-orange-500,
+.workflow-card .text-orange-500 {
+  display: none !important;
+}
+
+/* 隐藏所有positioned的小元素（可能是橙色点） */
+.workflow-card *[style*="position: absolute"][style*="width"][style*="height"] {
+  display: none !important;
+}
+
+/* 专门针对 Mermaid edgeLabel 元素的隐藏规则 */
+.workflow-card .edgeLabels,
+.workflow-card .edgeLabel,
+.workflow-card g.edgeLabels,
+.workflow-card g.edgeLabel,
+.workflow-card .edgeLabel span,
+.workflow-card .edgeLabel div,
+.workflow-card .edgeLabel foreignObject {
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+}
+
+/* 隐藏 Mermaid SVG 中的所有 edgeLabel 相关元素 */
+.mermaid svg .edgeLabels,
+.mermaid svg .edgeLabel,
+.mermaid svg g.edgeLabels,
+.mermaid svg g.edgeLabel {
+  display: none !important;
+}
+
+/* 隐藏所有空的或只包含空白的标签元素 */
+.workflow-card span:empty,
+.workflow-card div:empty,
+.workflow-card .edgeLabel span:empty,
+.workflow-card foreignObject[width="8"],
+.workflow-card foreignObject[height="19.1953125"] {
+  display: none !important;
+}
+
+/* 更精确地隐藏 Mermaid SVG 中的 edgeLabel 元素 */
+.mermaid svg g.edgeLabels,
+.mermaid svg g.edgeLabel,
+.mermaid svg g > g > g.edgeLabels,
+.mermaid svg g > g > g.edgeLabel,
+[id^="mermaid-"] g.edgeLabels,
+[id^="mermaid-"] g.edgeLabel,
+[id^="mermaid-"] > g > g > g.edgeLabels,
+[id^="mermaid-"] > g > g > g.edgeLabel {
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+}
+
+/* 隐藏所有 Mermaid 生成的空标签和小尺寸元素 */
+.mermaid svg foreignObject[width="8"],
+.mermaid svg foreignObject[height*="19"],
+.mermaid svg .label foreignObject,
+.mermaid svg g.label,
+[id^="mermaid-"] foreignObject[width="8"],
+[id^="mermaid-"] foreignObject[height*="19"],
+[id^="mermaid-"] .label foreignObject,
+[id^="mermaid-"] g.label {
+  display: none !important;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+  .workflow-card {
+    width: 480px;
+    height: 700px;
+  }
+  
+  .workflow-scroll {
+    gap: 1rem;
+  }
+  
+  .mermaid {
+    font-size: 22px;
+  }
+  
+  .mermaid .node text {
+    font-size: 20px !important;
+  }
+  
+  .mermaid .edgeLabel {
+    font-size: 16px;
+    padding: 4px 8px;
+  }
+
+  .chart-container {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .workflow-card {
+    width: 380px;
+    height: 650px;
+  }
+
+  .mermaid {
+    font-size: 20px;
+  }
+  
+  .mermaid .node text {
+    font-size: 18px !important;
+  }
+  
+  .mermaid .edgeLabel {
+    font-size: 14px;
+    padding: 3px 6px;
+  }
+
+  .chart-container {
+    padding: 0.75rem;
+  }
+}
+
+/* 完全禁用工作流区域的所有伪元素 */
+.workflow-container *::after,
+.workflow-container *::before {
+  display: none !important;
+}
+
+/* 更强力的全局禁用规则 - 针对工作流区域 */
+.workflow-container,
+.workflow-container *,
+.workflow-card,
+.workflow-card *,
+.chart-container,
+.chart-container *,
+.mermaid,
+.mermaid * {
+  position: relative !important;
+}
+
+.workflow-container::after,
+.workflow-container::before,
+.workflow-container *::after,
+.workflow-container *::before,
+.workflow-card::after,
+.workflow-card::before,
+.workflow-card *::after,
+.workflow-card *::before {
+  display: none !important;
+  content: none !important;
+  animation: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+}
+
+/* 禁用可能的浮动元素 */
+.workflow-container [style*="position: absolute"],
+.workflow-card [style*="position: absolute"],
+.chart-container [style*="position: absolute"] {
+  display: none !important;
+}
+
+/* 专门针对 Mermaid edgeLabel 元素的隐藏规则 */
+.workflow-card .edgeLabels,
+.workflow-card .edgeLabel,
+.workflow-card g.edgeLabels,
+.workflow-card g.edgeLabel,
+.workflow-card .edgeLabel span,
+.workflow-card .edgeLabel div,
+.workflow-card .edgeLabel foreignObject {
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+}
+</style> 
