@@ -1,7 +1,7 @@
 import { prependForwardSlash } from '@astrojs/internal-helpers/path';
 import { c as createComponent, r as renderTemplate, m as maybeRenderHead, a as createAstro, b as addAttribute, d as renderHead, e as renderComponent, f as renderSlot, A as AstroError, U as UnknownContentCollectionError, g as renderUniqueStylesheet, h as renderScriptElement, i as createHeadAndContent, u as unescapeHTML } from '../astro.32e88c90.js';
 /* empty css                           */import 'clsx';
-/* empty css                           *//* empty css                           *//* empty css                           */
+/* empty css                           *//* empty css                           */
 const $$Header = createComponent(($$result, $$props, $$slots) => {
   return renderTemplate`${maybeRenderHead()}<header style="position: sticky; top: 0; background: white; border-bottom: 4px solid var(--mondrian-black); box-shadow: 0 2px 4px rgba(0,0,0,0.1); z-index: 50;"> <nav class="container" style="padding: 16px; display: flex; align-items: center; justify-content: space-between;"> <a href="https://mofa.ai" style="display: flex; align-items: center; gap: 8px; text-decoration: none;" target="_blank" rel="noopener noreferrer"> <img src="/mofa-logo.png" alt="MoFA Logo" style="width: 40px; height: 40px; border-radius: 8px; object-fit: cover;"> <span class="gradient-text" style="font-size: 1.5rem; font-weight: 700;">MoFA</span> </a> <div style="display: flex; align-items: center; gap: 32px;"> <a href="/" class="nav-link" data-en="Home" data-zh="首页">Home</a> <a href="/docs" class="nav-link" data-en="Docs" data-zh="文档">Docs</a> <!-- 临时隐藏 Examples 链接 --> <!-- <a href="https://demo.mofa.ai" class="nav-link" target="_blank" rel="noopener noreferrer" data-en="Examples" data-zh="示例">Examples</a> --> <a href="/blog" class="nav-link" data-en="Blog" data-zh="博客">Blog</a> <!-- 语言切换按钮 --> <div style="display: flex; align-items: center; gap: 8px;"> <button id="lang-toggle" style="
           display: flex;
@@ -217,7 +217,7 @@ function isPropagatedAssetsModule(module) {
 
 const contentDir = '/src/content/';
 
-const contentEntryGlob = /* #__PURE__ */ Object.assign({"/src/content/blog/introducing-mofa copy.md": () => import('../introducing-mofa copy.a09bbdf0.js'),"/src/content/blog/introducing-mofa.md": () => import('../introducing-mofa.5be0bfc3.js'),"/src/content/docs/0.overview.md": () => import('../0.overview.3e20ac83.js'),"/src/content/docs/1. concepts/agents.md": () => import('../agents.8fe1f333.js'),"/src/content/docs/2. getting-started/first-agent.md": () => import('../first-agent.761804b8.js'),"/src/content/docs/2. getting-started/installation.md": () => import('../installation.aefe46d6.js')});
+const contentEntryGlob = /* #__PURE__ */ Object.assign({"/src/content/blog/introducing-mofa copy.md": () => import('../introducing-mofa copy.a09bbdf0.js'),"/src/content/blog/introducing-mofa.md": () => import('../introducing-mofa.5be0bfc3.js'),"/src/content/docs/0.overview.md": () => import('../0.overview.3e20ac83.js'),"/src/content/docs/1. concepts/agents.md": () => import('../agents.8fe1f333.js'),"/src/content/docs/2. getting-started/first-agent.md": () => import('../first-agent.761804b8.js'),"/src/content/docs/2. getting-started/installation.md": () => import('../installation.aefe46d6.js'),"/src/content/docs/3. test/first-agent.md": () => import('../first-agent.df82c7c8.js'),"/src/content/docs/3. test/installation.md": () => import('../installation.38241c27.js')});
 const contentCollectionToEntryMap = createCollectionToGlobResultMap({
 	globResult: contentEntryGlob,
 	contentDir,
@@ -234,7 +234,7 @@ createCollectionToGlobResultMap({
 });
 
 let lookupMap = {};
-lookupMap = {"blog":{"type":"content","entries":{"introducing-mofa-copy":"/src/content/blog/introducing-mofa copy.md","introducing-mofa":"/src/content/blog/introducing-mofa.md"}},"docs":{"type":"content","entries":{"1-concepts/agents":"/src/content/docs/1. concepts/agents.md","2-getting-started/installation":"/src/content/docs/2. getting-started/installation.md","0overview":"/src/content/docs/0.overview.md","2-getting-started/first-agent":"/src/content/docs/2. getting-started/first-agent.md"}}};
+lookupMap = {"blog":{"type":"content","entries":{"introducing-mofa-copy":"/src/content/blog/introducing-mofa copy.md","introducing-mofa":"/src/content/blog/introducing-mofa.md"}},"docs":{"type":"content","entries":{"0overview":"/src/content/docs/0.overview.md","3-test/installation":"/src/content/docs/3. test/installation.md","1-concepts/agents":"/src/content/docs/1. concepts/agents.md","3-test/first-agent":"/src/content/docs/3. test/first-agent.md","2-getting-started/first-agent":"/src/content/docs/2. getting-started/first-agent.md","2-getting-started/installation":"/src/content/docs/2. getting-started/installation.md"}}};
 
 function createGlobLookup(glob) {
 	return async (collection, lookupId) => {
@@ -245,7 +245,7 @@ function createGlobLookup(glob) {
 	};
 }
 
-const renderEntryGlob = /* #__PURE__ */ Object.assign({"/src/content/blog/introducing-mofa copy.md": () => import('../introducing-mofa copy.89ad280b.js'),"/src/content/blog/introducing-mofa.md": () => import('../introducing-mofa.177dceac.js'),"/src/content/docs/0.overview.md": () => import('../0.overview.d414f9b0.js'),"/src/content/docs/1. concepts/agents.md": () => import('../agents.a7e55742.js'),"/src/content/docs/2. getting-started/first-agent.md": () => import('../first-agent.3c2a9a26.js'),"/src/content/docs/2. getting-started/installation.md": () => import('../installation.6d252c58.js')});
+const renderEntryGlob = /* #__PURE__ */ Object.assign({"/src/content/blog/introducing-mofa copy.md": () => import('../introducing-mofa copy.89ad280b.js'),"/src/content/blog/introducing-mofa.md": () => import('../introducing-mofa.177dceac.js'),"/src/content/docs/0.overview.md": () => import('../0.overview.d414f9b0.js'),"/src/content/docs/1. concepts/agents.md": () => import('../agents.a7e55742.js'),"/src/content/docs/2. getting-started/first-agent.md": () => import('../first-agent.3c2a9a26.js'),"/src/content/docs/2. getting-started/installation.md": () => import('../installation.6d252c58.js'),"/src/content/docs/3. test/first-agent.md": () => import('../first-agent.a1b84c2b.js'),"/src/content/docs/3. test/installation.md": () => import('../installation.551508f4.js')});
 const collectionToRenderEntryMap = createCollectionToGlobResultMap({
 	globResult: renderEntryGlob,
 	contentDir,
@@ -380,4 +380,4 @@ const ____slug_ = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty(
   url: $$url
 }, Symbol.toStringTag, { value: 'Module' }));
 
-export { $$BaseLayout as $, ____slug_$1 as _, $$DocsLayout as a, ____slug_ as b, getCollection as g };
+export { $$BaseLayout as $, ____slug_$1 as _, ____slug_ as a, getCollection as g };

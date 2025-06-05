@@ -1,7 +1,7 @@
-import { c as createComponent, r as renderTemplate, m as maybeRenderHead, b as addAttribute, e as renderComponent, d as renderHead, a as createAstro } from '../astro.32e88c90.js';
+import { c as createComponent, r as renderTemplate, m as maybeRenderHead, b as addAttribute, e as renderComponent, d as renderHead } from '../astro.32e88c90.js';
 import 'clsx';
-/* empty css                           *//* empty css                          */import { $ as $$BaseLayout, g as getCollection, a as $$DocsLayout } from './_...slug_.astro.82955462.js';
-
+/* empty css                           *//* empty css                          */import { $ as $$BaseLayout, g as getCollection } from './_...slug_.astro.ec6a33ee.js';
+/* empty css                          */
 const $$WorkflowShowcase = createComponent(($$result, $$props, $$slots) => {
   const workflows = [
     {
@@ -376,7 +376,7 @@ Built with modern technologies for optimal performance and developer experience
 </a> <a href="https://github.com/moxin-org/mofa/tree/main/MoFA_stage#quick-start" target="_blank" rel="noopener noreferrer" class="btn-outline" style="font-size: 1.125rem; padding: 16px 32px;" data-en="\u{1F4D6} Quick Start Guide" data-zh="\u{1F4D6} \u5FEB\u901F\u5F00\u59CB\u6307\u5357">
 \u{1F4D6} Quick Start Guide
 </a> </div> </div> </div> </section> <!-- \u5C0F\u578B\u5206\u9694\u7EBF --> <div class="mini-divider"> <div class="mini-line blue-line"></div> <div class="mini-line yellow-line"></div> <div class="mini-line red-line"></div> </div> <!-- \u65B0\u7684\u5DE5\u4F5C\u6D41\u5C55\u793A\u7EC4\u4EF6 --> `, ` <!-- \u5C0F\u578B\u5206\u9694\u7EBF --> <div class="mini-divider"> <div class="mini-line yellow-line"></div> <div class="mini-line red-line"></div> <div class="mini-line blue-line"></div> </div> <!-- Demo Video Section --> <section class="py-20" style="background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);"> <div class="container"> <div class="text-center mb-16"> <h2 class="text-4xl font-bold mb-4" data-en="See MoFA in <span class='gradient-text'>Action</span>" data-zh="\u89C2\u770B MoFA <span class='gradient-text'>\u5B9E\u6218\u6F14\u793A</span>">
-See MoFA in <span class="gradient-text">Action</span> </h2> <p class="text-xl text-gray-600 max-w-2xl mx-auto" data-en="Watch how developers use MoFA to build sophisticated AI applications in minutes" data-zh="\u89C2\u770B\u5F00\u53D1\u8005\u5982\u4F55\u5728\u51E0\u5206\u949F\u5185\u4F7F\u7528 MoFA \u6784\u5EFA\u590D\u6742\u7684\u4EBA\u5DE5\u667A\u80FD\u5E94\u7528">Watch how developers use MoFA to build sophisticated AI applications in minutes</p> <!-- Video Embed --> <div class="video-container rounded-lg shadow-2xl overflow-hidden mx-auto" style="max-width: 800px; background-color: #2d3748;"> <iframe id="demo-video-iframe" width="100%" style="aspect-ratio: 16/9; display: block;" src="https://www.youtube.com/embed/YOUR_PLACEHOLDER_VIDEO_ID" title="MoFA in Action Demo Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+See MoFA in <span class="gradient-text">Action</span> </h2> <p class="text-xl text-gray-600 max-w-2xl mx-auto" data-en="Watch how developers use MoFA to build sophisticated AI applications in minutes" data-zh="\u89C2\u770B\u5F00\u53D1\u8005\u5982\u4F55\u5728\u51E0\u5206\u949F\u5185\u4F7F\u7528 MoFA \u6784\u5EFA\u590D\u6742\u7684\u4EBA\u5DE5\u667A\u80FD\u5E94\u7528">Watch how developers use MoFA to build sophisticated AI applications in minutes</p> <!-- Video Embed --> <div class="video-container rounded-lg shadow-2xl overflow-hidden mx-auto" style="max-width: 800px; background-color: #2d3748;"> <iframe id="demo-video-iframe" width="100%" style="aspect-ratio: 16/9; display: block;" src="https://www.youtube.com/embed/-QApoNUPG-U" title="MoFA in Action Demo Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
           </iframe> </div> </div> </div> <!-- \u5C0F\u578B\u5206\u9694\u7EBF --> <div class="mini-divider"> <div class="mini-line red-line"></div> <div class="mini-line blue-line"></div> <div class="mini-line yellow-line"></div> </div> </section></main> <footer style="background-color: var(--mondrian-black); color: white;"> <div class="container py-12"> <div class="text-center"> <div style="display: flex; align-items: center; justify-content: center; gap: 8px; margin-bottom: 16px;"> <img src="/mofa-logo.png" alt="MoFA Logo" style="width: 32px; height: 32px; border-radius: 6px; object-fit: cover;"> <span style="font-size: 1.25rem; font-weight: 700;">MoFA</span> </div> <p style="color: #9ca3af; margin-bottom: 8px;" data-en="Make Ordinary Developers Full-stack AI Engineers" data-zh="\u8BA9\u666E\u901A\u5F00\u53D1\u8005\u6210\u4E3A\u5168\u6808 AI \u5DE5\u7A0B\u5E08">
 Make Ordinary Developers Full-stack AI Engineers
 </p> <p style="color: #9ca3af; margin-bottom: 24px;" data-en="Modular Framework for AI Agents" data-zh="\u6A21\u5757\u5316 AI \u4EE3\u7406\u6846\u67B6">
@@ -462,7 +462,7 @@ Modular Framework for AI Agents
         if (lang === 'zh') {
           videoIframe.src = "//player.bilibili.com/player.html?bvid=BV15fQPY6EnD&page=1&high_quality=1&danmaku=0";
         } else { // 'en' or default
-          videoIframe.src = "https://www.youtube.com/embed/YOUR_PLACEHOLDER_VIDEO_ID"; // TODO: Replace with actual English video when ready
+          videoIframe.src = "https://www.youtube.com/embed/-QApoNUPG-U";
         }
       }
       
@@ -591,7 +591,7 @@ Built with modern technologies for optimal performance and developer experience
 </a> <a href="https://github.com/moxin-org/mofa/tree/main/MoFA_stage#quick-start" target="_blank" rel="noopener noreferrer" class="btn-outline" style="font-size: 1.125rem; padding: 16px 32px;" data-en="\u{1F4D6} Quick Start Guide" data-zh="\u{1F4D6} \u5FEB\u901F\u5F00\u59CB\u6307\u5357">
 \u{1F4D6} Quick Start Guide
 </a> </div> </div> </div> </section> <!-- \u5C0F\u578B\u5206\u9694\u7EBF --> <div class="mini-divider"> <div class="mini-line blue-line"></div> <div class="mini-line yellow-line"></div> <div class="mini-line red-line"></div> </div> <!-- \u65B0\u7684\u5DE5\u4F5C\u6D41\u5C55\u793A\u7EC4\u4EF6 --> `, ` <!-- \u5C0F\u578B\u5206\u9694\u7EBF --> <div class="mini-divider"> <div class="mini-line yellow-line"></div> <div class="mini-line red-line"></div> <div class="mini-line blue-line"></div> </div> <!-- Demo Video Section --> <section class="py-20" style="background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);"> <div class="container"> <div class="text-center mb-16"> <h2 class="text-4xl font-bold mb-4" data-en="See MoFA in <span class='gradient-text'>Action</span>" data-zh="\u89C2\u770B MoFA <span class='gradient-text'>\u5B9E\u6218\u6F14\u793A</span>">
-See MoFA in <span class="gradient-text">Action</span> </h2> <p class="text-xl text-gray-600 max-w-2xl mx-auto" data-en="Watch how developers use MoFA to build sophisticated AI applications in minutes" data-zh="\u89C2\u770B\u5F00\u53D1\u8005\u5982\u4F55\u5728\u51E0\u5206\u949F\u5185\u4F7F\u7528 MoFA \u6784\u5EFA\u590D\u6742\u7684\u4EBA\u5DE5\u667A\u80FD\u5E94\u7528">Watch how developers use MoFA to build sophisticated AI applications in minutes</p> <!-- Video Embed --> <div class="video-container rounded-lg shadow-2xl overflow-hidden mx-auto" style="max-width: 800px; background-color: #2d3748;"> <iframe id="demo-video-iframe" width="100%" style="aspect-ratio: 16/9; display: block;" src="https://www.youtube.com/embed/YOUR_PLACEHOLDER_VIDEO_ID" title="MoFA in Action Demo Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+See MoFA in <span class="gradient-text">Action</span> </h2> <p class="text-xl text-gray-600 max-w-2xl mx-auto" data-en="Watch how developers use MoFA to build sophisticated AI applications in minutes" data-zh="\u89C2\u770B\u5F00\u53D1\u8005\u5982\u4F55\u5728\u51E0\u5206\u949F\u5185\u4F7F\u7528 MoFA \u6784\u5EFA\u590D\u6742\u7684\u4EBA\u5DE5\u667A\u80FD\u5E94\u7528">Watch how developers use MoFA to build sophisticated AI applications in minutes</p> <!-- Video Embed --> <div class="video-container rounded-lg shadow-2xl overflow-hidden mx-auto" style="max-width: 800px; background-color: #2d3748;"> <iframe id="demo-video-iframe" width="100%" style="aspect-ratio: 16/9; display: block;" src="https://www.youtube.com/embed/-QApoNUPG-U" title="MoFA in Action Demo Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
           </iframe> </div> </div> </div> <!-- \u5C0F\u578B\u5206\u9694\u7EBF --> <div class="mini-divider"> <div class="mini-line red-line"></div> <div class="mini-line blue-line"></div> <div class="mini-line yellow-line"></div> </div> </section></main> <footer style="background-color: var(--mondrian-black); color: white;"> <div class="container py-12"> <div class="text-center"> <div style="display: flex; align-items: center; justify-content: center; gap: 8px; margin-bottom: 16px;"> <img src="/mofa-logo.png" alt="MoFA Logo" style="width: 32px; height: 32px; border-radius: 6px; object-fit: cover;"> <span style="font-size: 1.25rem; font-weight: 700;">MoFA</span> </div> <p style="color: #9ca3af; margin-bottom: 8px;" data-en="Make Ordinary Developers Full-stack AI Engineers" data-zh="\u8BA9\u666E\u901A\u5F00\u53D1\u8005\u6210\u4E3A\u5168\u6808 AI \u5DE5\u7A0B\u5E08">
 Make Ordinary Developers Full-stack AI Engineers
 </p> <p style="color: #9ca3af; margin-bottom: 24px;" data-en="Modular Framework for AI Agents" data-zh="\u6A21\u5757\u5316 AI \u4EE3\u7406\u6846\u67B6">
@@ -677,7 +677,7 @@ Modular Framework for AI Agents
         if (lang === 'zh') {
           videoIframe.src = "//player.bilibili.com/player.html?bvid=BV15fQPY6EnD&page=1&high_quality=1&danmaku=0";
         } else { // 'en' or default
-          videoIframe.src = "https://www.youtube.com/embed/YOUR_PLACEHOLDER_VIDEO_ID"; // TODO: Replace with actual English video when ready
+          videoIframe.src = "https://www.youtube.com/embed/-QApoNUPG-U";
         }
       }
       
@@ -925,22 +925,8 @@ const index$1 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
   url: $$url$1
 }, Symbol.toStringTag, { value: 'Module' }));
 
-const $$Astro = createAstro("https://mofa-org.github.io");
-const $$Index = createComponent(async ($$result, $$props, $$slots) => {
-  const Astro2 = $$result.createAstro($$Astro, $$props, $$slots);
-  Astro2.self = $$Index;
-  const docs = await getCollection("docs");
-  if (docs.length > 0) {
-    const firstDoc = docs[0];
-    return Astro2.redirect(`/docs/${firstDoc.slug}`);
-  }
-  return renderTemplate`${renderComponent($$result, "DocsLayout", $$DocsLayout, { "title": "Documentation", "description": "MoFA \u5B98\u65B9\u6587\u6863" }, { "default": async ($$result2) => renderTemplate` ${maybeRenderHead()}<div style="text-align: center; padding: 80px 20px;"> <h1 style="font-size: 2.5rem; font-weight: bold; margin: 0 0 16px 0; color: #1a1a1a;">
-Documentation
-</h1> <p style="font-size: 1.2rem; color: #666; margin: 0 0 40px 0;">
-文档正在完善中，敬请期待
-</p> <div style="display: flex; justify-content: center; gap: 16px;"> <a href="https://github.com/moxin-org/mofa" target="_blank" rel="noopener noreferrer" style="background: #0066cc; color: white; text-decoration: none; padding: 12px 24px; border-radius: 6px; font-weight: 500;">
-查看 GitHub
-</a> </div> </div> ` })}`;
+const $$Index = createComponent(($$result, $$props, $$slots) => {
+  return renderTemplate`<html lang="en" data-astro-cid-zsukdfzm> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Redirecting to Documentation...</title><meta http-equiv="refresh" content="0;url=/docs/0overview"><link rel="canonical" href="/docs/0overview">${renderHead()}</head> <body data-astro-cid-zsukdfzm> <div style="text-align: center; padding: 80px 20px; font-family: system-ui, -apple-system, sans-serif;" data-astro-cid-zsukdfzm> <h1 style="font-size: 2rem; margin-bottom: 16px;" data-astro-cid-zsukdfzm>Redirecting to Documentation...</h1> <p style="color: #666; margin-bottom: 24px;" data-astro-cid-zsukdfzm>If you are not redirected automatically, <a href="/docs/0overview" style="color: #0066cc;" data-astro-cid-zsukdfzm>click here</a>.</p> <div class="loading" style="margin: 0 auto; width: 40px; height: 40px; border: 4px solid #f3f3f3; border-top: 4px solid #0066cc; border-radius: 50%; animation: spin 1s linear infinite;" data-astro-cid-zsukdfzm></div> </div>  </body> </html>`;
 }, "/Users/liyao/Code/mofa-org.github.io/mofa-website/src/pages/docs/index.astro", void 0);
 
 const $$file = "/Users/liyao/Code/mofa-org.github.io/mofa-website/src/pages/docs/index.astro";
