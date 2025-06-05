@@ -76,11 +76,14 @@ const sidebarContent = Object.entries(docsStructure).map(([key, item]) =>
 ---
 
 <BaseLayout title={title} description={description}>
+  <!-- 侧边栏背景，延伸到页面底部 -->
+  <div class="sidebar-background"></div>
+  
   <div style="display: flex; min-height: calc(100vh - 140px);">
     
     <!-- 左侧侧边栏 -->
-    <aside style="width: 280px; background: #f8fafc; border-right: 1px solid #e5e7eb; padding: 32px 0; flex-shrink: 0; overflow-y: auto; max-height: calc(100vh - 140px); position: sticky; top: 140px;">
-      <div style="padding: 0 24px;">
+    <aside class="docs-sidebar">
+      <div class="sidebar-content">
         <h2 style="font-size: 1.125rem; font-weight: 700; color: #111827; margin: 0 0 24px 0;">
           Documentation
         </h2>
@@ -102,11 +105,82 @@ const sidebarContent = Object.entries(docsStructure).map(([key, item]) =>
 
   <!-- 文档样式 -->
   <style>
+    /* 侧边栏背景 */
+    .sidebar-background {
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 280px;
+      height: 100vh;
+      background: #f8fafc;
+      border-right: 1px solid #e5e7eb;
+      z-index: -1;
+    }
+    
+    /* 侧边栏样式 */
+    .docs-sidebar {
+      width: 280px;
+      background: transparent;
+      flex-shrink: 0;
+      min-height: calc(100vh - 140px);
+      position: sticky;
+      top: 140px;
+      display: flex;
+      flex-direction: column;
+      z-index: 10;
+    }
+    
+    .sidebar-content {
+      padding: 32px 24px 60px 24px;
+      flex: 1;
+      overflow-y: auto;
+      min-height: calc(100vh - 200px);
+    }
+    
     .sidebar-link.active {
       background: #eff6ff !important;
       color: #0066cc !important;
       border-left: 3px solid #0066cc;
       padding-left: 13px !important;
+    }
+
+    /* 响应式设计 */
+    @media (max-width: 1024px) {
+      .sidebar-background {
+        width: 260px;
+      }
+      
+      .docs-sidebar {
+        width: 260px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .sidebar-background {
+        left: -280px;
+        transition: left 0.3s ease;
+        box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+        width: 280px;
+      }
+      
+      .sidebar-background.open {
+        left: 0;
+      }
+      
+      .docs-sidebar {
+        position: fixed;
+        left: -280px;
+        top: 140px;
+        z-index: 50;
+        width: 280px;
+        height: calc(100vh - 140px);
+        transition: left 0.3s ease;
+        background: #f8fafc;
+      }
+      
+      .docs-sidebar.open {
+        left: 0;
+      }
     }
 
     /* 文档内容样式 */

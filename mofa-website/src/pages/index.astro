@@ -83,9 +83,85 @@ import WorkflowShowcase from '../components/WorkflowShowcase.astro';
         <div class="max-w-4xl mx-auto text-center">
           <!-- Logo -->
           <div style="display: flex; justify-content: center; margin-bottom: 32px;">
-            <div style="width: 200px; height: 200px; transition: all 0.3s ease; position: relative; overflow: hidden; border-radius: 20px;" onmouseover="this.style.transform='scale(1.1)'; this.style.boxShadow='0 15px 40px rgba(0, 0, 0, 0.25)'" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='none'">
-              <img src="/mofa-logo.png" alt="MoFA Logo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 20px;" />
-              <div style="position: absolute; inset: 0; background: linear-gradient(135deg, transparent 30%, rgba(255, 255, 255, 0.2) 50%, transparent 70%); opacity: 0; transition: opacity 0.3s ease;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0'"></div>
+            <div class="logo-container" style="width: 144px; height: 144px; position: relative; overflow: hidden; border-radius: 20px;">
+              <!-- 原始logo作为背景定位参考 -->
+              <img src="/mofa-logo.png" alt="MoFA Logo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 20px; filter: invert(1); display: none;" />
+              
+              <!-- M字母 - 左上 -->
+              <div class="logo-letter-container" style="
+                position: absolute;
+                top: 12px;
+                left: 14px;
+                width: 60px;
+                height: 56px;
+                z-index: 10;
+                --flow-delay: 0;
+              ">
+                <img src="mofa-M.png" alt="M" class="logo-letter letter-m draggable" style="
+                  width: 100%;
+                  height: 100%;
+                  object-fit: contain;
+                  border-radius: 8px;
+                " />
+                <div class="data-flow"></div>
+              </div>
+              
+              <!-- O字母 - 左下 -->
+              <div class="logo-letter-container" style="
+                position: absolute;
+                top: 66px;
+                left: 14px;
+                width: 60px;
+                height: 60px;
+                z-index: 10;
+                --flow-delay: 1;
+              ">
+                <img src="mofa-O.png" alt="O" class="logo-letter letter-o draggable" style="
+                  width: 100%;
+                  height: 100%;
+                  object-fit: contain;
+                  border-radius: 8px;
+                " />
+                <div class="data-flow"></div>
+              </div>
+              
+              <!-- F字母 - 右侧 -->
+              <div class="logo-letter-container" style="
+                position: absolute;
+                top: 12px;
+                left: 76px;
+                width: 48px;
+                height: 106px;
+                z-index: 10;
+                --flow-delay: 2;
+              ">
+                <img src="mofa-F.png" alt="F" class="logo-letter letter-f draggable" style="
+                  width: 100%;
+                  height: 100%;
+                  object-fit: contain;
+                  border-radius: 8px;
+                " />
+                <div class="data-flow"></div>
+              </div>
+              
+              <!-- A字母 - 右下 -->
+              <div class="logo-letter-container" style="
+                position: absolute;
+                top: 60px;
+                left: 80px;
+                width: 58px;
+                height: 69px;
+                z-index: 10;
+                --flow-delay: 3;
+              ">
+                <img src="mofa-A.png" alt="A" class="logo-letter letter-a draggable" style="
+                  width: 100%;
+                  height: 100%;
+                  object-fit: contain;
+                  border-radius: 8px;
+                " />
+                <div class="data-flow"></div>
+              </div>
             </div>
           </div>
 
@@ -561,38 +637,21 @@ import WorkflowShowcase from '../components/WorkflowShowcase.astro';
   </button>
 
   <!-- 语言切换脚本 -->
-  <script is:inline>
-    // 返回顶部按钮逻辑
-    const backToTopButton = document.getElementById('back-to-top');
-
-    window.onscroll = function() {
-      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-        backToTopButton.style.display = "block";
-      } else {
-        backToTopButton.style.display = "none";
-      }
-    };
-
-    backToTopButton.addEventListener('click', function(){
-      window.scrollTo({top: 0, behavior: 'smooth'});
-    });
-
-    // 语言数据和切换逻辑
+  <script>
+    // 定义支持的语言
     const languages = {
-      en: {
-        flag: '🇺🇸',
-        name: 'EN',
-        title: 'MoFA - Make Ordinary Developers Full-stack AI Engineers'
+      'en': {
+        name: 'English',
+        flag: '🇺🇸'
       },
-      zh: {
-        flag: '🇨🇳',
+      'zh': {
         name: '中文',
-        title: 'MoFA - 让普通开发者成为全栈 AI 工程师'
+        flag: '🇨🇳'
       }
     };
-
-    let currentLang = 'en'; // 默认英文
-
+    
+    let currentLang = 'en';
+    
     function updateLanguage(lang) {
       currentLang = lang;
       
@@ -651,6 +710,188 @@ import WorkflowShowcase from '../components/WorkflowShowcase.astro';
 
     // 页面加载时初始化语言
     document.addEventListener('DOMContentLoaded', initLanguage);
+
+    // 字母拖拽功能
+    document.addEventListener('DOMContentLoaded', function() {
+      const draggableLetters = document.querySelectorAll('.logo-letter.draggable');
+      let isDragging = false;
+      let currentLetter = null;
+      let currentLetterContainer = null;
+      let startX = 0;
+      let startY = 0;
+      let initialLeft = 0;
+      let initialTop = 0;
+
+      draggableLetters.forEach(letter => {
+        // 鼠标按下
+        letter.addEventListener('mousedown', function(e) {
+          e.preventDefault();
+          isDragging = true;
+          currentLetter = letter;
+          currentLetterContainer = letter.closest('.logo-letter-container');
+          
+          // 添加拖拽样式
+          letter.classList.add('dragging');
+          
+          // 记录初始位置
+          startX = e.clientX;
+          startY = e.clientY;
+          
+          // 获取元素当前位置
+          const rect = currentLetterContainer.getBoundingClientRect();
+          const containerRect = currentLetterContainer.offsetParent.getBoundingClientRect();
+          initialLeft = rect.left - containerRect.left;
+          initialTop = rect.top - containerRect.top;
+          
+          // 临时禁用动画
+          currentLetterContainer.style.animation = 'none';
+        });
+
+        // 触摸开始（移动端支持）
+        letter.addEventListener('touchstart', function(e) {
+          e.preventDefault();
+          isDragging = true;
+          currentLetter = letter;
+          currentLetterContainer = letter.closest('.logo-letter-container');
+          
+          letter.classList.add('dragging');
+          
+          const touch = e.touches[0];
+          startX = touch.clientX;
+          startY = touch.clientY;
+          
+          const rect = currentLetterContainer.getBoundingClientRect();
+          const containerRect = currentLetterContainer.offsetParent.getBoundingClientRect();
+          initialLeft = rect.left - containerRect.left;
+          initialTop = rect.top - containerRect.top;
+          
+          currentLetterContainer.style.animation = 'none';
+        });
+      });
+
+      // 鼠标移动
+      document.addEventListener('mousemove', function(e) {
+        if (!isDragging || !currentLetter || !currentLetterContainer) return;
+        
+        e.preventDefault();
+        
+        const deltaX = e.clientX - startX;
+        const deltaY = e.clientY - startY;
+        
+        const newLeft = Math.max(0, Math.min(window.innerWidth - currentLetterContainer.offsetWidth, initialLeft + deltaX));
+        const newTop = Math.max(0, Math.min(window.innerHeight - currentLetterContainer.offsetHeight, initialTop + deltaY));
+        
+        currentLetterContainer.style.left = newLeft + 'px';
+        currentLetterContainer.style.top = newTop + 'px';
+      });
+
+      // 触摸移动
+      document.addEventListener('touchmove', function(e) {
+        if (!isDragging || !currentLetter || !currentLetterContainer) return;
+        
+        e.preventDefault();
+        
+        const touch = e.touches[0];
+        const deltaX = touch.clientX - startX;
+        const deltaY = touch.clientY - startY;
+        
+        const newLeft = Math.max(0, Math.min(window.innerWidth - currentLetterContainer.offsetWidth, initialLeft + deltaX));
+        const newTop = Math.max(0, Math.min(window.innerHeight - currentLetterContainer.offsetHeight, initialTop + deltaY));
+        
+        currentLetterContainer.style.left = newLeft + 'px';
+        currentLetterContainer.style.top = newTop + 'px';
+      });
+
+      // 鼠标释放
+      document.addEventListener('mouseup', function() {
+        if (isDragging && currentLetter && currentLetterContainer) {
+          currentLetter.classList.remove('dragging');
+          
+          // 重新启用动画
+          setTimeout(() => {
+            currentLetterContainer.style.animation = '';
+          }, 100);
+          
+          isDragging = false;
+          currentLetter = null;
+          currentLetterContainer = null;
+        }
+      });
+
+      // 触摸结束
+      document.addEventListener('touchend', function() {
+        if (isDragging && currentLetter && currentLetterContainer) {
+          currentLetter.classList.remove('dragging');
+          
+          setTimeout(() => {
+            currentLetterContainer.style.animation = '';
+          }, 100);
+          
+          isDragging = false;
+          currentLetter = null;
+          currentLetterContainer = null;
+        }
+      });
+
+      // 双击重置位置
+      draggableLetters.forEach(letter => {
+        letter.addEventListener('dblclick', function() {
+          // 获取字母容器
+          const letterContainer = letter.closest('.logo-letter-container');
+          if (!letterContainer) return;
+          
+          // 重置到原始位置
+          const originalPositions = {
+            'letter-m': { top: '12px', left: '14px' },
+            'letter-o': { top: '66px', left: '14px' },
+            'letter-f': { top: '12px', left: '76px' },
+            'letter-a': { top: '60px', left: '80px' }
+          };
+          
+          const letterClass = Array.from(letter.classList).find(cls => cls.startsWith('letter-'));
+          if (letterClass && originalPositions[letterClass]) {
+            letterContainer.style.top = originalPositions[letterClass].top;
+            letterContainer.style.left = originalPositions[letterClass].left;
+          }
+        });
+      });
+      
+      // 添加金属光泽效果
+      const letterContainers = document.querySelectorAll('.logo-letter-container');
+      
+      // 处理鼠标移动，更新光泽效果位置
+      letterContainers.forEach(container => {
+        container.addEventListener('mousemove', function(e) {
+          if (isDragging) return; // 拖拽时不应用效果
+          
+          const rect = container.getBoundingClientRect();
+          
+          // 计算鼠标在元素内的相对位置 (0-1)
+          const x = (e.clientX - rect.left) / rect.width;
+          const y = (e.clientY - rect.top) / rect.height;
+          
+          // 更新光泽效果位置 (通过 CSS 变量)
+          container.style.setProperty('--shine-x', `${x * 100}%`);
+          container.style.setProperty('--shine-y', `${y * 100}%`);
+          
+          // 添加激活类以显示光泽效果
+          container.classList.add('shine-active');
+        });
+        
+        // 鼠标离开时移除激活类
+        container.addEventListener('mouseleave', function() {
+          container.classList.remove('shine-active');
+        });
+        
+        // 添加数据流效果元素 (确保每个容器只有一个数据流元素)
+        let dataFlow = container.querySelector('.data-flow');
+        if (!dataFlow) {
+          dataFlow = document.createElement('div');
+          dataFlow.className = 'data-flow';
+          container.appendChild(dataFlow);
+        }
+      });
+    });
   </script>
 
 	</body>

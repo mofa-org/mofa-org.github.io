@@ -981,4 +981,180 @@ html, body {
   .mermaid {
     font-size: 12px;
   }
+}
+
+/* Logo 字母容器样式 */
+.logo-letter-container {
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  /* 初始化位置变量 */
+  --shine-x: 50%;
+  --shine-y: 50%;
+}
+
+.logo-letter-container:hover {
+  transform: scale(1.08);
+}
+
+/* Logo 字母样式 */
+.logo-letter {
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  /* 金属质感基础效果 */
+  filter: 
+    contrast(1.05)
+    drop-shadow(0 2px 4px rgba(0, 0, 0, 0.08))
+    drop-shadow(0 1px 2px rgba(0, 0, 0, 0.06));
+}
+
+.logo-letter-container::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  /* 柔和的金属光泽渐变遮罩 */
+  background: linear-gradient(135deg, 
+    transparent 20%, 
+    rgba(255, 255, 255, 0.12) 45%, 
+    rgba(255, 255, 255, 0.18) 55%, 
+    transparent 80%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  border-radius: 8px;
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* 金属光泽层 - 会根据鼠标位置移动 */
+.logo-letter-container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0; 
+  width: 100%; 
+  height: 100%; 
+  background: linear-gradient(
+    100deg, /* Angle of the shine */
+    rgba(255, 255, 255, 0) 20%,       /* Start transparent */
+    rgba(255, 255, 255, 0.5) 50%,   /* Peak of the shine (light white, semi-transparent) */
+    rgba(255, 255, 255, 0) 80%        /* End transparent */
+  );
+  transform: translateX(-150%) skewX(-25deg); /* Initial position: off-screen left, skewed */
+  
+  mix-blend-mode: screen; /* Blends the shine with letter colors, affecting only opaque parts */
+  
+  /* Animation properties */
+  animation-name: elegant-shine-flow;
+  animation-duration: 4s; /* Duration of one sweep */
+  animation-timing-function: ease-in-out; /* Smooth motion */
+  animation-iteration-count: infinite; /* Loop continuously */
+  /* Staggered start using --flow-delay from inline styles (defaults to 0 if not set) */
+  animation-delay: calc(var(--flow-delay, 0) * 0.4s); 
+  
+  pointer-events: none; /* Ensure shine doesn't interfere with mouse events (e.g., dragging) */
+}
+
+@keyframes elegant-shine-flow {
+  0% {
+    transform: translateX(-150%) skewX(-25deg);
+  }
+  100% {
+    transform: translateX(150%) skewX(-25deg); /* Sweep across the container */
+  }
+}
+
+/* 鼠标悬停或移动激活金属效果 */
+.logo-letter-container:hover::after,
+.logo-letter-container.shine-active::after {
+  opacity: 0.6;  /* 降低最大不透明度 */
+  transform: scale(1);
+}
+
+/* 数据流动画效果 */
+.logo-letter-container .data-flow {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  border-radius: 8px;
+  opacity: 1;  /* 确保默认可见 */
+  z-index: 1;
+  pointer-events: none;
+}
+
+.logo-letter-container .data-flow::before {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(90deg, 
+    transparent, 
+    rgba(255, 255, 255, 0.08), 
+    rgba(255, 255, 255, 0.15), 
+    rgba(255, 255, 255, 0.08), 
+    transparent);
+  transform: translateX(-100%);
+  animation: data-flow-anim 2.5s infinite;
+  animation-delay: calc(var(--flow-delay, 0) * 0.2s);
+  opacity: 1;  /* 确保数据流可见 */
+}
+
+@keyframes data-flow-anim {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+.logo-letter-container:hover::before {
+  opacity: 1;
+}
+
+.logo-letter-container:hover .data-flow::before {
+  opacity: 1;
+}
+
+.logo-letter:hover {
+  /* 悬浮时的金属质感增强 */
+  filter: 
+    contrast(1.08) 
+    brightness(1.02)
+    drop-shadow(0 4px 8px rgba(0, 0, 0, 0.12))
+    drop-shadow(0 2px 4px rgba(0, 0, 0, 0.08))
+    drop-shadow(0 1px 2px rgba(0, 0, 0, 0.06));
+}
+
+/* Logo 容器悬浮效果 - 保留 */
+.logo-container {
+  transition: all 0.3s ease;
+  /* 整体容器保持柔和圆角和阴影 */
+  border-radius: 24px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+.logo-container:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* 拖拽功能样式 */
+.logo-letter.draggable {
+  cursor: grab;
+  user-select: none;
+}
+
+.logo-letter.dragging {
+  cursor: grabbing;
+  z-index: 1000;
+  opacity: 0.8;
 } 
