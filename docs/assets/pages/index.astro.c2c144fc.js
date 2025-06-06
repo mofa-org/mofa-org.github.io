@@ -1,6 +1,6 @@
 import { c as createComponent, r as renderTemplate, m as maybeRenderHead, b as addAttribute, d as renderHead, e as renderComponent } from '../astro.32e88c90.js';
 import 'clsx';
-/* empty css                           *//* empty css                          */import { $ as $$BaseLayout, g as getCollection } from './_...slug_.astro.bdd084f1.js';
+/* empty css                           *//* empty css                          */import { $ as $$BaseLayout, g as getCollection } from './_...slug_.astro.57acdf9d.js';
 /* empty css                          */
 const $$WorkflowShowcase = createComponent(($$result, $$props, $$slots) => {
   const workflows = [
