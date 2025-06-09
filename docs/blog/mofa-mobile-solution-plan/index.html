@@ -20,7 +20,6 @@ GitHub
 ← 返回博客
 </a> </div> <!-- 文章头部 --> <header style="margin-bottom: 40px; padding-bottom: 32px; border-bottom: 1px solid #e5e5e5;" data-astro-cid-7jjqptxk> <!-- 文章元信息 --> <div style="margin-bottom: 20px; display: flex; align-items: center; gap: 16px; flex-wrap: wrap;" data-astro-cid-7jjqptxk> <time style="color: #666; font-size: 0.9rem;" data-astro-cid-7jjqptxk> 2025/6/9 </time> <div style="display: flex; gap: 8px;" data-astro-cid-7jjqptxk> <span style="background: #f0f0f0; color: #333; padding: 4px 12px; border-radius: 16px; font-size: 0.8rem;" data-astro-cid-7jjqptxk> 移动端 </span><span style="background: #f0f0f0; color: #333; padding: 4px 12px; border-radius: 16px; font-size: 0.8rem;" data-astro-cid-7jjqptxk> 架构设计 </span><span style="background: #f0f0f0; color: #333; padding: 4px 12px; border-radius: 16px; font-size: 0.8rem;" data-astro-cid-7jjqptxk> Termux </span><span style="background: #f0f0f0; color: #333; padding: 4px 12px; border-radius: 16px; font-size: 0.8rem;" data-astro-cid-7jjqptxk> Android </span><span style="background: #f0f0f0; color: #333; padding: 4px 12px; border-radius: 16px; font-size: 0.8rem;" data-astro-cid-7jjqptxk> 技术方案 </span> </div> </div> <!-- 文章标题 --> <h1 style="font-size: 2.5rem; font-weight: bold; margin: 0 0 16px 0; line-height: 1.2; color: #1a1a1a;" data-astro-cid-7jjqptxk> MoFA 移动端方案探索 </h1> <!-- 文章描述 --> <p style="font-size: 1.2rem; color: #666; margin: 0 0 20px 0; line-height: 1.6;" data-astro-cid-7jjqptxk> 分析 MoFA 智能体框架在移动端部署面临的技术挑战 </p> <!-- 作者信息 --> <div style="color: #888; font-size: 0.9rem;" data-astro-cid-7jjqptxk>
 作者：MoFA 团队 </div> </header> <!-- 文章内容 --> <article class="prose" data-astro-cid-7jjqptxk> <h1 id="mofa-移动端部署方案">MoFA 移动端部署方案：</h1>
-<p>作为基于 Dora-RS 构建的智能体框架，MoFA 在移动端部署上面临着独特的技术挑战。</p>
 <h2 id="技术挑战">技术挑战</h2>
 <h3 id="mofa-的移动端应用场景与传统机器人控制的区别">MoFA 的移动端应用场景与传统机器人控制的区别：</h3>
 <p><strong>机器人控制场景特点</strong>：</p>
@@ -37,7 +36,7 @@ GitHub
 <li>延迟容忍度相对较高（毫秒级即ok）</li>
 </ul>
 <h3 id="dora-rs-的移植问题">Dora-RS 的移植问题</h3>
-<h4 id="一个问题">一个问题：</h4>
+<h4 id="一些问题">一些问题：</h4>
 <pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#6A737D">// Dora 共享内存</span></span>
 <span class="line"><span style="color:#E1E4E8">shared</span><span style="color:#F97583">-</span><span style="color:#E1E4E8">memory</span><span style="color:#F97583">-</span><span style="color:#E1E4E8">server (Dora自有) </span></span>
 <span class="line"><span style="color:#E1E4E8">├── shared_memory_extended </span><span style="color:#F97583">=</span><span style="color:#9ECBFF"> "0.13.0"</span></span>
@@ -47,7 +46,7 @@ GitHub
 <li><strong>进程间通信机制</strong>：移动操作系统 IPC 机制与桌面系统差异</li>
 <li><strong>ARM 架构适配</strong></li>
 </ol>
-<h2 id="解决方案">解决方案</h2>
+<h2 id="方案">方案</h2>
 <h3 id="方案一termux--root权限-完整移植demo阶段">方案一：Termux + Root权限 完整移植（Demo阶段）</h3>
 <h4 id="技术架构">技术架构</h4>
 <pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0"><code><span class="line"><span>Android Host</span></span>
@@ -126,7 +125,7 @@ GitHub
 <span class="line"><span>    ├── UI Automator 包装</span></span>
 <span class="line"><span>    ├── Intent 调用器</span></span>
 <span class="line"><span>    └── API 调用节点</span></span></code></pre>
-<h2 id="方案对比">方案对比</h2>
+<h2 id="前两个方案对比">前两个方案对比</h2>
 
 
 
@@ -163,13 +162,11 @@ GitHub
 
 
 <table><thead><tr><th>评估维度</th><th>Termux + Linux</th><th>Native 重设计</th></tr></thead><tbody><tr><td><strong>开发速度</strong></td><td>🟢 快速复用现有代码</td><td>🔴 需要完全重写</td></tr><tr><td><strong>运行性能</strong></td><td>🔴 双层虚拟化开销</td><td>🟢 原生性能</td></tr><tr><td><strong>功能完整性</strong></td><td>🟢 100% 兼容</td><td>🔴 功能受限</td></tr><tr><td><strong>用户体验</strong></td><td>🔴 安装极端复杂</td><td>🟢 原生体验</td></tr><tr><td><strong>维护成本</strong></td><td>🟢 低维护</td><td>🔴 双重维护</td></tr></tbody></table>
-<h2 id="移动端方案的思考">移动端方案的思考</h2>
-<h3 id="需求场景分析">需求场景分析</h3>
+<h3 id="进一步场景分析">进一步场景分析</h3>
 <p>除非开发者有特殊需求，比如需要 agent 来操作移动端独占的某些 app（淘宝、微信等），但这个市场相对较小，而且容易偏离核心方向。</p>
 <p>认真来做的话，移动端方案还是挺费资源的。技术复杂度高，投入产出比不太理想。</p>
-<h3 id="换个思路务实的移动端策略">换个思路：务实的移动端策略</h3>
-<p>但是后面我觉得可以试试看直接打包到容器里面，不做操作用户手机这种操作，单纯去跑一些信息抓取、文档处理之类的 flow，还是可行的。</p>
-<h4 id="方案三容器化部署">方案三：容器化部署</h4>
+<p>但后面可以尝试直接打包到容器，不做操作用户手机的操作，单纯去跑一些信息抓取、文档处理之类的 flow，还是可行的。</p>
+<h3 id="方案三容器化部署">方案三：容器化部署</h3>
 <pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0"><code><span class="line"><span>Container-based MoFA Mobile Stage</span></span>
 <span class="line"><span>├── Docker/Podman 容器</span></span>
 <span class="line"><span>│   ├── 完整 MoFA 环境</span></span>
@@ -189,7 +186,7 @@ GitHub
 <li>技术栈完全复用，不用重新造轮子</li>
 <li>部署简单</li>
 </ul>
-<h4 id="方案四云端--网页套壳-app">方案四：云端 + 网页套壳 App</h4>
+<h3 id="方案四云端--网页套壳-app">方案四：云端 + 网页套壳 App</h3>
 <p>后期在云端部署后，做一个网页套壳 MoFA Stage 的 app。</p>
 <pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0"><code><span class="line"><span>Cloud MoFA + Mobile Client</span></span>
 <span class="line"><span>├── 云端 MoFA </span></span>
