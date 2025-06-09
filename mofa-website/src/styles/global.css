@@ -1079,13 +1079,23 @@ html, body {
   inset: 0;
   overflow: hidden;
   border-radius: 8px;
-  opacity: 1;  /* 确保默认可见 */
+  opacity: 1;
   z-index: 1;
   pointer-events: none;
+
+  /* Use the letter's SVG as a mask */
+  mask-image: var(--letter-svg);
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  -webkit-mask-image: var(--letter-svg);
+  -webkit-mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
 }
 
 .logo-letter-container .data-flow::before {
-  content: '';
+  content: "";
   position: absolute;
   height: 100%;
   width: 100%;
