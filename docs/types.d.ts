@@ -182,6 +182,13 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"mofa-mobile-solution-plan.md": {
+	id: "mofa-mobile-solution-plan.md";
+  slug: "mofa-mobile-solution-plan";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 };
 "docs": {
 "0.overview.md": {

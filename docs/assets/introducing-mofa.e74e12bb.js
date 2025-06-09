@@ -1,5 +1,5 @@
 async function getMod() {
-						return import('./introducing-mofa.51c5555d.js');
+						return import('./introducing-mofa.afc870f8.js');
 					}
 					const collectedLinks = "@@ASTRO-LINKS@@";
 					const collectedStyles = "@@ASTRO-STYLES@@";
