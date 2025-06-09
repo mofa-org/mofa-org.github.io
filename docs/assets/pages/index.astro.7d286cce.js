@@ -1,6 +1,6 @@
 import { c as createComponent, r as renderTemplate, m as maybeRenderHead, b as addAttribute, d as renderHead, e as renderComponent } from '../astro.32e88c90.js';
 import 'clsx';
-/* empty css                           *//* empty css                          */import { $ as $$BaseLayout, g as getCollection } from './_...slug_.astro.c49ef028.js';
+/* empty css                           *//* empty css                          */import { $ as $$BaseLayout, g as getCollection } from './_...slug_.astro.c3b5fe32.js';
 /* empty css                          */
 const $$WorkflowShowcase = createComponent(($$result, $$props, $$slots) => {
   const workflows = [
@@ -295,7 +295,8 @@ GitHub
                 height: 56px;
                 z-index: 10;
                 --flow-delay: 0;
-              "> <img src="mofa-M.png" alt="M" class="logo-letter letter-m draggable" style="
+                --letter-svg: url(/mofa-M.svg);
+              "> <img src="/mofa-M.png" alt="M" class="logo-letter letter-m draggable" style="
                   width: 100%;
                   height: 100%;
                   object-fit: contain;
@@ -308,7 +309,8 @@ GitHub
                 height: 60px;
                 z-index: 10;
                 --flow-delay: 1;
-              "> <img src="mofa-O.png" alt="O" class="logo-letter letter-o draggable" style="
+                --letter-svg: url(/mofa-O.svg);
+              "> <img src="/mofa-O.png" alt="O" class="logo-letter letter-o draggable" style="
                   width: 100%;
                   height: 100%;
                   object-fit: contain;
@@ -321,7 +323,8 @@ GitHub
                 height: 106px;
                 z-index: 10;
                 --flow-delay: 2;
-              "> <img src="mofa-F.png" alt="F" class="logo-letter letter-f draggable" style="
+                --letter-svg: url(/mofa-F.svg);
+              "> <img src="/mofa-F.png" alt="F" class="logo-letter letter-f draggable" style="
                   width: 100%;
                   height: 100%;
                   object-fit: contain;
@@ -334,7 +337,8 @@ GitHub
                 height: 69px;
                 z-index: 10;
                 --flow-delay: 3;
-              "> <img src="mofa-A.png" alt="A" class="logo-letter letter-a draggable" style="
+                --letter-svg: url(/mofa-A.svg);
+              "> <img src="/mofa-A.png" alt="A" class="logo-letter letter-a draggable" style="
                   width: 100%;
                   height: 100%;
                   object-fit: contain;
