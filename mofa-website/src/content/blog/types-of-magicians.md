@@ -1,12 +1,9 @@
 ---
-publishDate: 2025-02-12T00:00:00Z
-title: MoFA 赏金魔法师任务
-excerpt: 如果您有兴趣体验我们的组合式AI开发, 成为我们的赏金魔法师，可以考虑联系我们，做一下魔法师任务。
-image: https://relevantstudy.github.io/images/magicians.png
-tags:
-  - MoFA
-  - Magician
-  - Composition Organization
+title: "MoFA 赏金魔法师任务"
+description: "如果您有兴趣体验我们的组合式AI开发，成为我们的赏金魔法师，可以考虑联系我们，做一下魔法师任务。"
+date: 2025-02-12
+author: MoFA Team
+tags: [MoFA, 魔法师等级, 赏金任务, 智能体开发, 开发者社区]
 ---
 
 我们诚挚邀请所有对智能体（AI Agents）感兴趣的开发者，一起来探索、建设和使用 MoFA开源项目，打造更强大的 智能体。

@@ -1,12 +1,9 @@
 ---
-publishDate: 2025-02-11T00:00:00Z
-title: MoFA 魔法师召集令
-excerpt: 开源智能体框架MoFA，邀你共建未来AI生态！
-image: https://relevantstudy.github.io/images/call-for-participation.jpg
-tags:
-  - MoFA
-  - Magician
-  - Composition Organization
+title: "MoFA 魔法师召集令"
+description: "开源智能体框架MoFA，邀你共建未来AI生态！"
+date: 2025-02-11
+author: MoFA Team
+tags: [MoFA, 开源项目, 智能体, 开发者招募, 悬赏任务]
 ---
 
 

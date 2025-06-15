@@ -2,11 +2,10 @@
 title: "MoFA 技术架构介绍：基于 Dora-RS 的模块化 AI 智能体框架"
 description: "介绍 MoFA 的技术架构，探讨其如何基于 Dora-RS 框架构建模块化、可组合的 AI 智能体系统"
 date: 2025-06-09
-author: MoFA 团队
+author: MoFA Team
 tags: [架构, AI框架, Dora-RS, 智能体, 技术]
 ---
 
-# MoFA 技术架构介绍：基于 Dora-RS 的模块化 AI 智能体框架
 
 MoFA（**M**odular **F**ramework for **A**gent）是一个基于 Dora-RS 数据流引擎构建的智能体开发框架。本文介绍 MoFA 的技术架构和设计思路。
 

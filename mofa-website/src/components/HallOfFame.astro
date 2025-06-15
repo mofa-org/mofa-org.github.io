@@ -193,13 +193,13 @@ const categories = [
     {categories.map(cat => (
       <div class="flex flex-wrap justify-center gap-8 category-content" data-category={cat.id} style={cat.id === 'contributors' ? 'display:flex;' : 'display:none;'}>
         {cat.contributors.map(person => (
-          <div class="relative group">
+          <div class="relative group contributor-item">
             <div class="w-24 h-24 rounded-full overflow-hidden border-4 border-gray-300 shadow-lg hover:border-blue-500 transition-all duration-300 cursor-pointer">
               <img src={person.avatar} alt={person.name} class="w-full h-full object-cover" />
             </div>
             
-            <div class="absolute top-28 left-1/2 transform -translate-x-1/2 w-80 bg-white rounded-lg shadow-2xl border opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-10 overflow-hidden">
-              <div class="w-full h-48 overflow-hidden bg-gray-100">
+            <div class="contributor-card absolute top-1/2 left-full transform -translate-y-1/2 ml-4 w-64 bg-white rounded-lg shadow-2xl border opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-10 overflow-visible">
+              <div class="w-full h-64 overflow-hidden bg-gray-100">
                 <img 
                   src={person.largeImage || person.avatar} 
                   alt={person.name} 
@@ -219,7 +219,7 @@ const categories = [
                   <a href={person.github} target="_blank" rel="noopener noreferrer" 
                      class="inline-flex items-center gap-1 text-blue-600 hover:text-blue-800 text-sm font-medium mb-2">
                     <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M12 0C5.374 0 0 5.373 0 12 0 17.302 3.438 21.8 8.207 23.387c.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.237 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/>
+                      <path d="M12 0C5.374 0 0 5.373 0 12 0 17.302 3.438 21.8 8.207 23.387c.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.237 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.30.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/>
                     </svg>
                     GitHub
                   </a>
@@ -227,7 +227,10 @@ const categories = [
                 </div>
               </div>
               
-              <div class="absolute -top-2 left-1/2 transform -translate-x-1/2 w-4 h-4 bg-white border-l border-t rotate-45"></div>
+              <!-- 左侧箭头 - 卡片在右侧时显示，尖角指向头像 -->
+              <div class="arrow-left absolute top-1/2 transform -translate-y-1/2" style="left: -12px; width: 0; height: 0; border-top: 8px solid transparent; border-bottom: 8px solid transparent; border-right: 8px solid white; filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.1));"></div>
+              <!-- 右侧箭头 - 卡片在左侧时显示，尖角指向头像 -->
+              <div class="arrow-right absolute top-1/2 transform -translate-y-1/2 hidden" style="right: -12px; width: 0; height: 0; border-top: 8px solid transparent; border-bottom: 8px solid transparent; border-left: 8px solid white; filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.1));"></div>
             </div>
           </div>
         ))}
@@ -259,11 +262,71 @@ const categories = [
           contents.forEach(c => {
             if (c.getAttribute('data-category') === cat) {
               c.style.display = 'flex';
+              // 重新计算卡片位置
+              setTimeout(() => {
+                adjustCardPositions();
+              }, 100);
             } else {
               c.style.display = 'none';
             }
           });
         });
+      });
+
+      // 调整卡片位置的函数
+      function adjustCardPositions() {
+        const contributorItems = document.querySelectorAll('.contributor-item');
+        
+        contributorItems.forEach(item => {
+          const card = item.querySelector('.contributor-card');
+          const arrowLeft = item.querySelector('.arrow-left');
+          const arrowRight = item.querySelector('.arrow-right');
+          
+          if (card && arrowLeft && arrowRight) {
+            // 监听鼠标进入事件
+            item.addEventListener('mouseenter', () => {
+              // 获取头像的位置信息
+              const avatarRect = item.getBoundingClientRect();
+              const windowWidth = window.innerWidth;
+              const cardWidth = 256; // w-64 = 256px
+              const margin = 16; // ml-4 = 16px
+              
+              // 判断是否有足够空间向右显示
+              const spaceOnRight = windowWidth - (avatarRect.right + cardWidth + margin);
+              const spaceOnLeft = avatarRect.left - cardWidth - margin;
+              
+              if (spaceOnRight >= 0) {
+                // 向右显示
+                card.classList.remove('right-full', 'mr-4');
+                card.classList.add('left-full', 'ml-4');
+                arrowLeft.classList.remove('hidden');
+                arrowRight.classList.add('hidden');
+              } else if (spaceOnLeft >= 0) {
+                // 向左显示
+                card.classList.remove('left-full', 'ml-4');
+                card.classList.add('right-full', 'mr-4');
+                arrowLeft.classList.add('hidden');
+                arrowRight.classList.remove('hidden');
+              } else {
+                // 空间不足，保持向右（可能会超出屏幕）
+                card.classList.remove('right-full', 'mr-4');
+                card.classList.add('left-full', 'ml-4');
+                arrowLeft.classList.remove('hidden');
+                arrowRight.classList.add('hidden');
+              }
+            });
+          }
+        });
+      }
+
+      // 页面加载后初始化
+      setTimeout(() => {
+        adjustCardPositions();
+      }, 100);
+
+      // 窗口大小改变时重新计算
+      window.addEventListener('resize', () => {
+        adjustCardPositions();
       });
     });
   </script>
