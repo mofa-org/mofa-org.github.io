@@ -6,7 +6,7 @@ const posts = await getCollection('blog');
 const sortedPosts = posts.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
 ---
 
-<BaseLayout title="博客" description="MoFA 的最新动态和技术分享">
+<BaseLayout title="Blog" description="MoFA 的最新动态和技术分享">
   <div style="max-width: 800px; margin: 0 auto; padding: 40px 20px; font-family: system-ui, -apple-system, sans-serif;">
     
     <!-- 页面标题 -->

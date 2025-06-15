@@ -2,6 +2,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
 
 /* Tailwind CSS directives */
 @tailwind base;
@@ -10,10 +13,10 @@
 
 /* CSS 变量 */
 :root {
-  /* 主要马卡龙色系 */
-  --mondrian-red: #FF513B;        /* 马卡龙珊瑚红，温暖而有活力 */
-  --mondrian-blue: #69CED1;       /* 马卡龙薄荷蓝，清新而现代 */
-  --mondrian-yellow: #73D0D3;     /* 马卡龙青绿色，优雅而舒适 */
+  /* 蒙德里安经典色系 - 参考名画 */
+  --mondrian-red: #D32F2F;        /* 经典红色 - 深度而纯粹 */
+  --mondrian-blue: #1976D2;       /* 经典蓝色 - 沉稳而优雅 */
+  --mondrian-yellow: #FFB300;     /* 经典黄色 - 明亮而温暖 */
   
   /* MoFA 专用四色渐变 */
   --mofa-gradient-1: #FB6A58;     /* 珊瑚橙红 */
@@ -35,6 +38,98 @@
   --mondrian-black: #2D3748;      /* 稍微柔和的深灰色，配合马卡龙色系 */
   --mondrian-white: #FFFFFF;
   --mondrian-gray: #E2E8F0;       /* 更柔和的灰色，与马卡龙色系协调 */
+}
+
+/* 像素字体样式类 - 中英文统一使用像素字体 */
+.pixel-text {
+  font-family: 'DotGothic16', 'Press Start 2P', monospace;
+  font-size: 0.85em;
+  line-height: 1.8;
+  letter-spacing: 0.04em;
+  text-rendering: geometricPrecision;
+  -webkit-font-smoothing: none;
+  -moz-osx-font-smoothing: unset;
+  font-weight: 400;
+}
+
+.pixel-text-large {
+  font-family: 'DotGothic16', 'Press Start 2P', monospace;
+  font-size: 0.8em;
+  line-height: 1.7;
+  letter-spacing: 0.03em;
+  text-rendering: geometricPrecision;
+  -webkit-font-smoothing: none;
+  -moz-osx-font-smoothing: unset;
+  font-weight: 400;
+  color: var(--mondrian-black);
+}
+
+.pixel-text-retro {
+  font-family: 'DotGothic16', 'VT323', monospace;
+  font-size: 1.3em;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+  text-rendering: geometricPrecision;
+  -webkit-font-smoothing: none;
+  -moz-osx-font-smoothing: unset;
+  font-weight: 400;
+}
+
+.pixel-gradient-text {
+  font-family: 'DotGothic16', 'Press Start 2P', monospace;
+  font-size: 0.9em;
+  color: var(--mondrian-black);
+  text-rendering: geometricPrecision;
+  -webkit-font-smoothing: none;
+  -moz-osx-font-smoothing: unset;
+  line-height: 1.7;
+  letter-spacing: 0.03em;
+  font-weight: 400;
+}
+
+.pixel-glow-text {
+  font-family: 'DotGothic16', 'Press Start 2P', monospace;
+  font-size: 0.85em;
+  color: var(--mondrian-blue);
+  text-rendering: geometricPrecision;
+  -webkit-font-smoothing: none;
+  -moz-osx-font-smoothing: unset;
+  line-height: 1.7;
+  letter-spacing: 0.03em;
+  font-weight: 400;
+}
+
+/* 移除了过于夸张的动画效果 */
+
+/* 确保AI字符不会过度突出 */
+.pixel-text-large .ai-char,
+.pixel-gradient-text .ai-char,
+.pixel-glow-text .ai-char {
+  font-size: inherit;
+  font-weight: inherit;
+  color: inherit;
+  text-transform: none;
+  letter-spacing: inherit;
+}
+
+/* 英文描述段落的普通字体样式 */
+.description-text-en {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  font-weight: 400;
+  color: #6b7280;
+  letter-spacing: 0.01em;
+}
+
+/* 中文描述段落的普通字体样式 */
+.description-text-zh {
+  font-family: 'Inter', 'Noto Sans SC', system-ui, sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  font-weight: 400;
+  color: #6b7280;
+  letter-spacing: 0.01em;
 }
 
 /* 全局重置 */
@@ -86,19 +181,19 @@ code {
 /* 蒙德里安风格组件 */
 .mondrian-grid {
   display: grid;
-  gap: 2px;
   background-color: var(--mondrian-black);
-  padding: 2px;
-  border-radius: 6px;
-  box-shadow: 0 4px 15px rgba(45, 55, 72, 0.15);
+  border-radius: 8px;
+  box-shadow: 0 6px 20px rgba(45, 55, 72, 0.2);
+  overflow: hidden;
 }
 
 .mondrian-block {
   position: relative;
   overflow: hidden;
-  min-height: 100px;
-  transition: all 0.3s ease;
-  border-radius: 2px;
+  min-height: 40px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 1px;
+  border: 1px solid var(--mondrian-black);
 }
 
 .mondrian-block:hover {
@@ -289,8 +384,10 @@ code {
 
 /* 动画 */
 @keyframes grid-float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }
+  0%, 100% { transform: translateY(0px) scale(1); opacity: 0.85; }
+  25% { transform: translateY(-3px) scale(1.005); opacity: 0.92; }
+  50% { transform: translateY(-6px) scale(1.01); opacity: 1; }
+  75% { transform: translateY(-3px) scale(1.005); opacity: 0.92; }
 }
 
 @keyframes pulse-slow {
@@ -298,12 +395,30 @@ code {
   50% { opacity: 0.5; }
 }
 
+@keyframes mondrian-breathe {
+  0%, 100% { 
+    transform: scale(1);
+    filter: brightness(1) saturate(1);
+  }
+  50% { 
+    transform: scale(1.002);
+    filter: brightness(1.05) saturate(1.1);
+  }
+}
+
 .animate-grid-float {
-  animation: grid-float 20s ease-in-out infinite;
+  animation: grid-float 12s ease-in-out infinite;
 }
 
 .animate-pulse-slow {
   animation: pulse-slow 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.mondrian-block:hover {
+  transform: scale(1.008) !important;
+  filter: brightness(1.1) saturate(1.15);
+  transition: all 0.2s ease;
+  z-index: 2;
 }
 
 /* 布局工具 */
@@ -1414,4 +1529,103 @@ html, body {
 .no-scrollbar {
   -ms-overflow-style: none; /* IE & Edge */
   scrollbar-width: none;    /* Firefox */
+}
+
+/* 蒙德里安几何装饰动画 */
+@keyframes mondrian-geometric-float {
+  0%, 100% {
+    transform: translateY(0px) scale(1) rotate(0deg);
+    opacity: 0.08;
+  }
+  25% {
+    transform: translateY(-5px) scale(1.02) rotate(0.4deg);
+    opacity: 0.15;
+  }
+  50% {
+    transform: translateY(-15px) scale(1.04) rotate(0.8deg);
+    opacity: 0.25;
+  }
+  75% {
+    transform: translateY(-5px) scale(1.02) rotate(0.4deg);
+    opacity: 0.15;
+  }
+}
+
+@keyframes mondrian-line-glow {
+  0%, 100% { 
+    opacity: 0.25;
+    transform: scaleX(1);
+  }
+  33% { 
+    opacity: 0.4;
+    transform: scaleX(1.02);
+  }
+  66% { 
+    opacity: 0.6;
+    transform: scaleX(1.04);
+  }
+}
+
+/* 应用动画到装饰性几何图形 */
+.mondrian-decoration-left {
+  animation: mondrian-geometric-float 8s ease-in-out infinite;
+}
+
+.mondrian-decoration-right {
+  animation: mondrian-geometric-float 10s ease-in-out infinite 1s;
+}
+
+.mondrian-line-decoration {
+  background-size: 400% 100%;
+  background-position: 0 0;
+  background-repeat: repeat-x;
+  animation: line-scroll 8s linear infinite;
+}
+
+/* SVG 内部色块的动画 */
+@keyframes svg-block-pulse {
+  0%, 100% { 
+    opacity: 0.85;
+    transform: scale(1);
+  }
+  50% { 
+    opacity: 0.95;
+    transform: scale(1.02);
+  }
+}
+
+/* 为SVG色块添加动画 */
+.mondrian-decoration-left rect,
+.mondrian-decoration-right rect {
+  animation: svg-block-pulse 4s ease-in-out infinite;
+  transform-origin: center center;
+}
+
+.mondrian-decoration-left rect:nth-child(3) {
+  animation-delay: 0.5s;
+}
+
+.mondrian-decoration-left rect:nth-child(4) {
+  animation-delay: 1s;
+}
+
+.mondrian-decoration-left rect:nth-child(5) {
+  animation-delay: 1.5s;
+}
+
+.mondrian-decoration-right rect:nth-child(3) {
+  animation-delay: 0.8s;
+}
+
+.mondrian-decoration-right rect:nth-child(4) {
+  animation-delay: 1.3s;
+}
+
+.mondrian-decoration-right rect:nth-child(5) {
+  animation-delay: 1.8s;
+}
+
+@keyframes line-scroll {
+  0% { background-position: 0 0; }
+  100% { background-position: 300% 0; }
 } 
