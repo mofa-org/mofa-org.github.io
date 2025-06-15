@@ -2,6 +2,7 @@
 import '../styles/global.css';
 import WorkflowShowcase from '../components/WorkflowShowcase.astro';
 import TabletQuickStart from '../components/TabletQuickStart.astro';
+import HallOfFame from '../components/HallOfFame.astro';
 ---
 
 <!DOCTYPE html>
@@ -12,7 +13,6 @@ import TabletQuickStart from '../components/TabletQuickStart.astro';
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title id="page-title">MoFA - Make Ordinary Developers Full-stack AI Engineers</title>
   
-		<!-- Favicon -->
 		<link rel="icon" type="image/png" href="/favicon-32x32.png" />
 		<link rel="shortcut icon" href="/favicon-32x32.png" />
 		<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
@@ -31,11 +31,8 @@ import TabletQuickStart from '../components/TabletQuickStart.astro';
       
       <div style="display: flex; align-items: center; gap: 32px;">
         <a href="/docs" class="nav-link" data-en="Docs" data-zh="文档">Docs</a>
-        <!-- 临时隐藏 Examples 链接 -->
-        <!-- <a href="https://demo.mofa.ai" class="nav-link" target="_blank" rel="noopener noreferrer" data-en="Examples" data-zh="示例">Examples</a> -->
         <a href="/blog" class="nav-link" data-en="Blog" data-zh="博客">Blog</a>
         
-        <!-- 语言切换按钮 -->
         <div style="display: flex; align-items: center; gap: 8px;">
           <button id="lang-toggle" style="
             display: flex;
@@ -66,64 +63,46 @@ import TabletQuickStart from '../components/TabletQuickStart.astro';
     </nav>
   </header>
 
-  <!-- 主要内容 -->
   <main style="flex: 1;">
-    <!-- Hero 区域 -->
     <section class="py-20" style="position: relative; overflow: hidden;">
-      <!-- 蒙德里安几何装饰 -->
       <div style="position: absolute; inset: 0; pointer-events: none; overflow: hidden;">
-        <!-- 左侧装饰性几何图形 -->
         <div class="mondrian-decoration-left" style="position: absolute; left: -100px; top: 20%; width: 300px; height: 400px;">
           <svg width="300" height="400" viewBox="0 0 300 400" xmlns="http://www.w3.org/2000/svg">
-            <!-- 垂直分割线 -->
             <line x1="80" y1="0" x2="80" y2="400" stroke="var(--mondrian-black)" stroke-width="3"/>
             <line x1="180" y1="0" x2="180" y2="400" stroke="var(--mondrian-black)" stroke-width="3"/>
             
-            <!-- 水平分割线 -->
             <line x1="0" y1="120" x2="300" y2="120" stroke="var(--mondrian-black)" stroke-width="3"/>
             <line x1="0" y1="280" x2="300" y2="280" stroke="var(--mondrian-black)" stroke-width="3"/>
             
-            <!-- 色块 -->
             <rect x="6" y="6" width="68" height="108" fill="var(--mofa-gradient-1)" opacity="0.85"/>
             <rect x="86" y="126" width="88" height="148" fill="var(--mofa-gradient-4)" opacity="0.85"/>
             <rect x="186" y="6" width="108" height="108" fill="var(--mofa-gradient-3)" opacity="0.85"/>
           </svg>
         </div>
         
-        <!-- 右侧装饰性几何图形 -->
         <div class="mondrian-decoration-right" style="position: absolute; right: -120px; bottom: 15%; width: 280px; height: 350px;">
           <svg width="280" height="350" viewBox="0 0 280 350" xmlns="http://www.w3.org/2000/svg">
-            <!-- 垂直分割线 -->
             <line x1="100" y1="0" x2="100" y2="350" stroke="var(--mondrian-black)" stroke-width="3"/>
             <line x1="200" y1="0" x2="200" y2="350" stroke="var(--mondrian-black)" stroke-width="3"/>
             
-            <!-- 水平分割线 -->
             <line x1="0" y1="100" x2="280" y2="100" stroke="var(--mondrian-black)" stroke-width="3"/>
             <line x1="0" y1="250" x2="280" y2="250" stroke="var(--mondrian-black)" stroke-width="3"/>
             
-            <!-- 色块 -->
             <rect x="106" y="6" width="88" height="88" fill="var(--mofa-gradient-1)" opacity="0.85"/>
             <rect x="6" y="106" width="88" height="138" fill="var(--mofa-gradient-3)" opacity="0.85"/>
             <rect x="206" y="256" width="68" height="88" fill="var(--mofa-gradient-4)" opacity="0.85"/>
           </svg>
         </div>
         
-        <!-- 顶部细线装饰（已隐藏） -->
-        <!-- <div class="mondrian-line-decoration" style="position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, transparent 0%, var(--mofa-gradient-1) 20%, var(--mofa-gradient-1) 30%, transparent 35%, transparent 65%, var(--mofa-gradient-4) 70%, var(--mofa-gradient-4) 80%, transparent 100%);"></div> -->
         
-        <!-- 底部细线装饰（已隐藏） -->
-        <!-- <div class="mondrian-line-decoration" style="position: absolute; bottom: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, transparent 0%, var(--mofa-gradient-3) 15%, var(--mofa-gradient-3) 25%, transparent 30%, transparent 70%, var(--mofa-gradient-1) 75%, var(--mofa-gradient-1) 85%, transparent 100%); animation-delay: 4s;"></div> -->
       </div>
 
       <div class="container" style="position: relative; z-index: 10;">
         <div class="max-w-4xl mx-auto text-center">
-          <!-- Logo -->
           <div style="display: flex; justify-content: center; margin-bottom: 32px;">
             <div class="logo-container" style="width: 144px; height: 144px; position: relative; overflow: hidden; border-radius: 20px;">
-              <!-- 原始logo作为背景定位参考 -->
               <img src="/mofa-logo.png" alt="MoFA Logo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 20px; filter: invert(1); display: none;" />
               
-              <!-- M字母 - 左上 -->
               <div class="logo-letter-container" style="
                 position: absolute;
                 top: 12px;
@@ -143,7 +122,6 @@ import TabletQuickStart from '../components/TabletQuickStart.astro';
                 <div class="data-flow"></div>
               </div>
               
-              <!-- O字母 - 左下 -->
               <div class="logo-letter-container" style="
                 position: absolute;
                 top: 66px;
@@ -163,7 +141,6 @@ import TabletQuickStart from '../components/TabletQuickStart.astro';
                 <div class="data-flow"></div>
               </div>
               
-              <!-- F字母 - 右侧（中心定位） -->
               <div class="logo-letter-container" style="
                 position: absolute;
                 top: 63px; /* 12 + 106/2 */
@@ -184,7 +161,6 @@ import TabletQuickStart from '../components/TabletQuickStart.astro';
                 <div class="data-flow"></div>
               </div>
               
-              <!-- A字母 - 右下 -->
               <div class="logo-letter-container" style="
                 position: absolute;
                 top: 102.5px; /* 几何中心定位 */
@@ -209,7 +185,6 @@ import TabletQuickStart from '../components/TabletQuickStart.astro';
             </div>
           </div>
 
-          <!-- 副标题 -->
           <p class="text-2xl font-medium mb-4 pixel-gradient-text" 
              data-en="Make Ordinary Developers Full-stack AI Engineers"
              data-zh="让普通开发者成为全栈 AI 工程师">
@@ -221,19 +196,15 @@ import TabletQuickStart from '../components/TabletQuickStart.astro';
             模块化 <span class="ai-char">AI</span> 代理框架
           </p>
 
-          <!-- 描述 -->
-          <!-- 中文版本 - 普通字体 -->
           <p class="mb-12 max-w-2xl mx-auto description-text-zh" style="display: block;" 
              data-zh="通过可组合的 AI 代理框架，让每个开发者都能轻松构建、调试和部署复杂的 AI 应用">
             通过可组合的 AI 代理框架，让每个开发者都能轻松构建、调试和部署复杂的 AI 应用
           </p>
-          <!-- 英文版本 - 普通字体 -->
           <p class="mb-12 max-w-2xl mx-auto description-text-en" style="display: none;"
              data-en="A composable AI agent framework that enables every developer to easily build, debug, and deploy complex AI applications">
             A composable AI agent framework that enables every developer to easily build, debug, and deploy complex AI applications
           </p>
 
-          <!-- CTA 按钮 -->
           <div style="display: flex; flex-direction: column; gap: 16px; justify-content: center; margin-bottom: 64px;">
             <div style="display: flex; flex-wrap: wrap; gap: 16px; justify-content: center;">
               <a href="#quick-start" rel="noopener noreferrer" 
@@ -287,7 +258,6 @@ import TabletQuickStart from '../components/TabletQuickStart.astro';
             </div>
           </div>
 
-          <!-- 快速统计 -->
           <div class="grid grid-cols-3 gap-8 max-w-2xl mx-auto">
             <div class="text-center">
               <div class="text-3xl font-bold" style="color: var(--mofa-gradient-1);" 
@@ -314,17 +284,14 @@ import TabletQuickStart from '../components/TabletQuickStart.astro';
       </div>
     </section>
 
-    <!-- 小型分隔线 -->
     <div class="mini-divider">
       <div class="mini-line red-line"></div>
       <div class="mini-line blue-line"></div>
       <div class="mini-line yellow-line"></div>
     </div>
 
-    <!-- 插入全新重构的快速开始区域 -->
     <TabletQuickStart />
 
-    <!-- 旧版快速开始区域 - 暂时隐藏，后续可删除 -->
     <section class="py-20" style="background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%); display:none;">
       <div class="container">
         <div class="text-center mb-16">
@@ -341,9 +308,7 @@ import TabletQuickStart from '../components/TabletQuickStart.astro';
         </div>
 
         <div class="max-w-4xl mx-auto">
-          <!-- 多页面终端窗口 -->
           <div class="terminal-multi-window relative mb-16">
-            <!-- 标签页导航 -->
             <div class="flex justify-center mb-6">
               <div class="inline-flex bg-gray-800 rounded-lg p-1 shadow-lg">
                 <button class="terminal-tab active px-4 py-2 rounded-md text-sm font-medium transition-all duration-200" data-tab="install">
@@ -358,10 +323,8 @@ import TabletQuickStart from '../components/TabletQuickStart.astro';
               </div>
             </div>
 
-            <!-- 终端窗口 -->
             <div class="terminal-window group relative">
               <div class="bg-gray-900 rounded-2xl shadow-2xl overflow-hidden border border-gray-600">
-                <!-- 窗口标题栏 -->
                 <div class="flex items-center justify-between px-5 py-3 bg-gray-800 border-b border-gray-700">
                   <div class="flex items-center space-x-2">
                     <div class="w-3 h-3 rounded-full bg-red-500"></div>
@@ -380,10 +343,8 @@ import TabletQuickStart from '../components/TabletQuickStart.astro';
                   </button>
                 </div>
                 
-                <!-- 终端内容 -->
                 <div class="p-6 bg-gray-900 min-h-[120px]">
                   
-                  <!-- 安装页面 -->
                   <div class="terminal-content active" data-content="install">
                     <div class="space-y-3">
                       <div class="flex items-center space-x-2">
@@ -408,7 +369,6 @@ import TabletQuickStart from '../components/TabletQuickStart.astro';
                     </div>
                   </div>
 
-                  <!-- 克隆节点页面 -->
                   <div class="terminal-content" data-content="clone">
                     <div class="space-y-3">
                       <div class="flex items-center space-x-2">
@@ -427,7 +387,6 @@ import TabletQuickStart from '../components/TabletQuickStart.astro';
                     </div>
                   </div>
 
-                  <!-- 运行节点页面 -->
                   <div class="terminal-content" data-content="run">
                     <div class="space-y-3">
                       <div class="flex items-center space-x-2">
@@ -446,7 +405,6 @@ import TabletQuickStart from '../components/TabletQuickStart.astro';
                     </div>
                   </div>
                   
-                  <!-- 成功消息 -->
                   <div id="success-message" class="hidden mt-4">
                     <div class="flex items-center space-x-2 text-green-400 text-sm font-mono animate-fade-in">
                       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -460,7 +418,6 @@ import TabletQuickStart from '../components/TabletQuickStart.astro';
             </div>
           </div>
 
-          <!-- 快速开始步骤 -->
           <div class="grid md:grid-cols-3 gap-8 quick-start-steps">
             <div class="text-center group">
               <div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-red-500 to-orange-500 rounded-full flex items-center justify-center text-white font-bold text-xl group-hover:scale-110 transition-transform duration-200">1</div>
@@ -502,14 +459,12 @@ import TabletQuickStart from '../components/TabletQuickStart.astro';
       </div>
     </section>
 
-    <!-- 小型分隔线 -->
     <div class="mini-divider">
       <div class="mini-line red-line"></div>
       <div class="mini-line blue-line"></div>
       <div class="mini-line yellow-line"></div>
     </div>
 
-    <!-- 核心优势 -->
     <section id="why-mofa" class="py-20" style="background-color: #f9fafb;">
       <div class="container">
         <div class="text-center mb-16">
@@ -621,7 +576,6 @@ import TabletQuickStart from '../components/TabletQuickStart.astro';
             A visual management platform for MoFA - your web-based IDE.
           </p>
         <div class="max-w-6xl mx-auto" style="display: none;">
-          <!-- 平台特色展示 -->
           <div class="grid md:grid-cols-3 gap-8 mb-16">
                          <div class="card" style="border: 2px solid var(--mondrian-black); transition: all 0.3s ease; padding: 16px;" onmouseover="this.style.borderWidth='4px'; this.style.transform='translateY(-8px)'" onmouseout="this.style.borderWidth='2px'; this.style.transform='translateY(0)'">
                <div style="text-align: center;">
@@ -711,7 +665,6 @@ import TabletQuickStart from '../components/TabletQuickStart.astro';
              </div>
           </div>
 
-          <!-- 平台架构展示 -->
           <div class="bg-white rounded-lg shadow-lg p-8" style="border: 2px solid var(--mondrian-black); display: none;">
             <div class="text-center mb-8">
               <h3 class="text-2xl font-bold mb-4" 
@@ -725,7 +678,6 @@ import TabletQuickStart from '../components/TabletQuickStart.astro';
             </div>
 
             <div class="grid md:grid-cols-2 gap-12">
-              <!-- 前端技术栈 -->
               <div>
                 <h4 class="text-lg font-semibold mb-4 flex items-center gap-2" 
                     data-en="🎨 Frontend Stack"
@@ -764,7 +716,6 @@ import TabletQuickStart from '../components/TabletQuickStart.astro';
                 </div>
               </div>
 
-              <!-- 后端技术栈 -->
               <div>
                 <h4 class="text-lg font-semibold mb-4 flex items-center gap-2" 
                     data-en="⚙️ Backend Stack"
@@ -805,7 +756,6 @@ import TabletQuickStart from '../components/TabletQuickStart.astro';
             </div>
           </div>
 
-          <!-- 快速开始按钮 -->
           <div class="text-center mt-12">
             <a href="https://github.com/moxin-org/mofa/tree/main/MoFA_stage" target="_blank" rel="noopener noreferrer" class="btn-primary" style="font-size: 1.125rem; padding: 16px 32px; margin-right: 16px; background: linear-gradient(135deg, var(--macaron-peach), var(--mondrian-red));" 
                data-en="🚀 Explore MoFA_Stage"
@@ -826,24 +776,20 @@ import TabletQuickStart from '../components/TabletQuickStart.astro';
       </div>
     </section>
 
-    <!-- 小型分隔线 -->
     <div class="mini-divider">
       <div class="mini-line blue-line"></div>
       <div class="mini-line yellow-line"></div>
       <div class="mini-line red-line"></div>
     </div>
 
-    <!-- 新的工作流展示组件 -->
     <WorkflowShowcase />
 
-    <!-- 小型分隔线 -->
     <div class="mini-divider">
       <div class="mini-line yellow-line"></div>
       <div class="mini-line red-line"></div>
       <div class="mini-line blue-line"></div>
     </div>
 
-    <!-- Demo Video Section -->
     <section class="py-20" style="background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);">
       <div class="container">
         <div class="text-center mb-16">
@@ -856,7 +802,6 @@ import TabletQuickStart from '../components/TabletQuickStart.astro';
              data-en="Watch how developers use MoFA to build sophisticated AI applications in minutes"
              data-zh="观看开发者如何在几分钟内使用 MoFA 构建复杂的人工智能应用">Watch how developers use MoFA to build sophisticated AI applications in minutes</p>
         
-        <!-- Video Embed -->
         <div class="video-container rounded-lg shadow-2xl overflow-hidden mx-auto" style="max-width: 800px; background-color: #2d3748;">
           <iframe 
             id="demo-video-iframe" 
@@ -872,11 +817,18 @@ import TabletQuickStart from '../components/TabletQuickStart.astro';
       </div>
     </section>
 
-    <!-- 小型分隔线 -->
     <div class="mini-divider">
       <div class="mini-line red-line"></div>
       <div class="mini-line blue-line"></div>
       <div class="mini-line yellow-line"></div>
+    </div>
+
+    <HallOfFame />
+
+    <div class="mini-divider" style="display: none;">
+      <div class="mini-line yellow-line"></div>
+      <div class="mini-line red-line"></div>
+      <div class="mini-line blue-line"></div>
     </div>
   </main>
 
@@ -912,7 +864,6 @@ import TabletQuickStart from '../components/TabletQuickStart.astro';
     </div>
   </footer>
 
-  <!-- 返回顶部按钮 -->
   <button id="back-to-top" title="Go to top" style="
     display: none; /* Hidden by default */
     position: fixed;
@@ -933,7 +884,6 @@ import TabletQuickStart from '../components/TabletQuickStart.astro';
     ↑
   </button>
 
-  <!-- 语言切换脚本 -->
   <script>
     // 全局变量
     let currentTab = 'install';
