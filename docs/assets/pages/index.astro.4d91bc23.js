@@ -1,6 +1,6 @@
 import { c as createComponent, r as renderTemplate, m as maybeRenderHead, b as addAttribute, d as renderHead, e as renderComponent } from '../astro.32e88c90.js';
 import 'clsx';
-/* empty css                           *//* empty css                          */import { $ as $$BaseLayout, g as getCollection } from './_...slug_.astro.42cb0942.js';
+/* empty css                           *//* empty css                          */import { $ as $$BaseLayout, g as getCollection } from './_...slug_.astro.f8e7e26d.js';
 /* empty css                          */
 const $$WorkflowShowcase = createComponent(($$result, $$props, $$slots) => {
   const workflows = [
@@ -11,7 +11,7 @@ const $$WorkflowShowcase = createComponent(($$result, $$props, $$slots) => {
         zh: "Hello World"
       },
       description: {
-        en: "Simplest AI agent workflow for beginners",
+        en: "Basic agent example",
         zh: "\u6700\u7B80\u5355\u7684 AI \u4EE3\u7406\u5DE5\u4F5C\u6D41"
       },
       category: "Basic",
@@ -38,7 +38,7 @@ const $$WorkflowShowcase = createComponent(($$result, $$props, $$slots) => {
         zh: "ArXiv \u7814\u7A76"
       },
       description: {
-        en: "Automated research workflow with paper analysis and report generation",
+        en: "Automated paper research",
         zh: "\u81EA\u52A8\u5316\u7814\u7A76\u5DE5\u4F5C\u6D41\uFF0C\u5305\u542B\u8BBA\u6587\u5206\u6790\u548C\u62A5\u544A\u751F\u6210"
       },
       category: "Research",
@@ -82,7 +82,7 @@ const $$WorkflowShowcase = createComponent(($$result, $$props, $$slots) => {
         zh: "RAG \u7CFB\u7EDF"
       },
       description: {
-        en: "Retrieval-Augmented Generation for intelligent Q&A",
+        en: "RAG for Q&A",
         zh: "\u68C0\u7D22\u589E\u5F3A\u751F\u6210\u7CFB\u7EDF\uFF0C\u7528\u4E8E\u667A\u80FD\u95EE\u7B54"
       },
       category: "AI",
@@ -115,7 +115,7 @@ const $$WorkflowShowcase = createComponent(($$result, $$props, $$slots) => {
         zh: "GoSim \u767E\u79D1"
       },
       description: {
-        en: "Multi-agent system with web scraping and search capabilities",
+        en: "Multi-agent web research",
         zh: "\u5177\u6709\u7F51\u9875\u6293\u53D6\u548C\u641C\u7D22\u80FD\u529B\u7684\u591A\u4EE3\u7406\u7CFB\u7EDF"
       },
       category: "Web",
@@ -152,7 +152,7 @@ const $$WorkflowShowcase = createComponent(($$result, $$props, $$slots) => {
         zh: "Mem0 \u8BB0\u5FC6\u7CFB\u7EDF"
       },
       description: {
-        en: "Memory-enhanced AI workflow with retrieval and recording",
+        en: "Memory-enhanced workflow",
         zh: "\u5177\u6709\u8BB0\u5FC6\u68C0\u7D22\u548C\u8BB0\u5F55\u80FD\u529B\u7684\u589E\u5F3AAI\u5DE5\u4F5C\u6D41"
       },
       category: "Memory",
@@ -191,7 +191,7 @@ const $$WorkflowShowcase = createComponent(($$result, $$props, $$slots) => {
         zh: "\u4EE3\u7406\u521B\u5EFA\u7CFB\u7EDF"
       },
       description: {
-        en: "Intelligent system for generating AI agents automatically",
+        en: "Auto-generate AI agents",
         zh: "\u81EA\u52A8\u751F\u6210AI\u4EE3\u7406\u7684\u667A\u80FD\u7CFB\u7EDF"
       },
       category: "Meta-AI",
@@ -229,7 +229,7 @@ const $$WorkflowShowcase = createComponent(($$result, $$props, $$slots) => {
         zh: "\u591A\u4EE3\u7406\u7CFB\u7EDF"
       },
       description: {
-        en: "Complex multi-agent workflow with reflection and generation",
+        en: "Multi-agent reflection & generation",
         zh: "\u5177\u6709\u53CD\u601D\u548C\u751F\u6210\u80FD\u529B\u7684\u590D\u6742\u591A\u4EE3\u7406\u5DE5\u4F5C\u6D41"
       },
       category: "Complex",
@@ -262,11 +262,20 @@ const $$WorkflowShowcase = createComponent(($$result, $$props, $$slots) => {
       class reflection reflectNode`
     }
   ];
+  const repoLinks = {
+    "hello-world": "https://github.com/moxin-org/mofa/tree/main/python/examples/hello_world",
+    "arxiv-research": "https://github.com/moxin-org/mofa/tree/main/python/examples/arxiv_research",
+    "rag-system": "https://github.com/moxin-org/mofa/tree/main/python/examples/rag",
+    "gosim-pedia": "https://github.com/moxin-org/mofa/tree/main/python/examples/gosim-pedia",
+    "mem0-dataflow": "https://github.com/moxin-org/mofa/tree/main/python/examples/mem0-dataflow",
+    "intelligent-agent-creation": "https://github.com/moxin-org/mofa/tree/main/python/examples/intelligent_agent_creation",
+    "xiaowang-workflow": "https://github.com/moxin-org/mofa/tree/main/python/examples/xiaowang"
+  };
   return renderTemplate`${maybeRenderHead()}<section class="py-20" style="background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);" data-astro-cid-22cdqia5> <div class="container mx-auto px-4" data-astro-cid-22cdqia5> <div class="text-center mb-16" data-astro-cid-22cdqia5> <h2 class="text-4xl font-bold mb-4" data-en="Real Examples: <span class='gradient-text'>AI Workflows</span> in Action" data-zh="实际案例：<span class='gradient-text'>AI 工作流</span>实战" data-astro-cid-22cdqia5>
 Real Examples: <span class="gradient-text" data-astro-cid-22cdqia5>AI Workflows</span> in Action
-</h2> <p class="text-xl text-gray-600 max-w-3xl mx-auto" data-en="Explore different types of AI workflows - from simple hello world to complex research automation" data-zh="探索不同类型的 AI 工作流 - 从简单的问候到复杂的研究自动化" data-astro-cid-22cdqia5>
+</h2> <p class="text-xl text-gray-600 max-w-3xl mx-auto" data-en="Explore different types of AI workflows - from simple hello world to complex research automation" data-zh="探索不同类型的 AI 工作流 - 从简单的Hello World到复杂的研究自动化" data-astro-cid-22cdqia5>
 Explore different types of AI workflows - from simple hello world to complex research automation
-</p> </div> <!-- Workflow Horizontal Scroll Container --> <div class="workflow-container" data-astro-cid-22cdqia5> <div class="workflow-scroll" data-astro-cid-22cdqia5> ${workflows.map((workflow) => renderTemplate`<div class="workflow-card bg-white rounded-lg shadow-lg border-4 border-gray-300 hover:border-4 hover:border-indigo-500 transition-all duration-300 overflow-hidden" data-astro-cid-22cdqia5> <!-- Header --> <div${addAttribute(`${workflow.color} p-6 text-white`, "class")} data-astro-cid-22cdqia5> <h3 class="text-2xl font-bold mb-2"${addAttribute(workflow.title.en, "data-en")}${addAttribute(workflow.title.zh, "data-zh")} data-astro-cid-22cdqia5> ${workflow.title.en} </h3> <p class="text-white text-opacity-90"${addAttribute(workflow.description.en, "data-en")}${addAttribute(workflow.description.zh, "data-zh")} data-astro-cid-22cdqia5> ${workflow.description.en} </p> </div> <!-- Mermaid Graph --> <div class="chart-container" data-astro-cid-22cdqia5> <div${addAttribute(`mermaid-container-${workflow.id} bg-gray-50 rounded-lg p-4 border-2 border-gray-200`, "class")}${addAttribute(workflow.scale, "data-scale")} data-astro-cid-22cdqia5> <div${addAttribute(`mermaid mermaid-${workflow.id}`, "class")} data-astro-cid-22cdqia5> ${workflow.mermaidGraph} </div> </div> </div> </div>`)} </div> </div> <!-- Scroll hint --> <div class="text-center mt-8" data-astro-cid-22cdqia5> <p class="text-sm text-gray-500" data-en="← Scroll horizontally to explore more workflows →" data-zh="← 水平滚动以探索更多工作流 →" data-astro-cid-22cdqia5>
+</p> </div> <!-- Workflow Horizontal Scroll Container --> <div class="workflow-container" data-astro-cid-22cdqia5> <div class="workflow-scroll" data-astro-cid-22cdqia5> ${workflows.map((workflow) => renderTemplate`<div class="workflow-card bg-white rounded-lg shadow-lg border-4 border-gray-300 hover:border-4 hover:border-indigo-500 transition-all duration-300 overflow-hidden" data-astro-cid-22cdqia5> <!-- Header --> <div${addAttribute(`${workflow.color} p-6 text-white`, "class")} data-astro-cid-22cdqia5> <h3 class="text-2xl font-bold mb-2"${addAttribute(workflow.title.en, "data-en")}${addAttribute(workflow.title.zh, "data-zh")} data-astro-cid-22cdqia5> ${workflow.title.en} </h3> <p class="text-white text-opacity-90"${addAttribute(workflow.description.en, "data-en")}${addAttribute(workflow.description.zh, "data-zh")} data-astro-cid-22cdqia5> ${workflow.description.en} </p> </div> <!-- Mermaid Graph --> <div class="chart-container" data-astro-cid-22cdqia5> <div${addAttribute(`mermaid-container-${workflow.id} bg-gray-50 rounded-lg p-4 border-2 border-gray-200`, "class")}${addAttribute(workflow.scale, "data-scale")} data-astro-cid-22cdqia5> <div${addAttribute(`mermaid mermaid-${workflow.id}`, "class")} data-astro-cid-22cdqia5> ${workflow.mermaidGraph} </div> </div> </div> <!-- Action Buttons --> <div class="p-4 flex justify-end gap-2" data-astro-cid-22cdqia5> <!-- Zoom / View Button --> <button type="button"${addAttribute(`workflow-view-btn ${workflow.color}`, "class")}${addAttribute(workflow.id, "data-target-id")} aria-label="View Diagram" data-en="View" data-zh="查看" data-astro-cid-22cdqia5> <svg xmlns="http://www.w3.org/2000/svg" class="h-2 w-2" fill="currentColor" viewBox="0 0 24 24" data-astro-cid-22cdqia5><path d="M10 2a8 8 0 1 0 4.906 14.32l4.387 4.387a1 1 0 0 0 1.414-1.414l-4.387-4.387A8 8 0 0 0 10 2zm0 2a6 6 0 1 1 0 12A6 6 0 0 1 10 4z" data-astro-cid-22cdqia5></path></svg> <span class="ml-1 hidden sm:inline" data-astro-cid-22cdqia5>View</span> </button> <!-- GitHub Link Button --> <a${addAttribute(repoLinks[workflow.id], "href")} target="_blank" rel="noopener noreferrer"${addAttribute(`workflow-code-btn ${workflow.color}`, "class")} data-astro-cid-22cdqia5> <svg xmlns="http://www.w3.org/2000/svg" class="h-2 w-2" fill="currentColor" viewBox="0 0 24 24" data-astro-cid-22cdqia5><path d="M12 .5C5.73.5.49 5.74.49 12.02c0 5.11 3.29 9.44 7.86 10.97.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.55-3.88-1.55-.53-1.33-1.3-1.68-1.3-1.68-1.06-.72.08-.71.08-.71 1.17.08 1.79 1.2 1.79 1.2 1.04 1.78 2.73 1.27 3.4.97.11-.75.41-1.27.75-1.56-2.56-.29-5.26-1.28-5.26-5.7 0-1.26.46-2.29 1.2-3.1-.12-.29-.52-1.45.11-3.02 0 0 .97-.31 3.18 1.19a11.1 11.1 0 0 1 2.9-.39c.98.01 1.97.13 2.9.39 2.21-1.5 3.17-1.19 3.17-1.19.63 1.57.23 2.73.11 3.02.75.81 1.2 1.84 1.2 3.1 0 4.43-2.71 5.41-5.29 5.69.42.36.8 1.09.8 2.2 0 1.59-.02 2.87-.02 3.26 0 .31.2.68.8.56a10.53 10.53 0 0 0 7.85-10.97C23.51 5.74 18.27.5 12 .5z" data-astro-cid-22cdqia5></path></svg> <span class="ml-1" data-en="Code" data-zh="代码" data-astro-cid-22cdqia5>Code</span> </a> </div> </div>`)} </div> </div> <!-- Scroll hint --> <div class="text-center mt-8" data-astro-cid-22cdqia5> <p class="text-sm text-gray-500" data-en="← Scroll horizontally to explore more workflows →" data-zh="← 水平滚动以探索更多工作流 →" data-astro-cid-22cdqia5>
 ← Scroll horizontally to explore more workflows →
 </p> </div> </div> </section> <!-- Mermaid Script -->  `;
 }, "/home/runner/work/mofa-org.github.io/mofa-org.github.io/mofa-website/src/components/WorkflowShowcase.astro", void 0);
@@ -282,21 +291,21 @@ const $$TabletQuickStart = createComponent(($$result, $$props, $$slots) => {
       labelZh: "1. \u5B89\u88C5",
       labelEn: "1. Install",
       commandMain: "pip install mofa-ai",
-      secondary: "pip install mofa-ai[mofa-stage]  #If you need GUI"
+      secondary: "pip install mofa-ai[mofa-stage]  # MoFA_Stage GUI"
     },
     {
       id: "clone",
       labelZh: "2. \u514B\u9686\u6570\u636E\u6D41",
       labelEn: "2. Clone Data Flow",
       commandMain: "mofa clone-node <repo-url>",
-      secondary: "Clone an existing data Flow"
+      secondary: "Clone an existing data flow"
     },
     {
       id: "run",
       labelZh: "3. \u8FD0\u884C\u6570\u636E\u6D41",
       labelEn: "3. Run Data Flow",
       commandMain: "mofa run-dataflow <dataflow-name>",
-      secondary: "Start your AI agent node"
+      secondary: "Start your data flow"
     }
   ];
   return renderTemplate(_a || (_a = __template(["", `<section id="quick-start" class="py-20 bg-gradient-to-b from-gray-50 to-white"> <div class="container mx-auto px-4"> <div class="text-center mb-12"> <h2 class="text-4xl font-bold mb-4" data-en="Get Started in <span class='gradient-text'>Seconds</span>" data-zh="<span class='gradient-text'>\u5FEB\u901F</span>\u5F00\u59CB">
@@ -352,8 +361,165 @@ One command to install MoFA and start building AI agents
 <\/script>`])), maybeRenderHead(), tabs.map((tab) => renderTemplate`<button class="terminal-tab px-4 py-2 rounded-md text-sm font-medium"${addAttribute(tab.id, "data-tab")}>${tab.labelEn}</button>`), tabs.map((tab) => renderTemplate`<div${addAttribute(`p-6 space-y-3 terminal-content ${tab.id === "install" ? "active" : ""}`, "class")}${addAttribute(tab.id, "data-content")}> <div class="flex space-x-2 items-start"> <span class="text-green-400 font-mono">❯</span> <code class="cmd text-white font-mono break-words"${addAttribute(tab.commandMain, "data-full")}></code> <span class="cursor-blink text-green-400">▊</span> </div> ${tab.secondary && renderTemplate`<div class="flex space-x-2 items-start text-gray-400"> <span class="text-gray-500 font-mono">#</span> <code class="font-mono text-sm break-words">${tab.secondary}</code> </div>`} </div>`));
 }, "/home/runner/work/mofa-org.github.io/mofa-org.github.io/mofa-website/src/components/TabletQuickStart.astro", void 0);
 
+const $$HallOfFame = createComponent(async ($$result, $$props, $$slots) => {
+  let mofaContributors = [];
+  let doraContributors = [];
+  async function fetchAllContributors(repo) {
+    let allContributors = [];
+    let page = 1;
+    const perPage = 100;
+    try {
+      while (true) {
+        const response = await fetch(`https://api.github.com/repos/${repo}/contributors?per_page=${perPage}&page=${page}`);
+        if (!response.ok) {
+          console.log(`Failed to fetch ${repo} contributors page ${page}:`, response.status);
+          break;
+        }
+        const data = await response.json();
+        if (data.length === 0) {
+          break;
+        }
+        allContributors = allContributors.concat(data);
+        if (data.length < perPage) {
+          break;
+        }
+        page++;
+      }
+    } catch (error) {
+      console.log(`Error fetching ${repo} contributors:`, error);
+    }
+    return allContributors;
+  }
+  try {
+    const mofaData = await fetchAllContributors("moxin-org/mofa");
+    mofaContributors = mofaData.filter((contributor) => contributor.type === "User").map((contributor) => ({
+      name: contributor.login,
+      role: { en: "Contributor", zh: "\u8D21\u732E\u8005" },
+      avatar: contributor.avatar_url,
+      github: contributor.html_url,
+      // Check if custom image exists, format: /images/{github_login}.jpg
+      largeImage: `/images/${contributor.login}.jpg`,
+      desc: {
+        en: `${contributor.contributions} contributions to MoFA`,
+        zh: `\u4E3A MoFA \u8D21\u732E\u4E86 ${contributor.contributions} \u6B21\u63D0\u4EA4`
+      }
+    }));
+    console.log(`Fetched ${mofaContributors.length} MoFA contributors`);
+  } catch (error) {
+    console.log("Failed to fetch MoFA contributors:", error);
+  }
+  try {
+    const doraData = await fetchAllContributors("dora-rs/dora");
+    doraContributors = doraData.filter((contributor) => contributor.type === "User").map((contributor) => ({
+      name: contributor.login,
+      role: { en: "Contributor", zh: "\u8D21\u732E\u8005" },
+      avatar: contributor.avatar_url,
+      github: contributor.html_url,
+      // Check if custom image exists, format: /images/{github_login}.jpg
+      largeImage: `/images/${contributor.login}.jpg`,
+      desc: {
+        en: `${contributor.contributions} contributions to Dora-rs`,
+        zh: `\u4E3A Dora-rs \u8D21\u732E\u4E86 ${contributor.contributions} \u6B21\u63D0\u4EA4`
+      }
+    }));
+    console.log(`Fetched ${doraContributors.length} Dora-rs contributors`);
+  } catch (error) {
+    console.log("Failed to fetch Dora-rs contributors:", error);
+  }
+  const categories = [
+    {
+      id: "core",
+      name: { en: "MoFA Core Team", zh: "MoFA Core Team" },
+      contributors: [
+        {
+          name: "XiaoKuge",
+          role: { en: "Core Member", zh: "\u6838\u5FC3\u6210\u5458" },
+          avatar: "https://avatars.githubusercontent.com/XiaoKuge?v=4",
+          github: "https://github.com/XiaoKuge",
+          largeImage: "/images/XiaoKuge.jpg",
+          desc: { en: "MoFA Core Team Member", zh: "MoFA Core Team Member" }
+        },
+        {
+          name: "chengzi0103",
+          role: { en: "Core Member", zh: "\u6838\u5FC3\u6210\u5458" },
+          avatar: "https://avatars.githubusercontent.com/chengzi0103?v=4",
+          github: "https://github.com/chengzi0103",
+          largeImage: "/images/chengzi0103.jpg",
+          desc: { en: "MoFA Core Team Member", zh: "MoFA Core Team Member" }
+        },
+        {
+          name: "BH3GEI",
+          role: { en: "Core Member", zh: "\u6838\u5FC3\u6210\u5458" },
+          avatar: "https://avatars.githubusercontent.com/BH3GEI?v=4",
+          github: "https://github.com/BH3GEI",
+          largeImage: "/images/BH3GEI.jpg",
+          desc: { en: "MoFA Core Team Member", zh: "MoFA Core Team Member" }
+        }
+      ]
+    },
+    {
+      id: "contributors",
+      name: { en: "MoFA Contributors", zh: "MoFA \u8D21\u732E\u8005" },
+      contributors: mofaContributors
+    },
+    {
+      id: "dora",
+      name: { en: "Dora-rs Contributors", zh: "Dora-rs \u8D21\u732E\u8005" },
+      contributors: doraContributors
+    },
+    {
+      id: "ai2025",
+      name: { en: "2025 MoFA Hackathon Winners", zh: "2025 MoFA Search AI \u641C\u7D22\u5F15\u64CE\u5927\u8D5B\u83B7\u5956\u8005" },
+      contributors: [
+        {
+          name: "winner123456",
+          role: { en: "First Prize", zh: "First Prize" },
+          avatar: "https://avatars.githubusercontent.com/u/23193969?v=4",
+          github: "https://github.com/placeholder-winner-1",
+          largeImage: "/images/winner123456.jpg",
+          desc: { en: "2025 contest first prize", zh: "2025 contest first prize" }
+        },
+        {
+          name: "winner789",
+          role: { en: "First Prize", zh: "First Prize" },
+          avatar: "https://avatars.githubusercontent.com/u/23193969?v=4",
+          github: "https://github.com/placeholder-winner-2",
+          largeImage: "/images/winner789.jpg",
+          desc: { en: "2025 contest first prize", zh: "2025 contest first prize" }
+        }
+      ]
+    },
+    {
+      id: "ai2024",
+      name: { en: "2024 MoFA Hackathon Winners", zh: "2024 MoFA Search AI \u641C\u7D22\u5F15\u64CE\u5927\u8D5B\u83B7\u5956\u8005" },
+      contributors: [
+        {
+          name: "winner2024-1",
+          role: { en: "First Prize", zh: "First Prize" },
+          avatar: "https://avatars.githubusercontent.com/u/23193969?v=4",
+          github: "https://github.com/placeholder-2024-winner-1",
+          largeImage: "/images/winner2024-1.jpg",
+          desc: { en: "2024 contest first prize", zh: "2024 contest first prize" }
+        },
+        {
+          name: "winner2024-2",
+          role: { en: "First Prize", zh: "First Prize" },
+          avatar: "https://avatars.githubusercontent.com/u/23193969?v=4",
+          github: "https://github.com/placeholder-2024-winner-2",
+          largeImage: "/images/winner2024-2.jpg",
+          desc: { en: "2024 contest first prize", zh: "2024 contest first prize" }
+        }
+      ]
+    }
+  ];
+  return renderTemplate`${maybeRenderHead()}<section class="py-20" style="background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);"> <div class="container mx-auto"> <div class="text-center mb-12"> <h2 class="text-4xl font-bold mb-4" data-en="Developer <span class='gradient-text'>Hall of Fame</span>" data-zh="开发者 <span class='gradient-text'>殿堂</span>">
+Developer <span class="gradient-text">Hall of Fame</span> </h2> <p class="text-xl text-gray-600 max-w-3xl mx-auto" data-en="We celebrate everyone who made MoFA possible" data-zh="向每一位让 MoFA 成为可能的开发者致敬">We celebrate everyone who made MoFA possible</p> </div> <ul class="flex flex-wrap justify-center gap-4 mb-10" id="hof-tabs"> ${categories.map((cat) => renderTemplate`<li class="px-4 py-2 rounded-full border-2 border-gray-400 cursor-pointer transition hover:bg-gray-100 text-sm sm:text-base font-medium category-tab"${addAttribute(cat.id, "data-category")}> <span${addAttribute(cat.name.en, "data-en")}${addAttribute(cat.name.zh, "data-zh")}>${cat.name.en}</span> </li>`)} </ul> ${categories.map((cat) => renderTemplate`<div class="flex flex-wrap justify-center gap-8 category-content"${addAttribute(cat.id, "data-category")}${addAttribute(cat.id === "contributors" ? "display:flex;" : "display:none;", "style")}> ${cat.contributors.map((person) => renderTemplate`<div class="relative group contributor-item"> <div class="w-24 h-24 rounded-full overflow-hidden border-4 border-gray-300 shadow-lg hover:border-blue-500 transition-all duration-300 cursor-pointer"> <img${addAttribute(person.avatar, "src")}${addAttribute(person.name, "alt")} class="w-full h-full object-cover"> </div> <div class="contributor-card absolute top-1/2 left-full transform -translate-y-1/2 ml-4 w-64 bg-white rounded-lg shadow-2xl border opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-10 overflow-visible"> <div class="w-full h-64 overflow-hidden bg-gray-100"> <img${addAttribute(person.largeImage || person.avatar, "src")}${addAttribute(person.name, "alt")} class="w-full h-full object-cover" onerror="this.src=this.getAttribute('data-fallback')"${addAttribute(person.avatar, "data-fallback")}> </div> <div class="p-4"> <div class="text-center"> <div class="w-16 h-16 rounded-full overflow-hidden mx-auto mb-3 border-2 border-gray-200 -mt-12 bg-white"> <img${addAttribute(person.avatar, "src")}${addAttribute(person.name, "alt")} class="w-full h-full object-cover"> </div> <h3 class="text-lg font-bold text-gray-800 mb-1">${person.name}</h3> <p class="text-sm text-gray-600 mb-2"${addAttribute(person.role.en, "data-en")}${addAttribute(person.role.zh, "data-zh")}>${person.role.en}</p> <a${addAttribute(person.github, "href")} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-blue-600 hover:text-blue-800 text-sm font-medium mb-2"> <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"> <path d="M12 0C5.374 0 0 5.373 0 12 0 17.302 3.438 21.8 8.207 23.387c.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.237 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.30.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"></path> </svg>
+GitHub
+</a> <p class="text-xs text-gray-500"${addAttribute(person.desc.en, "data-en")}${addAttribute(person.desc.zh, "data-zh")}>${person.desc.en}</p> </div> </div> <!-- 左侧箭头 - 卡片在右侧时显示，尖角指向头像 --> <div class="arrow-left absolute top-1/2 transform -translate-y-1/2" style="left: -12px; width: 0; height: 0; border-top: 8px solid transparent; border-bottom: 8px solid transparent; border-right: 8px solid white; filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.1));"></div> <!-- 右侧箭头 - 卡片在左侧时显示，尖角指向头像 --> <div class="arrow-right absolute top-1/2 transform -translate-y-1/2 hidden" style="right: -12px; width: 0; height: 0; border-top: 8px solid transparent; border-bottom: 8px solid transparent; border-left: 8px solid white; filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.1));"></div> </div> </div>`)} </div>`)} </div>  </section>`;
+}, "/home/runner/work/mofa-org.github.io/mofa-org.github.io/mofa-website/src/components/HallOfFame.astro", void 0);
+
 const $$Index$3 = createComponent(async ($$result, $$props, $$slots) => {
-  return renderTemplate`<html lang="zh-CN" id="html-root" style="scroll-behavior: smooth;"> <head><meta charset="utf-8"><meta name="description" content="MoFA - Make Ordinary Developers Full-stack AI Engineers. A modular framework for AI agents that enables developers to build complex AI applications."><meta name="viewport" content="width=device-width, initial-scale=1.0"><title id="page-title">MoFA - Make Ordinary Developers Full-stack AI Engineers</title><!-- Favicon --><link rel="icon" type="image/png" href="/favicon-32x32.png"><link rel="shortcut icon" href="/favicon-32x32.png"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"><link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png"><meta name="theme-color" content="#6366F1">${renderHead()}</head> <body> <header style="position: sticky; top: 0; background: white; border-bottom: 4px solid var(--mondrian-black); box-shadow: 0 2px 4px rgba(0,0,0,0.1); z-index: 50;"> <nav class="container" style="padding: 16px; display: flex; align-items: center; justify-content: space-between;"> <a href="https://mofa.ai" style="display: flex; align-items: center; gap: 8px; text-decoration: none;" target="_blank" rel="noopener noreferrer"> <img src="/mofa-logo.png" alt="MoFA Logo" style="width: 40px; height: 40px; border-radius: 8px; object-fit: cover;"> <span class="gradient-text" style="font-size: 1.5rem; font-weight: 700;">MoFA</span> </a> <div style="display: flex; align-items: center; gap: 32px;"> <a href="/docs" class="nav-link" data-en="Docs" data-zh="文档">Docs</a> <!-- 临时隐藏 Examples 链接 --> <!-- <a href="https://demo.mofa.ai" class="nav-link" target="_blank" rel="noopener noreferrer" data-en="Examples" data-zh="示例">Examples</a> --> <a href="/blog" class="nav-link" data-en="Blog" data-zh="博客">Blog</a> <!-- 语言切换按钮 --> <div style="display: flex; align-items: center; gap: 8px;"> <button id="lang-toggle" style="
+  return renderTemplate`<html lang="zh-CN" id="html-root" style="scroll-behavior: smooth;"> <head><meta charset="utf-8"><meta name="description" content="MoFA - Make Ordinary Developers Full-stack AI Engineers. A modular framework for AI agents that enables developers to build complex AI applications."><meta name="viewport" content="width=device-width, initial-scale=1.0"><title id="page-title">MoFA - Make Ordinary Developers Full-stack AI Engineers</title><link rel="icon" type="image/png" href="/favicon-32x32.png"><link rel="shortcut icon" href="/favicon-32x32.png"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"><link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png"><meta name="theme-color" content="#6366F1">${renderHead()}</head> <body> <header style="position: sticky; top: 0; background: white; border-bottom: 4px solid var(--mondrian-black); box-shadow: 0 2px 4px rgba(0,0,0,0.1); z-index: 50;"> <nav class="container" style="padding: 16px; display: flex; align-items: center; justify-content: space-between;"> <a href="https://mofa.ai" style="display: flex; align-items: center; gap: 8px; text-decoration: none;" target="_blank" rel="noopener noreferrer"> <img src="/mofa-logo.png" alt="MoFA Logo" style="width: 40px; height: 40px; border-radius: 8px; object-fit: cover;"> <span class="gradient-text" style="font-size: 1.5rem; font-weight: 700;">MoFA</span> </a> <div style="display: flex; align-items: center; gap: 32px;"> <a href="/docs" class="nav-link" data-en="Docs" data-zh="文档">Docs</a> <a href="/blog" class="nav-link" data-en="Blog" data-zh="博客">Blog</a> <div style="display: flex; align-items: center; gap: 8px;"> <button id="lang-toggle" style="
             display: flex;
             align-items: center;
             gap: 4px;
@@ -368,7 +534,7 @@ const $$Index$3 = createComponent(async ($$result, $$props, $$slots) => {
             color: var(--mondrian-black);
           " onmouseover="this.style.borderColor='var(--mondrian-red)'" onmouseout="this.style.borderColor='var(--mondrian-gray)'"> <span id="current-lang">🇺🇸 EN</span> <span style="font-size: 0.75rem; opacity: 0.6;">▼</span> </button> </div> <a href="https://github.com/moxin-org/mofa" class="btn-primary" target="_blank" rel="noopener noreferrer" style="display: flex; align-items: center; gap: 8px;"> <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="flex-shrink: 0;"> <path d="M12 0C5.374 0 0 5.373 0 12 0 17.302 3.438 21.8 8.207 23.387c.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.237 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"></path> </svg>
 GitHub
-</a> </div> </nav> </header> <!-- 主要内容 --> <main style="flex: 1;"> <!-- Hero 区域 --> <section class="py-20" style="position: relative; overflow: hidden;"> <!-- 蒙德里安几何装饰 --> <div style="position: absolute; inset: 0; pointer-events: none; overflow: hidden;"> <!-- 左侧装饰性几何图形 --> <div class="mondrian-decoration-left" style="position: absolute; left: -100px; top: 20%; width: 300px; height: 400px;"> <svg width="300" height="400" viewBox="0 0 300 400" xmlns="http://www.w3.org/2000/svg"> <!-- 垂直分割线 --> <line x1="80" y1="0" x2="80" y2="400" stroke="var(--mondrian-black)" stroke-width="3"></line> <line x1="180" y1="0" x2="180" y2="400" stroke="var(--mondrian-black)" stroke-width="3"></line> <!-- 水平分割线 --> <line x1="0" y1="120" x2="300" y2="120" stroke="var(--mondrian-black)" stroke-width="3"></line> <line x1="0" y1="280" x2="300" y2="280" stroke="var(--mondrian-black)" stroke-width="3"></line> <!-- 色块 --> <rect x="6" y="6" width="68" height="108" fill="var(--mofa-gradient-1)" opacity="0.85"></rect> <rect x="86" y="126" width="88" height="148" fill="var(--mofa-gradient-4)" opacity="0.85"></rect> <rect x="186" y="6" width="108" height="108" fill="var(--mofa-gradient-3)" opacity="0.85"></rect> </svg> </div> <!-- 右侧装饰性几何图形 --> <div class="mondrian-decoration-right" style="position: absolute; right: -120px; bottom: 15%; width: 280px; height: 350px;"> <svg width="280" height="350" viewBox="0 0 280 350" xmlns="http://www.w3.org/2000/svg"> <!-- 垂直分割线 --> <line x1="100" y1="0" x2="100" y2="350" stroke="var(--mondrian-black)" stroke-width="3"></line> <line x1="200" y1="0" x2="200" y2="350" stroke="var(--mondrian-black)" stroke-width="3"></line> <!-- 水平分割线 --> <line x1="0" y1="100" x2="280" y2="100" stroke="var(--mondrian-black)" stroke-width="3"></line> <line x1="0" y1="250" x2="280" y2="250" stroke="var(--mondrian-black)" stroke-width="3"></line> <!-- 色块 --> <rect x="106" y="6" width="88" height="88" fill="var(--mofa-gradient-1)" opacity="0.85"></rect> <rect x="6" y="106" width="88" height="138" fill="var(--mofa-gradient-3)" opacity="0.85"></rect> <rect x="206" y="256" width="68" height="88" fill="var(--mofa-gradient-4)" opacity="0.85"></rect> </svg> </div> <!-- 顶部细线装饰（已隐藏） --> <!-- <div class="mondrian-line-decoration" style="position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, transparent 0%, var(--mofa-gradient-1) 20%, var(--mofa-gradient-1) 30%, transparent 35%, transparent 65%, var(--mofa-gradient-4) 70%, var(--mofa-gradient-4) 80%, transparent 100%);"></div> --> <!-- 底部细线装饰（已隐藏） --> <!-- <div class="mondrian-line-decoration" style="position: absolute; bottom: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, transparent 0%, var(--mofa-gradient-3) 15%, var(--mofa-gradient-3) 25%, transparent 30%, transparent 70%, var(--mofa-gradient-1) 75%, var(--mofa-gradient-1) 85%, transparent 100%); animation-delay: 4s;"></div> --> </div> <div class="container" style="position: relative; z-index: 10;"> <div class="max-w-4xl mx-auto text-center"> <!-- Logo --> <div style="display: flex; justify-content: center; margin-bottom: 32px;"> <div class="logo-container" style="width: 144px; height: 144px; position: relative; overflow: hidden; border-radius: 20px;"> <!-- 原始logo作为背景定位参考 --> <img src="/mofa-logo.png" alt="MoFA Logo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 20px; filter: invert(1); display: none;"> <!-- M字母 - 左上 --> <div class="logo-letter-container" style="
+</a> </div> </nav> </header> <main style="flex: 1;"> <section class="py-20" style="position: relative; overflow: hidden;"> <div style="position: absolute; inset: 0; pointer-events: none; overflow: hidden;"> <div class="mondrian-decoration-left" style="position: absolute; left: -100px; top: 20%; width: 300px; height: 400px;"> <svg width="300" height="400" viewBox="0 0 300 400" xmlns="http://www.w3.org/2000/svg"> <line x1="80" y1="0" x2="80" y2="400" stroke="var(--mondrian-black)" stroke-width="3"></line> <line x1="180" y1="0" x2="180" y2="400" stroke="var(--mondrian-black)" stroke-width="3"></line> <line x1="0" y1="120" x2="300" y2="120" stroke="var(--mondrian-black)" stroke-width="3"></line> <line x1="0" y1="280" x2="300" y2="280" stroke="var(--mondrian-black)" stroke-width="3"></line> <rect x="6" y="6" width="68" height="108" fill="var(--mofa-gradient-1)" opacity="0.85"></rect> <rect x="86" y="126" width="88" height="148" fill="var(--mofa-gradient-4)" opacity="0.85"></rect> <rect x="186" y="6" width="108" height="108" fill="var(--mofa-gradient-3)" opacity="0.85"></rect> </svg> </div> <div class="mondrian-decoration-right" style="position: absolute; right: -120px; bottom: 15%; width: 280px; height: 350px;"> <svg width="280" height="350" viewBox="0 0 280 350" xmlns="http://www.w3.org/2000/svg"> <line x1="100" y1="0" x2="100" y2="350" stroke="var(--mondrian-black)" stroke-width="3"></line> <line x1="200" y1="0" x2="200" y2="350" stroke="var(--mondrian-black)" stroke-width="3"></line> <line x1="0" y1="100" x2="280" y2="100" stroke="var(--mondrian-black)" stroke-width="3"></line> <line x1="0" y1="250" x2="280" y2="250" stroke="var(--mondrian-black)" stroke-width="3"></line> <rect x="106" y="6" width="88" height="88" fill="var(--mofa-gradient-1)" opacity="0.85"></rect> <rect x="6" y="106" width="88" height="138" fill="var(--mofa-gradient-3)" opacity="0.85"></rect> <rect x="206" y="256" width="68" height="88" fill="var(--mofa-gradient-4)" opacity="0.85"></rect> </svg> </div> </div> <div class="container" style="position: relative; z-index: 10;"> <div class="max-w-4xl mx-auto text-center"> <div style="display: flex; justify-content: center; margin-bottom: 32px;"> <div class="logo-container" style="width: 144px; height: 144px; position: relative; overflow: hidden; border-radius: 20px;"> <img src="/mofa-logo.png" alt="MoFA Logo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 20px; filter: invert(1); display: none;"> <div class="logo-letter-container" style="
                 position: absolute;
                 top: 12px;
                 left: 14px;
@@ -382,7 +548,7 @@ GitHub
                   height: 100%;
                   object-fit: contain;
                   border-radius: 8px;
-                "> <div class="data-flow"></div> </div> <!-- O字母 - 左下 --> <div class="logo-letter-container" style="
+                "> <div class="data-flow"></div> </div> <div class="logo-letter-container" style="
                 position: absolute;
                 top: 66px;
                 left: 14px;
@@ -396,7 +562,7 @@ GitHub
                   height: 100%;
                   object-fit: contain;
                   border-radius: 8px;
-                "> <div class="data-flow"></div> </div> <!-- F字母 - 右侧（中心定位） --> <div class="logo-letter-container" style="
+                "> <div class="data-flow"></div> </div> <div class="logo-letter-container" style="
                 position: absolute;
                 top: 63px; /* 12 + 106/2 */
                 left: 100px; /* 76 + 48/2 */
@@ -411,7 +577,7 @@ GitHub
                   height: 100%;
                   object-fit: contain;
                   border-radius: 8px;
-                "> <div class="data-flow"></div> </div> <!-- A字母 - 右下 --> <div class="logo-letter-container" style="
+                "> <div class="data-flow"></div> </div> <div class="logo-letter-container" style="
                 position: absolute;
                 top: 102.5px; /* 几何中心定位 */
                 left: 111px;
@@ -428,52 +594,52 @@ GitHub
                   object-fit: contain;
                   border-radius: 8px;
                   transition: transform 0.3s ease;
-                "> <div class="data-flow"></div> </div> </div> </div> <!-- 副标题 --> <p class="text-2xl font-medium mb-4 pixel-gradient-text" data-en="Make Ordinary Developers Full-stack AI Engineers" data-zh="让普通开发者成为全栈 AI 工程师">
+                "> <div class="data-flow"></div> </div> </div> </div> <p class="text-2xl font-medium mb-4 pixel-gradient-text" data-en="Make Ordinary Developers Full-stack AI Engineers" data-zh="让普通开发者成为全栈 AI 工程师">
 让普通开发者成为全栈 <span class="ai-char">AI</span> 工程师
-</p> <p class="text-xl mb-8 pixel-glow-text" data-en="Modular Framework for AI Agents" data-zh="模块化 AI 代理框架">
+</p> <p class="text-xl mb-8 pixel-glow-text" data-en="Modular Framework for AI Agents" data-zh="模块化 AI 代理框架" style="color:#6CCDD1;">
 模块化 <span class="ai-char">AI</span> 代理框架
-</p> <!-- 描述 --> <!-- 中文版本 - 普通字体 --> <p class="mb-12 max-w-2xl mx-auto description-text-zh" style="display: block;" data-zh="通过可组合的 AI 代理框架，让每个开发者都能轻松构建、调试和部署复杂的 AI 应用">
+</p> <p class="mb-12 max-w-2xl mx-auto description-text-zh" style="display: block;" data-zh="通过可组合的 AI 代理框架，让每个开发者都能轻松构建、调试和部署复杂的 AI 应用">
 通过可组合的 AI 代理框架，让每个开发者都能轻松构建、调试和部署复杂的 AI 应用
-</p> <!-- 英文版本 - 普通字体 --> <p class="mb-12 max-w-2xl mx-auto description-text-en" style="display: none;" data-en="A composable AI agent framework that enables every developer to easily build, debug, and deploy complex AI applications">
+</p> <p class="mb-12 max-w-2xl mx-auto description-text-en" style="display: none;" data-en="A composable AI agent framework that enables every developer to easily build, debug, and deploy complex AI applications">
 A composable AI agent framework that enables every developer to easily build, debug, and deploy complex AI applications
-</p> <!-- CTA 按钮 --> <div style="display: flex; flex-direction: column; gap: 16px; justify-content: center; margin-bottom: 64px;"> <div style="display: flex; flex-wrap: wrap; gap: 16px; justify-content: center;"> <a href="#quick-start" rel="noopener noreferrer" style="
+</p> <div style="display: flex; flex-direction: column; gap: 16px; justify-content: center; margin-bottom: 64px;"> <div style="display: flex; flex-wrap: wrap; gap: 16px; justify-content: center;"> <a href="#quick-start" rel="noopener noreferrer" style="
                    display: inline-flex;
                    align-items: center;
                    font-size: 1.125rem;
                    padding: 16px 32px;
-                   background: linear-gradient(135deg, var(--mondrian-red), #E6412A);
+                   background: var(--mondrian-red);
                    color: white;
                    text-decoration: none;
-                   border-radius: 12px;
-                   font-weight: 600;
-                   transition: all 0.3s ease;
-                   border: none;
+                   border-radius: 0;
+                   font-weight: 700;
+                   transition: all 0.2s ease;
+                   border: 3px solid var(--mondrian-black);
                    cursor: pointer;
-                   box-shadow: 0 4px 16px rgba(255, 81, 59, 0.3);
-                 " onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 8px 24px rgba(255, 81, 59, 0.4)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 16px rgba(255, 81, 59, 0.3)'"> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 8px; flex-shrink: 0;"> <path d="M15.59 14.37a6 6 0 01-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 006.16-12.12A14.98 14.98 0 009.631 8.41m5.96 5.96a14.926 14.926 0 01-5.841 2.58m-.119-8.54a6 6 0 00-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 00-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 01-2.448-2.448 14.9 14.9 0 01.06-.312m-2.24 2.39a4.493 4.493 0 00-1.757 4.306 4.493 4.493 0 004.306-1.758M16.5 9a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z"></path> </svg> <span data-en="Quick Start" data-zh="快速开始">Quick Start</span> </a> <a href="#why-mofa" rel="noopener noreferrer" style="
+                   box-shadow: none;
+                 " onmouseover="this.style.transform='translate(-2px, -2px)'; this.style.boxShadow='4px 4px 0 var(--mondrian-black)'" onmouseout="this.style.transform='translate(0, 0)'; this.style.boxShadow='none'"> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 8px; flex-shrink: 0;"> <path d="M15.59 14.37a6 6 0 01-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 006.16-12.12A14.98 14.98 0 009.631 8.41m5.96 5.96a14.926 14.926 0 01-5.841 2.58m-.119-8.54a6 6 0 00-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 00-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 01-2.448-2.448 14.9 14.9 0 01.06-.312m-2.24 2.39a4.493 4.493 0 00-1.757 4.306 4.493 4.493 0 004.306-1.758M16.5 9a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z"></path> </svg> <span data-en="Quick Start" data-zh="快速开始">快速开始</span> </a> <a href="#why-mofa" rel="noopener noreferrer" style="
                    display: inline-flex;
                    align-items: center;
                    font-size: 1.125rem;
                    padding: 16px 32px;
-                   background: linear-gradient(135deg, var(--mofa-gradient-4), var(--mondrian-blue));
+                   background: var(--mofa-gradient-4);
                    color: white;
                    text-decoration: none;
-                   border-radius: 12px;
-                   font-weight: 600;
-                   transition: all 0.3s ease;
-                   border: none;
+                   border-radius: 0;
+                   font-weight: 700;
+                   transition: all 0.2s ease;
+                   border: 3px solid var(--mondrian-black);
                    cursor: pointer;
-                   box-shadow: 0 4px 16px rgba(109, 202, 206, 0.3);
-                 " onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 8px 24px rgba(109, 202, 206, 0.4)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 16px rgba(109, 202, 206, 0.3)'"> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 8px; flex-shrink: 0;"> <path d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5"></path> </svg> <span data-en="Learn More" data-zh="了解更多">Learn More</span> </a> </div> </div> <!-- 快速统计 --> <div class="grid grid-cols-3 gap-8 max-w-2xl mx-auto"> <div class="text-center"> <div class="text-3xl font-bold" style="color: var(--mofa-gradient-1);" data-en="5 min" data-zh="5分钟">5 min</div> <div class="text-sm text-gray-600" data-en="Quick Setup" data-zh="快速上手">Quick Setup</div> </div> <div class="text-center"> <div class="text-3xl font-bold" style="color: var(--mofa-gradient-3);">100+</div> <div class="text-sm text-gray-600" data-en="Built-in Agents" data-zh="内置代理">Built-in Agents</div> </div> <div class="text-center"> <div class="text-3xl font-bold" style="color: var(--mofa-gradient-4);">∞</div> <div class="text-sm text-gray-600" data-en="Combinations" data-zh="组合可能">Combinations</div> </div> </div> </div> </div> </section> <!-- 小型分隔线 --> <div class="mini-divider"> <div class="mini-line red-line"></div> <div class="mini-line blue-line"></div> <div class="mini-line yellow-line"></div> </div> <!-- 插入全新重构的快速开始区域 --> ${renderComponent($$result, "TabletQuickStart", $$TabletQuickStart, {})} <!-- 旧版快速开始区域 - 暂时隐藏，后续可删除 --> <section class="py-20" style="background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%); display:none;"> <div class="container"> <div class="text-center mb-16"> <h2 class="text-4xl font-bold mb-4" data-en="Get Started in <span class='gradient-text'>Seconds</span>" data-zh="<span class='gradient-text'>快速</span>开始">
+                   box-shadow: none;
+                 " onmouseover="this.style.transform='translate(-2px, -2px)'; this.style.boxShadow='4px 4px 0 var(--mondrian-black)'" onmouseout="this.style.transform='translate(0, 0)'; this.style.boxShadow='none'"> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 8px; flex-shrink: 0;"> <path d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5"></path> </svg> <span data-en="Learn More" data-zh="了解更多">了解更多</span> </a> </div> </div> <div class="grid grid-cols-3 gap-8 max-w-2xl mx-auto"> <div class="text-center"> <div class="text-3xl font-bold" style="color: var(--mofa-gradient-1);" data-en="5 min" data-zh="5分钟">5 min</div> <div class="text-sm text-gray-600" data-en="Quick Setup" data-zh="快速上手">Quick Setup</div> </div> <div class="text-center"> <div class="text-3xl font-bold" style="color: var(--mofa-gradient-3);">100+</div> <div class="text-sm text-gray-600" data-en="Built-in Agents" data-zh="内置代理">Built-in Agents</div> </div> <div class="text-center"> <div class="text-3xl font-bold" style="color: var(--mofa-gradient-4);">∞</div> <div class="text-sm text-gray-600" data-en="Combinations" data-zh="组合可能">Combinations</div> </div> </div> </div> </div> </section> <div class="mini-divider"> <div class="mini-line red-line"></div> <div class="mini-line blue-line"></div> <div class="mini-line yellow-line"></div> </div> ${renderComponent($$result, "TabletQuickStart", $$TabletQuickStart, {})} <section class="py-20" style="background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%); display:none;"> <div class="container"> <div class="text-center mb-16"> <h2 class="text-4xl font-bold mb-4" data-en="Get Started in <span class='gradient-text'>Seconds</span>" data-zh="<span class='gradient-text'>快速</span>开始">
 Get Started in <span class="gradient-text">Seconds</span> </h2> <p class="text-xl text-gray-600 max-w-2xl mx-auto" data-en="One command to install MoFA and start building AI agents" data-zh="一行命令安装 MoFA，立即开始构建 AI 代理">
 One command to install MoFA and start building AI agents
-</p> </div> <div class="max-w-4xl mx-auto"> <!-- 多页面终端窗口 --> <div class="terminal-multi-window relative mb-16"> <!-- 标签页导航 --> <div class="flex justify-center mb-6"> <div class="inline-flex bg-gray-800 rounded-lg p-1 shadow-lg"> <button class="terminal-tab active px-4 py-2 rounded-md text-sm font-medium transition-all duration-200" data-tab="install"> <span data-en="1. Install" data-zh="1. 安装">1. Install</span> </button> <button class="terminal-tab px-4 py-2 rounded-md text-sm font-medium transition-all duration-200" data-tab="clone"> <span data-en="2. Clone Node" data-zh="2. 克隆节点">2. Clone Node</span> </button> <button class="terminal-tab px-4 py-2 rounded-md text-sm font-medium transition-all duration-200" data-tab="run"> <span data-en="3. Run Node" data-zh="3. 运行节点">3. Run Node</span> </button> </div> </div> <!-- 终端窗口 --> <div class="terminal-window group relative"> <div class="bg-gray-900 rounded-2xl shadow-2xl overflow-hidden border border-gray-600"> <!-- 窗口标题栏 --> <div class="flex items-center justify-between px-5 py-3 bg-gray-800 border-b border-gray-700"> <div class="flex items-center space-x-2"> <div class="w-3 h-3 rounded-full bg-red-500"></div> <div class="w-3 h-3 rounded-full bg-yellow-500"></div> <div class="w-3 h-3 rounded-full bg-green-500"></div> </div> <div class="absolute left-1/2 transform -translate-x-1/2"> <span class="text-gray-400 text-sm font-mono">Terminal</span> </div> <button id="main-copy-btn" class="copy-btn-header px-3 py-1 bg-gray-700 hover:bg-gray-600 text-gray-300 hover:text-white text-xs rounded transition-all duration-200 flex items-center space-x-1"> <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect> <path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"></path> </svg> <span>Copy</span> </button> </div> <!-- 终端内容 --> <div class="p-6 bg-gray-900 min-h-[120px]"> <!-- 安装页面 --> <div class="terminal-content active" data-content="install"> <div class="space-y-3"> <div class="flex items-center space-x-2"> <span class="text-green-400 font-mono">❯</span> <div class="flex-1"> <span class="typing-text text-white font-mono" data-text="pip install mofa-ai"></span> <span class="cursor-blink text-green-400">▊</span> </div> </div> <div class="flex items-center space-x-2 opacity-60"> <span class="text-gray-500 font-mono">#</span> <div class="flex-1"> <span class="typing-text text-gray-400 font-mono text-sm" data-text="or with additional stage tools:" data-delay="2000"></span> </div> </div> <div class="flex items-center space-x-2"> <span class="text-green-400 font-mono">❯</span> <div class="flex-1"> <span class="typing-text text-white font-mono" data-text="pip install mofa-ai[mofa-stage]  #If you need GUI" data-delay="3500"></span> </div> </div> </div> </div> <!-- 克隆节点页面 --> <div class="terminal-content" data-content="clone"> <div class="space-y-3"> <div class="flex items-center space-x-2"> <span class="text-green-400 font-mono">❯</span> <div class="flex-1"> <span class="typing-text text-white font-mono" data-text="mofa clone-node node-url"></span> <span class="cursor-blink text-green-400">▊</span> </div> </div> <div class="flex items-center space-x-2 opacity-60"> <span class="text-gray-500 font-mono">#</span> <div class="flex-1"> <span class="typing-text text-gray-400 font-mono text-sm" data-text="Clone an existing AI agent node" data-delay="1500"></span> </div> </div> </div> </div> <!-- 运行节点页面 --> <div class="terminal-content" data-content="run"> <div class="space-y-3"> <div class="flex items-center space-x-2"> <span class="text-green-400 font-mono">❯</span> <div class="flex-1"> <span class="typing-text text-white font-mono" data-text="mofa run-node"></span> <span class="cursor-blink text-green-400">▊</span> </div> </div> <div class="flex items-center space-x-2 opacity-60"> <span class="text-gray-500 font-mono">#</span> <div class="flex-1"> <span class="typing-text text-gray-400 font-mono text-sm" data-text="Start your AI agent node" data-delay="1200"></span> </div> </div> </div> </div> <!-- 成功消息 --> <div id="success-message" class="hidden mt-4"> <div class="flex items-center space-x-2 text-green-400 text-sm font-mono animate-fade-in"> <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> <polyline points="20 6 9 17 4 12"></polyline> </svg> <span data-en="✅ Command copied to clipboard!" data-zh="✅ 命令已复制到剪贴板！">✅ Command copied to clipboard!</span> </div> </div> </div> </div> </div> </div> <!-- 快速开始步骤 --> <div class="grid md:grid-cols-3 gap-8 quick-start-steps"> <div class="text-center group"> <div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-red-500 to-orange-500 rounded-full flex items-center justify-center text-white font-bold text-xl group-hover:scale-110 transition-transform duration-200">1</div> <h3 class="text-lg font-semibold mb-2" data-en="Install MoFA" data-zh="安装 MoFA">Install MoFA</h3> <p class="text-gray-600 text-sm" data-en="Run the pip command above to install MoFA framework" data-zh="运行上面的 pip 命令安装 MoFA 框架">
+</p> </div> <div class="max-w-4xl mx-auto"> <div class="terminal-multi-window relative mb-16"> <div class="flex justify-center mb-6"> <div class="inline-flex bg-gray-800 rounded-lg p-1 shadow-lg"> <button class="terminal-tab active px-4 py-2 rounded-md text-sm font-medium transition-all duration-200" data-tab="install"> <span data-en="1. Install" data-zh="1. 安装">1. Install</span> </button> <button class="terminal-tab px-4 py-2 rounded-md text-sm font-medium transition-all duration-200" data-tab="clone"> <span data-en="2. Clone Node" data-zh="2. 克隆节点">2. Clone Node</span> </button> <button class="terminal-tab px-4 py-2 rounded-md text-sm font-medium transition-all duration-200" data-tab="run"> <span data-en="3. Run Node" data-zh="3. 运行节点">3. Run Node</span> </button> </div> </div> <div class="terminal-window group relative"> <div class="bg-gray-900 rounded-2xl shadow-2xl overflow-hidden border border-gray-600"> <div class="flex items-center justify-between px-5 py-3 bg-gray-800 border-b border-gray-700"> <div class="flex items-center space-x-2"> <div class="w-3 h-3 rounded-full bg-red-500"></div> <div class="w-3 h-3 rounded-full bg-yellow-500"></div> <div class="w-3 h-3 rounded-full bg-green-500"></div> </div> <div class="absolute left-1/2 transform -translate-x-1/2"> <span class="text-gray-400 text-sm font-mono">Terminal</span> </div> <button id="main-copy-btn" class="copy-btn-header px-3 py-1 bg-gray-700 hover:bg-gray-600 text-gray-300 hover:text-white text-xs rounded transition-all duration-200 flex items-center space-x-1"> <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect> <path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"></path> </svg> <span>Copy</span> </button> </div> <div class="p-6 bg-gray-900 min-h-[120px]"> <div class="terminal-content active" data-content="install"> <div class="space-y-3"> <div class="flex items-center space-x-2"> <span class="text-green-400 font-mono">❯</span> <div class="flex-1"> <span class="typing-text text-white font-mono" data-text="pip install mofa-ai"></span> <span class="cursor-blink text-green-400">▊</span> </div> </div> <div class="flex items-center space-x-2 opacity-60"> <span class="text-gray-500 font-mono">#</span> <div class="flex-1"> <span class="typing-text text-gray-400 font-mono text-sm" data-text="or with additional stage tools:" data-delay="2000"></span> </div> </div> <div class="flex items-center space-x-2"> <span class="text-green-400 font-mono">❯</span> <div class="flex-1"> <span class="typing-text text-white font-mono" data-text="pip install mofa-ai[mofa-stage]  #If you need GUI" data-delay="3500"></span> </div> </div> </div> </div> <div class="terminal-content" data-content="clone"> <div class="space-y-3"> <div class="flex items-center space-x-2"> <span class="text-green-400 font-mono">❯</span> <div class="flex-1"> <span class="typing-text text-white font-mono" data-text="mofa clone-node node-url"></span> <span class="cursor-blink text-green-400">▊</span> </div> </div> <div class="flex items-center space-x-2 opacity-60"> <span class="text-gray-500 font-mono">#</span> <div class="flex-1"> <span class="typing-text text-gray-400 font-mono text-sm" data-text="Clone an existing AI agent node" data-delay="1500"></span> </div> </div> </div> </div> <div class="terminal-content" data-content="run"> <div class="space-y-3"> <div class="flex items-center space-x-2"> <span class="text-green-400 font-mono">❯</span> <div class="flex-1"> <span class="typing-text text-white font-mono" data-text="mofa run-node"></span> <span class="cursor-blink text-green-400">▊</span> </div> </div> <div class="flex items-center space-x-2 opacity-60"> <span class="text-gray-500 font-mono">#</span> <div class="flex-1"> <span class="typing-text text-gray-400 font-mono text-sm" data-text="Start your data flow" data-delay="1200"></span> </div> </div> </div> </div> <div id="success-message" class="hidden mt-4"> <div class="flex items-center space-x-2 text-green-400 text-sm font-mono animate-fade-in"> <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> <polyline points="20 6 9 17 4 12"></polyline> </svg> <span data-en="✅ Command copied to clipboard!" data-zh="✅ 命令已复制到剪贴板！">✅ Command copied to clipboard!</span> </div> </div> </div> </div> </div> </div> <div class="grid md:grid-cols-3 gap-8 quick-start-steps"> <div class="text-center group"> <div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-red-500 to-orange-500 rounded-full flex items-center justify-center text-white font-bold text-xl group-hover:scale-110 transition-transform duration-200">1</div> <h3 class="text-lg font-semibold mb-2" data-en="Install MoFA" data-zh="安装 MoFA">Install MoFA</h3> <p class="text-gray-600 text-sm" data-en="Run the pip command above to install MoFA framework" data-zh="运行上面的 pip 命令安装 MoFA 框架">
 Run the pip command above to install MoFA framework
 </p> </div> <div class="text-center group"> <div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center text-white font-bold text-xl group-hover:scale-110 transition-transform duration-200">2</div> <h3 class="text-lg font-semibold mb-2" data-en="Create Your Agent" data-zh="创建代理">Create Your Agent</h3> <p class="text-gray-600 text-sm" data-en="Use our templates or start from scratch with simple YAML configs" data-zh="使用我们的模板或通过简单的 YAML 配置从零开始">
 Use our templates or start from scratch with simple YAML configs
 </p> </div> <div class="text-center group"> <div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-green-500 to-teal-500 rounded-full flex items-center justify-center text-white font-bold text-xl group-hover:scale-110 transition-transform duration-200">3</div> <h3 class="text-lg font-semibold mb-2" data-en="Deploy & Scale" data-zh="部署扩展">Deploy & Scale</h3> <p class="text-gray-600 text-sm" data-en="Launch your AI agents and scale them across different environments" data-zh="启动您的 AI 代理并在不同环境中扩展">
 Launch your AI agents and scale them across different environments
-</p> </div> </div> </div> </div> </section> <!-- 小型分隔线 --> <div class="mini-divider"> <div class="mini-line red-line"></div> <div class="mini-line blue-line"></div> <div class="mini-line yellow-line"></div> </div> <!-- 核心优势 --> <section id="why-mofa" class="py-20" style="background-color: #f9fafb;"> <div class="container"> <div class="text-center mb-16"> <h2 class="text-4xl font-bold mb-4" data-en="Why Choose <span class='gradient-text'>MoFA</span>" data-zh="为什么选择 <span class='gradient-text'>MoFA</span>">
+</p> </div> </div> </div> </div> </section> <div class="mini-divider"> <div class="mini-line red-line"></div> <div class="mini-line blue-line"></div> <div class="mini-line yellow-line"></div> </div> <section id="why-mofa" class="py-20" style="background-color: #f9fafb;"> <div class="container"> <div class="text-center mb-16"> <h2 class="text-4xl font-bold mb-4" data-en="Why Choose <span class='gradient-text'>MoFA</span>" data-zh="为什么选择 <span class='gradient-text'>MoFA</span>">
 Why Choose <span class="gradient-text">MoFA</span> </h2> <p class="text-xl text-gray-600 max-w-2xl mx-auto" data-en="Making AI development simple, efficient, and enjoyable" data-zh="让 AI 开发变得简单、高效、有趣">
 Making AI development simple, efficient, and enjoyable
 </p> </div> <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto"> <div class="card" style="border: 2px solid var(--mondrian-black); transition: border-width 0.2s ease;" onmouseover="this.style.borderWidth='4px'" onmouseout="this.style.borderWidth='2px'"> <div style="display: flex; align-items: flex-start; gap: 16px;"> <div style="padding: 12px; border-radius: 8px; background-color: var(--macaron-peach); color: white; flex-shrink: 0;"> <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5"> <path stroke-linecap="round" stroke-linejoin="round" d="M14.25 6.087c0-.355.186-.676.401-.959.221-.29.349-.634.349-1.003 0-1.036-1.007-1.875-2.25-1.875s-2.25.84-2.25 1.875c0 .369.128.713.349 1.003.215.283.401.604.401.959v0a.64.64 0 01-.657.643 48.39 48.39 0 01-4.163-.3c.186 1.613.293 3.25.315 4.907a.656.656 0 01-.658.663v0c-.355 0-.676-.186-.959-.401a1.647 1.647 0 00-1.003-.349c-1.036 0-1.875 1.007-1.875 2.25s.84 2.25 1.875 2.25c.369 0 .713-.128 1.003-.349.283-.215.604-.401.959-.401v0c.31 0 .555.26.532.57a48.039 48.039 0 01-.642 5.056c1.518.19 3.058.309 4.616.354a.64.64 0 00.657-.643v0c0-.355-.186-.676-.401-.959a1.647 1.647 0 01-.349-1.003c0-1.035 1.008-1.875 2.25-1.875 1.243 0 2.25.84 2.25 1.875 0 .369-.128.713-.349 1.003-.215.283-.4.604-.4.959v0c0 .333.277.599.61.58a48.1 48.1 0 005.427-.63 48.05 48.05 0 00.582-4.717.532.532 0 00-.533-.57v0c-.355 0-.676.186-.959.401-.29.221-.634.349-1.003.349-1.035 0-1.875-1.007-1.875-2.25s.84-2.25 1.875-2.25c.37 0 .713.128 1.003.349.283.215.604.401.96.401v0a.656.656 0 00.658-.663 48.422 48.422 0 00-.37-5.36c-1.886.342-3.81.574-5.766.689a.578.578 0 01-.61-.58v0z"></path> </svg> </div> <div> <h3 class="text-xl font-semibold mb-2" data-en="Composable Agent Architecture" data-zh="可组合的代理架构">Composable Agent Architecture</h3> <p class="text-gray-600" data-en="Build complex AI applications by connecting agents via YAML-defined flows. Leverage a core kernel with modules for RAG (embedding, splitting, vector stores), planning, and tool integration. Easily orchestrate data flow between agents." data-zh="通过 YAML 定义的工作流连接代理，构建复杂的 AI 应用。利用包含 RAG（嵌入、分割、向量存储）、规划和工具集成等模块的核心内核。轻松编排代理间的数据流动。">
@@ -487,7 +653,7 @@ Easily write custom Python agents. Integrate third-party tools, models, and data
 </p> </div> </div> </div> </div> <div class="text-center mt-16 mb-8" style="display: none;"> <h3 class="text-3xl font-bold" data-en="Highlight: Your AI Agent IDE - <span class='gradient-text'>MoFA Stage</span>" data-zh="核心功能：你的 AI Agent IDE - <span class='gradient-text'>MoFA Stage</span>">
 Highlight: Your AI Agent IDE - <span class="gradient-text">MoFA Stage</span> </h3> </div> <p class="text-xl text-gray-600 max-w-3xl mx-auto text-center mb-12" style="display: none;" data-en="A visual management platform for MoFA - your web-based IDE for AI agents." data-zh="MoFA 的可视化管理平台 - 你的Agent专属 Web IDE.">
 A visual management platform for MoFA - your web-based IDE.
-</p> <div class="max-w-6xl mx-auto" style="display: none;"> <!-- 平台特色展示 --> <div class="grid md:grid-cols-3 gap-8 mb-16"> <div class="card" style="border: 2px solid var(--mondrian-black); transition: all 0.3s ease; padding: 16px;" onmouseover="this.style.borderWidth='4px'; this.style.transform='translateY(-8px)'" onmouseout="this.style.borderWidth='2px'; this.style.transform='translateY(0)'"> <div style="text-align: center;"> <div style="
+</p> <div class="max-w-6xl mx-auto" style="display: none;"> <div class="grid md:grid-cols-3 gap-8 mb-16"> <div class="card" style="border: 2px solid var(--mondrian-black); transition: all 0.3s ease; padding: 16px;" onmouseover="this.style.borderWidth='4px'; this.style.transform='translateY(-8px)'" onmouseout="this.style.borderWidth='2px'; this.style.transform='translateY(0)'"> <div style="text-align: center;"> <div style="
                    width: 48px;
                    height: 48px;
                    margin: 0 auto 12px;
@@ -526,23 +692,23 @@ Built-in web terminal with SSH access - execute commands and monitor agents dire
                    box-shadow: 0 6px 18px rgba(200, 230, 201, 0.4);
                  "> <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path> </svg> </div> <h3 class="text-base font-semibold mb-1" data-en="Advanced Code Editor" data-zh="代码编辑器">Code Editor</h3> <p class="text-gray-600 text-xs leading-snug" data-en="Monaco-powered editor with syntax highlighting, auto-completion, and instant Markdown preview" data-zh="基于 Monaco 的编辑器，支持语法高亮、自动补全和 Markdown 即时预览">
 Monaco-powered editor with syntax highlighting, auto-completion, and instant Markdown preview - just like VS Code
-</p> </div> </div> </div> <!-- 平台架构展示 --> <div class="bg-white rounded-lg shadow-lg p-8" style="border: 2px solid var(--mondrian-black); display: none;"> <div class="text-center mb-8"> <h3 class="text-2xl font-bold mb-4" data-en="Full-Stack Architecture" data-zh="全栈架构">Full-Stack Architecture</h3> <p class="text-gray-600" data-en="Built with modern technologies for optimal performance and developer experience" data-zh="使用现代技术构建，确保最佳性能和开发体验">
+</p> </div> </div> </div> <div class="bg-white rounded-lg shadow-lg p-8" style="border: 2px solid var(--mondrian-black); display: none;"> <div class="text-center mb-8"> <h3 class="text-2xl font-bold mb-4" data-en="Full-Stack Architecture" data-zh="全栈架构">Full-Stack Architecture</h3> <p class="text-gray-600" data-en="Built with modern technologies for optimal performance and developer experience" data-zh="使用现代技术构建，确保最佳性能和开发体验">
 Built with modern technologies for optimal performance and developer experience
-</p> </div> <div class="grid md:grid-cols-2 gap-12"> <!-- 前端技术栈 --> <div> <h4 class="text-lg font-semibold mb-4 flex items-center gap-2" data-en="🎨 Frontend Stack" data-zh="🎨 前端技术栈">
+</p> </div> <div class="grid md:grid-cols-2 gap-12"> <div> <h4 class="text-lg font-semibold mb-4 flex items-center gap-2" data-en="🎨 Frontend Stack" data-zh="🎨 前端技术栈">
 🎨 Frontend Stack
-</h4> <div class="space-y-3"> <div class="flex items-center gap-3"> <div style="width: 12px; height: 12px; background: #42b883; border-radius: 50%;"></div> <span class="font-medium">Vue 3</span> <span class="text-sm text-gray-500" data-en="Progressive Framework" data-zh="渐进式框架">Progressive Framework</span> </div> <div class="flex items-center gap-3"> <div style="width: 12px; height: 12px; background: #409eff; border-radius: 50%;"></div> <span class="font-medium">Element Plus</span> <span class="text-sm text-gray-500" data-en="UI Components" data-zh="UI 组件库">UI Components</span> </div> <div class="flex items-center gap-3"> <div style="width: 12px; height: 12px; background: var(--mondrian-blue); border-radius: 50%;"></div> <span class="font-medium">Monaco Editor</span> <span class="text-sm text-gray-500" data-en="VS Code Engine" data-zh="VS Code 引擎">VS Code Engine</span> </div> <div class="flex items-center gap-3"> <div style="width: 12px; height: 12px; background: #000; border-radius: 50%;"></div> <span class="font-medium">XTerm.js</span> <span class="text-sm text-gray-500" data-en="Terminal Emulation" data-zh="终端模拟">Terminal Emulation</span> </div> </div> </div> <!-- 后端技术栈 --> <div> <h4 class="text-lg font-semibold mb-4 flex items-center gap-2" data-en="⚙️ Backend Stack" data-zh="⚙️ 后端技术栈">
+</h4> <div class="space-y-3"> <div class="flex items-center gap-3"> <div style="width: 12px; height: 12px; background: #42b883; border-radius: 50%;"></div> <span class="font-medium">Vue 3</span> <span class="text-sm text-gray-500" data-en="Progressive Framework" data-zh="渐进式框架">Progressive Framework</span> </div> <div class="flex items-center gap-3"> <div style="width: 12px; height: 12px; background: #409eff; border-radius: 50%;"></div> <span class="font-medium">Element Plus</span> <span class="text-sm text-gray-500" data-en="UI Components" data-zh="UI 组件库">UI Components</span> </div> <div class="flex items-center gap-3"> <div style="width: 12px; height: 12px; background: var(--mondrian-blue); border-radius: 50%;"></div> <span class="font-medium">Monaco Editor</span> <span class="text-sm text-gray-500" data-en="VS Code Engine" data-zh="VS Code 引擎">VS Code Engine</span> </div> <div class="flex items-center gap-3"> <div style="width: 12px; height: 12px; background: #000; border-radius: 50%;"></div> <span class="font-medium">XTerm.js</span> <span class="text-sm text-gray-500" data-en="Terminal Emulation" data-zh="终端模拟">Terminal Emulation</span> </div> </div> </div> <div> <h4 class="text-lg font-semibold mb-4 flex items-center gap-2" data-en="⚙️ Backend Stack" data-zh="⚙️ 后端技术栈">
 ⚙️ Backend Stack
-</h4> <div class="space-y-3"> <div class="flex items-center gap-3"> <div style="width: 12px; height: 12px; background: #306998; border-radius: 50%;"></div> <span class="font-medium">Python + Flask</span> <span class="text-sm text-gray-500" data-en="RESTful API" data-zh="RESTful API">RESTful API</span> </div> <div class="flex items-center gap-3"> <div style="width: 12px; height: 12px; background: var(--mondrian-red); border-radius: 50%;"></div> <span class="font-medium">WebSocket</span> <span class="text-sm text-gray-500" data-en="Real-time Communication" data-zh="实时通信">Real-time Communication</span> </div> <div class="flex items-center gap-3"> <div style="width: 12px; height: 12px; background: #ff6b35; border-radius: 50%;"></div> <span class="font-medium">SSH Integration</span> <span class="text-sm text-gray-500" data-en="Terminal Access" data-zh="终端访问">Terminal Access</span> </div> <div class="flex items-center gap-3"> <div style="width: 12px; height: 12px; background: var(--mondrian-yellow); border-radius: 50%;"></div> <span class="font-medium">ttyd Service</span> <span class="text-sm text-gray-500" data-en="Web Terminal" data-zh="网页终端">Web Terminal</span> </div> </div> </div> </div> </div> <!-- 快速开始按钮 --> <div class="text-center mt-12"> <a href="https://github.com/moxin-org/mofa/tree/main/MoFA_stage" target="_blank" rel="noopener noreferrer" class="btn-primary" style="font-size: 1.125rem; padding: 16px 32px; margin-right: 16px; background: linear-gradient(135deg, var(--macaron-peach), var(--mondrian-red));" data-en="🚀 Explore MoFA_Stage" data-zh="🚀 探索 MoFA_Stage"> <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path> </svg> <span data-en="Explore MoFA_Stage" data-zh="探索 MoFA_Stage">Explore MoFA_Stage</span> </a> <a href="https://github.com/moxin-org/mofa/tree/main/MoFA_stage#quick-start" target="_blank" rel="noopener noreferrer" class="btn-outline" style="font-size: 1.125rem; padding: 16px 32px;" data-en="📖 Quick Start Guide" data-zh="📖 快速开始指南">
+</h4> <div class="space-y-3"> <div class="flex items-center gap-3"> <div style="width: 12px; height: 12px; background: #306998; border-radius: 50%;"></div> <span class="font-medium">Python + Flask</span> <span class="text-sm text-gray-500" data-en="RESTful API" data-zh="RESTful API">RESTful API</span> </div> <div class="flex items-center gap-3"> <div style="width: 12px; height: 12px; background: var(--mondrian-red); border-radius: 50%;"></div> <span class="font-medium">WebSocket</span> <span class="text-sm text-gray-500" data-en="Real-time Communication" data-zh="实时通信">Real-time Communication</span> </div> <div class="flex items-center gap-3"> <div style="width: 12px; height: 12px; background: #ff6b35; border-radius: 50%;"></div> <span class="font-medium">SSH Integration</span> <span class="text-sm text-gray-500" data-en="Terminal Access" data-zh="终端访问">Terminal Access</span> </div> <div class="flex items-center gap-3"> <div style="width: 12px; height: 12px; background: var(--mondrian-yellow); border-radius: 50%;"></div> <span class="font-medium">ttyd Service</span> <span class="text-sm text-gray-500" data-en="Web Terminal" data-zh="网页终端">Web Terminal</span> </div> </div> </div> </div> </div> <div class="text-center mt-12"> <a href="https://github.com/moxin-org/mofa/tree/main/MoFA_stage" target="_blank" rel="noopener noreferrer" class="btn-primary" style="font-size: 1.125rem; padding: 16px 32px; margin-right: 16px; background: linear-gradient(135deg, var(--macaron-peach), var(--mondrian-red));" data-en="🚀 Explore MoFA_Stage" data-zh="🚀 探索 MoFA_Stage"> <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path> </svg> <span data-en="Explore MoFA_Stage" data-zh="探索 MoFA_Stage">Explore MoFA_Stage</span> </a> <a href="https://github.com/moxin-org/mofa/tree/main/MoFA_stage#quick-start" target="_blank" rel="noopener noreferrer" class="btn-outline" style="font-size: 1.125rem; padding: 16px 32px;" data-en="📖 Quick Start Guide" data-zh="📖 快速开始指南">
 📖 Quick Start Guide
-</a> </div> </div> </div> </section> <!-- 小型分隔线 --> <div class="mini-divider"> <div class="mini-line blue-line"></div> <div class="mini-line yellow-line"></div> <div class="mini-line red-line"></div> </div> <!-- 新的工作流展示组件 --> ${renderComponent($$result, "WorkflowShowcase", $$WorkflowShowcase, {})} <!-- 小型分隔线 --> <div class="mini-divider"> <div class="mini-line yellow-line"></div> <div class="mini-line red-line"></div> <div class="mini-line blue-line"></div> </div> <!-- Demo Video Section --> <section class="py-20" style="background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);"> <div class="container"> <div class="text-center mb-16"> <h2 class="text-4xl font-bold mb-4" data-en="See MoFA in <span class='gradient-text'>Action</span>" data-zh="观看 MoFA <span class='gradient-text'>实战演示</span>">
-See MoFA in <span class="gradient-text">Action</span> </h2> <p class="text-xl text-gray-600 max-w-2xl mx-auto" data-en="Watch how developers use MoFA to build sophisticated AI applications in minutes" data-zh="观看开发者如何在几分钟内使用 MoFA 构建复杂的人工智能应用">Watch how developers use MoFA to build sophisticated AI applications in minutes</p> <!-- Video Embed --> <div class="video-container rounded-lg shadow-2xl overflow-hidden mx-auto" style="max-width: 800px; background-color: #2d3748;"> <iframe id="demo-video-iframe" width="100%" style="aspect-ratio: 16/9; display: block;" src="https://www.youtube.com/embed/-QApoNUPG-U" title="MoFA in Action Demo Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
-          </iframe> </div> </div> </div> <!-- 小型分隔线 --> <div class="mini-divider"> <div class="mini-line red-line"></div> <div class="mini-line blue-line"></div> <div class="mini-line yellow-line"></div> </div> </section></main> <footer style="background-color: var(--mondrian-black); color: white;"> <div class="container py-12"> <div class="text-center"> <div style="display: flex; align-items: center; justify-content: center; gap: 8px; margin-bottom: 16px;"> <img src="/mofa-logo.png" alt="MoFA Logo" style="width: 32px; height: 32px; border-radius: 6px; object-fit: cover;"> <span style="font-size: 1.25rem; font-weight: 700;">MoFA</span> </div> <p style="color: #9ca3af; margin-bottom: 8px;" data-en="Make Ordinary Developers Full-stack AI Engineers" data-zh="让普通开发者成为全栈 AI 工程师">
+</a> </div> </div> </div> </section> <div class="mini-divider"> <div class="mini-line blue-line"></div> <div class="mini-line yellow-line"></div> <div class="mini-line red-line"></div> </div> ${renderComponent($$result, "WorkflowShowcase", $$WorkflowShowcase, {})} <div class="mini-divider"> <div class="mini-line yellow-line"></div> <div class="mini-line red-line"></div> <div class="mini-line blue-line"></div> </div> <section class="py-20" style="background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);"> <div class="container"> <div class="text-center mb-16"> <h2 class="text-4xl font-bold mb-4" data-en="See MoFA in <span class='gradient-text'>Action</span>" data-zh="观看 MoFA <span class='gradient-text'>实战演示</span>">
+See MoFA in <span class="gradient-text">Action</span> </h2> <p class="text-xl text-gray-600 max-w-2xl mx-auto" data-en="Watch how developers use MoFA to build sophisticated AI applications in minutes" data-zh="观看开发者如何在几分钟内使用 MoFA 构建复杂的人工智能应用">Watch how developers use MoFA to build sophisticated AI applications in minutes</p> <div class="video-container rounded-lg shadow-2xl overflow-hidden mx-auto" style="max-width: 800px; background-color: #2d3748;"> <iframe id="demo-video-iframe" width="100%" style="aspect-ratio: 16/9; display: block;" src="https://www.youtube.com/embed/-QApoNUPG-U" title="MoFA in Action Demo Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+          </iframe> </div> </div> </div> <div class="mini-divider"> <div class="mini-line red-line"></div> <div class="mini-line blue-line"></div> <div class="mini-line yellow-line"></div> </div> ${renderComponent($$result, "HallOfFame", $$HallOfFame, {})} <div class="mini-divider" style="display: none;"> <div class="mini-line yellow-line"></div> <div class="mini-line red-line"></div> <div class="mini-line blue-line"></div> </div> </section></main> <footer style="background-color: var(--mondrian-black); color: white;"> <div class="container py-12"> <div class="text-center"> <div style="display: flex; align-items: center; justify-content: center; gap: 8px; margin-bottom: 16px;"> <img src="/mofa-logo.png" alt="MoFA Logo" style="width: 32px; height: 32px; border-radius: 6px; object-fit: cover;"> <span style="font-size: 1.25rem; font-weight: 700;">MoFA</span> </div> <p style="color: #9ca3af; margin-bottom: 8px;" data-en="Make Ordinary Developers Full-stack AI Engineers" data-zh="让普通开发者成为全栈 AI 工程师">
 Make Ordinary Developers Full-stack AI Engineers
 </p> <p style="color: #9ca3af; margin-bottom: 24px;" data-en="Modular Framework for AI Agents" data-zh="模块化 AI 代理框架">
 Modular Framework for AI Agents
 </p> <div style="display: flex; justify-content: center; gap: 32px; margin-bottom: 16px;"> <a href="https://github.com/moxin-org/mofa" target="_blank" rel="noopener noreferrer" style="color: #9ca3af; text-decoration: none; transition: color 0.2s ease;" onmouseover="this.style.color='white'" onmouseout="this.style.color='#9ca3af'">GitHub</a> <a href="https://discord.gg/mofa-ai" target="_blank" rel="noopener noreferrer" style="color: #9ca3af; text-decoration: none; transition: color 0.2s ease;" onmouseover="this.style.color='white'" onmouseout="this.style.color='#9ca3af'">Discord</a> <a href="https://github.com/moxin-org/mofa/tree/main/Gosim_2024_Hackathon/documents" target="_blank" rel="noopener noreferrer" style="color: #9ca3af; text-decoration: none; transition: color 0.2s ease;" onmouseover="this.style.color='white'" onmouseout="this.style.color='#9ca3af'" data-en="Docs" data-zh="文档">Docs</a> </div> <p style="color: #6b7280; font-size: 0.875rem;" data-en="© 2025 MoFA. All rights reserved." data-zh="© 2025 MoFA. 保留所有权利.">
 &copy; 2024 MoFA. All rights reserved.
-</p> </div> </div> </footer> <!-- 返回顶部按钮 --> <button id="back-to-top" title="Go to top" style="
+</p> </div> </div> </footer> <button id="back-to-top" title="Go to top" style="
     display: none; /* Hidden by default */
     position: fixed;
     bottom: 30px;
@@ -560,7 +726,7 @@ Modular Framework for AI Agents
     transition: background-color 0.3s, opacity 0.3s, visibility 0.3s;
   ">
 ↑
-</button> <!-- 语言切换脚本 -->  </body> </html>`;
+</button>  </body> </html>`;
 }, "/home/runner/work/mofa-org.github.io/mofa-org.github.io/mofa-website/src/pages/index.astro", void 0);
 
 const $$file$3 = "/home/runner/work/mofa-org.github.io/mofa-org.github.io/mofa-website/src/pages/index.astro";

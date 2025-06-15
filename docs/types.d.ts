@@ -175,6 +175,20 @@ declare module 'astro:content' {
 
 	type ContentEntryMap = {
 		"blog": {
+"ai-is-a-way-of-reveal-humanity.md": {
+	id: "ai-is-a-way-of-reveal-humanity.md";
+  slug: "ai-is-a-way-of-reveal-humanity";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"call-for-bounty-developers.md": {
+	id: "call-for-bounty-developers.md";
+  slug: "call-for-bounty-developers";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "introducing-mofa.md": {
 	id: "introducing-mofa.md";
   slug: "introducing-mofa";
@@ -185,6 +199,13 @@ declare module 'astro:content' {
 "mofa-mobile-solution-plan.md": {
 	id: "mofa-mobile-solution-plan.md";
   slug: "mofa-mobile-solution-plan";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"types-of-magicians.md": {
+	id: "types-of-magicians.md";
+  slug: "types-of-magicians";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">

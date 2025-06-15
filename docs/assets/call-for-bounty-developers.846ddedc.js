@@ -1,5 +1,5 @@
 async function getMod() {
-						return import('./mofa-mobile-solution-plan.cd80483d.js');
+						return import('./call-for-bounty-developers.160de064.js');
 					}
 					const collectedLinks = "@@ASTRO-LINKS@@";
 					const collectedStyles = "@@ASTRO-STYLES@@";

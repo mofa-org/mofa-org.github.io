@@ -1,5 +1,5 @@
 async function getMod() {
-						return import('./introducing-mofa.afc870f8.js');
+						return import('./ai-is-a-way-of-reveal-humanity.95e335b0.js');
 					}
 					const collectedLinks = "@@ASTRO-LINKS@@";
 					const collectedStyles = "@@ASTRO-STYLES@@";
