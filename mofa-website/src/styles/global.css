@@ -237,18 +237,17 @@ code {
   background-color: var(--mondrian-red);
   color: white;
   text-decoration: none;
-  border-radius: 8px;
-  font-weight: 500;
+  border: 3px solid var(--mondrian-black);
+  border-radius: 0;
+  font-weight: 600;
   transition: all 0.2s ease;
-  border: none;
   cursor: pointer;
-  box-shadow: 0 2px 8px rgba(255, 81, 59, 0.2);
+  box-shadow: 0 3px 0 var(--mondrian-black);
 }
 
 .btn-primary:hover {
-  background-color: #E6412A;
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(255, 81, 59, 0.3);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 0 var(--mondrian-black);
 }
 
 .btn-secondary {
@@ -258,39 +257,82 @@ code {
   background-color: var(--mondrian-blue);
   color: white;
   text-decoration: none;
-  border-radius: 8px;
-  font-weight: 500;
+  border: 3px solid var(--mondrian-black);
+  border-radius: 0;
+  font-weight: 600;
   transition: all 0.2s ease;
-  border: none;
   cursor: pointer;
-  box-shadow: 0 2px 8px rgba(105, 206, 209, 0.2);
+  box-shadow: 0 3px 0 var(--mondrian-black);
 }
 
 .btn-secondary:hover {
-  background-color: #5BB8BB;
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(105, 206, 209, 0.3);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 0 var(--mondrian-black);
+}
+
+/* Discord themed button - flat style */
+.btn-discord {
+  display: inline-flex;
+  align-items: center;
+  padding: 12px 24px;
+  background-color: #6BCED2;
+  color: white;
+  text-decoration: none;
+  border: 3px solid var(--mondrian-black);
+  border-radius: 0;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  box-shadow: 0 3px 0 var(--mondrian-black);
+}
+
+.btn-discord:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 0 var(--mondrian-black);
 }
 
 .btn-outline {
   display: inline-flex;
   align-items: center;
   padding: 12px 24px;
-  background-color: transparent;
+  background-color: white;
   color: var(--mondrian-black);
   text-decoration: none;
-  border: 2px solid var(--mondrian-blue);
-  border-radius: 8px;
-  font-weight: 500;
+  border: 3px solid var(--mondrian-black);
+  border-radius: 0;
+  font-weight: 600;
   transition: all 0.2s ease;
   cursor: pointer;
+  box-shadow: 0 3px 0 var(--mondrian-black);
 }
 
 .btn-outline:hover {
   background-color: var(--mondrian-blue);
   color: white;
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(105, 206, 209, 0.2);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 0 var(--mondrian-black);
+}
+
+/* Language toggle button - flat style */
+.btn-lang {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 16px;
+  background-color: white;
+  color: var(--mondrian-black);
+  text-decoration: none;
+  border: 3px solid var(--mondrian-black);
+  border-radius: 0;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  box-shadow: 0 3px 0 var(--mondrian-black);
+  font-size: 0.875rem;
+}
+
+.btn-lang:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 0 var(--mondrian-black);
 }
 
 /* 卡片样式 */
