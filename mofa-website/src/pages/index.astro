@@ -1,6 +1,7 @@
 ---
 import '../styles/global.css';
 import WorkflowShowcase from '../components/WorkflowShowcase.astro';
+import TabletQuickStart from '../components/TabletQuickStart.astro';
 ---
 
 <!DOCTYPE html>
@@ -57,7 +58,7 @@ import WorkflowShowcase from '../components/WorkflowShowcase.astro';
         
         <a href="https://github.com/moxin-org/mofa" class="btn-primary" target="_blank" rel="noopener noreferrer" style="display: flex; align-items: center; gap: 8px;">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="flex-shrink: 0;">
-            <path d="M12 0C5.374 0 0 5.373 0 12 0 17.302 3.438 21.8 8.207 23.387c.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/>
+            <path d="M12 0C5.374 0 0 5.373 0 12 0 17.302 3.438 21.8 8.207 23.387c.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.237 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/>
           </svg>
           GitHub
         </a>
@@ -191,15 +192,53 @@ import WorkflowShowcase from '../components/WorkflowShowcase.astro';
           <!-- CTA 按钮 -->
           <div style="display: flex; flex-direction: column; gap: 16px; justify-content: center; margin-bottom: 64px;">
             <div style="display: flex; flex-wrap: wrap; gap: 16px; justify-content: center;">
-              <a href="https://github.com/moxin-org/mofa/blob/main/python/README.md#2-quick-start-guide" target="_blank" rel="noopener noreferrer" class="btn-primary" style="font-size: 1.125rem; padding: 16px 32px;" 
-                 data-en="🚀 Quick Start"
-                 data-zh="🚀 快速开始">
-                🚀 Quick Start
+              <a href="#quick-start" rel="noopener noreferrer" 
+                 style="
+                   display: inline-flex;
+                   align-items: center;
+                   font-size: 1.125rem;
+                   padding: 16px 32px;
+                   background: linear-gradient(135deg, var(--mondrian-red), #E6412A);
+                   color: white;
+                   text-decoration: none;
+                   border-radius: 12px;
+                   font-weight: 600;
+                   transition: all 0.3s ease;
+                   border: none;
+                   cursor: pointer;
+                   box-shadow: 0 4px 16px rgba(255, 81, 59, 0.3);
+                 "
+                 onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 8px 24px rgba(255, 81, 59, 0.4)'"
+                 onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 16px rgba(255, 81, 59, 0.3)'"
+                 >
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 8px; flex-shrink: 0;">
+                  <path d="M15.59 14.37a6 6 0 01-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 006.16-12.12A14.98 14.98 0 009.631 8.41m5.96 5.96a14.926 14.926 0 01-5.841 2.58m-.119-8.54a6 6 0 00-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 00-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 01-2.448-2.448 14.9 14.9 0 01.06-.312m-2.24 2.39a4.493 4.493 0 00-1.757 4.306 4.493 4.493 0 004.306-1.758M16.5 9a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z"/>
+                </svg>
+                <span data-en="Quick Start" data-zh="快速开始">Quick Start</span>
               </a>
-              <a href="#why-mofa" rel="noopener noreferrer" class="btn-outline" style="font-size: 1.125rem; padding: 16px 32px;"
-                 data-en="💡 Learn More"
-                 data-zh="💡 了解更多">
-                💡 Learn More
+              <a href="#why-mofa" rel="noopener noreferrer"
+                 style="
+                   display: inline-flex;
+                   align-items: center;
+                   font-size: 1.125rem;
+                   padding: 16px 32px;
+                   background: linear-gradient(135deg, var(--mofa-gradient-4), var(--mondrian-blue));
+                   color: white;
+                   text-decoration: none;
+                   border-radius: 12px;
+                   font-weight: 600;
+                   transition: all 0.3s ease;
+                   border: none;
+                   cursor: pointer;
+                   box-shadow: 0 4px 16px rgba(109, 202, 206, 0.3);
+                 "
+                 onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 8px 24px rgba(109, 202, 206, 0.4)'"
+                 onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 16px rgba(109, 202, 206, 0.3)'"
+                 >
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 8px; flex-shrink: 0;">
+                  <path d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5"/>
+                </svg>
+                <span data-en="Learn More" data-zh="了解更多">Learn More</span>
               </a>
             </div>
           </div>
@@ -207,7 +246,7 @@ import WorkflowShowcase from '../components/WorkflowShowcase.astro';
           <!-- 快速统计 -->
           <div class="grid grid-cols-3 gap-8 max-w-2xl mx-auto">
             <div class="text-center">
-              <div class="text-3xl font-bold" style="color: var(--mondrian-red);" 
+              <div class="text-3xl font-bold" style="color: var(--mofa-gradient-1);" 
                    data-en="5 min"
                    data-zh="5分钟">5 min</div>
               <div class="text-sm text-gray-600" 
@@ -215,16 +254,204 @@ import WorkflowShowcase from '../components/WorkflowShowcase.astro';
                    data-zh="快速上手">Quick Setup</div>
             </div>
             <div class="text-center">
-              <div class="text-3xl font-bold" style="color: var(--mondrian-blue);">100+</div>
+              <div class="text-3xl font-bold" style="color: var(--mofa-gradient-3);">100+</div>
               <div class="text-sm text-gray-600" 
                    data-en="Built-in Agents"
                    data-zh="内置代理">Built-in Agents</div>
             </div>
             <div class="text-center">
-              <div class="text-3xl font-bold" style="color: var(--mondrian-yellow);">∞</div>
+              <div class="text-3xl font-bold" style="color: var(--mofa-gradient-4);">∞</div>
               <div class="text-sm text-gray-600" 
                    data-en="Combinations"
                    data-zh="组合可能">Combinations</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 小型分隔线 -->
+    <div class="mini-divider">
+      <div class="mini-line red-line"></div>
+      <div class="mini-line blue-line"></div>
+      <div class="mini-line yellow-line"></div>
+    </div>
+
+    <!-- 插入全新重构的快速开始区域 -->
+    <TabletQuickStart />
+
+    <!-- 旧版快速开始区域 - 暂时隐藏，后续可删除 -->
+    <section class="py-20" style="background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%); display:none;">
+      <div class="container">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold mb-4" 
+              data-en="Get Started in <span class='gradient-text'>Seconds</span>"
+              data-zh="<span class='gradient-text'>快速</span>开始">
+            Get Started in <span class="gradient-text">Seconds</span>
+          </h2>
+          <p class="text-xl text-gray-600 max-w-2xl mx-auto" 
+             data-en="One command to install MoFA and start building AI agents"
+             data-zh="一行命令安装 MoFA，立即开始构建 AI 代理">
+            One command to install MoFA and start building AI agents
+          </p>
+        </div>
+
+        <div class="max-w-4xl mx-auto">
+          <!-- 多页面终端窗口 -->
+          <div class="terminal-multi-window relative mb-16">
+            <!-- 标签页导航 -->
+            <div class="flex justify-center mb-6">
+              <div class="inline-flex bg-gray-800 rounded-lg p-1 shadow-lg">
+                <button class="terminal-tab active px-4 py-2 rounded-md text-sm font-medium transition-all duration-200" data-tab="install">
+                  <span data-en="1. Install" data-zh="1. 安装">1. Install</span>
+                </button>
+                <button class="terminal-tab px-4 py-2 rounded-md text-sm font-medium transition-all duration-200" data-tab="clone">
+                  <span data-en="2. Clone Node" data-zh="2. 克隆节点">2. Clone Node</span>
+                </button>
+                <button class="terminal-tab px-4 py-2 rounded-md text-sm font-medium transition-all duration-200" data-tab="run">
+                  <span data-en="3. Run Node" data-zh="3. 运行节点">3. Run Node</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- 终端窗口 -->
+            <div class="terminal-window group relative">
+              <div class="bg-gray-900 rounded-2xl shadow-2xl overflow-hidden border border-gray-600">
+                <!-- 窗口标题栏 -->
+                <div class="flex items-center justify-between px-5 py-3 bg-gray-800 border-b border-gray-700">
+                  <div class="flex items-center space-x-2">
+                    <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                    <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                    <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                  </div>
+                  <div class="absolute left-1/2 transform -translate-x-1/2">
+                    <span class="text-gray-400 text-sm font-mono">Terminal</span>
+                  </div>
+                  <button id="main-copy-btn" class="copy-btn-header px-3 py-1 bg-gray-700 hover:bg-gray-600 text-gray-300 hover:text-white text-xs rounded transition-all duration-200 flex items-center space-x-1">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                      <path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"></path>
+                    </svg>
+                    <span>Copy</span>
+                  </button>
+                </div>
+                
+                <!-- 终端内容 -->
+                <div class="p-6 bg-gray-900 min-h-[120px]">
+                  
+                  <!-- 安装页面 -->
+                  <div class="terminal-content active" data-content="install">
+                    <div class="space-y-3">
+                      <div class="flex items-center space-x-2">
+                        <span class="text-green-400 font-mono">❯</span>
+                        <div class="flex-1">
+                          <span class="typing-text text-white font-mono" data-text="pip install mofa-ai"></span>
+                          <span class="cursor-blink text-green-400">▊</span>
+                        </div>
+                      </div>
+                                             <div class="flex items-center space-x-2 opacity-60">
+                         <span class="text-gray-500 font-mono">#</span>
+                         <div class="flex-1">
+                           <span class="typing-text text-gray-400 font-mono text-sm" data-text="or with additional stage tools:" data-delay="2000"></span>
+                         </div>
+                       </div>
+                      <div class="flex items-center space-x-2">
+                        <span class="text-green-400 font-mono">❯</span>
+                        <div class="flex-1">
+                          <span class="typing-text text-white font-mono" data-text="pip install mofa-ai[mofa-stage]  #If you need GUI" data-delay="3500"></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- 克隆节点页面 -->
+                  <div class="terminal-content" data-content="clone">
+                    <div class="space-y-3">
+                      <div class="flex items-center space-x-2">
+                        <span class="text-green-400 font-mono">❯</span>
+                        <div class="flex-1">
+                          <span class="typing-text text-white font-mono" data-text="mofa clone-node node-url"></span>
+                          <span class="cursor-blink text-green-400">▊</span>
+                        </div>
+                      </div>
+                      <div class="flex items-center space-x-2 opacity-60">
+                        <span class="text-gray-500 font-mono">#</span>
+                        <div class="flex-1">
+                          <span class="typing-text text-gray-400 font-mono text-sm" data-text="Clone an existing AI agent node" data-delay="1500"></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- 运行节点页面 -->
+                  <div class="terminal-content" data-content="run">
+                    <div class="space-y-3">
+                      <div class="flex items-center space-x-2">
+                        <span class="text-green-400 font-mono">❯</span>
+                        <div class="flex-1">
+                          <span class="typing-text text-white font-mono" data-text="mofa run-node"></span>
+                          <span class="cursor-blink text-green-400">▊</span>
+                        </div>
+                      </div>
+                      <div class="flex items-center space-x-2 opacity-60">
+                        <span class="text-gray-500 font-mono">#</span>
+                        <div class="flex-1">
+                          <span class="typing-text text-gray-400 font-mono text-sm" data-text="Start your AI agent node" data-delay="1200"></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <!-- 成功消息 -->
+                  <div id="success-message" class="hidden mt-4">
+                    <div class="flex items-center space-x-2 text-green-400 text-sm font-mono animate-fade-in">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                      </svg>
+                      <span data-en="✅ Command copied to clipboard!" data-zh="✅ 命令已复制到剪贴板！">✅ Command copied to clipboard!</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 快速开始步骤 -->
+          <div class="grid md:grid-cols-3 gap-8 quick-start-steps">
+            <div class="text-center group">
+              <div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-red-500 to-orange-500 rounded-full flex items-center justify-center text-white font-bold text-xl group-hover:scale-110 transition-transform duration-200">1</div>
+              <h3 class="text-lg font-semibold mb-2" 
+                  data-en="Install MoFA"
+                  data-zh="安装 MoFA">Install MoFA</h3>
+              <p class="text-gray-600 text-sm" 
+                 data-en="Run the pip command above to install MoFA framework"
+                 data-zh="运行上面的 pip 命令安装 MoFA 框架">
+                Run the pip command above to install MoFA framework
+              </p>
+            </div>
+            
+            <div class="text-center group">
+              <div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center text-white font-bold text-xl group-hover:scale-110 transition-transform duration-200">2</div>
+              <h3 class="text-lg font-semibold mb-2" 
+                  data-en="Create Your Agent"
+                  data-zh="创建代理">Create Your Agent</h3>
+              <p class="text-gray-600 text-sm" 
+                 data-en="Use our templates or start from scratch with simple YAML configs"
+                 data-zh="使用我们的模板或通过简单的 YAML 配置从零开始">
+                Use our templates or start from scratch with simple YAML configs
+              </p>
+            </div>
+            
+            <div class="text-center group">
+              <div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-green-500 to-teal-500 rounded-full flex items-center justify-center text-white font-bold text-xl group-hover:scale-110 transition-transform duration-200">3</div>
+              <h3 class="text-lg font-semibold mb-2" 
+                  data-en="Deploy & Scale"
+                  data-zh="部署扩展">Deploy & Scale</h3>
+              <p class="text-gray-600 text-sm" 
+                 data-en="Launch your AI agents and scale them across different environments"
+                 data-zh="启动您的 AI 代理并在不同环境中扩展">
+                Launch your AI agents and scale them across different environments
+              </p>
             </div>
           </div>
         </div>
@@ -257,8 +484,10 @@ import WorkflowShowcase from '../components/WorkflowShowcase.astro';
         <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           <div class="card" style="border: 2px solid var(--mondrian-black); transition: border-width 0.2s ease;" onmouseover="this.style.borderWidth='4px'" onmouseout="this.style.borderWidth='2px'">
             <div style="display: flex; align-items: flex-start; gap: 16px;">
-              <div style="padding: 12px; border-radius: 8px; background-color: var(--mondrian-red); color: white; flex-shrink: 0;">
-                🧩
+              <div style="padding: 12px; border-radius: 8px; background-color: var(--macaron-peach); color: white; flex-shrink: 0;">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M14.25 6.087c0-.355.186-.676.401-.959.221-.29.349-.634.349-1.003 0-1.036-1.007-1.875-2.25-1.875s-2.25.84-2.25 1.875c0 .369.128.713.349 1.003.215.283.401.604.401.959v0a.64.64 0 01-.657.643 48.39 48.39 0 01-4.163-.3c.186 1.613.293 3.25.315 4.907a.656.656 0 01-.658.663v0c-.355 0-.676-.186-.959-.401a1.647 1.647 0 00-1.003-.349c-1.036 0-1.875 1.007-1.875 2.25s.84 2.25 1.875 2.25c.369 0 .713-.128 1.003-.349.283-.215.604-.401.959-.401v0c.31 0 .555.26.532.57a48.039 48.039 0 01-.642 5.056c1.518.19 3.058.309 4.616.354a.64.64 0 00.657-.643v0c0-.355-.186-.676-.401-.959a1.647 1.647 0 01-.349-1.003c0-1.035 1.008-1.875 2.25-1.875 1.243 0 2.25.84 2.25 1.875 0 .369-.128.713-.349 1.003-.215.283-.4.604-.4.959v0c0 .333.277.599.61.58a48.1 48.1 0 005.427-.63 48.05 48.05 0 00.582-4.717.532.532 0 00-.533-.57v0c-.355 0-.676.186-.959.401-.29.221-.634.349-1.003.349-1.035 0-1.875-1.007-1.875-2.25s.84-2.25 1.875-2.25c.37 0 .713.128 1.003.349.283.215.604.401.96.401v0a.656.656 0 00.658-.663 48.422 48.422 0 00-.37-5.36c-1.886.342-3.81.574-5.766.689a.578.578 0 01-.61-.58v0z"/>
+                </svg>
               </div>
               <div>
                 <h3 class="text-xl font-semibold mb-2" 
@@ -275,8 +504,10 @@ import WorkflowShowcase from '../components/WorkflowShowcase.astro';
 
           <div class="card" style="border: 2px solid var(--mondrian-black); transition: border-width 0.2s ease;" onmouseover="this.style.borderWidth='4px'" onmouseout="this.style.borderWidth='2px'">
             <div style="display: flex; align-items: flex-start; gap: 16px;">
-              <div style="padding: 12px; border-radius: 8px; background-color: var(--mondrian-blue); color: white; flex-shrink: 0;">
-                ⚡
+              <div style="padding: 12px; border-radius: 8px; background-color: var(--macaron-lavender); color: white; flex-shrink: 0;">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                </svg>
               </div>
               <div>
                 <h3 class="text-xl font-semibold mb-2" 
@@ -293,8 +524,10 @@ import WorkflowShowcase from '../components/WorkflowShowcase.astro';
 
           <div class="card" style="border: 2px solid var(--mondrian-black); transition: border-width 0.2s ease;" onmouseover="this.style.borderWidth='4px'" onmouseout="this.style.borderWidth='2px'">
             <div style="display: flex; align-items: flex-start; gap: 16px;">
-              <div style="padding: 12px; border-radius: 8px; background-color: var(--mondrian-yellow); color: var(--mondrian-black); flex-shrink: 0;">
-                🚀
+              <div style="padding: 12px; border-radius: 8px; background-color: var(--macaron-mint); color: white; flex-shrink: 0;">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/>
+                </svg>
               </div>
               <div>
                 <h3 class="text-xl font-semibold mb-2" 
@@ -311,8 +544,11 @@ import WorkflowShowcase from '../components/WorkflowShowcase.astro';
 
           <div class="card" style="border: 2px solid var(--mondrian-black); transition: border-width 0.2s ease;" onmouseover="this.style.borderWidth='4px'" onmouseout="this.style.borderWidth='2px'">
             <div style="display: flex; align-items: flex-start; gap: 16px;">
-              <div style="padding: 12px; border-radius: 8px; background-color: var(--mondrian-black); color: white; flex-shrink: 0;">
-                🔧
+              <div style="padding: 12px; border-radius: 8px; background-color: var(--macaron-rose); color: white; flex-shrink: 0;">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                </svg>
               </div>
               <div>
                 <h3 class="text-xl font-semibold mb-2" 
@@ -349,15 +585,18 @@ import WorkflowShowcase from '../components/WorkflowShowcase.astro';
                    width: 48px;
                    height: 48px;
                    margin: 0 auto 12px;
-                   background: linear-gradient(135deg, var(--mondrian-red), #8B5CF6);
+                   background: linear-gradient(135deg, var(--macaron-sky), var(--macaron-lavender));
                    border-radius: 12px;
                    display: flex;
                    align-items: center;
                    justify-content: center;
-                   font-size: 1.5rem;
                    color: white;
-                   box-shadow: 0 6px 18px rgba(99, 102, 241, 0.3);
-                 ">💻</div>
+                   box-shadow: 0 6px 18px rgba(179, 229, 252, 0.4);
+                 ">
+                   <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"/>
+                   </svg>
+                 </div>
                  <h3 class="text-base font-semibold mb-1" 
                      data-en="Visual Agent Management"
                      data-zh="可视化代理管理">Visual Agent Management</h3>
@@ -375,15 +614,18 @@ import WorkflowShowcase from '../components/WorkflowShowcase.astro';
                    width: 48px;
                    height: 48px;
                    margin: 0 auto 12px;
-                   background: linear-gradient(135deg, var(--mondrian-blue), #06B6D4);
+                   background: linear-gradient(135deg, var(--macaron-coral), var(--macaron-lemon));
                    border-radius: 12px;
                    display: flex;
                    align-items: center;
                    justify-content: center;
-                   font-size: 1.5rem;
                    color: white;
-                   box-shadow: 0 6px 18px rgba(14, 165, 233, 0.3);
-                 ">🖥️</div>
+                   box-shadow: 0 6px 18px rgba(255, 171, 145, 0.4);
+                 ">
+                   <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                   </svg>
+                 </div>
                  <h3 class="text-base font-semibold mb-1" 
                      data-en="Integrated Terminal"
                      data-zh="集成终端">Integrated Terminal</h3>
@@ -401,15 +643,18 @@ import WorkflowShowcase from '../components/WorkflowShowcase.astro';
                    width: 48px;
                    height: 48px;
                    margin: 0 auto 12px;
-                   background: linear-gradient(135deg, var(--mondrian-yellow), #FBBF24);
+                   background: linear-gradient(135deg, var(--macaron-sage), var(--macaron-mint));
                    border-radius: 12px;
                    display: flex;
                    align-items: center;
                    justify-content: center;
-                   font-size: 1.5rem;
-                   color: var(--mondrian-black);
-                   box-shadow: 0 6px 18px rgba(245, 158, 11, 0.3);
-                 ">📝</div>
+                   color: white;
+                   box-shadow: 0 6px 18px rgba(200, 230, 201, 0.4);
+                 ">
+                   <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
+                   </svg>
+                 </div>
                  <h3 class="text-base font-semibold mb-1" 
                      data-en="Advanced Code Editor"
                      data-zh="代码编辑器">Code Editor</h3>
@@ -518,10 +763,14 @@ import WorkflowShowcase from '../components/WorkflowShowcase.astro';
 
           <!-- 快速开始按钮 -->
           <div class="text-center mt-12">
-            <a href="https://github.com/moxin-org/mofa/tree/main/MoFA_stage" target="_blank" rel="noopener noreferrer" class="btn-primary" style="font-size: 1.125rem; padding: 16px 32px; margin-right: 16px;" 
+            <a href="https://github.com/moxin-org/mofa/tree/main/MoFA_stage" target="_blank" rel="noopener noreferrer" class="btn-primary" style="font-size: 1.125rem; padding: 16px 32px; margin-right: 16px; background: linear-gradient(135deg, var(--macaron-peach), var(--mondrian-red));" 
                data-en="🚀 Explore MoFA_Stage"
                data-zh="🚀 探索 MoFA_Stage">
-              🚀 Explore MoFA_Stage
+              <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+              </svg>
+              <span data-en="Explore MoFA_Stage" data-zh="探索 MoFA_Stage">Explore MoFA_Stage</span>
             </a>
             <a href="https://github.com/moxin-org/mofa/tree/main/MoFA_stage#quick-start" target="_blank" rel="noopener noreferrer" class="btn-outline" style="font-size: 1.125rem; padding: 16px 32px;"
                data-en="📖 Quick Start Guide"
@@ -642,6 +891,203 @@ import WorkflowShowcase from '../components/WorkflowShowcase.astro';
 
   <!-- 语言切换脚本 -->
   <script>
+    // 全局变量
+    let currentTab = 'install';
+    let typingTimeouts = [];
+
+    // 获取当前活动标签的命令
+    function getCurrentCommand() {
+      const activeContent = document.querySelector('.terminal-content.active');
+      const typingTexts = activeContent.querySelectorAll('.typing-text');
+      
+      // 获取主要命令（第一个非注释行）
+      for (let text of typingTexts) {
+        const textContent = text.getAttribute('data-text');
+        if (textContent && !textContent.startsWith('#') && !textContent.includes('or with') && !textContent.includes('Clone an') && !textContent.includes('Start your')) {
+          return textContent;
+        }
+      }
+      return 'mofa --help'; // 默认命令
+    }
+
+    // 复制到剪贴板功能
+    function copyToClipboard() {
+      const command = getCurrentCommand();
+      const copyBtn = document.getElementById('main-copy-btn');
+      const successMessage = document.getElementById('success-message');
+      
+      // 使用现代 Clipboard API
+      if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(command).then(() => {
+          showCopySuccess(copyBtn, successMessage);
+        }).catch(() => {
+          fallbackCopyTextToClipboard(command, copyBtn, successMessage);
+        });
+      } else {
+        // 降级方案
+        fallbackCopyTextToClipboard(command, copyBtn, successMessage);
+      }
+    }
+    
+    // 降级复制方案
+    function fallbackCopyTextToClipboard(text, copyBtn, successMessage) {
+      const textArea = document.createElement('textarea');
+      textArea.value = text;
+      textArea.style.position = 'fixed';
+      textArea.style.left = '-999999px';
+      textArea.style.top = '-999999px';
+      document.body.appendChild(textArea);
+      textArea.focus();
+      textArea.select();
+      
+      try {
+        document.execCommand('copy');
+        showCopySuccess(copyBtn, successMessage);
+      } catch (err) {
+        console.error('复制失败:', err);
+      }
+      
+      document.body.removeChild(textArea);
+    }
+    
+    // 显示复制成功状态
+    function showCopySuccess(copyBtn, successMessage) {
+      // 更新按钮状态
+      copyBtn.innerHTML = `
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polyline points="20 6 9 17 4 12"></polyline>
+        </svg>
+        <span>Copied!</span>
+      `;
+      copyBtn.classList.add('copied');
+      
+      // 显示成功消息
+      successMessage.classList.remove('hidden');
+      
+      // 2秒后恢复原状
+      setTimeout(() => {
+        copyBtn.innerHTML = `
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+            <path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"></path>
+          </svg>
+          <span>Copy</span>
+        `;
+        copyBtn.classList.remove('copied');
+        successMessage.classList.add('hidden');
+      }, 2000);
+    }
+
+    // 打字机效果
+    function typeText(element, text, speed = 50) {
+      return new Promise((resolve) => {
+        element.textContent = '';
+        element.classList.add('typing');
+        
+        let i = 0;
+        const timer = setInterval(() => {
+          if (i < text.length) {
+            element.textContent += text.charAt(i);
+            element.style.width = ((i + 1) / text.length * 100) + '%';
+            i++;
+          } else {
+            clearInterval(timer);
+            element.style.width = '100%';
+            resolve();
+          }
+        }, speed);
+        
+        typingTimeouts.push(timer);
+      });
+    }
+
+    // 清除所有打字动画
+    function clearTypingAnimations() {
+      typingTimeouts.forEach(timeout => clearInterval(timeout));
+      typingTimeouts = [];
+      
+      // 重置所有打字文本
+      const allTypingTexts = document.querySelectorAll('.typing-text');
+      allTypingTexts.forEach(text => {
+        text.classList.remove('typing');
+        text.textContent = '';
+        text.style.width = '0';
+        text.style.opacity = '0';
+      });
+    }
+
+    // 启动打字动画序列
+    async function startTypingSequence(container) {
+      const typingTexts = container.querySelectorAll('.typing-text');
+      
+      for (let text of typingTexts) {
+        const delay = parseInt(text.getAttribute('data-delay') || 0);
+        const textContent = text.getAttribute('data-text');
+        
+        if (delay > 0) {
+          await new Promise(resolve => {
+            const timer = setTimeout(resolve, delay);
+            typingTimeouts.push(timer);
+          });
+        }
+        
+        await typeText(text, textContent, 50);
+      }
+    }
+
+    // 标签页切换
+    function switchTab(tabName) {
+      if (currentTab === tabName) return;
+      
+      // 清除当前动画
+      clearTypingAnimations();
+      
+      // 更新标签状态
+      document.querySelectorAll('.terminal-tab').forEach(tab => {
+        tab.classList.remove('active');
+      });
+      document.querySelector(`[data-tab="${tabName}"]`).classList.add('active');
+      
+      // 更新内容
+      document.querySelectorAll('.terminal-content').forEach(content => {
+        content.classList.remove('active');
+      });
+      const newContent = document.querySelector(`[data-content="${tabName}"]`);
+      newContent.classList.add('active');
+      
+      currentTab = tabName;
+      
+      // 启动新的打字动画
+      setTimeout(() => {
+        startTypingSequence(newContent);
+      }, 100);
+    }
+
+    // 初始化终端
+    function initTerminal() {
+      // 绑定标签页点击事件
+      document.querySelectorAll('.terminal-tab').forEach(tab => {
+        tab.addEventListener('click', () => {
+          const tabName = tab.getAttribute('data-tab');
+          switchTab(tabName);
+        });
+      });
+      
+      // 绑定复制按钮事件
+      const copyBtn = document.getElementById('main-copy-btn');
+      if (copyBtn) {
+        copyBtn.addEventListener('click', copyToClipboard);
+      }
+      
+      // 启动初始动画
+      const initialContent = document.querySelector('.terminal-content.active');
+      if (initialContent) {
+        setTimeout(() => {
+          startTypingSequence(initialContent);
+        }, 500);
+      }
+    }
+
     // 定义支持的语言
     const languages = {
       'en': {
@@ -712,8 +1158,11 @@ import WorkflowShowcase from '../components/WorkflowShowcase.astro';
       updateLanguage(newLang);
     });
 
-    // 页面加载时初始化语言
-    document.addEventListener('DOMContentLoaded', initLanguage);
+    // 页面加载时初始化
+    document.addEventListener('DOMContentLoaded', () => {
+      initLanguage();
+      initTerminal();
+    });
 
     // 字母拖拽功能
     document.addEventListener('DOMContentLoaded', function() {

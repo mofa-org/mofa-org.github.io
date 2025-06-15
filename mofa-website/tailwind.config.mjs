@@ -4,16 +4,27 @@ export default {
   theme: {
     extend: {
       colors: {
-        'mondrian-red': '#E31E24',
-        'mondrian-blue': '#0C5DA5',
-        'mondrian-yellow': '#FFD500',
-        'mondrian-black': '#000000',
+        // 主要马卡龙色系
+        'mondrian-red': '#FF513B',      // 马卡龙珊瑚红
+        'mondrian-blue': '#69CED1',     // 马卡龙薄荷蓝
+        'mondrian-yellow': '#73D0D3',   // 马卡龙青绿色
+        'mondrian-black': '#2D3748',    // 柔和的深灰色
         'mondrian-white': '#FFFFFF',
-        'mondrian-gray': '#E5E5E5',
+        'mondrian-gray': '#E2E8F0',     // 柔和的浅灰色
         
-        'mofa-primary': '#E31E24',
-        'mofa-secondary': '#0C5DA5',
-        'mofa-accent': '#FFD500',
+        // 扩展马卡龙色系
+        'macaron-peach': '#FFB5A7',     // 马卡龙桃粉色
+        'macaron-lavender': '#C7CEEA',  // 马卡龙薰衣草紫
+        'macaron-mint': '#A8E6CF',      // 马卡龙薄荷绿
+        'macaron-lemon': '#FFE4B3',     // 马卡龙柠檬黄
+        'macaron-rose': '#F8BBD9',      // 马卡龙玫瑰粉
+        'macaron-sky': '#B3E5FC',       // 马卡龙天空蓝
+        'macaron-coral': '#FFAB91',     // 马卡龙珊瑚橙
+        'macaron-sage': '#C8E6C9',      // 马卡龙鼠尾草绿
+        
+        'mofa-primary': '#FF513B',      // 主色调：珊瑚红
+        'mofa-secondary': '#69CED1',    // 次要色：薄荷蓝  
+        'mofa-accent': '#73D0D3',       // 强调色：青绿色
       },
       fontFamily: {
         sans: ['Inter', 'Noto Sans SC', 'system-ui', 'sans-serif'],

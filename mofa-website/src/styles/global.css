@@ -10,12 +10,31 @@
 
 /* CSS 变量 */
 :root {
-  --mondrian-red: #6366F1;        /* 现代紫色，体现AI智能 */
-  --mondrian-blue: #0EA5E9;       /* 清新蓝色，体现技术可靠性 */
-  --mondrian-yellow: #F59E0B;     /* 温暖橙色，体现创新活力 */
-  --mondrian-black: #1F2937;      /* 深灰黑，更现代 */
+  /* 主要马卡龙色系 */
+  --mondrian-red: #FF513B;        /* 马卡龙珊瑚红，温暖而有活力 */
+  --mondrian-blue: #69CED1;       /* 马卡龙薄荷蓝，清新而现代 */
+  --mondrian-yellow: #73D0D3;     /* 马卡龙青绿色，优雅而舒适 */
+  
+  /* MoFA 专用四色渐变 */
+  --mofa-gradient-1: #FB6A58;     /* 珊瑚橙红 */
+  --mofa-gradient-2: #FD543F;     /* 活力红 */
+  --mofa-gradient-3: #FFC63E;     /* 明亮黄 */
+  --mofa-gradient-4: #6DCACE;     /* 青蓝色 */
+  
+  /* 扩展马卡龙色系 */
+  --macaron-peach: #FFB5A7;       /* 马卡龙桃粉色，温柔浪漫 */
+  --macaron-lavender: #C7CEEA;    /* 马卡龙薰衣草紫，典雅舒缓 */
+  --macaron-mint: #A8E6CF;        /* 马卡龙薄荷绿，清新自然 */
+  --macaron-lemon: #FFE4B3;       /* 马卡龙柠檬黄，明亮温暖 */
+  --macaron-rose: #F8BBD9;        /* 马卡龙玫瑰粉，甜美温馨 */
+  --macaron-sky: #B3E5FC;         /* 马卡龙天空蓝，宁静清澈 */
+  --macaron-coral: #FFAB91;       /* 马卡龙珊瑚橙，活泼亲和 */
+  --macaron-sage: #C8E6C9;        /* 马卡龙鼠尾草绿，自然沉静 */
+  
+  /* 基础色调 */
+  --mondrian-black: #2D3748;      /* 稍微柔和的深灰色，配合马卡龙色系 */
   --mondrian-white: #FFFFFF;
-  --mondrian-gray: #E5E7EB;       /* 稍微调整灰色调 */
+  --mondrian-gray: #E2E8F0;       /* 更柔和的灰色，与马卡龙色系协调 */
 }
 
 /* 全局重置 */
@@ -71,7 +90,7 @@ code {
   background-color: var(--mondrian-black);
   padding: 2px;
   border-radius: 6px;
-  box-shadow: 0 4px 15px rgba(31, 41, 55, 0.2);
+  box-shadow: 0 4px 15px rgba(45, 55, 72, 0.15);
 }
 
 .mondrian-block {
@@ -98,18 +117,21 @@ code {
 
 /* 渐变文字 */
 .gradient-text {
-  background: linear-gradient(120deg, var(--mondrian-red), var(--mondrian-blue), var(--mondrian-yellow));
-  background-size: 200% 200%;
+  background: linear-gradient(120deg, var(--mofa-gradient-1), var(--mofa-gradient-2), var(--mofa-gradient-3), var(--mofa-gradient-4));
+  background-size: 300% 300%;
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
   font-weight: bold;
-  animation: gradient-flow 4s ease-in-out infinite;
+  animation: gradient-flow 6s ease-in-out infinite;
 }
 
 @keyframes gradient-flow {
-  0%, 100% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
+  0% { background-position: 0% 50%; }
+  25% { background-position: 100% 50%; }
+  50% { background-position: 100% 100%; }
+  75% { background-position: 0% 100%; }
+  100% { background-position: 0% 50%; }
 }
 
 /* 按钮样式 */
@@ -120,17 +142,18 @@ code {
   background-color: var(--mondrian-red);
   color: white;
   text-decoration: none;
-  border-radius: 6px;
+  border-radius: 8px;
   font-weight: 500;
   transition: all 0.2s ease;
   border: none;
   cursor: pointer;
+  box-shadow: 0 2px 8px rgba(255, 81, 59, 0.2);
 }
 
 .btn-primary:hover {
-  background-color: #4F46E5;
-  transform: scale(1.05);
-  box-shadow: 0 10px 25px rgba(99, 102, 241, 0.3);
+  background-color: #E6412A;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(255, 81, 59, 0.3);
 }
 
 .btn-secondary {
@@ -140,17 +163,18 @@ code {
   background-color: var(--mondrian-blue);
   color: white;
   text-decoration: none;
-  border-radius: 6px;
+  border-radius: 8px;
   font-weight: 500;
   transition: all 0.2s ease;
   border: none;
   cursor: pointer;
+  box-shadow: 0 2px 8px rgba(105, 206, 209, 0.2);
 }
 
 .btn-secondary:hover {
-  background-color: #0284C7;
-  transform: scale(1.05);
-  box-shadow: 0 10px 25px rgba(14, 165, 233, 0.3);
+  background-color: #5BB8BB;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(105, 206, 209, 0.3);
 }
 
 .btn-outline {
@@ -160,16 +184,18 @@ code {
   background-color: transparent;
   color: var(--mondrian-black);
   text-decoration: none;
-  border: 2px solid var(--mondrian-black);
-  border-radius: 6px;
+  border: 2px solid var(--mondrian-blue);
+  border-radius: 8px;
   font-weight: 500;
   transition: all 0.2s ease;
   cursor: pointer;
 }
 
 .btn-outline:hover {
-  background-color: var(--mondrian-black);
+  background-color: var(--mondrian-blue);
   color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(105, 206, 209, 0.2);
 }
 
 /* 卡片样式 */
@@ -685,15 +711,15 @@ html, body {
 }
 
 .red-line {
-  background: linear-gradient(90deg, var(--mondrian-red), #8B5CF6);
+  background: linear-gradient(90deg, var(--mofa-gradient-1), var(--mofa-gradient-2));
 }
 
 .blue-line {
-  background: linear-gradient(90deg, var(--mondrian-blue), #06B6D4);
+  background: linear-gradient(90deg, var(--mofa-gradient-4), var(--mondrian-blue));
 }
 
 .yellow-line {
-  background: linear-gradient(90deg, var(--mondrian-yellow), #FBBF24);
+  background: linear-gradient(90deg, var(--mofa-gradient-3), var(--mondrian-yellow));
 }
 
 .mini-line:hover {
@@ -1167,4 +1193,225 @@ html, body {
   cursor: grabbing;
   z-index: 1000;
   opacity: 0.8;
+}
+
+/* 更多马卡龙色彩应用 */
+.bg-macaron-peach { background-color: var(--macaron-peach); }
+.bg-macaron-lavender { background-color: var(--macaron-lavender); }
+.bg-macaron-mint { background-color: var(--macaron-mint); }
+.bg-macaron-lemon { background-color: var(--macaron-lemon); }
+.bg-macaron-rose { background-color: var(--macaron-rose); }
+.bg-macaron-sky { background-color: var(--macaron-sky); }
+.bg-macaron-coral { background-color: var(--macaron-coral); }
+.bg-macaron-sage { background-color: var(--macaron-sage); }
+
+/* 马卡龙渐变背景 */
+.macaron-gradient-1 {
+  background: linear-gradient(135deg, var(--macaron-peach), var(--macaron-rose));
+}
+
+.macaron-gradient-2 {
+  background: linear-gradient(135deg, var(--macaron-sky), var(--macaron-lavender));
+}
+
+.macaron-gradient-3 {
+  background: linear-gradient(135deg, var(--macaron-mint), var(--macaron-sage));
+}
+
+.macaron-gradient-4 {
+  background: linear-gradient(135deg, var(--macaron-coral), var(--macaron-lemon));
+}
+
+.macaron-gradient-5 {
+  background: linear-gradient(135deg, var(--mondrian-red), var(--macaron-peach));
+}
+
+.macaron-gradient-6 {
+  background: linear-gradient(135deg, var(--mondrian-blue), var(--macaron-sky));
+}
+
+/* 升级的按钮样式 */
+.btn-macaron-1 {
+  background: linear-gradient(135deg, var(--macaron-peach), var(--macaron-rose));
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 8px rgba(255, 181, 167, 0.2);
+}
+
+.btn-macaron-1:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(255, 181, 167, 0.3);
+}
+
+.btn-macaron-2 {
+  background: linear-gradient(135deg, var(--macaron-sky), var(--macaron-lavender));
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 8px rgba(179, 229, 252, 0.2);
+}
+
+.btn-macaron-2:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(179, 229, 252, 0.3);
+}
+
+/* AI 科技感特效增强 - 为不同颜色的块添加类 */
+.mondrian-block.macaron-peach {
+  background: linear-gradient(135deg, var(--macaron-peach), var(--macaron-rose));
+  position: relative;
+}
+
+.mondrian-block.macaron-sky {
+  background: linear-gradient(135deg, var(--macaron-sky), var(--macaron-lavender));
+  position: relative;
+}
+
+.mondrian-block.macaron-mint {
+  background: linear-gradient(135deg, var(--macaron-mint), var(--macaron-sage));
+  position: relative;
+}
+
+.mondrian-block.macaron-coral {
+  background: linear-gradient(135deg, var(--macaron-coral), var(--macaron-lemon));
+  position: relative;
+}
+
+/* 文本颜色 */
+.text-macaron-peach { color: var(--macaron-peach); }
+.text-macaron-lavender { color: var(--macaron-lavender); }
+.text-macaron-mint { color: var(--macaron-mint); }
+.text-macaron-rose { color: var(--macaron-rose); }
+
+/* 边框颜色 */
+.border-macaron-peach { border-color: var(--macaron-peach); }
+.border-macaron-lavender { border-color: var(--macaron-lavender); }
+.border-macaron-mint { border-color: var(--macaron-mint); }
+.border-macaron-rose { border-color: var(--macaron-rose); }
+
+/* Terminal 特效 */
+.terminal-window {
+  position: relative;
+}
+
+/* 标签页样式 */
+.terminal-tab {
+  color: #9ca3af;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.terminal-tab.active {
+  color: #ffffff;
+  background: #374151;
+}
+
+.terminal-tab:hover:not(.active) {
+  color: #d1d5db;
+  background: #4b5563;
+}
+
+/* 终端内容切换 */
+.terminal-content {
+  display: none;
+}
+
+.terminal-content.active {
+  display: block;
+}
+
+/* 打字机效果 */
+.typing-text {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 0;
+  opacity: 0;
+}
+
+.typing-text.typing {
+  animation: typeWriter 0.05s steps(1, end) forwards;
+  opacity: 1;
+}
+
+@keyframes typeWriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* 光标闪烁 */
+@keyframes blink {
+  0%, 50% {
+    opacity: 1;
+  }
+  51%, 100% {
+    opacity: 0;
+  }
+}
+
+.cursor-blink {
+  animation: blink 1s infinite;
+  font-weight: bold;
+}
+
+/* 复制按钮样式 */
+.copy-btn-header.copied {
+  background: #059669 !important;
+  border-color: #10b981 !important;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.5s ease-out;
+}
+
+/* Quick-start numbered cards extra spacing to avoid visual overlap with the tab bar */
+.quick-start-steps {
+  margin-top: 48px; /* 3rem – gives breathing room below terminal */
+}
+
+@media (min-width: 768px) {
+  /* On medium+ screens we can increase the gap a bit more */
+  .quick-start-steps {
+    margin-top: 64px; /* 4rem */
+  }
+}
+
+/* Improve tab button touch targets on very small screens */
+@media (max-width: 480px) {
+  .terminal-tab {
+    padding: 6px 10px;
+    font-size: 0.75rem;
+  }
+}
+
+/* Utility: hide scrollbar (used for horizontal tab container) */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE & Edge */
+  scrollbar-width: none;    /* Firefox */
 } 

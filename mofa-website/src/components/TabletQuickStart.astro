@@ -1,0 +1,158 @@
+---
+// Quick-start data definition.
+const tabs = [
+  {
+    id: 'install',
+    labelZh: '1. 安装',
+    labelEn: '1. Install',
+    commandMain: 'pip install mofa-ai',
+    secondary: 'pip install mofa-ai[mofa-stage]  #If you need GUI'
+  },
+  {
+    id: 'clone',
+    labelZh: '2. 克隆数据流',
+    labelEn: '2. Clone Dataflow',
+    commandMain: 'mofa clone-node <repo-url>',
+    secondary: 'Clone an existing data Flow'
+  },
+  {
+    id: 'run',
+    labelZh: '3. 运行数据流',
+    labelEn: '3. Run Data Flow',
+    commandMain: 'mofa run-dataflow <dataflow-name>',
+    secondary: 'Start your AI agent node'
+  }
+];
+---
+
+<section id="quick-start" class="py-20 bg-gradient-to-b from-gray-50 to-white">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-12">
+      <h2 class="text-4xl font-bold mb-4" data-en="Get Started in <span class='gradient-text'>Seconds</span>" data-zh="<span class='gradient-text'>快速</span>开始">
+        Get Started in <span class="gradient-text">Seconds</span>
+      </h2>
+      <p class="text-xl text-gray-600" data-en="One command to install MoFA and start building AI agents" data-zh="一行命令安装 MoFA，立即开始构建 AI 代理">
+        One command to install MoFA and start building AI agents
+      </p>
+    </div>
+
+    <!-- Tabs -->
+    <div class="flex justify-center mb-6 overflow-x-auto no-scrollbar">
+      <div class="inline-flex bg-gray-800 rounded-lg p-1 shadow-lg space-x-1" id="qs-tabs">
+        {tabs.map(tab => (
+          <button class="terminal-tab px-4 py-2 rounded-md text-sm font-medium" data-tab={tab.id}>{tab.labelEn}</button>
+        ))}
+      </div>
+    </div>
+
+    <!-- Terminal -->
+    <div class="mx-auto max-w-3xl">
+      <div class="bg-gray-900 rounded-xl shadow-xl border border-gray-700 overflow-hidden">
+        <div class="flex items-center justify-between px-5 py-3 bg-gray-800 border-b border-gray-700">
+          <div class="flex space-x-2">
+            <span class="w-3 h-3 rounded-full bg-red-500"></span>
+            <span class="w-3 h-3 rounded-full bg-yellow-500"></span>
+            <span class="w-3 h-3 rounded-full bg-green-500"></span>
+          </div>
+          <span class="text-gray-400 text-sm font-mono">Terminal</span>
+          <button id="qs-copy" class="copy-btn-header px-3 py-1 bg-gray-700 hover:bg-gray-600 text-gray-300 hover:text-white text-xs rounded flex items-center space-x-1">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+              <path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"></path>
+            </svg>
+            <span>Copy</span>
+          </button>
+        </div>
+
+        <!-- Commands -->
+        {tabs.map(tab => (
+          <div class={`p-6 space-y-3 terminal-content ${tab.id === 'install' ? 'active' : ''}`} data-content={tab.id}>
+            <div class="flex space-x-2 items-start">
+              <span class="text-green-400 font-mono">❯</span>
+              <code class="cmd text-white font-mono break-words" data-full={tab.commandMain}></code>
+              <span class="cursor-blink text-green-400">▊</span>
+            </div>
+            {tab.secondary && (
+              <div class="flex space-x-2 items-start text-gray-400">
+                <span class="text-gray-500 font-mono">#</span>
+                <code class="font-mono text-sm break-words">{tab.secondary}</code>
+              </div>
+            )}
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <!-- Steps circles -->
+    <div class="grid md:grid-cols-3 gap-8 quick-start-steps mt-12 hidden">
+      <div class="text-center">
+        <div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-red-500 to-orange-500 rounded-full flex items-center justify-center text-white font-bold text-xl">1</div>
+        <h3 class="text-lg font-semibold" data-en="Install MoFA" data-zh="安装 MoFA">Install MoFA</h3>
+        <p class="text-gray-600 text-sm" data-en="Run the pip command above to install MoFA framework" data-zh="运行上面的 pip 命令安装 MoFA 框架">Run the pip command above to install MoFA framework</p>
+      </div>
+      <div class="text-center">
+        <div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center text-white font-bold text-xl">2</div>
+        <h3 class="text-lg font-semibold" data-en="Create Your Agent" data-zh="创建代理">Create Your Agent</h3>
+        <p class="text-gray-600 text-sm" data-en="Use our templates or start from scratch with simple YAML configs" data-zh="使用我们的模板或通过简单的 YAML 配置从零开始">Use our templates or start from scratch with simple YAML configs</p>
+      </div>
+      <div class="text-center">
+        <div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-green-500 to-teal-500 rounded-full flex items-center justify-center text-white font-bold text-xl">3</div>
+        <h3 class="text-lg font-semibold" data-en="Deploy & Scale" data-zh="部署扩展">Deploy & Scale</h3>
+        <p class="text-gray-600 text-sm" data-en="Launch your AI agents and scale them across different environments" data-zh="启动您的 AI 代理并在不同环境中扩展">Launch your AI agents and scale them across different environments</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Copy success toast -->
+  <div id="qs-success" class="hidden fixed bottom-6 left-1/2 -translate-x-1/2 px-4 py-2 bg-green-600 text-white text-sm rounded shadow-lg">Copied!</div>
+</section>
+
+<!-- Inline script -->
+<script is:inline>
+  const tabs = document.querySelectorAll('.terminal-tab');
+  const contents = document.querySelectorAll('.terminal-content');
+  const copyBtn = document.getElementById('qs-copy');
+  const toast = document.getElementById('qs-success');
+
+  let active = 'install';
+  let typer;
+
+  function typeText(el, text){
+    if(!el) return;
+    if(typer) clearInterval(typer);
+    el.textContent='';
+    let i=0;
+    typer = setInterval(()=>{
+      if(i<text.length){
+        el.textContent += text.charAt(i);
+        i++;
+      } else {
+        clearInterval(typer);
+      }
+    }, 40);
+  }
+
+  function setActive(id) {
+    active = id;
+    tabs.forEach(t => t.classList.toggle('active', t.dataset.tab === id));
+    contents.forEach(c => c.classList.toggle('active', c.dataset.content === id));
+
+    const newContent = [...contents].find(c => c.dataset.content === id);
+    const cmdEl = newContent.querySelector('.cmd');
+    typeText(cmdEl, cmdEl.dataset.full);
+  }
+  tabs.forEach(t => {
+    t.addEventListener('click', () => setActive(t.dataset.tab));
+  });
+  setActive(active);
+
+  function showToast() {
+    toast.classList.remove('hidden');
+    setTimeout(() => toast.classList.add('hidden'), 1800);
+  }
+
+  copyBtn.addEventListener('click', () => {
+    const cmd = [...contents].find(c => c.classList.contains('active')).querySelector('code').innerText;
+    navigator.clipboard.writeText(cmd).then(showToast);
+  });
+</script> 

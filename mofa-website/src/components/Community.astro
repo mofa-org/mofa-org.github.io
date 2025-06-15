@@ -16,7 +16,7 @@ const { base } = import.meta.env;
     <!-- Community Stats with Mondrian style -->
     <div class="max-w-4xl mx-auto mb-16">
       <div class="mondrian-grid grid-cols-4 grid-rows-2 h-32">
-        <div class="mondrian-block bg-mondrian-red flex items-center justify-center text-white">
+        <div class="mondrian-block flex items-center justify-center text-white" style="background: linear-gradient(135deg, var(--macaron-peach), var(--mondrian-red));">
           <div class="text-center">
             <div class="text-2xl font-bold">1000+</div>
             <div class="text-sm">贡献者</div>
@@ -28,19 +28,19 @@ const { base } = import.meta.env;
             <div class="text-sm text-gray-600">GitHub Stars</div>
           </div>
         </div>
-        <div class="mondrian-block bg-mondrian-blue flex items-center justify-center text-white">
+        <div class="mondrian-block flex items-center justify-center text-white" style="background: linear-gradient(135deg, var(--macaron-sky), var(--mondrian-blue));">
           <div class="text-center">
             <div class="text-2xl font-bold">50+</div>
             <div class="text-sm">国家</div>
           </div>
         </div>
-        <div class="mondrian-block bg-mondrian-yellow col-span-2 flex items-center justify-center">
+        <div class="mondrian-block col-span-2 flex items-center justify-center text-white" style="background: linear-gradient(135deg, var(--macaron-mint), var(--macaron-sage));">
           <div class="text-center">
             <div class="text-2xl font-bold">10000+</div>
-            <div class="text-sm text-gray-900">社区成员</div>
+            <div class="text-sm">社区成员</div>
           </div>
         </div>
-        <div class="mondrian-block bg-mondrian-black col-span-2 flex items-center justify-center text-white">
+        <div class="mondrian-block col-span-2 flex items-center justify-center text-white" style="background: linear-gradient(135deg, var(--macaron-lavender), var(--macaron-rose));">
           <div class="text-center">
             <div class="text-2xl font-bold">24/7</div>
             <div class="text-sm">全球支持</div>
@@ -77,7 +77,7 @@ const { base } = import.meta.env;
 
       <div class="text-center">
         <a href={`${base}/community/contributing`} class="group">
-          <div class="inline-flex items-center justify-center w-16 h-16 bg-mondrian-yellow rounded-lg text-gray-900 mb-4 group-hover:scale-110 transition-transform">
+          <div class="inline-flex items-center justify-center w-16 h-16 bg-mondrian-yellow rounded-lg text-white mb-4 group-hover:scale-110 transition-transform">
             <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
             </svg>
