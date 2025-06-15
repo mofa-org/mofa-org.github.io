@@ -8,7 +8,7 @@ const workflows = [
       zh: 'Hello World'
     },
     description: {
-      en: 'Simplest AI agent workflow for beginners',
+      en: 'Basic agent example',
       zh: '最简单的 AI 代理工作流'
     },
     category: 'Basic',
@@ -35,7 +35,7 @@ const workflows = [
       zh: 'ArXiv 研究'
     },
     description: {
-      en: 'Automated research workflow with paper analysis and report generation',
+      en: 'Automated paper research',
       zh: '自动化研究工作流，包含论文分析和报告生成'
     },
     category: 'Research',
@@ -79,7 +79,7 @@ const workflows = [
       zh: 'RAG 系统'
     },
     description: {
-      en: 'Retrieval-Augmented Generation for intelligent Q&A',
+      en: 'RAG for Q&A',
       zh: '检索增强生成系统，用于智能问答'
     },
     category: 'AI',
@@ -112,7 +112,7 @@ const workflows = [
       zh: 'GoSim 百科'
     },
     description: {
-      en: 'Multi-agent system with web scraping and search capabilities',
+      en: 'Multi-agent web research',
       zh: '具有网页抓取和搜索能力的多代理系统'
     },
     category: 'Web',
@@ -149,7 +149,7 @@ const workflows = [
       zh: 'Mem0 记忆系统'
     },
     description: {
-      en: 'Memory-enhanced AI workflow with retrieval and recording',
+      en: 'Memory-enhanced workflow',
       zh: '具有记忆检索和记录能力的增强AI工作流'
     },
     category: 'Memory',
@@ -188,7 +188,7 @@ const workflows = [
       zh: '代理创建系统'
     },
     description: {
-      en: 'Intelligent system for generating AI agents automatically',
+      en: 'Auto-generate AI agents',
       zh: '自动生成AI代理的智能系统'
     },
     category: 'Meta-AI',
@@ -226,7 +226,7 @@ const workflows = [
       zh: '多代理系统'
     },
     description: {
-      en: 'Complex multi-agent workflow with reflection and generation',
+      en: 'Multi-agent reflection & generation',
       zh: '具有反思和生成能力的复杂多代理工作流'
     },
     category: 'Complex',
@@ -259,6 +259,16 @@ const workflows = [
       class reflection reflectNode`
   }
 ];
+
+const repoLinks = {
+  'hello-world': 'https://github.com/moxin-org/mofa/tree/main/python/examples/hello_world',
+  'arxiv-research': 'https://github.com/moxin-org/mofa/tree/main/python/examples/arxiv_research',
+  'rag-system': 'https://github.com/moxin-org/mofa/tree/main/python/examples/rag',
+  'gosim-pedia': 'https://github.com/moxin-org/mofa/tree/main/python/examples/gosim-pedia',
+  'mem0-dataflow': 'https://github.com/moxin-org/mofa/tree/main/python/examples/mem0-dataflow',
+  'intelligent-agent-creation': 'https://github.com/moxin-org/mofa/tree/main/python/examples/intelligent_agent_creation',
+  'xiaowang-workflow': 'https://github.com/moxin-org/mofa/tree/main/python/examples/xiaowang'
+};
 ---
 
 <section class="py-20" style="background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);">
@@ -271,7 +281,7 @@ const workflows = [
       </h2>
       <p class="text-xl text-gray-600 max-w-3xl mx-auto" 
          data-en="Explore different types of AI workflows - from simple hello world to complex research automation"
-         data-zh="探索不同类型的 AI 工作流 - 从简单的问候到复杂的研究自动化">
+         data-zh="探索不同类型的 AI 工作流 - 从简单的Hello World到复杂的研究自动化">
         Explore different types of AI workflows - from simple hello world to complex research automation
       </p>
     </div>
@@ -302,6 +312,25 @@ const workflows = [
                   {workflow.mermaidGraph}
                 </div>
               </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="p-4 flex justify-end gap-2">
+              <!-- Zoom / View Button -->
+              <button type="button" class={`workflow-view-btn ${workflow.color}`} data-target-id={workflow.id}
+                      aria-label="View Diagram"
+                      data-en="View" data-zh="查看">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-2 w-2" fill="currentColor" viewBox="0 0 24 24"><path d="M10 2a8 8 0 1 0 4.906 14.32l4.387 4.387a1 1 0 0 0 1.414-1.414l-4.387-4.387A8 8 0 0 0 10 2zm0 2a6 6 0 1 1 0 12A6 6 0 0 1 10 4z"/></svg>
+                <span class="ml-1 hidden sm:inline">View</span>
+              </button>
+
+              <!-- GitHub Link Button -->
+              <a href={repoLinks[workflow.id]} target="_blank" rel="noopener noreferrer"
+                 class={`workflow-code-btn ${workflow.color}`}
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-2 w-2" fill="currentColor" viewBox="0 0 24 24"><path d="M12 .5C5.73.5.49 5.74.49 12.02c0 5.11 3.29 9.44 7.86 10.97.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.55-3.88-1.55-.53-1.33-1.3-1.68-1.3-1.68-1.06-.72.08-.71.08-.71 1.17.08 1.79 1.2 1.79 1.2 1.04 1.78 2.73 1.27 3.4.97.11-.75.41-1.27.75-1.56-2.56-.29-5.26-1.28-5.26-5.7 0-1.26.46-2.29 1.2-3.1-.12-.29-.52-1.45.11-3.02 0 0 .97-.31 3.18 1.19a11.1 11.1 0 0 1 2.9-.39c.98.01 1.97.13 2.9.39 2.21-1.5 3.17-1.19 3.17-1.19.63 1.57.23 2.73.11 3.02.75.81 1.2 1.84 1.2 3.1 0 4.43-2.71 5.41-5.29 5.69.42.36.8 1.09.8 2.2 0 1.59-.02 2.87-.02 3.26 0 .31.2.68.8.56a10.53 10.53 0 0 0 7.85-10.97C23.51 5.74 18.27.5 12 .5z"/></svg>
+                <span class="ml-1" data-en="Code" data-zh="代码">Code</span>
+              </a>
             </div>
           </div>
         ))}
@@ -338,18 +367,17 @@ const workflows = [
         tertiaryColor: '#F59E0B'
       },
       fontFamily: 'Inter, system-ui, -apple-system, sans-serif',
-      fontSize: 24,
+      fontSize: 20,
       flowchart: {
         htmlLabels: true,
         curve: 'basis',
         useMaxWidth: true,
         rankdir: 'TB',
-        padding: 25
+        padding: 20
       },
       security: {
         level: 'loose'
       },
-      // 添加全局缩放设置
       maxTextSize: 90000,
       maxEdges: 500
     });
@@ -385,11 +413,220 @@ const workflows = [
             svg.style.transform = 'none';
           }
         });
+        
+        // 初始化自动滚动
+        initAutoScroll();
+        // 初始化点击放大画廊模式
+        setupGallery();
       }, 500);
     }, 100);
   }).catch(error => {
     console.error('Failed to load Mermaid:', error);
   });
+
+  // 自动滚动功能（无限循环）
+  function initAutoScroll() {
+    const scrollContainer = document.querySelector('.workflow-scroll');
+    if (!scrollContainer) return;
+
+    const scrollSpeed = 1.2; // 滚动速度 (px per frame)
+    let animationId = null;
+    let isPaused = false;
+    let isUserInteracting = false;
+    let interactTimeout = null;
+
+    // 复制内容两次（前后各一份），形成首尾衔接
+    const originalCards = Array.from(scrollContainer.children);
+    originalCards.forEach(card => {
+      scrollContainer.appendChild(card.cloneNode(true));
+      scrollContainer.insertBefore(card.cloneNode(true), scrollContainer.firstChild);
+    });
+
+    // 初始化滚动位置到真正内容的第一份（中间区域）
+    requestAnimationFrame(() => {
+      const halfWidth = scrollContainer.scrollWidth / 3; // 三份中的第二份起点
+      scrollContainer.scrollLeft = halfWidth;
+    });
+
+    function loopBoundaryCheck() {
+      const thirdWidth = scrollContainer.scrollWidth / 3;
+      if (scrollContainer.scrollLeft <= thirdWidth * 0.2) {
+        // 靠近最左侧（第一份末尾）→ 跳到中间
+        scrollContainer.scrollLeft += thirdWidth;
+      } else if (scrollContainer.scrollLeft >= thirdWidth * 1.8) {
+        // 靠近最右侧（第三份开始）→ 跳回中间
+        scrollContainer.scrollLeft -= thirdWidth;
+      }
+    }
+
+    function autoScroll() {
+      if (!isPaused && !isUserInteracting && scrollContainer) {
+        scrollContainer.scrollLeft += scrollSpeed;
+        loopBoundaryCheck();
+      }
+      animationId = requestAnimationFrame(autoScroll);
+    }
+
+    // 用户交互检测
+    function onUserInteract() {
+      isUserInteracting = true;
+      if (interactTimeout) clearTimeout(interactTimeout);
+      interactTimeout = setTimeout(() => {
+        isUserInteracting = false;
+      }, 2000);
+    }
+
+    ['wheel', 'touchstart', 'touchmove', 'mousedown', 'mouseup'].forEach(evt => {
+      scrollContainer.addEventListener(evt, onUserInteract, { passive: true });
+    });
+
+    // 鼠标悬浮暂停
+    scrollContainer.addEventListener('mouseenter', () => { isPaused = true; });
+    scrollContainer.addEventListener('mouseleave', () => { isPaused = false; });
+
+    // 滚动事件本身也用于边界检测
+    scrollContainer.addEventListener('scroll', loopBoundaryCheck);
+
+    autoScroll();
+
+    window.addEventListener('beforeunload', () => {
+      if (animationId) cancelAnimationFrame(animationId);
+      if (interactTimeout) clearTimeout(interactTimeout);
+    });
+  }
+
+  // 画廊模式：点击卡片放大查看（事件委托）
+  function setupGallery() {
+    // 设置所有卡片cursor样式（初次运行 & 后续克隆的）
+    document.querySelectorAll('.workflow-card').forEach(c => {
+      c.style.cursor = 'zoom-in';
+    });
+
+    // 使用 document 级事件委托，保证任何时间动态插入的卡片都有效
+    document.addEventListener('click', (e) => {
+      const card = e.target.closest('.workflow-card');
+      if (!card) return;
+      let contentEl = card.querySelector('.mermaid svg') || card.querySelector('.mermaid');
+      if (!contentEl) return;
+      console.debug('[Gallery] Card clicked, opening modal');
+      openModal(contentEl);
+    }, true); // capture 阶段，避免内部阻止
+  }
+
+  function openModal(element) {
+    if (!element) return;
+
+    // Collect all workflow diagrams (svg or mermaid container) for navigation
+    const allDiagrams = Array.from(document.querySelectorAll('[class^="mermaid-container-"] svg, [class^="mermaid-container-"] .mermaid')).filter(Boolean);
+    if (!allDiagrams.includes(element)) allDiagrams.push(element);
+    let currentIndex = allDiagrams.findIndex(el => el === element);
+    if (currentIndex === -1) currentIndex = 0;
+
+    // Remove existing modal if any
+    const existing = document.querySelector('.workflow-modal');
+    if (existing) existing.remove();
+
+    // Create modal overlay
+    const modal = document.createElement('div');
+    modal.className = 'workflow-modal';
+    modal.style.cssText = 'position:fixed;inset:0;z-index:9999;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.8);padding:2rem;';
+
+    // Modal inner HTML with nav & zoom controls
+    modal.innerHTML = `
+      <button class="gallery-nav gallery-prev" aria-label="Prev">&#9664;</button>
+      <button class="gallery-nav gallery-next" aria-label="Next">&#9654;</button>
+      <div class="workflow-modal-content" style="position:relative;width:90vw;height:90vh;overflow:hidden;background:#FFF3D9;border-radius:8px;border:4px solid var(--mondrian-black);box-shadow:6px 6px 0 var(--mondrian-black);display:flex;flex-direction:column;">
+        <button class="workflow-modal-close" aria-label="Close" style="position:absolute;top:0.25rem;right:0.5rem;font-size:1.5rem;background:transparent;border:none;color:#333;cursor:pointer;">&times;</button>
+        <div class="workflow-modal-body" style="padding:1rem;display:flex;align-items:center;justify-content:center;flex:1;overflow:auto;"></div>
+        <div class="gallery-zoom" style="position:absolute;bottom:0.5rem;right:0.75rem;display:flex;gap:0.5rem;">
+          <button class="zoom-in" aria-label="Zoom in" style="font-size:1.25rem;width:2rem;height:2rem;border:none;border-radius:4px;background:#e5e7eb;cursor:pointer;">+</button>
+          <button class="zoom-out" aria-label="Zoom out" style="font-size:1.25rem;width:2rem;height:2rem;border:none;border-radius:4px;background:#e5e7eb;cursor:pointer;">&minus;</button>
+        </div>
+      </div>`;
+
+    document.body.appendChild(modal);
+
+    const body = modal.querySelector('.workflow-modal-body');
+    let zoom = 1;
+
+    function render() {
+      body.innerHTML = '';
+      const src = allDiagrams[currentIndex];
+      if (!src) return;
+      let clone = src.cloneNode(true);
+      if (clone.tagName.toLowerCase() === 'svg') {
+        clone.removeAttribute('width');
+        clone.removeAttribute('height');
+        clone.style.width = '100%';
+        clone.style.height = 'auto';
+        clone.style.maxWidth = '100%';
+        clone.style.maxHeight = '100%';
+      }
+      clone.style.transformOrigin = 'center center';
+      clone.style.transform = `scale(${zoom})`;
+      body.appendChild(clone);
+    }
+
+    function changeIndex(delta) {
+      currentIndex = (currentIndex + delta + allDiagrams.length) % allDiagrams.length;
+      zoom = 1;
+      render();
+    }
+
+    // initial render
+    render();
+
+    // Event listeners
+    modal.querySelector('.gallery-prev').addEventListener('click', () => changeIndex(-1));
+    modal.querySelector('.gallery-next').addEventListener('click', () => changeIndex(1));
+    modal.querySelector('.zoom-in').addEventListener('click', () => { zoom = Math.min(zoom + 0.2, 4); render(); });
+    modal.querySelector('.zoom-out').addEventListener('click', () => { zoom = Math.max(zoom - 0.2, 0.4); render(); });
+
+    const prevOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+
+    const close = () => {
+      modal.remove();
+      document.body.style.overflow = prevOverflow;
+      document.removeEventListener('keydown', escHandler);
+      document.removeEventListener('keydown', navHandler);
+    };
+
+    modal.querySelector('.workflow-modal-close').addEventListener('click', close);
+    modal.addEventListener('click', (ev) => { if (ev.target === modal) close(); });
+
+    const escHandler = (ev) => { if (ev.key === 'Escape') close(); };
+    document.addEventListener('keydown', escHandler);
+
+    const navHandler = (ev) => {
+      if (ev.key === 'ArrowLeft') changeIndex(-1);
+      else if (ev.key === 'ArrowRight') changeIndex(1);
+      else if (ev.key === '+') { zoom = Math.min(zoom + 0.2, 4); render(); }
+      else if (ev.key === '-') { zoom = Math.max(zoom - 0.2, 0.4); render(); }
+    };
+    document.addEventListener('keydown', navHandler);
+  }
+
+  // Delegate click for newly added view buttons (supports cloned cards as well)
+  document.addEventListener('click', (e) => {
+    const btn = e.target.closest('.workflow-view-btn');
+    if (!btn) return;
+    e.stopPropagation();
+    const id = btn.getAttribute('data-target-id');
+    const container = document.querySelector(`.mermaid-container-${id} svg`) ||
+                      document.querySelector(`.mermaid-container-${id} .mermaid`);
+    if (container) {
+      console.log('[ViewBtn] opening modal for', id);
+      window.openWorkflowModal(container);
+    }
+  }, true);
+
+  // Set cursor style for any current & future cards via mutation observer
+  const setCursor = () => document.querySelectorAll('.workflow-card').forEach(c=>c.style.cursor='zoom-in');
+  setCursor();
+  new MutationObserver(setCursor).observe(document.querySelector('.workflow-scroll'), {childList:true});
+
+  window.openWorkflowModal = openModal;
 </script>
 
 <style>
@@ -419,26 +656,27 @@ const workflows = [
 
 .workflow-scroll {
   display: flex;
-  gap: 2rem;
-  overflow-x: auto;
+  gap: 1.5rem;
+  overflow-x: auto; /* 恢复手动滚动功能 */
   padding: 1rem 0;
-  scroll-behavior: smooth;
-  scrollbar-width: thin;
+  scroll-behavior: auto; /* 改回auto，避免与JS冲突 */
+  white-space: nowrap;
+  scrollbar-width: none;
   scrollbar-color: #cbd5e1 #f1f5f9;
 }
 
 .workflow-scroll::-webkit-scrollbar {
-  height: 8px;
+  display: none;
 }
 
 .workflow-scroll::-webkit-scrollbar-track {
   background: #f1f5f9;
-  border-radius: 4px;
+  border-radius: 3px;
 }
 
 .workflow-scroll::-webkit-scrollbar-thumb {
   background: #cbd5e1;
-  border-radius: 4px;
+  border-radius: 3px;
 }
 
 .workflow-scroll::-webkit-scrollbar-thumb:hover {
@@ -447,22 +685,26 @@ const workflows = [
 
 .workflow-card {
   flex: 0 0 auto;
-  width: 650px;
-  height: 800px;
+  width: 380px; /* 从450px进一步缩小到380px */
+  height: 520px; /* 从600px进一步缩小到520px */
   transform: translateY(0);
   transition: all 0.3s ease;
   display: flex;
   flex-direction: column;
+  border: 3px solid var(--mondrian-black);
 }
 
 .workflow-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  transform: translateY(-4px) scale(1.02); /* 添加轻微放大效果 */
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  z-index: 10;
+  box-shadow: 4px 4px 0 var(--mondrian-black);
+  transform: translate(-2px,-2px) scale(1.02);
 }
 
 .chart-container {
   flex: 1;
-  padding: 1.5rem;
+  padding: 1rem; /* 从1.5rem调整为1rem */
   display: flex;
   flex-direction: column;
   min-height: 0;
@@ -486,8 +728,8 @@ const workflows = [
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 400px;
-  font-size: 24px;
+  min-height: 250px; /* 从300px进一步缩小到250px */
+  font-size: 18px; /* 从20px进一步缩小到18px */
 }
 
 .mermaid svg {
@@ -506,7 +748,7 @@ const workflows = [
 }
 
 .mermaid .node text {
-  font-size: 22px !important;
+  font-size: 16px !important; /* 从18px进一步缩小到16px */
   font-weight: 600 !important;
   font-family: 'Inter', system-ui, sans-serif !important;
 }
@@ -518,11 +760,29 @@ const workflows = [
 .mermaid .edgeLabel {
   background-color: white;
   border-radius: 6px;
-  padding: 5px 10px;
-  font-size: 18px;
+  padding: 3px 6px; /* 从4px 8px进一步缩小到3px 6px */
+  font-size: 14px; /* 从16px进一步缩小到14px */
   font-weight: 500;
   font-family: 'Inter', system-ui, sans-serif;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* 工作流卡片头部调整 */
+.workflow-card .mofa-color-1,
+.workflow-card .mofa-color-2,
+.workflow-card .mofa-color-3,
+.workflow-card .mofa-color-4 {
+  padding: 1rem 1.5rem; /* 从1.5rem调整为1rem 1.5rem */
+}
+
+.workflow-card h3 {
+  font-size: 1.5rem; /* 从2xl调整为1.5rem */
+  margin-bottom: 0.5rem; /* 从0.75rem调整为0.5rem */
+}
+
+.workflow-card p {
+  font-size: 0.875rem; /* 调整描述文字大小 */
+  line-height: 1.4;
 }
 
 /* 禁用Mermaid容器中的mondrian-block动画效果 */
@@ -637,8 +897,8 @@ const workflows = [
 /* 响应式调整 */
 @media (max-width: 768px) {
   .workflow-card {
-    width: 480px;
-    height: 700px;
+    width: 300px; /* 从350px进一步缩小到300px */
+    height: 450px; /* 从500px进一步缩小到450px */
   }
   
   .workflow-scroll {
@@ -646,35 +906,12 @@ const workflows = [
   }
   
   .mermaid {
-    font-size: 22px;
+    font-size: 18px;
+    min-height: 250px;
   }
   
   .mermaid .node text {
-    font-size: 20px !important;
-  }
-  
-  .mermaid .edgeLabel {
-    font-size: 16px;
-    padding: 4px 8px;
-  }
-
-  .chart-container {
-    padding: 1rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .workflow-card {
-    width: 380px;
-    height: 650px;
-  }
-
-  .mermaid {
-    font-size: 20px;
-  }
-  
-  .mermaid .node text {
-    font-size: 18px !important;
+    font-size: 16px !important;
   }
   
   .mermaid .edgeLabel {
@@ -684,6 +921,31 @@ const workflows = [
 
   .chart-container {
     padding: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .workflow-card {
+    width: 250px; /* 从280px进一步缩小到250px */
+    height: 400px; /* 从450px进一步缩小到400px */
+  }
+
+  .mermaid {
+    font-size: 14px;
+    min-height: 180px;
+  }
+  
+  .mermaid .node text {
+    font-size: 14px !important;
+  }
+  
+  .mermaid .edgeLabel {
+    font-size: 12px;
+    padding: 2px 4px;
+  }
+
+  .chart-container {
+    padding: 0.5rem;
   }
 }
 
@@ -738,5 +1000,130 @@ const workflows = [
   display: none !important;
   opacity: 0 !important;
   visibility: hidden !important;
+}
+
+/* Modal 画廊样式 */
+.workflow-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000; /* 提高 */
+  padding: 2rem;
+}
+
+.workflow-modal-content {
+  position: relative;
+  width: 90vw;
+  height: 90vh;
+  overflow: hidden;
+  background: #FFF3D9;
+  border: 4px solid var(--mondrian-black);
+  border-radius: 8px;
+  box-shadow: 6px 6px 0 var(--mondrian-black);
+  display: flex;
+  flex-direction: column;
+}
+
+.workflow-modal-body {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  overflow: auto;
+}
+
+.workflow-modal-close {
+  position: absolute;
+  top: 0.25rem;
+  right: 0.5rem;
+  font-size: 1.5rem;
+  background: transparent;
+  border: none;
+  color: #333;
+  cursor: pointer;
+}
+
+/* Code button flat style */
+.workflow-code-btn {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.55rem;
+  padding: 4px 10px;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 700;
+  border: 3px solid var(--mondrian-black);
+  box-shadow: none;
+  transition: 0.2s ease;
+  transform: translate(0,0);
+}
+
+.workflow-code-btn:hover {
+  transform: translate(-2px,-2px);
+  box-shadow: 4px 4px 0 var(--mondrian-black);
+}
+
+.workflow-code-btn svg {
+  flex-shrink: 0;
+}
+
+/* View button shares style with code button */
+.workflow-view-btn {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.55rem;
+  padding: 4px 10px;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 700;
+  border: 3px solid var(--mondrian-black);
+  transition: 0.2s ease;
+  transform: translate(0,0);
+}
+
+.workflow-view-btn:hover {
+  transform: translate(-2px,-2px);
+  box-shadow: 4px 4px 0 var(--mondrian-black);
+}
+
+.workflow-view-btn svg {
+  flex-shrink: 0;
+}
+
+/* Gallery navigation styles */
+.gallery-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.2s ease;
+  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gallery-nav:hover {
+  background: rgba(255, 255, 255, 1);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.gallery-prev {
+  left: 1rem;
+}
+
+.gallery-next {
+  right: 1rem;
 }
 </style> 
