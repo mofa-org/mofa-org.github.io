@@ -1,5 +1,5 @@
 async function getMod() {
-						return import('./mofa-mobile-solution-plan.c6107a3c.js');
+						return import('./mofa-mobile-solution-plan.cd80483d.js');
 					}
 					const collectedLinks = "@@ASTRO-LINKS@@";
 					const collectedStyles = "@@ASTRO-STYLES@@";
