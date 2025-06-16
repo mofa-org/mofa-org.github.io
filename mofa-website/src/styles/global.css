@@ -1,4 +1,3 @@
-/* 字体导入 - 必须在最前面 */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700&display=swap');
@@ -218,7 +217,7 @@ code {
   -webkit-background-clip: text;
   color: transparent;
   font-weight: bold;
-  animation: gradient-flow 6s ease-in-out infinite;
+  animation: gradient-flow 12s ease-in-out infinite;
 }
 
 @keyframes gradient-flow {
@@ -237,17 +236,17 @@ code {
   background-color: var(--mondrian-red);
   color: white;
   text-decoration: none;
-  border: 3px solid var(--mondrian-black);
+  border: 1px solid var(--mondrian-black);
   border-radius: 0;
   font-weight: 600;
   transition: all 0.2s ease;
   cursor: pointer;
-  box-shadow: 0 3px 0 var(--mondrian-black);
+  box-shadow: 0 0px 0 var(--mondrian-black);
 }
 
 .btn-primary:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 4px 0 var(--mondrian-black);
+  transform: translate(-2px, -2px);
+  box-shadow: 3px 3px 0 var(--mondrian-black);
 }
 
 .btn-secondary {
@@ -257,17 +256,17 @@ code {
   background-color: var(--mondrian-blue);
   color: white;
   text-decoration: none;
-  border: 3px solid var(--mondrian-black);
+  border: 2px solid var(--mondrian-black);
   border-radius: 0;
   font-weight: 600;
   transition: all 0.2s ease;
   cursor: pointer;
-  box-shadow: 0 3px 0 var(--mondrian-black);
+  box-shadow: 0 2px 0 var(--mondrian-black);
 }
 
 .btn-secondary:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 4px 0 var(--mondrian-black);
+  transform: translate(-2px, -2px);
+  box-shadow: 4px 4px 0 var(--mondrian-black);
 }
 
 /* Discord themed button - flat style */
@@ -278,17 +277,17 @@ code {
   background-color: #6BCED2;
   color: white;
   text-decoration: none;
-  border: 3px solid var(--mondrian-black);
+  border: 1px solid var(--mondrian-black);
   border-radius: 0;
   font-weight: 600;
   transition: all 0.2s ease;
   cursor: pointer;
-  box-shadow: 0 3px 0 var(--mondrian-black);
+  box-shadow: 0 0 0 var(--mondrian-black);
 }
 
 .btn-discord:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 4px 0 var(--mondrian-black);
+  transform: translate(-2px, -2px);
+  box-shadow: 3px 3px 0 var(--mondrian-black);
 }
 
 .btn-outline {
@@ -298,19 +297,19 @@ code {
   background-color: white;
   color: var(--mondrian-black);
   text-decoration: none;
-  border: 3px solid var(--mondrian-black);
+  border: 2px solid var(--mondrian-black);
   border-radius: 0;
   font-weight: 600;
   transition: all 0.2s ease;
   cursor: pointer;
-  box-shadow: 0 3px 0 var(--mondrian-black);
+  box-shadow: 0 2px 0 var(--mondrian-black);
 }
 
 .btn-outline:hover {
   background-color: var(--mondrian-blue);
   color: white;
-  transform: translateY(-1px);
-  box-shadow: 0 4px 0 var(--mondrian-black);
+  transform: translate(-2px, -2px);
+  box-shadow: 4px 4px 0 var(--mondrian-black);
 }
 
 /* Language toggle button - flat style */
@@ -321,18 +320,18 @@ code {
   background-color: white;
   color: var(--mondrian-black);
   text-decoration: none;
-  border: 3px solid var(--mondrian-black);
+  border: 1px solid var(--mondrian-black);
   border-radius: 0;
   font-weight: 600;
   transition: all 0.2s ease;
   cursor: pointer;
-  box-shadow: 0 3px 0 var(--mondrian-black);
+  box-shadow: 0 0 0 var(--mondrian-black);
   font-size: 0.875rem;
 }
 
 .btn-lang:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 4px 0 var(--mondrian-black);
+  transform: translate(-2px, -2px);
+  box-shadow: 3px 3px 0 var(--mondrian-black);
 }
 
 /* 卡片样式 */
@@ -864,7 +863,7 @@ html, body {
   width: 100%;
   height: 100%;
   background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.6), transparent);
-  animation: shimmer 2s ease-in-out infinite;
+  animation: shimmer 8s ease-in-out infinite;
 }
 
 .red-line {
@@ -1289,7 +1288,7 @@ html, body {
     rgba(255, 255, 255, 0.08), 
     transparent);
   transform: translateX(-100%);
-  animation: data-flow-anim 2.5s infinite;
+  animation: data-flow-anim 8s infinite;
   animation-delay: calc(var(--flow-delay, 0) * 0.2s);
   opacity: 1;  /* 确保数据流可见 */
 }
@@ -1561,6 +1560,121 @@ html, body {
   .terminal-tab {
     padding: 6px 10px;
     font-size: 0.75rem;
+  }
+}
+
+/* 移动端顶栏响应式样式 */
+@media (max-width: 768px) {
+  .desktop-nav {
+    display: none !important;
+  }
+  
+  .mobile-nav {
+    display: flex !important;
+  }
+  
+  .mobile-header {
+    padding: 12px 16px !important;
+  }
+  
+  .mobile-header .gradient-text {
+    font-size: 1.25rem !important;
+  }
+  
+  .mobile-lang-btn {
+    padding: 6px 8px !important;
+    font-size: 0.875rem !important;
+    min-width: auto !important;
+  }
+  
+  .mobile-menu-btn {
+    color: var(--mondrian-black);
+    transition: color 0.2s ease;
+  }
+  
+  .mobile-menu-btn:hover {
+    color: var(--mofa-gradient-1);
+  }
+  
+  .mobile-dropdown {
+    animation: mobile-menu-slide 0.3s ease-out;
+  }
+  
+  .mobile-nav-link {
+    color: var(--mondrian-black);
+    text-decoration: none;
+    padding: 8px 0;
+    font-size: 1rem;
+    font-weight: 500;
+    border-bottom: 1px solid var(--mondrian-gray);
+    transition: color 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .mobile-nav-link:hover {
+    color: var(--mofa-gradient-1);
+  }
+  
+  .mobile-nav-link .icon-right {
+    flex-shrink: 0;
+    margin-left: 12px;
+    color: inherit;
+  }
+  
+  .mobile-nav-link .link-text {
+    flex: 1;
+    text-align: left;
+  }
+  
+  .mobile-nav-link:last-child {
+    border-bottom: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .mobile-header {
+    padding: 10px 12px !important;
+  }
+  
+  .mobile-header .gradient-text {
+    font-size: 1.125rem !important;
+  }
+  
+  .mobile-lang-btn {
+    padding: 4px 6px !important;
+    font-size: 0.8rem !important;
+  }
+  
+  .mobile-nav-link {
+    font-size: 0.9rem;
+    padding: 6px 0;
+  }
+}
+
+/* 移动端下拉菜单动画 */
+@keyframes mobile-menu-slide {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 在大屏幕上隐藏按钮文字的响应式样式 */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .btn-text {
+    display: none;
+  }
+  
+  .btn-discord,
+  .btn-primary {
+    gap: 0 !important;
+    padding: 8px 12px !important;
   }
 }
 
