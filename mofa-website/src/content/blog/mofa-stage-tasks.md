@@ -17,6 +17,7 @@ deploy/
 └── scripts/cloud-deploy.sh     # 一键部署脚本
 ```
 **功能**: 支持AWS/Google等主流平台的一键部署
+
 **优先级**: Low
 
 ### 2. **SaaS化改造**
@@ -26,6 +27,7 @@ backend/routes/organizations.py  # 组织管理
 backend/routes/users.py         # 用户权限
 frontend/src/views/Dashboard.vue # 多用户仪表盘
 ```
+
 **优先级**: Low
 
 
@@ -58,6 +60,7 @@ frontend/src/components/ai/
 └── SmartConfigSuggest.vue     # 智能配置建议
 ```
 **功能**: "我想要一个能够处理PDF文档的智能体" → 自动生成配置
+
 **优先级**: 先由李尧继续做，后面进一步明确了功能并且解藕为dataflow后，再交给赏金，避免反复对齐反复修改的扯皮。所以暂定为Low。
 
 ##  **监控和调试**
@@ -69,6 +72,7 @@ frontend/src/views/Monitoring/
 ├── PerformanceDashboard.vue   # 性能仪表盘
 └── ResourceUsage.vue          # 资源使用情况
 ```
+
 **优先级**: Low or Medium？
 
 
@@ -80,7 +84,9 @@ backend/analytics/
 ├── anomaly_detector.py        # 异常检测
 └── insights_generator.py      # 洞察生成
 ```
+
 **功能**: AI驱动的日志分析和问题诊断
+
 **优先级**: Medium or High？
 
 
