@@ -203,6 +203,13 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"mofa-stage-tasks.md": {
+	id: "mofa-stage-tasks.md";
+  slug: "mofa-stage-tasks";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "types-of-magicians.md": {
 	id: "types-of-magicians.md";
   slug: "types-of-magicians";
