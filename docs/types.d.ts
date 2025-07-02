@@ -219,9 +219,9 @@ declare module 'astro:content' {
   collection: "docs";
   data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
-"1. concepts/111.md": {
-	id: "1. concepts/111.md";
-  slug: "1-concepts/111";
+"1. concepts/DesignPatterns.md": {
+	id: "1. concepts/DesignPatterns.md";
+  slug: "1-concepts/designpatterns";
   body: string;
   collection: "docs";
   data: InferEntrySchema<"docs">
@@ -229,6 +229,13 @@ declare module 'astro:content' {
 "1. concepts/agents.md": {
 	id: "1. concepts/agents.md";
   slug: "1-concepts/agents";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
+"2. getting-started/build-agent.md": {
+	id: "2. getting-started/build-agent.md";
+  slug: "2-getting-started/build-agent";
   body: string;
   collection: "docs";
   data: InferEntrySchema<"docs">
@@ -247,44 +254,16 @@ declare module 'astro:content' {
   collection: "docs";
   data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
-"3. test/first-agent.md": {
-	id: "3. test/first-agent.md";
-  slug: "3-test/first-agent";
+"3. examples/hello-world-dora.md": {
+	id: "3. examples/hello-world-dora.md";
+  slug: "3-examples/hello-world-dora";
   body: string;
   collection: "docs";
   data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
-"3. test/installation.md": {
-	id: "3. test/installation.md";
-  slug: "3-test/installation";
-  body: string;
-  collection: "docs";
-  data: InferEntrySchema<"docs">
-} & { render(): Render[".md"] };
-"3. test2/first-agent.md": {
-	id: "3. test2/first-agent.md";
-  slug: "3-test2/first-agent";
-  body: string;
-  collection: "docs";
-  data: InferEntrySchema<"docs">
-} & { render(): Render[".md"] };
-"3. test2/installation.md": {
-	id: "3. test2/installation.md";
-  slug: "3-test2/installation";
-  body: string;
-  collection: "docs";
-  data: InferEntrySchema<"docs">
-} & { render(): Render[".md"] };
-"3. test3/first-agent.md": {
-	id: "3. test3/first-agent.md";
-  slug: "3-test3/first-agent";
-  body: string;
-  collection: "docs";
-  data: InferEntrySchema<"docs">
-} & { render(): Render[".md"] };
-"3. test3/installation.md": {
-	id: "3. test3/installation.md";
-  slug: "3-test3/installation";
+"3. examples/hello-world.md": {
+	id: "3. examples/hello-world.md";
+  slug: "3-examples/hello-world";
   body: string;
   collection: "docs";
   data: InferEntrySchema<"docs">

@@ -17,8 +17,6 @@ description: Understanding MoFA agent concepts, design patterns, and composition
 
 基于Dora-RS框架构建的MoFA智能体，实质上就是Dora-RS Dataflow。两个智能体之间可以通过数据连接进行组合，从而形成组合智能体。
 
-![image-20241003202345018](images/composite_agent.png)
-
 在上述的self_refine Agent模版和下面将要介绍的服务智能体和案例，都是MoFA组合智能体。
 
 ## MoFA服务智能体
