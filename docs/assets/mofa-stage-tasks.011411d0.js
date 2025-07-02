@@ -1,5 +1,5 @@
 async function getMod() {
-						return import('./mofa-stage-tasks.837e6e11.js');
+						return import('./mofa-stage-tasks.de4b3c3a.js');
 					}
 					const collectedLinks = "@@ASTRO-LINKS@@";
 					const collectedStyles = "@@ASTRO-STYLES@@";
