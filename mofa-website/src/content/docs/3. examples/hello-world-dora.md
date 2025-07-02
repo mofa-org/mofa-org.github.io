@@ -1,6 +1,6 @@
 ---
-title: Your First Agent
-description: Create your first MoFA agent using the Hello World example
+title: Hello World with Dora
+description: Building a Hello World agent using Dora-RS framework
 ---
 
 # "Hello World" Agent Development Based on Dora
@@ -9,7 +9,7 @@ description: Create your first MoFA agent using the Hello World example
 
 ## Step 1: Install the Development and Runtime Environment
 
-Refer to the [Installation Guide](installation) to complete the setup of the development and runtime environment.
+Refer to the [Installation Guide](../2.%20getting-started/installation) to complete the setup of the development and runtime environment.
 
 ## Step 2: Obtain the Intelligent Agent Template
 
@@ -237,5 +237,4 @@ This "Hello World" example demonstrates:
 - Integration with Dora-RS dataflow
 - Running and interacting with the agent
 
-This serves as the foundation for building more complex agents and understanding the MoFA framework.
-
+This serves as the foundation for building more complex agents and understanding the MoFA framework. 

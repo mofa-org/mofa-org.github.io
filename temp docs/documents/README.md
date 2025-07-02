@@ -1,8 +1,3 @@
----
-title: MoFA Overview
-description: MoFA is a software framework for building AI agents through a composition-based approach
----
-
 # MoFA with DoRA
 
 [English](README.md) | [简体中文](README_cn.md)
@@ -64,4 +59,3 @@ In general, you can use the Dora-RS command line to run agents:
   - [ArXiv Research](../examples/arxiv_research/README.md)
   - [Agent Fight](../examples/agent_fight/README.md)
   - [Query Assistant](../examples/query_assistant/README.md)
-

@@ -1,84 +1,60 @@
 ---
-title: Understanding Agents
-description: Learn about MoFA agents, their architecture, and how they work
+title: MoFA Agents
+description: Understanding MoFA agent concepts, design patterns, and composition
 ---
 
-[cn.md]
-Agents are the core building blocks of MoFA. They are intelligent software components that can process information, make decisions, and perform actions.
+# MoFA智能体模版
 
-## What is an Agent?
+构建智能体有一定的设计模式（Design Pattern），MoFA提供一系列的设计模式的实现，供开发者作为模版使用。
 
-An agent in MoFA is:
+- [设计模式](templates/design_patterns.md)
+- [reasoner](templates/reasoner_template.md)
+- [self_refine](templates/self_refine_template.md)
+- [crewai](templates/crewai_template.md)
+- ...
 
-- **Autonomous**: Can operate independently
-- **Reactive**: Responds to messages and events
-- **Composable**: Can be combined with other agents
-- **Configurable**: Behavior can be customized
+## MoFA组合智能体
 
-## Agent Architecture
+基于Dora-RS框架构建的MoFA智能体，实质上就是Dora-RS Dataflow。两个智能体之间可以通过数据连接进行组合，从而形成组合智能体。
 
-```python
-agent = Agent(
-    name="my-agent",           # Unique identifier
-    model="gpt-3.5-turbo",     # Language model
-    system_prompt="...",       # Instructions
-    tools=[],                  # Available tools
-    memory=None,               # Memory system
-    temperature=0.7            # Model parameters
-)
-```
+![image-20241003202345018](images/composite_agent.png)
 
-## Agent Types
+在上述的self_refine Agent模版和下面将要介绍的服务智能体和案例，都是MoFA组合智能体。
 
-### 1. Basic Agents
-Simple agents that process input and generate output:
+## MoFA服务智能体
 
-```python
-basic_agent = Agent(
-    name="basic",
-    model="gpt-3.5-turbo",
-    system_prompt="You are a helpful assistant."
-)
-```
+智能体往往需要需要一些服务，包括检索增强生成，记忆，使用外部工具和任务规划和分解等。MoFA认为：Everything Agent。我们以MoFA智能体的方式提供RAG智能体，记忆智能体，规划智能体和行动智能体。开发者可以使用这些已经实现的服务智能体，与自己的智能体相连接组合从而获得相应的服务。MoFA也可以集成第三方的服务智能体，供开发者按照不同的需求使用。
 
-### 2. Tool-Using Agents
-Agents that can use external tools:
+- rag
+- memory
+- action
+- planning
 
-```python
-from mofa.tools import WebSearchTool, CalculatorTool
+## Nesting Design Patterns of AI Agents
 
-tool_agent = Agent(
-    name="tool-user",
-    model="gpt-3.5-turbo", 
-    tools=[WebSearchTool(), CalculatorTool()]
-)
-```
+AI agents are intelligent software applications with various design patterns:
 
-### 3. Memory-Enabled Agents
-Agents with persistent memory:
+- **LLM Inference**: Using large language models for basic inference
+- **Customized Prompt**: Tailoring system prompts for specific agents
+- **Reflection Pattern**: Agents capable of self-review and improvement
+- **Actor Pattern**: Agents with external tool and resource capabilities
+- **ReAct Pattern**: Combining reflection and tool usage
+- **Multi-Agent Collaboration**: Specialized agents working together
 
-```python
-from mofa.memory import VectorMemory
+## Agent Kernel Services
 
-memory_agent = Agent(
-    name="memory-enabled",
-    model="gpt-3.5-turbo",
-    memory=VectorMemory()
-)
-```
+MoFA provides core services to agents, including:
+- Memory management
+- Task planning
+- Knowledge base integration
+- RAG (Retrieval-Augmented Generation)
+- Action capabilities
 
-## Agent Lifecycle
+## Composition-Based Architecture
 
-1. **Initialization**: Agent is created with configuration
-2. **Processing**: Agent receives and processes messages
-3. **Action**: Agent performs computations or tool calls
-4. **Response**: Agent generates and returns output
+Composition allows assembling elements into new entities without changing original components, enabling developers to build and recombine agents for new functionalities.
 
-## Best Practices
+## Dataflow-Driven Approach
 
-- **Clear System Prompts**: Write specific, clear instructions
-- **Appropriate Models**: Choose the right model for your task
-- **Tool Selection**: Only include necessary tools
-- **Memory Management**: Use memory efficiently
-- **Error Handling**: Implement proper error handling
+MoFA employs a dataflow-driven method focusing on data dependencies rather than business rules, simplifying and enhancing modularity.
 

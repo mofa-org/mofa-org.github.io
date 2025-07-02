@@ -1,17 +1,28 @@
 ---
-title: "MoFA 技术架构介绍：基于 Dora-RS 的模块化 AI 智能体框架"
-description: "介绍 MoFA 的技术架构，探讨其如何基于 Dora-RS 框架构建模块化、可组合的 AI 智能体系统"
+title: "MoFA 开发框架：组合式 AI 智能体构建平台"
+description: "MoFA 是一个以组合的方式构建 AI 智能体的软件框架，让平凡人也能创造非凡的 AI 应用"
 date: 2025-06-09
 author: MoFA Team
-tags: [架构, AI框架, Dora-RS, 智能体, 技术]
+tags: [架构, AI框架, Dora-RS, 智能体, 组合式AI]
 ---
 
+MoFA（**M**odular **F**ramework for **A**gent）是一个以组合的方式构建AI智能体的软件框架。使用MoFA，AI智能体可以通过模版方式构建，堆叠的方式组合，形成更强大的超级智能体（Super Agent）。
 
-MoFA（**M**odular **F**ramework for **A**gent）是一个基于 Dora-RS 数据流引擎构建的智能体开发框架。本文介绍 MoFA 的技术架构和设计思路。
+## 🎯 设计理念
 
-## 🏗️ 整体架构设计
+MoFA 独特的设计理念是：
 
-<svg aria-roledescription="flowchart-v2" role="graphics-document document" viewBox="-8 -8 6160.376953125 539" style="max-width: 100%; height: auto;" xmlns="http://www.w3.org/2000/svg" width="100%"><style>#mermaid-svg-inline{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;fill:rgba(204, 204, 204, 0.87);}#mermaid-svg-inline .error-icon{fill:#bf616a;}#mermaid-svg-inline .error-text{fill:#bf616a;stroke:#bf616a;}#mermaid-svg-inline .edge-thickness-normal{stroke-width:2px;}#mermaid-svg-inline .edge-thickness-thick{stroke-width:3.5px;}#mermaid-svg-inline .edge-pattern-solid{stroke-dasharray:0;}#mermaid-svg-inline .edge-pattern-dashed{stroke-dasharray:3;}#mermaid-svg-inline .edge-pattern-dotted{stroke-dasharray:2;}#mermaid-svg-inline .marker{fill:rgba(204, 204, 204, 0.87);stroke:rgba(204, 204, 204, 0.87);}#mermaid-svg-inline .marker.cross{stroke:rgba(204, 204, 204, 0.87);}#mermaid-svg-inline svg{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;}#mermaid-svg-inline .label{font-family:"trebuchet ms",verdana,arial,sans-serif;color:rgba(204, 204, 204, 0.87);}#mermaid-svg-inline .cluster-label text{fill:#ffffff;}#mermaid-svg-inline .cluster-label span,#mermaid-svg-inline p{color:#ffffff;}#mermaid-svg-inline .label text,#mermaid-svg-inline span,#mermaid-svg-inline p{fill:rgba(204, 204, 204, 0.87);color:rgba(204, 204, 204, 0.87);}#mermaid-svg-inline .node rect,#mermaid-svg-inline .node circle,#mermaid-svg-inline .node ellipse,#mermaid-svg-inline .node polygon,#mermaid-svg-inline .node path{fill:#1a1a1a;stroke:#2a2a2a;stroke-width:1px;}#mermaid-svg-inline .flowchart-label text{text-anchor:middle;}#mermaid-svg-inline .node .label{text-align:center;}#mermaid-svg-inline .node.clickable{cursor:pointer;}#mermaid-svg-inline .arrowheadPath{fill:#e5e5e5;}#mermaid-svg-inline .edgePath .path{stroke:rgba(204, 204, 204, 0.87);stroke-width:2.0px;}#mermaid-svg-inline .flowchart-link{stroke:rgba(204, 204, 204, 0.87);fill:none;}#mermaid-svg-inline .edgeLabel{background-color:#1a1a1a99;text-align:center;}#mermaid-svg-inline .edgeLabel rect{opacity:0.5;background-color:#1a1a1a99;fill:#1a1a1a99;}#mermaid-svg-inline .labelBkg{background-color:rgba(26, 26, 26, 0.5);}#mermaid-svg-inline .cluster rect{fill:rgba(64, 64, 64, 0.47);stroke:#30373a;stroke-width:1px;}#mermaid-svg-inline .cluster text{fill:#ffffff;}#mermaid-svg-inline .cluster span,#mermaid-svg-inline p{color:#ffffff;}#mermaid-svg-inline div.mermaidTooltip{position:absolute;text-align:center;max-width:200px;padding:2px;font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:12px;background:#88c0d0;border:1px solid #30373a;border-radius:2px;pointer-events:none;z-index:100;}#mermaid-svg-inline .flowchartTitleText{text-anchor:middle;font-size:18px;fill:rgba(204, 204, 204, 0.87);}#mermaid-svg-inline :root{--mermaid-font-family:"trebuchet ms",verdana,arial,sans-serif;}</style><g id="mermaid-svg-inline"><g><g class="clusters"><g class="cluster default flowchart-label"><rect height="312.5" width="3988.619140625" y="0" x="0" ry="0" rx="0" style=""/><g transform="translate(1958.3017578125, 0)" class="cluster-label"><text class="nodeLabel">MoFA 架构</text></g></g><g class="cluster default flowchart-label"><rect height="396" width="2135.7578125" y="127" x="4008.619140625" ry="0" rx="0" style=""/><g transform="translate(5030.134765625, 127)" class="cluster-label"><text class="nodeLabel">Dora-RS 架构</text></g></g></g><g class="edgePaths"><path style="fill:none;stroke:rgba(204, 204, 204, 0.87);stroke-width:2px" d="M349.477,58.5L349.477,146.7"/><path style="fill:none;stroke:rgba(204, 204, 204, 0.87);stroke-width:2px" d="M263.615,185.5L129.507,250.821"/><path style="fill:none;stroke:rgba(204, 204, 204, 0.87);stroke-width:2px" d="M385.081,185.5L457.883,248.7"/><path style="fill:none;stroke:rgba(204, 204, 204, 0.87);stroke-width:2px" d="M440.34,179.14L795.48,248.7"/><path style="fill:none;stroke:rgba(204, 204, 204, 0.87);stroke-width:2px" d="M440.34,174.572L1145.449,248.7"/><path style="fill:none;stroke:rgba(204, 204, 204, 0.87);stroke-width:2px" d="M3837.61,58.5L4102.636,156.775"/><path style="fill:none;stroke:rgba(204, 204, 204, 0.87);stroke-width:2px" d="M4175.287,185.5L4175.287,248.7"/><path style="fill:none;stroke:rgba(204, 204, 204, 0.87);stroke-width:2px" d="M4175.287,287.5L4175.287,375.7"/><path style="fill:none;stroke:rgba(204, 204, 204, 0.87);stroke-width:2px" d="M4175.287,414.5L4175.287,459.2"/></g><g class="nodes"><g transform="translate(349.4765625, 41.75)" class="node default"><rect height="33.5" width="137.1015625" y="-16.75" x="-68.55078125" ry="0" rx="0" style="fill:#f3e5f5;" class="basic label-container"/><text class="nodeLabel">CLI - mofa/cli.py</text></g><g transform="translate(349.4765625, 168.75)" class="node default"><rect height="33.5" width="181.7265625" y="-16.75" x="-90.86328125" ry="0" rx="0" style="" class="basic label-container"/><text class="nodeLabel">Agent Build Framework</text></g><g transform="translate(156.09765625, 270.75)" class="node default"><rect height="33.5" width="242.1953125" y="-16.75" x="-121.09765625" ry="0" rx="0" style="fill:#f3e5f5;" class="basic label-container"/><text class="nodeLabel">Base Agent - agent_build/base/</text></g><g transform="translate(457.8828125, 270.75)" class="node default"><rect height="33.5" width="261.375" y="-16.75" x="-130.6875" ry="0" rx="0" style="" class="basic label-container"/><text class="nodeLabel">ReasonER - agent_build/reasoner/</text></g><g transform="translate(795.48046875, 270.75)" class="node default"><rect height="33.5" width="313.8203125" y="-16.75" x="-156.91015625" ry="0" rx="0" style="" class="basic label-container"/><text class="nodeLabel">CrewAI Integration - agent_build/crewai/</text></g><g transform="translate(1145.44921875, 270.75)" class="node default"><rect height="33.5" width="286.1171875" y="-16.75" x="-143.05859375" ry="0" rx="0" style="" class="basic label-container"/><text class="nodeLabel">Self Refine - agent_build/self_refine/</text></g><g transform="translate(4175.287109375, 168.75)" class="node default"><rect height="33.5" width="134.84375" y="-16.75" x="-67.421875" ry="0" rx="0" style="fill:#e1f5fe;" class="basic label-container"/><text class="nodeLabel">CLI - binaries/cli</text></g><g transform="translate(4175.287109375, 270.75)" class="node default"><rect height="33.5" width="263.3359375" y="-16.75" x="-131.66796875" ry="0" rx="0" style="fill:#e1f5fe;" class="basic label-container"/><text class="nodeLabel">Coordinator - binaries/coordinator</text></g><g transform="translate(4175.287109375, 397.75)" class="node default"><rect height="33.5" width="209.7265625" y="-16.75" x="-104.86328125" ry="0" rx="0" style="fill:#e1f5fe;" class="basic label-container"/><text class="nodeLabel">Daemon - binaries/daemon</text></g><g transform="translate(4175.287109375, 481.25)" class="node default"><rect height="33.5" width="211.3828125" y="-16.75" x="-105.69140625" ry="0" rx="0" style="fill:#e1f5fe;" class="basic label-container"/><text class="nodeLabel">Runtime - binaries/runtime</text></g></g></g></svg>
+- **平凡人做非凡事**：AI 不该是精英和巨头的专属领地。MoFA 让每个人都能驾驭和发展 AI，把不可能变成可能，让平凡人也能创造非凡。
+
+- **Composition AI**：受 Unix 哲学启发，MoFA 以"组合"作为核心原则。你可以像搭积木一样，构建智能体、连接智能体、集成工具，让 AI 变得简单、灵活、强大。
+
+- **Everything Agent**：与绝大多数软件不同，在 MoFA 的世界里，智能体（Agent）就是 AI 时代的应用（Application）。不仅是大语言模型，它可以是代码、脚本、API，甚至是 MoFA 本身。MoFA 不是一个框架，而是一个 Agent 生态。
+
+- **Data Flow**：大多数智能体框架依赖复杂的工作流（WorkFlow），而 MoFA 选择更直观、更强大的数据流（Data Flow）。这种方式让智能体能自由组合、拆解和重用。
+
+## 🏗️ 技术架构
+
+<img src="https://github.com/RelevantStudy/mofasearch/blob/main/hackathons/docs/images/image-20250310010710778.png" alt="MoFA技术架构图" style="zoom:67%;" />
 
 MoFA 与 Dora-RS 形成分层架构，构成从底层通信到上层智能体的技术栈：
 
@@ -25,142 +36,139 @@ MoFA 与 Dora-RS 形成分层架构，构成从底层通信到上层智能体的
 └─────────────────────────────────────┘
 ```
 
-## 🔧 MoFA 核心组件
+## 🚀 快速开始
 
-### 1. 智能体构建框架 (Agent Build Framework)
+### 环境准备
 
-提供智能体开发的基础抽象和常见模式：
+#### Python 环境
+```bash
+# 安装 UV 包管理器加速 mofa 安装
+pip install uv
+```
 
-#### **基础智能体 (Base Agent)**
+**注意事项**：
+- 本地python环境要纯净，不要多个python版本，否则容易导致Dora-rs运行环境和Mofa安装环境的冲突
+- 如果使用 Anaconda/Miniconda，务必将 Mofa 安装到 `Base` 环境下
+- 要求 python 环境 >= 3.10
+- 目前已在 WSL（Ubuntu 22.04）和 macOS 上测试，Windows 暂不支持
+
+#### Rust 环境
+```bash
+# 安装 Rust
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
+# 安装 Dora 运行时
+cargo install dora-cli
+
+# 验证安装
+dora --version
+```
+
+### 安装 MoFA
+
+```bash
+# 克隆仓库
+git clone https://github.com/moxin-org/mofa.git
+cd mofa/python
+
+# 安装依赖
+uv pip install -e . && pip install -e . 
+```
+
+### Hello World 示例
+
+```bash
+cd mofa/python/examples/hello_world
+
+# 启动 Dora 服务
+dora up
+
+# 构建并运行数据流
+dora build hello_world_dataflow.yml
+dora start hello_world_dataflow.yml
+
+# 在另一个终端测试
+terminal-input
+> hello
+# 输出: hello
+```
+
+## 💡 5分钟创建第一个应用
+
+### 1. 创建 Agent 项目
+```bash
+mofa new-agent my-llm-agent
+cd my-llm-agent
+```
+
+### 2. 配置环境变量
+创建 `.env.secret` 文件：
+```plaintext
+LLM_API_KEY=your_api_key_here
+LLM_API_BASE=https://api.openai.com/v1
+LLM_MODEL=gpt-3.5-turbo
+```
+
+### 3. 实现 Agent 逻辑
+编辑 `my_llm_agent/main.py`：
 ```python
-from mofa.agent_build.base.base_agent import MofaAgent
-from dora import Node
+from mofa.agent_build.base.base_agent import MofaAgent, run_agent
+from openai import OpenAI
+import os
+from dotenv import load_dotenv
 
-class MofaAgent:
-    def __attrs_post_init__(self):
-        self.node = Node(self.agent_name)  # 集成 Dora 节点
+@run_agent
+def run(agent: MofaAgent):
+    try:
+        load_dotenv('.env.secret')
         
-    def receive_parameter(self, parameter_name: str):
-        for event in self.node:  # 使用 Dora 事件循环
-            # 智能体业务逻辑
-            
-    def send_output(self, output_name: str, result: Any):
-        self.node.send_output(output_name, ...)  # 通过 Dora 发送
+        client = OpenAI(
+            api_key=os.getenv('LLM_API_KEY'),
+            base_url=os.getenv('LLM_API_BASE')
+        )
+        
+        user_input = agent.receive_parameter('query')
+        
+        response = client.chat.completions.create(
+            model=os.getenv('LLM_MODEL', 'gpt-3.5-turbo'),
+            messages=[
+                {"role": "system", "content": "You are a helpful AI assistant."},
+                {"role": "user", "content": user_input}
+            ]
+        )
+        
+        agent.send_output(
+            agent_output_name='llm_result',
+            agent_result=response.choices[0].message.content
+        )
+        
+    except Exception as e:
+        agent.logger.error(f"Error: {str(e)}")
+        agent.send_output('llm_result', f"Error: {str(e)}")
+
+def main():
+    agent = MofaAgent(agent_name='my-llm-agent')
+    run(agent=agent)
+
+if __name__ == "__main__":
+    main()
 ```
 
-#### **智能体模式**
-- **ReasonER**: 支持推理链的智能体
-- **CrewAI Integration**: 集成 CrewAI 的多智能体协作
-- **Self Refine**: 支持输出自我改进的智能体
-
-### 2. 核心服务 (Kernel Services)
-
-提供智能体系统的基础服务：
-
-- **Memory**: 智能体记忆管理
-- **Planning**: 任务规划和调度
-- **RAG**: 检索增强生成
-- **Tools**: 工具调用和管理
-
-### 3. 智能体模板 (Agent Templates)
-
-预构建的智能体配置，简化开发流程：
-
+### 4. 创建数据流配置
+创建 `my_llm_dataflow.yml`：
 ```yaml
-# 智能体配置示例
-nodes:
-  - id: reasoning-agent
-    build: pip install -e ../../agent-hub/openai-agent
-    path: openai-agent
-    inputs:
-      query: terminal-input/data
-    outputs:
-      - reasoning_result
-```
-
-### 4. 生态系统
-
-#### **Node Hub**: 扩展 Dora 生态
-- `terminal-input` / `terminal-print`: 终端 I/O 节点
-- `dora-openai-server`: OpenAI API 服务集成
-- `openai-server-stream`: 流式 AI 服务
-
-#### **Agent Hub**: 预构建智能体库
-- `hello-world`: 基础示例智能体
-- `openai-agent`: OpenAI 集成智能体
-- `memory-agent`: 带记忆的智能体
-- `kling-agent`: 视频生成智能体
-- 更多专用智能体...
-
-## ⚡ Dora-RS 基础设施
-
-### 架构组成
-
-Dora-RS 为 MoFA 提供运行时基础：
-
-```
-dora/
-├── binaries/              # 运行时组件
-│   ├── cli/              # dora 命令行工具
-│   ├── coordinator/      # 分布式协调器
-│   ├── daemon/           # 后台守护进程
-│   └── runtime/          # 数据流运行时
-├── libraries/             # 核心库
-│   ├── core/            # 调度引擎
-│   ├── communication-layer/ # 通信层
-│   ├── shared-memory-server/ # 共享内存服务
-│   └── message/         # 基于 Apache Arrow 的消息系统
-├── apis/                 # 多语言 API
-│   ├── rust/ python/ c/ c++/  # 跨语言支持
-└── node-hub/            # 预构建节点
-    ├── dora-yolo/       # YOLO 目标检测
-    ├── dora-sam2/       # SAM2 分割
-    ├── dora-qwen/       # Qwen 大语言模型
-    └── ...              # 更多 AI/硬件节点
-```
-
-### 技术特点
-
-1. **性能**: 基于 Rust 和共享内存的高效通信
-2. **零拷贝**: 基于 Apache Arrow 的数据传输
-3. **跨语言**: Python 智能体可与其他语言节点协作
-4. **实时性**: 低延迟的节点间通信
-
-## 🔄 数据流设计
-
-### 数据流 vs 工作流
-
-MoFA 采用数据流驱动的设计：
-
-```
-传统工作流:
-Task → Rule → Step → Rule → Step → Result
-
-数据流方式:
-Data → Node → Data → Node → Data → Result
-  ↑      ↑      ↑      ↑      ↑
-  |   智能体   |   智能体   |
-  └─────────通信层──────┘
-```
-
-### 配置驱动
-
-通过 YAML 配置实现智能体组合：
-
-```yaml
-# hello_world_dataflow.yml
 nodes:
   - id: terminal-input
     build: pip install -e ../../node-hub/terminal-input
     path: dynamic
-    outputs: [data]
+    outputs: data
     inputs:
-      agent_response: hello-world-agent/hello_world_result
-      
-  - id: hello-world-agent
-    build: pip install -e ../../agent-hub/hello-world
-    path: hello-world
-    outputs: [hello_world_result]
+      agent_response: my-llm-agent/llm_result
+
+  - id: my-llm-agent
+    build: pip install -e . ../../agent-hub/my-llm-agent
+    path: my-llm-agent
+    outputs: llm_result
     inputs:
       query: terminal-input/data
     env:
@@ -168,78 +176,63 @@ nodes:
       WRITE_LOG: true
 ```
 
-## 🔗 关键集成
+### 5. 运行和测试
+```bash
+dora up
+dora build my_llm_dataflow.yml
+dora start my_llm_dataflow.yml
 
-### 1. 智能体与 Dora 的集成
+# 新开终端测试
+terminal-input
+> 你好，请介绍一下自己
+```
 
+## 🔧 构建自定义 Agent
+
+### 使用模板创建
+```bash
+mofa new-agent you_agent_name 
+```
+
+### 核心代码示例
 ```python
-# MoFA 智能体使用 Dora Node
-from dora import Node
+from mofa.agent_build.base.base_agent import MofaAgent, run_agent
 
-class MofaAgent:
-    def __attrs_post_init__(self):
-        self.node = Node(self.agent_name)
-```
-
-### 2. 生态系统扩展
-
-| 组件类型 | Dora原生 | MoFA扩展 |
-|----------|----------|----------|
-| MoFA专用 | - | `dora-openai-server`, `openai-server-stream` |
-| 智能体 | - | `agent-hub/*` |
-
-### 3. 数据流连接
-
-通过 Dora 的数据流机制实现：
-- 智能体与硬件设备通信
-- 智能体与 AI 模型交互
-- 智能体数据流构建
-
-## 🎯 组合式智能体
-
-### 组合层次
-
-```
-复合智能体
-    ↓
-基础智能体组合
-    ↓
-MofaAgent
-    ↓
-Dora Node
-```
-
-### 应用示例
-
-```python
-# 基础智能体
 @run_agent
 def run(agent: MofaAgent):
-    user_query = agent.receive_parameter('query')
-    # 处理逻辑
-    agent.send_output('result', processed_data)
+    try:
+        # 接收单个agent输入
+        task = agent.receive_parameter('task')
+        
+        # 接收多个agent输入
+        receive_datas = agent.receive_parameter(['example_one','example_two'])
+        # 结果类似于 {'example_one':'example_one_data','example_two':'example_two_data'}
 
-# 通过配置组合：input → reasoning_agent → memory_agent → output
+        # 处理逻辑 你可以把你的逻辑添加到这里
+        result = process_task(task)
+        
+        # 发送输出 确保你的输出是可以被序列化的对象(字符串等)
+        agent.send_output(
+            agent_output_name='agent_result',
+            agent_result=result
+        )
+        
+    except Exception as e:
+        agent.logger.error(f"Error: {str(e)}")
+        
+
+def process_task(data: str) -> str:
+    """示例处理函数"""
+    return f"Processed: {data}"
+
+def main():
+    agent = MofaAgent(agent_name='my-new-agent')
+    run(agent=agent)
+
+if __name__ == "__main__":
+    main()
 ```
 
-## 🚀 技术优势
-
-### 1. 性能
-- **Rust 内核**: 内存安全和性能
-- **共享内存**: 减少数据拷贝
-- **Apache Arrow**: 高效的列式数据格式
-
-### 2. 开发体验
-- **配置化**: YAML 配置完成组合
-- **模板化**: 预构建的智能体和模式
-- **跨语言**: 统一的开发接口
-
-### 3. 扩展性
-- **分布式**: 支持分布式部署
-- **模块化**: 松耦合的组件设计
-- **生态**: 丰富的节点和智能体库
-
-
-
-
 ---
+
+立即开始您的智能体开发之旅！

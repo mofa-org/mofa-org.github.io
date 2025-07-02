@@ -1,15 +1,10 @@
----
-title: Your First Agent
-description: Create your first MoFA agent using the Hello World example
----
-
 # "Hello World" Agent Development Based on Dora
 
 [English](hello_world_dora.md) | [简体中文](hello_world_dora_cn.md)
 
 ## Step 1: Install the Development and Runtime Environment
 
-Refer to the [Installation Guide](installation) to complete the setup of the development and runtime environment.
+Refer to the [Installation Guide](../../README.md) to complete the setup of the development and runtime environment.
 
 ## Step 2: Obtain the Intelligent Agent Template
 
@@ -203,39 +198,41 @@ nodes:
 
 ### Start the Dataflow Using Dora-RS CLI
 
-1. Start the coordinator
+Run the following commands in the terminal:
 
-```bash
+```sh
 dora up
-```
-
-2. Build the dataflow
-
-```bash
 dora build reasoner_dataflow.yml
+dora start reasoner_dataflow.yml
 ```
 
-3. Start the dataflow with auto-attach
+**Instructions**:
 
-```bash
-dora start reasoner_dataflow.yml --attach
-```
+- `dora up`: Initializes the Dora environment.
+- `dora build reasoner_dataflow.yml`: Builds the dataflow configuration.
+- `dora start reasoner_dataflow.yml`: Starts the dataflow.
 
-4. In another terminal, input tasks to the agent
+### Run `terminal-input` and Submit a Task
 
-```bash
-terminal-input
-```
+1. **Open a new terminal window.**
 
-Then type your queries to interact with the agent.
+2. **Run `terminal-input`**:
+
+   ```sh
+   terminal-input
+   ```
+
+3. **Enter a task**:
+
+   Input an `indeed` task in the `terminal-input` terminal to start processing.
+
+## Notes
+
+- **Avoid Circular Dependencies**: Ensure `terminal-input` receiving `reasoner_results` does not trigger new inputs, avoiding infinite loops.
+- **Path Accuracy**: Confirm all `pip install` commands and script paths are correct, and modules/scripts are accessible.
+- **Dependency Installation**: Ensure the `terminal-input` module and its dependencies are correctly installed.
+- **API Key Security**: Keep the API keys in the configuration file secure to prevent leaks.
 
 ## Summary
 
-This "Hello World" example demonstrates:
-- How to set up a basic MoFA agent using templates
-- Configuration file structure and parameters
-- Integration with Dora-RS dataflow
-- Running and interacting with the agent
-
-This serves as the foundation for building more complex agents and understanding the MoFA framework.
-
+Following these steps, you have successfully developed and run a simple Hello World intelligent agent based on Dora. The process covers environment setup, template retrieval, configuration file setup, Operator configuration, Dataflow configuration, and running the process. You can further expand and optimize the intelligent agent's functionality as needed.
