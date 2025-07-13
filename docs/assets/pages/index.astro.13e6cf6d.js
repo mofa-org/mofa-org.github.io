@@ -291,7 +291,7 @@ const $$TabletQuickStart = createComponent(($$result, $$props, $$slots) => {
       labelZh: "1. \u5B89\u88C5",
       labelEn: "1. Install",
       commandMain: "pip install mofa-ai",
-      secondary: "pip install mofa-ai[mofa-stage]  # MoFA_Stage GUI"
+      secondary: "pip install mofa-stage  # MoFA_Stage GUI"
     },
     {
       id: "clone",
