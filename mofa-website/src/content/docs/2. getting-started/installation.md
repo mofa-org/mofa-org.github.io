@@ -31,7 +31,7 @@ For development or the latest features:
 
 ```bash
 # Clone the repository
-git clone https://github.com/moxin-org/mofa.git
+git clone https://github.com/mofa-org/mofa.git
 cd mofa
 
 # Install in development mode

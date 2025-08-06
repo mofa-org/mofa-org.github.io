@@ -41,24 +41,60 @@ async function fetchAllContributors(repo) {
   return allContributors;
 }
 
-// Fetch MoFA contributors from GitHub API (all pages)
+// Fetch MoFA contributors from both repositories (all pages)
 try {
-  const mofaData = await fetchAllContributors('mofa-org/mofa');
-  mofaContributors = mofaData
-    .filter(contributor => contributor.type === 'User') // Filter out bots
-    .map(contributor => ({
+  // Get contributors from new repository
+  const mofaNewData = await fetchAllContributors('mofa-org/mofa');
+  // Get contributors from old repository  
+  const mofaOldData = await fetchAllContributors('moxin-org/mofa');
+  
+  // Combine and deduplicate contributors based on login name
+  const allMofaContributors = new Map();
+  
+  // Process new repo contributors
+  mofaNewData.filter(contributor => contributor.type === 'User').forEach(contributor => {
+    allMofaContributors.set(contributor.login, {
       name: contributor.login,
       role: { en: 'Contributor', zh: '贡献者' },
       avatar: contributor.avatar_url,
       github: contributor.html_url,
-      // Check if custom image exists, format: /images/{github_login}.jpg
       largeImage: `/images/${contributor.login}.jpg`,
-      desc: { 
-        en: `${contributor.contributions} contributions to MoFA`, 
-        zh: `为 MoFA 贡献了 ${contributor.contributions} 次提交` 
-      }
-    }));
-  console.log(`Fetched ${mofaContributors.length} MoFA contributors`);
+      contributions: contributor.contributions,
+      repositories: ['mofa-org/mofa']
+    });
+  });
+  
+  // Process old repo contributors
+  mofaOldData.filter(contributor => contributor.type === 'User').forEach(contributor => {
+    if (allMofaContributors.has(contributor.login)) {
+      // Add contributions from old repo and mark as contributor to both
+      const existing = allMofaContributors.get(contributor.login);
+      existing.contributions += contributor.contributions;
+      existing.repositories.push('moxin-org/mofa');
+    } else {
+      // New contributor only in old repo
+      allMofaContributors.set(contributor.login, {
+        name: contributor.login,
+        role: { en: 'Contributor', zh: '贡献者' },
+        avatar: contributor.avatar_url,
+        github: contributor.html_url,
+        largeImage: `/images/${contributor.login}.jpg`,
+        contributions: contributor.contributions,
+        repositories: ['moxin-org/mofa']
+      });
+    }
+  });
+  
+  // Convert to array and add description
+  mofaContributors = Array.from(allMofaContributors.values()).map(contributor => ({
+    ...contributor,
+    desc: { 
+      en: `${contributor.contributions} contributions to MoFA (${contributor.repositories.join(', ')})`, 
+      zh: `为 MoFA 贡献了 ${contributor.contributions} 次提交 (${contributor.repositories.join(', ')})` 
+    }
+  }));
+  
+  console.log(`Fetched ${mofaContributors.length} combined MoFA contributors from both repositories`);
 } catch (error) {
   console.log('Failed to fetch MoFA contributors:', error);
 }
