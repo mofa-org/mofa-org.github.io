@@ -43,7 +43,7 @@ async function fetchAllContributors(repo) {
 
 // Fetch MoFA contributors from GitHub API (all pages)
 try {
-  const mofaData = await fetchAllContributors('moxin-org/mofa');
+  const mofaData = await fetchAllContributors('mofa-org/mofa');
   mofaContributors = mofaData
     .filter(contributor => contributor.type === 'User') // Filter out bots
     .map(contributor => ({

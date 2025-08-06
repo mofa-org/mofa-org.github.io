@@ -11,7 +11,7 @@ tags: [MoFA, 开源项目, 智能体, 开发者招募, 悬赏任务]
 
 ### 🌟 **关于MoFA**
 
-MoFA由Moxin团队开源（[GitHub项目地址](https://github.com/moxin-org/mofa)），聚焦多智能体系统的开发与协作。它通过模块化设计、动态数据流和智能链接能力，让开发者像搭积木一样快速组合Agent，实现复杂任务自动化。无论是代码生成、实时搜索，还是智能规划，MoFA都能成为你的终极工具箱！
+MoFA由Moxin团队开源（[GitHub项目地址](https://github.com/mofa-org/mofa)），聚焦多智能体系统的开发与协作。它通过模块化设计、动态数据流和智能链接能力，让开发者像搭积木一样快速组合Agent，实现复杂任务自动化。无论是代码生成、实时搜索，还是智能规划，MoFA都能成为你的终极工具箱！
 
 ### 🛠 **开发者任务：你的代码，定义AI的未来**
 
@@ -39,7 +39,7 @@ MoFA由Moxin团队开源（[GitHub项目地址](https://github.com/moxin-org/mof
 
 ### 📌 **如何参与？**
 
-1. **探索GitHub**：阅读[MoFA文档](https://github.com/moxin-org/mofa)，了解框架设计。
+1. **探索GitHub**：阅读[MoFA文档](https://github.com/mofa-org/mofa)，了解框架设计。
 2. **认领任务**：查看任务列表，或提交你的创意提案。与项目负责人确认任务的认领。
 3. **开发任务**：根据任务不同要求，通过独立工作或协作的方式完成任务。
 4. **提交成果**：通过Pull Request或指定平台提交代码，通过审核即可获得奖励！
@@ -51,5 +51,5 @@ MoFA由Moxin团队开源（[GitHub项目地址](https://github.com/moxin-org/mof
 - **无限可能**：你的代码将直接对世界开放，定义AI的未来！
 
 **立即行动，成为MoFA生态的奠基者！**
-🔗 **GitHub入口**：https://github.com/moxin-org/mofa
+🔗 **GitHub入口**：https://github.com/mofa-org/mofa
 📩 **联系团队**：提交Issue或邮件至[dev@moxin.org](mailto:dev@moxin.org)，标注【开发者招募】

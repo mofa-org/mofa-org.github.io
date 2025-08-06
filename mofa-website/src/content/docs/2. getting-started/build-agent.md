@@ -89,8 +89,8 @@ authors = [  # [可选] 作者列表，可根据需要修改
 ]
 description = "A simple agent template"  # [必改] 项目描述，需改为实际功能描述
 license = "MIT License"  # [可选] 开源许可证，可根据需要修改
-homepage = "https://github.com/moxin-org/mofa"  # [可选] 项目主页，可根据需要修改
-documentation = "https://github.com/moxin-org/mofa/blob/main/README.md"  # [可选] 文档地址，可根据需要修改
+homepage = "https://github.com/mofa-org/mofa"  # [可选] 项目主页，可根据需要修改
+documentation = "https://github.com/mofa-org/mofa/blob/main/README.md"  # [可选] 文档地址，可根据需要修改
 readme = "README.md"  # [建议保留] 主说明文件
 packages = [{ include = "agent" }]  # [必改] 包含的Python包，需改为实际包名
 

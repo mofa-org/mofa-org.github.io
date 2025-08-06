@@ -68,7 +68,7 @@ dora --version
 
 ```bash
 # 克隆仓库
-git clone https://github.com/moxin-org/mofa.git
+git clone https://github.com/mofa-org/mofa.git
 cd mofa/python
 
 # 安装依赖
