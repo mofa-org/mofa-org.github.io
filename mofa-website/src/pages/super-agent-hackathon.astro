@@ -2,30 +2,29 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<BaseLayout title="第三届超级智能体大赛 · AIOS">
+<BaseLayout title="第三届超级智能体Campathon">
   <main style="background-color: #f3f2f7;">
-	<img src="/images/科技风壁纸.png" alt="SuperAgent Hackathon Master Image" class="w-full h-auto rounded-lg" />
+  <img src="/images/科技风壁纸.png" alt="SuperAgent Hackathon Master Image" class="w-full h-auto rounded-lg" />
     <section class="text-center py-20">
       <div class="container mx-auto px-4">
-        <h1 class="text-5xl md:text-6xl font-bold mb-4 text-gray-800">第三届 超级智能体大赛</h1>
-        <h2 class="text-3xl md:text-4xl font-light mb-6 text-gray-600">SuperAgent Hackathon · AIOS</h2>
+        <h1 class="text-5xl md:text-6xl font-bold mb-4 text-gray-800">第三届 <span class="text-blue-600">超级智能体 Campathon</span></h1>
+        <h2 class="text-3xl md:text-4xl font-light mb-6 text-gray-600">Super Agent Campathon</h2>
         <p class="max-w-2xl mx-auto mb-8 text-gray-500">
            共同定义有“灵魂”的AI及下一代交互
         </p>
-        <a href="#register" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300">
-          <!-- 立即报名，开启创变之旅 -->
-		   报名稍后开启
+        <a href="#register" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300 shadow-md hover:shadow-lg">
+          报名稍后开启
         </a>
       </div>
     </section>
 
     <section id="about" class="py-16 bg-white">
       <div class="container mx-auto px-4 text-center max-w-4xl">
-        <h2 class="text-4xl font-bold mb-4">未来已来，你来创造</h2>
-        <p class="text-lg text-gray-600 leading-relaxed">
+        <h2 class="text-4xl font-bold mb-4 text-blue-600">未来已来，你来创造</h2>
+        <p class="text-lg text-gray-700 leading-relaxed">
           还记得电影《Her》中那个懂你、陪你的AI伴侣吗？那不再是科幻。
         </p>
-        <p class="text-lg text-gray-600 leading-relaxed mt-4">
+        <p class="text-lg text-gray-700 leading-relaxed mt-4">
           “超级智能体大赛”已连续举办两届，是 GOSIM 大会的年度旗舰开发者盛事。今年，我们聚焦于 AIOS (人工智能操作系统)——一个专为端侧设备打造的、能够进行实时、低延迟、高情商对话的革命性框架。我们的使命是解放开发者的创造力，让你能轻松构建出真正个性化、能够深度融入日常生活的超级智能体。这不仅仅是一场比赛，更是一场关于人机交互未来的探索。
         </p>
       </div>
@@ -33,35 +32,35 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
     <section id="challenges" class="py-16" style="background-color: #f3f2f7;">
       <div class="container mx-auto px-4 text-center max-w-4xl">
-        <h2 class="text-4xl font-bold mb-4">创造一个有“灵魂”的智能体</h2>
+        <h2 class="text-4xl font-bold mb-4 text-gray-800">创造一个有“灵魂”的智能体</h2>
         <p class="text-lg text-gray-600 mb-8">
           我们希望你构建一个鲜活的、仿佛拥有自主意识的智能体。你的核心挑战是实现极致的实时性、自然的交互感、丰富的情感力与强大的扩展性。
         </p>
-        <h3 class="text-2xl font-semibold mb-6">你可以探索的方向包括：</h3>
+        <h3 class="text-2xl font-semibold mb-6 text-blue-600">你可以探索的方向包括但不限于：</h3>
         <ul class="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
-          <li class="bg-white p-6 rounded-lg shadow-md">🧠 <strong class="font-semibold">全天候个人助理</strong>：高效处理邮件、安排日程、完成线上购物和预订。</li>
-          <li class="bg-white p-6 rounded-lg shadow-md">👨‍🏫 <strong class="font-semibold">有耐心的学习导师</strong>：进行外语陪练、解答专业问题、激发学习兴趣。</li>
-          <li class="bg-white p-6 rounded-lg shadow-md">❤️ <strong class="font-semibold">懂你的情感伴侣</strong>：倾听你的烦恼，分享你的喜悦，提供温暖的情绪支持。</li>
-          <li class="bg-white p-6 rounded-lg shadow-md">👓 <strong class="font-semibold">智能硬件的“大脑”</strong>：为智能眼镜、智能音箱注入强大的对话能力，实现真正的“免提”操作。</li>
+          <li class="bg-white p-6 rounded-lg shadow-md border-l-4 border-blue-500">🧠 <strong class="font-semibold text-gray-800">全天候个人助理</strong>：高效处理邮件、安排日程、完成线上购物和预订。</li>
+          <li class="bg-white p-6 rounded-lg shadow-md border-l-4 border-teal-500">👨‍🏫 <strong class="font-semibold text-gray-800">有耐心的学习导师</strong>：进行外语陪练、解答专业问题、激发学习兴趣。</li>
+          <li class="bg-white p-6 rounded-lg shadow-md border-l-4 border-purple-500">❤️ <strong class="font-semibold text-gray-800">懂你的情感伴侣</strong>：倾听你的烦恼，分享你的喜悦，提供温暖的情绪支持。</li>
+          <li class="bg-white p-6 rounded-lg shadow-md border-l-4 border-indigo-500">👓 <strong class="font-semibold text-gray-800">智能硬件的“大脑”</strong>：为智能眼镜、智能音箱注入强大的对话能力，实现真正的“免提”操作。</li>
         </ul>
       </div>
     </section>
 
 <section id="why-join" class="py-16 bg-white">
       <div class="container mx-auto px-4 text-center">
-        <h2 class="text-4xl font-bold mb-12">为何参赛？</h2>
+        <h2 class="text-4xl font-bold mb-12 text-gray-800">为何参赛？</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div class="p-6">
-            <h3 class="text-2xl font-bold mb-2">🏆 顶级大奖与荣誉</h3>
+            <h3 class="text-2xl font-bold mb-2 text-blue-600">🏆 顶级大奖与荣誉</h3>
             <p class="text-gray-600">赢取包括5090笔记本电脑、MacBook Pro在内的顶级硬件大奖，更有机会在GOSIM Hangzhou 2025主会场展示作品，赢得行业瞩目。</p>
           </div>
           <div class="p-6">
-            <h3 class="text-2xl font-bold mb-2">🚀 前沿技术深度实践</h3>
-            <p class="text-gray-600">亲手体验最前沿的DORA数据流引擎与AIOS框架。</p>
+            <h3 class="text-2xl font-bold mb-2 text-blue-600">🚀 智能体与AIOS技术实践</h3>
+            <p class="text-gray-600">从入门到精通，亲手体验最前沿的AI Agent与AIOS技术框架。</p>
           </div>
           <div class="p-6">
-            <h3 class="text-2xl font-bold mb-2">🧑‍💻 顶级导师全程指导</h3>
-            <p class="text-gray-600">来自核心研发团队的专家将提供线上线下培训与技术指导，助你扫清障碍。</p>
+            <h3 class="text-2xl font-bold mb-2 text-blue-600">🧑‍💻 核心导师全程指导</h3>
+            <p class="text-gray-600">来自核心研发团队的专家将提供线上技术训练营与指导，助你扫清障碍，实现从入门到精通。</p>
           </div>
         </div>
       </div>
@@ -70,48 +69,51 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <section id="tech-stack" class="py-16 bg-gray-800 text-white">
         <div class="container mx-auto px-4 text-center">
             <h2 class="text-4xl font-bold mb-12">技术武器库</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
-                <div class="bg-gray-700 p-6 rounded-lg"><strong>AIOS 核心框架</strong>: 你的智能体在端侧设备上高效运行的心脏。</div>
-                <div class="bg-gray-700 p-6 rounded-lg"><strong>DORA 数据流引擎</strong>: 像搭积木一样，用图形化界面轻松编排复杂的AI工作流。</div>
-                <div class="bg-gray-700 p-6 rounded-lg"><strong>MoFA Stage 开发平台</strong>: 一站式的“智能体IDE”，提供从开发、调试到部署的全方位支持。</div>
-                <div class="bg-gray-700 p-6 rounded-lg"><strong>MCP 开放计算协议</strong>: 即时连接海量第三方服务（地图、支付、API等），让你的智能体无所不能。</div>
-                <div class="bg-gray-700 p-6 rounded-lg"><strong>个性化语音模型</strong>: 只需少量样本，即可克隆或创造出独一无二的声音。</div>
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <div class="bg-gray-700 p-6 rounded-lg border-2 border-transparent hover:border-blue-500 transition-colors"><strong>Voice Dialogue 语音模型</strong>: 由开源模型驱动的语音对话系统，可自定义语音。</div>
+                <div class="bg-gray-700 p-6 rounded-lg border-2 border-transparent hover:border-teal-400 transition-colors"><strong>MCP 开放计算协议</strong>: 连接海量第三方服务（API等），让你的智能体无所不能。</div>
+                <div class="bg-gray-700 p-6 rounded-lg border-2 border-transparent hover:border-blue-500 transition-colors"><strong>MoFA 框架</strong>: 专为Agent打造的高效、可扩展的开发框架。</div>
+                <div class="bg-gray-700 p-6 rounded-lg border-2 border-transparent hover:border-teal-400 transition-colors"><strong>DORA 数据流引擎</strong>: 像搭积木一样，用图形化界面轻松编排复杂的AI工作流。</div>
+                <div class="bg-gray-700 p-6 rounded-lg border-2 border-transparent hover:border-blue-500 transition-colors"><strong>MoFA Stage 开发平台</strong>: 一站式“智能体IDE”，提供开发、调试到部署的全方位支持。</div>
+                <div class="bg-gray-700 p-6 rounded-lg border-2 border-transparent hover:border-teal-400 transition-colors"><strong>AIOS 核心框架</strong>: 你的智能体在端侧设备上高效运行的心脏。</div>
             </div>
         </div>
     </section>
 
     <section id="schedule" class="py-16 bg-white">
       <div class="container mx-auto px-4 max-w-3xl">
-        <h2 class="text-4xl font-bold text-center mb-12">赛程安排</h2>
-        <ol class="relative border-l border-gray-300">
+        <h2 class="text-4xl font-bold text-center mb-12 text-gray-800">赛程安排</h2>
+        <ol class="relative border-l border-blue-400">
           <li class="mb-10 ml-6">
-            <span class="absolute flex items-center justify-center w-6 h-6 bg-blue-200 rounded-full -left-3 ring-8 ring-white"></span>
-            <h3 class="flex items-center mb-1 text-lg font-semibold">全球报名</h3>
-            <time class="block mb-2 text-sm font-normal leading-none text-gray-500">2025年8月7日 - 8月22日</time>
-            <p class="text-base font-normal text-gray-600">组建你的团队（1-4人），提交你的绝妙创意。</p>
+            <span class="absolute flex items-center justify-center w-6 h-6 bg-blue-500 rounded-full -left-3 ring-8 ring-white"></span>
+            <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900">全球报名</h3>
+            <time class="block mb-2 text-sm font-normal leading-none text-blue-800">2025年8月15日 - 8月21日</time>
+            <p class="text-base font-normal text-gray-600">提交你的绝妙创意，开启个人荣耀之旅。</p>
           </li>
           <li class="mb-10 ml-6">
-            <span class="absolute flex items-center justify-center w-6 h-6 bg-blue-200 rounded-full -left-3 ring-8 ring-white"></span>
-            <h3 class="text-lg font-semibold">线上技术培训工坊</h3>
-            <time class="block mb-2 text-sm font-normal leading-none text-gray-500">2025年8月23日</time>
-            <p class="text-gray-600">核心导师亲授，带你快速上手全套技术栈。</p>
-          </li>
-          <li class="mb-10 ml-6">
-            <span class="absolute flex items-center justify-center w-6 h-6 bg-blue-200 rounded-full -left-3 ring-8 ring-white"></span>
-            <h3 class="text-lg font-semibold">线上初赛开发</h3>
-            <time class="block mb-2 text-sm font-normal leading-none text-gray-500">2025年8月24日 - 9月5日</time>
+            <span class="absolute flex items-center justify-center w-6 h-6 bg-blue-500 rounded-full -left-3 ring-8 ring-white"></span>
+            <h3 class="text-lg font-semibold text-gray-900">线上初赛开发</h3>
+            <time class="block mb-2 text-sm font-normal leading-none text-blue-800">2025年8月22日 - 9月7日</time>
             <p class="text-gray-600">施展你的才华，将想法变为现实。</p>
+            <ol class="mt-4 relative border-l border-gray-300">
+              <li class="mb-4 ml-6">
+                <span class="absolute flex items-center justify-center w-6 h-6 bg-blue-200 rounded-full -left-3 ring-8 ring-white"></span>
+                <h4 class="text-md font-semibold text-gray-800">线上技术训练营</h4>
+                <time class="block mb-2 text-sm font-normal leading-none text-gray-500">2025年8月23-24日， 8月30-31日</time>
+                <p class="text-gray-600">核心导师亲授，带你快速上手全套技术栈。</p>
+              </li>
+            </ol>
           </li>
            <li class="mb-10 ml-6">
-            <span class="absolute flex items-center justify-center w-6 h-6 bg-blue-200 rounded-full -left-3 ring-8 ring-white"></span>
-            <h3 class="text-lg font-semibold">决赛入围名单公布</h3>
-            <time class="block mb-2 text-sm font-normal leading-none text-gray-500">2025年9月8日</time>
-            <p class="text-gray-600">Top 6 团队将脱颖而出，获得线下决赛资格。</p>
+            <span class="absolute flex items-center justify-center w-6 h-6 bg-blue-500 rounded-full -left-3 ring-8 ring-white"></span>
+            <h3 class="text-lg font-semibold text-gray-900">决赛入围名单公布</h3>
+            <time class="block mb-2 text-sm font-normal leading-none text-blue-800">2025年9月8日</time>
+            <p class="text-gray-600">优胜选手将脱颖而出，获得线下决赛资格。</p>
           </li>
           <li class="ml-6">
-            <span class="absolute flex items-center justify-center w-6 h-6 bg-green-200 rounded-full -left-3 ring-8 ring-white"></span>
-            <h3 class="text-lg font-semibold">巅峰对决 & 颁奖典礼</h3>
-            <time class="block mb-2 text-sm font-normal leading-none text-gray-500">2025年9月13日 - 14日 (GOSIM Hangzhou 2025 现场)</time>
+            <span class="absolute flex items-center justify-center w-6 h-6 bg-green-500 rounded-full -left-3 ring-8 ring-white"></span>
+            <h3 class="text-lg font-semibold text-green-800">巅峰对决 & 颁奖典礼</h3>
+            <time class="block mb-2 text-sm font-normal leading-none text-green-800">2025年9月13日 - 14日 (GOSIM Hangzhou 2025 现场)</time>
             <p class="text-gray-600">在数千名开发者面前，展示你的最终作品，角逐桂冠！</p>
           </li>
         </ol>
@@ -120,38 +122,37 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
     <section id="awards" class="py-16" style="background-color: #f3f2f7;">
       <div class="container mx-auto px-4">
-        <h2 class="text-4xl font-bold text-center mb-12">评审与奖励</h2>
+        <h2 class="text-4xl font-bold text-center mb-12 text-gray-800">评审与奖励</h2>
         <div class="flex flex-wrap justify-center gap-12">
-            <div class="max-w-md">
-                <h3 class="text-2xl font-semibold mb-4 text-center">评审维度</h3>
-                <ul class="list-disc list-inside space-y-2 text-gray-700">
-                    <li><strong>技术创新性</strong>：是否应用了前沿技术，是否具有技术壁垒。</li>
-                    <li><strong>用户体验</strong>：交互是否流畅、自然、富有情感。</li>
-                    <li><strong>创意与完整度</strong>：想法是否新颖，功能实现是否完整。</li>
-                    <li><strong>商业潜力</strong>：是否解决了真实痛点，是否具备市场前景。</li>
+            <div class="max-w-md p-6 bg-white rounded-lg shadow-md">
+                <h3 class="text-2xl font-semibold mb-4 text-center text-blue-600">评审维度</h3>
+                <ul class="space-y-2 text-gray-700">
+                    <li class="flex items-center"><strong class="text-blue-500 mr-2">✔</strong><strong>技术创新性</strong>：是否应用了前沿技术，是否具有技术壁垒。</li>
+                    <li class="flex items-center"><strong class="text-blue-500 mr-2">✔</strong><strong>用户体验</strong>：交互是否流畅、自然、富有情感。</li>
+                    <li class="flex items-center"><strong class="text-blue-500 mr-2">✔</strong><strong>创意与完整度</strong>：想法是否新颖，功能实现是否完整。</li>
+                    <li class="flex items-center"><strong class="text-blue-500 mr-2">✔</strong><strong>商业潜力</strong>：是否解决了真实痛点，是否具备市场前景。</li>
                 </ul>
             </div>
-            <div class="max-w-md">
-                <h3 class="text-2xl font-semibold mb-4 text-center">奖项设置</h3>
-                <ul class="list-disc list-inside space-y-2 text-gray-700">
-                    <li>🥇 <strong>一等奖</strong>: 5090笔记本电脑</li>
-                    <li>🥈 <strong>二等奖</strong>: MacBook Pro</li>
-                    <li>🥉 <strong>三等奖 (3名)</strong>: Mac mini</li>
+            <div class="max-w-md p-6 bg-white rounded-lg shadow-md">
+                <h3 class="text-2xl font-semibold mb-4 text-center text-blue-600">奖项设置</h3>
+                <ul class="space-y-2 text-gray-700">
+                    <li>🥇 <strong class="text-yellow-500">一等奖</strong>: 5090 笔记本电脑</li>
+                    <li>🥈 <strong class="text-gray-400">二等奖</strong>: MacBook Pro</li>
+                    <li>🥉 <strong class="text-orange-400">三等奖 (3名)</strong>: Mac mini</li>
                 </ul>
             </div>
         </div>
       </div>
     </section>
 
-    <section id="register" class="py-20 bg-blue-600 text-white">
+    <section id="register" class="py-20 bg-gray-800 text-white">
       <div class="container mx-auto px-4 text-center">
         <h2 class="text-4xl font-bold mb-4">立即行动！</h2>
-        <p class="max-w-2xl mx-auto mb-8 text-blue-100">
-          一个人的英雄主义固然浪漫，但一群人的智慧更能改变世界。时间不等人，未来的定义权，就在你手中。
+        <p class="max-w-2xl mx-auto mb-8 text-gray-300">
+          时间不等人，未来的定义权，就在你手中。
         </p>
-        <a href="#" class="bg-white hover:bg-gray-200 text-blue-600 font-bold py-4 px-10 rounded-full text-xl transition duration-300">
-          <!-- 立即组队报名 -->
-		   报名稍后开启
+        <a href="#" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-10 rounded-full text-xl transition duration-300 shadow-lg hover:shadow-xl">
+          报名稍后开启
         </a>
       </div>
     </section>
