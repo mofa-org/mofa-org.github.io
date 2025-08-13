@@ -3,38 +3,66 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
 <BaseLayout title="第三届超级智能体Campathon">
-  <main style="background-color: #f3f2f7;">
-  <img src="/images/科技风壁纸.png" alt="SuperAgent Hackathon Master Image" class="w-full h-auto rounded-lg" />
-    <section class="text-center py-20">
-      <div class="container mx-auto px-4">
-        <h1 class="text-5xl md:text-6xl font-bold mb-4 text-gray-800">第三届 <span class="text-blue-600">超级智能体 Campathon</span></h1>
-        <h2 class="text-3xl md:text-4xl font-light mb-6 text-gray-600">Super Agent Campathon</h2>
-        <p class="max-w-2xl mx-auto mb-8 text-gray-500">
-           共同定义有“灵魂”的AI及下一代交互
-        </p>
-        <a href="#register" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300 shadow-md hover:shadow-lg">
-          报名稍后开启
-        </a>
-      </div>
-    </section>
+  <section class="relative flex items-center justify-center text-center min-h-[600px] overflow-hidden">
+
+    <img
+      src="/images/科技风壁纸.png"
+      alt="Background"
+      class="absolute inset-0 h-full w-full object-cover"
+    />
+
+    <div class="absolute inset-0 bg-white/70"></div>
+
+    <div class="relative container mx-auto px-4 py-20">
+      <h1 class="text-5xl md:text-6xl font-bold mb-4 text-gray-800">
+        第三届 <span class="text-blue-600">超级智能体 Campathon</span>
+      </h1>
+      <h2 class="text-3xl md:text-4xl font-light mb-6">
+        Super Agent Campathon
+      </h2>
+      <p class="max-w-2xl mx-auto mb-8">
+        共同定义有“灵魂”的 AI 及下一代交互
+      </p>
+      <a
+        href="#register"
+        class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300 shadow-md hover:shadow-lg"
+      >
+        报名稍后开启
+      </a>
+    </div>
+  </section>
 
     <section id="about" class="py-16 bg-white">
-      <div class="container mx-auto px-4 text-center max-w-4xl">
-        <h2 class="text-4xl font-bold mb-4 text-blue-600">未来已来，你来创造</h2>
-        <p class="text-lg text-gray-700 leading-relaxed">
-          还记得电影《Her》中那个懂你、陪你的AI伴侣吗？那不再是科幻。
-        </p>
-        <p class="text-lg text-gray-700 leading-relaxed mt-4">
-          “超级智能体大赛”已连续举办两届，是 GOSIM 大会的年度旗舰开发者盛事。今年，我们聚焦于 AIOS (人工智能操作系统)——一个专为端侧设备打造的、能够进行实时、低延迟、高情商对话的革命性框架。我们的使命是解放开发者的创造力，让你能轻松构建出真正个性化、能够深度融入日常生活的超级智能体。这不仅仅是一场比赛，更是一场关于人机交互未来的探索。
-        </p>
+      <div class="container mx-auto px-4 max-w-4xl">
+        <div class="text-center">
+          <h2 class="text-4xl font-bold mb-4 text-blue-600">迈向终极 AIOS 的 Camp + Hackathon</h2>
+          <p class="mt-4 text-xl text-gray-600">
+            “超级智能体大赛”是 GOSIM 大会的年度开发者核心活动。我们首创 “Campathon” 赛制，让你在学习后立即创造。
+          </p>
+        </div>
+
+        <div class="mt-12 text-lg text-gray-700 leading-relaxed space-y-8">
+          <div>
+            <strong class="text-gray-900 font-semibold">第一步：系统学习 (Camp)</strong>
+            <p class="mt-1">在为期两周的线上技术训练营中，开发者将学习并掌握开发框架的核心技术与开发工具。项目专为端侧设备设计，旨在实现实时、低延迟和富有情感的对话体验。</p>
+          </div>
+          <div>
+            <strong class="text-gray-900 font-semibold">第二步：动手创造 (Hackathon)</strong>
+            <p class="mt-1">完成训练营后，开发者将在编程马拉松环节动手实践，将自己的创意构建成一个实用、个性化的智能体应用。我们尤其鼓励和支持个人开发者参与，展示你的技术构想。</p>
+          </div>
+          <div>
+            <strong class="text-gray-900 font-semibold">最终目标：定义未来</strong>
+            <p class="mt-1">我们期待看到你的作品，共同探索人机交互的下一步发展。</p>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section id="challenges" class="py-16" style="background-color: #f3f2f7;">
+    <section id="challenges" class="py-16" style="background-image: url('https://images.unsplash.com/photo-1517483000871-1dbf64a6e1c6?q=80&w=2338&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); background-size: cover; background-position: center;">
       <div class="container mx-auto px-4 text-center max-w-4xl">
         <h2 class="text-4xl font-bold mb-4 text-gray-800">创造一个有“灵魂”的智能体</h2>
         <p class="text-lg text-gray-600 mb-8">
-          我们希望你构建一个鲜活的、仿佛拥有自主意识的智能体。你的核心挑战是实现极致的实时性、自然的交互感、丰富的情感力与强大的扩展性。
+          你将构建一个鲜活的、仿佛拥有自主意识的智能体。你的核心挑战是实现极致的实时性、自然的交互感、丰富的情感力与强大的扩展性。
         </p>
         <h3 class="text-2xl font-semibold mb-6 text-blue-600">你可以探索的方向包括但不限于：</h3>
         <ul class="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
@@ -43,10 +71,11 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <li class="bg-white p-6 rounded-lg shadow-md border-l-4 border-purple-500">❤️ <strong class="font-semibold text-gray-800">懂你的情感伴侣</strong>：倾听你的烦恼，分享你的喜悦，提供温暖的情绪支持。</li>
           <li class="bg-white p-6 rounded-lg shadow-md border-l-4 border-indigo-500">👓 <strong class="font-semibold text-gray-800">智能硬件的“大脑”</strong>：为智能眼镜、智能音箱注入强大的对话能力，实现真正的“免提”操作。</li>
         </ul>
+        <h3 class="text-2xl font-semibold mt-10 text-white">Sky's the Limit！</h3>
       </div>
     </section>
 
-<section id="why-join" class="py-16 bg-white">
+    <section id="why-join" class="py-16 bg-white">
       <div class="container mx-auto px-4 text-center">
         <h2 class="text-4xl font-bold mb-12 text-gray-800">为何参赛？</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -66,11 +95,11 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       </div>
     </section>
 
-    <section id="tech-stack" class="py-16 bg-gray-800 text-white">
+    <section id="tech-stack" class="py-16 bg-blue-600 text-white">
         <div class="container mx-auto px-4 text-center">
             <h2 class="text-4xl font-bold mb-12">技术武器库</h2>
             <div class="grid grid-cols-2 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-                <div class="bg-gray-700 p-6 rounded-lg border-2 border-transparent hover:border-blue-500 transition-colors"><strong>Voice Dialogue 语音模型</strong>: 由开源模型驱动的语音对话系统，可自定义语音。</div>
+                <div class="bg-gray-700 p-6 rounded-lg border-2 border-transparent hover:border-blue-500 transition-colors"><strong>Voice Dialogue 对话系统</strong>: 由开源模型驱动的语音对话系统，可自定义语音。</div>
                 <div class="bg-gray-700 p-6 rounded-lg border-2 border-transparent hover:border-teal-400 transition-colors"><strong>MCP 开放计算协议</strong>: 连接海量第三方服务（API等），让你的智能体无所不能。</div>
                 <div class="bg-gray-700 p-6 rounded-lg border-2 border-transparent hover:border-blue-500 transition-colors"><strong>MoFA 框架</strong>: 专为Agent打造的高效、可扩展的开发框架。</div>
                 <div class="bg-gray-700 p-6 rounded-lg border-2 border-transparent hover:border-teal-400 transition-colors"><strong>DORA 数据流引擎</strong>: 像搭积木一样，用图形化界面轻松编排复杂的AI工作流。</div>
@@ -86,13 +115,13 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <ol class="relative border-l border-blue-400">
           <li class="mb-10 ml-6">
             <span class="absolute flex items-center justify-center w-6 h-6 bg-blue-500 rounded-full -left-3 ring-8 ring-white"></span>
-            <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900">全球报名</h3>
+            <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900">全球报名参加训练营</h3>
             <time class="block mb-2 text-sm font-normal leading-none text-blue-800">2025年8月15日 - 8月21日</time>
-            <p class="text-base font-normal text-gray-600">提交你的绝妙创意，开启个人荣耀之旅。</p>
+            <p class="text-base font-normal text-gray-600">报名参与，准备挑战。</p>
           </li>
           <li class="mb-10 ml-6">
             <span class="absolute flex items-center justify-center w-6 h-6 bg-blue-500 rounded-full -left-3 ring-8 ring-white"></span>
-            <h3 class="text-lg font-semibold text-gray-900">线上初赛开发</h3>
+            <h3 class="text-lg font-semibold text-gray-900">训练营及初赛</h3>
             <time class="block mb-2 text-sm font-normal leading-none text-blue-800">2025年8月22日 - 9月7日</time>
             <p class="text-gray-600">施展你的才华，将想法变为现实。</p>
             <ol class="mt-4 relative border-l border-gray-300">
