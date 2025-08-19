@@ -115,65 +115,61 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             <ol class="relative border-l border-blue-400">
                 <li class="mb-10 ml-6">
                     <span class="absolute flex items-center justify-center w-6 h-6 bg-blue-500 rounded-full -left-3 ring-8 ring-white"></span>
-                    <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900">全球报名</h3>
-                    <time class="block mb-2 text-sm font-normal leading-none text-blue-800">即日起</time>
-                    <p class="text-base font-normal text-gray-600">报名参与，准备挑战。</p>
-                </li>
-                <li class="mb-10 ml-6">
-                    <span class="absolute flex items-center justify-center w-6 h-6 bg-blue-500 rounded-full -left-3 ring-8 ring-white"></span>
-                    <h3 class="text-lg font-semibold text-gray-900">训练营 & 晋级赛</h3>
-                    <time class="block mb-2 text-sm font-normal leading-none text-blue-800">9月23日 - 9月28日</time>
-                    <p class="text-gray-600">施展你的才华，将想法变为现实。分为四个课程和两个晋级阶段。</p>
+                    <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900">线上训练营 (Online Camp)</h3>
+                    <time class="block mb-2 text-sm font-normal leading-none text-blue-800">8月24日 - 8月28日</time>
+                    <p class="text-gray-600">学习核心技术，并获得导师的在线辅导。</p>
                     <ol class="mt-4 space-y-6 relative border-l border-gray-300">
                         <li class="mb-4 ml-6">
                             <span class="absolute flex items-center justify-center w-6 h-6 bg-blue-200 rounded-full -left-3 ring-8 ring-white"></span>
-                            <h4 class="text-md font-semibold text-gray-800">第一课：技术栈总览与 MoFA 核心框架</h4>
-                            <time class="block mb-2 text-sm font-normal leading-none text-gray-500">9月23日 周六晚 7-9点</time>
-                            <p class="text-gray-600">介绍Agent开发核心技术组件，讲解 MoFA 框架，完成基础环境配置和示例运行。</p>
+                            <h4 class="text-md font-semibold text-gray-800">开营介绍 & MoFA 核心</h4>
+                            <time class="block mb-2 text-sm font-normal leading-none text-gray-500">8月24日 周日晚 7:00 - 9:00点</time>
+                            <p class="text-gray-600">Campathon 介绍 (吴宗寰), MoFA 框架 (陈成), MoFA Stage & Hub (李尧).</p>
                         </li>
                         <li class="mb-4 ml-6">
                             <span class="absolute flex items-center justify-center w-6 h-6 bg-blue-200 rounded-full -left-3 ring-8 ring-white"></span>
-                            <h4 class="text-md font-semibold text-gray-800">第二课：MoFA智能体框架和DORA 数据流引擎</h4>
-                            <time class="block mb-2 text-sm font-normal leading-none text-gray-500">9月24日 周日晚 7-9点</time>
-                            <p class="text-gray-600">学习使用 DORA 数据流引擎来设计和实现 Agent 的内部逻辑与复杂任务流程。</p>
-                        </li>
-                        <li class="mb-4 ml-6">
-                          <span class="absolute flex items-center justify-center w-6 h-6 bg-yellow-400 rounded-full -left-3 ring-8 ring-white"></span>
-                          <h4 class="text-md font-semibold text-gray-800">第一阶段晋级：项目立项与基础验证</h4>
-                          <time class="block mb-2 text-sm font-normal leading-none text-gray-500">9月26日 周二中午12点截止提交</time>
-                          <p class="text-gray-600">需提交项目计划书与基础实践证明（截图/视频）。</p>
+                            <h4 class="text-md font-semibold text-gray-800">语音集成与案例讲解</h4>
+                            <time class="block mb-2 text-sm font-normal leading-none text-gray-500">8月26日 周二晚 7:00 - 9:00点</time>
+                            <p class="text-gray-600">VoiceDialogue 应用 (李知远, 郭士尧), MoFA, VD, MCP 集成案例 (李知远, 郭士尧).</p>
                         </li>
                         <li class="mb-4 ml-6">
                             <span class="absolute flex items-center justify-center w-6 h-6 bg-blue-200 rounded-full -left-3 ring-8 ring-white"></span>
-                            <h4 class="text-md font-semibold text-gray-800">第三课：集成语音对话与MCP 外部服务</h4>
-                            <time class="block mb-2 text-sm font-normal leading-none text-gray-500">9月26日 周二晚 7-9点</time>
-                            <p class="text-gray-600">为Agent集成语音交互能力，并学习通过MCP协议连接和调用第三方API。</p>
-                        </li>
-                        <li class="mb-4 ml-6">
-                            <span class="absolute flex items-center justify-center w-6 h-6 bg-blue-200 rounded-full -left-3 ring-8 ring-white"></span>
-                            <h4 class="text-md font-semibold text-gray-800">第四课：MoFA Stage 开发平台与赛前准备</h4>
-                            <time class="block mb-2 text-sm font-normal leading-none text-gray-500">9月28日 周四晚 7-9点</time>
-                            <p class="text-gray-600">熟悉完整的开发、调试、部署流程，并明确Hackathon的技术要求和评审标准。</p>
-                        </li>
-                        <li class="mb-4 ml-6">
-                          <span class="absolute flex items-center justify-center w-6 h-6 bg-yellow-400 rounded-full -left-3 ring-8 ring-white"></span>
-                          <h4 class="text-md font-semibold text-gray-800">第二阶段晋级：核心功能原型(MVP)验证</h4>
-                          <time class="block mb-2 text-sm font-normal leading-none text-gray-500">决赛冲刺前</time>
-                          <p class="text-gray-600">提交原型演示视频和代码仓库链接，验证综合运用所学知识的能力。</p>
+                            <h4 class="text-md font-semibold text-gray-800">实践辅导 & 学员演示</h4>
+                            <time class="block mb-2 text-sm font-normal leading-none text-gray-500">8月28日 周四晚 7:00 - 9:00点</time>
+                            <p class="text-gray-600">导师 (陈成, 李尧, 李知远, 郭士尧) 为学员跑通程序提供答疑辅导。</p>
                         </li>
                     </ol>
                 </li>
                 <li class="mb-10 ml-6">
+                    <span class="absolute flex items-center justify-center w-6 h-6 bg-yellow-400 rounded-full -left-3 ring-8 ring-white"></span>
+                    <h3 class="text-lg font-semibold text-gray-900">第一阶段晋级</h3>
+                    <time class="block mb-2 text-sm font-normal leading-none text-blue-800">8月30日 (周六) 截止</time>
+                    <p class="text-gray-600">提交 Demo 和 Hackathon 一页计划书。完成的小组将晋级第二阶段。</p>
+                </li>
+                <li class="mb-10 ml-6">
                     <span class="absolute flex items-center justify-center w-6 h-6 bg-blue-500 rounded-full -left-3 ring-8 ring-white"></span>
-                    <h3 class="text-lg font-semibold text-gray-900">决赛入围名单公布</h3>
+                    <h3 class="text-lg font-semibold text-gray-900">黑客松自主开发 (Hackathon)</h3>
+                     <time class="block mb-2 text-sm font-normal leading-none text-blue-800">8月31日 - 9月7日</time>
+                    <p class="text-gray-600">学员自主开发，实现各队的超级智能体计划。讲师提供在线辅导。</p>
+                </li>
+                <li class="mb-10 ml-6">
+                    <span class="absolute flex items-center justify-center w-6 h-6 bg-yellow-400 rounded-full -left-3 ring-8 ring-white"></span>
+                    <h3 class="text-lg font-semibold text-gray-900">路演资格公布</h3>
                      <time class="block mb-2 text-sm font-normal leading-none text-blue-800">9月8日</time>
-                    <p class="text-gray-600">TOP5选手将脱颖而出，获得线下决赛资格。</p>
+                    <p class="text-gray-600">宣布获得路演资格的小组，前6名选手受邀参加GOSIM现场活动。</p>
+                </li>
+                <li class="mb-10 ml-6">
+                    <span class="absolute flex items-center justify-center w-6 h-6 bg-blue-500 rounded-full -left-3 ring-8 ring-white"></span>
+                    <h3 class="text-lg font-semibold text-gray-900">路演团队持续开发</h3>
+                     <time class="block mb-2 text-sm font-normal leading-none text-blue-800">9月9日 - 9月12日</time>
+                    <p class="text-gray-600">路演团队持续完善项目，可进行接入本地模型等深化开发。讲师提供在线辅导。</p>
                 </li>
                 <li class="ml-6">
                     <span class="absolute flex items-center justify-center w-6 h-6 bg-green-500 rounded-full -left-3 ring-8 ring-white"></span>
-                    <h3 class="text-lg font-semibold text-green-800">GOSIM 线下黑客松 & 颁奖典礼</h3>
+                    <h3 class="text-lg font-semibold text-green-800">GOSIM 现场决赛 & 颁奖</h3>
                     <time class="block mb-2 text-sm font-normal leading-none text-green-800">GOSIM Hangzhou 2025 (9月13-14日, 浙江杭州)</time>
-                    <p class="text-gray-600">在数千名开发者面前，展示你的最终作品，角逐桂冠！</p>
+                    <p class="text-gray-600"><strong>9月13日</strong>: 现场比赛，模型本地化改造。</p>
+                    <p class="text-gray-600"><strong>9月14日 上午</strong>: 现场路演与评分。</p>
+                    <p class="text-gray-600"><strong>9月14日 下午</strong>: 颁奖典礼。</p>
                 </li>
             </ol>
         </div>
