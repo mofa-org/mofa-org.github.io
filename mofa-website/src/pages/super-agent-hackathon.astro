@@ -81,7 +81,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div class="p-6">
             <h3 class="text-2xl font-bold mb-2 text-blue-600">🏆 顶级大奖与荣誉</h3>
-            <p class="text-gray-600">赢取包括 RTX 5090 笔记本电脑、MacBook Pro 在内的顶级硬件大奖，TOP5更有机会在 GOSIM Hangzhou 2025 主会场展示作品，赢得行业瞩目。</p>
+            <p class="text-gray-600">赢取包括 RTX 5090 笔记本电脑、MacBook Pro 在内的顶级硬件大奖。前6名队伍将获邀参加 GOSIM Hangzhou 2025 现场决赛，我们将为每队报销一位成员的差旅并赠送大会门票与礼品。*注：所有奖励均以团队为单位（一队一份）。*</p>
           </div>
           <div class="p-6">
             <h3 class="text-2xl font-bold mb-2 text-blue-600">🚀 前沿端侧技术实践</h3>
@@ -99,7 +99,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <div class="container mx-auto px-4 text-center">
             <h2 class="text-4xl font-bold mb-12">技术武器库</h2>
             <div class="grid grid-cols-2 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-                <div class="bg-gray-700 p-6 rounded-lg border-2 border-transparent hover:border-blue-500 transition-colors"><strong>Voice Dialogue 对话系统</strong>: 由开源模型驱动的语音对话系统，可自定义语音、TTS/ASR。</div>
+                <div class="bg-gray-700 p-6 rounded-lg border-2 border-transparent hover:border-blue-500 transition-colors"><strong>Moly LLM 前端 App</strong>: 一个为大语言模型打造的前端交互应用。</div>
                 <div class="bg-gray-700 p-6 rounded-lg border-2 border-transparent hover:border-teal-400 transition-colors"><strong>MCP 开放计算协议</strong>: 连接海量第三方服务（如RESTful API），让你的智能体无所不能。</div>
                 <div class="bg-gray-700 p-6 rounded-lg border-2 border-transparent hover:border-blue-500 transition-colors"><strong>MoFA 框架</strong>: 专为Agent打造的高效、可扩展的模块化开发框架，管理生命周期。</div>
                 <div class="bg-gray-700 p-6 rounded-lg border-2 border-transparent hover:border-teal-400 transition-colors"><strong>DORA 数据流引擎</strong>: 用于设计和实现 Agent 的内部逻辑与复杂任务流程，支持线性和非线性任务流。</div>
@@ -123,19 +123,19 @@ import BaseLayout from '../layouts/BaseLayout.astro';
                             <span class="absolute flex items-center justify-center w-6 h-6 bg-blue-200 rounded-full -left-3 ring-8 ring-white"></span>
                             <h4 class="text-md font-semibold text-gray-800">开营介绍 & MoFA 核心</h4>
                             <time class="block mb-2 text-sm font-normal leading-none text-gray-500">8月24日 周日晚 7:00 - 9:00点</time>
-                            <p class="text-gray-600">Campathon 介绍 (吴宗寰), MoFA 框架 (陈成), MoFA Stage & Hub (李尧).</p>
+                            <p class="text-gray-600">Campathon 介绍, MoFA 框架, MoFA Stage & Hub。</p>
                         </li>
                         <li class="mb-4 ml-6">
                             <span class="absolute flex items-center justify-center w-6 h-6 bg-blue-200 rounded-full -left-3 ring-8 ring-white"></span>
-                            <h4 class="text-md font-semibold text-gray-800">语音集成与案例讲解</h4>
+                            <h4 class="text-md font-semibold text-gray-800">Moly, MCP 与 MoFA 集成</h4>
                             <time class="block mb-2 text-sm font-normal leading-none text-gray-500">8月26日 周二晚 7:00 - 9:00点</time>
-                            <p class="text-gray-600">VoiceDialogue 应用 (李知远, 郭士尧), MoFA, VD, MCP 集成案例 (李知远, 郭士尧).</p>
+                            <p class="text-gray-600">LLM 前端 Moly 介绍, MCP 协议简介, Moly, MCP 与 MoFA 的集成应用, 及 MoFA Stage 上手实践。</p>
                         </li>
                         <li class="mb-4 ml-6">
                             <span class="absolute flex items-center justify-center w-6 h-6 bg-blue-200 rounded-full -left-3 ring-8 ring-white"></span>
                             <h4 class="text-md font-semibold text-gray-800">实践辅导 & 学员演示</h4>
                             <time class="block mb-2 text-sm font-normal leading-none text-gray-500">8月28日 周四晚 7:00 - 9:00点</time>
-                            <p class="text-gray-600">导师 (陈成, 李尧, 李知远, 郭士尧) 为学员跑通程序提供答疑辅导。</p>
+                            <p class="text-gray-600">导师为学员提供 Moly, MoFA, MoFA Stage 的上手辅导与答疑。</p>
                         </li>
                     </ol>
                 </li>
@@ -143,7 +143,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
                     <span class="absolute flex items-center justify-center w-6 h-6 bg-yellow-400 rounded-full -left-3 ring-8 ring-white"></span>
                     <h3 class="text-lg font-semibold text-gray-900">第一阶段晋级</h3>
                     <time class="block mb-2 text-sm font-normal leading-none text-blue-800">8月30日 (周六) 截止</time>
-                    <p class="text-gray-600">提交 Demo 和 Hackathon 一页计划书。完成的小组将晋级第二阶段。</p>
+                    <p class="text-gray-600">
+                        提交 Demo 和 Hackathon 一页计划书。完成的小组将晋级第二阶段。
+                        <a href="https://wj.qq.com/s2/23587412/56e4/" class="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">提交链接🔗</a>
+                    </p>
                 </li>
                 <li class="mb-10 ml-6">
                     <span class="absolute flex items-center justify-center w-6 h-6 bg-blue-500 rounded-full -left-3 ring-8 ring-white"></span>
@@ -195,6 +198,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
                     <li>🥈 <strong class="text-gray-400">二等奖</strong>: MacBook Pro</li>
                     <li>🥉 <strong class="text-orange-400">三等奖 (3名)</strong>: Mac mini</li>
                 </ul>
+                <p class="mt-4 text-sm text-gray-500">
+                    *注：所有硬件奖励均以团队为单位（即每队一台）。晋级杭州决赛的团队，我们将为每队提供一位成员的免费差旅与GOSIM大会门票及礼品。
+                </p>
             </div>
         </div>
       </div>
