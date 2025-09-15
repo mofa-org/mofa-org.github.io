@@ -1,7 +1,7 @@
 ---
 year: 2025
-title: "2025 MoFA Campus Hackathon Winners"
-title_zh: "2025 MoFA 校园编程马拉松获奖者"
+title: "2025 MoFA Campathon Winners"
+title_zh: "2025 MoFA 编程马拉松获奖者"
 category: "campathon2025"
 ---
 
