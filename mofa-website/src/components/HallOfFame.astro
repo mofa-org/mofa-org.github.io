@@ -1,7 +1,14 @@
 ---
-// Developer Hall of Fame component with real-time GitHub API fetching
+// Developer Hall of Fame component with cached contributors and prize data
+import { getCollection } from 'astro:content';
+import { parsePrizeContent } from '../utils/prizeParser';
+import { parseContributorsContent } from '../utils/contributorsParser';
+import { parseCoreTeamContent } from '../utils/coreTeamParser';
+
 let mofaContributors = [];
 let doraContributors = [];
+let prizeCategories = [];
+let coreTeam = [];
 
 // Function to fetch all contributors with pagination
 async function fetchAllContributors(repo) {
@@ -41,38 +48,24 @@ async function fetchAllContributors(repo) {
   return allContributors;
 }
 
-// Fetch MoFA contributors from both repositories (all pages)
+// Load contributors from cache files (priority) or fallback to API
 try {
-  // Get contributors from new repository
-  const mofaNewData = await fetchAllContributors('mofa-org/mofa');
-  // Get contributors from old repository  
-  const mofaOldData = await fetchAllContributors('moxin-org/mofa');
+  const prizeEntries = await getCollection('prize');
   
-  // Combine and deduplicate contributors based on login name
-  const allMofaContributors = new Map();
-  
-  // Process new repo contributors
-  mofaNewData.filter(contributor => contributor.type === 'User').forEach(contributor => {
-    allMofaContributors.set(contributor.login, {
-      name: contributor.login,
-      role: { en: 'Contributor', zh: '贡献者' },
-      avatar: contributor.avatar_url,
-      github: contributor.html_url,
-      largeImage: `/images/${contributor.login}.jpg`,
-      contributions: contributor.contributions,
-      repositories: ['mofa-org/mofa']
-    });
-  });
-  
-  // Process old repo contributors
-  mofaOldData.filter(contributor => contributor.type === 'User').forEach(contributor => {
-    if (allMofaContributors.has(contributor.login)) {
-      // Add contributions from old repo and mark as contributor to both
-      const existing = allMofaContributors.get(contributor.login);
-      existing.contributions += contributor.contributions;
-      existing.repositories.push('moxin-org/mofa');
-    } else {
-      // New contributor only in old repo
+  // Load MoFA contributors from cache
+  const mofaCacheEntry = prizeEntries.find(entry => entry.data.category === 'mofa' && entry.data.type === 'contributors');
+  if (mofaCacheEntry) {
+    mofaContributors = parseContributorsContent(mofaCacheEntry.body, mofaCacheEntry.data);
+    console.log(`Loaded ${mofaContributors.length} MoFA contributors from cache (${mofaCacheEntry.data.last_updated})`);
+  } else {
+    console.log('No MoFA contributors cache found, falling back to API...');
+    // Fallback to API (keep original logic as backup)
+    const mofaNewData = await fetchAllContributors('mofa-org/mofa');
+    const mofaOldData = await fetchAllContributors('moxin-org/mofa');
+    
+    const allMofaContributors = new Map();
+    
+    mofaNewData.filter(contributor => contributor.type === 'User').forEach(contributor => {
       allMofaContributors.set(contributor.login, {
         name: contributor.login,
         role: { en: 'Contributor', zh: '贡献者' },
@@ -80,77 +73,92 @@ try {
         github: contributor.html_url,
         largeImage: `/images/${contributor.login}.jpg`,
         contributions: contributor.contributions,
-        repositories: ['moxin-org/mofa']
+        repositories: ['mofa-org/mofa']
       });
-    }
-  });
-  
-  // Convert to array and add description
-  mofaContributors = Array.from(allMofaContributors.values()).map(contributor => ({
-    ...contributor,
-    desc: { 
-      en: `${contributor.contributions} contributions to MoFA (${contributor.repositories.join(', ')})`, 
-      zh: `为 MoFA 贡献了 ${contributor.contributions} 次提交 (${contributor.repositories.join(', ')})` 
-    }
-  }));
-  
-  console.log(`Fetched ${mofaContributors.length} combined MoFA contributors from both repositories`);
-} catch (error) {
-  console.log('Failed to fetch MoFA contributors:', error);
-}
-
-// Fetch Dora-rs contributors from GitHub API (all pages)
-try {
-  const doraData = await fetchAllContributors('dora-rs/dora');
-  doraContributors = doraData
-    .filter(contributor => contributor.type === 'User') // Filter out bots
-    .map(contributor => ({
-      name: contributor.login,
-      role: { en: 'Contributor', zh: '贡献者' },
-      avatar: contributor.avatar_url,
-      github: contributor.html_url,
-      // Check if custom image exists, format: /images/{github_login}.jpg
-      largeImage: `/images/${contributor.login}.jpg`,
+    });
+    
+    mofaOldData.filter(contributor => contributor.type === 'User').forEach(contributor => {
+      if (allMofaContributors.has(contributor.login)) {
+        const existing = allMofaContributors.get(contributor.login);
+        existing.contributions += contributor.contributions;
+        existing.repositories.push('moxin-org/mofa');
+      } else {
+        allMofaContributors.set(contributor.login, {
+          name: contributor.login,
+          role: { en: 'Contributor', zh: '贡献者' },
+          avatar: contributor.avatar_url,
+          github: contributor.html_url,
+          largeImage: `/images/${contributor.login}.jpg`,
+          contributions: contributor.contributions,
+          repositories: ['moxin-org/mofa']
+        });
+      }
+    });
+    
+    mofaContributors = Array.from(allMofaContributors.values()).map(contributor => ({
+      ...contributor,
       desc: { 
-        en: `${contributor.contributions} contributions to Dora-rs`, 
-        zh: `为 Dora-rs 贡献了 ${contributor.contributions} 次提交` 
+        en: `${contributor.contributions} contributions to MoFA (${contributor.repositories.join(', ')})`, 
+        zh: `为 MoFA 贡献了 ${contributor.contributions} 次提交 (${contributor.repositories.join(', ')})` 
       }
     }));
-  console.log(`Fetched ${doraContributors.length} Dora-rs contributors`);
+    
+    console.log(`Fetched ${mofaContributors.length} MoFA contributors from API fallback`);
+  }
+  
+  // Load Dora-rs contributors from cache
+  const doraCacheEntry = prizeEntries.find(entry => entry.data.category === 'dora' && entry.data.type === 'contributors');
+  if (doraCacheEntry) {
+    doraContributors = parseContributorsContent(doraCacheEntry.body, doraCacheEntry.data);
+    console.log(`Loaded ${doraContributors.length} Dora-rs contributors from cache (${doraCacheEntry.data.last_updated})`);
+  } else {
+    console.log('No Dora-rs contributors cache found, falling back to API...');
+    // Fallback to API
+    const doraData = await fetchAllContributors('dora-rs/dora');
+    doraContributors = doraData
+      .filter(contributor => contributor.type === 'User')
+      .map(contributor => ({
+        name: contributor.login,
+        role: { en: 'Contributor', zh: '贡献者' },
+        avatar: contributor.avatar_url,
+        github: contributor.html_url,
+        largeImage: `/images/${contributor.login}.jpg`,
+        desc: { 
+          en: `${contributor.contributions} contributions to Dora-rs`, 
+          zh: `为 Dora-rs 贡献了 ${contributor.contributions} 次提交` 
+        }
+      }));
+    console.log(`Fetched ${doraContributors.length} Dora-rs contributors from API fallback`);
+  }
+  // Load core team data
+  const coreTeamEntry = prizeEntries.find(entry => entry.data.type === 'core');
+  if (coreTeamEntry) {
+    const coreTeamCategory = parseCoreTeamContent(coreTeamEntry.body, coreTeamEntry.data);
+    coreTeam = coreTeamCategory.contributors;
+    console.log(`Loaded ${coreTeam.length} core team members from markdown`);
+  } else {
+    console.log('No core team data found, using fallback');
+  }
+  
+  // Load prize data from the same prizeEntries
+  for (const entry of prizeEntries) {
+    const { data, body } = entry;
+    // Skip contributors cache files and core team, only process prize/hackathon data
+    if (data.type !== 'contributors' && data.type !== 'core') {
+      const prizeCategory = parsePrizeContent(body, data);
+      prizeCategories.push(prizeCategory);
+    }
+  }
+  console.log(`Loaded ${prizeCategories.length} prize categories from markdown files`);
 } catch (error) {
-  console.log('Failed to fetch Dora-rs contributors:', error);
+  console.log('Failed to load contributors and prize data:', error);
 }
 
 const categories = [
   {
     id: 'core',
     name: { en: 'MoFA Core Team', zh: 'MoFA Core Team' },
-    contributors: [
-      {
-        name: 'XiaoKuge',
-        role: { en: 'Core Member', zh: '核心成员' },
-        avatar: 'https://avatars.githubusercontent.com/XiaoKuge?v=4',
-        github: 'https://github.com/XiaoKuge',
-        largeImage: '/images/XiaoKuge.jpg',
-        desc: { en: 'MoFA Core Team Member', zh: 'MoFA Core Team Member'}
-      },
-      {
-        name: 'chengzi0103',
-        role: { en: 'Core Member', zh: '核心成员' },
-        avatar: 'https://avatars.githubusercontent.com/chengzi0103?v=4',
-        github: 'https://github.com/chengzi0103',
-        largeImage: '/images/chengzi0103.jpg',
-        desc: { en: 'MoFA Core Team Member', zh: 'MoFA Core Team Member' }
-      },
-      {
-        name: 'BH3GEI',
-        role: { en: 'Core Member', zh: '核心成员' },
-        avatar: 'https://avatars.githubusercontent.com/BH3GEI?v=4',
-        github: 'https://github.com/BH3GEI',
-        largeImage: '/images/BH3GEI.jpg',
-        desc: { en: 'MoFA Core Team Member', zh: 'MoFA Core Team Member' }
-      }
-    ]
+    contributors: coreTeam
   },
   {
     id: 'contributors',
@@ -162,50 +170,8 @@ const categories = [
     name: { en: 'Dora-rs Contributors', zh: 'Dora-rs 贡献者' },
     contributors: doraContributors
   },
-  {
-    id: 'ai2025',
-    name: { en: '2025 MoFA Hackathon Winners', zh: '2025 MoFA Search AI 搜索引擎大赛获奖者' },
-    contributors: [
-      {
-        name: 'winner123456',
-        role: { en: 'First Prize', zh: 'First Prize' },
-        avatar: 'https://avatars.githubusercontent.com/u/23193969?v=4',
-        github: 'https://github.com/placeholder-winner-1',
-        largeImage: '/images/winner123456.jpg',
-        desc: { en: '2025 contest first prize', zh: '2025 contest first prize' }
-      },
-      {
-        name: 'winner789',
-        role: { en: 'First Prize', zh: 'First Prize' },
-        avatar: 'https://avatars.githubusercontent.com/u/23193969?v=4',
-        github: 'https://github.com/placeholder-winner-2',
-        largeImage: '/images/winner789.jpg',
-        desc: { en: '2025 contest first prize', zh: '2025 contest first prize' }
-      }
-    ]
-  },
-  {
-    id: 'ai2024',
-    name: { en: '2024 MoFA Hackathon Winners', zh: '2024 MoFA Search AI 搜索引擎大赛获奖者' },
-    contributors: [
-      {
-        name: 'winner2024-1',
-        role: { en: 'First Prize', zh: 'First Prize' },
-        avatar: 'https://avatars.githubusercontent.com/u/23193969?v=4',
-        github: 'https://github.com/placeholder-2024-winner-1',
-        largeImage: '/images/winner2024-1.jpg',
-        desc: { en: '2024 contest first prize', zh: '2024 contest first prize' }
-      },
-      {
-        name: 'winner2024-2',
-        role: { en: 'First Prize', zh: 'First Prize' },
-        avatar: 'https://avatars.githubusercontent.com/u/23193969?v=4',
-        github: 'https://github.com/placeholder-2024-winner-2',
-        largeImage: '/images/winner2024-2.jpg',
-        desc: { en: '2024 contest first prize', zh: '2024 contest first prize' }
-      }
-    ]
-  }
+  // Prize categories loaded from markdown files
+  ...prizeCategories
 ];
 ---
 

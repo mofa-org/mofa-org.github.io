@@ -7,6 +7,7 @@ export default defineConfig({
   site: 'https://mofa-org.github.io',
   base: '/',
   outDir: '../docs',
+  srcDir: './src',
   integrations: [
     tailwind({
       // Disable the default base styles to use our custom CSS

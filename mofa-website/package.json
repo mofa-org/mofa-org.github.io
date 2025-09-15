@@ -4,9 +4,12 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build",
+    "build": "npm run update-cache && astro build",
+    "build:fast": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "update-cache": "node scripts/updateContributors.js",
+    "prebuild": "npm run update-cache"
   },
   "dependencies": {
     "@astrojs/markdown-remark": "^6.3.2",

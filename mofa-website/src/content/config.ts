@@ -19,7 +19,22 @@ const blogCollection = defineCollection({
   }),
 });
 
+const prizeCollection = defineCollection({
+  type: 'content',
+  schema: z.object({
+    year: z.number().optional(),
+    type: z.string().optional(),
+    title: z.string(),
+    title_zh: z.string(),
+    category: z.string(),
+    last_updated: z.string().optional(),
+    repositories: z.array(z.string()).optional(),
+    total_contributors: z.number().optional(),
+  }),
+});
+
 export const collections = {
   'docs': docsCollection,
   'blog': blogCollection,
+  'prize': prizeCollection,
 }; 
