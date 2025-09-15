@@ -4,7 +4,7 @@ import 'kleur/colors';
 import 'clsx';
 
 const $$Header = createComponent(async ($$result, $$props, $$slots) => {
-  let starCount = "19K+";
+  let starCount = "100";
   try {
     const response = await fetch("https://api.github.com/repos/mofa-org/mofa");
     if (response.ok) {

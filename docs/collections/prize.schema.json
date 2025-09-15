@@ -1,0 +1,47 @@
+{
+  "$ref": "#/definitions/prize",
+  "definitions": {
+    "prize": {
+      "type": "object",
+      "properties": {
+        "year": {
+          "type": "number"
+        },
+        "type": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "title_zh": {
+          "type": "string"
+        },
+        "category": {
+          "type": "string"
+        },
+        "last_updated": {
+          "type": "string"
+        },
+        "repositories": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "total_contributors": {
+          "type": "number"
+        },
+        "$schema": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "title",
+        "title_zh",
+        "category"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}
