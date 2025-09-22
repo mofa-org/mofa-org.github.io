@@ -6,6 +6,7 @@
 - [博客文章管理](./mofa-website/src/content/blog/) - 编辑博客内容
 - [文档管理](./mofa-website/src/content/docs/) - 编辑技术文档
 - [获奖者和贡献者管理](./mofa-website/src/content/prize/) - 管理hackathon获奖者、contributors缓存、core team
+- 
 
 ### 常用操作
 - **添加博客文章**: 在 `content/blog/` 目录下创建新的 `.md` 文件
