@@ -9,6 +9,9 @@ on:
     branches: [ main ]
   # 允许手动触发
   workflow_dispatch:
+  # 每日自动部署 (UTC时间每天8:00，即北京时间16:00)
+  schedule:
+    - cron: '0 8 * * *'
 
 # 添加权限设置
 permissions:
@@ -37,19 +40,29 @@ jobs:
         run: npm ci
         working-directory: ./mofa-website
         
+      - name: Update contributors cache
+        run: node scripts/updateContributors.js
+        working-directory: ./mofa-website
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        
       - name: Build with Astro
         run: npm run build
         working-directory: ./mofa-website
         
       - name: Commit and push docs
-        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+        if: github.ref == 'refs/heads/main' && (github.event_name == 'push' || github.event_name == 'schedule')
         run: |
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git config --global user.name "github-actions[bot]"
-          git add docs/
+          git add docs/ mofa-website/src/content/prize/*contributors*.md
           if git diff --staged --quiet; then
             echo "No changes to commit"
           else
-            git commit -m "🚀 Auto-build: Update docs from latest changes"
+            if [ "${{ github.event_name }}" == "schedule" ]; then
+              git commit -m "🔄 Daily auto-update: Refresh contributors and docs"
+            else
+              git commit -m "🚀 Auto-build: Update docs from latest changes"
+            fi
             git push
           fi
