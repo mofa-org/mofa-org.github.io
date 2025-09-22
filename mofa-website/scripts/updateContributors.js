@@ -5,29 +5,29 @@
  * This script fetches latest contributors from GitHub API and updates markdown cache files
  */
 
-import { writeFileSync, readFileSync } from 'fs';
-import { join, dirname } from 'path';
-import { fileURLToPath } from 'url';
+import { writeFileSync, readFileSync } from "fs";
+import { join, dirname } from "path";
+import { fileURLToPath } from "url";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 // Configuration
-const CACHE_DIR = join(__dirname, '../src/content/prize');
-const API_BASE = 'https://api.github.com';
+const CACHE_DIR = join(__dirname, "../src/content/prize");
+const API_BASE = "https://api.github.com";
 const REPOS_CONFIG = {
   mofa: {
-    repos: ['mofa-org/mofa', 'moxin-org/mofa'],
-    cacheFile: 'mofa-contributors.md',
-    title: 'MoFA Contributors',
-    title_zh: 'MoFA 贡献者'
+    repos: ["mofa-org/mofa", "mofa-org/mofa-new"],
+    cacheFile: "mofa-contributors.md",
+    title: "MoFA Contributors",
+    title_zh: "MoFA 贡献者",
   },
   dora: {
-    repos: ['dora-rs/dora'],
-    cacheFile: 'dora-contributors.md', 
-    title: 'Dora-rs Contributors',
-    title_zh: 'Dora-rs 贡献者'
-  }
+    repos: ["dora-rs/dora"],
+    cacheFile: "dora-contributors.md",
+    title: "Dora-rs Contributors",
+    title_zh: "Dora-rs 贡献者",
+  },
 };
 
 /**
@@ -37,49 +37,51 @@ async function fetchAllContributors(repo) {
   let allContributors = [];
   let page = 1;
   const perPage = 100;
-  
+
   console.log(`Fetching contributors for ${repo}...`);
-  
+
   try {
     while (true) {
       const url = `${API_BASE}/repos/${repo}/contributors?per_page=${perPage}&page=${page}`;
       const headers = {};
-      
+
       // Add GitHub token if available
       if (process.env.GITHUB_TOKEN) {
-        headers['Authorization'] = `token ${process.env.GITHUB_TOKEN}`;
+        headers["Authorization"] = `token ${process.env.GITHUB_TOKEN}`;
       }
-      
+
       const response = await fetch(url, { headers });
-      
+
       if (!response.ok) {
-        console.warn(`Failed to fetch ${repo} contributors page ${page}: ${response.status}`);
+        console.warn(
+          `Failed to fetch ${repo} contributors page ${page}: ${response.status}`,
+        );
         break;
       }
-      
+
       const data = await response.json();
-      
+
       if (data.length === 0) {
         break;
       }
-      
+
       // Filter out bots
-      const users = data.filter(contributor => contributor.type === 'User');
+      const users = data.filter((contributor) => contributor.type === "User");
       allContributors = allContributors.concat(users);
-      
+
       if (data.length < perPage) {
         break;
       }
-      
+
       page++;
-      
+
       // Add delay to respect rate limits
-      await new Promise(resolve => setTimeout(resolve, 100));
+      await new Promise((resolve) => setTimeout(resolve, 100));
     }
   } catch (error) {
     console.error(`Error fetching ${repo} contributors:`, error.message);
   }
-  
+
   console.log(`Fetched ${allContributors.length} contributors for ${repo}`);
   return allContributors;
 }
@@ -89,11 +91,11 @@ async function fetchAllContributors(repo) {
  */
 function mergeContributors(contributorsLists, repos) {
   const merged = new Map();
-  
+
   contributorsLists.forEach((contributors, index) => {
     const repo = repos[index];
-    
-    contributors.forEach(contributor => {
+
+    contributors.forEach((contributor) => {
       if (merged.has(contributor.login)) {
         // Merge contributions and add to repositories list
         const existing = merged.get(contributor.login);
@@ -106,12 +108,12 @@ function mergeContributors(contributorsLists, repos) {
           contributions: contributor.contributions,
           avatar: contributor.avatar_url,
           github: contributor.html_url,
-          repositories: [repo]
+          repositories: [repo],
         });
       }
     });
   });
-  
+
   return Array.from(merged.values());
 }
 
@@ -119,11 +121,11 @@ function mergeContributors(contributorsLists, repos) {
  * Generate markdown content for contributors cache
  */
 function generateMarkdownContent(config, contributors) {
-  const currentDate = new Date().toISOString().split('T')[0];
-  
+  const currentDate = new Date().toISOString().split("T")[0];
+
   const frontmatter = `---
 type: "contributors"
-category: "${config === REPOS_CONFIG.mofa ? 'mofa' : 'dora'}"
+category: "${config === REPOS_CONFIG.mofa ? "mofa" : "dora"}"
 title: "${config.title}"
 title_zh: "${config.title_zh}"
 last_updated: "${currentDate}"
@@ -136,19 +138,23 @@ total_contributors: ${contributors.length}
 
 这个文件在构建时自动更新，缓存从GitHub API获取的贡献者数据。
 
-**最后更新**: ${currentDate}  
-**总贡献者数**: ${contributors.length}  
-**数据来源**: ${config.repos.join(', ')}
+**最后更新**: ${currentDate}
+**总贡献者数**: ${contributors.length}
+**数据来源**: ${config.repos.join(", ")}
 
 ## Contributors Data
 
-${contributors.map(contributor => `
+${contributors
+  .map(
+    (contributor) => `
 ### ${contributor.name}
 - **Contributions**: ${contributor.contributions}
 - **Avatar**: ${contributor.avatar}
 - **GitHub**: ${contributor.github}
-- **Repositories**: ${contributor.repositories.join(', ')}
-`).join('')}
+- **Repositories**: ${contributor.repositories.join(", ")}
+`,
+  )
+  .join("")}
 
 ---
 *This file is automatically generated during build time. Do not edit manually.*`;
@@ -162,23 +168,25 @@ ${contributors.map(contributor => `
 async function updateContributorsCache(configKey) {
   const config = REPOS_CONFIG[configKey];
   console.log(`\\n📝 Updating ${config.title} cache...`);
-  
+
   // Fetch contributors from all repositories
   const contributorsLists = await Promise.all(
-    config.repos.map(repo => fetchAllContributors(repo))
+    config.repos.map((repo) => fetchAllContributors(repo)),
   );
-  
+
   // Merge contributors from multiple repos
   const mergedContributors = mergeContributors(contributorsLists, config.repos);
-  
+
   // Generate markdown content
   const markdownContent = generateMarkdownContent(config, mergedContributors);
-  
+
   // Write to cache file
   const cacheFilePath = join(CACHE_DIR, config.cacheFile);
   try {
-    writeFileSync(cacheFilePath, markdownContent, 'utf8');
-    console.log(`✅ Updated ${config.cacheFile} with ${mergedContributors.length} contributors`);
+    writeFileSync(cacheFilePath, markdownContent, "utf8");
+    console.log(
+      `✅ Updated ${config.cacheFile} with ${mergedContributors.length} contributors`,
+    );
   } catch (error) {
     console.error(`❌ Failed to write ${config.cacheFile}:`, error.message);
   }
@@ -188,23 +196,25 @@ async function updateContributorsCache(configKey) {
  * Main function
  */
 async function main() {
-  console.log('🚀 Starting contributors cache update...');
-  
+  console.log("🚀 Starting contributors cache update...");
+
   // Check if we're in CI or have GitHub token for higher rate limits
   if (process.env.GITHUB_TOKEN) {
-    console.log('🔑 GitHub token detected, using authenticated requests');
+    console.log("🔑 GitHub token detected, using authenticated requests");
   } else {
-    console.log('⚠️  No GitHub token found, using unauthenticated requests (lower rate limit)');
+    console.log(
+      "⚠️  No GitHub token found, using unauthenticated requests (lower rate limit)",
+    );
   }
-  
+
   try {
     // Update all contributor caches
-    await updateContributorsCache('mofa');
-    await updateContributorsCache('dora');
-    
-    console.log('\\n✅ All contributors caches updated successfully!');
+    await updateContributorsCache("mofa");
+    await updateContributorsCache("dora");
+
+    console.log("\\n✅ All contributors caches updated successfully!");
   } catch (error) {
-    console.error('❌ Failed to update contributors cache:', error);
+    console.error("❌ Failed to update contributors cache:", error);
     process.exit(1);
   }
 }
