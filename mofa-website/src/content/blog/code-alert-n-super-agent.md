@@ -6,6 +6,8 @@ author: XiaoKuge
 tags: [MoFA, 魔法师, mofa community, hackathon, campathon]
 ---
 
+![Code Alert的u型挡板](/images/block-board.jpg)
+
 Code Alert黑客松视频
 
 Code Alert 黑客松 和 Super Agent 坎普松比赛现场混剪视频
