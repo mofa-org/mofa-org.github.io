@@ -7,8 +7,6 @@ tags: [MoFA, 魔法师, mofa.ai, mofa community, mofa development]
 
 ---
 
-# 魔法师的网上家园：MOFA Wizard's HUT的设计
-
 ## **Position Statement**
 
 mofa.ai是魔法师的网上家园。mofa.ai为每一位魔法师提供专属网页，“魔法师小屋”（mofa wizard's hut)。
@@ -28,7 +26,7 @@ mofa.ai是魔法师的网上家园。mofa.ai为每一位魔法师提供专属网
 
 2. 在GitHub上为mofa项目点星“🌟”，认同和支持mofa项目。
 
-每一个魔法师在mofa.ai都有他或她的专属网页（Wizard's cottage)。
+每一个魔法师在mofa.ai都有他或她的专属网页（Wizard's Hut)。
 
 
 
@@ -38,7 +36,7 @@ mofa.ai是魔法师的网上家园。mofa.ai为每一位魔法师提供专属网
 
 
 
-## **魔法师Magic House概念设计**
+## **概念设计**
 
 根本上，Magic House里的内容将与魔法师和mofa有直接关联。这部分要表达：
 
@@ -64,8 +62,8 @@ mofa.ai是魔法师的网上家园。mofa.ai为每一位魔法师提供专属网
 
 - 与mofa无直接关联的任何履历信息。mofa.ai并不具备背书其他信息的权威资质。
 
-履历信息由项目核心开发小组维护。
+魔法师mofa.ai相关履历信息由项目核心开发小组维护。
 
 ## **成为魔法师**
 
-使用mofa，开发mofa，联络我们，成为魔法师！
+使用[mofa](https://mofa.ai)，开发[mofa](https://github.com/mofa-org/mofa)，支持[mofa.ai](https://mofa.ai)。联络我们，成为魔法师！
