@@ -2,7 +2,7 @@
 title: "魔法师的网上家园：MOFA Wizard's HUT的设计"
 description: "mofa.ai是魔法师的网上家园。mofa.ai为每一位魔法师提供专属网页，“魔法师小屋”（mofa wizard's hut)。本文阐述了魔法师小屋设计的基础理念。"
 date: 2025-09-23
-author: Relevant Study
+author: XiaoKuge
 tags: [MoFA, 魔法师, mofa.ai, mofa community, mofa development]
 
 ---
