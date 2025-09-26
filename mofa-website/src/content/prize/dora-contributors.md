@@ -3,7 +3,7 @@ type: "contributors"
 category: "dora"
 title: "Dora-rs Contributors"
 title_zh: "Dora-rs 贡献者"
-last_updated: "2025-09-25"
+last_updated: "2025-09-26"
 repositories: ["dora-rs/dora"]
 total_contributors: 45
 ---
@@ -11,7 +11,7 @@ total_contributors: 45
 
 这个文件在构建时自动更新，缓存从GitHub API获取的贡献者数据。
 
-**最后更新**: 2025-09-25
+**最后更新**: 2025-09-26
 **总贡献者数**: 45
 **数据来源**: dora-rs/dora
 
@@ -19,13 +19,13 @@ total_contributors: 45
 
 
 ### haixuanTao
-- **Contributions**: 1707
+- **Contributions**: 1725
 - **Avatar**: https://avatars.githubusercontent.com/u/22787340?v=4
 - **GitHub**: https://github.com/haixuanTao
 - **Repositories**: dora-rs/dora
 
 ### phil-opp
-- **Contributions**: 1613
+- **Contributions**: 1620
 - **Avatar**: https://avatars.githubusercontent.com/u/1131315?v=4
 - **GitHub**: https://github.com/phil-opp
 - **Repositories**: dora-rs/dora
@@ -84,6 +84,12 @@ total_contributors: 45
 - **GitHub**: https://github.com/chrislearn
 - **Repositories**: dora-rs/dora
 
+### heyong4725
+- **Contributions**: 17
+- **Avatar**: https://avatars.githubusercontent.com/u/45980096?v=4
+- **GitHub**: https://github.com/heyong4725
+- **Repositories**: dora-rs/dora
+
 ### Mati-ur-rehman-017
 - **Contributions**: 16
 - **Avatar**: https://avatars.githubusercontent.com/u/145843744?v=4
@@ -118,12 +124,6 @@ total_contributors: 45
 - **Contributions**: 11
 - **Avatar**: https://avatars.githubusercontent.com/u/58244206?v=4
 - **GitHub**: https://github.com/sjfhsjfh
-- **Repositories**: dora-rs/dora
-
-### heyong4725
-- **Contributions**: 10
-- **Avatar**: https://avatars.githubusercontent.com/u/45980096?v=4
-- **GitHub**: https://github.com/heyong4725
 - **Repositories**: dora-rs/dora
 
 ### Mivik
