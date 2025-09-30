@@ -3,7 +3,7 @@ type: "contributors"
 category: "mofa"
 title: "MoFA Contributors"
 title_zh: "MoFA 贡献者"
-last_updated: "2025-09-29"
+last_updated: "2025-09-30"
 repositories: ["mofa-org/mofa","mofa-org/mofa-new"]
 total_contributors: 24
 ---
@@ -11,7 +11,7 @@ total_contributors: 24
 
 这个文件在构建时自动更新，缓存从GitHub API获取的贡献者数据。
 
-**最后更新**: 2025-09-29
+**最后更新**: 2025-09-30
 **总贡献者数**: 24
 **数据来源**: mofa-org/mofa, mofa-org/mofa-new
 
@@ -25,7 +25,7 @@ total_contributors: 24
 - **Repositories**: mofa-org/mofa, mofa-org/mofa-new
 
 ### XiaoKuge
-- **Contributions**: 123
+- **Contributions**: 124
 - **Avatar**: https://avatars.githubusercontent.com/u/1826896?v=4
 - **GitHub**: https://github.com/XiaoKuge
 - **Repositories**: mofa-org/mofa, mofa-org/mofa-new
@@ -37,7 +37,7 @@ total_contributors: 24
 - **Repositories**: mofa-org/mofa
 
 ### BH3GEI
-- **Contributions**: 32
+- **Contributions**: 33
 - **Avatar**: https://avatars.githubusercontent.com/u/58540850?v=4
 - **GitHub**: https://github.com/BH3GEI
 - **Repositories**: mofa-org/mofa, mofa-org/mofa-new
