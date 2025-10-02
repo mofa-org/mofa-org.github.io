@@ -3,7 +3,7 @@ type: "contributors"
 category: "dora"
 title: "Dora-rs Contributors"
 title_zh: "Dora-rs 贡献者"
-last_updated: "2025-10-01"
+last_updated: "2025-10-02"
 repositories: ["dora-rs/dora"]
 total_contributors: 45
 ---
@@ -11,7 +11,7 @@ total_contributors: 45
 
 这个文件在构建时自动更新，缓存从GitHub API获取的贡献者数据。
 
-**最后更新**: 2025-10-01
+**最后更新**: 2025-10-02
 **总贡献者数**: 45
 **数据来源**: dora-rs/dora
 
@@ -19,7 +19,7 @@ total_contributors: 45
 
 
 ### haixuanTao
-- **Contributions**: 1725
+- **Contributions**: 1738
 - **Avatar**: https://avatars.githubusercontent.com/u/22787340?v=4
 - **GitHub**: https://github.com/haixuanTao
 - **Repositories**: dora-rs/dora
@@ -168,6 +168,12 @@ total_contributors: 45
 - **GitHub**: https://github.com/bobd988
 - **Repositories**: dora-rs/dora
 
+### drindr
+- **Contributions**: 4
+- **Avatar**: https://avatars.githubusercontent.com/u/34709601?v=4
+- **GitHub**: https://github.com/drindr
+- **Repositories**: dora-rs/dora
+
 ### NageshMandal
 - **Contributions**: 3
 - **Avatar**: https://avatars.githubusercontent.com/u/106006006?v=4
@@ -178,12 +184,6 @@ total_contributors: 45
 - **Contributions**: 3
 - **Avatar**: https://avatars.githubusercontent.com/u/107338472?v=4
 - **GitHub**: https://github.com/Radovenchyk
-- **Repositories**: dora-rs/dora
-
-### drindr
-- **Contributions**: 3
-- **Avatar**: https://avatars.githubusercontent.com/u/34709601?v=4
-- **GitHub**: https://github.com/drindr
 - **Repositories**: dora-rs/dora
 
 ### Ryu-Yang
