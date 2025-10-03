@@ -20,7 +20,6 @@ order: 3
 - `mofa` 库
 
 你可以参考以下文档安装这些依赖：
-[安装文档](installation)
 
 ## 3. 创建项目结构
 
@@ -48,7 +47,7 @@ order: 3
 def my_agent_function(input_param1: str, input_param2: int) -> dict:
     """
     实现Agent核心功能的函数。
-    
+
     :param input_param1: 字符串类型的输入参数1
     :param input_param2: 整数类型的输入参数2
     :return: 返回一个字典，包含处理结果
@@ -265,4 +264,4 @@ dora up && dora build dataflow.yml && dora start dataflow.yml --attach
 #### 命令端2(如果是dynamic节点)
 ```bash
 terminal-input
-``` 
+```

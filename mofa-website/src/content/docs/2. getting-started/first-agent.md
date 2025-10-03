@@ -6,7 +6,6 @@ order: 2
 
 # "Hello World" Agent Development Based on Dora
 
-[English](hello_world_dora.md) | [简体中文](hello_world_dora_cn.md)
 
 ## Step 1: Install the Development and Runtime Environment
 
@@ -239,4 +238,3 @@ This "Hello World" example demonstrates:
 - Running and interacting with the agent
 
 This serves as the foundation for building more complex agents and understanding the MoFA framework.
-

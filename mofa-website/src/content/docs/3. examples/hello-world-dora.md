@@ -6,11 +6,9 @@ order: 2
 
 # "Hello World" Agent Development Based on Dora
 
-[English](hello_world_dora.md) | [简体中文](hello_world_dora_cn.md)
 
 ## Step 1: Install the Development and Runtime Environment
 
-Refer to the [Installation Guide](../2-getting-started/installation) to complete the setup of the development and runtime environment.
 
 ## Step 2: Obtain the Intelligent Agent Template
 
@@ -238,4 +236,4 @@ This "Hello World" example demonstrates:
 - Integration with Dora-RS dataflow
 - Running and interacting with the agent
 
-This serves as the foundation for building more complex agents and understanding the MoFA framework. 
+This serves as the foundation for building more complex agents and understanding the MoFA framework.

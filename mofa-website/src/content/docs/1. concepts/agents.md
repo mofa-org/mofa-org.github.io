@@ -8,11 +8,6 @@ order: 1
 
 构建智能体有一定的设计模式（Design Pattern），MoFA提供一系列的设计模式的实现，供开发者作为模版使用。
 
-- [设计模式](templates/design_patterns.md)
-- [reasoner](templates/reasoner_template.md)
-- [self_refine](templates/self_refine_template.md)
-- [crewai](templates/crewai_template.md)
-- ...
 
 ## MoFA组合智能体
 
@@ -56,4 +51,3 @@ Composition allows assembling elements into new entities without changing origin
 ## Dataflow-Driven Approach
 
 MoFA employs a dataflow-driven method focusing on data dependencies rather than business rules, simplifying and enhancing modularity.
-
