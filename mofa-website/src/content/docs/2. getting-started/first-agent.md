@@ -9,7 +9,6 @@ order: 2
 
 ## Step 1: Install the Development and Runtime Environment
 
-Refer to the [Installation Guide](installation) to complete the setup of the development and runtime environment.
 
 ## Step 2: Obtain the Intelligent Agent Template
 
