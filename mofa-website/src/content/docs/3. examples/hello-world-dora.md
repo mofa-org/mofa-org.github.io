@@ -1,6 +1,7 @@
 ---
 title: Hello World with Dora
 description: Building a Hello World agent using Dora-RS framework
+order: 2
 ---
 
 # "Hello World" Agent Development Based on Dora
@@ -9,14 +10,14 @@ description: Building a Hello World agent using Dora-RS framework
 
 ## Step 1: Install the Development and Runtime Environment
 
-Refer to the [Installation Guide](../2.%20getting-started/installation) to complete the setup of the development and runtime environment.
+Refer to the [Installation Guide](../2-getting-started/installation) to complete the setup of the development and runtime environment.
 
 ## Step 2: Obtain the Intelligent Agent Template
 
-1. Go to the [Dora Intelligent Agent Template Repository](../../mofa/agent_templates).
-2. Select the simplest [Reasoner Template](../../mofa/agent_templates/reasoner).
+1. Go to the [MoFA Agent Hub](https://github.com/mofa-org/mofa/tree/main/agent-hub).
+2. Select a template like [Hello World](https://github.com/mofa-org/mofa/tree/main/agent-hub/hello-world).
 3. Copy the template to your development directory.
-4. Review the template description: [README](../../mofa/agent_templates/reasoner/README.md).
+4. Review the template description in the repository.
 
 ## Step 3: Configuration File Setup
 

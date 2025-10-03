@@ -1,6 +1,7 @@
 ---
 title: Design Patterns
 description: Understanding various design patterns used in MoFA agents
+order: 2
 ---
 
 # MoFA Agent Design Patterns

@@ -1,6 +1,7 @@
 ---
 title: Installation
 description: How to install MoFA and set up your development environment
+order: 1
 ---
 
 

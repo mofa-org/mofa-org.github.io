@@ -1,6 +1,7 @@
 ---
 title: Hello World Example
 description: The simplest MoFA agent example - Hello World
+order: 1
 ---
 
 # Hello World

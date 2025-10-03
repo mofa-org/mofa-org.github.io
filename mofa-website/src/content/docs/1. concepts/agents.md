@@ -1,6 +1,7 @@
 ---
 title: MoFA Agents
 description: Understanding MoFA agent concepts, design patterns, and composition
+order: 1
 ---
 
 # MoFA智能体模版

@@ -53,7 +53,7 @@ function renderSidebarItem(key, item, basePath = '') {
     `;
   } else {
     // 这是一个文件夹
-    const folderItems = Object.entries(item).map(([subKey, subItem]) => 
+    const folderItems = sortEntries(Object.entries(item)).map(([subKey, subItem]) => 
       renderSidebarItem(subKey, subItem, fullPath)
     ).join('');
     
@@ -70,7 +70,41 @@ function renderSidebarItem(key, item, basePath = '') {
   }
 }
 
-const sidebarContent = Object.entries(docsStructure).map(([key, item]) => 
+// 基于 order 字段和文件名的排序函数
+function sortEntries(entries) {
+  return entries.sort(([keyA, itemA], [keyB, itemB]) => {
+    // 如果是文档文件，优先使用 frontmatter 中的 order 字段
+    if (itemA.data && itemB.data) {
+      const orderA = itemA.data.order ?? 999;
+      const orderB = itemB.data.order ?? 999;
+      
+      if (orderA !== orderB) {
+        return orderA - orderB;
+      }
+      
+      // order 相同时按标题排序
+      return itemA.data.title.localeCompare(itemB.data.title);
+    }
+    
+    // 如果是文件夹，按文件夹名的数字前缀排序
+    const getOrderFromKey = (key) => {
+      const match = key.match(/^(\d+)/);
+      return match ? parseInt(match[1]) : 999;
+    };
+    
+    const orderA = getOrderFromKey(keyA);
+    const orderB = getOrderFromKey(keyB);
+    
+    if (orderA !== orderB) {
+      return orderA - orderB;
+    }
+    
+    // 数字前缀相同时按字母排序
+    return keyA.localeCompare(keyB);
+  });
+}
+
+const sidebarContent = sortEntries(Object.entries(docsStructure)).map(([key, item]) => 
   renderSidebarItem(key, item)
 ).join('');
 ---

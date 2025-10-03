@@ -1,6 +1,7 @@
 ---
 title: Build Your Own Agent
 description: A comprehensive guide to building agents from scratch with MoFA
+order: 3
 ---
 
 # 从零开始构建一个Agent的指南
