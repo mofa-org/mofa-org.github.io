@@ -3,16 +3,16 @@ type: "contributors"
 category: "mofa"
 title: "MoFA Contributors"
 title_zh: "MoFA 贡献者"
-last_updated: "2025-10-20"
+last_updated: "2025-10-21"
 repositories: ["mofa-org/mofa","mofa-org/mofa-new"]
-total_contributors: 24
+total_contributors: 25
 ---
 # MoFA Contributors Cache
 
 这个文件在构建时自动更新，缓存从GitHub API获取的贡献者数据。
 
-**最后更新**: 2025-10-20
-**总贡献者数**: 24
+**最后更新**: 2025-10-21
+**总贡献者数**: 25
 **数据来源**: mofa-org/mofa, mofa-org/mofa-new
 
 ## Contributors Data
@@ -37,10 +37,16 @@ total_contributors: 24
 - **Repositories**: mofa-org/mofa
 
 ### BH3GEI
-- **Contributions**: 41
+- **Contributions**: 42
 - **Avatar**: https://avatars.githubusercontent.com/u/58540850?v=4
 - **GitHub**: https://github.com/BH3GEI
 - **Repositories**: mofa-org/mofa, mofa-org/mofa-new
+
+### yangrudan
+- **Contributions**: 23
+- **Avatar**: https://avatars.githubusercontent.com/u/66586788?v=4
+- **GitHub**: https://github.com/yangrudan
+- **Repositories**: mofa-org/mofa
 
 ### alabulei1
 - **Contributions**: 14
