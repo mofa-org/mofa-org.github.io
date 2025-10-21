@@ -1,6 +1,11 @@
-# **6分钟开发首个MoFA智能体应用**
+---
+title: 6分钟开发首个MoFA智能体应用
+description: 快速构建一个基于大语言模型的MoFA智能体应用
+order: 2
+---
 
-本指南将指导你快速构建一个基于大语言模型的MoFA智能体（Agent），通过标准化流程实现从环境配置到交互测试的完整开发链路。
+
+本指南将指导你快速构建一个基于大语言模型的MoFA智能体(Agent),通过标准化流程实现从环境配置到交互测试的完整开发链路。
 
 ## 0. 参考文件结构
 
@@ -36,7 +41,7 @@
 ```
 ## 1. 环境变量配置（1分钟）
 
-在示例目录中创建环境变量文件 `.env.secret`  
+在示例目录中创建环境变量文件 `.env.secret`
 （需与数据流配置文件 `dataflow.yml` 同级，本示例路径为 `mofa/dataflows/qwen_agent`）
 
 向 `.env.secret` 写入以下配置，替换 `LLM_API_KEY`、`LLM_API_BASE` 和 `LLM_MODEL` 为实际模型参数：
@@ -74,7 +79,7 @@ cd qwen_agent
 
 ## 3. 配置项目元信息（1分钟）
 
-修改 `qwen_agent` 项目的 `pyproject.toml`  
+修改 `qwen_agent` 项目的 `pyproject.toml`
 （本示例路径为 `mofa/node-hub/qwen_agent/pyproject.toml`），配置项目元数据与依赖：
 
 ```toml
@@ -106,7 +111,7 @@ build-backend = "poetry.core.masonry.api"  # 构建后端指定
 
 ## 4. 实现智能体核心逻辑（2分钟）
 
-编辑 `qwen_agent` 模块的 `main.py`  
+编辑 `qwen_agent` 模块的 `main.py`
 （本示例路径为 `mofa/node-hub/qwen_agent/qwen_agent/main.py`），实现LLM调用与数据流交互逻辑：
 
 ```python
@@ -135,16 +140,16 @@ def call_qwen_directly(user_input: str) -> str:
 def run(agent: MofaAgent):
     load_dotenv('.env.secret')
     user_input = agent.receive_parameter('query')
-    
+
     if not user_input or str(user_input).strip() == "":
         return
-    
+
     agent.write_log(f"收到输入: {user_input}")
     agent.write_log("转发至Qwen模型处理...")
-    
+
     llm_result = call_qwen_directly(user_input)
     agent.write_log(f"Qwen模型返回结果: {llm_result}")
-    
+
     agent.send_output('llm_result', llm_result)
 
 
@@ -159,7 +164,7 @@ if __name__ == "__main__":
 
 ## 5. 定义数据流配置（1分钟）
 
-在 `dataflows/qwen_agent` 目录下创建 `my_llm_dataflow.yml`  
+在 `dataflows/qwen_agent` 目录下创建 `my_llm_dataflow.yml`
 （与 `.env.secret` 同级，本示例路径为 `mofa/dataflows/qwen_agent/my_llm_dataflow.yml`），配置节点间数据交互关系：
 
 ```yaml

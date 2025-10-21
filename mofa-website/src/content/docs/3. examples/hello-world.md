@@ -4,7 +4,6 @@ description: The simplest MoFA agent example - Hello World
 order: 1
 ---
 
-# Hello World
 
 
 This section introduces how to implement the simplest "Hello World" agent.

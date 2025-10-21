@@ -1,10 +1,9 @@
 ---
-title: MoFA Agents
+title: MoFA智能体模版
 description: Understanding MoFA agent concepts, design patterns, and composition
 order: 1
 ---
 
-# MoFA智能体模版
 
 构建智能体有一定的设计模式（Design Pattern），MoFA提供一系列的设计模式的实现，供开发者作为模版使用。
 

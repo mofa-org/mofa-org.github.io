@@ -1,4 +1,9 @@
-# **快速开始指南**
+---
+title: 快速开始指南
+description: MoFA 安装和 Hello World 示例
+order: 1
+---
+
 
 ## 1. 开发环境配置
 
@@ -15,7 +20,7 @@ source .mofa/bin/activate
 
 **环境要求**
 - Python 版本需为 3.10 或 3.11
-- 兼容系统：WSL（Ubuntu 22.04）、macOS  
+- 兼容系统：WSL（Ubuntu 22.04）、macOS
 - 暂不支持 Windows 系统
 
 ### 1.2 Rust 环境配置

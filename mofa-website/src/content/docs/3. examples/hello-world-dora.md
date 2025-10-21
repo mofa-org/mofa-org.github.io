@@ -1,10 +1,9 @@
 ---
-title: Hello World with Dora
+title: Hello World Based on Dora
 description: Building a Hello World agent using Dora-RS framework
 order: 2
 ---
 
-# "Hello World" Agent Development Based on Dora
 
 
 ## Step 1: Install the Development and Runtime Environment

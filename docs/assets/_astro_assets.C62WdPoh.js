@@ -1,6 +1,6 @@
 import { joinPaths, isRemotePath } from '@astrojs/internal-helpers/path';
 import { A as AstroError, E as ExpectedImage, L as LocalImageUsedWrongly, M as MissingImageDimension, l as UnsupportedImageFormat, I as IncompatibleDescriptorOptions, n as UnsupportedImageConversion, t as toStyleString, o as NoImageMetadata, F as FailedToFetchRemoteImageDimensions, p as ExpectedImageOptions, q as ExpectedNotESMImage, s as InvalidImageService, d as createAstro, c as createComponent, v as ImageMissingAlt, m as maybeRenderHead, b as addAttribute, w as spreadAttributes, a as renderTemplate, x as ExperimentalFontsNotEnabled, y as FontFamilyNotFound, u as unescapeHTML } from './astro/server.C5Q1HgHb.js';
-import { D as DEFAULT_OUTPUT_FORMAT, V as VALID_SUPPORTED_FORMATS, a as DEFAULT_HASH_PROPS } from './_astro_content.H73zC2aM.js';
+import { D as DEFAULT_OUTPUT_FORMAT, V as VALID_SUPPORTED_FORMATS, a as DEFAULT_HASH_PROPS } from './_astro_content.rJa37GC4.js';
 import { isRemoteAllowed } from '@astrojs/internal-helpers/remote';
 import * as mime from 'mrmime';
 import 'clsx';
@@ -1188,7 +1188,7 @@ async function getConfiguredImageService() {
   if (!globalThis?.astroAsset?.imageService) {
     const { default: service } = await import(
       // @ts-expect-error
-      './sharp.Cbdg8qpO.js'
+      './sharp.BF-u4oZh.js'
     ).catch((e) => {
       const error = new AstroError(InvalidImageService);
       error.cause = e;
@@ -1354,7 +1354,7 @@ const $$Image = createComponent(async ($$result, $$props, $$slots) => {
   }
   const { class: className, ...attributes } = { ...additionalAttributes, ...image.attributes };
   return renderTemplate`${maybeRenderHead()}<img${addAttribute(image.src, "src")}${spreadAttributes(attributes)}${addAttribute(className, "class")}>`;
-}, "/home/runner/work/mofa-org.github.io/mofa-org.github.io/mofa-website/node_modules/astro/components/Image.astro", void 0);
+}, "/Users/yao/Desktop/code/mofa-org/mofa-org.github.io/mofa-website/node_modules/astro/components/Image.astro", void 0);
 
 const $$Astro$1 = createAstro("https://mofa-org.github.io");
 const $$Picture = createComponent(async ($$result, $$props, $$slots) => {
@@ -1425,7 +1425,7 @@ const $$Picture = createComponent(async ($$result, $$props, $$slots) => {
     const srcsetAttribute = props.densities || !props.densities && !props.widths && !useResponsive ? `${image.src}${image.srcSet.values.length > 0 ? ", " + image.srcSet.attribute : ""}` : image.srcSet.attribute;
     return renderTemplate`<source${addAttribute(srcsetAttribute, "srcset")}${addAttribute(mime.lookup(image.options.format ?? image.src) ?? `image/${image.options.format}`, "type")}${spreadAttributes(sourceAdditionalAttributes)}>`;
   })}  <img${addAttribute(fallbackImage.src, "src")}${spreadAttributes(attributes)}${addAttribute(className, "class")}> </picture>`;
-}, "/home/runner/work/mofa-org.github.io/mofa-org.github.io/mofa-website/node_modules/astro/components/Picture.astro", void 0);
+}, "/Users/yao/Desktop/code/mofa-org/mofa-org.github.io/mofa-website/node_modules/astro/components/Picture.astro", void 0);
 
 const mod = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
   __proto__: null
@@ -1448,7 +1448,7 @@ const $$Font = createComponent(($$result, $$props, $$slots) => {
     });
   }
   return renderTemplate`${preload && data.preloadData.map(({ url, type }) => renderTemplate`<link rel="preload"${addAttribute(url, "href")} as="font"${addAttribute(`font/${type}`, "type")} crossorigin>`)}<style>${unescapeHTML(data.css)}</style>`;
-}, "/home/runner/work/mofa-org.github.io/mofa-org.github.io/mofa-website/node_modules/astro/components/Font.astro", void 0);
+}, "/Users/yao/Desktop/code/mofa-org/mofa-org.github.io/mofa-website/node_modules/astro/components/Font.astro", void 0);
 
 const imageConfig = {"endpoint":{"route":"/_image"},"service":{"entrypoint":"astro/assets/services/sharp","config":{}},"domains":[],"remotePatterns":[],"responsiveStyles":false};
 							const getImage = async (options) => await getImage$1(options, imageConfig);

@@ -1,10 +1,8 @@
 ---
-title: Design Patterns
+title: MoFA Agent Design Patterns
 description: Understanding various design patterns used in MoFA agents
 order: 2
 ---
-
-# MoFA Agent Design Patterns
 
 MoFA provides various design patterns that help developers build sophisticated agents with different capabilities and behaviors.
 
@@ -13,7 +11,7 @@ MoFA provides various design patterns that help developers build sophisticated a
 ### 1. Reasoner Pattern
 The simplest pattern for building agents that can reason and respond to queries.
 
-### 2. Self-Refine Pattern  
+### 2. Self-Refine Pattern
 Agents that can review and improve their own outputs through iterative refinement.
 
 ### 3. CrewAI Pattern
