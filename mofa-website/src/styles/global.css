@@ -273,7 +273,7 @@ code {
 .btn-discord {
   display: inline-flex;
   align-items: center;
-  padding: 12px 24px;
+  padding: 10px 16px;
   background-color: #6BCED2;
   color: white;
   text-decoration: none;
@@ -294,7 +294,7 @@ code {
 .btn-wechat {
   display: inline-flex;
   align-items: center;
-  padding: 12px 24px;
+  padding: 10px 16px;
   background-color: #07C160;
   color: white;
   text-decoration: none;
