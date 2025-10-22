@@ -153,6 +153,8 @@ try {
       <div style="display: flex; justify-content: center; gap: 32px; margin-bottom: 16px;">
         <a href="https://github.com/mofa-org/mofa" target="_blank" rel="noopener noreferrer" style="color: #9ca3af; text-decoration: none; transition: color 0.2s ease;" onmouseover="this.style.color='white'" onmouseout="this.style.color='#9ca3af'">GitHub</a>
         <a href="https://discord.gg/hKJZzDMMm9" target="_blank" rel="noopener noreferrer" style="color: #9ca3af; text-decoration: none; transition: color 0.2s ease;" onmouseover="this.style.color='white'" onmouseout="this.style.color='#9ca3af'">Discord</a>
+        <a href="#" id="wechat-link" style="color: #9ca3af; text-decoration: none; transition: color 0.2s ease; cursor: pointer;" onmouseover="this.style.color='white'" onmouseout="this.style.color='#9ca3af'"
+            data-en="WeChat" data-zh="微信">微信</a>
         <a href="/docs" style="color: #9ca3af; text-decoration: none; transition: color 0.2s ease;" onmouseover="this.style.color='white'" onmouseout="this.style.color='#9ca3af'"
             data-en="Docs" data-zh="文档">Docs</a>
       </div>
@@ -165,12 +167,25 @@ try {
   </div>
 </footer>
 
+<!-- WeChat QR Code Modal -->
+<div id="wechat-modal" style="display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.8); z-index: 9999; align-items: center; justify-content: center;">
+  <div style="background: white; padding: 32px; border-radius: 12px; max-width: 400px; position: relative; text-align: center;">
+    <button id="close-wechat-modal" style="position: absolute; top: 12px; right: 12px; background: none; border: none; font-size: 24px; cursor: pointer; color: #666; line-height: 1;">&times;</button>
+    <h3 style="margin-bottom: 16px; font-size: 1.25rem; font-weight: 700; color: #333;" data-en="Join WeChat Group" data-zh="加入微信群">加入微信群</h3>
+    <img src="/wechat-qrcode.jpg" alt="WeChat QR Code" style="width: 100%; max-width: 300px; margin: 0 auto; display: block; border-radius: 8px;" />
+    <p style="margin-top: 16px; color: #666; font-size: 0.9rem;" data-en="Scan QR code to join our WeChat group" data-zh="扫描二维码加入微信群">扫描二维码加入微信群</p>
+  </div>
+</div>
+
 <button id="back-to-top" style="position: fixed; bottom: 40px; right: 40px; z-index: 50; display: none; background: #FFC938; color: #333; border: none; border-radius: 50%; width: 48px; height: 48px; box-shadow: 0 4px 8px rgba(0,0,0,0.2); font-size: 24px; cursor: pointer; transition: background-color 0.3s, opacity 0.3s, visibility 0.3s;" aria-label="Back to top">↑</button>
 
 <script>
   document.addEventListener('DOMContentLoaded', function() {
     const backToTopButton = document.getElementById('back-to-top');
     const starCtaSection = document.querySelector('.star-cta-section');
+    const wechatLink = document.getElementById('wechat-link');
+    const wechatModal = document.getElementById('wechat-modal');
+    const closeWechatModal = document.getElementById('close-wechat-modal');
 
     // 返回顶部按钮逻辑
     if (backToTopButton) {
@@ -199,6 +214,24 @@ try {
           }, 100);
         });
       }
+    }
+
+    // WeChat 模态框逻辑
+    if (wechatLink && wechatModal && closeWechatModal) {
+      wechatLink.addEventListener('click', function(e) {
+        e.preventDefault();
+        wechatModal.style.display = 'flex';
+      });
+
+      closeWechatModal.addEventListener('click', function() {
+        wechatModal.style.display = 'none';
+      });
+
+      wechatModal.addEventListener('click', function(e) {
+        if (e.target === wechatModal) {
+          wechatModal.style.display = 'none';
+        }
+      });
     }
   });
 </script>
