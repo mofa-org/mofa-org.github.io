@@ -31,6 +31,21 @@
         "total_contributors": {
           "type": "number"
         },
+        "repository": {
+          "type": "string"
+        },
+        "stars": {
+          "type": "number"
+        },
+        "forks": {
+          "type": "number"
+        },
+        "watchers": {
+          "type": "number"
+        },
+        "open_issues": {
+          "type": "number"
+        },
         "$schema": {
           "type": "string"
         }
