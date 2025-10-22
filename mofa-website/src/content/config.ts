@@ -31,6 +31,12 @@ const prizeCollection = defineCollection({
     last_updated: z.string().optional(),
     repositories: z.array(z.string()).optional(),
     total_contributors: z.number().optional(),
+    // GitHub repository stats fields
+    repository: z.string().optional(),
+    stars: z.number().optional(),
+    forks: z.number().optional(),
+    watchers: z.number().optional(),
+    open_issues: z.number().optional(),
   }),
 });
 

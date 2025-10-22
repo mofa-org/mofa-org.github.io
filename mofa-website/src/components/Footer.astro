@@ -1,32 +1,59 @@
 ---
 // Footer component with consistent styling from main page
-// Fetch GitHub stats for the star call-to-action
-let starCount = '85';
+// Load GitHub stats from cache file (priority) or fallback to API
+import { getCollection } from 'astro:content';
+
+let starCount = '100'; // Default fallback (统一使用100)
 let forkCount = '8';
+let watcherCount = '10';
+let issueCount = '0';
+
+// Helper function to format numbers
+function formatNumber(num: number): string {
+  if (num >= 1000) {
+    return (num / 1000).toFixed(1).replace('.0', '') + 'K';
+  }
+  return num.toString();
+}
 
 try {
-  const response = await fetch('https://api.github.com/repos/mofa-org/mofa');
-  if (response.ok) {
-    const data = await response.json();
+  const prizeEntries = await getCollection('prize');
 
-    // Format star count
-    const stars = data.stargazers_count;
-    if (stars >= 1000) {
-      starCount = (stars / 1000).toFixed(1).replace('.0', '') + 'K';
-    } else {
-      starCount = stars.toString();
+  // Load GitHub stats from cache
+  const statsCacheEntry = prizeEntries.find(entry => entry.data.type === 'repo_stats');
+  if (statsCacheEntry) {
+    // Format all counts from cache
+    if (statsCacheEntry.data.stars !== undefined) {
+      starCount = formatNumber(statsCacheEntry.data.stars);
+    }
+    if (statsCacheEntry.data.forks !== undefined) {
+      forkCount = formatNumber(statsCacheEntry.data.forks);
+    }
+    if (statsCacheEntry.data.watchers !== undefined) {
+      watcherCount = formatNumber(statsCacheEntry.data.watchers);
+    }
+    if (statsCacheEntry.data.open_issues !== undefined) {
+      issueCount = formatNumber(statsCacheEntry.data.open_issues);
     }
 
-    // Format fork count
-    const forks = data.forks_count;
-    if (forks >= 1000) {
-      forkCount = (forks / 1000).toFixed(1).replace('.0', '') + 'K';
-    } else {
-      forkCount = forks.toString();
+    console.log(`Loaded GitHub stats from cache: ${starCount} stars, ${forkCount} forks, ${watcherCount} watchers (${statsCacheEntry.data.last_updated})`);
+  } else {
+    console.log('No GitHub stats cache found, falling back to API...');
+    // Fallback to API
+    const response = await fetch('https://api.github.com/repos/mofa-org/mofa');
+    if (response.ok) {
+      const data = await response.json();
+
+      starCount = formatNumber(data.stargazers_count);
+      forkCount = formatNumber(data.forks_count);
+      watcherCount = formatNumber(data.watchers_count);
+      issueCount = formatNumber(data.open_issues_count);
+
+      console.log(`Fetched GitHub stats from API fallback: ${starCount} stars, ${forkCount} forks, ${watcherCount} watchers`);
     }
   }
 } catch (error) {
-  console.log('Failed to fetch GitHub stats:', error);
+  console.log('Failed to load GitHub stats:', error);
 }
 ---
 
@@ -48,7 +75,7 @@ try {
         Modular Framework for AI Agents
       </p>
       <!-- Star Call-to-Action Section -->
-      <div class="star-cta-section" style="background: #2a2a2a; border: 3px solid #333; padding: 24px; margin: 32px 0; max-width: 480px; margin-left: auto; margin-right: auto;">
+      <div class="star-cta-section" style="background: #2a2a2a; border: 3px solid #333; padding: 28px; margin: 32px 0; max-width: 560px; margin-left: auto; margin-right: auto;">
         <div style="margin-bottom: 20px;">
           <h3 style="color: #ffffff; font-size: 1.2rem; font-weight: 700; margin-bottom: 8px; letter-spacing: -0.02em;" data-en="Support MoFA Development" data-zh="支持 MoFA 开发">
             支持 MoFA 开发
@@ -56,6 +83,45 @@ try {
           <p style="color: #9ca3af; font-size: 0.95rem; margin-bottom: 0; line-height: 1.4;" data-en="Help us build the future of AI agent frameworks" data-zh="帮助我们构建 AI 代理框架的未来">
             帮助我们构建 AI 代理框架的未来
           </p>
+        </div>
+
+        <!-- GitHub Stats Grid -->
+        <div class="github-stats-grid" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 20px;">
+          <!-- Stars -->
+          <div class="stat-card" style="background: rgba(255, 80, 57, 0.1); border: 1px solid rgba(255, 80, 57, 0.3); padding: 12px; text-align: center; transition: all 0.2s ease;">
+            <svg style="width: 20px; height: 20px; margin: 0 auto 6px; color: #FF5039;" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+            <div style="font-size: 1.25rem; font-weight: 700; color: #FF5039; margin-bottom: 2px;">{starCount}</div>
+            <div style="font-size: 0.7rem; color: #9ca3af; text-transform: uppercase; letter-spacing: 0.5px;" data-en="Stars" data-zh="星标">Stars</div>
+          </div>
+
+          <!-- Forks -->
+          <div class="stat-card" style="background: rgba(255, 201, 56, 0.1); border: 1px solid rgba(255, 201, 56, 0.3); padding: 12px; text-align: center; transition: all 0.2s ease;">
+            <svg style="width: 20px; height: 20px; margin: 0 auto 6px; color: #FFC938;" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2C11.5 2 11 2.19 10.59 2.59L2.59 10.59C1.8 11.37 1.8 12.63 2.59 13.41L10.59 21.41C11.37 22.2 12.63 22.2 13.41 21.41L21.41 13.41C22.2 12.63 22.2 11.37 21.41 10.59L13.41 2.59C13 2.19 12.5 2 12 2M12 4L20 12L12 20L4 12L12 4M12 6C10.9 6 10 6.9 10 8S10.9 10 12 10 14 9.1 14 8 13.1 6 12 6Z"/>
+            </svg>
+            <div style="font-size: 1.25rem; font-weight: 700; color: #FFC938; margin-bottom: 2px;">{forkCount}</div>
+            <div style="font-size: 0.7rem; color: #9ca3af; text-transform: uppercase; letter-spacing: 0.5px;" data-en="Forks" data-zh="分支">Forks</div>
+          </div>
+
+          <!-- Watchers -->
+          <div class="stat-card" style="background: rgba(106, 207, 209, 0.1); border: 1px solid rgba(106, 207, 209, 0.3); padding: 12px; text-align: center; transition: all 0.2s ease;">
+            <svg style="width: 20px; height: 20px; margin: 0 auto 6px; color: #6ACFD1;" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/>
+            </svg>
+            <div style="font-size: 1.25rem; font-weight: 700; color: #6ACFD1; margin-bottom: 2px;">{watcherCount}</div>
+            <div style="font-size: 0.7rem; color: #9ca3af; text-transform: uppercase; letter-spacing: 0.5px;" data-en="Watching" data-zh="关注">Watching</div>
+          </div>
+
+          <!-- Issues -->
+          <div class="stat-card" style="background: rgba(139, 92, 246, 0.1); border: 1px solid rgba(139, 92, 246, 0.3); padding: 12px; text-align: center; transition: all 0.2s ease;">
+            <svg style="width: 20px; height: 20px; margin: 0 auto 6px; color: #8B5CF6;" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/>
+            </svg>
+            <div style="font-size: 1.25rem; font-weight: 700; color: #8B5CF6; margin-bottom: 2px;">{issueCount}</div>
+            <div style="font-size: 0.7rem; color: #9ca3af; text-transform: uppercase; letter-spacing: 0.5px;" data-en="Issues" data-zh="问题">Issues</div>
+          </div>
         </div>
 
         <!-- CTA Button -->
@@ -73,14 +139,13 @@ try {
           text-transform: uppercase;
           letter-spacing: 0.5px;
           font-size: 0.9rem;
+          width: 100%;
+          justify-content: center;
         " onmouseover="this.style.background='linear-gradient(90deg, #FFC938, #6ACFD1)'; this.style.borderColor='#FFC938'" onmouseout="this.style.background='linear-gradient(90deg, #FF5039, #FF6756)'; this.style.borderColor='#FF5039'">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            <path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/>
           </svg>
           <span data-en="STAR ON GITHUB" data-zh="在 GITHUB 上 STAR">在 GITHUB 上 STAR</span>
-          <span style="background: rgba(255,255,255,0.2); color: white; padding: 4px 8px; font-size: 0.8rem; font-weight: 900; border: 1px solid rgba(255,255,255,0.3);">
-            {starCount}
-          </span>
         </a>
       </div>
 
@@ -139,12 +204,40 @@ try {
 </script>
 
 <style>
+  /* Stat cards hover effects */
+  .stat-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+
   /* 响应式调整 */
   @media (max-width: 640px) {
     .star-cta-section {
       margin: 24px 16px !important;
       padding: 20px !important;
       max-width: none !important;
+    }
+
+    .github-stats-grid {
+      grid-template-columns: repeat(2, 1fr) !important;
+      gap: 10px !important;
+    }
+
+    .stat-card {
+      padding: 10px !important;
+    }
+
+    .stat-card svg {
+      width: 16px !important;
+      height: 16px !important;
+    }
+
+    .stat-card > div:nth-child(2) {
+      font-size: 1.1rem !important;
+    }
+
+    .stat-card > div:nth-child(3) {
+      font-size: 0.65rem !important;
     }
 
     .star-button {
@@ -154,9 +247,17 @@ try {
     }
   }
 
+  /* 平板响应式 */
+  @media (min-width: 641px) and (max-width: 768px) {
+    .github-stats-grid {
+      grid-template-columns: repeat(2, 1fr) !important;
+    }
+  }
+
   /* Star 按钮交互 */
   .star-button:hover {
-    transform: translateY(-1px) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 20px rgba(255, 80, 57, 0.4) !important;
   }
 
   .star-button:active {
