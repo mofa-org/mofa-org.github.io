@@ -19,13 +19,13 @@ total_contributors: 45
 
 
 ### haixuanTao
-- **Contributions**: 1741
+- **Contributions**: 1742
 - **Avatar**: https://avatars.githubusercontent.com/u/22787340?v=4
 - **GitHub**: https://github.com/haixuanTao
 - **Repositories**: dora-rs/dora
 
 ### phil-opp
-- **Contributions**: 1634
+- **Contributions**: 1636
 - **Avatar**: https://avatars.githubusercontent.com/u/1131315?v=4
 - **GitHub**: https://github.com/phil-opp
 - **Repositories**: dora-rs/dora
