@@ -290,6 +290,27 @@ code {
   box-shadow: 3px 3px 0 var(--mondrian-black);
 }
 
+/* WeChat themed button - flat style, same as Discord */
+.btn-wechat {
+  display: inline-flex;
+  align-items: center;
+  padding: 12px 24px;
+  background-color: #07C160;
+  color: white;
+  text-decoration: none;
+  border: 1px solid var(--mondrian-black);
+  border-radius: 0;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  box-shadow: 0 0 0 var(--mondrian-black);
+}
+
+.btn-wechat:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 3px 3px 0 var(--mondrian-black);
+}
+
 .btn-outline {
   display: inline-flex;
   align-items: center;
@@ -1670,8 +1691,9 @@ html, body {
   .btn-text {
     display: none;
   }
-  
+
   .btn-discord,
+  .btn-wechat,
   .btn-primary {
     gap: 0 !important;
     padding: 8px 12px !important;
