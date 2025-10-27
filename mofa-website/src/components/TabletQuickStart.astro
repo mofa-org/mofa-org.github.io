@@ -5,7 +5,7 @@ const tabs = [
     id: 'install',
     labelZh: '1. 安装',
     labelEn: '1. Install',
-    commandMain: 'pip install mofa-ai',
+    commandMain: 'pip install mofa-core',
     secondary: 'pip install mofa-stage  # MoFA_Stage GUI'
   },
   {
@@ -155,4 +155,4 @@ const tabs = [
     const cmd = [...contents].find(c => c.classList.contains('active')).querySelector('code').innerText;
     navigator.clipboard.writeText(cmd).then(showToast);
   });
-</script> 
+</script>
