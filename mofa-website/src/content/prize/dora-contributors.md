@@ -3,23 +3,23 @@ type: "contributors"
 category: "dora"
 title: "Dora-rs Contributors"
 title_zh: "Dora-rs 贡献者"
-last_updated: "2025-11-06"
+last_updated: "2025-11-07"
 repositories: ["dora-rs/dora"]
-total_contributors: 45
+total_contributors: 46
 ---
 # Dora-rs Contributors Cache
 
 这个文件在构建时自动更新，缓存从GitHub API获取的贡献者数据。
 
-**最后更新**: 2025-11-06
-**总贡献者数**: 45
+**最后更新**: 2025-11-07
+**总贡献者数**: 46
 **数据来源**: dora-rs/dora
 
 ## Contributors Data
 
 
 ### haixuanTao
-- **Contributions**: 1753
+- **Contributions**: 1754
 - **Avatar**: https://avatars.githubusercontent.com/u/22787340?v=4
 - **GitHub**: https://github.com/haixuanTao
 - **Repositories**: dora-rs/dora
@@ -174,6 +174,12 @@ total_contributors: 45
 - **GitHub**: https://github.com/Gege-Wang
 - **Repositories**: dora-rs/dora
 
+### TomCC7
+- **Contributions**: 4
+- **Avatar**: https://avatars.githubusercontent.com/u/55869557?v=4
+- **GitHub**: https://github.com/TomCC7
+- **Repositories**: dora-rs/dora
+
 ### NageshMandal
 - **Contributions**: 3
 - **Avatar**: https://avatars.githubusercontent.com/u/106006006?v=4
@@ -192,10 +198,10 @@ total_contributors: 45
 - **GitHub**: https://github.com/Ryu-Yang
 - **Repositories**: dora-rs/dora
 
-### Choudhry18
+### kingchou007
 - **Contributions**: 2
-- **Avatar**: https://avatars.githubusercontent.com/u/112463384?v=4
-- **GitHub**: https://github.com/Choudhry18
+- **Avatar**: https://avatars.githubusercontent.com/u/44578147?v=4
+- **GitHub**: https://github.com/kingchou007
 - **Repositories**: dora-rs/dora
 
 ### dieu-detruit
@@ -204,10 +210,10 @@ total_contributors: 45
 - **GitHub**: https://github.com/dieu-detruit
 - **Repositories**: dora-rs/dora
 
-### kingchou007
+### Choudhry18
 - **Contributions**: 2
-- **Avatar**: https://avatars.githubusercontent.com/u/44578147?v=4
-- **GitHub**: https://github.com/kingchou007
+- **Avatar**: https://avatars.githubusercontent.com/u/112463384?v=4
+- **GitHub**: https://github.com/Choudhry18
 - **Repositories**: dora-rs/dora
 
 ### yjhmelody
