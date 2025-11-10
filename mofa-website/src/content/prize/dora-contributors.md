@@ -3,7 +3,7 @@ type: "contributors"
 category: "dora"
 title: "Dora-rs Contributors"
 title_zh: "Dora-rs 贡献者"
-last_updated: "2025-11-09"
+last_updated: "2025-11-10"
 repositories: ["dora-rs/dora"]
 total_contributors: 46
 ---
@@ -11,7 +11,7 @@ total_contributors: 46
 
 这个文件在构建时自动更新，缓存从GitHub API获取的贡献者数据。
 
-**最后更新**: 2025-11-09
+**最后更新**: 2025-11-10
 **总贡献者数**: 46
 **数据来源**: dora-rs/dora
 
@@ -25,7 +25,7 @@ total_contributors: 46
 - **Repositories**: dora-rs/dora
 
 ### phil-opp
-- **Contributions**: 1643
+- **Contributions**: 1644
 - **Avatar**: https://avatars.githubusercontent.com/u/1131315?v=4
 - **GitHub**: https://github.com/phil-opp
 - **Repositories**: dora-rs/dora
@@ -90,6 +90,12 @@ total_contributors: 46
 - **GitHub**: https://github.com/heyong4725
 - **Repositories**: dora-rs/dora
 
+### drindr
+- **Contributions**: 17
+- **Avatar**: https://avatars.githubusercontent.com/u/34709601?v=4
+- **GitHub**: https://github.com/drindr
+- **Repositories**: dora-rs/dora
+
 ### Mati-ur-rehman-017
 - **Contributions**: 16
 - **Avatar**: https://avatars.githubusercontent.com/u/145843744?v=4
@@ -130,12 +136,6 @@ total_contributors: 46
 - **Contributions**: 11
 - **Avatar**: https://avatars.githubusercontent.com/u/58244206?v=4
 - **GitHub**: https://github.com/sjfhsjfh
-- **Repositories**: dora-rs/dora
-
-### drindr
-- **Contributions**: 7
-- **Avatar**: https://avatars.githubusercontent.com/u/34709601?v=4
-- **GitHub**: https://github.com/drindr
 - **Repositories**: dora-rs/dora
 
 ### starlitxiling
