@@ -3,7 +3,7 @@ type: "contributors"
 category: "dora"
 title: "Dora-rs Contributors"
 title_zh: "Dora-rs 贡献者"
-last_updated: "2025-11-12"
+last_updated: "2025-11-13"
 repositories: ["dora-rs/dora"]
 total_contributors: 46
 ---
@@ -11,7 +11,7 @@ total_contributors: 46
 
 这个文件在构建时自动更新，缓存从GitHub API获取的贡献者数据。
 
-**最后更新**: 2025-11-12
+**最后更新**: 2025-11-13
 **总贡献者数**: 46
 **数据来源**: dora-rs/dora
 
@@ -25,7 +25,7 @@ total_contributors: 46
 - **Repositories**: dora-rs/dora
 
 ### phil-opp
-- **Contributions**: 1645
+- **Contributions**: 1650
 - **Avatar**: https://avatars.githubusercontent.com/u/1131315?v=4
 - **GitHub**: https://github.com/phil-opp
 - **Repositories**: dora-rs/dora
@@ -60,6 +60,12 @@ total_contributors: 46
 - **GitHub**: https://github.com/Michael-J-Ward
 - **Repositories**: dora-rs/dora
 
+### Mivik
+- **Contributions**: 30
+- **Avatar**: https://avatars.githubusercontent.com/u/54128043?v=4
+- **GitHub**: https://github.com/Mivik
+- **Repositories**: dora-rs/dora
+
 ### Hennzau
 - **Contributions**: 30
 - **Avatar**: https://avatars.githubusercontent.com/u/72349109?v=4
@@ -84,22 +90,28 @@ total_contributors: 46
 - **GitHub**: https://github.com/chrislearn
 - **Repositories**: dora-rs/dora
 
-### heyong4725
-- **Contributions**: 17
-- **Avatar**: https://avatars.githubusercontent.com/u/45980096?v=4
-- **GitHub**: https://github.com/heyong4725
-- **Repositories**: dora-rs/dora
-
 ### drindr
 - **Contributions**: 17
 - **Avatar**: https://avatars.githubusercontent.com/u/34709601?v=4
 - **GitHub**: https://github.com/drindr
 - **Repositories**: dora-rs/dora
 
+### heyong4725
+- **Contributions**: 17
+- **Avatar**: https://avatars.githubusercontent.com/u/45980096?v=4
+- **GitHub**: https://github.com/heyong4725
+- **Repositories**: dora-rs/dora
+
 ### Mati-ur-rehman-017
 - **Contributions**: 16
 - **Avatar**: https://avatars.githubusercontent.com/u/145843744?v=4
 - **GitHub**: https://github.com/Mati-ur-rehman-017
+- **Repositories**: dora-rs/dora
+
+### sjfhsjfh
+- **Contributions**: 14
+- **Avatar**: https://avatars.githubusercontent.com/u/58244206?v=4
+- **GitHub**: https://github.com/sjfhsjfh
 - **Repositories**: dora-rs/dora
 
 ### LeonRust
@@ -124,18 +136,6 @@ total_contributors: 46
 - **Contributions**: 11
 - **Avatar**: https://avatars.githubusercontent.com/u/77838712?v=4
 - **GitHub**: https://github.com/7SOMAY
-- **Repositories**: dora-rs/dora
-
-### Mivik
-- **Contributions**: 11
-- **Avatar**: https://avatars.githubusercontent.com/u/54128043?v=4
-- **GitHub**: https://github.com/Mivik
-- **Repositories**: dora-rs/dora
-
-### sjfhsjfh
-- **Contributions**: 11
-- **Avatar**: https://avatars.githubusercontent.com/u/58244206?v=4
-- **GitHub**: https://github.com/sjfhsjfh
 - **Repositories**: dora-rs/dora
 
 ### starlitxiling
