@@ -3,7 +3,7 @@ type: "contributors"
 category: "dora"
 title: "Dora-rs Contributors"
 title_zh: "Dora-rs 贡献者"
-last_updated: "2025-11-13"
+last_updated: "2025-11-14"
 repositories: ["dora-rs/dora"]
 total_contributors: 46
 ---
@@ -11,7 +11,7 @@ total_contributors: 46
 
 这个文件在构建时自动更新，缓存从GitHub API获取的贡献者数据。
 
-**最后更新**: 2025-11-13
+**最后更新**: 2025-11-14
 **总贡献者数**: 46
 **数据来源**: dora-rs/dora
 
@@ -25,7 +25,7 @@ total_contributors: 46
 - **Repositories**: dora-rs/dora
 
 ### phil-opp
-- **Contributions**: 1650
+- **Contributions**: 1662
 - **Avatar**: https://avatars.githubusercontent.com/u/1131315?v=4
 - **GitHub**: https://github.com/phil-opp
 - **Repositories**: dora-rs/dora
@@ -48,6 +48,12 @@ total_contributors: 46
 - **GitHub**: https://github.com/XxChang
 - **Repositories**: dora-rs/dora
 
+### Mivik
+- **Contributions**: 38
+- **Avatar**: https://avatars.githubusercontent.com/u/54128043?v=4
+- **GitHub**: https://github.com/Mivik
+- **Repositories**: dora-rs/dora
+
 ### Shar-jeel-Sajid
 - **Contributions**: 34
 - **Avatar**: https://avatars.githubusercontent.com/u/135236134?v=4
@@ -58,12 +64,6 @@ total_contributors: 46
 - **Contributions**: 32
 - **Avatar**: https://avatars.githubusercontent.com/u/3186847?v=4
 - **GitHub**: https://github.com/Michael-J-Ward
-- **Repositories**: dora-rs/dora
-
-### Mivik
-- **Contributions**: 30
-- **Avatar**: https://avatars.githubusercontent.com/u/54128043?v=4
-- **GitHub**: https://github.com/Mivik
 - **Repositories**: dora-rs/dora
 
 ### Hennzau
@@ -84,16 +84,16 @@ total_contributors: 46
 - **GitHub**: https://github.com/EricLBuehler
 - **Repositories**: dora-rs/dora
 
+### drindr
+- **Contributions**: 18
+- **Avatar**: https://avatars.githubusercontent.com/u/34709601?v=4
+- **GitHub**: https://github.com/drindr
+- **Repositories**: dora-rs/dora
+
 ### chrislearn
 - **Contributions**: 17
 - **Avatar**: https://avatars.githubusercontent.com/u/5874864?v=4
 - **GitHub**: https://github.com/chrislearn
-- **Repositories**: dora-rs/dora
-
-### drindr
-- **Contributions**: 17
-- **Avatar**: https://avatars.githubusercontent.com/u/34709601?v=4
-- **GitHub**: https://github.com/drindr
 - **Repositories**: dora-rs/dora
 
 ### heyong4725
