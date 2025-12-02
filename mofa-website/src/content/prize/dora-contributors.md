@@ -3,29 +3,29 @@ type: "contributors"
 category: "dora"
 title: "Dora-rs Contributors"
 title_zh: "Dora-rs 贡献者"
-last_updated: "2025-12-01"
+last_updated: "2025-12-02"
 repositories: ["dora-rs/dora"]
-total_contributors: 46
+total_contributors: 47
 ---
 # Dora-rs Contributors Cache
 
 这个文件在构建时自动更新，缓存从GitHub API获取的贡献者数据。
 
-**最后更新**: 2025-12-01
-**总贡献者数**: 46
+**最后更新**: 2025-12-02
+**总贡献者数**: 47
 **数据来源**: dora-rs/dora
 
 ## Contributors Data
 
 
 ### haixuanTao
-- **Contributions**: 1780
+- **Contributions**: 1782
 - **Avatar**: https://avatars.githubusercontent.com/u/22787340?v=4
 - **GitHub**: https://github.com/haixuanTao
 - **Repositories**: dora-rs/dora
 
 ### phil-opp
-- **Contributions**: 1712
+- **Contributions**: 1713
 - **Avatar**: https://avatars.githubusercontent.com/u/1131315?v=4
 - **GitHub**: https://github.com/phil-opp
 - **Repositories**: dora-rs/dora
@@ -79,7 +79,7 @@ total_contributors: 46
 - **Repositories**: dora-rs/dora
 
 ### drindr
-- **Contributions**: 20
+- **Contributions**: 21
 - **Avatar**: https://avatars.githubusercontent.com/u/34709601?v=4
 - **GitHub**: https://github.com/drindr
 - **Repositories**: dora-rs/dora
@@ -136,6 +136,12 @@ total_contributors: 46
 - **Contributions**: 11
 - **Avatar**: https://avatars.githubusercontent.com/u/77838712?v=4
 - **GitHub**: https://github.com/7SOMAY
+- **Repositories**: dora-rs/dora
+
+### oortlieb
+- **Contributions**: 8
+- **Avatar**: https://avatars.githubusercontent.com/u/3278489?v=4
+- **GitHub**: https://github.com/oortlieb
 - **Repositories**: dora-rs/dora
 
 ### starlitxiling
