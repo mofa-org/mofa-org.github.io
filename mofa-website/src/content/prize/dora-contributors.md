@@ -3,16 +3,16 @@ type: "contributors"
 category: "dora"
 title: "Dora-rs Contributors"
 title_zh: "Dora-rs 贡献者"
-last_updated: "2025-12-11"
+last_updated: "2025-12-12"
 repositories: ["dora-rs/dora"]
-total_contributors: 47
+total_contributors: 49
 ---
 # Dora-rs Contributors Cache
 
 这个文件在构建时自动更新，缓存从GitHub API获取的贡献者数据。
 
-**最后更新**: 2025-12-11
-**总贡献者数**: 47
+**最后更新**: 2025-12-12
+**总贡献者数**: 49
 **数据来源**: dora-rs/dora
 
 ## Contributors Data
@@ -268,6 +268,18 @@ total_contributors: 47
 - **Contributions**: 1
 - **Avatar**: https://avatars.githubusercontent.com/u/99924265?v=4
 - **GitHub**: https://github.com/wlee1248
+- **Repositories**: dora-rs/dora
+
+### guptapratykshh
+- **Contributions**: 1
+- **Avatar**: https://avatars.githubusercontent.com/u/180039440?v=4
+- **GitHub**: https://github.com/guptapratykshh
+- **Repositories**: dora-rs/dora
+
+### Nitish4144
+- **Contributions**: 1
+- **Avatar**: https://avatars.githubusercontent.com/u/190355771?v=4
+- **GitHub**: https://github.com/Nitish4144
 - **Repositories**: dora-rs/dora
 
 ### mshr-h
