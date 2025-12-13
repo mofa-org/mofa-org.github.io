@@ -3,7 +3,7 @@ type: "contributors"
 category: "dora"
 title: "Dora-rs Contributors"
 title_zh: "Dora-rs 贡献者"
-last_updated: "2025-12-12"
+last_updated: "2025-12-13"
 repositories: ["dora-rs/dora"]
 total_contributors: 49
 ---
@@ -11,7 +11,7 @@ total_contributors: 49
 
 这个文件在构建时自动更新，缓存从GitHub API获取的贡献者数据。
 
-**最后更新**: 2025-12-12
+**最后更新**: 2025-12-13
 **总贡献者数**: 49
 **数据来源**: dora-rs/dora
 
@@ -19,13 +19,13 @@ total_contributors: 49
 
 
 ### haixuanTao
-- **Contributions**: 1782
+- **Contributions**: 1783
 - **Avatar**: https://avatars.githubusercontent.com/u/22787340?v=4
 - **GitHub**: https://github.com/haixuanTao
 - **Repositories**: dora-rs/dora
 
 ### phil-opp
-- **Contributions**: 1715
+- **Contributions**: 1718
 - **Avatar**: https://avatars.githubusercontent.com/u/1131315?v=4
 - **GitHub**: https://github.com/phil-opp
 - **Repositories**: dora-rs/dora
@@ -216,6 +216,12 @@ total_contributors: 49
 - **GitHub**: https://github.com/dieu-detruit
 - **Repositories**: dora-rs/dora
 
+### guptapratykshh
+- **Contributions**: 2
+- **Avatar**: https://avatars.githubusercontent.com/u/180039440?v=4
+- **GitHub**: https://github.com/guptapratykshh
+- **Repositories**: dora-rs/dora
+
 ### Choudhry18
 - **Contributions**: 2
 - **Avatar**: https://avatars.githubusercontent.com/u/112463384?v=4
@@ -268,12 +274,6 @@ total_contributors: 49
 - **Contributions**: 1
 - **Avatar**: https://avatars.githubusercontent.com/u/99924265?v=4
 - **GitHub**: https://github.com/wlee1248
-- **Repositories**: dora-rs/dora
-
-### guptapratykshh
-- **Contributions**: 1
-- **Avatar**: https://avatars.githubusercontent.com/u/180039440?v=4
-- **GitHub**: https://github.com/guptapratykshh
 - **Repositories**: dora-rs/dora
 
 ### Nitish4144
