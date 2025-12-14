@@ -3,7 +3,7 @@ type: "contributors"
 category: "dora"
 title: "Dora-rs Contributors"
 title_zh: "Dora-rs 贡献者"
-last_updated: "2025-12-13"
+last_updated: "2025-12-14"
 repositories: ["dora-rs/dora"]
 total_contributors: 49
 ---
@@ -11,7 +11,7 @@ total_contributors: 49
 
 这个文件在构建时自动更新，缓存从GitHub API获取的贡献者数据。
 
-**最后更新**: 2025-12-13
+**最后更新**: 2025-12-14
 **总贡献者数**: 49
 **数据来源**: dora-rs/dora
 
