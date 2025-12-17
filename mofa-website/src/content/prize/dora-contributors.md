@@ -3,7 +3,7 @@ type: "contributors"
 category: "dora"
 title: "Dora-rs Contributors"
 title_zh: "Dora-rs 贡献者"
-last_updated: "2025-12-16"
+last_updated: "2025-12-17"
 repositories: ["dora-rs/dora"]
 total_contributors: 49
 ---
@@ -11,7 +11,7 @@ total_contributors: 49
 
 这个文件在构建时自动更新，缓存从GitHub API获取的贡献者数据。
 
-**最后更新**: 2025-12-16
+**最后更新**: 2025-12-17
 **总贡献者数**: 49
 **数据来源**: dora-rs/dora
 
@@ -19,7 +19,7 @@ total_contributors: 49
 
 
 ### haixuanTao
-- **Contributions**: 1783
+- **Contributions**: 1784
 - **Avatar**: https://avatars.githubusercontent.com/u/22787340?v=4
 - **GitHub**: https://github.com/haixuanTao
 - **Repositories**: dora-rs/dora
@@ -72,16 +72,16 @@ total_contributors: 49
 - **GitHub**: https://github.com/Hennzau
 - **Repositories**: dora-rs/dora
 
+### drindr
+- **Contributions**: 27
+- **Avatar**: https://avatars.githubusercontent.com/u/34709601?v=4
+- **GitHub**: https://github.com/drindr
+- **Repositories**: dora-rs/dora
+
 ### Ignavar
 - **Contributions**: 24
 - **Avatar**: https://avatars.githubusercontent.com/u/134407351?v=4
 - **GitHub**: https://github.com/Ignavar
-- **Repositories**: dora-rs/dora
-
-### drindr
-- **Contributions**: 21
-- **Avatar**: https://avatars.githubusercontent.com/u/34709601?v=4
-- **GitHub**: https://github.com/drindr
 - **Repositories**: dora-rs/dora
 
 ### EricLBuehler
@@ -192,6 +192,12 @@ total_contributors: 49
 - **GitHub**: https://github.com/NageshMandal
 - **Repositories**: dora-rs/dora
 
+### guptapratykshh
+- **Contributions**: 3
+- **Avatar**: https://avatars.githubusercontent.com/u/180039440?v=4
+- **GitHub**: https://github.com/guptapratykshh
+- **Repositories**: dora-rs/dora
+
 ### Radovenchyk
 - **Contributions**: 3
 - **Avatar**: https://avatars.githubusercontent.com/u/107338472?v=4
@@ -214,12 +220,6 @@ total_contributors: 49
 - **Contributions**: 2
 - **Avatar**: https://avatars.githubusercontent.com/u/27790373?v=4
 - **GitHub**: https://github.com/dieu-detruit
-- **Repositories**: dora-rs/dora
-
-### guptapratykshh
-- **Contributions**: 2
-- **Avatar**: https://avatars.githubusercontent.com/u/180039440?v=4
-- **GitHub**: https://github.com/guptapratykshh
 - **Repositories**: dora-rs/dora
 
 ### Choudhry18
