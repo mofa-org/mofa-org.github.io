@@ -3,23 +3,23 @@ type: "contributors"
 category: "dora"
 title: "Dora-rs Contributors"
 title_zh: "Dora-rs 贡献者"
-last_updated: "2025-12-17"
+last_updated: "2025-12-18"
 repositories: ["dora-rs/dora"]
-total_contributors: 49
+total_contributors: 51
 ---
 # Dora-rs Contributors Cache
 
 这个文件在构建时自动更新，缓存从GitHub API获取的贡献者数据。
 
-**最后更新**: 2025-12-17
-**总贡献者数**: 49
+**最后更新**: 2025-12-18
+**总贡献者数**: 51
 **数据来源**: dora-rs/dora
 
 ## Contributors Data
 
 
 ### haixuanTao
-- **Contributions**: 1784
+- **Contributions**: 1785
 - **Avatar**: https://avatars.githubusercontent.com/u/22787340?v=4
 - **GitHub**: https://github.com/haixuanTao
 - **Repositories**: dora-rs/dora
@@ -156,16 +156,10 @@ total_contributors: 49
 - **GitHub**: https://github.com/bobd988
 - **Repositories**: dora-rs/dora
 
-### Felixhuangsiling
+### Gege-Wang
 - **Contributions**: 5
-- **Avatar**: https://avatars.githubusercontent.com/u/77993249?v=4
-- **GitHub**: https://github.com/Felixhuangsiling
-- **Repositories**: dora-rs/dora
-
-### rahat2134
-- **Contributions**: 5
-- **Avatar**: https://avatars.githubusercontent.com/u/136263179?v=4
-- **GitHub**: https://github.com/rahat2134
+- **Avatar**: https://avatars.githubusercontent.com/u/67888311?v=4
+- **GitHub**: https://github.com/Gege-Wang
 - **Repositories**: dora-rs/dora
 
 ### MunishMummadi
@@ -174,10 +168,16 @@ total_contributors: 49
 - **GitHub**: https://github.com/MunishMummadi
 - **Repositories**: dora-rs/dora
 
-### Gege-Wang
+### rahat2134
 - **Contributions**: 5
-- **Avatar**: https://avatars.githubusercontent.com/u/67888311?v=4
-- **GitHub**: https://github.com/Gege-Wang
+- **Avatar**: https://avatars.githubusercontent.com/u/136263179?v=4
+- **GitHub**: https://github.com/rahat2134
+- **Repositories**: dora-rs/dora
+
+### Felixhuangsiling
+- **Contributions**: 5
+- **Avatar**: https://avatars.githubusercontent.com/u/77993249?v=4
+- **GitHub**: https://github.com/Felixhuangsiling
 - **Repositories**: dora-rs/dora
 
 ### TomCC7
@@ -226,6 +226,12 @@ total_contributors: 49
 - **Contributions**: 2
 - **Avatar**: https://avatars.githubusercontent.com/u/112463384?v=4
 - **GitHub**: https://github.com/Choudhry18
+- **Repositories**: dora-rs/dora
+
+### BhaveshAgarwal67
+- **Contributions**: 2
+- **Avatar**: https://avatars.githubusercontent.com/u/102348436?v=4
+- **GitHub**: https://github.com/BhaveshAgarwal67
 - **Repositories**: dora-rs/dora
 
 ### yjhmelody
@@ -286,6 +292,12 @@ total_contributors: 49
 - **Contributions**: 1
 - **Avatar**: https://avatars.githubusercontent.com/u/8973217?v=4
 - **GitHub**: https://github.com/mshr-h
+- **Repositories**: dora-rs/dora
+
+### kush124k
+- **Contributions**: 1
+- **Avatar**: https://avatars.githubusercontent.com/u/225659053?v=4
+- **GitHub**: https://github.com/kush124k
 - **Repositories**: dora-rs/dora
 
 ### Krishnadubey1008
