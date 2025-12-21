@@ -3,7 +3,7 @@ type: "contributors"
 category: "dora"
 title: "Dora-rs Contributors"
 title_zh: "Dora-rs 贡献者"
-last_updated: "2025-12-20"
+last_updated: "2025-12-21"
 repositories: ["dora-rs/dora"]
 total_contributors: 51
 ---
@@ -11,7 +11,7 @@ total_contributors: 51
 
 这个文件在构建时自动更新，缓存从GitHub API获取的贡献者数据。
 
-**最后更新**: 2025-12-20
+**最后更新**: 2025-12-21
 **总贡献者数**: 51
 **数据来源**: dora-rs/dora
 
@@ -180,6 +180,12 @@ total_contributors: 51
 - **GitHub**: https://github.com/Felixhuangsiling
 - **Repositories**: dora-rs/dora
 
+### guptapratykshh
+- **Contributions**: 4
+- **Avatar**: https://avatars.githubusercontent.com/u/180039440?v=4
+- **GitHub**: https://github.com/guptapratykshh
+- **Repositories**: dora-rs/dora
+
 ### TomCC7
 - **Contributions**: 4
 - **Avatar**: https://avatars.githubusercontent.com/u/55869557?v=4
@@ -190,12 +196,6 @@ total_contributors: 51
 - **Contributions**: 3
 - **Avatar**: https://avatars.githubusercontent.com/u/106006006?v=4
 - **GitHub**: https://github.com/NageshMandal
-- **Repositories**: dora-rs/dora
-
-### guptapratykshh
-- **Contributions**: 3
-- **Avatar**: https://avatars.githubusercontent.com/u/180039440?v=4
-- **GitHub**: https://github.com/guptapratykshh
 - **Repositories**: dora-rs/dora
 
 ### Radovenchyk
