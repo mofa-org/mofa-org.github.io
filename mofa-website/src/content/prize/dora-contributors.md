@@ -3,23 +3,23 @@ type: "contributors"
 category: "dora"
 title: "Dora-rs Contributors"
 title_zh: "Dora-rs 贡献者"
-last_updated: "2026-01-12"
+last_updated: "2026-01-13"
 repositories: ["dora-rs/dora"]
-total_contributors: 51
+total_contributors: 52
 ---
 # Dora-rs Contributors Cache
 
 这个文件在构建时自动更新，缓存从GitHub API获取的贡献者数据。
 
-**最后更新**: 2026-01-12
-**总贡献者数**: 51
+**最后更新**: 2026-01-13
+**总贡献者数**: 52
 **数据来源**: dora-rs/dora
 
 ## Contributors Data
 
 
 ### haixuanTao
-- **Contributions**: 1808
+- **Contributions**: 1809
 - **Avatar**: https://avatars.githubusercontent.com/u/22787340?v=4
 - **GitHub**: https://github.com/haixuanTao
 - **Repositories**: dora-rs/dora
@@ -180,16 +180,22 @@ total_contributors: 51
 - **GitHub**: https://github.com/Felixhuangsiling
 - **Repositories**: dora-rs/dora
 
-### guptapratykshh
+### AnshKumar200
 - **Contributions**: 4
-- **Avatar**: https://avatars.githubusercontent.com/u/180039440?v=4
-- **GitHub**: https://github.com/guptapratykshh
+- **Avatar**: https://avatars.githubusercontent.com/u/124369727?v=4
+- **GitHub**: https://github.com/AnshKumar200
 - **Repositories**: dora-rs/dora
 
 ### TomCC7
 - **Contributions**: 4
 - **Avatar**: https://avatars.githubusercontent.com/u/55869557?v=4
 - **GitHub**: https://github.com/TomCC7
+- **Repositories**: dora-rs/dora
+
+### guptapratykshh
+- **Contributions**: 4
+- **Avatar**: https://avatars.githubusercontent.com/u/180039440?v=4
+- **GitHub**: https://github.com/guptapratykshh
 - **Repositories**: dora-rs/dora
 
 ### NageshMandal
