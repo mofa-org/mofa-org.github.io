@@ -3,7 +3,7 @@ type: "contributors"
 category: "dora"
 title: "Dora-rs Contributors"
 title_zh: "Dora-rs 贡献者"
-last_updated: "2026-01-22"
+last_updated: "2026-01-23"
 repositories: ["dora-rs/dora"]
 total_contributors: 53
 ---
@@ -11,7 +11,7 @@ total_contributors: 53
 
 这个文件在构建时自动更新，缓存从GitHub API获取的贡献者数据。
 
-**最后更新**: 2026-01-22
+**最后更新**: 2026-01-23
 **总贡献者数**: 53
 **数据来源**: dora-rs/dora
 
@@ -19,7 +19,7 @@ total_contributors: 53
 
 
 ### haixuanTao
-- **Contributions**: 1832
+- **Contributions**: 1834
 - **Avatar**: https://avatars.githubusercontent.com/u/22787340?v=4
 - **GitHub**: https://github.com/haixuanTao
 - **Repositories**: dora-rs/dora
@@ -156,22 +156,10 @@ total_contributors: 53
 - **GitHub**: https://github.com/bobdingAI
 - **Repositories**: dora-rs/dora
 
-### Felixhuangsiling
+### Gege-Wang
 - **Contributions**: 5
-- **Avatar**: https://avatars.githubusercontent.com/u/77993249?v=4
-- **GitHub**: https://github.com/Felixhuangsiling
-- **Repositories**: dora-rs/dora
-
-### guptapratykshh
-- **Contributions**: 5
-- **Avatar**: https://avatars.githubusercontent.com/u/180039440?v=4
-- **GitHub**: https://github.com/guptapratykshh
-- **Repositories**: dora-rs/dora
-
-### rahat2134
-- **Contributions**: 5
-- **Avatar**: https://avatars.githubusercontent.com/u/136263179?v=4
-- **GitHub**: https://github.com/rahat2134
+- **Avatar**: https://avatars.githubusercontent.com/u/67888311?v=4
+- **GitHub**: https://github.com/Gege-Wang
 - **Repositories**: dora-rs/dora
 
 ### MunishMummadi
@@ -180,10 +168,22 @@ total_contributors: 53
 - **GitHub**: https://github.com/MunishMummadi
 - **Repositories**: dora-rs/dora
 
-### Gege-Wang
+### rahat2134
 - **Contributions**: 5
-- **Avatar**: https://avatars.githubusercontent.com/u/67888311?v=4
-- **GitHub**: https://github.com/Gege-Wang
+- **Avatar**: https://avatars.githubusercontent.com/u/136263179?v=4
+- **GitHub**: https://github.com/rahat2134
+- **Repositories**: dora-rs/dora
+
+### guptapratykshh
+- **Contributions**: 5
+- **Avatar**: https://avatars.githubusercontent.com/u/180039440?v=4
+- **GitHub**: https://github.com/guptapratykshh
+- **Repositories**: dora-rs/dora
+
+### Felixhuangsiling
+- **Contributions**: 5
+- **Avatar**: https://avatars.githubusercontent.com/u/77993249?v=4
+- **GitHub**: https://github.com/Felixhuangsiling
 - **Repositories**: dora-rs/dora
 
 ### TomCC7
