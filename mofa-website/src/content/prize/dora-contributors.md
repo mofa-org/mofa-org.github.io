@@ -3,16 +3,16 @@ type: "contributors"
 category: "dora"
 title: "Dora-rs Contributors"
 title_zh: "Dora-rs 贡献者"
-last_updated: "2026-01-31"
+last_updated: "2026-02-01"
 repositories: ["dora-rs/dora"]
-total_contributors: 53
+total_contributors: 54
 ---
 # Dora-rs Contributors Cache
 
 这个文件在构建时自动更新，缓存从GitHub API获取的贡献者数据。
 
-**最后更新**: 2026-01-31
-**总贡献者数**: 53
+**最后更新**: 2026-02-01
+**总贡献者数**: 54
 **数据来源**: dora-rs/dora
 
 ## Contributors Data
@@ -25,7 +25,7 @@ total_contributors: 53
 - **Repositories**: dora-rs/dora
 
 ### phil-opp
-- **Contributions**: 1774
+- **Contributions**: 1782
 - **Avatar**: https://avatars.githubusercontent.com/u/1131315?v=4
 - **GitHub**: https://github.com/phil-opp
 - **Repositories**: dora-rs/dora
@@ -280,6 +280,12 @@ total_contributors: 53
 - **Contributions**: 1
 - **Avatar**: https://avatars.githubusercontent.com/u/82046558?v=4
 - **GitHub**: https://github.com/jdilla52
+- **Repositories**: dora-rs/dora
+
+### afrdbaig7
+- **Contributions**: 1
+- **Avatar**: https://avatars.githubusercontent.com/u/181359594?v=4
+- **GitHub**: https://github.com/afrdbaig7
 - **Repositories**: dora-rs/dora
 
 ### jerry73204
