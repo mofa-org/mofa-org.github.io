@@ -179,6 +179,17 @@ try {
 
 <button id="back-to-top" style="position: fixed; bottom: 40px; right: 40px; z-index: 50; display: none; background: #FFC938; color: #333; border: none; border-radius: 50%; width: 48px; height: 48px; box-shadow: 0 4px 8px rgba(0,0,0,0.2); font-size: 24px; cursor: pointer; transition: background-color 0.3s, opacity 0.3s, visibility 0.3s;" aria-label="Back to top">↑</button>
 
+<style>
+  /* 移动端：将返回顶部按钮移至左侧，避免与目录按钮重叠 */
+  @media (max-width: 768px) {
+    #back-to-top {
+      left: 20px !important;
+      right: auto !important;
+      bottom: 30px !important;
+    }
+  }
+</style>
+
 <script>
   document.addEventListener('DOMContentLoaded', function() {
     const backToTopButton = document.getElementById('back-to-top');
