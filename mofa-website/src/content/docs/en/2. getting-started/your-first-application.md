@@ -1,86 +1,86 @@
 ---
-title: 6分钟开发首个MoFA智能体应用
-description: 快速构建一个基于大语言模型的MoFA智能体应用
+title: Build Your First MoFA Agent in 6 Minutes
+description: Quickly build a MoFA agent application based on large language models
 order: 2
 ---
 
 
-本指南将指导你快速构建一个基于大语言模型的MoFA智能体(Agent),通过标准化流程实现从环境配置到交互测试的完整开发链路。
+This guide will walk you through quickly building a MoFA agent based on large language models, implementing a complete development workflow from environment configuration to interactive testing through standardized processes.
 
-## 0. 参考文件结构
+## 0. Reference File Structure
 
 ```tree
 .
 └── mofa/
-    ├── dataflows/                     # 数据流配置目录
-    │   └── qwen_agent/                # 智能体数据流目录
-    │       ├── logs/                  # 运行日志目录
-    │       ├── out/                   # 输出文件目录
-    │       ├── my_llm_dataflow.yml    # 数据流配置
-    │       └── .env.secret            # 环境变量配置
-    ├── node-hub/                      # 节点仓库目录
-    │   ├── terminal-input/            # 终端输入节点
+    ├── dataflows/                     # Dataflow configuration directory
+    │   └── qwen_agent/                # Agent dataflow directory
+    │       ├── logs/                  # Runtime logs directory
+    │       ├── out/                   # Output files directory
+    │       ├── my_llm_dataflow.yml    # Dataflow configuration
+    │       └── .env.secret            # Environment variables configuration
+    ├── node-hub/                      # Node hub directory
+    │   ├── terminal-input/            # Terminal input node
     │   │   ├── README.md
     │   │   ├── pyproject.toml
-    │   │   ├── terminal_input/        # 核心代码
+    │   │   ├── terminal_input/        # Core code
     │   │   │   ├── __init__.py
     │   │   │   └── main.py
-    │   │   └── tests/                 # 测试目录
+    │   │   └── tests/                 # Test directory
     │   │       └── test.py
-    │   └── qwen_agent/                # Qwen智能体节点
+    │   └── qwen_agent/                # Qwen agent node
     │       ├── README.md
     │       ├── pyproject.toml
-    │       ├── qwen_agent/            # 核心代码
+    │       ├── qwen_agent/            # Core code
     │       │   ├── __init__.py
-    │       │   ├── configs/           # 配置目录
+    │       │   ├── configs/           # Configuration directory
     │       │   │   └── agent.yml
-    │       │   └── main.py            # 逻辑入口
-    │       └── tests/                 # 测试目录
+    │       │   └── main.py            # Logic entry point
+    │       └── tests/                 # Test directory
     │            └── test_main.py
-    └── README.md                      # 框架说明文档
+    └── README.md                      # Framework documentation
 ```
-## 1. 环境变量配置（1分钟）
+## 1. Environment Variables Configuration (1 minute)
 
-在示例目录中创建环境变量文件 `.env.secret`
-（需与数据流配置文件 `dataflow.yml` 同级，本示例路径为 `mofa/dataflows/qwen_agent`）
+Create an environment variables file `.env.secret` in the example directory
+(must be at the same level as the dataflow configuration file `dataflow.yml`, in this example: `mofa/dataflows/qwen_agent`)
 
-向 `.env.secret` 写入以下配置，替换 `LLM_API_KEY`、`LLM_API_BASE` 和 `LLM_MODEL` 为实际模型参数：
+Write the following configuration to `.env.secret`, replacing `LLM_API_KEY`, `LLM_API_BASE`, and `LLM_MODEL` with actual model parameters:
 ```plaintext
-# Qwen API 密钥
+# Qwen API key
 LLM_API_KEY=your_api_key_here
-# Qwen 模型标识符（如 qwen-turbo、qwen-plus 等，根据服务端支持配置）
+# Qwen model identifier (e.g., qwen-turbo, qwen-plus, etc., configure according to server support)
 LLM_MODEL=qwen-turbo
-# API 端点基础路径
+# API endpoint base path
 LLM_API_BASE=https://dashscope.aliyuncs.com/compatible-mode/v1
 ```
-## 2. 初始化智能体项目（1分钟）
+## 2. Initialize Agent Project (1 minute)
 
-使用MoFA CLI快速创建智能体项目骨架：
+Use MoFA CLI to quickly create an agent project skeleton:
 ```bash
-# 在 node-hub 目录下执行（本示例路径为 mofa/node-hub）
+# Execute in node-hub directory (in this example: mofa/node-hub)
 mofa new-agent qwen_agent
 cd qwen_agent
 ```
 
-生成的项目结构遵循MoFA规范，包含核心模块与配置目录：
+The generated project structure follows MoFA standards, including core modules and configuration directories:
 ```tree
 .
-├── README.md                  # 项目说明文档
-├── qwen_agent                 # 核心代码目录
-│   ├── __init__.py            # 包标识文件
-│   ├── configs                # 配置文件目录
-│   │   └── agent.yml          # 智能体配置定义
-│   └── main.py                # 核心逻辑入口
-├── pyproject.toml             # 项目依赖与构建配置
-└── tests                      # 单元测试目录
-    └── test_main.py           # 核心功能测试用例
+├── README.md                  # Project documentation
+├── qwen_agent                 # Core code directory
+│   ├── __init__.py            # Package identifier file
+│   ├── configs                # Configuration files directory
+│   │   └── agent.yml          # Agent configuration definition
+│   └── main.py                # Core logic entry point
+├── pyproject.toml             # Project dependencies and build configuration
+└── tests                      # Unit test directory
+    └── test_main.py           # Core functionality test cases
 ```
 
 
-## 3. 配置项目元信息（1分钟）
+## 3. Configure Project Metadata (1 minute)
 
-修改 `qwen_agent` 项目的 `pyproject.toml`
-（本示例路径为 `mofa/node-hub/qwen_agent/pyproject.toml`），配置项目元数据与依赖：
+Modify `pyproject.toml` in the `qwen_agent` project
+(in this example: `mofa/node-hub/qwen_agent/pyproject.toml`), configuring project metadata and dependencies:
 
 ```toml
 [tool.poetry]
@@ -89,30 +89,30 @@ version = "0.1.0"
 authors = [
     "youremail@gmail.com",
 ]
-description = "基于MoFA框架的Qwen大语言模型智能体"
+description = "Qwen large language model agent based on MoFA framework"
 license = "MIT"
 homepage = "https://github.com/your-org/qwen_agent"
 readme = "README.md"
 packages = [{ include = "qwen_agent" }]
 
 [tool.poetry.dependencies]
-python = ">=3.10,<3.12"         # 兼容Python版本范围
-dashscope = "1.20.0"            # Qwen API客户端依赖
-python-dotenv = "*"             # 环境变量加载工具
+python = ">=3.10,<3.12"         # Compatible Python version range
+dashscope = "1.20.0"            # Qwen API client dependency
+python-dotenv = "*"             # Environment variable loading tool
 
 [tool.poetry.scripts]
-qwen_agent = "qwen_agent.main:main"  # 定义可执行入口
+qwen_agent = "qwen_agent.main:main"  # Define executable entry
 
 [build-system]
-requires = ["poetry-core>=1.8.0"]    # 构建系统依赖
-build-backend = "poetry.core.masonry.api"  # 构建后端指定
+requires = ["poetry-core>=1.8.0"]    # Build system dependencies
+build-backend = "poetry.core.masonry.api"  # Build backend specification
 ```
 
 
-## 4. 实现智能体核心逻辑（2分钟）
+## 4. Implement Agent Core Logic (2 minutes)
 
-编辑 `qwen_agent` 模块的 `main.py`
-（本示例路径为 `mofa/node-hub/qwen_agent/qwen_agent/main.py`），实现LLM调用与数据流交互逻辑：
+Edit `main.py` in the `qwen_agent` module
+(in this example: `mofa/node-hub/qwen_agent/qwen_agent/main.py`), implementing LLM calls and dataflow interaction logic:
 
 ```python
 import os
@@ -120,7 +120,7 @@ from dotenv import load_dotenv
 from mofa.agent_build.base.base_agent import MofaAgent, run_agent
 
 def call_qwen_directly(user_input: str) -> str:
-    """调用Qwen API获取生成结果"""
+    """Call Qwen API to get generation results"""
     from dashscope import Generation
     try:
         response = Generation.call(
@@ -133,7 +133,7 @@ def call_qwen_directly(user_input: str) -> str:
         )
         return response.output.text
     except Exception as e:
-        return f"API调用失败: {str(e)}"
+        return f"API call failed: {str(e)}"
 
 
 @run_agent
@@ -144,11 +144,11 @@ def run(agent: MofaAgent):
     if not user_input or str(user_input).strip() == "":
         return
 
-    agent.write_log(f"收到输入: {user_input}")
-    agent.write_log("转发至Qwen模型处理...")
+    agent.write_log(f"Received input: {user_input}")
+    agent.write_log("Forwarding to Qwen model for processing...")
 
     llm_result = call_qwen_directly(user_input)
-    agent.write_log(f"Qwen模型返回结果: {llm_result}")
+    agent.write_log(f"Qwen model returned result: {llm_result}")
 
     agent.send_output('llm_result', llm_result)
 
@@ -162,44 +162,44 @@ if __name__ == "__main__":
 ```
 
 
-## 5. 定义数据流配置（1分钟）
+## 5. Define Dataflow Configuration (1 minute)
 
-在 `dataflows/qwen_agent` 目录下创建 `my_llm_dataflow.yml`
-（与 `.env.secret` 同级，本示例路径为 `mofa/dataflows/qwen_agent/my_llm_dataflow.yml`），配置节点间数据交互关系：
+Create `my_llm_dataflow.yml` in the `dataflows/qwen_agent` directory
+(same level as `.env.secret`, in this example: `mofa/dataflows/qwen_agent/my_llm_dataflow.yml`), configuring data interaction relationships between nodes:
 
 ```yaml
 nodes:
-  - id: terminal-input                 # 终端输入节点ID
-    build: pip install ../../node-hub/terminal-input  # 构建命令
-    path: dynamic                      # 动态节点标识
+  - id: terminal-input                 # Terminal input node ID
+    build: pip install ../../node-hub/terminal-input  # Build command
+    path: dynamic                      # Dynamic node identifier
     outputs:
-      - data                           # 输出端口定义
+      - data                           # Output port definition
     inputs:
-      agent_response: qwen_agent/llm_result  # 输入映射：接收智能体输出
+      agent_response: qwen_agent/llm_result  # Input mapping: receive agent output
 
-  - id: qwen_agent                     # 智能体节点ID
-    build: pip install ../../node-hub/qwen_agent  # 构建命令
-    path: qwen_agent                   # 智能体包路径
+  - id: qwen_agent                     # Agent node ID
+    build: pip install ../../node-hub/qwen_agent  # Build command
+    path: qwen_agent                   # Agent package path
     outputs:
-      - llm_result                     # 输出端口定义
+      - llm_result                     # Output port definition
     inputs:
-      query: terminal-input/data       # 输入映射：接收终端输入
-    env:                               # 环境变量配置
-      IS_DATAFLOW_END: true            # 标识为数据流终点
-      WRITE_LOG: true                  # 启用日志输出
+      query: terminal-input/data       # Input mapping: receive terminal input
+    env:                               # Environment variables configuration
+      IS_DATAFLOW_END: true            # Mark as dataflow endpoint
+      WRITE_LOG: true                  # Enable log output
 ```
 
 
-## 6. 运行与测试
+## 6. Run and Test
 
-切换至数据流配置目录（本示例路径为 `mofa/dataflows/qwen_agent`），执行启动命令：
+Switch to the dataflow configuration directory (in this example: `mofa/dataflows/qwen_agent`), and execute the start command:
 
 ```bash
-# 安装依赖并启动数据流
+# Install dependencies and start dataflow
 mofa run my_llm_dataflow.yml
 ```
 
-交互测试示例：
+Interaction test example:
 ```
 (nodehub) root@user:~/mofa/dataflows/my_llm_agent# mofa run my_llm_dataflow.yml
 Cleaning up existing dora processes...

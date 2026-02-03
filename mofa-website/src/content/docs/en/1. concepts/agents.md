@@ -1,22 +1,22 @@
 ---
-title: MoFA智能体模版
+title: MoFA Agent Templates
 description: Understanding MoFA agent concepts, design patterns, and composition
 order: 1
 ---
 
 
-构建智能体有一定的设计模式（Design Pattern），MoFA提供一系列的设计模式的实现，供开发者作为模版使用。
+Building agents follows certain design patterns. MoFA provides a series of design pattern implementations for developers to use as templates.
 
 
-## MoFA组合智能体
+## MoFA Composite Agents
 
-基于Dora-RS框架构建的MoFA智能体，实质上就是Dora-RS Dataflow。两个智能体之间可以通过数据连接进行组合，从而形成组合智能体。
+MoFA agents built on the Dora-RS framework are essentially Dora-RS Dataflows. Two agents can be composed through data connections to form composite agents.
 
-在上述的self_refine Agent模版和下面将要介绍的服务智能体和案例，都是MoFA组合智能体。
+The self_refine Agent template mentioned above, as well as the service agents and examples to be introduced below, are all MoFA composite agents.
 
-## MoFA服务智能体
+## MoFA Service Agents
 
-智能体往往需要需要一些服务，包括检索增强生成，记忆，使用外部工具和任务规划和分解等。MoFA认为：Everything Agent。我们以MoFA智能体的方式提供RAG智能体，记忆智能体，规划智能体和行动智能体。开发者可以使用这些已经实现的服务智能体，与自己的智能体相连接组合从而获得相应的服务。MoFA也可以集成第三方的服务智能体，供开发者按照不同的需求使用。
+Agents often require various services, including retrieval-augmented generation, memory, external tool usage, and task planning and decomposition. MoFA believes in: Everything Agent. We provide RAG agents, memory agents, planning agents, and action agents in the form of MoFA agents. Developers can use these ready-made service agents, connect and compose them with their own agents to obtain corresponding services. MoFA can also integrate third-party service agents for developers to use according to different needs.
 
 - rag
 - memory

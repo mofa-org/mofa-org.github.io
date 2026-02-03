@@ -1,66 +1,66 @@
 ---
-title: 快速开始指南
-description: MoFA 安装和 Hello World 示例
+title: Quick Start Guide
+description: MoFA installation and Hello World example
 order: 1
 ---
 
 
-## 1. 开发环境配置
+## 1. Development Environment Setup
 
-### 1.1 Python 环境
+### 1.1 Python Environment
 
-首先需构建隔离的 Python 运行环境：
+First, create an isolated Python runtime environment:
 
 ```bash
-# 创建虚拟环境
+# Create virtual environment
 python3 -m venv .mofa
-# 激活虚拟环境
+# Activate virtual environment
 source .mofa/bin/activate
 ```
 
-**环境要求**
-- Python 版本需为 3.10 或 3.11
-- 兼容系统：WSL（Ubuntu 22.04）、macOS
-- 暂不支持 Windows 系统
+**Environment Requirements**
+- Python version 3.10 or 3.11
+- Compatible systems: WSL (Ubuntu 22.04), macOS
+- Windows system not currently supported
 
-### 1.2 Rust 环境配置
+### 1.2 Rust Environment Setup
 ```bash
-# 安装 Rust 工具链
+# Install Rust toolchain
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-# 安装过程中保持默认配置（直接按 Enter 确认）
-# 安装 Dora 命令行工具
+# Keep default configuration during installation (press Enter to confirm)
+# Install Dora CLI tool
 cargo install dora-cli
 
-# 验证安装结果
+# Verify installation
 rustc --version
 cargo --version
 dora --version
 ```
 
-## 2. 安装 MoFa 框架
+## 2. Install MoFA Framework
 ```bash
 pip install git+https://github.com/mofa-org/mofa.git
-# 验证安装
+# Verify installation
 pip show mofa-ai
 ```
 
-## 3. 运行 Hello World 示例
+## 3. Run Hello World Example
 ```bash
-# 克隆代码仓库
+# Clone the repository
 git clone git@github.com:mofa-org/mofa.git
 ```
 
-### 3.1 启动数据流
+### 3.1 Start Dataflow
 ```bash
 cd mofa/dataflows/hello_world
 mofa run hello_world_dataflow.yml
 ```
 
 
-交互示例输出：
+Example interaction output:
 
 ```
- Send Your Task :  你好
+ Send Your Task :  Hello
 -------------hello_world_result---------------
-你好
+Hello
 ```
