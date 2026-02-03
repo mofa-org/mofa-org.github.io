@@ -1,41 +1,49 @@
 ---
 import { getCollection } from 'astro:content';
-import BaseLayout from '../../layouts/BaseLayout.astro';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
 
 export async function getStaticPaths() {
   const posts = await getCollection('blog');
-  return posts.map(post => ({
-    params: { slug: post.slug },
-    props: { post }
-  }));
+  return posts.map(post => {
+    // post.slug 格式: "en/introducing-mofa" 或 "zh/introducing-mofa"
+    const parts = post.slug.split('/');
+    const lang = parts[0]; // 'en' 或 'zh'
+    const slug = parts.slice(1).join('/'); // 剩余部分
+
+    return {
+      params: { lang, slug },
+      props: { post }
+    };
+  });
 }
 
 const { post } = Astro.props;
+const { lang } = Astro.params;
 const { Content } = await post.render();
 ---
 
 <BaseLayout title={post.data.title} description={post.data.description}>
   <div style="max-width: 800px; margin: 0 auto; padding: 40px 20px; font-family: system-ui, -apple-system, sans-serif;">
-    
+
     <!-- 返回博客按钮 -->
     <div style="margin-bottom: 40px;">
-      <a 
-        href="/blog"
+      <a
+        href={`/blog/${lang}/`}
         style="color: #0066cc; text-decoration: none; font-size: 0.9rem; display: inline-flex; align-items: center; gap: 8px;"
         onmouseover="this.style.color='#004499'"
         onmouseout="this.style.color='#0066cc'"
       >
-        ← 返回博客
+        ← {lang === 'zh' ? '返回博客' : 'Back to Blog'}
       </a>
     </div>
 
     <!-- 文章头部 -->
     <header style="margin-bottom: 40px; padding-bottom: 32px; border-bottom: 1px solid #e5e5e5;">
-      
+
       <!-- 文章元信息 -->
       <div style="margin-bottom: 20px; display: flex; align-items: center; gap: 16px; flex-wrap: wrap;">
         <time style="color: #666; font-size: 0.9rem;">
-          {post.data.date.toLocaleDateString('zh-CN')}
+          {post.data.date.toLocaleDateString(lang === 'zh' ? 'zh-CN' : 'en-US')}
         </time>
         {post.data.tags && (
           <div style="display: flex; gap: 8px;">
@@ -47,20 +55,20 @@ const { Content } = await post.render();
           </div>
         )}
       </div>
-      
+
       <!-- 文章标题 -->
       <h1 style="font-size: 2.5rem; font-weight: bold; margin: 0 0 16px 0; line-height: 1.2; color: #1a1a1a;">
         {post.data.title}
       </h1>
-      
+
       <!-- 文章描述 -->
       <p style="font-size: 1.2rem; color: #666; margin: 0 0 20px 0; line-height: 1.6;">
         {post.data.description}
       </p>
-      
+
       <!-- 作者信息 -->
       <div style="color: #888; font-size: 0.9rem;">
-        作者：{post.data.author}
+        {lang === 'zh' ? '作者' : 'Author'}：{post.data.author}
       </div>
     </header>
 
@@ -72,46 +80,46 @@ const { Content } = await post.render();
     <!-- 文章底部 -->
     <footer style="margin-top: 60px; padding-top: 32px; border-top: 1px solid #e5e5e5;">
       <div style="display: flex; flex-direction: column; gap: 24px; text-align: center;">
-        
+
         <!-- 互动区域 -->
         <div>
-          <p style="color: #666; margin: 0 0 16px 0;">喜欢这篇文章？</p>
+          <p style="color: #666; margin: 0 0 16px 0;">{lang === 'zh' ? '喜欢这篇文章？' : 'Enjoy this article?'}</p>
           <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
-            <a 
-              href="https://github.com/mofa-org/mofa" 
-              target="_blank" 
-              rel="noopener noreferrer" 
+            <a
+              href="https://github.com/mofa-org/mofa"
+              target="_blank"
+              rel="noopener noreferrer"
               style="color: #0066cc; text-decoration: none; padding: 8px 16px; border: 1px solid #0066cc; border-radius: 4px; font-size: 0.9rem;"
               onmouseover="this.style.background='#0066cc'; this.style.color='white'"
               onmouseout="this.style.background='transparent'; this.style.color='#0066cc'"
             >
-              GitHub 上关注我们
+              {lang === 'zh' ? 'GitHub 上关注我们' : 'Follow us on GitHub'}
             </a>
-            <a 
-              href="https://discord.gg/hKJZzDMMm9" 
-              target="_blank" 
+            <a
+              href="https://discord.gg/hKJZzDMMm9"
+              target="_blank"
               rel="noopener noreferrer"
               style="background: #0066cc; color: white; text-decoration: none; padding: 8px 16px; border-radius: 4px; font-size: 0.9rem;"
               onmouseover="this.style.background='#004499'"
               onmouseout="this.style.background='#0066cc'"
             >
-              加入讨论
+              {lang === 'zh' ? '加入讨论' : 'Join the Discussion'}
             </a>
           </div>
         </div>
-        
+
         <!-- 编辑链接 -->
         <div>
-          <p style="color: #666; margin: 0 0 8px 0; font-size: 0.9rem;">发现问题？</p>
-          <a 
-            href={`https://github.com/mofa-org/mofa-org.github.io/blob/main/mofa-website/src/content/blog/${post.slug}.md`}
-            target="_blank" 
+          <p style="color: #666; margin: 0 0 8px 0; font-size: 0.9rem;">{lang === 'zh' ? '发现问题？' : 'Found an issue?'}</p>
+          <a
+            href={`https://github.com/mofa-org/mofa-org.github.io/blob/main/mofa-website/src/content/blog/${lang}/${post.slug.split('/').slice(1).join('/')}.md`}
+            target="_blank"
             rel="noopener noreferrer"
             style="color: #0066cc; text-decoration: none; font-size: 0.9rem;"
             onmouseover="this.style.textDecoration='underline'"
             onmouseout="this.style.textDecoration='none'"
           >
-            在 GitHub 上编辑此页面
+            {lang === 'zh' ? '在 GitHub 上编辑此页面' : 'Edit this page on GitHub'}
           </a>
         </div>
       </div>

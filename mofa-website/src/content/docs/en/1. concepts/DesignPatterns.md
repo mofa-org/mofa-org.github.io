@@ -1,7 +1,7 @@
 ---
 title: MoFA Agent Design Patterns
 description: Understanding various design patterns used in MoFA agents
-order: 2
+order: 1
 ---
 
 MoFA provides various design patterns that help developers build sophisticated agents with different capabilities and behaviors.

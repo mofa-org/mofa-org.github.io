@@ -1,7 +1,7 @@
 ---
 title: MoFA智能体模版
 description: 理解MoFA智能体概念、设计模式和组合方法
-order: 1
+order: 2
 ---
 
 

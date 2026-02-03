@@ -1,0 +1,117 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+export async function getStaticPaths() {
+  return [
+    { params: { lang: 'en' } },
+    { params: { lang: 'zh' } }
+  ];
+}
+
+const { lang } = Astro.params;
+
+const allPosts = await getCollection('blog');
+const posts = allPosts
+  .filter(post => post.slug.startsWith(`${lang}/`))
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+
+const t = {
+  en: {
+    title: 'MoFA Blog',
+    description: 'Latest news and technical insights about MoFA',
+    author: 'Author',
+    readMore: 'Read more →',
+    comingSoon: 'Stay Tuned',
+    preparing: 'We are preparing more exciting content'
+  },
+  zh: {
+    title: 'MoFA 博客',
+    description: 'MoFA 的最新动态和技术分享',
+    author: '作者',
+    readMore: '阅读全文 →',
+    comingSoon: '敬请期待',
+    preparing: '我们正在准备更多精彩内容'
+  }
+}[lang];
+---
+
+<BaseLayout title={t.title} description={t.description}>
+  <div style="max-width: 800px; margin: 0 auto; padding: 40px 20px; font-family: system-ui, -apple-system, sans-serif;">
+
+    <!-- 页面标题 -->
+    <header style="text-align: center; margin-bottom: 60px;">
+      <h1 style="font-size: 2.5rem; font-weight: bold; margin: 0 0 16px 0; color: #1a1a1a;">
+        {t.title}
+      </h1>
+      <p style="font-size: 1.2rem; color: #666; margin: 0; line-height: 1.6;">
+        {t.description}
+      </p>
+    </header>
+
+    <!-- 博客文章列表 -->
+    <div style="margin-bottom: 40px;">
+      {posts.map((post) => (
+        <article style="margin-bottom: 40px; padding: 32px; border: 1px solid #e5e5e5; border-radius: 8px; background: #fff;">
+
+          <!-- 文章元信息 -->
+          <div style="margin-bottom: 16px; display: flex; align-items: center; gap: 16px; flex-wrap: wrap;">
+            <time style="color: #666; font-size: 0.9rem;">
+              {post.data.date.toLocaleDateString(lang === 'zh' ? 'zh-CN' : 'en-US')}
+            </time>
+            {post.data.tags && (
+              <div style="display: flex; gap: 8px;">
+                {post.data.tags.map((tag) => (
+                  <span style="background: #f0f0f0; color: #333; padding: 4px 8px; border-radius: 4px; font-size: 0.8rem;">
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            )}
+          </div>
+
+          <!-- 文章标题 -->
+          <h2 style="margin: 0 0 12px 0; font-size: 1.5rem; font-weight: 600; line-height: 1.4;">
+            <a
+              href={`/blog/${post.slug}`}
+              style="color: #1a1a1a; text-decoration: none;"
+              onmouseover="this.style.color='#0066cc'"
+              onmouseout="this.style.color='#1a1a1a'"
+            >
+              {post.data.title}
+            </a>
+          </h2>
+
+          <!-- 文章描述 -->
+          <p style="color: #666; margin: 0 0 16px 0; line-height: 1.6; font-size: 1rem;">
+            {post.data.description}
+          </p>
+
+          <!-- 作者和阅读链接 -->
+          <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;">
+            <span style="color: #888; font-size: 0.9rem;">
+              {t.author}：{post.data.author}
+            </span>
+            <a
+              href={`/blog/${post.slug}`}
+              style="color: #0066cc; text-decoration: none; font-weight: 500; padding: 8px 16px; border: 1px solid #0066cc; border-radius: 4px; font-size: 0.9rem;"
+              onmouseover="this.style.background='#0066cc'; this.style.color='white'"
+              onmouseout="this.style.background='transparent'; this.style.color='#0066cc'"
+            >
+              {t.readMore}
+            </a>
+          </div>
+        </article>
+      ))}
+    </div>
+
+    <!-- 空状态 -->
+    {posts.length === 0 && (
+      <div style="text-align: center; padding: 80px 20px; color: #666;">
+        <h2 style="font-size: 1.5rem; margin: 0 0 16px 0; color: #888;">{t.comingSoon}</h2>
+        <p style="margin: 0; font-size: 1rem;">{t.preparing}</p>
+      </div>
+    )}
+
+  </div>
+</BaseLayout>

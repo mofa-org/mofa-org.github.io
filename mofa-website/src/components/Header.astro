@@ -133,7 +133,7 @@ try {
       </div>
 
       <a href="/docs/" class="nav-link" data-en="Docs" data-zh="文档">Docs</a>
-      <a href="/blog" class="nav-link" data-en="Blog" data-zh="博客">Blog</a>
+      <a href="/blog/" class="nav-link" data-en="Blog" data-zh="博客">Blog</a>
 
       <!-- Hackathons Dropdown -->
       <div class="nav-dropdown">
@@ -234,7 +234,7 @@ try {
           <line x1="13" y1="9" x2="8" y2="9" stroke="currentColor" stroke-width="1"/>
         </svg>
       </a>
-      <a href="/blog" class="mobile-nav-link">
+      <a href="/blog/" class="mobile-nav-link">
         <span class="link-text" data-en="Blog" data-zh="博客">Blog</span>
         <svg class="icon-right" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
           <path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/>
@@ -344,9 +344,10 @@ try {
         localStorage.setItem('mofa-language', newLang);
         updateLangDisplay();
 
-        // 检查是否在文档页面
+        // 检查是否在文档页面或博客页面
         const path = window.location.pathname;
         const isDocsPage = path.startsWith('/docs/');
+        const isBlogPage = path.startsWith('/blog/');
 
         if (isDocsPage) {
           // 在文档页面，跳转到对应语言的URL
@@ -361,6 +362,24 @@ try {
           } else {
             // 其他docs页面，默认跳转到overview
             newPath = isEnglish ? '/docs/en/0-overview' : '/docs/zh/0-overview';
+          }
+          window.location.href = newPath;
+          return;
+        }
+
+        if (isBlogPage) {
+          // 在博客页面，跳转到对应语言的URL
+          let newPath;
+          if (path.startsWith('/blog/en/')) {
+            newPath = path.replace('/blog/en/', '/blog/zh/');
+          } else if (path.startsWith('/blog/zh/')) {
+            newPath = path.replace('/blog/zh/', '/blog/en/');
+          } else if (path === '/blog' || path === '/blog/') {
+            // 在blog首页，根据语言跳转
+            newPath = isEnglish ? '/blog/en/' : '/blog/zh/';
+          } else {
+            // 其他blog页面，默认跳转到博客列表
+            newPath = isEnglish ? '/blog/en/' : '/blog/zh/';
           }
           window.location.href = newPath;
           return;

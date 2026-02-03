@@ -1,7 +1,7 @@
 ---
 title: MoFA Agent Templates
 description: Understanding MoFA agent concepts, design patterns, and composition
-order: 1
+order: 2
 ---
 
 

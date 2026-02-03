@@ -1,14 +1,14 @@
 ---
 title: MoFA智能体设计模式
 description: 理解MoFA智能体中使用的各种设计模式
-order: 2
+order: 1
 ---
 
 MoFA提供各种设计模式，帮助开发者构建具有不同能力和行为的复杂智能体。
 
 ## 核心设计模式
 
-### 1. 推理者模式（Reasoner Pattern）
+### 1. 推理模式（Reasoner Pattern）
 构建能够推理和响应查询的智能体的最简单模式。
 
 ### 2. 自我精炼模式（Self-Refine Pattern）
