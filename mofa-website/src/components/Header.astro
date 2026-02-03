@@ -295,6 +295,12 @@ try {
           document.querySelectorAll('[data-en]').forEach(el => {
             if (el.tagName === 'INPUT' && el.type === 'submit') {
               el.value = el.getAttribute('data-en') || el.value;
+            } else if (el.classList.contains('dropdown-toggle')) {
+              // 对于下拉按钮，只更新内部span的文本，保留svg图标
+              const span = el.querySelector('span');
+              if (span) {
+                span.textContent = el.getAttribute('data-en') || span.textContent;
+              }
             } else {
               el.innerHTML = el.getAttribute('data-en') || el.innerHTML;
             }
@@ -305,6 +311,12 @@ try {
           document.querySelectorAll('[data-zh]').forEach(el => {
             if (el.tagName === 'INPUT' && el.type === 'submit') {
               el.value = el.getAttribute('data-zh') || el.value;
+            } else if (el.classList.contains('dropdown-toggle')) {
+              // 对于下拉按钮，只更新内部span的文本，保留svg图标
+              const span = el.querySelector('span');
+              if (span) {
+                span.textContent = el.getAttribute('data-zh') || span.textContent;
+              }
             } else {
               el.innerHTML = el.getAttribute('data-zh') || el.innerHTML;
             }
