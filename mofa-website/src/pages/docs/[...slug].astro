@@ -15,11 +15,48 @@ const { Content } = await doc.render();
 ---
 
 <DocsLayout title={doc.data.title} description={doc.data.description} currentSlug={doc.slug}>
-  <article class="prose">
+  <article class="prose doc-content" data-slug={doc.slug}>
     <h1>{doc.data.title}</h1>
     <Content />
   </article>
 </DocsLayout>
+
+<script>
+  // 根据 localStorage 语言状态，自动跳转到对应语言版本的文档
+  document.addEventListener('DOMContentLoaded', function() {
+    const currentSlug = document.querySelector('.doc-content')?.dataset.slug;
+    const isEnglish = localStorage.getItem('mofa-language') !== 'zh';
+
+    // 如果当前语言是英文但显示的是中文文档，或反之，则跳转
+    if (currentSlug) {
+      const isCurrentZh = currentSlug.startsWith('zh/');
+      const isCurrentEn = currentSlug.startsWith('en/');
+
+      if (isEnglish && isCurrentZh) {
+        // 应该显示英文，但当前是中文，跳转到英文版本
+        const enSlug = currentSlug.replace('zh/', 'en/');
+        // 检查英文版本是否存在（通过尝试获取）
+        fetch(`/docs/${enSlug}`, { method: 'HEAD' })
+          .then(response => {
+            if (response.ok) {
+              window.location.href = `/docs/${enSlug}`;
+            }
+          })
+          .catch(() => {});
+      } else if (!isEnglish && isCurrentEn) {
+        // 应该显示中文，但当前是英文，跳转到中文版本
+        const zhSlug = currentSlug.replace('en/', 'zh/');
+        fetch(`/docs/${zhSlug}`, { method: 'HEAD' })
+          .then(response => {
+            if (response.ok) {
+              window.location.href = `/docs/${zhSlug}`;
+            }
+          })
+          .catch(() => {});
+      }
+    }
+  });
+</script>
 
 <style>
   .prose {

@@ -34,15 +34,16 @@ allDocs.forEach(doc => {
 });
 
 // 渲染侧边栏项目的递归函数
-function renderSidebarItem(key, item, basePath = '') {
+function renderSidebarItem(key, item, basePath = '', lang = 'en') {
   const fullPath = basePath ? `${basePath}/${key}` : key;
-  
+
   if (item.data) {
     // 这是一个文档文件
     const isActive = currentSlug === item.slug;
+    const itemLang = item.slug.startsWith('zh/') ? 'zh' : 'en';
     return `
-      <li>
-        <a href="/docs/${item.slug}" 
+      <li class="doc-link doc-lang-${itemLang}" style="display: ${itemLang === lang ? 'block' : 'none'};">
+        <a href="/docs/${item.slug}"
            class="sidebar-link ${isActive ? 'active' : ''}"
            style="display: block; padding: 8px 16px; text-decoration: none; color: ${isActive ? '#0066cc' : '#374151'}; font-weight: ${isActive ? '600' : '400'}; border-radius: 4px; transition: all 0.2s ease;"
            onmouseover="if (!this.classList.contains('active')) { this.style.background = '#f3f4f6'; this.style.color = '#0066cc'; }"
@@ -53,10 +54,10 @@ function renderSidebarItem(key, item, basePath = '') {
     `;
   } else {
     // 这是一个文件夹
-    const folderItems = sortEntries(Object.entries(item)).map(([subKey, subItem]) => 
-      renderSidebarItem(subKey, subItem, fullPath)
+    const folderItems = sortEntries(Object.entries(item)).map(([subKey, subItem]) =>
+      renderSidebarItem(subKey, subItem, fullPath, lang)
     ).join('');
-    
+
     return `
       <li style="margin-bottom: 16px;">
         <div style="padding: 8px 16px; font-weight: 600; color: #111827; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.05em;">
@@ -104,8 +105,13 @@ function sortEntries(entries) {
   });
 }
 
-const sidebarContent = sortEntries(Object.entries(docsStructure)).map(([key, item]) => 
-  renderSidebarItem(key, item)
+// 为英文和中文分别生成侧边栏内容
+const sidebarContentEn = sortEntries(Object.entries(docsStructure)).map(([key, item]) =>
+  renderSidebarItem(key, item, '', 'en')
+).join('');
+
+const sidebarContentZh = sortEntries(Object.entries(docsStructure)).map(([key, item]) =>
+  renderSidebarItem(key, item, '', 'zh')
 ).join('');
 ---
 
@@ -131,11 +137,18 @@ const sidebarContent = sortEntries(Object.entries(docsStructure)).map(([key, ite
       <div class="mobile-drag-indicator" style="display: none;"></div>
       
       <div class="sidebar-content">
-        <h2 style="font-size: 1.125rem; font-weight: 700; color: #111827; margin: 0 0 24px 0;">
-          Documentation
-        </h2>
-        <nav>
-          <ul style="list-style: none; margin: 0; padding: 0;" set:html={sidebarContent}>
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px;">
+          <h2 style="font-size: 1.125rem; font-weight: 700; color: #111827; margin: 0;"
+              data-en="Documentation" data-zh="文档">
+            Documentation
+          </h2>
+        </div>
+        <nav id="docs-sidebar-nav">
+          <!-- 英文文档链接 -->
+          <ul id="sidebar-en" style="list-style: none; margin: 0; padding: 0; display: block;" set:html={sidebarContentEn}>
+          </ul>
+          <!-- 中文文档链接 -->
+          <ul id="sidebar-zh" style="list-style: none; margin: 0; padding: 0; display: none;" set:html={sidebarContentZh}>
           </ul>
         </nav>
       </div>
@@ -151,6 +164,41 @@ const sidebarContent = sortEntries(Object.entries(docsStructure)).map(([key, ite
 
   <script>
     document.addEventListener('DOMContentLoaded', function() {
+      // 根据 localStorage 语言状态切换侧边栏
+      function updateDocsLanguage() {
+        const isEnglish = localStorage.getItem('mofa-language') !== 'zh';
+        const sidebarEn = document.getElementById('sidebar-en');
+        const sidebarZh = document.getElementById('sidebar-zh');
+        const sidebarTitle = document.querySelector('.sidebar-content h2');
+
+        if (sidebarEn && sidebarZh) {
+          if (isEnglish) {
+            sidebarEn.style.display = 'block';
+            sidebarZh.style.display = 'none';
+          } else {
+            sidebarEn.style.display = 'none';
+            sidebarZh.style.display = 'block';
+          }
+        }
+
+        if (sidebarTitle) {
+          sidebarTitle.textContent = isEnglish ? 'Documentation' : '文档';
+        }
+      }
+
+      // 初始更新
+      updateDocsLanguage();
+
+      // 监听语言切换事件
+      window.addEventListener('mofa-language-change', updateDocsLanguage);
+
+      // 监听 storage 变化（跨标签页同步）
+      window.addEventListener('storage', function(e) {
+        if (e.key === 'mofa-language') {
+          updateDocsLanguage();
+        }
+      });
+
       const mobileButton = document.getElementById('mobile-toc-button');
       const sidebar = document.getElementById('docs-sidebar');
       const sidebarBackground = document.getElementById('sidebar-background');

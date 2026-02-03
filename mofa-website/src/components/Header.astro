@@ -316,11 +316,36 @@ try {
   document.addEventListener('DOMContentLoaded', function() {
     const langToggle = document.getElementById('lang-toggle');
     const currentLang = document.getElementById('current-lang');
-    let isEnglish = true;
+    // 从 localStorage 读取语言设置，默认为英文
+    let isEnglish = localStorage.getItem('mofa-language') !== 'zh';
+
+    // 初始化页面语言
+    function initLanguage() {
+      if (!isEnglish) {
+        if (currentLang) currentLang.textContent = '🇨🇳 中文';
+        // 切换到中文
+        document.querySelectorAll('[data-zh]').forEach(el => {
+          if (el.tagName === 'INPUT' && el.type === 'submit') {
+            el.value = el.getAttribute('data-zh') || el.value;
+          } else if (el.classList.contains('dropdown-toggle')) {
+            const span = el.querySelector('span');
+            if (span) {
+              span.textContent = el.getAttribute('data-zh') || span.textContent;
+            }
+          } else {
+            el.innerHTML = el.getAttribute('data-zh') || el.innerHTML;
+          }
+        });
+      }
+    }
+    initLanguage();
 
     if (langToggle && currentLang) {
       langToggle.addEventListener('click', function() {
         isEnglish = !isEnglish;
+
+        // 保存到 localStorage
+        localStorage.setItem('mofa-language', isEnglish ? 'en' : 'zh');
 
         if (isEnglish) {
           currentLang.textContent = '🇺🇸 EN';
@@ -355,6 +380,11 @@ try {
             }
           });
         }
+
+        // 触发自定义事件，通知其他组件语言已切换
+        window.dispatchEvent(new CustomEvent('mofa-language-change', {
+          detail: { language: isEnglish ? 'en' : 'zh' }
+        }));
       });
     }
 
