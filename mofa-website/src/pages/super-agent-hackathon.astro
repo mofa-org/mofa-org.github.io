@@ -2,221 +2,481 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<BaseLayout title="第三届超级智能体Campathon">
-  <section class="relative flex items-center justify-center text-center min-h-[600px] overflow-hidden">
+<BaseLayout title="Super Agent Campathon" description="The 3rd Super Agent Campathon - Camp + Hackathon Towards the Ultimate AIOS">
+  <main>
+    <!-- Hero Section -->
+    <section class="relative flex items-center justify-center text-center min-h-[600px] overflow-hidden">
+      <img
+        src="/images/科技风壁纸.png"
+        alt="Background"
+        class="absolute inset-0 h-full w-full object-cover"
+      />
+      <div class="absolute inset-0 bg-white/85"></div>
 
-    <img
-      src="/images/科技风壁纸.png"
-      alt="Background"
-      class="absolute inset-0 h-full w-full object-cover"
-    />
+      <div class="relative container mx-auto px-4 py-20">
+        <h1 class="text-5xl md:text-6xl font-bold mb-4 text-gray-800"
+            data-en="The 3rd <span class='text-blue-600'>Super Agent Campathon</span>"
+            data-zh="第三届 <span class='text-blue-600'>超级智能体 Campathon</span>">
+          The 3rd <span class="text-blue-600">Super Agent Campathon</span>
+        </h1>
+        <h2 class="text-3xl md:text-4xl font-light mb-6"
+            data-en="Camp + Hackathon Towards the Ultimate AIOS"
+            data-zh="迈向终极 AIOS 的 Campathon">
+          Camp + Hackathon Towards the Ultimate AIOS
+        </h2>
+        <p class="max-w-2xl mx-auto mb-8"
+           data-en="This competition focuses on 'On-Device Agents', aiming to address the challenges of high network latency, expensive API costs, and user data privacy concerns in AI applications. Together, we will define AI with a 'soul' and the next generation of human-computer interaction."
+           data-zh="本次大赛聚焦'端侧智能体'，旨在解决AI应用中网络延迟高、API成本昂贵及用户数据隐私泄露的挑战，共同定义有'灵魂'的 AI 及下一代交互。">
+          This competition focuses on "On-Device Agents", aiming to address the challenges of high network latency, expensive API costs, and user data privacy concerns in AI applications. Together, we will define AI with a "soul" and the next generation of human-computer interaction.
+        </p>
+        <a
+          href="https://opencamp.cn/gosim/camp/2025-campathon"
+          class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300 shadow-md hover:shadow-lg"
+          data-en="Competition Ended, Thanks for Participating (Click to View Registration Site)"
+          data-zh="比赛结束，感谢参与（点击查看报名网站）"
+        >
+          Competition Ended, Thanks for Participating (Click to View Registration Site)
+        </a>
+      </div>
+    </section>
 
-    <div class="absolute inset-0 bg-white/85"></div>
-
-    <div class="relative container mx-auto px-4 py-20">
-      <h1 class="text-5xl md:text-6xl font-bold mb-4 text-gray-800">
-        第三届 <span class="text-blue-600">超级智能体 Campathon</span>
-      </h1>
-      <h2 class="text-3xl md:text-4xl font-light mb-6">
-        Super Agent Campathon
-      </h2>
-      <p class="max-w-2xl mx-auto mb-8">
-        本次大赛聚焦“端侧智能体”，旨在解决AI应用中网络延迟高、API成本昂贵及用户数据隐私泄露的挑战，共同定义有“灵魂”的 AI 及下一代交互。
-      </p>
-      <a
-        href="https://opencamp.cn/gosim/camp/2025-campathon"
-        class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300 shadow-md hover:shadow-lg"
-      >
-        比赛结束，感谢参与（点击查看报名网站）
-      </a>
-    </div>
-  </section>
-
+    <!-- About Section -->
     <section id="about" class="py-16 bg-white">
       <div class="container mx-auto px-4 max-w-4xl">
         <div class="text-center">
-          <h2 class="text-4xl font-bold mb-4 text-blue-600">迈向终极 AIOS 的 Camp + Hackathon</h2>
-          <p class="mt-4 text-xl text-gray-600">
-            “超级智能体大赛”是 GOSIM 大会的年度开发者核心活动。我们首创 “Campathon” 赛制 (训练营+黑客松)，让你在学习后立即创造。
+          <h2 class="text-4xl font-bold mb-4 text-blue-600"
+              data-en="Camp + Hackathon Towards the Ultimate AIOS"
+              data-zh="迈向终极 AIOS 的 Camp + Hackathon">
+            Camp + Hackathon Towards the Ultimate AIOS
+          </h2>
+          <p class="mt-4 text-xl text-gray-600"
+             data-en="The 'Super Agent Competition' is the annual core developer event of the GOSIM Conference. We pioneered the 'Campathon' format (Training Camp + Hackathon), enabling you to create immediately after learning."
+             data-zh="'超级智能体大赛'是 GOSIM 大会的年度开发者核心活动。我们首创 'Campathon' 赛制 (训练营+黑客松)，让你在学习后立即创造。">
+            The "Super Agent Competition" is the annual core developer event of the GOSIM Conference. We pioneered the "Campathon" format (Training Camp + Hackathon), enabling you to create immediately after learning.
           </p>
         </div>
 
         <div class="mt-12 text-lg text-gray-700 leading-relaxed space-y-8">
           <div>
-            <strong class="text-gray-900 font-semibold">第一步：系统学习 (Camp)</strong>
-            <p class="mt-1">在为期两周的线上技术训练营中，开发者将学习并掌握以MoFA为核心的模块化开发框架。该框架专为端侧设备设计，旨在实现低延迟、保护用户隐私、并减少长期运行成本的对话体验。</p>
+            <strong class="text-gray-900 font-semibold"
+                    data-en="Step 1: Systematic Learning (Camp)"
+                    data-zh="第一步：系统学习 (Camp)">Step 1: Systematic Learning (Camp)</strong>
+            <p class="mt-1"
+               data-en="During the two-week online technical training camp, developers will learn and master the MoFA-centric modular development framework. This framework is specifically designed for on-device applications, aiming to achieve low-latency, privacy-protecting, and cost-effective conversational experiences."
+               data-zh="在为期两周的线上技术训练营中，开发者将学习并掌握以MoFA为核心的模块化开发框架。该框架专为端侧设备设计，旨在实现低延迟、保护用户隐私、并减少长期运行成本的对话体验。">
+              During the two-week online technical training camp, developers will learn and master the MoFA-centric modular development framework. This framework is specifically designed for on-device applications, aiming to achieve low-latency, privacy-protecting, and cost-effective conversational experiences.
+            </p>
           </div>
           <div>
-            <strong class="text-gray-900 font-semibold">第二步：动手创造 (Hackathon)</strong>
-            <p class="mt-1">完成训练营后，开发者将在黑客松环节动手实践，将自己的创意构建成一个实用、个性化的智能体应用。我们的目标是产出一批能解决真实世界问题的高质量、可运行的端侧智能体项目。</p>
+            <strong class="text-gray-900 font-semibold"
+                    data-en="Step 2: Hands-On Creation (Hackathon)"
+                    data-zh="第二步：动手创造 (Hackathon)">Step 2: Hands-On Creation (Hackathon)</strong>
+            <p class="mt-1"
+               data-en="After completing the training camp, developers will put their skills into practice during the hackathon, transforming their ideas into practical, personalized agent applications. Our goal is to produce a batch of high-quality, runnable on-device agent projects that solve real-world problems."
+               data-zh="完成训练营后，开发者将在黑客松环节动手实践，将自己的创意构建成一个实用、个性化的智能体应用。我们的目标是产出一批能解决真实世界问题的高质量、可运行的端侧智能体项目。">
+              After completing the training camp, developers will put their skills into practice during the hackathon, transforming their ideas into practical, personalized agent applications. Our goal is to produce a batch of high-quality, runnable on-device agent projects that solve real-world problems.
+            </p>
           </div>
           <div>
-            <strong class="text-gray-900 font-semibold">最终目标：定义未来</strong>
-            <p class="mt-1">我们期待看到你的作品，共同探索人机交互的下一步发展。</p>
+            <strong class="text-gray-900 font-semibold"
+                    data-en="Ultimate Goal: Define the Future"
+                    data-zh="最终目标：定义未来">Ultimate Goal: Define the Future</strong>
+            <p class="mt-1"
+               data-en="We look forward to seeing your work and exploring the next step in human-computer interaction together."
+               data-zh="我们期待看到你的作品，共同探索人机交互的下一步发展。">
+              We look forward to seeing your work and exploring the next step in human-computer interaction together.
+            </p>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- Challenges Section -->
     <section id="challenges" class="py-16" style="background-image: url('https://images.unsplash.com/photo-1517483000871-1dbf64a6e1c6?q=80&w=2338&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); background-size: cover; background-position: center;">
       <div class="container mx-auto px-4 text-center max-w-4xl">
-        <h2 class="text-4xl font-bold mb-4 text-gray-800">创造一个有“灵魂”的智能体</h2>
-        <p class="text-lg text-gray-600 mb-8">
-          你将构建一个鲜活的、仿佛拥有自主意识的智能体。你的核心挑战是实现极致的实时性、自然的交互感、丰富的情感力与强大的扩展性。
+        <h2 class="text-4xl font-bold mb-4 text-gray-800"
+            data-en="Create an Agent with a 'Soul'"
+            data-zh="创造一个有'灵魂'的智能体">
+          Create an Agent with a "Soul"
+        </h2>
+        <p class="text-lg text-gray-600 mb-8"
+           data-en="You will build a vibrant agent that seems to possess autonomous consciousness. Your core challenges are to achieve extreme real-time performance, natural interaction, rich emotional intelligence, and powerful extensibility."
+           data-zh="你将构建一个鲜活的、仿佛拥有自主意识的智能体。你的核心挑战是实现极致的实时性、自然的交互感、丰富的情感力与强大的扩展性。">
+          You will build a vibrant agent that seems to possess autonomous consciousness. Your core challenges are to achieve extreme real-time performance, natural interaction, rich emotional intelligence, and powerful extensibility.
         </p>
-        <h3 class="text-2xl font-semibold mb-6 text-blue-600">你可以探索的方向包括但不限于：</h3>
+        <h3 class="text-2xl font-semibold mb-6 text-blue-600"
+            data-en="Directions you can explore include but are not limited to:"
+            data-zh="你可以探索的方向包括但不限于：">
+          Directions you can explore include but are not limited to:
+        </h3>
         <ul class="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
-          <li class="bg-white p-6 rounded-lg shadow-md border-l-4 border-blue-500">🧠 <strong class="font-semibold text-gray-800">高效的日程助理</strong>：一个能离线使用、高效处理日程的个人助理。</li>
-          <li class="bg-white p-6 rounded-lg shadow-md border-l-4 border-teal-500">👨‍🏫 <strong class="font-semibold text-gray-800">能离线使用的学习工具</strong>：进行外语陪练、解答专业问题、激发学习兴趣。</li>
-          <li class="bg-white p-6 rounded-lg shadow-md border-l-4 border-purple-500">❤️ <strong class="font-semibold text-gray-800">懂你的情感伴侣</strong>：倾听你的烦恼，分享你的喜悦，提供温暖的情绪支持。</li>
-          <li class="bg-white p-6 rounded-lg shadow-md border-l-4 border-indigo-500">👓 <strong class="font-semibold text-gray-800">智能硬件的“大脑”</strong>：为智能眼镜、智能音箱注入强大的对话能力，实现真正的“免提”操作。</li>
+          <li class="bg-white p-6 rounded-lg shadow-md border-l-4 border-blue-500">
+            <span data-en="🧠 <strong>Efficient Schedule Assistant</strong>: A personal assistant that works offline and efficiently manages your schedule."
+                  data-zh="🧠 <strong>高效的日程助理</strong>：一个能离线使用、高效处理日程的个人助理。">
+              🧠 <strong>Efficient Schedule Assistant</strong>: A personal assistant that works offline and efficiently manages your schedule.
+            </span>
+          </li>
+          <li class="bg-white p-6 rounded-lg shadow-md border-l-4 border-teal-500">
+            <span data-en="👨‍🏫 <strong>Offline Learning Tool</strong>: Practice foreign languages, answer professional questions, and stimulate learning interest."
+                  data-zh="👨‍🏫 <strong>能离线使用的学习工具</strong>：进行外语陪练、解答专业问题、激发学习兴趣。">
+              👨‍🏫 <strong>Offline Learning Tool</strong>: Practice foreign languages, answer professional questions, and stimulate learning interest.
+            </span>
+          </li>
+          <li class="bg-white p-6 rounded-lg shadow-md border-l-4 border-purple-500">
+            <span data-en="❤️ <strong>Empathetic Emotional Companion</strong>: Listens to your troubles, shares your joys, and provides warm emotional support."
+                  data-zh="❤️ <strong>懂你的情感伴侣</strong>：倾听你的烦恼，分享你的喜悦，提供温暖的情绪支持。">
+              ❤️ <strong>Empathetic Emotional Companion</strong>: Listens to your troubles, shares your joys, and provides warm emotional support.
+            </span>
+          </li>
+          <li class="bg-white p-6 rounded-lg shadow-md border-l-4 border-indigo-500">
+            <span data-en="👓 <strong>The 'Brain' of Smart Hardware</strong>: Inject powerful conversational abilities into smart glasses and speakers for true 'hands-free' operation."
+                  data-zh="👓 <strong>智能硬件的'大脑'</strong>：为智能眼镜、智能音箱注入强大的对话能力，实现真正的'免提'操作。">
+              👓 <strong>The "Brain" of Smart Hardware</strong>: Inject powerful conversational abilities into smart glasses and speakers for true "hands-free" operation.
+            </span>
+          </li>
         </ul>
-        <h3 class="text-2xl font-semibold mt-10 text-black">Sky's the Limit！</h3>
+        <h3 class="text-2xl font-semibold mt-10 text-black">Sky's the Limit!</h3>
       </div>
     </section>
 
+    <!-- Why Join Section -->
     <section id="why-join" class="py-16 bg-white">
       <div class="container mx-auto px-4 text-center">
-        <h2 class="text-4xl font-bold mb-12 text-gray-800">为何参赛？</h2>
+        <h2 class="text-4xl font-bold mb-12 text-gray-800"
+            data-en="Why Participate?"
+            data-zh="为何参赛？">
+          Why Participate?
+        </h2>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div class="p-6">
-            <h3 class="text-2xl font-bold mb-2 text-blue-600">🏆 顶级大奖与荣誉</h3>
-            <p class="text-gray-600">赢取包括 RTX 5090 笔记本电脑、MacBook Pro 在内的顶级硬件大奖。前6名队伍将获邀参加 GOSIM Hangzhou 2025 现场决赛，我们将为每队报销一位成员的差旅并赠送大会门票与礼品。*注：所有奖励均以团队为单位（一队一份）。*</p>
+            <h3 class="text-2xl font-bold mb-2 text-blue-600"
+                data-en="🏆 Top Prizes & Honors"
+                data-zh="🏆 顶级大奖与荣誉">🏆 Top Prizes & Honors</h3>
+            <p class="text-gray-600"
+               data-en="Win top-tier hardware prizes including RTX 5090 laptops and MacBook Pro. The top 6 teams will be invited to the GOSIM Hangzhou 2025 onsite finals, with travel expenses covered for one team member and complimentary conference tickets and gifts. *Note: All hardware rewards are per team (one per team).*"
+               data-zh="赢取包括 RTX 5090 笔记本电脑、MacBook Pro 在内的顶级硬件大奖。前6名队伍将获邀参加 GOSIM Hangzhou 2025 现场决赛，我们将为每队报销一位成员的差旅并赠送大会门票与礼品。*注：所有奖励均以团队为单位（一队一份）。*">
+              Win top-tier hardware prizes including RTX 5090 laptops and MacBook Pro. The top 6 teams will be invited to the GOSIM Hangzhou 2025 onsite finals, with travel expenses covered for one team member and complimentary conference tickets and gifts. *Note: All hardware rewards are per team (one per team).*
+            </p>
           </div>
           <div class="p-6">
-            <h3 class="text-2xl font-bold mb-2 text-blue-600">🚀 前沿端侧技术实践</h3>
-            <p class="text-gray-600">我们提供以MoFA为核心的模块化开发框架来降低开发门槛，让你亲手体验最前沿的端侧AI Agent技术。</p>
+            <h3 class="text-2xl font-bold mb-2 text-blue-600"
+                data-en="🚀 Cutting-Edge On-Device Technology"
+                data-zh="🚀 前沿端侧技术实践">🚀 Cutting-Edge On-Device Technology</h3>
+            <p class="text-gray-600"
+               data-en="We provide the MoFA-centric modular development framework to lower the barrier to entry, allowing you to experience the most advanced on-device AI Agent technology firsthand."
+               data-zh="我们提供以MoFA为核心的模块化开发框架来降低开发门槛，让你亲手体验最前沿的端侧AI Agent技术。">
+              We provide the MoFA-centric modular development framework to lower the barrier to entry, allowing you to experience the most advanced on-device AI Agent technology firsthand.
+            </p>
           </div>
           <div class="p-6">
-            <h3 class="text-2xl font-bold mb-2 text-blue-600">🧑‍💻 核心导师全程指导</h3>
-            <p class="text-gray-600">来自核心研发团队的专家将提供线上技术训练营与指导，助你扫清障碍，实现从入门到精通。</p>
+            <h3 class="text-2xl font-bold mb-2 text-blue-600"
+                data-en="🧑‍💻 Core Mentor Guidance"
+                data-zh="🧑‍💻 核心导师全程指导">🧑‍💻 Core Mentor Guidance</h3>
+            <p class="text-gray-600"
+               data-en="Experts from the core R&D team will provide online technical training camps and guidance to help you overcome obstacles and achieve mastery from beginner to expert."
+               data-zh="来自核心研发团队的专家将提供线上技术训练营与指导，助你扫清障碍，实现从入门到精通。">
+              Experts from the core R&D team will provide online technical training camps and guidance to help you overcome obstacles and achieve mastery from beginner to expert.
+            </p>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- Tech Stack Section -->
     <section id="tech-stack" class="py-16 bg-blue-600 text-white">
-        <div class="container mx-auto px-4 text-center">
-            <h2 class="text-4xl font-bold mb-12">技术武器库</h2>
-            <div class="grid grid-cols-2 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-                <div class="bg-gray-700 p-6 rounded-lg border-2 border-transparent hover:border-blue-500 transition-colors"><strong>Moly LLM 前端 App</strong>: 一个为大语言模型打造的前端交互应用。</div>
-                <div class="bg-gray-700 p-6 rounded-lg border-2 border-transparent hover:border-teal-400 transition-colors"><strong>MCP 开放计算协议</strong>: 连接海量第三方服务（如RESTful API），让你的智能体无所不能。</div>
-                <div class="bg-gray-700 p-6 rounded-lg border-2 border-transparent hover:border-blue-500 transition-colors"><strong>MoFA 框架</strong>: 专为Agent打造的高效、可扩展的模块化开发框架，管理生命周期。</div>
-                <div class="bg-gray-700 p-6 rounded-lg border-2 border-transparent hover:border-teal-400 transition-colors"><strong>DORA 数据流引擎</strong>: 用于设计和实现 Agent 的内部逻辑与复杂任务流程，支持线性和非线性任务流。</div>
-                <div class="bg-gray-700 p-6 rounded-lg border-2 border-transparent hover:border-blue-500 transition-colors"><strong>MoFA Stage 开发平台</strong>: 一站式“智能体IDE”，提供开发、断点调试、性能分析和部署的全方位支持。</div>
-                <div class="bg-gray-700 p-6 rounded-lg border-2 border-transparent hover:border-teal-400 transition-colors"><strong>AIOS 核心框架</strong>: 你的智能体在端侧设备上高效运行的心脏。</div>
-            </div>
+      <div class="container mx-auto px-4 text-center">
+        <h2 class="text-4xl font-bold mb-12"
+            data-en="Technical Arsenal"
+            data-zh="技术武器库">
+          Technical Arsenal
+        </h2>
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          <div class="bg-gray-700 p-6 rounded-lg border-2 border-transparent hover:border-blue-500 transition-colors"
+               data-en="<strong>Moly LLM Frontend App</strong>: A frontend interaction application built for large language models."
+               data-zh="<strong>Moly LLM 前端 App</strong>: 一个为大语言模型打造的前端交互应用。">
+            <strong>Moly LLM Frontend App</strong>: A frontend interaction application built for large language models.
+          </div>
+          <div class="bg-gray-700 p-6 rounded-lg border-2 border-transparent hover:border-teal-400 transition-colors"
+               data-en="<strong>MCP Open Compute Protocol</strong>: Connect to a vast array of third-party services (like RESTful APIs), making your agent capable of anything."
+               data-zh="<strong>MCP 开放计算协议</strong>: 连接海量第三方服务（如RESTful API），让你的智能体无所不能。">
+            <strong>MCP Open Compute Protocol</strong>: Connect to a vast array of third-party services (like RESTful APIs), making your agent capable of anything.
+          </div>
+          <div class="bg-gray-700 p-6 rounded-lg border-2 border-transparent hover:border-blue-500 transition-colors"
+               data-en="<strong>MoFA Framework</strong>: An efficient, scalable modular development framework specifically designed for Agents, managing the entire lifecycle."
+               data-zh="<strong>MoFA 框架</strong>: 专为Agent打造的高效、可扩展的模块化开发框架，管理生命周期。">
+            <strong>MoFA Framework</strong>: An efficient, scalable modular development framework specifically designed for Agents, managing the entire lifecycle.
+          </div>
+          <div class="bg-gray-700 p-6 rounded-lg border-2 border-transparent hover:border-teal-400 transition-colors"
+               data-en="<strong>DORA Dataflow Engine</strong>: Used to design and implement the internal logic and complex task flows of Agents, supporting both linear and non-linear task flows."
+               data-zh="<strong>DORA 数据流引擎</strong>: 用于设计和实现 Agent 的内部逻辑与复杂任务流程，支持线性和非线性任务流。">
+            <strong>DORA Dataflow Engine</strong>: Used to design and implement the internal logic and complex task flows of Agents, supporting both linear and non-linear task flows.
+          </div>
+          <div class="bg-gray-700 p-6 rounded-lg border-2 border-transparent hover:border-blue-500 transition-colors"
+               data-en="<strong>MoFA Stage Dev Platform</strong>: A one-stop 'Agent IDE' providing comprehensive support for development, breakpoint debugging, performance analysis, and deployment."
+               data-zh="<strong>MoFA Stage 开发平台</strong>: 一站式'智能体IDE'，提供开发、断点调试、性能分析和部署的全方位支持。">
+            <strong>MoFA Stage Dev Platform</strong>: A one-stop "Agent IDE" providing comprehensive support for development, breakpoint debugging, performance analysis, and deployment.
+          </div>
+          <div class="bg-gray-700 p-6 rounded-lg border-2 border-transparent hover:border-teal-400 transition-colors"
+               data-en="<strong>AIOS Core Framework</strong>: The heart that powers your agent to run efficiently on on-device devices."
+               data-zh="<strong>AIOS 核心框架</strong>: 你的智能体在端侧设备上高效运行的心脏。">
+            <strong>AIOS Core Framework</strong>: The heart that powers your agent to run efficiently on on-device devices.
+          </div>
         </div>
+      </div>
     </section>
 
+    <!-- Schedule Section -->
     <section id="schedule" class="py-16 bg-white">
-        <div class="container mx-auto px-4 max-w-4xl">
-            <h2 class="text-4xl font-bold text-center mb-12 text-gray-800">赛程安排</h2>
-            <ol class="relative border-l border-blue-400">
-                <li class="mb-10 ml-6">
-                    <span class="absolute flex items-center justify-center w-6 h-6 bg-blue-500 rounded-full -left-3 ring-8 ring-white"></span>
-                    <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900">线上训练营 (Online Camp)</h3>
-                    <time class="block mb-2 text-sm font-normal leading-none text-blue-800">8月24日 - 8月28日</time>
-                    <p class="text-gray-600">学习核心技术，并获得导师的在线辅导。</p>
-                    <ol class="mt-4 space-y-6 relative border-l border-gray-300">
-                        <li class="mb-4 ml-6">
-                            <span class="absolute flex items-center justify-center w-6 h-6 bg-blue-200 rounded-full -left-3 ring-8 ring-white"></span>
-                            <h4 class="text-md font-semibold text-gray-800">开营介绍 & MoFA 核心</h4>
-                            <time class="block mb-2 text-sm font-normal leading-none text-gray-500">8月24日 周日晚 7:00 - 9:00点</time>
-                            <p class="text-gray-600">Campathon 介绍, MoFA 框架, MoFA Stage & Hub。</p>
-                        </li>
-                        <li class="mb-4 ml-6">
-                            <span class="absolute flex items-center justify-center w-6 h-6 bg-blue-200 rounded-full -left-3 ring-8 ring-white"></span>
-                            <h4 class="text-md font-semibold text-gray-800">Moly, MCP 与 MoFA 集成</h4>
-                            <time class="block mb-2 text-sm font-normal leading-none text-gray-500">8月26日 周二晚 7:00 - 9:00点</time>
-                            <p class="text-gray-600">LLM 前端 Moly 介绍, MCP 协议简介, Moly, MCP 与 MoFA 的集成应用, 及 MoFA Stage 上手实践。</p>
-                        </li>
-                        <li class="mb-4 ml-6">
-                            <span class="absolute flex items-center justify-center w-6 h-6 bg-blue-200 rounded-full -left-3 ring-8 ring-white"></span>
-                            <h4 class="text-md font-semibold text-gray-800">实践辅导 & 学员演示</h4>
-                            <time class="block mb-2 text-sm font-normal leading-none text-gray-500">8月28日 周四晚 7:00 - 9:00点</time>
-                            <p class="text-gray-600">导师为学员提供 Moly, MoFA, MoFA Stage 的上手辅导与答疑。</p>
-                        </li>
-                    </ol>
-                </li>
-                <li class="mb-10 ml-6">
-                    <span class="absolute flex items-center justify-center w-6 h-6 bg-yellow-400 rounded-full -left-3 ring-8 ring-white"></span>
-                    <h3 class="text-lg font-semibold text-gray-900">第一阶段晋级</h3>
-                    <time class="block mb-2 text-sm font-normal leading-none text-blue-800">8月30日 (周六) 截止</time>
-                    <p class="text-gray-600">
-                        提交 Demo 和 Hackathon 一页计划书。完成的小组将晋级第二阶段。
-                        <a href="https://wj.qq.com/s2/23587412/56e4/" class="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">提交链接🔗</a>
-                    </p>
-                </li>
-                <li class="mb-10 ml-6">
-                    <span class="absolute flex items-center justify-center w-6 h-6 bg-blue-500 rounded-full -left-3 ring-8 ring-white"></span>
-                    <h3 class="text-lg font-semibold text-gray-900">黑客松自主开发 (Hackathon)</h3>
-                     <time class="block mb-2 text-sm font-normal leading-none text-blue-800">8月31日 - 9月7日</time>
-                    <p class="text-gray-600">学员自主开发，实现各队的超级智能体计划。讲师提供在线辅导。</p>
-                </li>
-                <li class="mb-10 ml-6">
-                    <span class="absolute flex items-center justify-center w-6 h-6 bg-yellow-400 rounded-full -left-3 ring-8 ring-white"></span>
-                    <h3 class="text-lg font-semibold text-gray-900">路演资格公布</h3>
-                     <time class="block mb-2 text-sm font-normal leading-none text-blue-800">9月8日</time>
-                    <p class="text-gray-600">宣布获得路演资格的小组，前6名选手受邀参加GOSIM现场活动。</p>
-                </li>
-                <li class="mb-10 ml-6">
-                    <span class="absolute flex items-center justify-center w-6 h-6 bg-blue-500 rounded-full -left-3 ring-8 ring-white"></span>
-                    <h3 class="text-lg font-semibold text-gray-900">路演团队持续开发</h3>
-                     <time class="block mb-2 text-sm font-normal leading-none text-blue-800">9月9日 - 9月12日</time>
-                    <p class="text-gray-600">路演团队持续完善项目，可进行接入本地模型等深化开发。讲师提供在线辅导。</p>
-                </li>
-                <li class="ml-6">
-                    <span class="absolute flex items-center justify-center w-6 h-6 bg-green-500 rounded-full -left-3 ring-8 ring-white"></span>
-                    <h3 class="text-lg font-semibold text-green-800">GOSIM 现场决赛 & 颁奖</h3>
-                    <time class="block mb-2 text-sm font-normal leading-none text-green-800">GOSIM Hangzhou 2025 (9月13-14日, 浙江杭州)</time>
-                    <p class="text-gray-600"><strong>9月13日</strong>: 现场比赛，模型本地化改造。</p>
-                    <p class="text-gray-600"><strong>9月14日 上午</strong>: 现场路演与评分。</p>
-                    <p class="text-gray-600"><strong>9月14日 下午</strong>: 颁奖典礼。</p>
-                </li>
+      <div class="container mx-auto px-4 max-w-4xl">
+        <h2 class="text-4xl font-bold text-center mb-12 text-gray-800"
+            data-en="Event Schedule"
+            data-zh="赛程安排">
+          Event Schedule
+        </h2>
+        <ol class="relative border-l border-blue-400">
+          <li class="mb-10 ml-6">
+            <span class="absolute flex items-center justify-center w-6 h-6 bg-blue-500 rounded-full -left-3 ring-8 ring-white"></span>
+            <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900"
+                data-en="Online Camp"
+                data-zh="线上训练营 (Online Camp)">Online Camp</h3>
+            <time class="block mb-2 text-sm font-normal leading-none text-blue-800">August 24 - August 28</time>
+            <p class="text-gray-600"
+               data-en="Learn core technologies and receive online mentorship."
+               data-zh="学习核心技术，并获得导师的在线辅导。">
+              Learn core technologies and receive online mentorship.
+            </p>
+            <ol class="mt-4 space-y-6 relative border-l border-gray-300">
+              <li class="mb-4 ml-6">
+                <span class="absolute flex items-center justify-center w-6 h-6 bg-blue-200 rounded-full -left-3 ring-8 ring-white"></span>
+                <h4 class="text-md font-semibold text-gray-800"
+                    data-en="Opening & MoFA Core"
+                    data-zh="开营介绍 & MoFA 核心">Opening & MoFA Core</h4>
+                <time class="block mb-2 text-sm font-normal leading-none text-gray-500">August 24, Sunday 7:00 PM - 9:00 PM</time>
+                <p class="text-gray-600"
+                   data-en="Campathon introduction, MoFA framework, MoFA Stage & Hub."
+                   data-zh="Campathon 介绍, MoFA 框架, MoFA Stage & Hub。">
+                  Campathon introduction, MoFA framework, MoFA Stage & Hub.
+                </p>
+              </li>
+              <li class="mb-4 ml-6">
+                <span class="absolute flex items-center justify-center w-6 h-6 bg-blue-200 rounded-full -left-3 ring-8 ring-white"></span>
+                <h4 class="text-md font-semibold text-gray-800"
+                    data-en="Moly, MCP & MoFA Integration"
+                    data-zh="Moly, MCP 与 MoFA 集成">Moly, MCP & MoFA Integration</h4>
+                <time class="block mb-2 text-sm font-normal leading-none text-gray-500">August 26, Tuesday 7:00 PM - 9:00 PM</time>
+                <p class="text-gray-600"
+                   data-en="Introduction to LLM frontend Moly, MCP protocol basics, Moly & MCP integration with MoFA, and hands-on practice with MoFA Stage."
+                   data-zh="LLM 前端 Moly 介绍, MCP 协议简介, Moly, MCP 与 MoFA 的集成应用, 及 MoFA Stage 上手实践。">
+                  Introduction to LLM frontend Moly, MCP protocol basics, Moly & MCP integration with MoFA, and hands-on practice with MoFA Stage.
+                </p>
+              </li>
+              <li class="mb-4 ml-6">
+                <span class="absolute flex items-center justify-center w-6 h-6 bg-blue-200 rounded-full -left-3 ring-8 ring-white"></span>
+                <h4 class="text-md font-semibold text-gray-800"
+                    data-en="Practice Coaching & Student Demos"
+                    data-zh="实践辅导 & 学员演示">Practice Coaching & Student Demos</h4>
+                <time class="block mb-2 text-sm font-normal leading-none text-gray-500">August 28, Thursday 7:00 PM - 9:00 PM</time>
+                <p class="text-gray-600"
+                   data-en="Mentors provide hands-on coaching and Q&A for Moly, MoFA, and MoFA Stage."
+                   data-zh="导师为学员提供 Moly, MoFA, MoFA Stage 的上手辅导与答疑。">
+                  Mentors provide hands-on coaching and Q&A for Moly, MoFA, and MoFA Stage.
+                </p>
+              </li>
             </ol>
-        </div>
+          </li>
+          <li class="mb-10 ml-6">
+            <span class="absolute flex items-center justify-center w-6 h-6 bg-yellow-400 rounded-full -left-3 ring-8 ring-white"></span>
+            <h3 class="text-lg font-semibold text-gray-900"
+                data-en="Phase 1 Advancement"
+                data-zh="第一阶段晋级">Phase 1 Advancement</h3>
+            <time class="block mb-2 text-sm font-normal leading-none text-blue-800">August 30 (Saturday) Deadline</time>
+            <p class="text-gray-600"
+               data-en="Submit Demo and Hackathon one-page proposal. Teams that complete this will advance to Phase 2."
+               data-zh="提交 Demo 和 Hackathon 一页计划书。完成的小组将晋级第二阶段。">
+              Submit Demo and Hackathon one-page proposal. Teams that complete this will advance to Phase 2.
+              <a href="https://wj.qq.com/s2/23587412/56e4/" class="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">Submission Link 🔗</a>
+            </p>
+          </li>
+          <li class="mb-10 ml-6">
+            <span class="absolute flex items-center justify-center w-6 h-6 bg-blue-500 rounded-full -left-3 ring-8 ring-white"></span>
+            <h3 class="text-lg font-semibold text-gray-900"
+                data-en="Hackathon Independent Development"
+                data-zh="黑客松自主开发 (Hackathon)">Hackathon Independent Development</h3>
+            <time class="block mb-2 text-sm font-normal leading-none text-blue-800">August 31 - September 7</time>
+            <p class="text-gray-600"
+               data-en="Participants independently develop their projects, implementing their Super Agent plans. Instructors provide online coaching."
+               data-zh="学员自主开发，实现各队的超级智能体计划。讲师提供在线辅导。">
+              Participants independently develop their projects, implementing their Super Agent plans. Instructors provide online coaching.
+            </p>
+          </li>
+          <li class="mb-10 ml-6">
+            <span class="absolute flex items-center justify-center w-6 h-6 bg-yellow-400 rounded-full -left-3 ring-8 ring-white"></span>
+            <h3 class="text-lg font-semibold text-gray-900"
+                data-en="Demo Day Qualification Announcement"
+                data-zh="路演资格公布">Demo Day Qualification Announcement</h3>
+            <time class="block mb-2 text-sm font-normal leading-none text-blue-800">September 8</time>
+            <p class="text-gray-600"
+               data-en="Announce teams qualified for Demo Day. Top 6 participants invited to GOSIM onsite event."
+               data-zh="宣布获得路演资格的小组，前6名选手受邀参加GOSIM现场活动。">
+              Announce teams qualified for Demo Day. Top 6 participants invited to GOSIM onsite event.
+            </p>
+          </li>
+          <li class="mb-10 ml-6">
+            <span class="absolute flex items-center justify-center w-6 h-6 bg-blue-500 rounded-full -left-3 ring-8 ring-white"></span>
+            <h3 class="text-lg font-semibold text-gray-900"
+                data-en="Finalist Teams Continuous Development"
+                data-zh="路演团队持续开发">Finalist Teams Continuous Development</h3>
+            <time class="block mb-2 text-sm font-normal leading-none text-blue-800">September 9 - September 12</time>
+            <p class="text-gray-600"
+               data-en="Finalist teams continue to refine their projects, including deep development such as local model integration. Instructors provide online coaching."
+               data-zh="路演团队持续完善项目，可进行接入本地模型等深化开发。讲师提供在线辅导。">
+              Finalist teams continue to refine their projects, including deep development such as local model integration. Instructors provide online coaching.
+            </p>
+          </li>
+          <li class="ml-6">
+            <span class="absolute flex items-center justify-center w-6 h-6 bg-green-500 rounded-full -left-3 ring-8 ring-white"></span>
+            <h3 class="text-lg font-semibold text-green-800"
+                data-en="GOSIM Onsite Finals & Awards"
+                data-zh="GOSIM 现场决赛 & 颁奖">GOSIM Onsite Finals & Awards</h3>
+            <time class="block mb-2 text-sm font-normal leading-none text-green-800">GOSIM Hangzhou 2025 (September 13-14, Hangzhou, Zhejiang)</time>
+            <p class="text-gray-600"><strong data-en="September 13" data-zh="9月13日">September 13</strong>: <span data-en="Onsite competition, model localization transformation." data-zh="现场比赛，模型本地化改造。">Onsite competition, model localization transformation.</span></p>
+            <p class="text-gray-600"><strong data-en="September 14 Morning" data-zh="9月14日 上午">September 14 Morning</strong>: <span data-en="Onsite demo and judging." data-zh="现场路演与评分。">Onsite demo and judging.</span></p>
+            <p class="text-gray-600"><strong data-en="September 14 Afternoon" data-zh="9月14日 下午">September 14 Afternoon</strong>: <span data-en="Awards ceremony." data-zh="颁奖典礼。">Awards ceremony.</span></p>
+          </li>
+        </ol>
+      </div>
     </section>
 
+    <!-- Awards Section -->
     <section id="awards" class="py-16" style="background-color: #f3f2f7;">
       <div class="container mx-auto px-4">
-        <h2 class="text-4xl font-bold text-center mb-12 text-gray-800">评审与奖励</h2>
+        <h2 class="text-4xl font-bold text-center mb-12 text-gray-800"
+            data-en="Judging & Awards"
+            data-zh="评审与奖励">
+          Judging & Awards
+        </h2>
         <div class="flex flex-wrap justify-center gap-12">
-            <div class="max-w-md p-6 bg-white rounded-lg shadow-md">
-                <h3 class="text-2xl font-semibold mb-4 text-center text-blue-600">评审维度</h3>
-                <ul class="space-y-2 text-gray-700">
-                    <li class="flex items-center"><strong class="text-blue-500 mr-2">✔</strong><strong>技术创新性</strong>：是否应用前沿技术，具有技术壁垒。</li>
-                    <li class="flex items-center"><strong class="text-blue-500 mr-2">✔</strong><strong>用户体验</strong>：交互是否流畅、自然、富有情感。</li>
-                    <li class="flex items-center"><strong class="text-blue-500 mr-2">✔</strong><strong>创意与完整度</strong>：想法是否新颖，功能实现是否完整。</li>
-                    <li class="flex items-center"><strong class="text-blue-500 mr-2">✔</strong><strong>商业潜力</strong>：是否解决真实痛点，具备市场前景。</li>
-                </ul>
-            </div>
-            <div class="max-w-md p-6 bg-white rounded-lg shadow-md">
-                <h3 class="text-2xl font-semibold mb-4 text-center text-blue-600">奖项设置</h3>
-                <ul class="space-y-2 text-gray-700">
-                    <li>🥇 <strong class="text-yellow-500">一等奖</strong>: RTX 5090 笔记本电脑</li>
-                    <li>🥈 <strong class="text-gray-400">二等奖</strong>: MacBook Pro</li>
-                    <li>🥉 <strong class="text-orange-400">三等奖 (3名)</strong>: Mac mini</li>
-                </ul>
-                <p class="mt-4 text-sm text-gray-500">
-                    *注：所有硬件奖励均以团队为单位（即每队一台）。晋级杭州决赛的团队，我们将为每队提供一位成员的免费差旅与GOSIM大会门票及礼品。
-                </p>
-            </div>
+          <div class="max-w-md p-6 bg-white rounded-lg shadow-md">
+            <h3 class="text-2xl font-semibold mb-4 text-center text-blue-600"
+                data-en="Judging Criteria"
+                data-zh="评审维度">Judging Criteria</h3>
+            <ul class="space-y-2 text-gray-700">
+              <li class="flex items-center"
+                  data-en="<strong class='text-blue-500 mr-2'>✔</strong><strong>Technical Innovation</strong>: Whether it applies cutting-edge technology and has technical barriers."
+                  data-zh="<strong class='text-blue-500 mr-2'>✔</strong><strong>技术创新性</strong>：是否应用前沿技术，具有技术壁垒。">
+                <strong class="text-blue-500 mr-2">✔</strong><strong>Technical Innovation</strong>: Whether it applies cutting-edge technology and has technical barriers.
+              </li>
+              <li class="flex items-center"
+                  data-en="<strong class='text-blue-500 mr-2'>✔</strong><strong>User Experience</strong>: Whether the interaction is smooth, natural, and emotionally engaging."
+                  data-zh="<strong class='text-blue-500 mr-2'>✔</strong><strong>用户体验</strong>：交互是否流畅、自然、富有情感。">
+                <strong class="text-blue-500 mr-2">✔</strong><strong>User Experience</strong>: Whether the interaction is smooth, natural, and emotionally engaging.
+              </li>
+              <li class="flex items-center"
+                  data-en="<strong class='text-blue-500 mr-2'>✔</strong><strong>Creativity & Completeness</strong>: Whether the idea is novel and the functionality is fully implemented."
+                  data-zh="<strong class='text-blue-500 mr-2'>✔</strong><strong>创意与完整度</strong>：想法是否新颖，功能实现是否完整。">
+                <strong class="text-blue-500 mr-2">✔</strong><strong>Creativity & Completeness</strong>: Whether the idea is novel and the functionality is fully implemented.
+              </li>
+              <li class="flex items-center"
+                  data-en="<strong class='text-blue-500 mr-2'>✔</strong><strong>Commercial Potential</strong>: Whether it solves real pain points and has market prospects."
+                  data-zh="<strong class='text-blue-500 mr-2'>✔</strong><strong>商业潜力</strong>：是否解决真实痛点，具备市场前景。">
+                <strong class="text-blue-500 mr-2">✔</strong><strong>Commercial Potential</strong>: Whether it solves real pain points and has market prospects.
+              </li>
+            </ul>
+          </div>
+          <div class="max-w-md p-6 bg-white rounded-lg shadow-md">
+            <h3 class="text-2xl font-semibold mb-4 text-center text-blue-600"
+                data-en="Award Settings"
+                data-zh="奖项设置">Award Settings</h3>
+            <ul class="space-y-2 text-gray-700">
+              <li data-en="🥇 <strong class='text-yellow-500'>First Prize</strong>: RTX 5090 Laptop"
+                  data-zh="🥇 <strong class='text-yellow-500'>一等奖</strong>: RTX 5090 笔记本电脑">
+                🥇 <strong class="text-yellow-500">First Prize</strong>: RTX 5090 Laptop
+              </li>
+              <li data-en="🥈 <strong class='text-gray-400'>Second Prize</strong>: MacBook Pro"
+                  data-zh="🥈 <strong class='text-gray-400'>二等奖</strong>: MacBook Pro">
+                🥈 <strong class="text-gray-400">Second Prize</strong>: MacBook Pro
+              </li>
+              <li data-en="🥉 <strong class='text-orange-400'>Third Prize (3 teams)</strong>: Mac mini"
+                  data-zh="🥉 <strong class='text-orange-400'>三等奖 (3名)</strong>: Mac mini">
+                🥉 <strong class="text-orange-400">Third Prize (3 teams)</strong>: Mac mini
+              </li>
+            </ul>
+            <p class="mt-4 text-sm text-gray-500"
+               data-en="*Note: All hardware rewards are per team (one per team). Teams advancing to the Hangzhou finals will receive free travel for one member and GOSIM conference tickets and gifts.*"
+               data-zh="*注：所有硬件奖励均以团队为单位（即每队一台）。晋级杭州决赛的团队，我们将为每队提供一位成员的免费差旅与GOSIM大会门票及礼品。*">
+              *Note: All hardware rewards are per team (one per team). Teams advancing to the Hangzhou finals will receive free travel for one member and GOSIM conference tickets and gifts.*
+            </p>
+          </div>
         </div>
       </div>
     </section>
 
+    <!-- CTA Section -->
     <section id="register" class="py-20 bg-gray-800 text-white">
       <div class="container mx-auto px-4 text-center">
-        <h2 class="text-4xl font-bold mb-4">立即行动！</h2>
-        <p class="max-w-2xl mx-auto mb-8 text-gray-300">
-          挑战自己，定义未来。
+        <h2 class="text-4xl font-bold mb-4"
+            data-en="Take Action Now!"
+            data-zh="立即行动！">
+          Take Action Now!
+        </h2>
+        <p class="max-w-2xl mx-auto mb-8 text-gray-300"
+           data-en="Challenge yourself, define the future."
+           data-zh="挑战自己，定义未来。">
+          Challenge yourself, define the future.
         </p>
-        <a href="https://opencamp.cn/gosim/camp/2025-campathon" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-10 rounded-full text-xl transition duration-300 shadow-lg hover:shadow-xl">
-          比赛结束，感谢参与（点击查看报名网站）
+        <a href="https://opencamp.cn/gosim/camp/2025-campathon"
+           class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-10 rounded-full text-xl transition duration-300 shadow-lg hover:shadow-xl"
+           data-en="Competition Ended, Thanks for Participating (Click to View Registration Site)"
+           data-zh="比赛结束，感谢参与（点击查看报名网站）">
+          Competition Ended, Thanks for Participating (Click to View Registration Site)
         </a>
       </div>
     </section>
 
+    <!-- Language Toggle Script -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        let isEnglish = true; // Default to English
+
+        // Apply initial language
+        applyLanguage();
+
+        // Listen for language toggle from header
+        const langToggle = document.getElementById('lang-toggle');
+        const langToggleMobile = document.getElementById('lang-toggle-mobile');
+
+        function applyLanguage() {
+          if (isEnglish) {
+            document.querySelectorAll('[data-en]').forEach(el => {
+              if (el.hasAttribute('value')) {
+                el.value = el.getAttribute('data-en');
+              } else {
+                el.innerHTML = el.getAttribute('data-en');
+              }
+            });
+          } else {
+            document.querySelectorAll('[data-zh]').forEach(el => {
+              if (el.hasAttribute('value')) {
+                el.value = el.getAttribute('data-zh');
+              } else {
+                el.innerHTML = el.getAttribute('data-zh');
+              }
+            });
+          }
+        }
+
+        function toggleLanguage() {
+          isEnglish = !isEnglish;
+          applyLanguage();
+        }
+
+        if (langToggle) {
+          langToggle.addEventListener('click', toggleLanguage);
+        }
+        if (langToggleMobile) {
+          langToggleMobile.addEventListener('click', toggleLanguage);
+        }
+      });
+    </script>
   </main>
 </BaseLayout>
