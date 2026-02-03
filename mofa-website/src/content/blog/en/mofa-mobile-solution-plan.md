@@ -2,7 +2,7 @@
 title: "MoFA Mobile Solution Exploration"
 description: "Analyzing the technical challenges faced by the MoFA agent framework when deployed on mobile devices"
 date: 2025-06-09
-author: BH3GEI
+author: Li Yao
 tags: [Mobile, Architecture Design, Termux, Android, Technical Solution]
 ---
 

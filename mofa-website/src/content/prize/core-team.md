@@ -30,7 +30,7 @@ MoFA项目的核心开发团队成员。
 - **Description**: MoFA Core Team Member
 - **Description_zh**: MoFA Core Team Member
 
-### BH3GEI
+### Li Yao
 - **Role**: Core Member
 - **Role_zh**: 核心成员
 - **Avatar**: https://avatars.githubusercontent.com/BH3GEI?v=4

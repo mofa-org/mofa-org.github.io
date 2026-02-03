@@ -2,7 +2,7 @@
 title: "MoFA 移动端方案探索"
 description: "分析 MoFA 智能体框架在移动端部署面临的技术挑战"
 date: 2025-06-09
-author: BH3GEI
+author: Li Yao
 tags: [移动端, 架构设计, Termux, Android, 技术方案]
 ---
 
