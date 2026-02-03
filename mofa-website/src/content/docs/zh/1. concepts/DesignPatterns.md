@@ -1,27 +1,27 @@
 ---
-title: MoFA Agent Design Patterns
-description: Understanding various design patterns used in MoFA agents
+title: MoFA智能体设计模式
+description: 理解MoFA智能体中使用的各种设计模式
 order: 2
 ---
 
-MoFA provides various design patterns that help developers build sophisticated agents with different capabilities and behaviors.
+MoFA提供各种设计模式，帮助开发者构建具有不同能力和行为的复杂智能体。
 
-## Core Design Patterns
+## 核心设计模式
 
-### 1. Reasoner Pattern
-The simplest pattern for building agents that can reason and respond to queries.
+### 1. 推理者模式（Reasoner Pattern）
+构建能够推理和响应查询的智能体的最简单模式。
 
-### 2. Self-Refine Pattern
-Agents that can review and improve their own outputs through iterative refinement.
+### 2. 自我精炼模式（Self-Refine Pattern）
+能够通过迭代改进自我审查和改进自身输出的智能体。
 
-### 3. CrewAI Pattern
-Multi-agent collaboration pattern for complex task execution.
+### 3. CrewAI模式
+用于复杂任务执行的多智能体协作模式。
 
-## Pattern Categories
+## 模式分类
 
-- **Basic Patterns**: Single-agent designs for simple tasks
-- **Collaborative Patterns**: Multi-agent coordination
-- **Reflective Patterns**: Self-improving agents
-- **Service Patterns**: Specialized service agents
+- **基础模式**：用于简单任务的单智能体设计
+- **协作模式**：多智能体协调
+- **反思模式**：自我改进的智能体
+- **服务模式**：专业服务智能体
 
-These patterns form the foundation for building more complex agent behaviors in the MoFA framework.
+这些模式构成了在MoFA框架中构建更复杂智能体行为的基础。

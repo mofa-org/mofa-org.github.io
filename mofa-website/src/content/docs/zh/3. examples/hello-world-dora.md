@@ -1,32 +1,32 @@
 ---
-title: Hello World Based on Dora
-description: Building a Hello World agent using Dora-RS framework
+title: 基于Dora的Hello World
+description: 使用Dora-RS框架构建Hello World智能体
 order: 2
 ---
 
 
 
-## Step 1: Install the Development and Runtime Environment
+## 步骤1：安装开发和运行环境
 
 
-## Step 2: Obtain the Intelligent Agent Template
+## 步骤2：获取智能体模版
 
-1. Go to the [MoFA Agent Hub](https://github.com/mofa-org/mofa/tree/main/agent-hub).
-2. Select a template like [Hello World](https://github.com/mofa-org/mofa/tree/main/agent-hub/hello-world).
-3. Copy the template to your development directory.
-4. Review the template description in the repository.
+1. 前往 [MoFA Agent Hub](https://github.com/mofa-org/mofa/tree/main/agent-hub)。
+2. 选择 [Hello World](https://github.com/mofa-org/mofa/tree/main/agent-hub/hello-world) 等模版。
+3. 将模版复制到你的开发目录。
+4. 查看仓库中的模版说明。
 
-## Step 3: Configuration File Setup
+## 步骤3：配置文件设置
 
-### Configuration File Overview
+### 配置文件概述
 
-Create or edit the `reasoner_agent.yml` file:
+创建或编辑 `reasoner_agent.yml` 文件：
 
 ```yaml
 AGENT:
-  ROLE: Knowledgeable Assistant
-  BACKSTORY: <Your background description>
-  TASK: null  # Specific task
+  ROLE: 知识助手
+  BACKSTORY: <你的背景描述>
+  TASK: null  # 特定任务
 
 RAG:
   RAG_ENABLE: false
@@ -43,12 +43,12 @@ RAG:
 
 WEB:
   WEB_ENABLE: false
-  SERPER_API_KEY: <Your Serper API key>
+  SERPER_API_KEY: <你的Serper API密钥>
   SEARCH_NUM: 20
   SEARCH_ENGINE_TIMEOUT: 5
 
 MODEL:
-  MODEL_API_KEY: <Your model API key>
+  MODEL_API_KEY: <你的模型API密钥>
   MODEL_NAME: gpt-4o-mini
   MODEL_MAX_TOKENS: 2048
 
@@ -63,45 +63,45 @@ LOG:
   CHECK_LOG_PROMPT: true
 ```
 
-### Configuration Details
+### 配置详情
 
-#### 1. AGENT Module
+#### 1. AGENT模块
 
-- **ROLE**: Name of the assistant role.
-- **BACKSTORY**: Background description of the assistant.
-- **TASK**: Specific task (default is `null`).
+- **ROLE**：助手角色名称。
+- **BACKSTORY**：助手的背景描述。
+- **TASK**：特定任务（默认为 `null`）。
 
-#### 2. RAG Module
+#### 2. RAG模块
 
-- **RAG_ENABLE**: Enable (`true`) or disable (`false`) RAG.
-- **Other Parameters**: Configure knowledge retrieval enhancement features.
+- **RAG_ENABLE**：启用（`true`）或禁用（`false`）RAG。
+- **其他参数**：配置知识检索增强功能。
 
-#### 3. WEB Module
+#### 3. WEB模块
 
-- **WEB_ENABLE**: Enable (`true`) or disable (`false`) web search.
-- **SERPER_API_KEY**: Serper search API key.
+- **WEB_ENABLE**：启用（`true`）或禁用（`false`）网络搜索。
+- **SERPER_API_KEY**：Serper搜索API密钥。
 
-#### 4. MODEL Module
+#### 4. MODEL模块
 
-- **MODEL_API_KEY**: API key for the model service.
-- **MODEL_NAME**: Model name to use (e.g., `gpt-4o-mini`).
-- **MODEL_MAX_TOKENS**: Maximum number of tokens the model can generate.
+- **MODEL_API_KEY**：模型服务的API密钥。
+- **MODEL_NAME**：要使用的模型名称（例如 `gpt-4o-mini`）。
+- **MODEL_MAX_TOKENS**：模型可生成的最大令牌数。
 
-#### 5. ENV Module
+#### 5. ENV模块
 
-- **PROXY_URL**: Proxy server URL (set to `null` if no proxy is needed).
-- **AGENT_TYPE**: Agent type, e.g., `reasoner`.
+- **PROXY_URL**：代理服务器URL（如不需要代理则设为 `null`）。
+- **AGENT_TYPE**：智能体类型，例如 `reasoner`。
 
-#### 6. LOG Module
+#### 6. LOG模块
 
-- **LOG_PATH**: Path to the log file.
-- **LOG_TYPE**: Log format (e.g., `markdown`).
-- **LOG_STEP_NAME**: Log step name.
-- **CHECK_LOG_PROMPT**: Enable log prompt checking (`true` or `false`).
+- **LOG_PATH**：日志文件路径。
+- **LOG_TYPE**：日志格式（例如 `markdown`）。
+- **LOG_STEP_NAME**：日志步骤名称。
+- **CHECK_LOG_PROMPT**：启用日志提示检查（`true` 或 `false`）。
 
-## Step 4: Configure Dora Operator
+## 步骤4：配置Dora Operator
 
-Create a `reasoner_agent.py` script:
+创建 `reasoner_agent.py` 脚本：
 
 ```python
 import os
@@ -115,7 +115,7 @@ from mofa.utils.log.agent import record_agent_result_log
 
 class Operator:
     """
-    Dora-rs Operator for handling INPUT events, loading configurations, running the agent, logging results, and sending outputs.
+    Dora-rs Operator，用于处理INPUT事件、加载配置、运行智能体、记录结果和发送输出。
     """
 
     def on_event(self, dora_event, send_output) -> DoraStatus:
@@ -160,9 +160,9 @@ class Operator:
         return DoraStatus.CONTINUE
 ```
 
-## Step 5: Configure Dora Dataflow
+## 步骤5：配置Dora数据流
 
-Create or edit the `reasoner_dataflow.yml` file:
+创建或编辑 `reasoner_dataflow.yml` 文件：
 
 ```yaml
 nodes:
@@ -184,55 +184,55 @@ nodes:
         - reasoner_results
 ```
 
-### Node Descriptions
+### 节点说明
 
-- **terminal-input**:
-  - **Function**: Handles initial input.
-  - **Action**: Installs the `terminal-input` module.
-  - **Output**: Generates `data`, passing it to `reasoner-agent`.
-  - **Input**: Receives `reasoner_results`.
-- **reasoner-agent**:
-  - **Function**: Processes tasks and generates results.
-  - **Action**: Runs the `reasoner_agent.py` script.
-  - **Input**: Receives `data` from `terminal-input` as `task`.
-  - **Output**: Generates `reasoner_results`, sending them back to `terminal-input`.
+- **terminal-input**：
+  - **功能**：处理初始输入。
+  - **操作**：安装 `terminal-input` 模块。
+  - **输出**：生成 `data`，传递给 `reasoner-agent`。
+  - **输入**：接收 `reasoner_results`。
+- **reasoner-agent**：
+  - **功能**：处理任务并生成结果。
+  - **操作**：运行 `reasoner_agent.py` 脚本。
+  - **输入**：从 `terminal-input` 接收 `data` 作为 `task`。
+  - **输出**：生成 `reasoner_results`，发送回 `terminal-input`。
 
-## Step 6: Run Dora Dataflow
+## 步骤6：运行Dora数据流
 
-### Start the Dataflow Using Dora-RS CLI
+### 使用Dora-RS CLI启动数据流
 
-1. Start the coordinator
+1. 启动协调器
 
 ```bash
 dora up
 ```
 
-2. Build the dataflow
+2. 构建数据流
 
 ```bash
 dora build reasoner_dataflow.yml
 ```
 
-3. Start the dataflow with auto-attach
+3. 启动数据流并自动附加
 
 ```bash
 dora start reasoner_dataflow.yml --attach
 ```
 
-4. In another terminal, input tasks to the agent
+4. 在另一个终端中，向智能体输入任务
 
 ```bash
 terminal-input
 ```
 
-Then type your queries to interact with the agent.
+然后输入你的查询与智能体交互。
 
-## Summary
+## 总结
 
-This "Hello World" example demonstrates:
-- How to set up a basic MoFA agent using templates
-- Configuration file structure and parameters
-- Integration with Dora-RS dataflow
-- Running and interacting with the agent
+本"Hello World"示例演示了：
+- 如何使用模版设置基本MoFA智能体
+- 配置文件结构和参数
+- 与Dora-RS数据流集成
+- 运行和与智能体交互
 
-This serves as the foundation for building more complex agents and understanding the MoFA framework.
+这为构建更复杂的智能体和理解MoFA框架奠定了基础。

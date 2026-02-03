@@ -1,11 +1,11 @@
 ---
-title: Hello World Example
-description: The simplest MoFA agent example - Hello World
+title: Hello World 示例
+description: 最简单的MoFA智能体示例 - Hello World
 order: 1
 ---
 
 
 
-This section introduces how to implement the simplest "Hello World" agent.
+本节介绍如何实现最简单的 "Hello World" 智能体。
 
-The task of this agent is to print "Hello World" as output, regardless of the input it receives.
+该智能体的任务是无论收到什么输入，都输出 "Hello World"。

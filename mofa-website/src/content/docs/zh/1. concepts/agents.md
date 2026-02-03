@@ -1,6 +1,6 @@
 ---
 title: MoFA智能体模版
-description: Understanding MoFA agent concepts, design patterns, and composition
+description: 理解MoFA智能体概念、设计模式和组合方法
 order: 1
 ---
 
@@ -16,37 +16,37 @@ order: 1
 
 ## MoFA服务智能体
 
-智能体往往需要需要一些服务，包括检索增强生成，记忆，使用外部工具和任务规划和分解等。MoFA认为：Everything Agent。我们以MoFA智能体的方式提供RAG智能体，记忆智能体，规划智能体和行动智能体。开发者可以使用这些已经实现的服务智能体，与自己的智能体相连接组合从而获得相应的服务。MoFA也可以集成第三方的服务智能体，供开发者按照不同的需求使用。
+智能体往往需要一些服务，包括检索增强生成，记忆，使用外部工具和任务规划和分解等。MoFA认为：Everything Agent。我们以MoFA智能体的方式提供RAG智能体，记忆智能体，规划智能体和行动智能体。开发者可以使用这些已经实现的服务智能体，与自己的智能体相连接组合从而获得相应的服务。MoFA也可以集成第三方的服务智能体，供开发者按照不同的需求使用。
 
 - rag
 - memory
 - action
 - planning
 
-## Nesting Design Patterns of AI Agents
+## AI智能体的嵌套设计模式
 
-AI agents are intelligent software applications with various design patterns:
+AI智能体是具有各种设计模式的智能软件应用：
 
-- **LLM Inference**: Using large language models for basic inference
-- **Customized Prompt**: Tailoring system prompts for specific agents
-- **Reflection Pattern**: Agents capable of self-review and improvement
-- **Actor Pattern**: Agents with external tool and resource capabilities
-- **ReAct Pattern**: Combining reflection and tool usage
-- **Multi-Agent Collaboration**: Specialized agents working together
+- **LLM推理**：使用大语言模型进行基本推理
+- **定制提示词**：为特定智能体定制系统提示词
+- **反思模式**：能够自我审查和改进的智能体
+- **行动者模式**：具有外部工具和资源能力的智能体
+- **ReAct模式**：结合反思和工具使用
+- **多智能体协作**：专业智能体协同工作
 
-## Agent Kernel Services
+## 智能体核心服务
 
-MoFA provides core services to agents, including:
-- Memory management
-- Task planning
-- Knowledge base integration
-- RAG (Retrieval-Augmented Generation)
-- Action capabilities
+MoFA为智能体提供核心服务，包括：
+- 记忆管理
+- 任务规划
+- 知识库集成
+- RAG（检索增强生成）
+- 行动能力
 
-## Composition-Based Architecture
+## 基于组合的架构
 
-Composition allows assembling elements into new entities without changing original components, enabling developers to build and recombine agents for new functionalities.
+组合允许将元素组装成新实体而无需更改原始组件，使开发者能够构建和重组智能体以实现新功能。
 
-## Dataflow-Driven Approach
+## 数据流驱动方法
 
-MoFA employs a dataflow-driven method focusing on data dependencies rather than business rules, simplifying and enhancing modularity.
+MoFA采用数据流驱动的方法，专注于数据依赖关系而非业务规则，简化并增强模块化。
