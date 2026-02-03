@@ -60,9 +60,9 @@ const t = {
               {post.data.date.toLocaleDateString(lang === 'zh' ? 'zh-CN' : 'en-US')}
             </time>
             {post.data.tags && (
-              <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+              <div class="tag-scroll-container">
                 {post.data.tags.map((tag) => (
-                  <span style="background: #f0f0f0; color: #333; padding: 4px 8px; border-radius: 4px; font-size: 0.8rem;">
+                  <span class="tag-item">
                     {tag}
                   </span>
                 ))}
@@ -114,4 +114,34 @@ const t = {
     )}
 
   </div>
+
+  <style>
+    /* 标签横向滚动容器 */
+    .tag-scroll-container {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      flex-wrap: nowrap;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none; /* Firefox */
+      -ms-overflow-style: none; /* IE and Edge */
+      max-width: 100%;
+    }
+
+    /* 隐藏滚动条 */
+    .tag-scroll-container::-webkit-scrollbar {
+      display: none;
+    }
+
+    /* 单个标签样式 */
+    .tag-item {
+      background: #f0f0f0;
+      color: #333;
+      padding: 4px 8px;
+      border-radius: 4px;
+      font-size: 0.8rem;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+  </style>
 </BaseLayout>
