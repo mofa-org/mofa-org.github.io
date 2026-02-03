@@ -232,7 +232,9 @@ code {
 .btn-primary {
   display: inline-flex;
   align-items: center;
-  padding: 12px 24px;
+  justify-content: center;
+  padding: 8px 16px;
+  height: 38px;
   background-color: var(--mondrian-red);
   color: white;
   text-decoration: none;
@@ -273,7 +275,9 @@ code {
 .btn-discord {
   display: inline-flex;
   align-items: center;
-  padding: 10px 16px;
+  justify-content: center;
+  padding: 8px 16px;
+  height: 38px;
   background-color: #6BCED2;
   color: white;
   text-decoration: none;
@@ -294,7 +298,9 @@ code {
 .btn-wechat {
   display: inline-flex;
   align-items: center;
-  padding: 10px 16px;
+  justify-content: center;
+  padding: 8px 16px;
+  height: 38px;
   background-color: #07C160;
   color: white;
   text-decoration: none;
@@ -337,7 +343,9 @@ code {
 .btn-lang {
   display: inline-flex;
   align-items: center;
-  padding: 10px 16px;
+  justify-content: center;
+  padding: 8px 12px;
+  height: 38px;
   background-color: white;
   color: var(--mondrian-black);
   text-decoration: none;
@@ -348,6 +356,8 @@ code {
   cursor: pointer;
   box-shadow: 0 0 0 var(--mondrian-black);
   font-size: 0.875rem;
+  white-space: nowrap;
+  flex-direction: row;
 }
 
 .btn-lang:hover {
@@ -382,6 +392,9 @@ code {
   text-decoration: none;
   font-weight: 500;
   transition: color 0.2s ease;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
 }
 
 .nav-link:hover {
@@ -1684,6 +1697,33 @@ html, body {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+/* Desktop navigation styles */
+.desktop-nav {
+  display: flex !important;
+  align-items: center !important;
+  gap: 16px !important;
+}
+
+/* Navigation dropdown styles */
+.nav-dropdown {
+  position: relative !important;
+  display: inline-flex !important;
+  align-items: center !important;
+}
+
+.dropdown-toggle {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 4px !important;
+  background: none !important;
+  border: none !important;
+  cursor: pointer;
+  white-space: nowrap;
+  font-weight: 500;
+  color: #666;
+  padding: 0;
 }
 
 /* 在大屏幕上隐藏按钮文字的响应式样式 */

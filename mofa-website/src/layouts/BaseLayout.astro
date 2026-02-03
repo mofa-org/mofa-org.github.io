@@ -25,6 +25,19 @@ const { title, description = 'MoFA - Make Ordinary Developers Full-stack AI Engi
     <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png" />
     <meta name="generator" content={Astro.generator} />
     <title>{title} | MoFA</title>
+    <style>
+      /* Critical CSS - ensure proper layout before main CSS loads */
+      .desktop-nav {
+        display: flex !important;
+        align-items: center !important;
+        gap: 16px !important;
+      }
+      .nav-dropdown {
+        position: relative !important;
+        display: inline-flex !important;
+        align-items: center !important;
+      }
+    </style>
   </head>
   <body>
     <Header />
