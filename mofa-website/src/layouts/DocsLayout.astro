@@ -43,7 +43,7 @@ function renderSidebarItem(key, item, basePath = '') {
 
   if (item.data) {
     // 这是一个文档文件
-    const docSlug = item.slug; // 完整 slug 如 "en/0.overview"
+    const docSlug = item.slug; // 完整 slug 如 "en/0-overview"
     const isActive = currentSlug === docSlug;
     return `
       <li class="doc-link">

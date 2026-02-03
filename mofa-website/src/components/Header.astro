@@ -357,10 +357,10 @@ try {
             newPath = path.replace('/docs/zh/', '/docs/en/');
           } else if (path === '/docs' || path === '/docs/') {
             // 在docs首页，根据语言跳转
-            newPath = isEnglish ? '/docs/en/0.overview' : '/docs/zh/0.overview';
+            newPath = isEnglish ? '/docs/en/0-overview' : '/docs/zh/0-overview';
           } else {
             // 其他docs页面，默认跳转到overview
-            newPath = isEnglish ? '/docs/en/0.overview' : '/docs/zh/0.overview';
+            newPath = isEnglish ? '/docs/en/0-overview' : '/docs/zh/0-overview';
           }
           window.location.href = newPath;
           return;

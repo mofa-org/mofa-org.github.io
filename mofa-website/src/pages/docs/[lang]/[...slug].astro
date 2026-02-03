@@ -5,7 +5,7 @@ import DocsLayout from '../../../layouts/DocsLayout.astro';
 export async function getStaticPaths() {
   const docs = await getCollection('docs');
   return docs.map(doc => {
-    // doc.slug 格式: "en/0.overview" 或 "zh/0.overview"
+    // doc.slug 格式: "en/0-overview" 或 "zh/0-overview"
     const parts = doc.slug.split('/');
     const lang = parts[0]; // 'en' 或 'zh'
     const slug = parts.slice(1).join('/'); // 剩余部分
