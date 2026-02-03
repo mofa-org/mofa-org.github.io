@@ -132,7 +132,7 @@ try {
         </div>
       </div>
 
-      <a href="/docs" class="nav-link" data-en="Docs" data-zh="文档">Docs</a>
+      <a href="/docs/" class="nav-link" data-en="Docs" data-zh="文档">Docs</a>
       <a href="/blog" class="nav-link" data-en="Blog" data-zh="博客">Blog</a>
 
       <!-- Hackathons Dropdown -->
@@ -224,7 +224,7 @@ try {
       </div>
 
       <!-- Main Navigation -->
-      <a href="/docs" class="mobile-nav-link">
+      <a href="/docs/" class="mobile-nav-link">
         <span class="link-text" data-en="Docs" data-zh="文档">Docs</span>
         <svg class="icon-right" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
           <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6z"/>
@@ -316,45 +316,62 @@ try {
   document.addEventListener('DOMContentLoaded', function() {
     const langToggle = document.getElementById('lang-toggle');
     const currentLang = document.getElementById('current-lang');
-    // 从 localStorage 读取语言设置，默认为英文
-    let isEnglish = localStorage.getItem('mofa-language') !== 'zh';
 
-    // 初始化页面语言
-    function initLanguage() {
-      if (!isEnglish) {
-        if (currentLang) currentLang.textContent = '🇨🇳 中文';
-        // 切换到中文
-        document.querySelectorAll('[data-zh]').forEach(el => {
-          if (el.tagName === 'INPUT' && el.type === 'submit') {
-            el.value = el.getAttribute('data-zh') || el.value;
-          } else if (el.classList.contains('dropdown-toggle')) {
-            const span = el.querySelector('span');
-            if (span) {
-              span.textContent = el.getAttribute('data-zh') || span.textContent;
-            }
-          } else {
-            el.innerHTML = el.getAttribute('data-zh') || el.innerHTML;
-          }
-        });
+    // 检测当前语言（从URL路径）
+    function detectLanguageFromURL() {
+      const path = window.location.pathname;
+      if (path.startsWith('/docs/zh/')) return 'zh';
+      if (path.startsWith('/docs/en/')) return 'en';
+      // 默认检查localStorage或默认为英文
+      return localStorage.getItem('mofa-language') || 'en';
+    }
+
+    let currentLangCode = detectLanguageFromURL();
+    let isEnglish = currentLangCode === 'en';
+
+    // 初始化顶栏语言显示
+    function updateLangDisplay() {
+      if (currentLang) {
+        currentLang.textContent = isEnglish ? '🇺🇸 EN' : '🇨🇳 中文';
       }
     }
-    initLanguage();
+    updateLangDisplay();
 
     if (langToggle && currentLang) {
       langToggle.addEventListener('click', function() {
         isEnglish = !isEnglish;
+        const newLang = isEnglish ? 'en' : 'zh';
+        localStorage.setItem('mofa-language', newLang);
+        updateLangDisplay();
 
-        // 保存到 localStorage
-        localStorage.setItem('mofa-language', isEnglish ? 'en' : 'zh');
+        // 检查是否在文档页面
+        const path = window.location.pathname;
+        const isDocsPage = path.startsWith('/docs/');
 
+        if (isDocsPage) {
+          // 在文档页面，跳转到对应语言的URL
+          let newPath;
+          if (path.startsWith('/docs/en/')) {
+            newPath = path.replace('/docs/en/', '/docs/zh/');
+          } else if (path.startsWith('/docs/zh/')) {
+            newPath = path.replace('/docs/zh/', '/docs/en/');
+          } else if (path === '/docs' || path === '/docs/') {
+            // 在docs首页，根据语言跳转
+            newPath = isEnglish ? '/docs/en/0.overview' : '/docs/zh/0.overview';
+          } else {
+            // 其他docs页面，默认跳转到overview
+            newPath = isEnglish ? '/docs/en/0.overview' : '/docs/zh/0.overview';
+          }
+          window.location.href = newPath;
+          return;
+        }
+
+        // 非文档页面，使用原来的客户端切换逻辑
         if (isEnglish) {
-          currentLang.textContent = '🇺🇸 EN';
-          // 切换到英文
           document.querySelectorAll('[data-en]').forEach(el => {
             if (el.tagName === 'INPUT' && el.type === 'submit') {
               el.value = el.getAttribute('data-en') || el.value;
             } else if (el.classList.contains('dropdown-toggle')) {
-              // 对于下拉按钮，只更新内部span的文本，保留svg图标
               const span = el.querySelector('span');
               if (span) {
                 span.textContent = el.getAttribute('data-en') || span.textContent;
@@ -364,13 +381,10 @@ try {
             }
           });
         } else {
-          currentLang.textContent = '🇨🇳 中文';
-          // 切换到中文
           document.querySelectorAll('[data-zh]').forEach(el => {
             if (el.tagName === 'INPUT' && el.type === 'submit') {
               el.value = el.getAttribute('data-zh') || el.value;
             } else if (el.classList.contains('dropdown-toggle')) {
-              // 对于下拉按钮，只更新内部span的文本，保留svg图标
               const span = el.querySelector('span');
               if (span) {
                 span.textContent = el.getAttribute('data-zh') || span.textContent;
@@ -380,11 +394,6 @@ try {
             }
           });
         }
-
-        // 触发自定义事件，通知其他组件语言已切换
-        window.dispatchEvent(new CustomEvent('mofa-language-change', {
-          detail: { language: isEnglish ? 'en' : 'zh' }
-        }));
       });
     }
 

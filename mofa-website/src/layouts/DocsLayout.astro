@@ -6,21 +6,25 @@ export interface Props {
   title: string;
   description?: string;
   currentSlug?: string;
+  currentLang?: string;
 }
 
-const { title, description, currentSlug } = Astro.props;
+const { title, description, currentSlug, currentLang = 'en' } = Astro.props;
 
-// 获取所有文档并构建目录结构
+// 获取所有文档并筛选当前语言
 const allDocs = await getCollection('docs');
+const langDocs = allDocs.filter(doc => doc.slug.startsWith(`${currentLang}/`));
 
-// 构建嵌套的文档结构
+// 构建嵌套的文档结构（仅当前语言）
 const docsStructure = {};
-allDocs.forEach(doc => {
+langDocs.forEach(doc => {
   const pathParts = doc.slug.split('/');
+  // 移除语言前缀
+  const relevantParts = pathParts.slice(1);
   let current = docsStructure;
-  
-  pathParts.forEach((part, index) => {
-    if (index === pathParts.length - 1) {
+
+  relevantParts.forEach((part, index) => {
+    if (index === relevantParts.length - 1) {
       // 这是文件
       current[part] = doc;
     } else {
@@ -34,16 +38,16 @@ allDocs.forEach(doc => {
 });
 
 // 渲染侧边栏项目的递归函数
-function renderSidebarItem(key, item, basePath = '', lang = 'en') {
+function renderSidebarItem(key, item, basePath = '') {
   const fullPath = basePath ? `${basePath}/${key}` : key;
 
   if (item.data) {
     // 这是一个文档文件
-    const isActive = currentSlug === item.slug;
-    const itemLang = item.slug.startsWith('zh/') ? 'zh' : 'en';
+    const docSlug = item.slug; // 完整 slug 如 "en/0.overview"
+    const isActive = currentSlug === docSlug;
     return `
-      <li class="doc-link doc-lang-${itemLang}" style="display: ${itemLang === lang ? 'block' : 'none'};">
-        <a href="/docs/${item.slug}"
+      <li class="doc-link">
+        <a href="/docs/${docSlug}"
            class="sidebar-link ${isActive ? 'active' : ''}"
            style="display: block; padding: 8px 16px; text-decoration: none; color: ${isActive ? '#0066cc' : '#374151'}; font-weight: ${isActive ? '600' : '400'}; border-radius: 4px; transition: all 0.2s ease;"
            onmouseover="if (!this.classList.contains('active')) { this.style.background = '#f3f4f6'; this.style.color = '#0066cc'; }"
@@ -55,7 +59,7 @@ function renderSidebarItem(key, item, basePath = '', lang = 'en') {
   } else {
     // 这是一个文件夹
     const folderItems = sortEntries(Object.entries(item)).map(([subKey, subItem]) =>
-      renderSidebarItem(subKey, subItem, fullPath, lang)
+      renderSidebarItem(subKey, subItem, fullPath)
     ).join('');
 
     return `
@@ -78,40 +82,36 @@ function sortEntries(entries) {
     if (itemA.data && itemB.data) {
       const orderA = itemA.data.order ?? 999;
       const orderB = itemB.data.order ?? 999;
-      
+
       if (orderA !== orderB) {
         return orderA - orderB;
       }
-      
+
       // order 相同时按标题排序
       return itemA.data.title.localeCompare(itemB.data.title);
     }
-    
+
     // 如果是文件夹，按文件夹名的数字前缀排序
     const getOrderFromKey = (key) => {
       const match = key.match(/^(\d+)/);
       return match ? parseInt(match[1]) : 999;
     };
-    
+
     const orderA = getOrderFromKey(keyA);
     const orderB = getOrderFromKey(keyB);
-    
+
     if (orderA !== orderB) {
       return orderA - orderB;
     }
-    
+
     // 数字前缀相同时按字母排序
     return keyA.localeCompare(keyB);
   });
 }
 
-// 为英文和中文分别生成侧边栏内容
-const sidebarContentEn = sortEntries(Object.entries(docsStructure)).map(([key, item]) =>
-  renderSidebarItem(key, item, '', 'en')
-).join('');
-
-const sidebarContentZh = sortEntries(Object.entries(docsStructure)).map(([key, item]) =>
-  renderSidebarItem(key, item, '', 'zh')
+// 生成侧边栏内容（仅当前语言）
+const sidebarContent = sortEntries(Object.entries(docsStructure)).map(([key, item]) =>
+  renderSidebarItem(key, item)
 ).join('');
 ---
 
@@ -144,11 +144,8 @@ const sidebarContentZh = sortEntries(Object.entries(docsStructure)).map(([key, i
           </h2>
         </div>
         <nav id="docs-sidebar-nav">
-          <!-- 英文文档链接 -->
-          <ul id="sidebar-en" style="list-style: none; margin: 0; padding: 0; display: block;" set:html={sidebarContentEn}>
-          </ul>
-          <!-- 中文文档链接 -->
-          <ul id="sidebar-zh" style="list-style: none; margin: 0; padding: 0; display: none;" set:html={sidebarContentZh}>
+          <!-- 当前语言的文档链接 -->
+          <ul id="sidebar-content" style="list-style: none; margin: 0; padding: 0;" set:html={sidebarContent}>
           </ul>
         </nav>
       </div>
@@ -164,40 +161,8 @@ const sidebarContentZh = sortEntries(Object.entries(docsStructure)).map(([key, i
 
   <script>
     document.addEventListener('DOMContentLoaded', function() {
-      // 根据 localStorage 语言状态切换侧边栏
-      function updateDocsLanguage() {
-        const isEnglish = localStorage.getItem('mofa-language') !== 'zh';
-        const sidebarEn = document.getElementById('sidebar-en');
-        const sidebarZh = document.getElementById('sidebar-zh');
-        const sidebarTitle = document.querySelector('.sidebar-content h2');
-
-        if (sidebarEn && sidebarZh) {
-          if (isEnglish) {
-            sidebarEn.style.display = 'block';
-            sidebarZh.style.display = 'none';
-          } else {
-            sidebarEn.style.display = 'none';
-            sidebarZh.style.display = 'block';
-          }
-        }
-
-        if (sidebarTitle) {
-          sidebarTitle.textContent = isEnglish ? 'Documentation' : '文档';
-        }
-      }
-
-      // 初始更新
-      updateDocsLanguage();
-
-      // 监听语言切换事件
-      window.addEventListener('mofa-language-change', updateDocsLanguage);
-
-      // 监听 storage 变化（跨标签页同步）
-      window.addEventListener('storage', function(e) {
-        if (e.key === 'mofa-language') {
-          updateDocsLanguage();
-        }
-      });
+      // 语言已存在于 URL 中，无需 client-side 切换
+      // 页面切换时 Header 组件会处理语言跳转
 
       const mobileButton = document.getElementById('mobile-toc-button');
       const sidebar = document.getElementById('docs-sidebar');

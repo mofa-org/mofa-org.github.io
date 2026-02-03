@@ -1,0 +1,147 @@
+---
+import { getCollection } from 'astro:content';
+import DocsLayout from '../../../layouts/DocsLayout.astro';
+
+export async function getStaticPaths() {
+  const docs = await getCollection('docs');
+  return docs.map(doc => {
+    // doc.slug 格式: "en/0.overview" 或 "zh/0.overview"
+    const parts = doc.slug.split('/');
+    const lang = parts[0]; // 'en' 或 'zh'
+    const slug = parts.slice(1).join('/'); // 剩余部分
+
+    return {
+      params: { lang, slug },
+      props: { doc }
+    };
+  });
+}
+
+const { doc } = Astro.props;
+const { lang } = Astro.params;
+const { Content } = await doc.render();
+---
+
+<DocsLayout title={doc.data.title} description={doc.data.description} currentSlug={doc.slug} currentLang={lang}>
+  <article class="prose">
+    <h1>{doc.data.title}</h1>
+    <Content />
+  </article>
+</DocsLayout>
+
+<style>
+  .prose {
+    max-width: none;
+    color: #374151;
+    line-height: 1.7;
+  }
+
+  .prose h1 {
+    font-size: 2.25rem;
+    font-weight: 800;
+    margin: 2rem 0 1rem 0;
+    line-height: 1.2;
+    color: #111827;
+  }
+
+  .prose h2 {
+    font-size: 1.875rem;
+    font-weight: 700;
+    margin: 2rem 0 1rem 0;
+    line-height: 1.3;
+    color: #111827;
+    border-bottom: 2px solid #e5e7eb;
+    padding-bottom: 0.5rem;
+  }
+
+  .prose h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 1.5rem 0 0.75rem 0;
+    line-height: 1.4;
+    color: #111827;
+  }
+
+  .prose h4 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 1.25rem 0 0.5rem 0;
+    line-height: 1.4;
+    color: #111827;
+  }
+
+  .prose p {
+    margin: 1rem 0;
+    line-height: 1.7;
+  }
+
+  .prose ul, .prose ol {
+    margin: 1rem 0;
+    padding-left: 1.5rem;
+  }
+
+  .prose li {
+    margin: 0.5rem 0;
+    line-height: 1.6;
+  }
+
+  .prose code {
+    background: #f3f4f6;
+    padding: 0.125rem 0.25rem;
+    border-radius: 0.25rem;
+    font-size: 0.875rem;
+    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  }
+
+  .prose pre {
+    background: #1f2937;
+    color: #f9fafb;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    overflow-x: auto;
+    margin: 1.5rem 0;
+    font-size: 0.875rem;
+  }
+
+  .prose pre code {
+    background: transparent;
+    padding: 0;
+    color: inherit;
+  }
+
+  .prose a {
+    color: #2563eb;
+    text-decoration: underline;
+  }
+
+  .prose a:hover {
+    color: #1d4ed8;
+  }
+
+  .prose blockquote {
+    border-left: 4px solid #e5e7eb;
+    padding-left: 1rem;
+    margin: 1.5rem 0;
+    font-style: italic;
+    color: #6b7280;
+    background: #f9fafb;
+    padding: 1rem;
+  }
+
+  .prose table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+  }
+
+  .prose th, .prose td {
+    border: 1px solid #e5e7eb;
+    padding: 0.75rem;
+    text-align: left;
+  }
+
+  .prose th {
+    background: #f9fafb;
+    font-weight: 600;
+  }
+</style>
