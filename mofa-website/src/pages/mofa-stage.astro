@@ -633,7 +633,19 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   document.addEventListener('DOMContentLoaded', function() {
     const langToggle = document.getElementById('lang-toggle');
     const currentLang = document.getElementById('current-lang');
-    let isEnglish = false; // 默认中文
+    let isEnglish = true; // 默认英文
+
+    // 初始化：根据默认语言设置显示
+    if (isEnglish) {
+      currentLang.textContent = '🇺🇸 EN';
+      document.querySelectorAll('[data-en]').forEach(el => {
+        if (el.tagName === 'INPUT' && el.type === 'submit') {
+          el.value = el.getAttribute('data-en') || el.value;
+        } else {
+          el.innerHTML = el.getAttribute('data-en') || el.innerHTML;
+        }
+      });
+    }
 
     if (langToggle && currentLang) {
       langToggle.addEventListener('click', function() {
