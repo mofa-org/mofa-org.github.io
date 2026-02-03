@@ -1067,69 +1067,19 @@ import HallOfFame from '../components/HallOfFame.astro';
       }
     }
 
-    // 初始化移动端菜单
-    function initMobileMenu() {
-      const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
-      const mobileMenu = document.getElementById('mobile-menu');
-      const langToggleMobile = document.getElementById('lang-toggle-mobile');
-      const currentLangMobile = document.getElementById('current-lang-mobile');
-
-      // 汉堡菜单切换
-      if (mobileMenuToggle && mobileMenu) {
-        mobileMenuToggle.addEventListener('click', function() {
-          if (mobileMenu.style.display === 'none' || !mobileMenu.style.display) {
-            mobileMenu.style.display = 'block';
-          } else {
-            mobileMenu.style.display = 'none';
-          }
-        });
-
-        // 点击外部区域关闭菜单
-        document.addEventListener('click', function(e) {
-          if (!mobileMenuToggle.contains(e.target) && !mobileMenu.contains(e.target)) {
-            mobileMenu.style.display = 'none';
-          }
-        });
-      }
-
-      // 移动端语言切换
-      if (langToggleMobile) {
-        langToggleMobile.addEventListener('click', function() {
-          const newLang = currentLang === 'en' ? 'zh' : 'en';
-          updateLanguage(newLang);
-        });
-      }
-
-      // 同步移动端语言显示
-      function updateMobileLanguageDisplay() {
-        if (currentLangMobile) {
-          const flag = currentLang === 'en' ? '🇺🇸' : '🇨🇳';
-          currentLangMobile.textContent = flag;
-        }
-      }
-
-      // 监听语言变更事件，更新移动端显示
-      const originalUpdateLanguage = updateLanguage;
-      updateLanguage = function(lang) {
-        originalUpdateLanguage(lang);
-        updateMobileLanguageDisplay();
-      };
-
-      // 初始化移动端语言显示
-      updateMobileLanguageDisplay();
+    // 语言切换事件（桌面端，移动端由Header组件处理）
+    const langToggleEl = document.getElementById('lang-toggle');
+    if (langToggleEl) {
+      langToggleEl.addEventListener('click', () => {
+        const newLang = currentLang === 'en' ? 'zh' : 'en';
+        updateLanguage(newLang);
+      });
     }
-
-    // 语言切换事件
-    document.getElementById('lang-toggle').addEventListener('click', () => {
-      const newLang = currentLang === 'en' ? 'zh' : 'en';
-      updateLanguage(newLang);
-    });
 
     // 页面加载时初始化
     document.addEventListener('DOMContentLoaded', () => {
       initLanguage();
       initTerminal();
-      initMobileMenu();
     });
 
     // 字母拖拽功能
