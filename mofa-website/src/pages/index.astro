@@ -992,21 +992,36 @@ import HallOfFame from '../components/HallOfFame.astro';
       currentLang = lang;
 
       // 更新页面title
-      document.getElementById('page-title').textContent = languages[lang].title;
+      const pageTitle = document.getElementById('page-title');
+      if (pageTitle) {
+        pageTitle.textContent = languages[lang].title;
+      }
 
       // 更新html lang属性
-      document.getElementById('html-root').setAttribute('lang', lang === 'zh' ? 'zh-CN' : 'en');
+      const htmlRoot = document.getElementById('html-root');
+      if (htmlRoot) {
+        htmlRoot.setAttribute('lang', lang === 'zh' ? 'zh-CN' : 'en');
+      }
 
       // 更新语言切换按钮显示
       const currentLangEl = document.getElementById('current-lang');
       const otherLang = lang === 'en' ? 'zh' : 'en';
-      currentLangEl.textContent = `${languages[otherLang].flag} ${languages[otherLang].name}`;
+      if (currentLangEl) {
+        currentLangEl.textContent = `${languages[otherLang].flag} ${languages[otherLang].name}`;
+      }
 
       // 更新所有带有data-en和data-zh属性的元素
       const elements = document.querySelectorAll('[data-en][data-zh]');
       elements.forEach(element => {
         const text = element.getAttribute(`data-${lang}`);
-        if (text) {
+        if (!text) return;
+        // 对于下拉按钮，只更新内部span的文本，保留svg图标
+        if (element.classList.contains('dropdown-toggle')) {
+          const span = element.querySelector('span');
+          if (span) {
+            span.textContent = text;
+          }
+        } else {
           element.innerHTML = text;
         }
       });

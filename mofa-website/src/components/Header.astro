@@ -83,6 +83,30 @@ try {
     color: #666;
     padding: 0;
   }
+
+  /* 响应式样式 - 中等屏幕 */
+  @media (max-width: 1024px) {
+    .desktop-nav {
+      display: none !important;
+    }
+    .mobile-nav {
+      display: flex !important;
+    }
+  }
+
+  /* 小屏幕优化 */
+  @media (max-width: 400px) {
+    .mobile-header {
+      padding: 12px !important;
+    }
+    .mobile-header img {
+      width: 32px !important;
+      height: 32px !important;
+    }
+    .mobile-header .gradient-text {
+      font-size: 1.2rem !important;
+    }
+  }
 </style>
 <header style="position: sticky; top: 0; background: white; border-bottom: 4px solid var(--mondrian-black); box-shadow: 0 2px 4px rgba(0,0,0,0.1); z-index: 50;">
   <nav class="container mobile-header" style="padding: 16px; display: flex; align-items: center; justify-content: space-between;">
