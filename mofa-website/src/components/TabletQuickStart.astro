@@ -9,18 +9,18 @@ const tabs = [
     secondary: 'pip install mofa-stage  # MoFA_Stage GUI'
   },
   {
-    id: 'clone',
-    labelZh: '2. 克隆数据流',
-    labelEn: '2. Clone Data Flow',
-    commandMain: 'mofa clone-node <repo-url>',
-    secondary: 'Clone an existing data flow'
+    id: 'download',
+    labelZh: '2. 下载节点',
+    labelEn: '2. Download',
+    commandMain: 'mofa download <node-or-flow>',
+    secondary: 'Get nodes and flows from hub'
   },
   {
     id: 'run',
     labelZh: '3. 运行数据流',
-    labelEn: '3. Run Data Flow',
-    commandMain: 'mofa run-dataflow <dataflow-name>',
-    secondary: 'Start your data flow'
+    labelEn: '3. Run Flow',
+    commandMain: 'mofa run-flow <dataflow.yml>',
+    secondary: 'Start your dataflow'
   }
 ];
 ---
@@ -92,13 +92,13 @@ const tabs = [
       </div>
       <div class="text-center">
         <div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center text-white font-bold text-xl">2</div>
-        <h3 class="text-lg font-semibold" data-en="Create Your Agent" data-zh="创建代理">Create Your Agent</h3>
-        <p class="text-gray-600 text-sm" data-en="Use our templates or start from scratch with simple YAML configs" data-zh="使用我们的模板或通过简单的 YAML 配置从零开始">Use our templates or start from scratch with simple YAML configs</p>
+        <h3 class="text-lg font-semibold" data-en="Download from Hub" data-zh="从 Hub 下载">Download from Hub</h3>
+        <p class="text-gray-600 text-sm" data-en="Get pre-built nodes and flows from the MoFA community hub" data-zh="从 MoFA 社区 Hub 获取预构建的节点和数据流">Get pre-built nodes and flows from the MoFA community hub</p>
       </div>
       <div class="text-center">
         <div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-green-500 to-teal-500 rounded-full flex items-center justify-center text-white font-bold text-xl">3</div>
-        <h3 class="text-lg font-semibold" data-en="Deploy & Scale" data-zh="部署扩展">Deploy & Scale</h3>
-        <p class="text-gray-600 text-sm" data-en="Launch your AI agents and scale them across different environments" data-zh="启动您的 AI 代理并在不同环境中扩展">Launch your AI agents and scale them across different environments</p>
+        <h3 class="text-lg font-semibold" data-en="Run Your Flow" data-zh="运行数据流">Run Your Flow</h3>
+        <p class="text-gray-600 text-sm" data-en="Execute your dataflow and watch your AI agents come to life" data-zh="执行您的数据流，看着您的 AI 代理活跃起来">Execute your dataflow and watch your AI agents come to life</p>
       </div>
     </div>
   </div>
@@ -115,6 +115,11 @@ const tabs = [
   const toast = document.getElementById('qs-success');
 
   let active = 'install';
+
+  // Set first tab active by default
+  document.addEventListener('DOMContentLoaded', () => {
+    setActive('install');
+  });
   let typer;
 
   function typeText(el, text){
