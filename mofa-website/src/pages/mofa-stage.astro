@@ -68,18 +68,50 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <!-- CTA Buttons -->
           <div style="display: flex; flex-direction: column; gap: 16px; justify-content: center; margin-bottom: 48px;">
             <div style="display: flex; flex-wrap: wrap; gap: 16px; justify-content: center;">
-              <a href="https://github.com/mofa-org/mofa-stage" target="_blank" rel="noopener noreferrer" 
-                 class="btn-primary" style="font-size: 1.125rem; padding: 16px 32px;">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 8px;">
+              <a href="https://github.com/mofa-org/mofa-stage" target="_blank" rel="noopener noreferrer"
+                 style="
+                   display: inline-flex;
+                   align-items: center;
+                   font-size: 1.125rem;
+                   padding: 16px 32px;
+                   background: var(--mondrian-red);
+                   color: white;
+                   text-decoration: none;
+                   border-radius: 0;
+                   font-weight: 700;
+                   transition: all 0.2s ease;
+                   border: 3px solid var(--mondrian-black);
+                   cursor: pointer;
+                   box-shadow: none;
+                 "
+                 onmouseover="this.style.transform='translate(-2px, -2px)'; this.style.boxShadow='4px 4px 0 var(--mondrian-black)'"
+                 onmouseout="this.style.transform='translate(0, 0)'; this.style.boxShadow='none'">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 8px; flex-shrink: 0;">
                   <path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
                   <path d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
                 </svg>
                 <span data-en="Explore MoFA Stage" data-zh="探索 MoFA Stage">探索 MoFA Stage</span>
               </a>
-              
+
               <a href="https://github.com/mofa-org/mofa-stage/blob/main/README_cn.md" target="_blank" rel="noopener noreferrer"
-                 class="btn-outline" style="font-size: 1.125rem; padding: 16px 32px;">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 8px;">
+                 style="
+                   display: inline-flex;
+                   align-items: center;
+                   font-size: 1.125rem;
+                   padding: 16px 32px;
+                   background: var(--mofa-gradient-3);
+                   color: white;
+                   text-decoration: none;
+                   border-radius: 0;
+                   font-weight: 700;
+                   transition: all 0.2s ease;
+                   border: 3px solid var(--mondrian-black);
+                   cursor: pointer;
+                   box-shadow: none;
+                 "
+                 onmouseover="this.style.transform='translate(-2px, -2px)'; this.style.boxShadow='4px 4px 0 var(--mondrian-black)'"
+                 onmouseout="this.style.transform='translate(0, 0)'; this.style.boxShadow='none'">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 8px; flex-shrink: 0;">
                   <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
                 </svg>
                 <span data-en="Quick Start Guide" data-zh="快速开始指南">快速开始指南</span>
@@ -139,30 +171,29 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           <!-- Feature 1: Visual Agent Management -->
-          <div class="card" style="border: 2px solid var(--mondrian-black); transition: all 0.3s ease;" 
-               onmouseover="this.style.borderWidth='4px'; this.style.transform='translateY(-4px)'" 
-               onmouseout="this.style.borderWidth='2px'; this.style.transform='translateY(0)'">
+          <div style="background: white; border: 3px solid var(--mondrian-black); padding: 24px; transition: all 0.2s ease;"
+               onmouseover="this.style.transform='translate(-4px, -4px)'; this.style.boxShadow='8px 8px 0 var(--mondrian-black)'"
+               onmouseout="this.style.transform='translate(0, 0)'; this.style.boxShadow='none'">
             <div style="text-align: center;">
               <div style="
                 width: 64px;
                 height: 64px;
                 margin: 0 auto 16px;
-                background: linear-gradient(135deg, var(--macaron-sky), var(--macaron-lavender));
-                border-radius: 16px;
+                background: var(--mofa-gradient-1);
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 color: white;
-                box-shadow: 0 8px 24px rgba(179, 229, 252, 0.4);
+                border: 2px solid var(--mondrian-black);
               ">
-                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg width="32" height="32" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"/>
                 </svg>
               </div>
-              <h3 class="text-lg font-semibold mb-3" 
+              <h3 class="text-lg font-bold mb-3"
                   data-en="Visual Agent Management"
                   data-zh="可视化Agent管理">可视化Agent管理</h3>
-              <p class="text-gray-600 text-sm leading-relaxed" 
+              <p class="text-gray-600 text-sm leading-relaxed"
                  data-en="Create, edit, and organize your AI agents through an intuitive drag-and-drop interface. No command line required."
                  data-zh="通过直观的拖放界面创建、编辑和组织您的AI代理。无需命令行操作。">
                 通过直观的拖放界面创建、编辑和组织您的AI代理。无需命令行操作。
@@ -171,30 +202,29 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           </div>
 
           <!-- Feature 2: Monaco Editor -->
-          <div class="card" style="border: 2px solid var(--mondrian-black); transition: all 0.3s ease;" 
-               onmouseover="this.style.borderWidth='4px'; this.style.transform='translateY(-4px)'" 
-               onmouseout="this.style.borderWidth='2px'; this.style.transform='translateY(0)'">
+          <div style="background: white; border: 3px solid var(--mondrian-black); padding: 24px; transition: all 0.2s ease;"
+               onmouseover="this.style.transform='translate(-4px, -4px)'; this.style.boxShadow='8px 8px 0 var(--mondrian-black)'"
+               onmouseout="this.style.transform='translate(0, 0)'; this.style.boxShadow='none'">
             <div style="text-align: center;">
               <div style="
                 width: 64px;
                 height: 64px;
                 margin: 0 auto 16px;
-                background: linear-gradient(135deg, var(--macaron-sage), var(--macaron-mint));
-                border-radius: 16px;
+                background: var(--mofa-gradient-3);
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 color: white;
-                box-shadow: 0 8px 24px rgba(200, 230, 201, 0.4);
+                border: 2px solid var(--mondrian-black);
               ">
-                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg width="32" height="32" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
                 </svg>
               </div>
-              <h3 class="text-lg font-semibold mb-3" 
+              <h3 class="text-lg font-bold mb-3"
                   data-en="Monaco Code Editor"
                   data-zh="Monaco代码编辑器">Monaco代码编辑器</h3>
-              <p class="text-gray-600 text-sm leading-relaxed" 
+              <p class="text-gray-600 text-sm leading-relaxed"
                  data-en="Powered by the same editor engine as VS Code, with syntax highlighting, auto-completion, and error detection."
                  data-zh="采用与VS Code相同的编辑器引擎，支持语法高亮、自动补全和错误检测。">
                 采用与VS Code相同的编辑器引擎，支持语法高亮、自动补全和错误检测。
@@ -203,30 +233,29 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           </div>
 
           <!-- Feature 3: Integrated Terminal -->
-          <div class="card" style="border: 2px solid var(--mondrian-black); transition: all 0.3s ease;" 
-               onmouseover="this.style.borderWidth='4px'; this.style.transform='translateY(-4px)'" 
-               onmouseout="this.style.borderWidth='2px'; this.style.transform='translateY(0)'">
+          <div style="background: white; border: 3px solid var(--mondrian-black); padding: 24px; transition: all 0.2s ease;"
+               onmouseover="this.style.transform='translate(-4px, -4px)'; this.style.boxShadow='8px 8px 0 var(--mondrian-black)'"
+               onmouseout="this.style.transform='translate(0, 0)'; this.style.boxShadow='none'">
             <div style="text-align: center;">
               <div style="
                 width: 64px;
                 height: 64px;
                 margin: 0 auto 16px;
-                background: linear-gradient(135deg, var(--macaron-coral), var(--macaron-lemon));
-                border-radius: 16px;
+                background: var(--mofa-gradient-4);
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 color: white;
-                box-shadow: 0 8px 24px rgba(255, 171, 145, 0.4);
+                border: 2px solid var(--mondrian-black);
               ">
-                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg width="32" height="32" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
                 </svg>
               </div>
-              <h3 class="text-lg font-semibold mb-3" 
+              <h3 class="text-lg font-bold mb-3"
                   data-en="Integrated Terminal"
                   data-zh="集成终端">集成终端</h3>
-              <p class="text-gray-600 text-sm leading-relaxed" 
+              <p class="text-gray-600 text-sm leading-relaxed"
                  data-en="Built-in web terminal with SSH support. Execute commands, monitor processes, and debug agents directly in the browser."
                  data-zh="内置支持SSH的Web终端。直接在浏览器中执行命令、监控进程和调试代理。">
                 内置支持SSH的Web终端。直接在浏览器中执行命令、监控进程和调试代理。
@@ -235,30 +264,29 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           </div>
 
           <!-- Feature 4: Real-time Collaboration -->
-          <div class="card" style="border: 2px solid var(--mondrian-black); transition: all 0.3s ease;" 
-               onmouseover="this.style.borderWidth='4px'; this.style.transform='translateY(-4px)'" 
-               onmouseout="this.style.borderWidth='2px'; this.style.transform='translateY(0)'">
+          <div style="background: white; border: 3px solid var(--mondrian-black); padding: 24px; transition: all 0.2s ease;"
+               onmouseover="this.style.transform='translate(-4px, -4px)'; this.style.boxShadow='8px 8px 0 var(--mondrian-black)'"
+               onmouseout="this.style.transform='translate(0, 0)'; this.style.boxShadow='none'">
             <div style="text-align: center;">
               <div style="
                 width: 64px;
                 height: 64px;
                 margin: 0 auto 16px;
-                background: linear-gradient(135deg, var(--macaron-peach), var(--macaron-rose));
-                border-radius: 16px;
+                background: var(--mondrian-yellow);
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 color: white;
-                box-shadow: 0 8px 24px rgba(255, 181, 167, 0.4);
+                border: 2px solid var(--mondrian-black);
               ">
-                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg width="32" height="32" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
                 </svg>
               </div>
-              <h3 class="text-lg font-semibold mb-3" 
+              <h3 class="text-lg font-bold mb-3"
                   data-en="Team Collaboration"
                   data-zh="团队协作">团队协作</h3>
-              <p class="text-gray-600 text-sm leading-relaxed" 
+              <p class="text-gray-600 text-sm leading-relaxed"
                  data-en="Share projects, collaborate in real-time, and manage team permissions with built-in collaboration tools."
                  data-zh="通过内置协作工具分享项目、实时协作并管理团队权限。">
                 通过内置协作工具分享项目、实时协作并管理团队权限。
@@ -267,30 +295,29 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           </div>
 
           <!-- Feature 5: Agent Debugging -->
-          <div class="card" style="border: 2px solid var(--mondrian-black); transition: all 0.3s ease;" 
-               onmouseover="this.style.borderWidth='4px'; this.style.transform='translateY(-4px)'" 
-               onmouseout="this.style.borderWidth='2px'; this.style.transform='translateY(0)'">
+          <div style="background: white; border: 3px solid var(--mondrian-black); padding: 24px; transition: all 0.2s ease;"
+               onmouseover="this.style.transform='translate(-4px, -4px)'; this.style.boxShadow='8px 8px 0 var(--mondrian-black)'"
+               onmouseout="this.style.transform='translate(0, 0)'; this.style.boxShadow='none'">
             <div style="text-align: center;">
               <div style="
                 width: 64px;
                 height: 64px;
                 margin: 0 auto 16px;
-                background: linear-gradient(135deg, var(--mondrian-red), var(--macaron-peach));
-                border-radius: 16px;
+                background: var(--mondrian-red);
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 color: white;
-                box-shadow: 0 8px 24px rgba(211, 47, 47, 0.4);
+                border: 2px solid var(--mondrian-black);
               ">
-                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg width="32" height="32" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
                 </svg>
               </div>
-              <h3 class="text-lg font-semibold mb-3" 
+              <h3 class="text-lg font-bold mb-3"
                   data-en="Advanced Debugging"
                   data-zh="高级调试">高级调试</h3>
-              <p class="text-gray-600 text-sm leading-relaxed" 
+              <p class="text-gray-600 text-sm leading-relaxed"
                  data-en="Step-by-step debugging, breakpoints, variable inspection, and agent flow visualization for complex scenarios."
                  data-zh="支持单步调试、断点设置、变量检查和代理流程可视化，助力复杂场景调试。">
                 支持单步调试、断点设置、变量检查和代理流程可视化，助力复杂场景调试。
@@ -299,30 +326,29 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           </div>
 
           <!-- Feature 6: One-Click Deployment -->
-          <div class="card" style="border: 2px solid var(--mondrian-black); transition: all 0.3s ease;" 
-               onmouseover="this.style.borderWidth='4px'; this.style.transform='translateY(-4px)'" 
-               onmouseout="this.style.borderWidth='2px'; this.style.transform='translateY(0)'">
+          <div style="background: white; border: 3px solid var(--mondrian-black); padding: 24px; transition: all 0.2s ease;"
+               onmouseover="this.style.transform='translate(-4px, -4px)'; this.style.boxShadow='8px 8px 0 var(--mondrian-black)'"
+               onmouseout="this.style.transform='translate(0, 0)'; this.style.boxShadow='none'">
             <div style="text-align: center;">
               <div style="
                 width: 64px;
                 height: 64px;
                 margin: 0 auto 16px;
-                background: linear-gradient(135deg, var(--mondrian-blue), var(--macaron-sky));
-                border-radius: 16px;
+                background: var(--mondrian-blue);
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 color: white;
-                box-shadow: 0 8px 24px rgba(25, 118, 210, 0.4);
+                border: 2px solid var(--mondrian-black);
               ">
-                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg width="32" height="32" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M9 19l3 3m0 0l3-3m-3 3V10"/>
                 </svg>
               </div>
-              <h3 class="text-lg font-semibold mb-3" 
+              <h3 class="text-lg font-bold mb-3"
                   data-en="One-Click Deployment"
                   data-zh="一键部署">一键部署</h3>
-              <p class="text-gray-600 text-sm leading-relaxed" 
+              <p class="text-gray-600 text-sm leading-relaxed"
                  data-en="Deploy your agents to cloud platforms with a single click. Support for Docker, Kubernetes, and major cloud providers."
                  data-zh="一键将代理部署到云平台。支持Docker、Kubernetes和主要云服务提供商。">
                 一键将代理部署到云平台。支持Docker、Kubernetes和主要云服务提供商。
@@ -359,7 +385,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <div class="max-w-5xl mx-auto">
           <div class="grid md:grid-cols-2 gap-12">
             <!-- Frontend Stack -->
-            <div class="bg-white rounded-lg shadow-lg p-8" style="border: 2px solid var(--mondrian-black);">
+            <div class="bg-white p-8" style="border: 3px solid var(--mondrian-black);">
               <h4 class="text-2xl font-semibold mb-6 flex items-center gap-3" 
                   data-en="Frontend Stack"
                   data-zh="前端技术栈">
@@ -414,7 +440,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             </div>
 
             <!-- Backend Stack -->
-            <div class="bg-white rounded-lg shadow-lg p-8" style="border: 2px solid var(--mondrian-black);">
+            <div class="bg-white p-8" style="border: 3px solid var(--mondrian-black);">
               <h4 class="text-2xl font-semibold mb-6 flex items-center gap-3" 
                   data-en="Backend Stack"
                   data-zh="后端技术栈">
@@ -549,16 +575,49 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
         <!-- CTA -->
         <div class="text-center mt-16">
-          <a href="https://github.com/mofa-org/mofa-stage/blob/main/README_cn.md" target="_blank" rel="noopener noreferrer" 
-             class="btn-primary" style="font-size: 1.125rem; padding: 16px 32px; margin-right: 16px;">
-            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+          <a href="https://github.com/mofa-org/mofa-stage/blob/main/README_cn.md" target="_blank" rel="noopener noreferrer"
+             style="
+               display: inline-flex;
+               align-items: center;
+               font-size: 1.125rem;
+               padding: 16px 32px;
+               background: var(--mondrian-red);
+               color: white;
+               text-decoration: none;
+               border-radius: 0;
+               font-weight: 700;
+               transition: all 0.2s ease;
+               border: 3px solid var(--mondrian-black);
+               cursor: pointer;
+               box-shadow: none;
+               margin-right: 16px;
+             "
+             onmouseover="this.style.transform='translate(-2px, -2px)'; this.style.boxShadow='4px 4px 0 var(--mondrian-black)'"
+             onmouseout="this.style.transform='translate(0, 0)'; this.style.boxShadow='none'">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 8px; flex-shrink: 0;">
+              <path d="M13 10V3L4 14h7v7l9-11h-7z"/>
             </svg>
             <span data-en="Try MoFA Stage Now" data-zh="立即试用 MoFA Stage">立即试用 MoFA Stage</span>
           </a>
-          <a href="https://github.com/mofa-org/mofa" target="_blank" rel="noopener noreferrer" 
-             class="btn-outline" style="font-size: 1.125rem; padding: 16px 32px;">
-            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+          <a href="https://github.com/mofa-org/mofa" target="_blank" rel="noopener noreferrer"
+             style="
+               display: inline-flex;
+               align-items: center;
+               font-size: 1.125rem;
+               padding: 16px 32px;
+               background: white;
+               color: var(--mondrian-black);
+               text-decoration: none;
+               border-radius: 0;
+               font-weight: 700;
+               transition: all 0.2s ease;
+               border: 3px solid var(--mondrian-black);
+               cursor: pointer;
+               box-shadow: none;
+             "
+             onmouseover="this.style.transform='translate(-2px, -2px)'; this.style.boxShadow='4px 4px 0 var(--mondrian-black)'"
+             onmouseout="this.style.transform='translate(0, 0)'; this.style.boxShadow='none'">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="margin-right: 8px; flex-shrink: 0;">
               <path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234C5.662 20.302 4.967 18.16 4.967 18.16c-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604C6.25 16.01 3.448 14.981 3.448 10.384c0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/>
             </svg>
             <span data-en="View on GitHub" data-zh="在GitHub上查看">在GitHub上查看</span>
