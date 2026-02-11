@@ -3,7 +3,7 @@ type: "repo_stats"
 category: "mofa"
 title: "GitHub Repository Stats"
 title_zh: "GitHub 仓库统计"
-last_updated: "2026-02-03"
+last_updated: "2026-02-11"
 repository: "mofa-org/mofa"
 stars: 164
 forks: 41
@@ -14,7 +14,7 @@ open_issues: 16
 
 这个文件在构建时自动更新，缓存从 GitHub API 获取的仓库统计数据。
 
-**最后更新**: 2026-02-03
+**最后更新**: 2026-02-11
 **仓库**: mofa-org/mofa
 **Stars**: 164
 **Forks**: 41
