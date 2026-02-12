@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" font-family="'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a"/>
+      <stop offset="100%" style="stop-color:#1e293b"/>
+    </linearGradient>
+    <linearGradient id="line" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#6366f1"/>
+      <stop offset="33%" style="stop-color:#8b5cf6"/>
+      <stop offset="66%" style="stop-color:#a78bfa"/>
+      <stop offset="100%" style="stop-color:#c4b5fd"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#000" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="520" fill="url(#bg)" rx="16"/>
+
+  <!-- Title -->
+  <text x="600" y="52" text-anchor="middle" fill="#e2e8f0" font-size="26" font-weight="700">AI 软件发展的四个阶段</text>
+  <text x="600" y="78" text-anchor="middle" fill="#94a3b8" font-size="14">从人月神话到 Token 信仰</text>
+
+  <!-- Timeline line -->
+  <line x1="100" y1="260" x2="1100" y2="260" stroke="url(#line)" stroke-width="4" stroke-linecap="round" filter="url(#glow)"/>
+
+  <!-- Stage 1 -->
+  <circle cx="200" cy="260" r="12" fill="#6366f1" filter="url(#glow)"/>
+  <circle cx="200" cy="260" r="5" fill="#e0e7ff"/>
+  <rect x="115" y="130" width="170" height="100" rx="12" fill="#1e1b4b" stroke="#6366f1" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="200" y="155" text-anchor="middle" fill="#a5b4fc" font-size="12" font-weight="600">第一阶段</text>
+  <text x="200" y="178" text-anchor="middle" fill="#e0e7ff" font-size="15" font-weight="700">确定性工程时代</text>
+  <text x="200" y="200" text-anchor="middle" fill="#94a3b8" font-size="11">算法主导 · 人类编写</text>
+  <text x="200" y="218" text-anchor="middle" fill="#818cf8" font-size="12" font-weight="600">~2022 前</text>
+  <line x1="200" y1="230" x2="200" y2="248" stroke="#6366f1" stroke-width="1.5" stroke-dasharray="4,3"/>
+
+  <!-- Stage 1 keywords -->
+  <text x="200" y="310" text-anchor="middle" fill="#64748b" font-size="11">确定性 · 人月神话</text>
+  <text x="200" y="328" text-anchor="middle" fill="#64748b" font-size="11">工程化分工</text>
+
+  <!-- Stage 2 -->
+  <circle cx="467" cy="260" r="12" fill="#8b5cf6" filter="url(#glow)"/>
+  <circle cx="467" cy="260" r="5" fill="#ede9fe"/>
+  <rect x="382" y="130" width="170" height="100" rx="12" fill="#2e1065" stroke="#8b5cf6" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="467" y="155" text-anchor="middle" fill="#c4b5fd" font-size="12" font-weight="600">第二阶段</text>
+  <text x="467" y="178" text-anchor="middle" fill="#ede9fe" font-size="15" font-weight="700">AI 增强时代</text>
+  <text x="467" y="200" text-anchor="middle" fill="#94a3b8" font-size="11">智能嵌入 · AI 辅助</text>
+  <text x="467" y="218" text-anchor="middle" fill="#a78bfa" font-size="12" font-weight="600">2022 — ChatGPT</text>
+  <line x1="467" y1="230" x2="467" y2="248" stroke="#8b5cf6" stroke-width="1.5" stroke-dasharray="4,3"/>
+
+  <!-- Stage 2 keywords -->
+  <text x="467" y="310" text-anchor="middle" fill="#64748b" font-size="11">智能对话框 · 写作补全</text>
+  <text x="467" y="328" text-anchor="middle" fill="#64748b" font-size="11">"描述"而非"编写"</text>
+
+  <!-- Stage 3 (Highlighted - We are here) -->
+  <rect x="638" y="95" width="190" height="180" rx="16" fill="#f59e0b" opacity="0.08"/>
+  <rect x="638" y="95" width="190" height="180" rx="16" fill="none" stroke="#f59e0b" stroke-width="2" stroke-dasharray="6,3" opacity="0.5"/>
+  <circle cx="733" cy="260" r="18" fill="#f59e0b" opacity="0.3"/>
+  <circle cx="733" cy="260" r="14" fill="#f59e0b" filter="url(#glow)"/>
+  <circle cx="733" cy="260" r="6" fill="#fef3c7"/>
+  <rect x="648" y="120" width="170" height="110" rx="12" fill="#451a03" stroke="#f59e0b" stroke-width="2" filter="url(#shadow)"/>
+  <text x="733" y="145" text-anchor="middle" fill="#fbbf24" font-size="12" font-weight="600">第三阶段</text>
+  <text x="733" y="170" text-anchor="middle" fill="#fef3c7" font-size="16" font-weight="700">AI 原生时代</text>
+  <text x="733" y="192" text-anchor="middle" fill="#fcd34d" font-size="11">AI 构建 · Vibe编程</text>
+  <text x="733" y="218" text-anchor="middle" fill="#f59e0b" font-size="12" font-weight="600">2025 — 范式革命</text>
+  <line x1="733" y1="230" x2="733" y2="246" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="4,3"/>
+
+  <!-- Stage 3 keywords -->
+  <text x="733" y="310" text-anchor="middle" fill="#fbbf24" font-size="11" font-weight="600">Vibe Coding · Token 经济</text>
+  <text x="733" y="328" text-anchor="middle" fill="#fbbf24" font-size="11" font-weight="600">从 Code 到 Instruction</text>
+
+  <!-- Stage 4 -->
+  <circle cx="1000" cy="260" r="12" fill="#c4b5fd" filter="url(#glow)"/>
+  <circle cx="1000" cy="260" r="5" fill="#fff"/>
+  <rect x="915" y="130" width="170" height="100" rx="12" fill="#4a044e" stroke="#c4b5fd" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="1000" y="155" text-anchor="middle" fill="#e9d5ff" font-size="12" font-weight="600">第四阶段</text>
+  <text x="1000" y="178" text-anchor="middle" fill="#faf5ff" font-size="15" font-weight="700">人机和谐时代</text>
+  <text x="1000" y="200" text-anchor="middle" fill="#94a3b8" font-size="11">重建人本 · 协作和谐</text>
+  <text x="1000" y="218" text-anchor="middle" fill="#d8b4fe" font-size="12" font-weight="600">未来 — 正在到来</text>
+  <line x1="1000" y1="230" x2="1000" y2="248" stroke="#c4b5fd" stroke-width="1.5" stroke-dasharray="4,3"/>
+
+  <!-- Stage 4 keywords -->
+  <text x="1000" y="310" text-anchor="middle" fill="#64748b" font-size="11">可理解性 · 人性化交互</text>
+  <text x="1000" y="328" text-anchor="middle" fill="#64748b" font-size="11">人保留判断权</text>
+
+  <!-- Arrow at the end -->
+  <polygon points="1100,260 1088,252 1088,268" fill="#c4b5fd" filter="url(#glow)"/>
+
+  <!-- Bottom evolution line -->
+  <text x="200" y="390" text-anchor="middle" fill="#475569" font-size="12">人类主导</text>
+  <text x="333" y="375" text-anchor="middle" fill="#475569" font-size="18">→</text>
+  <text x="467" y="390" text-anchor="middle" fill="#475569" font-size="12">AI 辅助</text>
+  <text x="600" y="375" text-anchor="middle" fill="#475569" font-size="18">→</text>
+  <text x="733" y="390" text-anchor="middle" fill="#475569" font-size="12">AI 构建</text>
+  <text x="867" y="375" text-anchor="middle" fill="#475569" font-size="18">→</text>
+  <text x="1000" y="390" text-anchor="middle" fill="#475569" font-size="12">人机和谐</text>
+
+  <!-- "We are here" marker -->
+  <rect x="660" y="420" width="146" height="32" rx="16" fill="#f59e0b" opacity="0.2" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="733" y="441" text-anchor="middle" fill="#fbbf24" font-size="13" font-weight="700">⬆ 我们在这里</text>
+
+  <!-- Bottom note -->
+  <text x="600" y="498" text-anchor="middle" fill="#475569" font-size="11">这不是一个被技术决定的未来，而是一个正在被选择的未来。</text>
+</svg>
