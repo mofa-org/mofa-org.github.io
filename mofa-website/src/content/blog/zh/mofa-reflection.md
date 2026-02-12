@@ -6,6 +6,8 @@ author: MoFA Team
 tags: [MoFA, 反思, AI编程, mofa-rs, Rust, 组合AI, Agent Framework]
 ---
 
+![MoFA的反思](/images/mofa-reflection.png)
+
 MoFA项目成立到现在已经一年多时间，MoFA是Agent Framework，我们希望通过MoFA实现Composition AI，即组合AI。通过组合开发者的能力，构建超级智能体（Super Agent），将AI交到普通人的手中，让平凡人做非凡事。
 
 ## 反思

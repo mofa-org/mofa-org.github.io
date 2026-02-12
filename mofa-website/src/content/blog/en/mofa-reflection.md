@@ -6,6 +6,8 @@ author: MoFA Team
 tags: [MoFA, Reflection, AI Coding, mofa-rs, Rust, Compositional AI, Agent Framework]
 ---
 
+![MoFA Reflection](/images/mofa-reflection.png)
+
 It has been over a year since MoFA was founded. MoFA is an Agent Framework — our goal is to achieve Composition AI through MoFA. By combining the capabilities of developers, we aim to build Super Agents, putting AI into the hands of ordinary people and empowering them to do extraordinary things.
 
 ## Reflection
