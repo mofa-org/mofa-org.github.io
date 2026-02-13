@@ -1,6 +1,6 @@
 ---
 title: "AI 软件的发展：从人月神话到 Token 信仰"
-description: "AI 软件的发展并非一次突变，而是经历了几个清晰阶段——每一阶段，都在重新定义"人"与"软件"的关系"
+description: 'AI 软件的发展并非一次突变，而是经历了几个清晰阶段——每一阶段，都在重新定义"人"与"软件"的关系'
 date: 2026-02-11
 author: MoFA Team
 tags: [AI, 软件工程, Vibe Coding, Token, 人月神话, 人机和谐]
