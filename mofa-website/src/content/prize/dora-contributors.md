@@ -3,29 +3,29 @@ type: "contributors"
 category: "dora"
 title: "Dora-rs Contributors"
 title_zh: "Dora-rs 贡献者"
-last_updated: "2026-02-18"
+last_updated: "2026-02-19"
 repositories: ["dora-rs/dora"]
-total_contributors: 57
+total_contributors: 58
 ---
 # Dora-rs Contributors Cache
 
 这个文件在构建时自动更新，缓存从GitHub API获取的贡献者数据。
 
-**最后更新**: 2026-02-18
-**总贡献者数**: 57
+**最后更新**: 2026-02-19
+**总贡献者数**: 58
 **数据来源**: dora-rs/dora
 
 ## Contributors Data
 
 
 ### haixuanTao
-- **Contributions**: 1850
+- **Contributions**: 1852
 - **Avatar**: https://avatars.githubusercontent.com/u/22787340?v=4
 - **GitHub**: https://github.com/haixuanTao
 - **Repositories**: dora-rs/dora
 
 ### phil-opp
-- **Contributions**: 1791
+- **Contributions**: 1845
 - **Avatar**: https://avatars.githubusercontent.com/u/1131315?v=4
 - **GitHub**: https://github.com/phil-opp
 - **Repositories**: dora-rs/dora
@@ -220,6 +220,12 @@ total_contributors: 57
 - **Contributions**: 3
 - **Avatar**: https://avatars.githubusercontent.com/u/68743524?v=4
 - **GitHub**: https://github.com/swar09
+- **Repositories**: dora-rs/dora
+
+### sauhardh
+- **Contributions**: 3
+- **Avatar**: https://avatars.githubusercontent.com/u/84185378?v=4
+- **GitHub**: https://github.com/sauhardh
 - **Repositories**: dora-rs/dora
 
 ### Ryu-Yang
