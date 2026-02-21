@@ -52,12 +52,12 @@ We are no longer just a framework. We are building comprehensive AI composition 
 
 MoFA is no longer just a framework — it is evolving into a layered system:
 
-- **Agent Framework** → mofa: Our new Agent framework, built on Rust for performance and reliability. It adopts a microkernel architecture, inherits and extends the composition capabilities of MoFA 1.0, and targets production-grade applications.
-- **Agent Engine** → mofa-claw: MoFA's own OpenClaw — itself an application built on mofa. We aim to make it a more efficient and controllable Agent engine.
+- **Agent Framework** → [mofa](https://github.com/mofa-org/mofa): Our new Agent framework, built on Rust for performance and reliability. It adopts a microkernel architecture, inherits and extends the composition capabilities of MoFA 1.0, and targets production-grade applications.
+- **Agent Engine** → [mofa-claw](https://github.com/mofa-org/mofaclaw): MoFA's own OpenClaw — itself an application built on mofa. We aim to make it a more efficient and controllable Agent engine.
 - **Content Engine** → Remix Engine: The greatest contribution of LLMs to human cognition may not be producing content, but remixing it — transforming content from one form into another that better suits its audience. We believe systematically building this remixing capability is immensely valuable.
-- **Remix Tools** → MoFA-studio, MoFA-pptx: MoFA-studio focuses on remixing in the audio domain; MoFA-pptx covers images, short videos, presentations, and other multimedia formats.
+- **Remix Tools** → [MoFA-studio](https://github.com/mofa-org/mofa-studio), [MoFA-pptx](https://github.com/mofa-org/mofa-pptx): MoFA-studio focuses on remixing in the audio domain; MoFA-pptx covers images, short videos, presentations, and other multimedia formats.
 - **Application Layer** → mofa.fm, zhufu.ai, what's-going-on, MoFA Wonderland: End-user applications built on top of the layers above.
-- **Model Layer** → Moxin Models and third-party models: Through mofa, we support models deployed both locally and in the cloud. Moxin, our sibling project, provides high-quality speech models for local deployment, giving us a unique advantage in the voice domain.
+- **Model Layer** → [Moxin](https://github.com/moxin-org) Models and third-party models: Through mofa, we support models deployed both locally and in the cloud. Moxin, our sibling project, provides high-quality speech models for local deployment, giving us a unique advantage in the voice domain.
 
 We build infrastructure and real applications in parallel.
 

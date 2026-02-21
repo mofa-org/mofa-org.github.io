@@ -52,12 +52,12 @@ MoFA 正在走向：
 
 MoFA 不再只是一个框架，它正在演化为一个分层系统：
 
-- **Agent Framework** → mofa：全新的 Agent 框架，基于更高效、更先进的 Rust 语言与技术栈构建；采用微内核架构保障可靠性；继承并发展 MoFA 1.0 的组合特性；面向工业级应用。
-- **Agent Engine** → mofa-claw：mofa 版的 OpenClaw，本身即是 mofa 的应用。我们希望它成为更高效、更可控的 Agent 引擎。
+- **Agent Framework** → [mofa](https://github.com/mofa-org/mofa)：全新的 Agent 框架，基于更高效、更先进的 Rust 语言与技术栈构建；采用微内核架构保障可靠性；继承并发展 MoFA 1.0 的组合特性；面向工业级应用。
+- **Agent Engine** → [mofa-claw](https://github.com/mofa-org/mofaclaw)：mofa 版的 OpenClaw，本身即是 mofa 的应用。我们希望它成为更高效、更可控的 Agent 引擎。
 - **Content Engine** → Remix Engine：大语言模型对人类认知最大的贡献，或许不是生产内容，而是将内容从一种形式 Remix 为另一种——以更适合受众的方式呈现。我们认为，系统化地构建 Remixing 能力极具价值。
-- **Remix 工具层** → MoFA-studio、MoFA-pptx：MoFA-studio 专注于音频领域的 Remixing 能力；MoFA-pptx 则面向图像、短视频、演示文稿等多媒体场景。
+- **Remix 工具层** → [MoFA-studio](https://github.com/mofa-org/mofa-studio)、[MoFA-pptx](https://github.com/mofa-org/mofa-pptx)：MoFA-studio 专注于音频领域的 Remixing 能力；MoFA-pptx 则面向图像、短视频、演示文稿等多媒体场景。
 - **应用层** → mofa.fm、zhufu.ai、what's-going-on、MoFA Wonderland：基于上述各层构建的面向最终用户的应用。
-- **模型层** → Moxin Models 及第三方模型：通过 mofa 支持部署在本地和云端的各类模型。Moxin 是我们的兄弟项目，提供可本地部署的高质量语音模型，为我们在语音领域带来独特优势。
+- **模型层** → [Moxin](https://github.com/moxin-org) Models 及第三方模型：通过 mofa 支持部署在本地和云端的各类模型。Moxin 是我们的兄弟项目，提供可本地部署的高质量语音模型，为我们在语音领域带来独特优势。
 
 我们一边建设底层架构，一边构建真实应用。
 
