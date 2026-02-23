@@ -1,0 +1,122 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+// A mock catalog mapping for the Agent Hub. In a production scenario, this might be fetched from a JSON or the node-hub directory in the main mofa repo.
+const agents = [
+  {
+    name: "dora-asr",
+    type: "Python Node",
+    description: "Real-time speech recognition node using FunASR/Whisper models.",
+    useCase: "Voice Chat Dataflow",
+    snippet: `dora-asr:
+  custom:
+    source: dora-asr
+    inputs:
+      audio: dora-record/audio
+    outputs:
+      - text`
+  },
+  {
+    name: "dora-primespeech",
+    type: "Python Node",
+    description: "High-quality text-to-speech synthesis with multiple voice configurations.",
+    useCase: "Avatar Voice Output",
+    snippet: `dora-primespeech:
+  custom:
+    source: dora-primespeech
+    inputs:
+      text: dora-maas-client/text
+    outputs:
+      - audio`
+  },
+  {
+    name: "dora-maas-client",
+    type: "Rust Node",
+    description: "LLM Inference client interacting with OpenAI, DeepSeek, and Alibaba Cloud.",
+    useCase: "Core Logic Engine",
+    snippet: `dora-maas-client:
+  custom:
+    source: dora-maas-client
+    inputs:
+      text: dora-asr/text
+    outputs:
+      - text`
+  },
+  {
+    name: "dora-conference-bridge",
+    type: "Rust Node",
+    description: "Text routing bridge for complex multi-agent conversations and turn-taking.",
+    useCase: "Multi-Agent Chat",
+    snippet: `dora-conference-bridge:
+  custom:
+    source: dora-conference-bridge
+    inputs:
+      agent1_text: agent1/text
+      agent2_text: agent2/text
+    outputs:
+      - merged_context`
+  },
+];
+---
+
+<BaseLayout title="Agent Hub | MoFA" lang="en">
+  <Header />
+
+  <main class="pt-24 pb-16 bg-white min-h-screen">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto mb-16 text-center">
+        <h1 class="text-5xl font-extrabold mb-6 tracking-tight text-gray-900">
+          MoFA <span class="text-mondrian-blue">Agent Hub</span>
+        </h1>
+        <p class="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+          Explore over 500+ pre-built agents, skills, and Dora nodes to compose your perfect AI dataflow.
+        </p>
+        
+        <div class="relative max-w-xl mx-auto bg-gray-100 rounded-lg p-2 border border-gray-300">
+             <input type="text" placeholder="Search agents by name or use case..." class="w-full bg-transparent border-none focus:ring-0 text-gray-800 text-lg px-4 py-2" />
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+        {agents.map((agent) => (
+          <div class="bg-gray-50 border-2 border-mondrian-black rounded-lg overflow-hidden transition-transform duration-300 hover:-translate-y-1 shadow-sm">
+            <div class="flex border-b-2 border-mondrian-black">
+              <div class="p-4 bg-mondrian-yellow border-r-2 border-mondrian-black w-24 flex items-center justify-center font-bold text-sm text-center">
+                {agent.type}
+              </div>
+              <div class="p-4 flex-1">
+                <h3 class="text-2xl font-bold font-mono">{agent.name}</h3>
+                <p class="text-sm text-mondrian-blue font-semibold mt-1">Use Case: {agent.useCase}</p>
+              </div>
+            </div>
+            
+            <div class="p-6">
+              <p class="text-gray-700 mb-6 flex-grow">{agent.description}</p>
+              
+              <div class="bg-gray-900 rounded-md p-4 relative group">
+                  <div class="absolute top-2 right-2 flex space-x-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                      <button class="bg-white/10 hover:bg-white/20 text-xs text-white px-2 py-1 rounded transition-colors" title="Copy YAML block" onclick="navigator.clipboard.writeText(this.parentElement.nextElementSibling.innerText)">
+                          Copy to Studio
+                      </button>
+                  </div>
+                  <pre class="text-sm font-mono text-gray-300 overflow-x-auto"><code>{agent.snippet}</code></pre>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+      
+      <div class="text-center mt-16 pb-8 border-b border-gray-200">
+          <p class="text-gray-500 italic">Want to add your custom Node? Check out our <a href="/docs/en/4.%20architecture/plugin-system" class="text-mondrian-blue hover:underline">Plugin Guide</a>.</p>
+      </div>
+    </div>
+  </main>
+
+  <Footer />
+</BaseLayout> 
+
+<style>
+  /* Base styles for the hub layout matching the MoFA theme */
+</style>
