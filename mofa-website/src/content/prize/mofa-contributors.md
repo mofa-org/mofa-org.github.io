@@ -25,7 +25,7 @@ total_contributors: 44
 - **Repositories**: mofa-org/mofa, mofa-org/mofa-new
 
 ### lijingrs
-- **Contributions**: 128
+- **Contributions**: 131
 - **Avatar**: https://avatars.githubusercontent.com/u/20733031?v=4
 - **GitHub**: https://github.com/lijingrs
 - **Repositories**: mofa-org/mofa
@@ -60,14 +60,8 @@ total_contributors: 44
 - **GitHub**: https://github.com/alabulei1
 - **Repositories**: mofa-org/mofa
 
-### practicenotes007
-- **Contributions**: 12
-- **Avatar**: https://avatars.githubusercontent.com/u/187080796?v=4
-- **GitHub**: https://github.com/practicenotes007
-- **Repositories**: mofa-org/mofa
-
 ### Rahul-2k4
-- **Contributions**: 12
+- **Contributions**: 13
 - **Avatar**: https://avatars.githubusercontent.com/u/216878448?v=4
 - **GitHub**: https://github.com/Rahul-2k4
 - **Repositories**: mofa-org/mofa
@@ -76,6 +70,12 @@ total_contributors: 44
 - **Contributions**: 12
 - **Avatar**: https://avatars.githubusercontent.com/u/141478683?v=4
 - **GitHub**: https://github.com/SUNNYsyy2005
+- **Repositories**: mofa-org/mofa
+
+### practicenotes007
+- **Contributions**: 12
+- **Avatar**: https://avatars.githubusercontent.com/u/187080796?v=4
+- **GitHub**: https://github.com/practicenotes007
 - **Repositories**: mofa-org/mofa
 
 ### tangdm9527
