@@ -6,6 +6,8 @@ author: MoFA Team
 tags: [GSoC, 开源, Composition AI, MoFA, 社区]
 ---
 
+![MoFA x Google Summer of Code](/images/mofa-gsoc.png)
+
 亲爱的朋友们：
 
 首先，真诚地感谢你们。
