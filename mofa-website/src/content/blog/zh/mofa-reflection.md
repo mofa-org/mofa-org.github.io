@@ -30,7 +30,7 @@ MoFA项目成立到现在已经一年多时间，MoFA是Agent Framework，我们
 
 MoFA的定位是智能体框架，即Agent Framework。我们发现，软件框架仍然有价值。但是，我们必须认识到，我们的框架软件不再是为人写，而是为AI写。当然，资深架构师们说："最好的Framework是让人无感的框架"，在AI的加持下，这更是变成了一个基本要求。我们甚至认为，在AI时代，好的框架更为重要。AI写的软件也是在各种框架的基础上搭建起来的。如果连软件的最底层的基础都由AI构建，那么AI是不是就完全失控了？
 
-虽然还没有正式发布，但[新MoFA 已经成型](https://github.com/mofa-org/mofa/tree/feature/mofa-rs)。它的内核基于Rust （我们叫它mofa-rs)已实现极致性能并通过UniFFI实现多语言原生调用，是在微内核架构上实现的模块化、易扩展的多智能体框架。初心不变，新MoFA支持Dora-rs分布式运行时，更支持跨进程/跨机器Agent通信，支持分布式和边缘计算，继续走在组合AI的路上。
+虽然还没有正式发布，但[新MoFA 已经成型](https://github.com/mofa-org/mofa)。它的内核基于Rust （我们叫它mofa-rs)已实现极致性能并通过UniFFI实现多语言原生调用，是在微内核架构上实现的模块化、易扩展的多智能体框架。初心不变，新MoFA支持Dora-rs分布式运行时，更支持跨进程/跨机器Agent通信，支持分布式和边缘计算，继续走在组合AI的路上。
 
 在新MoFA框架上，我们正在实验性地进行[MoFA.FM](https://mofa.fm)（一个AI播客平台），[MoFAClaw](https://github.com/mofa-org/mofaclaw)（基于mofa-rs的OpenClaw平替）等应用开发。我们希望能验证新MoFA框架能提供给多智能体应用的一个高效，稳定，高度可控，可观察的基础。
 
