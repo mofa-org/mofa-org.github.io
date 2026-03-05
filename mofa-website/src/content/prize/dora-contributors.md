@@ -3,7 +3,7 @@ type: "contributors"
 category: "dora"
 title: "Dora-rs Contributors"
 title_zh: "Dora-rs 贡献者"
-last_updated: "2026-03-04"
+last_updated: "2026-03-05"
 repositories: ["dora-rs/dora"]
 total_contributors: 60
 ---
@@ -11,7 +11,7 @@ total_contributors: 60
 
 这个文件在构建时自动更新，缓存从GitHub API获取的贡献者数据。
 
-**最后更新**: 2026-03-04
+**最后更新**: 2026-03-05
 **总贡献者数**: 60
 **数据来源**: dora-rs/dora
 
@@ -19,7 +19,7 @@ total_contributors: 60
 
 
 ### phil-opp
-- **Contributions**: 1880
+- **Contributions**: 1912
 - **Avatar**: https://avatars.githubusercontent.com/u/1131315?v=4
 - **GitHub**: https://github.com/phil-opp
 - **Repositories**: dora-rs/dora
@@ -96,16 +96,16 @@ total_contributors: 60
 - **GitHub**: https://github.com/EricLBuehler
 - **Repositories**: dora-rs/dora
 
-### chrislearn
-- **Contributions**: 17
-- **Avatar**: https://avatars.githubusercontent.com/u/5874864?v=4
-- **GitHub**: https://github.com/chrislearn
-- **Repositories**: dora-rs/dora
-
 ### heyong4725
 - **Contributions**: 17
 - **Avatar**: https://avatars.githubusercontent.com/u/45980096?v=4
 - **GitHub**: https://github.com/heyong4725
+- **Repositories**: dora-rs/dora
+
+### chrislearn
+- **Contributions**: 17
+- **Avatar**: https://avatars.githubusercontent.com/u/5874864?v=4
+- **GitHub**: https://github.com/chrislearn
 - **Repositories**: dora-rs/dora
 
 ### Mati-ur-rehman-017
@@ -162,16 +162,10 @@ total_contributors: 60
 - **GitHub**: https://github.com/bobdingAI
 - **Repositories**: dora-rs/dora
 
-### Gege-Wang
+### Felixhuangsiling
 - **Contributions**: 5
-- **Avatar**: https://avatars.githubusercontent.com/u/67888311?v=4
-- **GitHub**: https://github.com/Gege-Wang
-- **Repositories**: dora-rs/dora
-
-### MunishMummadi
-- **Contributions**: 5
-- **Avatar**: https://avatars.githubusercontent.com/u/141582088?v=4
-- **GitHub**: https://github.com/MunishMummadi
+- **Avatar**: https://avatars.githubusercontent.com/u/77993249?v=4
+- **GitHub**: https://github.com/Felixhuangsiling
 - **Repositories**: dora-rs/dora
 
 ### rahat2134
@@ -180,22 +174,28 @@ total_contributors: 60
 - **GitHub**: https://github.com/rahat2134
 - **Repositories**: dora-rs/dora
 
-### Felixhuangsiling
+### MunishMummadi
 - **Contributions**: 5
-- **Avatar**: https://avatars.githubusercontent.com/u/77993249?v=4
-- **GitHub**: https://github.com/Felixhuangsiling
+- **Avatar**: https://avatars.githubusercontent.com/u/141582088?v=4
+- **GitHub**: https://github.com/MunishMummadi
 - **Repositories**: dora-rs/dora
 
-### AnshKumar200
-- **Contributions**: 4
-- **Avatar**: https://avatars.githubusercontent.com/u/124369727?v=4
-- **GitHub**: https://github.com/AnshKumar200
+### Gege-Wang
+- **Contributions**: 5
+- **Avatar**: https://avatars.githubusercontent.com/u/67888311?v=4
+- **GitHub**: https://github.com/Gege-Wang
 - **Repositories**: dora-rs/dora
 
 ### TomCC7
 - **Contributions**: 4
 - **Avatar**: https://avatars.githubusercontent.com/u/55869557?v=4
 - **GitHub**: https://github.com/TomCC7
+- **Repositories**: dora-rs/dora
+
+### AnshKumar200
+- **Contributions**: 4
+- **Avatar**: https://avatars.githubusercontent.com/u/124369727?v=4
+- **GitHub**: https://github.com/AnshKumar200
 - **Repositories**: dora-rs/dora
 
 ### Harsh-Sahu43
