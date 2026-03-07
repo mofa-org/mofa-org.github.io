@@ -3,23 +3,23 @@ type: "contributors"
 category: "dora"
 title: "Dora-rs Contributors"
 title_zh: "Dora-rs 贡献者"
-last_updated: "2026-03-06"
+last_updated: "2026-03-07"
 repositories: ["dora-rs/dora"]
-total_contributors: 60
+total_contributors: 61
 ---
 # Dora-rs Contributors Cache
 
 这个文件在构建时自动更新，缓存从GitHub API获取的贡献者数据。
 
-**最后更新**: 2026-03-06
-**总贡献者数**: 60
+**最后更新**: 2026-03-07
+**总贡献者数**: 61
 **数据来源**: dora-rs/dora
 
 ## Contributors Data
 
 
 ### phil-opp
-- **Contributions**: 1912
+- **Contributions**: 1913
 - **Avatar**: https://avatars.githubusercontent.com/u/1131315?v=4
 - **GitHub**: https://github.com/phil-opp
 - **Repositories**: dora-rs/dora
@@ -370,6 +370,12 @@ total_contributors: 60
 - **Contributions**: 1
 - **Avatar**: https://avatars.githubusercontent.com/u/5157099?v=4
 - **GitHub**: https://github.com/edgarriba
+- **Repositories**: dora-rs/dora
+
+### claude
+- **Contributions**: 1
+- **Avatar**: https://avatars.githubusercontent.com/u/81847?v=4
+- **GitHub**: https://github.com/claude
 - **Repositories**: dora-rs/dora
 
 ### Ben-PH

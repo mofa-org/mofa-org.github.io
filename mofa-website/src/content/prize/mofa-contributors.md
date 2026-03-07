@@ -3,16 +3,16 @@ type: "contributors"
 category: "mofa"
 title: "MoFA Contributors"
 title_zh: "MoFA 贡献者"
-last_updated: "2026-03-06"
+last_updated: "2026-03-07"
 repositories: ["mofa-org/mofa","mofa-org/mofa-new"]
-total_contributors: 62
+total_contributors: 63
 ---
 # MoFA Contributors Cache
 
 这个文件在构建时自动更新，缓存从GitHub API获取的贡献者数据。
 
-**最后更新**: 2026-03-06
-**总贡献者数**: 62
+**最后更新**: 2026-03-07
+**总贡献者数**: 63
 **数据来源**: mofa-org/mofa, mofa-org/mofa-new
 
 ## Contributors Data
@@ -25,9 +25,15 @@ total_contributors: 62
 - **Repositories**: mofa-org/mofa, mofa-org/mofa-new
 
 ### lijingrs
-- **Contributions**: 237
+- **Contributions**: 248
 - **Avatar**: https://avatars.githubusercontent.com/u/20733031?v=4
 - **GitHub**: https://github.com/lijingrs
+- **Repositories**: mofa-org/mofa
+
+### Nixxx19
+- **Contributions**: 125
+- **Avatar**: https://avatars.githubusercontent.com/u/185968020?v=4
+- **GitHub**: https://github.com/Nixxx19
 - **Repositories**: mofa-org/mofa
 
 ### XiaoKuge
@@ -42,20 +48,20 @@ total_contributors: 62
 - **GitHub**: https://github.com/BH3GEI
 - **Repositories**: mofa-org/mofa, mofa-org/mofa-new
 
-### Nixxx19
-- **Contributions**: 76
-- **Avatar**: https://avatars.githubusercontent.com/u/185968020?v=4
-- **GitHub**: https://github.com/Nixxx19
+### LuigiGonnella
+- **Contributions**: 77
+- **Avatar**: https://avatars.githubusercontent.com/u/92454406?v=4
+- **GitHub**: https://github.com/LuigiGonnella
 - **Repositories**: mofa-org/mofa
 
 ### doroteaMonaco
-- **Contributions**: 68
+- **Contributions**: 74
 - **Avatar**: https://avatars.githubusercontent.com/u/134923734?v=4
 - **GitHub**: https://github.com/doroteaMonaco
 - **Repositories**: mofa-org/mofa
 
 ### ashum9
-- **Contributions**: 62
+- **Contributions**: 64
 - **Avatar**: https://avatars.githubusercontent.com/u/171756241?v=4
 - **GitHub**: https://github.com/ashum9
 - **Repositories**: mofa-org/mofa
@@ -66,12 +72,6 @@ total_contributors: 62
 - **GitHub**: https://github.com/yangrudan
 - **Repositories**: mofa-org/mofa
 
-### LuigiGonnella
-- **Contributions**: 51
-- **Avatar**: https://avatars.githubusercontent.com/u/92454406?v=4
-- **GitHub**: https://github.com/LuigiGonnella
-- **Repositories**: mofa-org/mofa
-
 ### betasecond
 - **Contributions**: 48
 - **Avatar**: https://avatars.githubusercontent.com/u/109186040?v=4
@@ -79,9 +79,15 @@ total_contributors: 62
 - **Repositories**: mofa-org/mofa
 
 ### Avi-47
-- **Contributions**: 32
+- **Contributions**: 33
 - **Avatar**: https://avatars.githubusercontent.com/u/166274452?v=4
 - **GitHub**: https://github.com/Avi-47
+- **Repositories**: mofa-org/mofa
+
+### mugiwaraluffy56
+- **Contributions**: 33
+- **Avatar**: https://avatars.githubusercontent.com/u/202161831?v=4
+- **GitHub**: https://github.com/mugiwaraluffy56
 - **Repositories**: mofa-org/mofa
 
 ### aayank13
@@ -91,19 +97,13 @@ total_contributors: 62
 - **Repositories**: mofa-org/mofa
 
 ### Rahul-2k4
-- **Contributions**: 29
+- **Contributions**: 32
 - **Avatar**: https://avatars.githubusercontent.com/u/216878448?v=4
 - **GitHub**: https://github.com/Rahul-2k4
 - **Repositories**: mofa-org/mofa
 
-### mugiwaraluffy56
-- **Contributions**: 22
-- **Avatar**: https://avatars.githubusercontent.com/u/202161831?v=4
-- **GitHub**: https://github.com/mugiwaraluffy56
-- **Repositories**: mofa-org/mofa
-
 ### AdityaShome
-- **Contributions**: 16
+- **Contributions**: 18
 - **Avatar**: https://avatars.githubusercontent.com/u/185322746?v=4
 - **GitHub**: https://github.com/AdityaShome
 - **Repositories**: mofa-org/mofa
@@ -192,6 +192,12 @@ total_contributors: 62
 - **GitHub**: https://github.com/xforcevesa
 - **Repositories**: mofa-org/mofa
 
+### ashnaaseth2325-oss
+- **Contributions**: 7
+- **Avatar**: https://avatars.githubusercontent.com/u/226311472?v=4
+- **GitHub**: https://github.com/ashnaaseth2325-oss
+- **Repositories**: mofa-org/mofa
+
 ### santu8597
 - **Contributions**: 7
 - **Avatar**: https://avatars.githubusercontent.com/u/162991657?v=4
@@ -214,12 +220,6 @@ total_contributors: 62
 - **Contributions**: 6
 - **Avatar**: https://avatars.githubusercontent.com/u/62335818?v=4
 - **GitHub**: https://github.com/starlitxiling
-- **Repositories**: mofa-org/mofa
-
-### ashnaaseth2325-oss
-- **Contributions**: 6
-- **Avatar**: https://avatars.githubusercontent.com/u/226311472?v=4
-- **GitHub**: https://github.com/ashnaaseth2325-oss
 - **Repositories**: mofa-org/mofa
 
 ### Ishita-190
@@ -294,6 +294,12 @@ total_contributors: 62
 - **GitHub**: https://github.com/Nely0
 - **Repositories**: mofa-org/mofa
 
+### kshirajahere
+- **Contributions**: 4
+- **Avatar**: https://avatars.githubusercontent.com/u/181626461?v=4
+- **GitHub**: https://github.com/kshirajahere
+- **Repositories**: mofa-org/mofa
+
 ### mandeepsingh2007
 - **Contributions**: 3
 - **Avatar**: https://avatars.githubusercontent.com/u/177451296?v=4
@@ -322,12 +328,6 @@ total_contributors: 62
 - **Contributions**: 2
 - **Avatar**: https://avatars.githubusercontent.com/u/180033898?v=4
 - **GitHub**: https://github.com/zerd1y
-- **Repositories**: mofa-org/mofa
-
-### kshirajahere
-- **Contributions**: 2
-- **Avatar**: https://avatars.githubusercontent.com/u/181626461?v=4
-- **GitHub**: https://github.com/kshirajahere
 - **Repositories**: mofa-org/mofa
 
 ### juntao
@@ -364,6 +364,12 @@ total_contributors: 62
 - **Contributions**: 2
 - **Avatar**: https://avatars.githubusercontent.com/u/35210535?v=4
 - **GitHub**: https://github.com/451846939
+- **Repositories**: mofa-org/mofa
+
+### tkshsbcue
+- **Contributions**: 2
+- **Avatar**: https://avatars.githubusercontent.com/u/32425567?v=4
+- **GitHub**: https://github.com/tkshsbcue
 - **Repositories**: mofa-org/mofa
 
 ### Atharv-navatre
