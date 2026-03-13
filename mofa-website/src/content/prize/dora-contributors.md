@@ -3,23 +3,23 @@ type: "contributors"
 category: "dora"
 title: "Dora-rs Contributors"
 title_zh: "Dora-rs 贡献者"
-last_updated: "2026-03-12"
+last_updated: "2026-03-13"
 repositories: ["dora-rs/dora"]
-total_contributors: 62
+total_contributors: 63
 ---
 # Dora-rs Contributors Cache
 
 这个文件在构建时自动更新，缓存从GitHub API获取的贡献者数据。
 
-**最后更新**: 2026-03-12
-**总贡献者数**: 62
+**最后更新**: 2026-03-13
+**总贡献者数**: 63
 **数据来源**: dora-rs/dora
 
 ## Contributors Data
 
 
 ### phil-opp
-- **Contributions**: 1919
+- **Contributions**: 1921
 - **Avatar**: https://avatars.githubusercontent.com/u/1131315?v=4
 - **GitHub**: https://github.com/phil-opp
 - **Repositories**: dora-rs/dora
@@ -256,6 +256,12 @@ total_contributors: 62
 - **Contributions**: 2
 - **Avatar**: https://avatars.githubusercontent.com/u/27790373?v=4
 - **GitHub**: https://github.com/dieu-detruit
+- **Repositories**: dora-rs/dora
+
+### Pankajkumar2608
+- **Contributions**: 2
+- **Avatar**: https://avatars.githubusercontent.com/u/125138274?v=4
+- **GitHub**: https://github.com/Pankajkumar2608
 - **Repositories**: dora-rs/dora
 
 ### gaumrab

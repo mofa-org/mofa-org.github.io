@@ -3,7 +3,7 @@ type: "contributors"
 category: "mofa"
 title: "MoFA Contributors"
 title_zh: "MoFA 贡献者"
-last_updated: "2026-03-12"
+last_updated: "2026-03-13"
 repositories: ["mofa-org/mofa","mofa-org/mofa-new"]
 total_contributors: 65
 ---
@@ -11,7 +11,7 @@ total_contributors: 65
 
 这个文件在构建时自动更新，缓存从GitHub API获取的贡献者数据。
 
-**最后更新**: 2026-03-12
+**最后更新**: 2026-03-13
 **总贡献者数**: 65
 **数据来源**: mofa-org/mofa, mofa-org/mofa-new
 
@@ -25,21 +25,21 @@ total_contributors: 65
 - **Repositories**: mofa-org/mofa, mofa-org/mofa-new
 
 ### lijingrs
-- **Contributions**: 250
+- **Contributions**: 251
 - **Avatar**: https://avatars.githubusercontent.com/u/20733031?v=4
 - **GitHub**: https://github.com/lijingrs
+- **Repositories**: mofa-org/mofa
+
+### Nixxx19
+- **Contributions**: 152
+- **Avatar**: https://avatars.githubusercontent.com/u/185968020?v=4
+- **GitHub**: https://github.com/Nixxx19
 - **Repositories**: mofa-org/mofa
 
 ### LuigiGonnella
 - **Contributions**: 130
 - **Avatar**: https://avatars.githubusercontent.com/u/92454406?v=4
 - **GitHub**: https://github.com/LuigiGonnella
-- **Repositories**: mofa-org/mofa
-
-### Nixxx19
-- **Contributions**: 125
-- **Avatar**: https://avatars.githubusercontent.com/u/185968020?v=4
-- **GitHub**: https://github.com/Nixxx19
 - **Repositories**: mofa-org/mofa
 
 ### XiaoKuge
