@@ -3,7 +3,7 @@ type: "contributors"
 category: "mofa"
 title: "MoFA Contributors"
 title_zh: "MoFA 贡献者"
-last_updated: "2026-03-20"
+last_updated: "2026-03-21"
 repositories: ["mofa-org/mofa","mofa-org/mofa-new"]
 total_contributors: 68
 ---
@@ -11,7 +11,7 @@ total_contributors: 68
 
 这个文件在构建时自动更新，缓存从GitHub API获取的贡献者数据。
 
-**最后更新**: 2026-03-20
+**最后更新**: 2026-03-21
 **总贡献者数**: 68
 **数据来源**: mofa-org/mofa, mofa-org/mofa-new
 
@@ -31,7 +31,7 @@ total_contributors: 68
 - **Repositories**: mofa-org/mofa
 
 ### Nixxx19
-- **Contributions**: 226
+- **Contributions**: 227
 - **Avatar**: https://avatars.githubusercontent.com/u/185968020?v=4
 - **GitHub**: https://github.com/Nixxx19
 - **Repositories**: mofa-org/mofa
