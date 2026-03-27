@@ -3,16 +3,16 @@ type: "contributors"
 category: "mofa"
 title: "MoFA Contributors"
 title_zh: "MoFA 贡献者"
-last_updated: "2026-03-26"
+last_updated: "2026-03-27"
 repositories: ["mofa-org/mofa","mofa-org/mofa-new"]
-total_contributors: 68
+total_contributors: 69
 ---
 # MoFA Contributors Cache
 
 这个文件在构建时自动更新，缓存从GitHub API获取的贡献者数据。
 
-**最后更新**: 2026-03-26
-**总贡献者数**: 68
+**最后更新**: 2026-03-27
+**总贡献者数**: 69
 **数据来源**: mofa-org/mofa, mofa-org/mofa-new
 
 ## Contributors Data
@@ -174,40 +174,22 @@ total_contributors: 68
 - **GitHub**: https://github.com/indrasn0wal
 - **Repositories**: mofa-org/mofa
 
-### tangdm9527
-- **Contributions**: 10
-- **Avatar**: https://avatars.githubusercontent.com/u/200504346?v=4
-- **GitHub**: https://github.com/tangdm9527
-- **Repositories**: mofa-org/mofa
-
 ### FireFistisDead
 - **Contributions**: 10
 - **Avatar**: https://avatars.githubusercontent.com/u/148183022?v=4
 - **GitHub**: https://github.com/FireFistisDead
 - **Repositories**: mofa-org/mofa
 
-### wysh3
-- **Contributions**: 9
-- **Avatar**: https://avatars.githubusercontent.com/u/179528356?v=4
-- **GitHub**: https://github.com/wysh3
+### tangdm9527
+- **Contributions**: 10
+- **Avatar**: https://avatars.githubusercontent.com/u/200504346?v=4
+- **GitHub**: https://github.com/tangdm9527
 - **Repositories**: mofa-org/mofa
 
-### AftAb-25
+### Bhup-GitHUB
 - **Contributions**: 9
-- **Avatar**: https://avatars.githubusercontent.com/u/234581236?v=4
-- **GitHub**: https://github.com/AftAb-25
-- **Repositories**: mofa-org/mofa
-
-### tkshsbcue
-- **Contributions**: 9
-- **Avatar**: https://avatars.githubusercontent.com/u/32425567?v=4
-- **GitHub**: https://github.com/tkshsbcue
-- **Repositories**: mofa-org/mofa
-
-### adityars07
-- **Contributions**: 9
-- **Avatar**: https://avatars.githubusercontent.com/u/258870032?v=4
-- **GitHub**: https://github.com/adityars07
+- **Avatar**: https://avatars.githubusercontent.com/u/145711585?v=4
+- **GitHub**: https://github.com/Bhup-GitHUB
 - **Repositories**: mofa-org/mofa
 
 ### guofoo
@@ -216,10 +198,28 @@ total_contributors: 68
 - **GitHub**: https://github.com/guofoo
 - **Repositories**: mofa-org/mofa
 
-### Bhup-GitHUB
+### adityars07
 - **Contributions**: 9
-- **Avatar**: https://avatars.githubusercontent.com/u/145711585?v=4
-- **GitHub**: https://github.com/Bhup-GitHUB
+- **Avatar**: https://avatars.githubusercontent.com/u/258870032?v=4
+- **GitHub**: https://github.com/adityars07
+- **Repositories**: mofa-org/mofa
+
+### tkshsbcue
+- **Contributions**: 9
+- **Avatar**: https://avatars.githubusercontent.com/u/32425567?v=4
+- **GitHub**: https://github.com/tkshsbcue
+- **Repositories**: mofa-org/mofa
+
+### AftAb-25
+- **Contributions**: 9
+- **Avatar**: https://avatars.githubusercontent.com/u/234581236?v=4
+- **GitHub**: https://github.com/AftAb-25
+- **Repositories**: mofa-org/mofa
+
+### wysh3
+- **Contributions**: 9
+- **Avatar**: https://avatars.githubusercontent.com/u/179528356?v=4
+- **GitHub**: https://github.com/wysh3
 - **Repositories**: mofa-org/mofa
 
 ### cshbli
@@ -288,6 +288,12 @@ total_contributors: 68
 - **GitHub**: https://github.com/Kayd-06
 - **Repositories**: mofa-org/mofa
 
+### SH20RAJ
+- **Contributions**: 5
+- **Avatar**: https://avatars.githubusercontent.com/u/66713844?v=4
+- **GitHub**: https://github.com/SH20RAJ
+- **Repositories**: mofa-org/mofa
+
 ### areycruzer
 - **Contributions**: 5
 - **Avatar**: https://avatars.githubusercontent.com/u/84120511?v=4
@@ -300,10 +306,10 @@ total_contributors: 68
 - **GitHub**: https://github.com/Deepak-negi11
 - **Repositories**: mofa-org/mofa
 
-### Nely0
+### ZhangHanDong
 - **Contributions**: 4
-- **Avatar**: https://avatars.githubusercontent.com/u/124752826?v=4
-- **GitHub**: https://github.com/Nely0
+- **Avatar**: https://avatars.githubusercontent.com/u/27893?v=4
+- **GitHub**: https://github.com/ZhangHanDong
 - **Repositories**: mofa-org/mofa
 
 ### batmnnn
@@ -312,34 +318,10 @@ total_contributors: 68
 - **GitHub**: https://github.com/batmnnn
 - **Repositories**: mofa-org/mofa
 
-### ZhangHanDong
+### Nely0
 - **Contributions**: 4
-- **Avatar**: https://avatars.githubusercontent.com/u/27893?v=4
-- **GitHub**: https://github.com/ZhangHanDong
-- **Repositories**: mofa-org/mofa
-
-### magic-peach
-- **Contributions**: 3
-- **Avatar**: https://avatars.githubusercontent.com/u/146705736?v=4
-- **GitHub**: https://github.com/magic-peach
-- **Repositories**: mofa-org/mofa
-
-### Bhanudahiyaa
-- **Contributions**: 3
-- **Avatar**: https://avatars.githubusercontent.com/u/179860247?v=4
-- **GitHub**: https://github.com/Bhanudahiyaa
-- **Repositories**: mofa-org/mofa
-
-### Gopisokk
-- **Contributions**: 3
-- **Avatar**: https://avatars.githubusercontent.com/u/131638479?v=4
-- **GitHub**: https://github.com/Gopisokk
-- **Repositories**: mofa-org/mofa
-
-### Gitjay11
-- **Contributions**: 3
-- **Avatar**: https://avatars.githubusercontent.com/u/233622891?v=4
-- **GitHub**: https://github.com/Gitjay11
+- **Avatar**: https://avatars.githubusercontent.com/u/124752826?v=4
+- **GitHub**: https://github.com/Nely0
 - **Repositories**: mofa-org/mofa
 
 ### mandeepsingh2007
@@ -348,34 +330,34 @@ total_contributors: 68
 - **GitHub**: https://github.com/mandeepsingh2007
 - **Repositories**: mofa-org/mofa
 
-### 451846939
-- **Contributions**: 2
-- **Avatar**: https://avatars.githubusercontent.com/u/35210535?v=4
-- **GitHub**: https://github.com/451846939
+### Gitjay11
+- **Contributions**: 3
+- **Avatar**: https://avatars.githubusercontent.com/u/233622891?v=4
+- **GitHub**: https://github.com/Gitjay11
 - **Repositories**: mofa-org/mofa
 
-### jzzzzzzzzzzzzzzzz
-- **Contributions**: 2
-- **Avatar**: https://avatars.githubusercontent.com/u/97607676?v=4
-- **GitHub**: https://github.com/jzzzzzzzzzzzzzzzz
+### Gopisokk
+- **Contributions**: 3
+- **Avatar**: https://avatars.githubusercontent.com/u/131638479?v=4
+- **GitHub**: https://github.com/Gopisokk
 - **Repositories**: mofa-org/mofa
 
-### tdmlxq
-- **Contributions**: 2
-- **Avatar**: https://avatars.githubusercontent.com/u/5786471?v=4
-- **GitHub**: https://github.com/tdmlxq
+### Bhanudahiyaa
+- **Contributions**: 3
+- **Avatar**: https://avatars.githubusercontent.com/u/179860247?v=4
+- **GitHub**: https://github.com/Bhanudahiyaa
 - **Repositories**: mofa-org/mofa
 
-### ROLFFFX
-- **Contributions**: 2
-- **Avatar**: https://avatars.githubusercontent.com/u/90660901?v=4
-- **GitHub**: https://github.com/ROLFFFX
+### magic-peach
+- **Contributions**: 3
+- **Avatar**: https://avatars.githubusercontent.com/u/146705736?v=4
+- **GitHub**: https://github.com/magic-peach
 - **Repositories**: mofa-org/mofa
 
-### Riya-v1109
+### zerd1y
 - **Contributions**: 2
-- **Avatar**: https://avatars.githubusercontent.com/u/159222567?v=4
-- **GitHub**: https://github.com/Riya-v1109
+- **Avatar**: https://avatars.githubusercontent.com/u/180033898?v=4
+- **GitHub**: https://github.com/zerd1y
 - **Repositories**: mofa-org/mofa
 
 ### juntao
@@ -384,10 +366,34 @@ total_contributors: 68
 - **GitHub**: https://github.com/juntao
 - **Repositories**: mofa-org/mofa
 
-### zerd1y
+### Riya-v1109
 - **Contributions**: 2
-- **Avatar**: https://avatars.githubusercontent.com/u/180033898?v=4
-- **GitHub**: https://github.com/zerd1y
+- **Avatar**: https://avatars.githubusercontent.com/u/159222567?v=4
+- **GitHub**: https://github.com/Riya-v1109
+- **Repositories**: mofa-org/mofa
+
+### ROLFFFX
+- **Contributions**: 2
+- **Avatar**: https://avatars.githubusercontent.com/u/90660901?v=4
+- **GitHub**: https://github.com/ROLFFFX
+- **Repositories**: mofa-org/mofa
+
+### tdmlxq
+- **Contributions**: 2
+- **Avatar**: https://avatars.githubusercontent.com/u/5786471?v=4
+- **GitHub**: https://github.com/tdmlxq
+- **Repositories**: mofa-org/mofa
+
+### jzzzzzzzzzzzzzzzz
+- **Contributions**: 2
+- **Avatar**: https://avatars.githubusercontent.com/u/97607676?v=4
+- **GitHub**: https://github.com/jzzzzzzzzzzzzzzzz
+- **Repositories**: mofa-org/mofa
+
+### 451846939
+- **Contributions**: 2
+- **Avatar**: https://avatars.githubusercontent.com/u/35210535?v=4
+- **GitHub**: https://github.com/451846939
 - **Repositories**: mofa-org/mofa
 
 ### Atharv-navatre
