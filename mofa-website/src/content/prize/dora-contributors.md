@@ -3,23 +3,23 @@ type: "contributors"
 category: "dora"
 title: "Dora-rs Contributors"
 title_zh: "Dora-rs 贡献者"
-last_updated: "2026-03-27"
+last_updated: "2026-03-28"
 repositories: ["dora-rs/dora"]
-total_contributors: 69
+total_contributors: 71
 ---
 # Dora-rs Contributors Cache
 
 这个文件在构建时自动更新，缓存从GitHub API获取的贡献者数据。
 
-**最后更新**: 2026-03-27
-**总贡献者数**: 69
+**最后更新**: 2026-03-28
+**总贡献者数**: 71
 **数据来源**: dora-rs/dora
 
 ## Contributors Data
 
 
 ### phil-opp
-- **Contributions**: 1984
+- **Contributions**: 1989
 - **Avatar**: https://avatars.githubusercontent.com/u/1131315?v=4
 - **GitHub**: https://github.com/phil-opp
 - **Repositories**: dora-rs/dora
@@ -222,6 +222,12 @@ total_contributors: 69
 - **GitHub**: https://github.com/AnshKumar200
 - **Repositories**: dora-rs/dora
 
+### sauhardh
+- **Contributions**: 4
+- **Avatar**: https://avatars.githubusercontent.com/u/84185378?v=4
+- **GitHub**: https://github.com/sauhardh
+- **Repositories**: dora-rs/dora
+
 ### TomCC7
 - **Contributions**: 4
 - **Avatar**: https://avatars.githubusercontent.com/u/55869557?v=4
@@ -252,10 +258,10 @@ total_contributors: 69
 - **GitHub**: https://github.com/Radovenchyk
 - **Repositories**: dora-rs/dora
 
-### sauhardh
+### fayekelmith
 - **Contributions**: 3
-- **Avatar**: https://avatars.githubusercontent.com/u/84185378?v=4
-- **GitHub**: https://github.com/sauhardh
+- **Avatar**: https://avatars.githubusercontent.com/u/86343732?v=4
+- **GitHub**: https://github.com/fayekelmith
 - **Repositories**: dora-rs/dora
 
 ### suhr25
@@ -280,12 +286,6 @@ total_contributors: 69
 - **Contributions**: 2
 - **Avatar**: https://avatars.githubusercontent.com/u/44578147?v=4
 - **GitHub**: https://github.com/kingchou007
-- **Repositories**: dora-rs/dora
-
-### fayekelmith
-- **Contributions**: 2
-- **Avatar**: https://avatars.githubusercontent.com/u/86343732?v=4
-- **GitHub**: https://github.com/fayekelmith
 - **Repositories**: dora-rs/dora
 
 ### ashnaaseth2325-oss
@@ -334,6 +334,12 @@ total_contributors: 69
 - **Contributions**: 1
 - **Avatar**: https://avatars.githubusercontent.com/u/233221870?v=4
 - **GitHub**: https://github.com/umar0x
+- **Repositories**: dora-rs/dora
+
+### yuntongtre
+- **Contributions**: 1
+- **Avatar**: https://avatars.githubusercontent.com/u/206019065?v=4
+- **GitHub**: https://github.com/yuntongtre
 - **Repositories**: dora-rs/dora
 
 ### sunxunle
@@ -430,6 +436,12 @@ total_contributors: 69
 - **Contributions**: 1
 - **Avatar**: https://avatars.githubusercontent.com/u/16680090?v=4
 - **GitHub**: https://github.com/Ben-PH
+- **Repositories**: dora-rs/dora
+
+### abdelrhmaneldenary
+- **Contributions**: 1
+- **Avatar**: https://avatars.githubusercontent.com/u/138318355?v=4
+- **GitHub**: https://github.com/abdelrhmaneldenary
 - **Repositories**: dora-rs/dora
 
 
