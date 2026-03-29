@@ -3,23 +3,23 @@ type: "contributors"
 category: "dora"
 title: "Dora-rs Contributors"
 title_zh: "Dora-rs 贡献者"
-last_updated: "2026-03-28"
+last_updated: "2026-03-29"
 repositories: ["dora-rs/dora"]
-total_contributors: 71
+total_contributors: 72
 ---
 # Dora-rs Contributors Cache
 
 这个文件在构建时自动更新，缓存从GitHub API获取的贡献者数据。
 
-**最后更新**: 2026-03-28
-**总贡献者数**: 71
+**最后更新**: 2026-03-29
+**总贡献者数**: 72
 **数据来源**: dora-rs/dora
 
 ## Contributors Data
 
 
 ### phil-opp
-- **Contributions**: 1989
+- **Contributions**: 1992
 - **Avatar**: https://avatars.githubusercontent.com/u/1131315?v=4
 - **GitHub**: https://github.com/phil-opp
 - **Repositories**: dora-rs/dora
@@ -132,16 +132,16 @@ total_contributors: 71
 - **GitHub**: https://github.com/rozgo
 - **Repositories**: dora-rs/dora
 
-### swar09
-- **Contributions**: 12
-- **Avatar**: https://avatars.githubusercontent.com/u/68743524?v=4
-- **GitHub**: https://github.com/swar09
-- **Repositories**: dora-rs/dora
-
 ### meua
 - **Contributions**: 12
 - **Avatar**: https://avatars.githubusercontent.com/u/11570442?v=4
 - **GitHub**: https://github.com/meua
+- **Repositories**: dora-rs/dora
+
+### swar09
+- **Contributions**: 12
+- **Avatar**: https://avatars.githubusercontent.com/u/68743524?v=4
+- **GitHub**: https://github.com/swar09
 - **Repositories**: dora-rs/dora
 
 ### 7SOMAY
@@ -154,6 +154,12 @@ total_contributors: 71
 - **Contributions**: 8
 - **Avatar**: https://avatars.githubusercontent.com/u/3278489?v=4
 - **GitHub**: https://github.com/oortlieb
+- **Repositories**: dora-rs/dora
+
+### suhr25
+- **Contributions**: 8
+- **Avatar**: https://avatars.githubusercontent.com/u/219251824?v=4
+- **GitHub**: https://github.com/suhr25
 - **Repositories**: dora-rs/dora
 
 ### Bhanudahiyaa
@@ -262,12 +268,6 @@ total_contributors: 71
 - **Contributions**: 3
 - **Avatar**: https://avatars.githubusercontent.com/u/86343732?v=4
 - **GitHub**: https://github.com/fayekelmith
-- **Repositories**: dora-rs/dora
-
-### suhr25
-- **Contributions**: 3
-- **Avatar**: https://avatars.githubusercontent.com/u/219251824?v=4
-- **GitHub**: https://github.com/suhr25
 - **Repositories**: dora-rs/dora
 
 ### Ryu-Yang
@@ -394,6 +394,12 @@ total_contributors: 71
 - **Contributions**: 1
 - **Avatar**: https://avatars.githubusercontent.com/u/99924265?v=4
 - **GitHub**: https://github.com/wlee1248
+- **Repositories**: dora-rs/dora
+
+### VIKAS7216
+- **Contributions**: 1
+- **Avatar**: https://avatars.githubusercontent.com/u/166967375?v=4
+- **GitHub**: https://github.com/VIKAS7216
 - **Repositories**: dora-rs/dora
 
 ### Nitish4144
