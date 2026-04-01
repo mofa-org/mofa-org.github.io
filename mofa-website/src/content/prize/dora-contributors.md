@@ -3,7 +3,7 @@ type: "contributors"
 category: "dora"
 title: "Dora-rs Contributors"
 title_zh: "Dora-rs 贡献者"
-last_updated: "2026-03-31"
+last_updated: "2026-04-01"
 repositories: ["dora-rs/dora"]
 total_contributors: 73
 ---
@@ -11,7 +11,7 @@ total_contributors: 73
 
 这个文件在构建时自动更新，缓存从GitHub API获取的贡献者数据。
 
-**最后更新**: 2026-03-31
+**最后更新**: 2026-04-01
 **总贡献者数**: 73
 **数据来源**: dora-rs/dora
 
@@ -19,7 +19,7 @@ total_contributors: 73
 
 
 ### phil-opp
-- **Contributions**: 1992
+- **Contributions**: 1996
 - **Avatar**: https://avatars.githubusercontent.com/u/1131315?v=4
 - **GitHub**: https://github.com/phil-opp
 - **Repositories**: dora-rs/dora
@@ -144,6 +144,12 @@ total_contributors: 73
 - **GitHub**: https://github.com/7SOMAY
 - **Repositories**: dora-rs/dora
 
+### Bhanudahiyaa
+- **Contributions**: 8
+- **Avatar**: https://avatars.githubusercontent.com/u/179860247?v=4
+- **GitHub**: https://github.com/Bhanudahiyaa
+- **Repositories**: dora-rs/dora
+
 ### oortlieb
 - **Contributions**: 8
 - **Avatar**: https://avatars.githubusercontent.com/u/3278489?v=4
@@ -154,12 +160,6 @@ total_contributors: 73
 - **Contributions**: 8
 - **Avatar**: https://avatars.githubusercontent.com/u/219251824?v=4
 - **GitHub**: https://github.com/suhr25
-- **Repositories**: dora-rs/dora
-
-### Bhanudahiyaa
-- **Contributions**: 7
-- **Avatar**: https://avatars.githubusercontent.com/u/179860247?v=4
-- **GitHub**: https://github.com/Bhanudahiyaa
 - **Repositories**: dora-rs/dora
 
 ### Harsh-Sahu43
