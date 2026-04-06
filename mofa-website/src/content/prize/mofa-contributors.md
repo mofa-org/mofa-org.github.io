@@ -3,7 +3,7 @@ type: "contributors"
 category: "mofa"
 title: "MoFA Contributors"
 title_zh: "MoFA 贡献者"
-last_updated: "2026-04-05"
+last_updated: "2026-04-06"
 repositories: ["mofa-org/mofa","mofa-org/mofa-new"]
 total_contributors: 69
 ---
@@ -11,7 +11,7 @@ total_contributors: 69
 
 这个文件在构建时自动更新，缓存从GitHub API获取的贡献者数据。
 
-**最后更新**: 2026-04-05
+**最后更新**: 2026-04-06
 **总贡献者数**: 69
 **数据来源**: mofa-org/mofa, mofa-org/mofa-new
 
@@ -25,7 +25,7 @@ total_contributors: 69
 - **Repositories**: mofa-org/mofa, mofa-org/mofa-new
 
 ### lijingrs
-- **Contributions**: 257
+- **Contributions**: 258
 - **Avatar**: https://avatars.githubusercontent.com/u/20733031?v=4
 - **GitHub**: https://github.com/lijingrs
 - **Repositories**: mofa-org/mofa
@@ -258,6 +258,12 @@ total_contributors: 69
 - **GitHub**: https://github.com/nanana2002
 - **Repositories**: mofa-org/mofa, mofa-org/mofa-new
 
+### SH20RAJ
+- **Contributions**: 6
+- **Avatar**: https://avatars.githubusercontent.com/u/66713844?v=4
+- **GitHub**: https://github.com/SH20RAJ
+- **Repositories**: mofa-org/mofa
+
 ### starlitxiling
 - **Contributions**: 6
 - **Avatar**: https://avatars.githubusercontent.com/u/62335818?v=4
@@ -286,12 +292,6 @@ total_contributors: 69
 - **Contributions**: 5
 - **Avatar**: https://avatars.githubusercontent.com/u/219890374?v=4
 - **GitHub**: https://github.com/Kayd-06
-- **Repositories**: mofa-org/mofa
-
-### SH20RAJ
-- **Contributions**: 5
-- **Avatar**: https://avatars.githubusercontent.com/u/66713844?v=4
-- **GitHub**: https://github.com/SH20RAJ
 - **Repositories**: mofa-org/mofa
 
 ### areycruzer
