@@ -3,7 +3,7 @@ type: "contributors"
 category: "mofa"
 title: "MoFA Contributors"
 title_zh: "MoFA 贡献者"
-last_updated: "2026-04-12"
+last_updated: "2026-04-13"
 repositories: ["mofa-org/mofa","mofa-org/mofa-new"]
 total_contributors: 69
 ---
@@ -11,7 +11,7 @@ total_contributors: 69
 
 这个文件在构建时自动更新，缓存从GitHub API获取的贡献者数据。
 
-**最后更新**: 2026-04-12
+**最后更新**: 2026-04-13
 **总贡献者数**: 69
 **数据来源**: mofa-org/mofa, mofa-org/mofa-new
 
@@ -25,7 +25,7 @@ total_contributors: 69
 - **Repositories**: mofa-org/mofa, mofa-org/mofa-new
 
 ### lijingrs
-- **Contributions**: 258
+- **Contributions**: 260
 - **Avatar**: https://avatars.githubusercontent.com/u/20733031?v=4
 - **GitHub**: https://github.com/lijingrs
 - **Repositories**: mofa-org/mofa
@@ -234,6 +234,12 @@ total_contributors: 69
 - **GitHub**: https://github.com/yulnr
 - **Repositories**: mofa-org/mofa
 
+### SH20RAJ
+- **Contributions**: 8
+- **Avatar**: https://avatars.githubusercontent.com/u/66713844?v=4
+- **GitHub**: https://github.com/SH20RAJ
+- **Repositories**: mofa-org/mofa
+
 ### xforcevesa
 - **Contributions**: 8
 - **Avatar**: https://avatars.githubusercontent.com/u/101607521?v=4
@@ -257,12 +263,6 @@ total_contributors: 69
 - **Avatar**: https://avatars.githubusercontent.com/u/98224910?v=4
 - **GitHub**: https://github.com/nanana2002
 - **Repositories**: mofa-org/mofa, mofa-org/mofa-new
-
-### SH20RAJ
-- **Contributions**: 6
-- **Avatar**: https://avatars.githubusercontent.com/u/66713844?v=4
-- **GitHub**: https://github.com/SH20RAJ
-- **Repositories**: mofa-org/mofa
 
 ### starlitxiling
 - **Contributions**: 6
