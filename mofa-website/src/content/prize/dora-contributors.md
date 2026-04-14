@@ -3,7 +3,7 @@ type: "contributors"
 category: "dora"
 title: "Dora-rs Contributors"
 title_zh: "Dora-rs 贡献者"
-last_updated: "2026-04-13"
+last_updated: "2026-04-14"
 repositories: ["dora-rs/dora"]
 total_contributors: 74
 ---
@@ -11,7 +11,7 @@ total_contributors: 74
 
 这个文件在构建时自动更新，缓存从GitHub API获取的贡献者数据。
 
-**最后更新**: 2026-04-13
+**最后更新**: 2026-04-14
 **总贡献者数**: 74
 **数据来源**: dora-rs/dora
 
@@ -19,13 +19,13 @@ total_contributors: 74
 
 
 ### phil-opp
-- **Contributions**: 2019
+- **Contributions**: 2020
 - **Avatar**: https://avatars.githubusercontent.com/u/1131315?v=4
 - **GitHub**: https://github.com/phil-opp
 - **Repositories**: dora-rs/dora
 
 ### haixuanTao
-- **Contributions**: 1874
+- **Contributions**: 1890
 - **Avatar**: https://avatars.githubusercontent.com/u/22787340?v=4
 - **GitHub**: https://github.com/haixuanTao
 - **Repositories**: dora-rs/dora
@@ -163,7 +163,7 @@ total_contributors: 74
 - **Repositories**: dora-rs/dora
 
 ### Harsh-Sahu43
-- **Contributions**: 7
+- **Contributions**: 8
 - **Avatar**: https://avatars.githubusercontent.com/u/147322826?v=4
 - **GitHub**: https://github.com/Harsh-Sahu43
 - **Repositories**: dora-rs/dora
@@ -186,16 +186,16 @@ total_contributors: 74
 - **GitHub**: https://github.com/bobdingAI
 - **Repositories**: dora-rs/dora
 
+### sauhardh
+- **Contributions**: 6
+- **Avatar**: https://avatars.githubusercontent.com/u/84185378?v=4
+- **GitHub**: https://github.com/sauhardh
+- **Repositories**: dora-rs/dora
+
 ### Felixhuangsiling
 - **Contributions**: 5
 - **Avatar**: https://avatars.githubusercontent.com/u/77993249?v=4
 - **GitHub**: https://github.com/Felixhuangsiling
-- **Repositories**: dora-rs/dora
-
-### sauhardh
-- **Contributions**: 5
-- **Avatar**: https://avatars.githubusercontent.com/u/84185378?v=4
-- **GitHub**: https://github.com/sauhardh
 - **Repositories**: dora-rs/dora
 
 ### rahat2134
