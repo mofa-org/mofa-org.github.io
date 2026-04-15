@@ -3,7 +3,7 @@ type: "contributors"
 category: "mofa"
 title: "MoFA Contributors"
 title_zh: "MoFA 贡献者"
-last_updated: "2026-04-14"
+last_updated: "2026-04-15"
 repositories: ["mofa-org/mofa","mofa-org/mofa-new"]
 total_contributors: 69
 ---
@@ -11,7 +11,7 @@ total_contributors: 69
 
 这个文件在构建时自动更新，缓存从GitHub API获取的贡献者数据。
 
-**最后更新**: 2026-04-14
+**最后更新**: 2026-04-15
 **总贡献者数**: 69
 **数据来源**: mofa-org/mofa, mofa-org/mofa-new
 
@@ -25,7 +25,7 @@ total_contributors: 69
 - **Repositories**: mofa-org/mofa, mofa-org/mofa-new
 
 ### lijingrs
-- **Contributions**: 260
+- **Contributions**: 261
 - **Avatar**: https://avatars.githubusercontent.com/u/20733031?v=4
 - **GitHub**: https://github.com/lijingrs
 - **Repositories**: mofa-org/mofa
@@ -120,16 +120,16 @@ total_contributors: 69
 - **GitHub**: https://github.com/01010Messi
 - **Repositories**: mofa-org/mofa
 
+### ashnaaseth2325-oss
+- **Contributions**: 17
+- **Avatar**: https://avatars.githubusercontent.com/u/226311472?v=4
+- **GitHub**: https://github.com/ashnaaseth2325-oss
+- **Repositories**: mofa-org/mofa
+
 ### Mustafa11300
 - **Contributions**: 16
 - **Avatar**: https://avatars.githubusercontent.com/u/150780754?v=4
 - **GitHub**: https://github.com/Mustafa11300
-- **Repositories**: mofa-org/mofa
-
-### ashnaaseth2325-oss
-- **Contributions**: 16
-- **Avatar**: https://avatars.githubusercontent.com/u/226311472?v=4
-- **GitHub**: https://github.com/ashnaaseth2325-oss
 - **Repositories**: mofa-org/mofa
 
 ### Ishita-190
