@@ -3,16 +3,16 @@ type: "contributors"
 category: "dora"
 title: "Dora-rs Contributors"
 title_zh: "Dora-rs 贡献者"
-last_updated: "2026-04-18"
+last_updated: "2026-04-19"
 repositories: ["dora-rs/dora"]
-total_contributors: 75
+total_contributors: 76
 ---
 # Dora-rs Contributors Cache
 
 这个文件在构建时自动更新，缓存从GitHub API获取的贡献者数据。
 
-**最后更新**: 2026-04-18
-**总贡献者数**: 75
+**最后更新**: 2026-04-19
+**总贡献者数**: 76
 **数据来源**: dora-rs/dora
 
 ## Contributors Data
@@ -46,6 +46,12 @@ total_contributors: 75
 - **Contributions**: 44
 - **Avatar**: https://avatars.githubusercontent.com/u/19931638?v=4
 - **GitHub**: https://github.com/XxChang
+- **Repositories**: dora-rs/dora
+
+### heyong4725
+- **Contributions**: 42
+- **Avatar**: https://avatars.githubusercontent.com/u/45980096?v=4
+- **GitHub**: https://github.com/heyong4725
 - **Repositories**: dora-rs/dora
 
 ### Mivik
@@ -88,12 +94,6 @@ total_contributors: 75
 - **Contributions**: 23
 - **Avatar**: https://avatars.githubusercontent.com/u/180039440?v=4
 - **GitHub**: https://github.com/guptapratykshh
-- **Repositories**: dora-rs/dora
-
-### heyong4725
-- **Contributions**: 20
-- **Avatar**: https://avatars.githubusercontent.com/u/45980096?v=4
-- **GitHub**: https://github.com/heyong4725
 - **Repositories**: dora-rs/dora
 
 ### EricLBuehler
@@ -144,16 +144,16 @@ total_contributors: 75
 - **GitHub**: https://github.com/7SOMAY
 - **Repositories**: dora-rs/dora
 
-### suhr25
-- **Contributions**: 9
-- **Avatar**: https://avatars.githubusercontent.com/u/219251824?v=4
-- **GitHub**: https://github.com/suhr25
-- **Repositories**: dora-rs/dora
-
 ### Bhanudahiyaa
 - **Contributions**: 9
 - **Avatar**: https://avatars.githubusercontent.com/u/179860247?v=4
 - **GitHub**: https://github.com/Bhanudahiyaa
+- **Repositories**: dora-rs/dora
+
+### suhr25
+- **Contributions**: 9
+- **Avatar**: https://avatars.githubusercontent.com/u/219251824?v=4
+- **GitHub**: https://github.com/suhr25
 - **Repositories**: dora-rs/dora
 
 ### oortlieb
@@ -460,6 +460,12 @@ total_contributors: 75
 - **Contributions**: 1
 - **Avatar**: https://avatars.githubusercontent.com/u/16680090?v=4
 - **GitHub**: https://github.com/Ben-PH
+- **Repositories**: dora-rs/dora
+
+### JustInCache
+- **Contributions**: 1
+- **Avatar**: https://avatars.githubusercontent.com/u/105823120?v=4
+- **GitHub**: https://github.com/JustInCache
 - **Repositories**: dora-rs/dora
 
 ### abdelrhmaneldenary
