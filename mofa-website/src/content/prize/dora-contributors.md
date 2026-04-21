@@ -3,7 +3,7 @@ type: "contributors"
 category: "dora"
 title: "Dora-rs Contributors"
 title_zh: "Dora-rs 贡献者"
-last_updated: "2026-04-20"
+last_updated: "2026-04-21"
 repositories: ["dora-rs/dora"]
 total_contributors: 76
 ---
@@ -11,7 +11,7 @@ total_contributors: 76
 
 这个文件在构建时自动更新，缓存从GitHub API获取的贡献者数据。
 
-**最后更新**: 2026-04-20
+**最后更新**: 2026-04-21
 **总贡献者数**: 76
 **数据来源**: dora-rs/dora
 
@@ -36,16 +36,16 @@ total_contributors: 76
 - **GitHub**: https://github.com/eduidl
 - **Repositories**: dora-rs/dora
 
+### heyong4725
+- **Contributions**: 59
+- **Avatar**: https://avatars.githubusercontent.com/u/45980096?v=4
+- **GitHub**: https://github.com/heyong4725
+- **Repositories**: dora-rs/dora
+
 ### ShashwatPatil
 - **Contributions**: 58
 - **Avatar**: https://avatars.githubusercontent.com/u/117521627?v=4
 - **GitHub**: https://github.com/ShashwatPatil
-- **Repositories**: dora-rs/dora
-
-### heyong4725
-- **Contributions**: 47
-- **Avatar**: https://avatars.githubusercontent.com/u/45980096?v=4
-- **GitHub**: https://github.com/heyong4725
 - **Repositories**: dora-rs/dora
 
 ### XxChang
