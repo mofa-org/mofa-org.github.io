@@ -12,7 +12,7 @@
   <link rel="icon" type="image/png" href="/favicon-32x32.png" />
   <script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;500;700;900&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Noto+Serif+SC:wght@400;700;900&family=Noto+Sans+SC:wght@300;400;700;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Noto+Serif+SC:wght@300;400;700;900&family=Outfit:wght@200;300;500;700;900&family=Noto+Sans+SC:wght@300;400;700;900&display=swap" rel="stylesheet" />
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
     *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
@@ -133,13 +133,13 @@
     .caption-bottom{bottom:12%;left:50%;transform:translate(-50%,20px)}
     .act.in .caption-bottom{transform:translate(-50%,0)}
     .caption{text-align:left}
-    .caption h2{font-family:'Playfair Display','Noto Serif SC',serif;font-size:clamp(2rem,4.5vw,3.5rem);font-weight:700;letter-spacing:.02em;line-height:1.3;text-shadow:0 0 40px rgba(0,0,0,.8),0 0 80px rgba(0,0,0,.5)}
+    .caption h2{font-family:'Cormorant Garamond','Noto Serif SC',serif;font-size:clamp(2rem,4.5vw,3.5rem);font-weight:700;letter-spacing:.02em;line-height:1.3;text-shadow:0 0 40px rgba(0,0,0,.8),0 0 80px rgba(0,0,0,.5)}
     .caption h2 strong{font-weight:900}
     .caption-blue h2{color:rgba(130,180,255,.85);text-shadow:0 0 30px rgba(0,68,204,.4),0 4px 20px rgba(0,0,0,.9)}
     .caption-red h2{color:rgba(255,130,130,.85);text-shadow:0 0 30px rgba(204,0,0,.4),0 4px 20px rgba(0,0,0,.9)}
     .break-free{
       position:absolute;z-index:5;bottom:10%;left:8vw;
-      font-family:'Playfair Display','Noto Serif SC',serif;
+      font-family:'Cormorant Garamond','Noto Serif SC',serif;
       font-size:clamp(1.3rem,2.5vw,2rem);font-weight:400;font-style:italic;letter-spacing:.08em;text-transform:lowercase;
       color:rgba(204,0,0,.3);cursor:pointer;pointer-events:auto;
       text-shadow:0 0 20px rgba(204,0,0,0);
@@ -160,7 +160,7 @@
     @media(max-width:768px){.empire-hero{align-items:center}}
     #act-empire.in .empire-hero{opacity:1}
     .empire-logo{width:80px;height:80px}
-    .empire-title{font-family:'Playfair Display','Noto Serif SC',serif;font-size:clamp(2.5rem,6vw,5rem);font-weight:900;letter-spacing:-.02em;text-align:left;line-height:1.1}
+    .empire-title{font-family:'Cormorant Garamond','Noto Serif SC',serif;font-size:clamp(2.5rem,6vw,5rem);font-weight:900;letter-spacing:-.02em;text-align:left;line-height:1.1}
     @media(max-width:768px){.empire-title{text-align:center}}
     .empire-title em{font-style:normal;background:linear-gradient(135deg,var(--red),var(--orange),var(--gold));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 
@@ -190,6 +190,24 @@
     .pr2{width:100px;height:100px;animation-delay:1.3s;border-color:rgba(249,115,22,.15)}
     .pr3{width:100px;height:100px;animation-delay:2.6s;border-color:rgba(245,158,11,.15)}
     @keyframes ringPulse{0%{transform:translate(-50%,-50%) scale(1);opacity:.5}100%{transform:translate(-50%,-50%) scale(6);opacity:0}}
+
+    /* Rabbit hole portal */
+    .rabbit-hole-wrap{position:absolute;z-index:5;bottom:8%;right:8vw;display:flex;align-items:center;gap:20px;cursor:pointer;opacity:0;transition:opacity 1.2s 1s}
+    .act.in .rabbit-hole-wrap{opacity:1}
+    .rabbit-hole{position:relative;width:80px;height:80px}
+    .rh-ring{position:absolute;inset:0;border-radius:50%;border:1.5px solid transparent;animation:rhSpin linear infinite}
+    .rh-ring-1{border-top-color:rgba(0,204,0,.6);border-right-color:rgba(0,204,0,.2);animation-duration:4s}
+    .rh-ring-2{inset:8px;border-bottom-color:rgba(0,180,0,.5);border-left-color:rgba(0,180,0,.15);animation-duration:3s;animation-direction:reverse}
+    .rh-ring-3{inset:16px;border-top-color:rgba(204,0,0,.6);border-left-color:rgba(204,0,0,.2);animation-duration:5s}
+    .rh-core{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:12px;height:12px;border-radius:50%;background:var(--red);box-shadow:0 0 15px var(--red),0 0 30px rgba(204,0,0,.4);animation:rhPulse 2s ease-in-out infinite}
+    @keyframes rhSpin{to{transform:rotate(360deg)}}
+    @keyframes rhPulse{0%,100%{transform:translate(-50%,-50%) scale(1);box-shadow:0 0 15px var(--red),0 0 30px rgba(204,0,0,.4)}50%{transform:translate(-50%,-50%) scale(1.3);box-shadow:0 0 25px var(--red),0 0 50px rgba(204,0,0,.6)}}
+    .rabbit-hole-wrap:hover .rh-ring-1{animation-duration:1.5s}
+    .rabbit-hole-wrap:hover .rh-ring-2{animation-duration:1s}
+    .rabbit-hole-wrap:hover .rh-ring-3{animation-duration:1.8s}
+    .rabbit-hole-wrap:hover .rh-core{background:#ff0000;box-shadow:0 0 30px #ff0000,0 0 60px rgba(255,0,0,.5)}
+    .rabbit-hole-wrap:hover .rh-label{color:rgba(0,204,0,.6)}
+    .rh-label{font-family:'Cormorant Garamond','Noto Serif SC',serif;font-size:.75rem;font-style:italic;letter-spacing:.12em;color:rgba(0,204,0,.25);transition:color .4s}
 
     /* L9: Mouse trail */
     #trail-canvas{position:fixed;inset:0;z-index:9995;pointer-events:none}
@@ -285,7 +303,7 @@
     <!-- ACT 1: CHOOSE -->
     <section class="act" id="act-choice">
       <video class="vid-bg" id="vid-hero-calm" autoplay muted loop playsinline src="/videos/redesign/empire-bg.mp4" style="transition:opacity 1s"></video>
-      <video class="vid-bg" id="vid-hero-shatter" autoplay muted loop playsinline src="/videos/redesign/shatter.mp4" style="opacity:0;transition:opacity 1s"></video>
+      <video class="vid-bg" id="vid-hero-shatter" muted playsinline preload="auto" src="/videos/redesign/shatter.mp4" style="opacity:0;transition:opacity 1s"></video>
       <canvas id="pill-canvas"></canvas>
       <img src="/mofa-logo.png" alt="MoFA" class="hero-logo" />
       <div class="glitch-word" id="glitch-el"></div>
@@ -310,10 +328,15 @@
       <div class="caption caption-top caption-red">
         <h2 data-en="Your voice. Your audience. <strong>Your empire.</strong>" data-zh="你的声音。你的受众。<strong>你的帝国。</strong>">Your voice. Your audience. <strong>Your empire.</strong></h2>
       </div>
-      <div class="caption caption-bottom caption-escape">
-        <h2 data-en="see what's <strong>possible</strong>" data-zh="看看你能<strong>做什么</strong>">see what's <strong>possible</strong></h2>
+      <div class="rabbit-hole-wrap">
+        <div class="rabbit-hole" id="rabbit-hole">
+          <div class="rh-ring rh-ring-1"></div>
+          <div class="rh-ring rh-ring-2"></div>
+          <div class="rh-ring rh-ring-3"></div>
+          <div class="rh-core"></div>
+        </div>
+        <span class="rh-label" data-en="enter the rabbit hole" data-zh="进入兔子洞">enter the rabbit hole</span>
       </div>
-      <div class="scroll-cue" style="animation-delay:0s"><div class="pill-shape"></div></div>
     </section>
 
     <!-- ACT 5: YOUR EMPIRE -->
@@ -495,33 +518,76 @@ let cx=0,cy=0;
     const origTopY=topHalf.position.y, origBotY=botHalf.position.y;
 
     // Add inner glow light
-    const innerGlow=new THREE.PointLight(type==='blue'?0x0044cc:0xcc0000,8,5);
+    // Inner glow — warm core light
+    const glowColor=type==='blue'?0x0044cc:0xcc0000;
+    const innerGlow=new THREE.PointLight(glowColor,0,8);
     innerGlow.position.set(0,0,0);
     clickedPill.add(innerGlow);
 
+    // Scatter micro-particles from the seam
+    const sparkGeo=new THREE.BufferGeometry();
+    const sparkCount=60;
+    const sparkPos=new Float32Array(sparkCount*3);
+    const sparkVel=[];
+    for(let i=0;i<sparkCount;i++){
+      sparkPos[i*3]=0;sparkPos[i*3+1]=0;sparkPos[i*3+2]=0;
+      const a=Math.random()*Math.PI*2,sp=.02+Math.random()*.08;
+      sparkVel.push({vx:Math.cos(a)*sp,vy:(Math.random()-.3)*sp*1.5,vz:Math.sin(a)*sp});
+    }
+    sparkGeo.setAttribute('position',new THREE.BufferAttribute(sparkPos,3));
+    const sparkMat=new THREE.PointsMaterial({color:glowColor,size:.08,transparent:true,opacity:.9,blending:THREE.AdditiveBlending});
+    const sparks=new THREE.Points(sparkGeo,sparkMat);
+    clickedPill.add(sparks);
+
     let splitT=0;
+    const flashEl=document.getElementById('pill-flash');
     function splitAnim(){
-      splitT+=0.04;
-      const ease=1-Math.pow(1-Math.min(splitT,1),3); // ease-out cubic
-      topHalf.position.y=origTopY+ease*2.5;
-      botHalf.position.y=origBotY-ease*2.5;
-      body.scale.y=1-ease*.8;
-      body.material.opacity=.94-ease*.9;
-      innerGlow.intensity=12+ease*30;
-      innerGlow.distance=5+ease*15;
-      // White flash on screen
-      if(splitT<.15){document.getElementById('pill-flash').style.background='radial-gradient(circle,rgba(255,255,255,'+(1-splitT/.15)*0.6+'),transparent 60%)';document.getElementById('pill-flash').style.opacity='1'}
-      if(splitT<2)requestAnimationFrame(splitAnim);
-      else{
-        // Reset after scroll
-        setTimeout(()=>{
-          topHalf.position.y=origTopY;
-          botHalf.position.y=origBotY;
-          body.scale.y=1;
-          body.material.opacity=.94;
-          clickedPill.remove(innerGlow);
-        },1500);
+      splitT+=0.025;
+      // Spring-like overshoot: ease with damped oscillation
+      const t=Math.min(splitT,1.2);
+      const spring=1-Math.exp(-6*t)*Math.cos(t*8);
+      const ease=Math.min(spring,1.3);
+
+      // Split with slight outward rotation
+      topHalf.position.y=origTopY+ease*2.2;
+      topHalf.rotation.x=ease*.15;
+      topHalf.rotation.z=ease*.08;
+      botHalf.position.y=origBotY-ease*2.2;
+      botHalf.rotation.x=-ease*.12;
+      botHalf.rotation.z=-ease*.06;
+
+      // Body dissolves
+      body.scale.y=Math.max(0,1-ease*.9);
+      body.material.opacity=Math.max(0,.94-ease*.94);
+
+      // Inner glow ramps up with warmth
+      innerGlow.intensity=ease*40;
+      innerGlow.distance=3+ease*12;
+
+      // Sparks fly outward
+      const sp=sparks.geometry.attributes.position.array;
+      for(let i=0;i<sparkCount;i++){
+        const v=sparkVel[i];
+        sp[i*3]+=v.vx;sp[i*3+1]+=v.vy;sp[i*3+2]+=v.vz;
       }
+      sparks.geometry.attributes.position.needsUpdate=true;
+      sparkMat.opacity=Math.max(0,1-splitT*.6);
+
+      // Screen flash: brief white burst then colored glow
+      if(splitT<.1){
+        const f=1-splitT/.1;
+        flashEl.style.background='radial-gradient(circle,rgba(255,255,255,'+f*.7+'),transparent 50%)';
+        flashEl.style.opacity='1';
+      }else if(splitT<.4){
+        const f=1-(splitT-.1)/.3;
+        const rgb=type==='blue'?'0,68,204':'204,0,0';
+        flashEl.style.background='radial-gradient(circle,rgba('+rgb+','+f*.3+'),transparent 60%)';
+        flashEl.style.opacity='1';
+      }else{
+        flashEl.style.opacity='0';
+      }
+
+      if(splitT<2.5)requestAnimationFrame(splitAnim);
     }
     splitAnim();
 
@@ -531,6 +597,7 @@ let cx=0,cy=0;
       const vShatter=document.getElementById('vid-hero-shatter');
       if(vCalm&&vShatter){
         vShatter.currentTime=2.5;
+        vShatter.playbackRate=1.6;
         vShatter.play().catch(()=>{});
         vShatter.style.opacity='1';
         vCalm.style.opacity='0';
@@ -786,6 +853,21 @@ document.querySelectorAll('.vid-bg').forEach(v=>{
   });
   v.addEventListener('seeked',()=>{v.style.opacity=''});
 });
+
+// ======== RABBIT HOLE — click to scroll to empire ========
+!function(){
+  const rh=document.getElementById('rabbit-hole');
+  if(!rh)return;
+  rh.parentElement.addEventListener('click',()=>{
+    rh.querySelector('.rh-core').style.transform='translate(-50%,-50%) scale(3)';
+    rh.querySelector('.rh-core').style.boxShadow='0 0 60px #ff0000,0 0 120px rgba(255,0,0,.6)';
+    setTimeout(()=>{
+      document.getElementById('act-empire').scrollIntoView({behavior:'smooth'});
+      rh.querySelector('.rh-core').style.transform='';
+      rh.querySelector('.rh-core').style.boxShadow='';
+    },500);
+  });
+}();
 
 // ======== BREAK FREE — glitch + scroll back to hero ========
 !function(){
