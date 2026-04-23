@@ -19,7 +19,7 @@ total_contributors: 77
 
 
 ### phil-opp
-- **Contributions**: 2045
+- **Contributions**: 2047
 - **Avatar**: https://avatars.githubusercontent.com/u/1131315?v=4
 - **GitHub**: https://github.com/phil-opp
 - **Repositories**: dora-rs/dora
@@ -156,16 +156,16 @@ total_contributors: 77
 - **GitHub**: https://github.com/suhr25
 - **Repositories**: dora-rs/dora
 
-### oortlieb
-- **Contributions**: 8
-- **Avatar**: https://avatars.githubusercontent.com/u/3278489?v=4
-- **GitHub**: https://github.com/oortlieb
-- **Repositories**: dora-rs/dora
-
 ### Harsh-Sahu43
 - **Contributions**: 8
 - **Avatar**: https://avatars.githubusercontent.com/u/147322826?v=4
 - **GitHub**: https://github.com/Harsh-Sahu43
+- **Repositories**: dora-rs/dora
+
+### oortlieb
+- **Contributions**: 8
+- **Avatar**: https://avatars.githubusercontent.com/u/3278489?v=4
+- **GitHub**: https://github.com/oortlieb
 - **Repositories**: dora-rs/dora
 
 ### PavelGuzenfeld
