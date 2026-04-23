@@ -172,10 +172,30 @@ let cx=0,cy=0;
     setTimeout(()=>document.getElementById('scroll-wrap').classList.remove('shake'),400);
     const hint=document.getElementById('pill-hint');
     if(hint)hint.style.opacity='0';
-    setTimeout(()=>{
-      const target=type==='blue'?'#act-blue':'#act-red';
-      document.querySelector(target).scrollIntoView({behavior:'smooth'});
-    },400);
+
+    if(type==='blue'){
+      setTimeout(()=>document.querySelector('#act-blue').scrollIntoView({behavior:'smooth'}),400);
+    }else{
+      // Red: wait for shatter video to nearly finish, then scroll
+      const vShatter=document.getElementById('vid-hero-shatter');
+      if(vShatter&&vShatter.duration){
+        const waitMs=Math.max(0,(vShatter.duration-vShatter.currentTime-0.5)*1000);
+        setTimeout(()=>document.querySelector('#act-red').scrollIntoView({behavior:'smooth'}),waitMs);
+      }else{
+        setTimeout(()=>document.querySelector('#act-red').scrollIntoView({behavior:'smooth'}),5000);
+      }
+    }
+
+    // When hero leaves viewport, reset video back to calm
+    const resetObs=new IntersectionObserver(entries=>{
+      if(!entries[0].isIntersecting){
+        const vc=document.getElementById('vid-hero-calm');
+        const vs=document.getElementById('vid-hero-shatter');
+        if(vc&&vs){vc.style.opacity='1';vs.style.opacity='0'}
+        resetObs.disconnect();
+      }
+    },{threshold:0});
+    resetObs.observe(document.getElementById('act-choice'));
   });
 
   let pmx=0,pmy=0;
