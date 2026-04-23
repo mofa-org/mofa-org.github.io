@@ -1,0 +1,1288 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import WorkflowShowcase from '../components/WorkflowShowcase.astro';
+import TabletQuickStart from '../components/TabletQuickStart.astro';
+import HallOfFame from '../components/HallOfFame.astro';
+---
+
+<BaseLayout title="MoFA - Modular Framework for AI Agents">
+  <main style="flex: 1;">
+    <section class="py-20" style="position: relative; overflow: hidden;">
+      <div style="position: absolute; inset: 0; pointer-events: none; overflow: hidden;">
+        <div class="mondrian-decoration-left" style="position: absolute; left: -100px; top: 20%; width: 300px; height: 400px;">
+          <svg width="300" height="400" viewBox="0 0 300 400" xmlns="http://www.w3.org/2000/svg">
+            <line x1="80" y1="0" x2="80" y2="400" stroke="var(--mondrian-black)" stroke-width="3"/>
+            <line x1="180" y1="0" x2="180" y2="400" stroke="var(--mondrian-black)" stroke-width="3"/>
+
+            <line x1="0" y1="120" x2="300" y2="120" stroke="var(--mondrian-black)" stroke-width="3"/>
+            <line x1="0" y1="280" x2="300" y2="280" stroke="var(--mondrian-black)" stroke-width="3"/>
+
+            <rect x="6" y="6" width="68" height="108" fill="var(--mofa-gradient-1)" opacity="0.85"/>
+            <rect x="86" y="126" width="88" height="148" fill="var(--mofa-gradient-4)" opacity="0.85"/>
+            <rect x="186" y="6" width="108" height="108" fill="var(--mofa-gradient-3)" opacity="0.85"/>
+          </svg>
+        </div>
+
+        <div class="mondrian-decoration-right" style="position: absolute; right: -120px; bottom: 15%; width: 280px; height: 350px;">
+          <svg width="280" height="350" viewBox="0 0 280 350" xmlns="http://www.w3.org/2000/svg">
+            <line x1="100" y1="0" x2="100" y2="350" stroke="var(--mondrian-black)" stroke-width="3"/>
+            <line x1="200" y1="0" x2="200" y2="350" stroke="var(--mondrian-black)" stroke-width="3"/>
+
+            <line x1="0" y1="100" x2="280" y2="100" stroke="var(--mondrian-black)" stroke-width="3"/>
+            <line x1="0" y1="250" x2="280" y2="250" stroke="var(--mondrian-black)" stroke-width="3"/>
+
+            <rect x="106" y="6" width="88" height="88" fill="var(--mofa-gradient-1)" opacity="0.85"/>
+            <rect x="6" y="106" width="88" height="138" fill="var(--mofa-gradient-3)" opacity="0.85"/>
+            <rect x="206" y="256" width="68" height="88" fill="var(--mofa-gradient-4)" opacity="0.85"/>
+          </svg>
+        </div>
+
+
+      </div>
+
+      <div class="container" style="position: relative; z-index: 10;">
+        <div class="max-w-4xl mx-auto text-center">
+          <div style="display: flex; justify-content: center; margin-bottom: 32px;">
+            <div class="logo-container" style="width: 144px; height: 144px; position: relative; overflow: hidden; border-radius: 20px;">
+              <img src="/mofa-logo.png" alt="MoFA Logo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 20px; filter: invert(1); display: none;" />
+
+              <div class="logo-letter-container" style="
+                position: absolute;
+                top: 12px;
+                left: 14px;
+                width: 60px;
+                height: 56px;
+                z-index: 10;
+                --flow-delay: 0;
+                --letter-svg: url(/mofa-M.svg);
+              ">
+                <img src="/mofa-M.png" alt="M" class="logo-letter letter-m draggable" style="
+                  width: 100%;
+                  height: 100%;
+                  object-fit: contain;
+                  border-radius: 8px;
+                " />
+                <div class="data-flow"></div>
+              </div>
+
+              <div class="logo-letter-container" style="
+                position: absolute;
+                top: 66px;
+                left: 14px;
+                width: 60px;
+                height: 60px;
+                z-index: 10;
+                --flow-delay: 1;
+                --letter-svg: url(/mofa-O.svg);
+              ">
+                <img src="/mofa-O.png" alt="O" class="logo-letter letter-o draggable" style="
+                  width: 100%;
+                  height: 100%;
+                  object-fit: contain;
+                  border-radius: 8px;
+                " />
+                <div class="data-flow"></div>
+              </div>
+
+              <div class="logo-letter-container" style="
+                position: absolute;
+                top: 63px; /* 12 + 106/2 */
+                left: 100px; /* 76 + 48/2 */
+                width: 424px;
+                height: 224px;
+                z-index: 4; /* 位于 A 之下 */
+                --flow-delay: 2;
+                --letter-svg: url(/mofa-F.svg);
+                transform: translate(-50%, -50%);
+              ">
+                <img src="/mofa-F.png" alt="F" class="logo-letter letter-f draggable" style="
+                  width: 100%;
+                  height: 100%;
+                  object-fit: contain;
+                  border-radius: 8px;
+                " />
+                <div class="data-flow"></div>
+              </div>
+
+              <div class="logo-letter-container" style="
+                position: absolute;
+                top: 102.5px; /* 几何中心定位 */
+                left: 111px;
+                width: 290px;   /* 58 × 5 */
+                height: 350px; /* 69 × 5 */
+                z-index: 5; /* 置底，避免遮挡点击 */
+                --flow-delay: 3;
+                --letter-svg: url(/mofa-A.svg);
+                transform: translate(-50%, -50%);
+                transition: transform 0.3s ease;
+              ">
+                <img src="/mofa-A.png" alt="A" class="logo-letter letter-a" style="
+                  width: 100%;
+                  height: 100%;
+                  object-fit: contain;
+                  border-radius: 8px;
+                  transition: transform 0.3s ease;
+                " />
+                <div class="data-flow"></div>
+              </div>
+            </div>
+          </div>
+
+          <h1 class="text-4xl lg:text-6xl font-bold mb-6"
+             data-en="Pluggable by Design. Hackable by Nature."
+             data-zh="高模块 · 易插拔 · 高解耦">
+            Pluggable by Design. Hackable by Nature.
+          </h1>
+          <p class="text-xl mb-8 max-w-3xl mx-auto"
+             data-en="Start simple. Extend infinitely. Your workflow. Your modules. Your way."
+             data-zh="简单起步，无限扩展。" style="color:#6CCDD1;">
+            Start simple. Extend infinitely.
+          </p>
+
+          <p class="mb-12 max-w-2xl mx-auto description-text-zh" style="display: none;"
+             data-zh="MoFA 让智能体开发回归纯粹。表层快速串联，底层随心深入。原型到生产，代码始终可控。">
+            MoFA 让智能体开发回归纯粹。表层快速串联，底层随心深入。原型到生产，代码始终可控。
+          </p>
+          <p class="mb-12 max-w-2xl mx-auto description-text-en" style="display: block;"
+             data-en="MoFA brings agent development back to essentials. Compose agents quickly at the surface. Hack deep into every layer when you need to. Prototype to production, code remains fully controllable.">
+            MoFA brings agent development back to essentials. Compose agents quickly at the surface. Hack deep into every layer when you need to. Prototype to production, code remains fully controllable.
+          </p>
+
+          <div style="display: flex; flex-direction: column; gap: 16px; justify-content: center; margin-bottom: 64px;">
+            <div style="display: flex; flex-wrap: wrap; gap: 16px; justify-content: center;">
+              <a href="#quick-start" rel="noopener noreferrer"
+                 style="
+                   display: inline-flex;
+                   align-items: center;
+                   font-size: 1.125rem;
+                   padding: 16px 32px;
+                   background: var(--mondrian-red);
+                   color: white;
+                   text-decoration: none;
+                   border-radius: 0;
+                   font-weight: 700;
+                   transition: all 0.2s ease;
+                   border: 3px solid var(--mondrian-black);
+                   cursor: pointer;
+                   box-shadow: none;
+                 "
+                 onmouseover="this.style.transform='translate(-2px, -2px)'; this.style.boxShadow='4px 4px 0 var(--mondrian-black)'"
+                 onmouseout="this.style.transform='translate(0, 0)'; this.style.boxShadow='none'"
+                 >
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 8px; flex-shrink: 0;">
+                  <path d="M15.59 14.37a6 6 0 01-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 006.16-12.12A14.98 14.98 0 009.631 8.41m5.96 5.96a14.926 14.926 0 01-5.841 2.58m-.119-8.54a6 6 0 00-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 00-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 01-2.448-2.448 14.9 14.9 0 01.06-.312m-2.24 2.39a4.493 4.493 0 00-1.757 4.306 4.493 4.493 0 004.306-1.758M16.5 9a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z"/>
+                </svg>
+                <span data-en="Quick Start" data-zh="快速开始">Quick Start</span>
+              </a>
+              <a href="#why-mofa" rel="noopener noreferrer"
+                 style="
+                   display: inline-flex;
+                   align-items: center;
+                   font-size: 1.125rem;
+                   padding: 16px 32px;
+                   background: var(--mofa-gradient-4);
+                   color: white;
+                   text-decoration: none;
+                   border-radius: 0;
+                   font-weight: 700;
+                   transition: all 0.2s ease;
+                   border: 3px solid var(--mondrian-black);
+                   cursor: pointer;
+                   box-shadow: none;
+                 "
+                 onmouseover="this.style.transform='translate(-2px, -2px)'; this.style.boxShadow='4px 4px 0 var(--mondrian-black)'"
+                 onmouseout="this.style.transform='translate(0, 0)'; this.style.boxShadow='none'"
+                 >
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 8px; flex-shrink: 0;">
+                  <path d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5"/>
+                </svg>
+                <span data-en="Learn More" data-zh="了解更多">Learn More</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-3 gap-8 max-w-2xl mx-auto">
+            <div class="text-center">
+              <div class="text-3xl font-bold" style="color: var(--mofa-gradient-1);"
+                   data-en="6 min"
+                   data-zh="6分钟">6 min</div>
+              <div class="text-sm text-gray-600"
+                   data-en="Quick Setup"
+                   data-zh="快速上手">Quick Setup</div>
+            </div>
+            <div class="text-center">
+              <div class="text-3xl font-bold" style="color: var(--mofa-gradient-3);">500+</div>
+              <div class="text-sm text-gray-600"
+                   data-en="Built-in Agents"
+                   data-zh="内置代理">Built-in Agents</div>
+            </div>
+            <div class="text-center">
+              <div class="text-3xl font-bold" style="color: var(--mofa-gradient-4);">∞</div>
+              <div class="text-sm text-gray-600"
+                   data-en="Combinations"
+                   data-zh="组合可能">Combinations</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="mini-divider">
+      <div class="mini-line red-line"></div>
+      <div class="mini-line blue-line"></div>
+      <div class="mini-line yellow-line"></div>
+    </div>
+
+    <TabletQuickStart />
+
+    <section class="py-20" style="background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%); display:none;">
+      <div class="container">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold mb-4"
+              data-en="Get Started in <span class='gradient-text'>Seconds</span>"
+              data-zh="<span class='gradient-text'>快速</span>开始">
+            Get Started in <span class="gradient-text">Seconds</span>
+          </h2>
+          <p class="text-xl text-gray-600 max-w-2xl mx-auto"
+             data-en="One command to install MoFA and start building AI agents"
+             data-zh="一行命令安装 MoFA，立即开始构建 AI 代理">
+            One command to install MoFA and start building AI agents
+          </p>
+        </div>
+
+        <div class="max-w-4xl mx-auto">
+          <div class="terminal-multi-window relative mb-16">
+            <div class="flex justify-center mb-6">
+              <div class="inline-flex bg-gray-800 rounded-lg p-1 shadow-lg">
+                <button class="terminal-tab active px-4 py-2 rounded-md text-sm font-medium transition-all duration-200" data-tab="install">
+                  <span data-en="1. Install" data-zh="1. 安装">1. Install</span>
+                </button>
+                <button class="terminal-tab px-4 py-2 rounded-md text-sm font-medium transition-all duration-200" data-tab="clone">
+                  <span data-en="2. Clone Node" data-zh="2. 克隆节点">2. Clone Node</span>
+                </button>
+                <button class="terminal-tab px-4 py-2 rounded-md text-sm font-medium transition-all duration-200" data-tab="run">
+                  <span data-en="3. Run Node" data-zh="3. 运行节点">3. Run Node</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="terminal-window group relative">
+              <div class="bg-gray-900 rounded-2xl shadow-2xl overflow-hidden border border-gray-600">
+                <div class="flex items-center justify-between px-5 py-3 bg-gray-800 border-b border-gray-700">
+                  <div class="flex items-center space-x-2">
+                    <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                    <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                    <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                  </div>
+                  <div class="absolute left-1/2 transform -translate-x-1/2">
+                    <span class="text-gray-400 text-sm font-mono">Terminal</span>
+                  </div>
+                  <button id="main-copy-btn" class="copy-btn-header px-3 py-1 bg-gray-700 hover:bg-gray-600 text-gray-300 hover:text-white text-xs rounded transition-all duration-200 flex items-center space-x-1">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                      <path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"></path>
+                    </svg>
+                    <span>Copy</span>
+                  </button>
+                </div>
+
+                <div class="p-6 bg-gray-900 min-h-[120px]">
+
+                  <div class="terminal-content active" data-content="install">
+                    <div class="space-y-3">
+                      <div class="flex items-center space-x-2">
+                        <span class="text-green-400 font-mono">❯</span>
+                        <div class="flex-1">
+                          <span class="typing-text text-white font-mono" data-text="pip install mofa-core"></span>
+                          <span class="cursor-blink text-green-400">▊</span>
+                        </div>
+                      </div>
+                                             <div class="flex items-center space-x-2 opacity-60">
+                         <span class="text-gray-500 font-mono">#</span>
+                         <div class="flex-1">
+                           <span class="typing-text text-gray-400 font-mono text-sm" data-text="or with additional stage tools:" data-delay="2000"></span>
+                         </div>
+                       </div>
+                      <div class="flex items-center space-x-2">
+                        <span class="text-green-400 font-mono">❯</span>
+                        <div class="flex-1">
+                          <span class="typing-text text-white font-mono" data-text="pip install mofa-stage  #If you need GUI" data-delay="3500"></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="terminal-content" data-content="clone">
+                    <div class="space-y-3">
+                      <div class="flex items-center space-x-2">
+                        <span class="text-green-400 font-mono">❯</span>
+                        <div class="flex-1">
+                          <span class="typing-text text-white font-mono" data-text="mofa clone-node node-url"></span>
+                          <span class="cursor-blink text-green-400">▊</span>
+                        </div>
+                      </div>
+                      <div class="flex items-center space-x-2 opacity-60">
+                        <span class="text-gray-500 font-mono">#</span>
+                        <div class="flex-1">
+                          <span class="typing-text text-gray-400 font-mono text-sm" data-text="Clone an existing AI agent node" data-delay="1500"></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="terminal-content" data-content="run">
+                    <div class="space-y-3">
+                      <div class="flex items-center space-x-2">
+                        <span class="text-green-400 font-mono">❯</span>
+                        <div class="flex-1">
+                          <span class="typing-text text-white font-mono" data-text="mofa run-node"></span>
+                          <span class="cursor-blink text-green-400">▊</span>
+                        </div>
+                      </div>
+                      <div class="flex items-center space-x-2 opacity-60">
+                        <span class="text-gray-500 font-mono">#</span>
+                        <div class="flex-1">
+                          <span class="typing-text text-gray-400 font-mono text-sm" data-text="Start your data flow" data-delay="1200"></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div id="success-message" class="hidden mt-4">
+                    <div class="flex items-center space-x-2 text-green-400 text-sm font-mono animate-fade-in">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                      </svg>
+                      <span data-en="✅ Command copied to clipboard!" data-zh="✅ 命令已复制到剪贴板！">✅ Command copied to clipboard!</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid md:grid-cols-3 gap-8 quick-start-steps">
+            <div class="text-center group">
+              <div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-red-500 to-orange-500 rounded-full flex items-center justify-center text-white font-bold text-xl group-hover:scale-110 transition-transform duration-200">1</div>
+              <h3 class="text-lg font-semibold mb-2"
+                  data-en="Install MoFA"
+                  data-zh="安装 MoFA">Install MoFA</h3>
+              <p class="text-gray-600 text-sm"
+                 data-en="Run the pip command above to install MoFA framework"
+                 data-zh="运行上面的 pip 命令安装 MoFA 框架">
+                Run the pip command above to install MoFA framework
+              </p>
+            </div>
+
+            <div class="text-center group">
+              <div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center text-white font-bold text-xl group-hover:scale-110 transition-transform duration-200">2</div>
+              <h3 class="text-lg font-semibold mb-2"
+                  data-en="Create Your Agent"
+                  data-zh="创建代理">Create Your Agent</h3>
+              <p class="text-gray-600 text-sm"
+                 data-en="Use our templates or start from scratch with simple YAML configs"
+                 data-zh="使用我们的模板或通过简单的 YAML 配置从零开始">
+                Use our templates or start from scratch with simple YAML configs
+              </p>
+            </div>
+
+            <div class="text-center group">
+              <div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-green-500 to-teal-500 rounded-full flex items-center justify-center text-white font-bold text-xl group-hover:scale-110 transition-transform duration-200">3</div>
+              <h3 class="text-lg font-semibold mb-2"
+                  data-en="Deploy & Scale"
+                  data-zh="部署扩展">Deploy & Scale</h3>
+              <p class="text-gray-600 text-sm"
+                 data-en="Launch your AI agents and scale them across different environments"
+                 data-zh="启动您的 AI 代理并在不同环境中扩展">
+                Launch your AI agents and scale them across different environments
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="mini-divider">
+      <div class="mini-line red-line"></div>
+      <div class="mini-line blue-line"></div>
+      <div class="mini-line yellow-line"></div>
+    </div>
+
+    <section id="why-mofa" class="py-20" style="background-color: #f9fafb;">
+      <div class="container">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold mb-4"
+              data-en="Why Choose <span class='gradient-text'>MoFA</span>"
+              data-zh="为什么选择 <span class='gradient-text'>MoFA</span>">
+            Why Choose <span class="gradient-text">MoFA</span>
+          </h2>
+          <p class="text-xl text-gray-600 max-w-2xl mx-auto"
+             data-en="Making AI development simple, efficient, and enjoyable"
+             data-zh="让 AI 开发变得简单、高效、有趣">
+            Making AI development simple, efficient, and enjoyable
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          <div class="card" style="border: 2px solid var(--mondrian-black); transition: border-width 0.2s ease;" onmouseover="this.style.borderWidth='4px'" onmouseout="this.style.borderWidth='2px'">
+            <div style="display: flex; align-items: flex-start; gap: 16px;">
+              <div style="padding: 12px; border-radius: 8px; background-color: var(--macaron-peach); color: white; flex-shrink: 0;">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M14.25 6.087c0-.355.186-.676.401-.959.221-.29.349-.634.349-1.003 0-1.036-1.007-1.875-2.25-1.875s-2.25.84-2.25 1.875c0 .369.128.713.349 1.003.215.283.401.604.401.959v0a.64.64 0 01-.657.643 48.39 48.39 0 01-4.163-.3c.186 1.613.293 3.25.315 4.907a.656.656 0 01-.658.663v0c-.355 0-.676-.186-.959-.401a1.647 1.647 0 00-1.003-.349c-1.036 0-1.875 1.007-1.875 2.25s.84 2.25 1.875 2.25c.369 0 .713-.128 1.003-.349.283-.215.604-.401.959-.401v0c.31 0 .555.26.532.57a48.039 48.039 0 01-.642 5.056c1.518.19 3.058.309 4.616.354a.64.64 0 00.657-.643v0c0-.355-.186-.676-.401-.959a1.647 1.647 0 01-.349-1.003c0-1.035 1.008-1.875 2.25-1.875 1.243 0 2.25.84 2.25 1.875 0 .369-.128.713-.349 1.003-.215.283-.4.604-.4.959v0c0 .333.277.599.61.58a48.1 48.1 0 005.427-.63 48.05 48.05 0 00.582-4.717.532.532 0 00-.533-.57v0c-.355 0-.676.186-.959.401-.29.221-.634.349-1.003.349-1.035 0-1.875-1.007-1.875-2.25s.84-2.25 1.875-2.25c.37 0 .713.128 1.003.349.283.215.604.401.96.401v0a.656.656 0 00.658-.663 48.422 48.422 0 00-.37-5.36c-1.886.342-3.81.574-5.766.689a.578.578 0 01-.61-.58v0z"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold mb-2"
+                    data-en="Composable Agent Architecture"
+                    data-zh="可组合的代理架构">Composable Agent Architecture</h3>
+                <p class="text-gray-600"
+                   data-en="Build complex AI applications by connecting agents via YAML-defined flows. Leverage a core kernel with modules for RAG (embedding, splitting, vector stores), planning, and tool integration. Easily orchestrate data flow between agents."
+                   data-zh="通过 YAML 定义的数据流连接代理，构建复杂的 AI 应用。利用包含 RAG（嵌入、分割、向量存储）、规划和工具集成等模块的核心内核。轻松编排代理间的数据流动。">
+                  Build complex AI applications by connecting agents via YAML-defined flows. Leverage a core kernel with modules for RAG (embedding, splitting, vector stores), planning, and tool integration. Easily orchestrate data flow between agents.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card" style="border: 2px solid var(--mondrian-black); transition: border-width 0.2s ease;" onmouseover="this.style.borderWidth='4px'" onmouseout="this.style.borderWidth='2px'">
+            <div style="display: flex; align-items: flex-start; gap: 16px;">
+              <div style="padding: 12px; border-radius: 8px; background-color: var(--macaron-lavender); color: white; flex-shrink: 0;">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold mb-2"
+                    data-en="Rapid Agent Development"
+                    data-zh="快速代理开发">Rapid Agent Development</h3>
+                <p class="text-gray-600"
+                   data-en="MoFA offers a clear structure for agent development, significantly reducing boilerplate and letting you focus on core logic. The MoFA Stage visual IDE further accelerates the entire development cycle, from creation to debugging. Get started in just 6 minutes."
+                   data-zh="MoFA 提供清晰的代理开发结构，大幅减少样板代码，让您专注于核心业务逻辑。结合 MoFA Stage 可视化 IDE，可进一步加速从创建到调试的完整开发周期。5分钟即可快速上手。">
+                  MoFA offers a clear structure for agent development, significantly reducing boilerplate and letting you focus on core logic. The MoFA Stage visual IDE further accelerates the entire development cycle, from creation to debugging. Get started in just 6 minutes.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card" style="border: 2px solid var(--mondrian-black); transition: border-width 0.2s ease;" onmouseover="this.style.borderWidth='4px'" onmouseout="this.style.borderWidth='2px'">
+            <div style="display: flex; align-items: flex-start; gap: 16px;">
+              <div style="padding: 12px; border-radius: 8px; background-color: var(--macaron-mint); color: white; flex-shrink: 0;">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold mb-2"
+                    data-en="Rich Agent Hub &amp; Dev Tools"
+                    data-zh="丰富的代理中心与开发工具">Rich Agent Hub &amp; Dev Tools</h3>
+                <p class="text-gray-600"
+                   data-en="Access 500+ pre-built agents from our Agent Hub, covering data connectors, LLM integrations, and specialized tools. MoFA Stage further enhances development with visual agent management, an integrated terminal, and an advanced code editor."
+                   data-zh="从我们的代理中心获取500+预构建代理，涵盖数据连接器、LLM 集成和专用工具。MoFA Stage 通过可视化代理管理、集成终端和高级代码编辑器进一步增强开发体验。">
+                  Access 500+ pre-built agents from our Agent Hub, covering data connectors, LLM integrations, and specialized tools. MoFA Stage further enhances development with visual agent management, an integrated terminal, and an advanced code editor.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card" style="border: 2px solid var(--mondrian-black); transition: border-width 0.2s ease;" onmouseover="this.style.borderWidth='4px'" onmouseout="this.style.borderWidth='2px'">
+            <div style="display: flex; align-items: flex-start; gap: 16px;">
+              <div style="padding: 12px; border-radius: 8px; background-color: var(--macaron-rose); color: white; flex-shrink: 0;">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold mb-2"
+                    data-en="Highly Extensible Framework"
+                    data-zh="高度可扩展框架">Highly Extensible Framework</h3>
+                <p class="text-gray-600"
+                   data-en="Easily write custom Python agents. Integrate third-party tools, models, and data sources through well-defined interfaces. Extend core functionalities like memory (e.g., Mem0 integration) or RAG strategies by implementing custom components."
+                   data-zh="轻松编写自定义 Python 代理。通过定义良好的接口集成第三方工具、模型和数据源。通过实现自定义组件来扩展核心功能，如记忆（例如 Mem0 集成）或 RAG 策略。">
+                  Easily write custom Python agents. Integrate third-party tools, models, and data sources through well-defined interfaces. Extend core functionalities like memory (e.g., Mem0 integration) or RAG strategies by implementing custom components.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-16 mb-8" style="display: none;">
+            <h3 class="text-3xl font-bold"
+                data-en="Highlight: Your AI Agent IDE - <span class='gradient-text'>MoFA Stage</span>"
+                data-zh="核心功能：你的 AI Agent IDE - <span class='gradient-text'>MoFA Stage</span>">
+                Highlight: Your AI Agent IDE - <span class="gradient-text">MoFA Stage</span>
+            </h3>
+        </div>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto text-center mb-12" style="display: none;"
+             data-en="A visual management platform for MoFA - your web-based IDE for AI agents."
+             data-zh="MoFA 的可视化管理平台 - 你的Agent专属 Web IDE.">
+            A visual management platform for MoFA - your web-based IDE.
+          </p>
+        <div class="max-w-6xl mx-auto" style="display: none;">
+          <div class="grid md:grid-cols-3 gap-8 mb-16">
+                         <div class="card" style="border: 2px solid var(--mondrian-black); transition: all 0.3s ease; padding: 16px;" onmouseover="this.style.borderWidth='4px'; this.style.transform='translateY(-8px)'" onmouseout="this.style.borderWidth='2px'; this.style.transform='translateY(0)'">
+               <div style="text-align: center;">
+                 <div style="
+                   width: 48px;
+                   height: 48px;
+                   margin: 0 auto 12px;
+                   background: linear-gradient(135deg, var(--macaron-sky), var(--macaron-lavender));
+                   border-radius: 12px;
+                   display: flex;
+                   align-items: center;
+                   justify-content: center;
+                   color: white;
+                   box-shadow: 0 6px 18px rgba(179, 229, 252, 0.4);
+                 ">
+                   <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"/>
+                   </svg>
+                 </div>
+                 <h3 class="text-base font-semibold mb-1"
+                     data-en="Visual Agent Management"
+                     data-zh="可视化代理管理">Visual Agent Management</h3>
+                 <p class="text-gray-600 text-xs leading-snug"
+                    data-en="Create, edit, and manage AI agents through an intuitive web interface"
+                    data-zh="通过直观的网页界面创建、编辑和管理 AI 代理">
+                   Create, edit, and manage AI agents through an intuitive web interface - no command line expertise required
+                 </p>
+               </div>
+             </div>
+
+                         <div class="card" style="border: 2px solid var(--mondrian-black); transition: all 0.3s ease; padding: 16px;" onmouseover="this.style.borderWidth='4px'; this.style.transform='translateY(-8px)'" onmouseout="this.style.borderWidth='2px'; this.style.transform='translateY(0)'">
+               <div style="text-align: center;">
+                 <div style="
+                   width: 48px;
+                   height: 48px;
+                   margin: 0 auto 12px;
+                   background: linear-gradient(135deg, var(--macaron-coral), var(--macaron-lemon));
+                   border-radius: 12px;
+                   display: flex;
+                   align-items: center;
+                   justify-content: center;
+                   color: white;
+                   box-shadow: 0 6px 18px rgba(255, 171, 145, 0.4);
+                 ">
+                   <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                   </svg>
+                 </div>
+                 <h3 class="text-base font-semibold mb-1"
+                     data-en="Integrated Terminal"
+                     data-zh="集成终端">Integrated Terminal</h3>
+                 <p class="text-gray-600 text-xs leading-snug"
+                    data-en="Built-in web terminal with SSH access - execute commands and monitor agents directly from your browser"
+                    data-zh="内置网页终端支持 SSH 访问 - 直接在浏览器中执行命令和监控代理">
+                   Built-in web terminal with SSH access - execute commands and monitor agents directly from your browser
+                 </p>
+               </div>
+             </div>
+
+                         <div class="card" style="border: 2px solid var(--mondrian-black); transition: all 0.3s ease; padding: 16px;" onmouseover="this.style.borderWidth='4px'; this.style.transform='translateY(-8px)'" onmouseout="this.style.borderWidth='2px'; this.style.transform='translateY(0)'">
+               <div style="text-align: center;">
+                 <div style="
+                   width: 48px;
+                   height: 48px;
+                   margin: 0 auto 12px;
+                   background: linear-gradient(135deg, var(--macaron-sage), var(--macaron-mint));
+                   border-radius: 12px;
+                   display: flex;
+                   align-items: center;
+                   justify-content: center;
+                   color: white;
+                   box-shadow: 0 6px 18px rgba(200, 230, 201, 0.4);
+                 ">
+                   <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
+                   </svg>
+                 </div>
+                 <h3 class="text-base font-semibold mb-1"
+                     data-en="Advanced Code Editor"
+                     data-zh="代码编辑器">Code Editor</h3>
+                 <p class="text-gray-600 text-xs leading-snug"
+                    data-en="Monaco-powered editor with syntax highlighting, auto-completion, and instant Markdown preview"
+                    data-zh="基于 Monaco 的编辑器，支持语法高亮、自动补全和 Markdown 即时预览">
+                   Monaco-powered editor with syntax highlighting, auto-completion, and instant Markdown preview - just like VS Code
+                 </p>
+               </div>
+             </div>
+          </div>
+
+          <div class="bg-white rounded-lg shadow-lg p-8" style="border: 2px solid var(--mondrian-black); display: none;">
+            <div class="text-center mb-8">
+              <h3 class="text-2xl font-bold mb-4"
+                  data-en="Full-Stack Architecture"
+                  data-zh="全栈架构">Full-Stack Architecture</h3>
+              <p class="text-gray-600"
+                 data-en="Built with modern technologies for optimal performance and developer experience"
+                 data-zh="使用现代技术构建，确保最佳性能和开发体验">
+                Built with modern technologies for optimal performance and developer experience
+              </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12">
+              <div>
+                <h4 class="text-lg font-semibold mb-4 flex items-center gap-2"
+                    data-en="🎨 Frontend Stack"
+                    data-zh="🎨 前端技术栈">
+                  🎨 Frontend Stack
+                </h4>
+                <div class="space-y-3">
+                  <div class="flex items-center gap-3">
+                    <div style="width: 12px; height: 12px; background: #42b883; border-radius: 50%;"></div>
+                    <span class="font-medium">Vue 3</span>
+                    <span class="text-sm text-gray-500"
+                          data-en="Progressive Framework"
+                          data-zh="渐进式框架">Progressive Framework</span>
+                  </div>
+                  <div class="flex items-center gap-3">
+                    <div style="width: 12px; height: 12px; background: #409eff; border-radius: 50%;"></div>
+                    <span class="font-medium">Element Plus</span>
+                    <span class="text-sm text-gray-500"
+                          data-en="UI Components"
+                          data-zh="UI 组件库">UI Components</span>
+                  </div>
+                  <div class="flex items-center gap-3">
+                    <div style="width: 12px; height: 12px; background: var(--mondrian-blue); border-radius: 50%;"></div>
+                    <span class="font-medium">Monaco Editor</span>
+                    <span class="text-sm text-gray-500"
+                          data-en="VS Code Engine"
+                          data-zh="VS Code 引擎">VS Code Engine</span>
+                  </div>
+                  <div class="flex items-center gap-3">
+                    <div style="width: 12px; height: 12px; background: #000; border-radius: 50%;"></div>
+                    <span class="font-medium">XTerm.js</span>
+                    <span class="text-sm text-gray-500"
+                          data-en="Terminal Emulation"
+                          data-zh="终端模拟">Terminal Emulation</span>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <h4 class="text-lg font-semibold mb-4 flex items-center gap-2"
+                    data-en="⚙️ Backend Stack"
+                    data-zh="⚙️ 后端技术栈">
+                  ⚙️ Backend Stack
+                </h4>
+                <div class="space-y-3">
+                  <div class="flex items-center gap-3">
+                    <div style="width: 12px; height: 12px; background: #306998; border-radius: 50%;"></div>
+                    <span class="font-medium">Python + Flask</span>
+                    <span class="text-sm text-gray-500"
+                          data-en="RESTful API"
+                          data-zh="RESTful API">RESTful API</span>
+                  </div>
+                  <div class="flex items-center gap-3">
+                    <div style="width: 12px; height: 12px; background: var(--mondrian-red); border-radius: 50%;"></div>
+                    <span class="font-medium">WebSocket</span>
+                    <span class="text-sm text-gray-500"
+                          data-en="Real-time Communication"
+                          data-zh="实时通信">Real-time Communication</span>
+                  </div>
+                  <div class="flex items-center gap-3">
+                    <div style="width: 12px; height: 12px; background: #ff6b35; border-radius: 50%;"></div>
+                    <span class="font-medium">SSH Integration</span>
+                    <span class="text-sm text-gray-500"
+                          data-en="Terminal Access"
+                          data-zh="终端访问">Terminal Access</span>
+                  </div>
+                  <div class="flex items-center gap-3">
+                    <div style="width: 12px; height: 12px; background: var(--mondrian-yellow); border-radius: 50%;"></div>
+                    <span class="font-medium">ttyd Service</span>
+                    <span class="text-sm text-gray-500"
+                          data-en="Web Terminal"
+                          data-zh="网页终端">Web Terminal</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="text-center mt-12">
+            <a href="https://github.com/mofa-org/mofa-stage" target="_blank" rel="noopener noreferrer" class="btn-primary" style="font-size: 1.125rem; padding: 16px 32px; margin-right: 16px; background: linear-gradient(135deg, var(--macaron-peach), var(--mondrian-red));"
+               data-en="🚀 Explore MoFA_Stage"
+               data-zh="🚀 探索 MoFA_Stage">
+              <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+              </svg>
+              <span data-en="Explore MoFA_Stage" data-zh="探索 MoFA_Stage">Explore MoFA_Stage</span>
+            </a>
+            <a href="https://github.com/mofa-org/mofa-stage/blob/main/README_cn.md" target="_blank" rel="noopener noreferrer" class="btn-outline" style="font-size: 1.125rem; padding: 16px 32px;"
+               data-en="📖 Quick Start Guide"
+               data-zh="📖 快速开始指南">
+              📖 Quick Start Guide
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="mini-divider">
+      <div class="mini-line blue-line"></div>
+      <div class="mini-line yellow-line"></div>
+      <div class="mini-line red-line"></div>
+    </div>
+
+    <WorkflowShowcase />
+
+    <div class="mini-divider">
+      <div class="mini-line yellow-line"></div>
+      <div class="mini-line red-line"></div>
+      <div class="mini-line blue-line"></div>
+    </div>
+
+    <section class="py-20" style="background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);">
+      <div class="container">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold mb-4"
+              data-en="See MoFA in <span class='gradient-text'>Action</span>"
+              data-zh="观看 MoFA <span class='gradient-text'>实战演示</span>">
+            See MoFA in <span class="gradient-text">Action</span>
+          </h2>
+          <p class="text-xl text-gray-600 max-w-2xl mx-auto"
+             data-en="Watch how developers use MoFA to build sophisticated AI applications in minutes"
+             data-zh="观看开发者如何在几分钟内使用 MoFA 构建复杂的人工智能应用">Watch how developers use MoFA to build sophisticated AI applications in minutes</p>
+
+        <div class="video-container rounded-lg shadow-2xl overflow-hidden mx-auto" style="max-width: 800px; background-color: #2d3748;">
+          <iframe
+            id="demo-video-iframe"
+            width="100%"
+            style="aspect-ratio: 16/9; display: block;"
+            src="https://www.youtube.com/embed/-QApoNUPG-U"
+            title="MoFA in Action Demo Video"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+    <div class="mini-divider">
+      <div class="mini-line red-line"></div>
+      <div class="mini-line blue-line"></div>
+      <div class="mini-line yellow-line"></div>
+    </div>
+
+    <HallOfFame />
+
+    <div class="mini-divider" style="display: none;">
+      <div class="mini-line yellow-line"></div>
+      <div class="mini-line red-line"></div>
+      <div class="mini-line blue-line"></div>
+    </div>
+  </main>
+</BaseLayout>
+
+<script>
+    // 全局变量
+    let currentTab = 'install';
+    let typingTimeouts = [];
+
+    // 获取当前活动标签的命令
+    function getCurrentCommand() {
+      const activeContent = document.querySelector('.terminal-content.active');
+      const typingTexts = activeContent.querySelectorAll('.typing-text');
+
+      // 获取主要命令（第一个非注释行）
+      for (let text of typingTexts) {
+        const textContent = text.getAttribute('data-text');
+        if (textContent && !textContent.startsWith('#') && !textContent.includes('or with') && !textContent.includes('Clone an') && !textContent.includes('Start your')) {
+          return textContent;
+        }
+      }
+      return 'mofa --help'; // 默认命令
+    }
+
+    // 复制到剪贴板功能
+    function copyToClipboard() {
+      const command = getCurrentCommand();
+      const copyBtn = document.getElementById('main-copy-btn');
+      const successMessage = document.getElementById('success-message');
+
+      // 使用现代 Clipboard API
+      if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(command).then(() => {
+          showCopySuccess(copyBtn, successMessage);
+        }).catch(() => {
+          fallbackCopyTextToClipboard(command, copyBtn, successMessage);
+        });
+      } else {
+        // 降级方案
+        fallbackCopyTextToClipboard(command, copyBtn, successMessage);
+      }
+    }
+
+    // 降级复制方案
+    function fallbackCopyTextToClipboard(text, copyBtn, successMessage) {
+      const textArea = document.createElement('textarea');
+      textArea.value = text;
+      textArea.style.position = 'fixed';
+      textArea.style.left = '-999999px';
+      textArea.style.top = '-999999px';
+      document.body.appendChild(textArea);
+      textArea.focus();
+      textArea.select();
+
+      try {
+        document.execCommand('copy');
+        showCopySuccess(copyBtn, successMessage);
+      } catch (err) {
+        console.error('复制失败:', err);
+      }
+
+      document.body.removeChild(textArea);
+    }
+
+    // 显示复制成功状态
+    function showCopySuccess(copyBtn, successMessage) {
+      // 更新按钮状态
+      copyBtn.innerHTML = `
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polyline points="20 6 9 17 4 12"></polyline>
+        </svg>
+        <span>Copied!</span>
+      `;
+      copyBtn.classList.add('copied');
+
+      // 显示成功消息
+      successMessage.classList.remove('hidden');
+
+      // 2秒后恢复原状
+      setTimeout(() => {
+        copyBtn.innerHTML = `
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+            <path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"></path>
+          </svg>
+          <span>Copy</span>
+        `;
+        copyBtn.classList.remove('copied');
+        successMessage.classList.add('hidden');
+      }, 2000);
+    }
+
+    // 打字机效果
+    function typeText(element, text, speed = 50) {
+      return new Promise((resolve) => {
+        element.textContent = '';
+        element.classList.add('typing');
+
+        let i = 0;
+        const timer = setInterval(() => {
+          if (i < text.length) {
+            element.textContent += text.charAt(i);
+            element.style.width = ((i + 1) / text.length * 100) + '%';
+            i++;
+          } else {
+            clearInterval(timer);
+            element.style.width = '100%';
+            resolve();
+          }
+        }, speed);
+
+        typingTimeouts.push(timer);
+      });
+    }
+
+    // 清除所有打字动画
+    function clearTypingAnimations() {
+      typingTimeouts.forEach(timeout => clearInterval(timeout));
+      typingTimeouts = [];
+
+      // 重置所有打字文本
+      const allTypingTexts = document.querySelectorAll('.typing-text');
+      allTypingTexts.forEach(text => {
+        text.classList.remove('typing');
+        text.textContent = '';
+        text.style.width = '0';
+        text.style.opacity = '0';
+      });
+    }
+
+    // 启动打字动画序列
+    async function startTypingSequence(container) {
+      const typingTexts = container.querySelectorAll('.typing-text');
+
+      for (let text of typingTexts) {
+        const delay = parseInt(text.getAttribute('data-delay') || 0);
+        const textContent = text.getAttribute('data-text');
+
+        if (delay > 0) {
+          await new Promise(resolve => {
+            const timer = setTimeout(resolve, delay);
+            typingTimeouts.push(timer);
+          });
+        }
+
+        await typeText(text, textContent, 50);
+      }
+    }
+
+    // 标签页切换
+    function switchTab(tabName) {
+      if (currentTab === tabName) return;
+
+      // 清除当前动画
+      clearTypingAnimations();
+
+      // 更新标签状态
+      document.querySelectorAll('.terminal-tab').forEach(tab => {
+        tab.classList.remove('active');
+      });
+      document.querySelector(`[data-tab="${tabName}"]`).classList.add('active');
+
+      // 更新内容
+      document.querySelectorAll('.terminal-content').forEach(content => {
+        content.classList.remove('active');
+      });
+      const newContent = document.querySelector(`[data-content="${tabName}"]`);
+      newContent.classList.add('active');
+
+      currentTab = tabName;
+
+      // 启动新的打字动画
+      setTimeout(() => {
+        startTypingSequence(newContent);
+      }, 100);
+    }
+
+    // 初始化终端
+    function initTerminal() {
+      // 绑定标签页点击事件
+      document.querySelectorAll('.terminal-tab').forEach(tab => {
+        tab.addEventListener('click', () => {
+          const tabName = tab.getAttribute('data-tab');
+          switchTab(tabName);
+        });
+      });
+
+      // 绑定复制按钮事件
+      const copyBtn = document.getElementById('main-copy-btn');
+      if (copyBtn) {
+        copyBtn.addEventListener('click', copyToClipboard);
+      }
+
+      // 启动初始动画
+      const initialContent = document.querySelector('.terminal-content.active');
+      if (initialContent) {
+        setTimeout(() => {
+          startTypingSequence(initialContent);
+        }, 500);
+      }
+    }
+
+    // 定义支持的语言
+    const languages = {
+      'en': {
+        name: 'English',
+        flag: '🇺🇸'
+      },
+      'zh': {
+        name: '中文',
+        flag: '🇨🇳'
+      }
+    };
+
+    let currentLang = 'en';
+
+    function updateLanguage(lang) {
+      currentLang = lang;
+
+      // 更新页面title
+      const pageTitle = document.getElementById('page-title');
+      if (pageTitle) {
+        pageTitle.textContent = languages[lang].title;
+      }
+
+      // 更新html lang属性
+      const htmlRoot = document.getElementById('html-root');
+      if (htmlRoot) {
+        htmlRoot.setAttribute('lang', lang === 'zh' ? 'zh-CN' : 'en');
+      }
+
+      // 更新语言切换按钮显示
+      const currentLangEl = document.getElementById('current-lang');
+      const otherLang = lang === 'en' ? 'zh' : 'en';
+      if (currentLangEl) {
+        currentLangEl.textContent = `${languages[otherLang].flag} ${languages[otherLang].name}`;
+      }
+
+      // 更新所有带有data-en和data-zh属性的元素
+      const elements = document.querySelectorAll('[data-en][data-zh]');
+      elements.forEach(element => {
+        const text = element.getAttribute(`data-${lang}`);
+        if (!text) return;
+        // 对于下拉按钮，只更新内部span的文本，保留svg图标
+        if (element.classList.contains('dropdown-toggle')) {
+          const span = element.querySelector('span');
+          if (span) {
+            span.textContent = text;
+          }
+        } else {
+          element.innerHTML = text;
+        }
+      });
+
+      // 特别处理描述段落的显示/隐藏
+      const zhDescription = document.querySelector('.description-text-zh');
+      const enDescription = document.querySelector('.description-text-en');
+
+      if (zhDescription && enDescription) {
+        if (lang === 'zh') {
+          zhDescription.style.display = 'block';
+          enDescription.style.display = 'none';
+        } else {
+          zhDescription.style.display = 'none';
+          enDescription.style.display = 'block';
+        }
+      }
+
+      // 更新视频iframe的src
+      const videoIframe = document.getElementById('demo-video-iframe');
+      if (videoIframe) {
+        if (lang === 'zh') {
+          videoIframe.src = "//player.bilibili.com/player.html?bvid=BV15fQPY6EnD&page=1&high_quality=1&danmaku=0";
+        } else { // 'en' or default
+          videoIframe.src = "https://www.youtube.com/embed/-QApoNUPG-U";
+        }
+      }
+
+      // 保存语言设置到localStorage
+      localStorage.setItem('mofa-language', lang);
+    }
+
+    // 初始化语言
+    function initLanguage() {
+      // 从localStorage读取保存的语言设置
+      const savedLang = localStorage.getItem('mofa-language');
+
+      if (savedLang && languages[savedLang]) {
+        updateLanguage(savedLang);
+      } else {
+        // 默认中文
+        updateLanguage('en');
+      }
+    }
+
+    // 语言切换事件（桌面端，移动端由Header组件处理）
+    const langToggleEl = document.getElementById('lang-toggle');
+    if (langToggleEl) {
+      langToggleEl.addEventListener('click', () => {
+        const newLang = currentLang === 'en' ? 'zh' : 'en';
+        updateLanguage(newLang);
+      });
+    }
+
+    // 页面加载时初始化
+    document.addEventListener('DOMContentLoaded', () => {
+      initLanguage();
+      initTerminal();
+    });
+
+    // 字母拖拽功能
+    document.addEventListener('DOMContentLoaded', function() {
+      const draggableLetters = document.querySelectorAll('.logo-letter.draggable');
+      let isDragging = false;
+      let currentLetter = null;
+      let currentLetterContainer = null;
+      let startX = 0;
+      let startY = 0;
+      let initialLeft = 0;
+      let initialTop = 0;
+
+      draggableLetters.forEach(letter => {
+        // 鼠标按下
+        letter.addEventListener('mousedown', function(e) {
+          e.preventDefault();
+          isDragging = true;
+          currentLetter = letter;
+          currentLetterContainer = letter.closest('.logo-letter-container');
+
+          // 添加拖拽样式
+          letter.classList.add('dragging');
+
+          // 记录初始位置
+          startX = e.clientX;
+          startY = e.clientY;
+
+          // 获取元素当前位置
+          const rect = currentLetterContainer.getBoundingClientRect();
+          const containerRect = currentLetterContainer.offsetParent.getBoundingClientRect();
+          initialLeft = rect.left - containerRect.left;
+          initialTop = rect.top - containerRect.top;
+
+          // 临时禁用动画
+          currentLetterContainer.style.animation = 'none';
+        });
+
+        // 触摸开始（移动端支持）
+        letter.addEventListener('touchstart', function(e) {
+          e.preventDefault();
+          isDragging = true;
+          currentLetter = letter;
+          currentLetterContainer = letter.closest('.logo-letter-container');
+
+          letter.classList.add('dragging');
+
+          const touch = e.touches[0];
+          startX = touch.clientX;
+          startY = touch.clientY;
+
+          const rect = currentLetterContainer.getBoundingClientRect();
+          const containerRect = currentLetterContainer.offsetParent.getBoundingClientRect();
+          initialLeft = rect.left - containerRect.left;
+          initialTop = rect.top - containerRect.top;
+
+          currentLetterContainer.style.animation = 'none';
+        });
+      });
+
+      // 鼠标移动
+      document.addEventListener('mousemove', function(e) {
+        if (!isDragging || !currentLetter || !currentLetterContainer) return;
+
+        e.preventDefault();
+
+        const deltaX = e.clientX - startX;
+        const deltaY = e.clientY - startY;
+
+        // 计算新位置，并限制非 A 字母在 logo 容器内移动
+        let newLeft = initialLeft + deltaX;
+        let newTop = initialTop + deltaY;
+
+        if (!currentLetter.classList.contains('letter-a')) {
+          const parent = currentLetterContainer.offsetParent;
+          const maxLeft = parent.clientWidth - currentLetterContainer.offsetWidth;
+          const maxTop = parent.clientHeight - currentLetterContainer.offsetHeight;
+
+          newLeft = Math.max(0, Math.min(maxLeft, newLeft));
+          newTop = Math.max(0, Math.min(maxTop, newTop));
+        }
+
+        currentLetterContainer.style.left = newLeft + 'px';
+        currentLetterContainer.style.top = newTop + 'px';
+      });
+
+      // 触摸移动
+      document.addEventListener('touchmove', function(e) {
+        if (!isDragging || !currentLetter || !currentLetterContainer) return;
+
+        e.preventDefault();
+
+        const touch = e.touches[0];
+        const deltaX = touch.clientX - startX;
+        const deltaY = touch.clientY - startY;
+
+        // 计算新位置，并限制非 A 字母在 logo 容器内移动
+        let newLeft = initialLeft + deltaX;
+        let newTop = initialTop + deltaY;
+
+        if (!currentLetter.classList.contains('letter-a')) {
+          const parent = currentLetterContainer.offsetParent;
+          const maxLeft = parent.clientWidth - currentLetterContainer.offsetWidth;
+          const maxTop = parent.clientHeight - currentLetterContainer.offsetHeight;
+
+          newLeft = Math.max(0, Math.min(maxLeft, newLeft));
+          newTop = Math.max(0, Math.min(maxTop, newTop));
+        }
+
+        currentLetterContainer.style.left = newLeft + 'px';
+        currentLetterContainer.style.top = newTop + 'px';
+      });
+
+      // 鼠标释放
+      document.addEventListener('mouseup', function() {
+        if (isDragging && currentLetter && currentLetterContainer) {
+          currentLetter.classList.remove('dragging');
+
+          // 重新启用动画
+          setTimeout(() => {
+            currentLetterContainer.style.animation = '';
+          }, 100);
+
+          isDragging = false;
+          currentLetter = null;
+          currentLetterContainer = null;
+        }
+      });
+
+      // 触摸结束
+      document.addEventListener('touchend', function() {
+        if (isDragging && currentLetter && currentLetterContainer) {
+          currentLetter.classList.remove('dragging');
+
+          setTimeout(() => {
+            currentLetterContainer.style.animation = '';
+          }, 100);
+
+          isDragging = false;
+          currentLetter = null;
+          currentLetterContainer = null;
+        }
+      });
+
+      // 双击重置位置
+      draggableLetters.forEach(letter => {
+        letter.addEventListener('dblclick', function() {
+          // 获取字母容器
+          const letterContainer = letter.closest('.logo-letter-container');
+          if (!letterContainer) return;
+
+          // 重置到原始位置
+          const originalPositions = {
+            'letter-m': { top: '12px', left: '14px' },
+            'letter-o': { top: '66px', left: '14px' },
+            'letter-f': { top: '65px', left: '100px' },
+            'letter-a': { top: '94.5px', left: '109px' }
+          };
+
+          const letterClass = Array.from(letter.classList).find(cls => cls.startsWith('letter-'));
+          if (letterClass && originalPositions[letterClass]) {
+            letterContainer.style.top = originalPositions[letterClass].top;
+            letterContainer.style.left = originalPositions[letterClass].left;
+          }
+        });
+      });
+
+      // 添加金属光泽效果
+      const letterContainers = document.querySelectorAll('.logo-letter-container');
+
+      // 处理鼠标移动，更新光泽效果位置
+      letterContainers.forEach(container => {
+        container.addEventListener('mousemove', function(e) {
+          if (isDragging) return; // 拖拽时不应用效果
+
+          const rect = container.getBoundingClientRect();
+
+          // 计算鼠标在元素内的相对位置 (0-1)
+          const x = (e.clientX - rect.left) / rect.width;
+          const y = (e.clientY - rect.top) / rect.height;
+
+          // 更新光泽效果位置 (通过 CSS 变量)
+          container.style.setProperty('--shine-x', `${x * 100}%`);
+          container.style.setProperty('--shine-y', `${y * 100}%`);
+
+          // 添加激活类以显示光泽效果
+          container.classList.add('shine-active');
+        });
+
+        // 鼠标离开时移除激活类
+        container.addEventListener('mouseleave', function() {
+          container.classList.remove('shine-active');
+        });
+
+        // 若该容器包含 F 字母，则不添加数据流效果
+        if (!container.querySelector('.letter-f')) {
+          let dataFlow = container.querySelector('.data-flow');
+          if (!dataFlow) {
+            dataFlow = document.createElement('div');
+            dataFlow.className = 'data-flow';
+            container.appendChild(dataFlow);
+          }
+        }
+      });
+    });
+  </script>
