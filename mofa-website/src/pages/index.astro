@@ -46,7 +46,7 @@
     .blob-3{width:700px;height:700px;background:var(--cyan);bottom:-15%;left:30%;animation-delay:-10s;animation-duration:30s}
     .blob-4{width:400px;height:400px;background:var(--magenta);top:60%;left:10%;animation-delay:-15s;animation-duration:22s}
     .blob-5{width:550px;height:550px;background:var(--teal);top:10%;right:20%;animation-delay:-8s;animation-duration:28s}
-    @keyframes blobFloat{0%,100%{transform:translate(0,0) scale(1)}25%{transform:translate(80px,-60px) scale(1.1)}50%{transform:translate(-40px,80px) scale(.9)}75%{transform:translate(60px,40px) scale(1.05)}}
+    @keyframes blobFloat{0%,100%{transform:translate(0,0) scale(1) rotate(0deg)}25%{transform:translate(80px,-60px) scale(1.15) rotate(5deg)}50%{transform:translate(-40px,80px) scale(.85) rotate(-3deg)}75%{transform:translate(60px,40px) scale(1.08) rotate(2deg)}}
 
     /* L1: Three.js particles */
     #three-bg{position:fixed;inset:0;z-index:1}
@@ -66,7 +66,7 @@
     .fr4{width:120px;height:120px;border-color:var(--gold);top:30%;right:30%;animation-duration:28s;animation-direction:reverse}
     .fr5{width:250px;height:250px;border-color:var(--teal);top:70%;left:15%;animation-duration:38s}
     .fr6{width:350px;height:350px;border-color:var(--blue);top:5%;right:5%;animation-duration:45s;animation-direction:reverse}
-    @keyframes ringDrift{0%{transform:translate(0,0) rotate(0deg)}25%{transform:translate(40px,-30px) rotate(90deg)}50%{transform:translate(-20px,50px) rotate(180deg)}75%{transform:translate(30px,20px) rotate(270deg)}100%{transform:translate(0,0) rotate(360deg)}}
+    @keyframes ringDrift{0%{transform:translate(0,0) rotate(0deg) scale(1)}20%{transform:translate(40px,-30px) rotate(72deg) scale(1.05)}40%{transform:translate(-20px,50px) rotate(144deg) scale(.95)}60%{transform:translate(50px,20px) rotate(216deg) scale(1.08)}80%{transform:translate(-30px,-40px) rotate(288deg) scale(.97)}100%{transform:translate(0,0) rotate(360deg) scale(1)}}
 
     /* L5: Bokeh — removed */
 
@@ -102,6 +102,8 @@
 
     /* Glitch text */
     #act-choice{flex-direction:column}
+    .pill-hint{position:relative;z-index:4;margin-top:16px;font-size:.7rem;font-weight:300;letter-spacing:.25em;text-transform:uppercase;color:rgba(255,255,255,0);animation:hintIn 1.5s 4s forwards}
+    @keyframes hintIn{0%{color:rgba(255,255,255,0)}50%{color:rgba(255,255,255,.15)}100%{color:rgba(255,255,255,.1)}}
     .glitch-word{position:relative;z-index:3;font-size:clamp(5rem,14vw,12rem);font-weight:900;letter-spacing:-.05em;line-height:1;pointer-events:none;user-select:none;mix-blend-mode:difference}
     .glitch-word .ch{display:inline-block;opacity:0;animation:chIn .18s forwards;animation-delay:var(--d)}
     @keyframes chIn{0%{opacity:0;transform:translateY(60px) scaleY(1.8) skewX(30deg);filter:blur(12px)}50%{opacity:1;transform:translateY(-8px) scaleY(.95) skewX(-4deg);filter:blur(0)}100%{opacity:1;transform:none}}
@@ -269,6 +271,7 @@
       <canvas id="pill-canvas"></canvas>
       <img src="/mofa-logo.png" alt="MoFA" class="hero-logo" />
       <div class="glitch-word" id="glitch-el"></div>
+      <div class="pill-hint" id="pill-hint" data-en="pick a side" data-zh="选一边">pick a side</div>
       <div class="scroll-cue"><div class="pill-shape"></div></div>
     </section>
 
@@ -468,6 +471,8 @@ let cx=0,cy=0;
     setTimeout(()=>flash.className='pill-flash',600);
     document.getElementById('scroll-wrap').classList.add('shake');
     setTimeout(()=>document.getElementById('scroll-wrap').classList.remove('shake'),400);
+    const hint=document.getElementById('pill-hint');
+    if(hint)hint.style.opacity='0';
     const target=type==='blue'?'#act-blue':'#act-red';
     document.querySelector(target).scrollIntoView({behavior:'smooth'});
   });
@@ -485,9 +490,10 @@ let cx=0,cy=0;
     rL.position.set(5+Math.sin(t+2)*2,-2+Math.cos(t*.7)*1.5,5);
     cL.position.set(Math.sin(t*.4)*3,4+Math.cos(t*.3),3);
     gL.position.set(Math.cos(t*.5)*2,-3+Math.sin(t*.4),4);
-    // Hover glow
-    bPill.children.forEach(m=>{if(m.material)m.material.emissiveIntensity=hovered==='blue'?.4:.15});
-    rPill.children.forEach(m=>{if(m.material)m.material.emissiveIntensity=hovered==='red'?.4:.15});
+    // Hover glow + idle breathing pulse
+    const breath=.12+Math.sin(t*1.5)*.06;
+    bPill.children.forEach(m=>{if(m.material)m.material.emissiveIntensity=hovered==='blue'?.4:breath});
+    rPill.children.forEach(m=>{if(m.material)m.material.emissiveIntensity=hovered==='red'?.4:breath});
     r.render(scene,cam);
   }();
   addEventListener('resize',()=>{cam.aspect=innerWidth/innerHeight;cam.updateProjectionMatrix();r.setSize(innerWidth,innerHeight)});
@@ -636,6 +642,38 @@ addEventListener('scroll',()=>{
   el.style.opacity=i*.2;
   if(i>0)el.style.boxShadow=`inset ${i*12}px 0 ${i*30}px rgba(239,68,68,.4),inset ${-i*12}px 0 ${i*30}px rgba(59,130,246,.4)`;
 },{passive:true});
+
+// ======== ORGANIC: Scroll-linked blob color shift ========
+!function(){
+  const blobs=document.querySelectorAll('.blob');
+  const palettes=[
+    ['#3b82f6','#7c3aed','#06b6d4','#ec4899','#14b8a6'],
+    ['#ef4444','#f97316','#f59e0b','#ec4899','#7c3aed'],
+  ];
+  addEventListener('scroll',()=>{
+    const t=scrollP;
+    blobs.forEach((b,i)=>{
+      const c0=palettes[0][i],c1=palettes[1][i];
+      b.style.background=t<.5?c0:c1;
+      b.style.opacity=.08+Math.sin(t*Math.PI+i)*.06;
+    });
+  },{passive:true});
+}();
+
+// ======== ORGANIC: Rings follow mouse gently ========
+!function(){
+  const rings=document.querySelectorAll('.float-ring');
+  let rmx=0,rmy=0;
+  addEventListener('mousemove',e=>{rmx=(e.clientX/innerWidth-.5)*30;rmy=(e.clientY/innerHeight-.5)*20});
+  !function tick(){
+    requestAnimationFrame(tick);
+    rings.forEach((r,i)=>{
+      const depth=(i+1)/rings.length;
+      r.style.marginLeft=rmx*depth+'px';
+      r.style.marginTop=rmy*depth+'px';
+    });
+  }();
+}();
 
 // ======== SCROLL REVEALS ========
 const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in')})},{threshold:.2});
