@@ -319,7 +319,7 @@
     <!-- ACT 1: CHOOSE -->
     <section class="act" id="act-choice">
       <video class="vid-bg" id="vid-hero-calm" autoplay muted loop playsinline src="/videos/redesign/empire-bg.mp4" style="transition:opacity 1s"></video>
-      <video class="vid-bg" id="vid-hero-shatter" muted playsinline preload="auto" src="/videos/redesign/shatter.mp4" style="opacity:0;transition:opacity 1s"></video>
+      <video class="vid-bg" id="vid-hero-shatter" muted playsinline preload="auto" src="/videos/redesign/shatter-clip.mp4" style="opacity:0;transition:opacity 1s"></video>
       <canvas id="pill-canvas"></canvas>
       <img src="/mofa-logo.png" alt="MoFA" class="hero-logo" />
       <div class="glitch-word" id="glitch-el"></div>
@@ -499,8 +499,9 @@ let cx=0,cy=0;
     g.userData.type=px<0?'blue':'red';
     return g;
   }
-  const bPill=pill(0x0044cc,0x001a66,-2.4);
-  const rPill=pill(0xcc0000,0x660000,2.4);
+  const bPill=window._bPill=pill(0x0044cc,0x001a66,-2.4);
+  bPill.position.y=1.2;
+  const rPill=window._rPill=pill(0xcc0000,0x660000,2.4);
   scene.add(bPill,rPill);
 
   // Raycaster for click
@@ -628,8 +629,8 @@ let cx=0,cy=0;
         overlay.style.inset='0';
         overlay.style.width='100vw';
         overlay.style.height='100vh';
-        overlay.currentTime=2.5;
-        overlay.playbackRate=1.6;
+        overlay.currentTime=0;
+        overlay.playbackRate=1.4;
         overlay.play().catch(()=>{});
         overlay.style.opacity='.7';
         // Fade out overlay after 3s
@@ -664,7 +665,7 @@ let cx=0,cy=0;
   const clock=new THREE.Clock();
   !function anim(){
     requestAnimationFrame(anim);const t=clock.getElapsedTime();
-    bPill.position.y=Math.sin(t*.7)*.35;bPill.rotation.y=t*.25;
+    bPill.position.y=1.2+Math.sin(t*.7)*.35;bPill.rotation.y=t*.25;
     rPill.position.y=Math.sin(t*.7+1.8)*.4;rPill.rotation.y=-t*.3;
     bPill.position.x=-2.4+pmx*.35;rPill.position.x=2.4+pmx*.35;
     cam.position.y=pmy*-.4;cam.lookAt(0,0,0);
@@ -903,18 +904,20 @@ document.querySelectorAll('.vid-bg').forEach(v=>{
     const vCalm=document.getElementById('vid-hero-calm');
     const vShatter=document.getElementById('vid-hero-shatter');
     if(vCalm&&vShatter){vCalm.style.opacity='1';vShatter.style.opacity='0'}
-    // Make clicked blue pill visible again for re-choosing
-    bPill.visible=true;bPill.children.forEach(m=>{if(m.material)m.material.opacity=.94});
-    rPill.visible=true;rPill.children.forEach(m=>{if(m.material)m.material.opacity=.94});
+    // Make pills visible again for re-choosing
+    const bp=window._bPill,rp=window._rPill;
+    if(bp){bp.visible=true;bp.children.forEach(m=>{if(m.material)m.material.opacity=.94})}
+    if(rp){rp.visible=true;rp.children.forEach(m=>{if(m.material)m.material.opacity=.94})}
     // Scroll back
     document.getElementById('act-choice').scrollIntoView({behavior:'smooth'});
     // Pulse the red pill after arrival
     setTimeout(()=>{
+      if(!rp)return;
       let n=0;
       const iv=setInterval(()=>{
         const on=n%2===0;
-        rPill.children.forEach(m=>{if(m.material)m.material.emissiveIntensity=on?.7:.12});
-        rPill.scale.setScalar(on?1.15:1);
+        rp.children.forEach(m=>{if(m.material)m.material.emissiveIntensity=on?.7:.12});
+        rp.scale.setScalar(on?1.15:1);
         n++;if(n>8)clearInterval(iv);
       },250);
     },900);
