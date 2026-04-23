@@ -137,7 +137,18 @@
     .caption h2 strong{font-weight:700}
     .caption-blue h2{color:rgba(100,150,255,.5)}
     .caption-red h2{color:rgba(255,100,100,.5)}
-    .caption-escape h2{color:rgba(200,50,50,.4);font-size:clamp(1rem,2vw,1.5rem)}
+    .break-free{
+      position:absolute;z-index:5;bottom:10%;left:8vw;
+      font-size:clamp(1.1rem,2vw,1.6rem);font-weight:300;letter-spacing:.15em;text-transform:lowercase;
+      color:rgba(204,0,0,.3);cursor:pointer;pointer-events:auto;
+      text-shadow:0 0 20px rgba(204,0,0,0);
+      animation:bfBreath 3s ease-in-out infinite;
+      transition:all .3s;
+      opacity:0;
+    }
+    .act.in .break-free{opacity:1;transition:opacity 1.2s 1s}
+    .break-free:hover{color:rgba(204,0,0,.7);text-shadow:0 0 30px rgba(204,0,0,.4);letter-spacing:.25em}
+    @keyframes bfBreath{0%,100%{text-shadow:0 0 15px rgba(204,0,0,.1)}50%{text-shadow:0 0 30px rgba(204,0,0,.25)}}
     .hero-sub{position:absolute;z-index:4;bottom:20%;left:50%;transform:translateX(-50%);font-size:clamp(.85rem,1.5vw,1.1rem);font-weight:300;color:rgba(255,255,255,.2);letter-spacing:.15em;text-align:center;white-space:nowrap;opacity:0;animation:fadeUp 1s 1.8s forwards}
     @keyframes fadeUp{from{opacity:0;transform:translate(-50%,15px)}to{opacity:1;transform:translate(-50%,0)}}
 
@@ -288,9 +299,7 @@
       <div class="caption caption-top caption-blue">
         <h2 data-en="Their algorithm. Their content. <strong>Their rules.</strong>" data-zh="他们的算法。他们的内容。<strong>他们的规则。</strong>">Their algorithm. Their content. <strong>Their rules.</strong></h2>
       </div>
-      <div class="caption caption-bottom caption-escape">
-        <h2 data-en="...or <strong>break free</strong>" data-zh="...或者，<strong>挣脱</strong>">...or <strong>break free</strong></h2>
-      </div>
+      <div class="break-free" id="break-free" data-en="break free" data-zh="挣脱">break free</div>
     </section>
 
 
@@ -743,6 +752,46 @@ document.querySelectorAll('#act-blue,#act-red,#act-empire').forEach(el=>obs.obse
 // Pause offscreen videos for perf
 const vidObs=new IntersectionObserver(entries=>{entries.forEach(e=>{const v=e.target.querySelector('video');if(v){if(e.isIntersecting)v.play().catch(()=>{});else v.pause()}})},{threshold:0});
 document.querySelectorAll('.act').forEach(el=>vidObs.observe(el));
+
+// ======== BREAK FREE — glitch + scroll back to hero ========
+!function(){
+  const bf=document.getElementById('break-free');
+  if(!bf)return;
+  const glyphs='!@#$%^&*=<>?/|~';
+  bf.addEventListener('mouseenter',()=>{
+    const orig=bf.textContent;
+    let count=0;
+    const iv=setInterval(()=>{
+      bf.textContent=[...orig].map(c=>Math.random()>.5?glyphs[Math.floor(Math.random()*glyphs.length)]:c).join('');
+      count++;
+      if(count>8){clearInterval(iv);bf.textContent=orig}
+    },60);
+  });
+  bf.addEventListener('click',()=>{
+    // Glitch burst
+    const orig=bf.getAttribute('data-'+lang)||bf.textContent;
+    let count=0;
+    const iv=setInterval(()=>{
+      bf.textContent=[...Array(orig.length)].map(()=>glyphs[Math.floor(Math.random()*glyphs.length)]).join('');
+      bf.style.color='rgba(204,0,0,.9)';
+      bf.style.textShadow='0 0 40px rgba(204,0,0,.6)';
+      count++;
+      if(count>12){
+        clearInterval(iv);
+        bf.textContent=orig;
+        bf.style.color='';bf.style.textShadow='';
+      }
+    },50);
+    // Reset hero videos
+    const vCalm=document.getElementById('vid-hero-calm');
+    const vShatter=document.getElementById('vid-hero-shatter');
+    if(vCalm&&vShatter){vCalm.style.opacity='1';vShatter.style.opacity='0'}
+    // Scroll back
+    setTimeout(()=>{
+      document.getElementById('act-choice').scrollIntoView({behavior:'smooth'});
+    },300);
+  });
+}();
 
 // ======== LANGUAGE ========
 let lang='en';const lb=document.getElementById('lang-toggle');
