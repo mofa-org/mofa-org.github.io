@@ -82,6 +82,8 @@
     /* Content layer */
     .scroll-wrap{position:relative;z-index:10}
     .act{min-height:100dvh;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+    #act-blue{min-height:110dvh}
+    #act-red{min-height:90dvh}
 
     /* L7: Pill scene */
     #pill-canvas{position:absolute;inset:0;width:100%;height:100%;z-index:2;cursor:pointer}
@@ -101,7 +103,8 @@
     }
 
     /* Glitch text */
-    #act-choice{flex-direction:column}
+    #act-choice{flex-direction:column;align-items:flex-start;padding-left:12vw}
+    @media(max-width:768px){#act-choice{align-items:center;padding-left:20px}}
     .pill-hint{position:relative;z-index:4;margin-top:16px;font-size:.7rem;font-weight:300;letter-spacing:.25em;text-transform:uppercase;color:rgba(255,255,255,0);animation:hintIn 1.5s 4s forwards}
     @keyframes hintIn{0%{color:rgba(255,255,255,0)}50%{color:rgba(255,255,255,.15)}100%{color:rgba(255,255,255,.1)}}
     .glitch-word{position:relative;z-index:3;font-size:clamp(5rem,14vw,12rem);font-weight:900;letter-spacing:-.05em;line-height:1;pointer-events:none;user-select:none;mix-blend-mode:difference}
@@ -136,6 +139,7 @@
     .caption h2{font-family:'Cormorant Garamond','Noto Serif SC',serif;font-size:clamp(2rem,4.5vw,3.5rem);font-weight:700;letter-spacing:.02em;line-height:1.3;text-shadow:0 0 40px rgba(0,0,0,.8),0 0 80px rgba(0,0,0,.5)}
     .caption h2 strong{font-weight:900}
     .caption-blue h2{color:rgba(130,180,255,.85);text-shadow:0 0 30px rgba(0,68,204,.4),0 4px 20px rgba(0,0,0,.9)}
+    .caption-red{left:auto;right:8vw;text-align:right}
     .caption-red h2{color:rgba(255,130,130,.85);text-shadow:0 0 30px rgba(204,0,0,.4),0 4px 20px rgba(0,0,0,.9)}
     /* Red pill lure in blue world */
     .red-pill-lure{
@@ -615,41 +619,35 @@ let cx=0,cy=0;
     }
     splitAnim();
 
-    // Only red pill triggers shatter video
+    // Red pill: shatter video as FIXED OVERLAY during scroll (no waiting)
     if(type==='red'){
-      const vCalm=document.getElementById('vid-hero-calm');
-      const vShatter=document.getElementById('vid-hero-shatter');
-      if(vCalm&&vShatter){
-        vShatter.currentTime=2.5;
-        vShatter.playbackRate=1.6;
-        vShatter.play().catch(()=>{});
-        vShatter.style.opacity='1';
-        vCalm.style.opacity='0';
+      const overlay=document.getElementById('vid-hero-shatter');
+      if(overlay){
+        overlay.style.position='fixed';
+        overlay.style.zIndex='9989';
+        overlay.style.inset='0';
+        overlay.style.width='100vw';
+        overlay.style.height='100vh';
+        overlay.currentTime=2.5;
+        overlay.playbackRate=1.6;
+        overlay.play().catch(()=>{});
+        overlay.style.opacity='.7';
+        // Fade out overlay after 3s
+        setTimeout(()=>{overlay.style.transition='opacity 1.5s';overlay.style.opacity='0'},2500);
+        setTimeout(()=>{overlay.style.position='';overlay.style.zIndex='';overlay.style.inset='';overlay.style.width='';overlay.style.height='';overlay.style.transition=''},4500);
       }
     }
 
-    const flash=document.getElementById('pill-flash');
-    flash.className='pill-flash '+type;
-    setTimeout(()=>flash.className='pill-flash',600);
     document.getElementById('scroll-wrap').classList.add('shake');
     setTimeout(()=>document.getElementById('scroll-wrap').classList.remove('shake'),400);
     const hint=document.getElementById('pill-hint');
     if(hint)hint.style.opacity='0';
 
-    if(type==='blue'){
-      setTimeout(()=>document.querySelector('#act-blue').scrollIntoView({behavior:'smooth'}),400);
-    }else{
-      // Red: wait for shatter video to nearly finish, then scroll
-      const vShatter=document.getElementById('vid-hero-shatter');
-      if(vShatter&&vShatter.duration){
-        const waitMs=Math.max(0,(vShatter.duration-vShatter.currentTime-0.5)*1000);
-        setTimeout(()=>document.querySelector('#act-red').scrollIntoView({behavior:'smooth'}),waitMs);
-      }else{
-        setTimeout(()=>document.querySelector('#act-red').scrollIntoView({behavior:'smooth'}),5000);
-      }
-    }
+    // Both pills: scroll immediately (400ms delay for the split to register visually)
+    const target=type==='blue'?'#act-blue':'#act-red';
+    setTimeout(()=>document.querySelector(target).scrollIntoView({behavior:'smooth'}),400);
 
-    // When hero leaves viewport, reset video back to calm
+    // When hero leaves viewport, reset video
     const resetObs=new IntersectionObserver(entries=>{
       if(!entries[0].isIntersecting){
         const vc=document.getElementById('vid-hero-calm');
