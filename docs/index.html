@@ -153,14 +153,16 @@ let cx=0,cy=0;
     }
     splitAnim();
 
-    // Switch hero video to shatter with crossfade
-    const vCalm=document.getElementById('vid-hero-calm');
-    const vShatter=document.getElementById('vid-hero-shatter');
-    if(vCalm&&vShatter){
-      vShatter.currentTime=2.5; // skip to the explosion part
-      vShatter.play().catch(()=>{});
-      vShatter.style.opacity='1';
-      vCalm.style.opacity='0';
+    // Only red pill triggers shatter video
+    if(type==='red'){
+      const vCalm=document.getElementById('vid-hero-calm');
+      const vShatter=document.getElementById('vid-hero-shatter');
+      if(vCalm&&vShatter){
+        vShatter.currentTime=2.5;
+        vShatter.play().catch(()=>{});
+        vShatter.style.opacity='1';
+        vCalm.style.opacity='0';
+      }
     }
 
     const flash=document.getElementById('pill-flash');
