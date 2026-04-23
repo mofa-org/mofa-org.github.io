@@ -137,19 +137,31 @@
     .caption h2 strong{font-weight:900}
     .caption-blue h2{color:rgba(130,180,255,.85);text-shadow:0 0 30px rgba(0,68,204,.4),0 4px 20px rgba(0,0,0,.9)}
     .caption-red h2{color:rgba(255,130,130,.85);text-shadow:0 0 30px rgba(204,0,0,.4),0 4px 20px rgba(0,0,0,.9)}
-    .break-free{
+    /* Red pill lure in blue world */
+    .red-pill-lure{
       position:absolute;z-index:5;bottom:10%;left:8vw;
-      font-family:'Cormorant Garamond','Noto Serif SC',serif;
-      font-size:clamp(1.3rem,2.5vw,2rem);font-weight:400;font-style:italic;letter-spacing:.08em;text-transform:lowercase;
-      color:rgba(204,0,0,.3);cursor:pointer;pointer-events:auto;
-      text-shadow:0 0 20px rgba(204,0,0,0);
-      animation:bfBreath 3s ease-in-out infinite;
-      transition:all .3s;
-      opacity:0;
+      display:flex;align-items:center;gap:16px;
+      cursor:pointer;opacity:0;transition:opacity 1.2s 1.5s;
     }
-    .act.in .break-free{opacity:1;transition:opacity 1.2s 1s}
-    .break-free:hover{color:rgba(204,0,0,.7);text-shadow:0 0 30px rgba(204,0,0,.4);letter-spacing:.25em}
-    @keyframes bfBreath{0%,100%{text-shadow:0 0 15px rgba(204,0,0,.1)}50%{text-shadow:0 0 30px rgba(204,0,0,.25)}}
+    .act.in .red-pill-lure{opacity:1}
+    .lure-pill{
+      width:24px;height:56px;border-radius:12px;
+      background:linear-gradient(180deg,#ff3333 0%,#cc0000 50%,#880000 100%);
+      box-shadow:0 0 15px rgba(204,0,0,.5),0 0 30px rgba(204,0,0,.2),inset 0 -2px 6px rgba(0,0,0,.3),inset 4px 0 8px rgba(255,255,255,.15);
+      animation:lurePulse 2.5s ease-in-out infinite;
+      transition:all .3s;
+    }
+    .red-pill-lure:hover .lure-pill{
+      box-shadow:0 0 30px rgba(255,0,0,.7),0 0 60px rgba(255,0,0,.3);
+      transform:scale(1.15);
+    }
+    .lure-text{
+      font-family:'Cormorant Garamond','Noto Serif SC',serif;
+      font-size:1.1rem;font-style:italic;letter-spacing:.08em;
+      color:rgba(255,100,100,.3);transition:color .3s;
+    }
+    .red-pill-lure:hover .lure-text{color:rgba(255,100,100,.7)}
+    @keyframes lurePulse{0%,100%{box-shadow:0 0 15px rgba(204,0,0,.5),0 0 30px rgba(204,0,0,.2)}50%{box-shadow:0 0 25px rgba(255,0,0,.7),0 0 50px rgba(255,0,0,.3)}}
     .hero-sub{position:absolute;z-index:4;bottom:20%;left:50%;transform:translateX(-50%);font-size:clamp(.85rem,1.5vw,1.1rem);font-weight:300;color:rgba(255,255,255,.2);letter-spacing:.15em;text-align:center;white-space:nowrap;opacity:0;animation:fadeUp 1s 1.8s forwards}
     @keyframes fadeUp{from{opacity:0;transform:translate(-50%,15px)}to{opacity:1;transform:translate(-50%,0)}}
 
@@ -194,20 +206,20 @@
     /* Rabbit hole portal */
     .rabbit-hole-wrap{position:absolute;z-index:5;bottom:8%;right:8vw;display:flex;align-items:center;gap:20px;cursor:pointer;opacity:0;transition:opacity 1.2s 1s}
     .act.in .rabbit-hole-wrap{opacity:1}
-    .rabbit-hole{position:relative;width:80px;height:80px}
-    .rh-ring{position:absolute;inset:0;border-radius:50%;border:1.5px solid transparent;animation:rhSpin linear infinite}
-    .rh-ring-1{border-top-color:rgba(0,204,0,.6);border-right-color:rgba(0,204,0,.2);animation-duration:4s}
-    .rh-ring-2{inset:8px;border-bottom-color:rgba(0,180,0,.5);border-left-color:rgba(0,180,0,.15);animation-duration:3s;animation-direction:reverse}
-    .rh-ring-3{inset:16px;border-top-color:rgba(204,0,0,.6);border-left-color:rgba(204,0,0,.2);animation-duration:5s}
-    .rh-core{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:12px;height:12px;border-radius:50%;background:var(--red);box-shadow:0 0 15px var(--red),0 0 30px rgba(204,0,0,.4);animation:rhPulse 2s ease-in-out infinite}
+    .rabbit-hole{position:relative;width:140px;height:140px}
+    .rh-ring{position:absolute;inset:0;border-radius:50%;border:2px solid transparent;animation:rhSpin linear infinite}
+    .rh-ring-1{border-top-color:rgba(0,255,0,.7);border-right-color:rgba(0,255,0,.25);animation-duration:4s;box-shadow:0 0 15px rgba(0,255,0,.1)}
+    .rh-ring-2{inset:14px;border-bottom-color:rgba(0,220,0,.6);border-left-color:rgba(0,220,0,.2);animation-duration:3s;animation-direction:reverse}
+    .rh-ring-3{inset:28px;border-top-color:rgba(204,0,0,.7);border-left-color:rgba(204,0,0,.25);animation-duration:5s;box-shadow:0 0 15px rgba(204,0,0,.1)}
+    .rh-core{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:18px;height:18px;border-radius:50%;background:#ff0000;box-shadow:0 0 20px #ff0000,0 0 40px rgba(255,0,0,.5),0 0 60px rgba(255,0,0,.2);animation:rhPulse 2s ease-in-out infinite}
     @keyframes rhSpin{to{transform:rotate(360deg)}}
     @keyframes rhPulse{0%,100%{transform:translate(-50%,-50%) scale(1);box-shadow:0 0 15px var(--red),0 0 30px rgba(204,0,0,.4)}50%{transform:translate(-50%,-50%) scale(1.3);box-shadow:0 0 25px var(--red),0 0 50px rgba(204,0,0,.6)}}
     .rabbit-hole-wrap:hover .rh-ring-1{animation-duration:1.5s}
     .rabbit-hole-wrap:hover .rh-ring-2{animation-duration:1s}
     .rabbit-hole-wrap:hover .rh-ring-3{animation-duration:1.8s}
-    .rabbit-hole-wrap:hover .rh-core{background:#ff0000;box-shadow:0 0 30px #ff0000,0 0 60px rgba(255,0,0,.5)}
-    .rabbit-hole-wrap:hover .rh-label{color:rgba(0,204,0,.6)}
-    .rh-label{font-family:'Cormorant Garamond','Noto Serif SC',serif;font-size:.75rem;font-style:italic;letter-spacing:.12em;color:rgba(0,204,0,.25);transition:color .4s}
+    .rabbit-hole-wrap:hover .rh-core{background:#ff0000;box-shadow:0 0 40px #ff0000,0 0 80px rgba(255,0,0,.6)}
+    .rabbit-hole-wrap:hover .rh-label{color:rgba(0,255,0,.8)}
+    .rh-label{font-family:'Cormorant Garamond','Noto Serif SC',serif;font-size:1.1rem;font-style:italic;letter-spacing:.1em;color:rgba(0,255,0,.35);transition:color .4s;text-shadow:0 0 15px rgba(0,255,0,.1)}
 
     /* L9: Mouse trail */
     #trail-canvas{position:fixed;inset:0;z-index:9995;pointer-events:none}
@@ -318,7 +330,10 @@
       <div class="caption caption-top caption-blue">
         <h2 data-en="Their algorithm. Their content. <strong>Their rules.</strong>" data-zh="他们的算法。他们的内容。<strong>他们的规则。</strong>">Their algorithm. Their content. <strong>Their rules.</strong></h2>
       </div>
-      <div class="break-free" id="break-free" data-en="take the other pill" data-zh="选另一颗药丸">take the other pill</div>
+      <div class="red-pill-lure" id="red-pill-lure">
+        <div class="lure-pill"></div>
+        <span class="lure-text" data-en="take the other pill" data-zh="选另一颗药丸">take the other pill</span>
+      </div>
     </section>
 
 
@@ -587,7 +602,16 @@ let cx=0,cy=0;
         flashEl.style.opacity='0';
       }
 
-      if(splitT<2.5)requestAnimationFrame(splitAnim);
+      // Fade out everything after split
+      if(splitT>1){
+        const fade=Math.max(0,1-(splitT-1)*1.5);
+        topHalf.material.opacity=fade*.5;
+        botHalf.material.opacity=fade*.5;
+        sparkMat.opacity=fade*.3;
+        innerGlow.intensity=innerGlow.intensity*fade;
+        if(fade<=0){clickedPill.visible=false;return}
+      }
+      requestAnimationFrame(splitAnim);
     }
     splitAnim();
 
@@ -869,55 +893,30 @@ document.querySelectorAll('.vid-bg').forEach(v=>{
   });
 }();
 
-// ======== BREAK FREE — glitch + scroll back to hero ========
+// ======== RED PILL LURE — click to go back and choose red ========
 !function(){
-  const bf=document.getElementById('break-free');
-  if(!bf)return;
-  const glyphs='!@#$%^&*=<>?/|~';
-  bf.addEventListener('mouseenter',()=>{
-    const orig=bf.textContent;
-    let count=0;
-    const iv=setInterval(()=>{
-      bf.textContent=[...orig].map(c=>Math.random()>.5?glyphs[Math.floor(Math.random()*glyphs.length)]:c).join('');
-      count++;
-      if(count>8){clearInterval(iv);bf.textContent=orig}
-    },60);
-  });
-  bf.addEventListener('click',()=>{
-    // Glitch burst
-    const orig=bf.getAttribute('data-'+lang)||bf.textContent;
-    let count=0;
-    const iv=setInterval(()=>{
-      bf.textContent=[...Array(orig.length)].map(()=>glyphs[Math.floor(Math.random()*glyphs.length)]).join('');
-      bf.style.color='rgba(204,0,0,.9)';
-      bf.style.textShadow='0 0 40px rgba(204,0,0,.6)';
-      count++;
-      if(count>12){
-        clearInterval(iv);
-        bf.textContent=orig;
-        bf.style.color='';bf.style.textShadow='';
-      }
-    },50);
+  const lure=document.getElementById('red-pill-lure');
+  if(!lure)return;
+  lure.addEventListener('click',()=>{
     // Reset hero videos
     const vCalm=document.getElementById('vid-hero-calm');
     const vShatter=document.getElementById('vid-hero-shatter');
     if(vCalm&&vShatter){vCalm.style.opacity='1';vShatter.style.opacity='0'}
-    // Scroll back + pulse red pill to draw attention
+    // Make clicked blue pill visible again for re-choosing
+    bPill.visible=true;bPill.children.forEach(m=>{if(m.material)m.material.opacity=.94});
+    rPill.visible=true;rPill.children.forEach(m=>{if(m.material)m.material.opacity=.94});
+    // Scroll back
+    document.getElementById('act-choice').scrollIntoView({behavior:'smooth'});
+    // Pulse the red pill after arrival
     setTimeout(()=>{
-      document.getElementById('act-choice').scrollIntoView({behavior:'smooth'});
-      // After scroll completes, flash the red pill
-      setTimeout(()=>{
-        rPill.children.forEach(m=>{if(m.material)m.material.emissiveIntensity=.8});
-        let pulseCount=0;
-        const pulseIv=setInterval(()=>{
-          const on=pulseCount%2===0;
-          rPill.children.forEach(m=>{if(m.material)m.material.emissiveIntensity=on?.7:.15});
-          rPill.scale.setScalar(on?1.12:1);
-          pulseCount++;
-          if(pulseCount>6)clearInterval(pulseIv);
-        },300);
-      },800);
-    },300);
+      let n=0;
+      const iv=setInterval(()=>{
+        const on=n%2===0;
+        rPill.children.forEach(m=>{if(m.material)m.material.emissiveIntensity=on?.7:.12});
+        rPill.scale.setScalar(on?1.15:1);
+        n++;if(n>8)clearInterval(iv);
+      },250);
+    },900);
   });
 }();
 
