@@ -513,7 +513,7 @@ let cx=0,cy=0;
     return g;
   }
   const bPill=window._bPill=pill(0x0044cc,0x001a66,-2.4);
-  bPill.position.y=2.5;
+  bPill.position.y=1.0;
   const rPill=window._rPill=pill(0xcc0000,0x660000,2.4);
   scene.add(bPill,rPill);
 
@@ -678,7 +678,7 @@ let cx=0,cy=0;
   const clock=new THREE.Clock();
   !function anim(){
     requestAnimationFrame(anim);const t=clock.getElapsedTime();
-    bPill.position.y=2.5+Math.sin(t*.7)*.35;bPill.rotation.y=t*.25;
+    bPill.position.y=1.0+Math.sin(t*.7)*.35;bPill.rotation.y=t*.25;
     rPill.position.y=Math.sin(t*.7+1.8)*.4;rPill.rotation.y=-t*.3;
     bPill.position.x=-2.4+pmx*.35;rPill.position.x=2.4+pmx*.35;
     cam.position.y=pmy*-.4;cam.lookAt(0,0,0);
