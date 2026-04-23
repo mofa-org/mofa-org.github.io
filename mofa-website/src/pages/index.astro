@@ -33,8 +33,6 @@
     #act-choice .vid-bg{opacity:.2;filter:saturate(.7) contrast(1.15)}
     #act-blue .vid-bg{opacity:0;transition:opacity 1.4s;filter:saturate(1.3) hue-rotate(-10deg)}
     #act-blue.in .vid-bg{opacity:.7}
-    #act-shatter .vid-bg{opacity:0;transition:opacity 1s;filter:saturate(1.5) contrast(1.3)}
-    #act-shatter.in-view .vid-bg{opacity:.8}
     #act-red .vid-bg{opacity:0;transition:opacity 1.4s;filter:saturate(1.4) contrast(1.1)}
     #act-red.in .vid-bg{opacity:.7}
     #act-empire .vid-bg{opacity:0;transition:opacity 1.4s;filter:saturate(1.2) brightness(.6)}
@@ -122,7 +120,6 @@
     @keyframes cueDown{0%{opacity:1;transform:translateX(-50%) translateY(0)}100%{opacity:0;transform:translateX(-50%) translateY(18px)}}
     @keyframes fadeCue{to{opacity:1}}
 
-    #act-shatter{min-height:60vh}
 
     /* L8: Scanlines */
     .scanlines{position:absolute;inset:0;pointer-events:none;z-index:3;background:repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(59,130,246,.02) 2px,rgba(59,130,246,.02) 4px);animation:scanMove 10s linear infinite}
@@ -275,7 +272,8 @@
 
     <!-- ACT 1: CHOOSE -->
     <section class="act" id="act-choice">
-      <video class="vid-bg" autoplay muted loop playsinline src="/videos/redesign/empire-bg.mp4"></video>
+      <video class="vid-bg" id="vid-hero-calm" autoplay muted loop playsinline src="/videos/redesign/empire-bg.mp4" style="transition:opacity 1s"></video>
+      <video class="vid-bg" id="vid-hero-shatter" autoplay muted loop playsinline src="/videos/redesign/shatter.mp4" style="opacity:0;transition:opacity 1s"></video>
       <canvas id="pill-canvas"></canvas>
       <img src="/mofa-logo.png" alt="MoFA" class="hero-logo" />
       <div class="glitch-word" id="glitch-el"></div>
@@ -295,10 +293,6 @@
       </div>
     </section>
 
-    <!-- ACT 3: SHATTERING -->
-    <section class="act" id="act-shatter">
-      <video class="vid-bg" id="vid-shatter" autoplay muted loop playsinline src="/videos/redesign/shatter.mp4"></video>
-    </section>
 
     <!-- ACT 4: LIBERATION -->
     <section class="act" id="act-red">
@@ -306,6 +300,10 @@
       <div class="caption caption-top caption-red">
         <h2 data-en="Your voice. Your audience. <strong>Your empire.</strong>" data-zh="你的声音。你的受众。<strong>你的帝国。</strong>">Your voice. Your audience. <strong>Your empire.</strong></h2>
       </div>
+      <div class="caption caption-bottom caption-escape">
+        <h2 data-en="see what's <strong>possible</strong>" data-zh="看看你能<strong>做什么</strong>">see what's <strong>possible</strong></h2>
+      </div>
+      <div class="scroll-cue" style="animation-delay:0s"><div class="pill-shape"></div></div>
     </section>
 
     <!-- ACT 5: YOUR EMPIRE -->
@@ -513,6 +511,16 @@ let cx=0,cy=0;
       }
     }
     splitAnim();
+
+    // Switch hero video to shatter with crossfade
+    const vCalm=document.getElementById('vid-hero-calm');
+    const vShatter=document.getElementById('vid-hero-shatter');
+    if(vCalm&&vShatter){
+      vShatter.currentTime=2.5; // skip to the explosion part
+      vShatter.play().catch(()=>{});
+      vShatter.style.opacity='1';
+      vCalm.style.opacity='0';
+    }
 
     const flash=document.getElementById('pill-flash');
     flash.className='pill-flash '+type;
@@ -732,8 +740,6 @@ addEventListener('scroll',()=>{
 const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in')})},{threshold:.2});
 document.querySelectorAll('#act-blue,#act-red,#act-empire').forEach(el=>obs.observe(el));
 // Shatter section reveal
-const shObs=new IntersectionObserver(entries=>{entries.forEach(e=>{e.target.classList.toggle('in-view',e.isIntersecting)})},{threshold:.1});
-shObs.observe(document.getElementById('act-shatter'));
 // Pause offscreen videos for perf
 const vidObs=new IntersectionObserver(entries=>{entries.forEach(e=>{const v=e.target.querySelector('video');if(v){if(e.isIntersecting)v.play().catch(()=>{});else v.pause()}})},{threshold:0});
 document.querySelectorAll('.act').forEach(el=>vidObs.observe(el));
