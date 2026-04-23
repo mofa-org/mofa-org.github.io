@@ -623,10 +623,9 @@ let cx=0,cy=0;
       // Fade out everything after split
       if(splitT>1){
         const fade=Math.max(0,1-(splitT-1)*1.5);
-        topHalf.material.opacity=fade*.5;
-        botHalf.material.opacity=fade*.5;
+        clickedPill.children.forEach(m=>{if(m.material)m.material.opacity=fade*.5});
         sparkMat.opacity=fade*.3;
-        innerGlow.intensity=innerGlow.intensity*fade;
+        innerGlow.intensity=Math.max(0,innerGlow.intensity*fade);
         if(fade<=0){clickedPill.visible=false;return}
       }
       requestAnimationFrame(splitAnim);
