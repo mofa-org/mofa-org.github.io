@@ -467,13 +467,16 @@ document.querySelectorAll('.vid-bg').forEach(v=>{
   const rh=document.getElementById('rabbit-hole');
   if(!rh)return;
   rh.parentElement.addEventListener('click',()=>{
-    rh.querySelector('.rh-core').style.transform='translate(-50%,-50%) scale(3)';
-    rh.querySelector('.rh-core').style.boxShadow='0 0 60px #ff0000,0 0 120px rgba(255,0,0,.6)';
+    const core=rh.querySelector('.rh-core');
+    core.style.transform='translate(-50%,-50%) scale(3)';
+    core.style.boxShadow='0 0 60px #ff0000,0 0 120px rgba(255,0,0,.6)';
+    // Force empire section visible before scrolling
+    document.getElementById('act-empire').classList.add('in');
     setTimeout(()=>{
-      document.getElementById('act-empire').scrollIntoView({behavior:'smooth'});
-      rh.querySelector('.rh-core').style.transform='';
-      rh.querySelector('.rh-core').style.boxShadow='';
-    },500);
+      document.getElementById('act-empire').scrollIntoView({behavior:'smooth',block:'start'});
+      core.style.transform='';
+      core.style.boxShadow='';
+    },400);
   });
 }();
 
