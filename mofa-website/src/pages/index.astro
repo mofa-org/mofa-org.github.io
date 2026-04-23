@@ -16,7 +16,7 @@
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
     *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-    :root{--blue:#3b82f6;--cyan:#06b6d4;--purple:#7c3aed;--red:#ef4444;--orange:#f97316;--gold:#f59e0b;--magenta:#ec4899;--teal:#14b8a6}
+    :root{--blue:#0044cc;--cyan:#0066aa;--purple:#330099;--red:#cc0000;--orange:#cc4400;--gold:#cc8800;--magenta:#990033;--teal:#006655}
     html{overflow-x:hidden;scroll-behavior:smooth}
     body{font-family:'Outfit','Noto Sans SC',system-ui,sans-serif;background:#030303;color:#fff;overflow-x:hidden;cursor:none;font-feature-settings:'ss01','ss02';-webkit-font-smoothing:antialiased}
     @media(pointer:coarse){body{cursor:auto}}
@@ -138,8 +138,9 @@
     .caption{text-align:left}
     .caption h2{font-size:clamp(1.4rem,3vw,2.2rem);font-weight:200;letter-spacing:.1em;line-height:1.4}
     .caption h2 strong{font-weight:700}
-    .caption-blue h2{color:rgba(147,197,253,.6)}
-    .caption-red h2{color:rgba(252,165,165,.6)}
+    .caption-blue h2{color:rgba(100,150,255,.5)}
+    .caption-red h2{color:rgba(255,100,100,.5)}
+    .caption-escape h2{color:rgba(200,50,50,.4);font-size:clamp(1rem,2vw,1.5rem)}
     .hero-sub{position:absolute;z-index:4;bottom:20%;left:50%;transform:translateX(-50%);font-size:clamp(.85rem,1.5vw,1.1rem);font-weight:300;color:rgba(255,255,255,.2);letter-spacing:.15em;text-align:center;white-space:nowrap;opacity:0;animation:fadeUp 1s 1.8s forwards}
     @keyframes fadeUp{from{opacity:0;transform:translate(-50%,15px)}to{opacity:1;transform:translate(-50%,0)}}
 
@@ -274,7 +275,7 @@
 
     <!-- ACT 1: CHOOSE -->
     <section class="act" id="act-choice">
-      <video class="vid-bg" id="vid-hero" autoplay muted loop playsinline src="/videos/redesign/hero.mp4"></video>
+      <video class="vid-bg" autoplay muted loop playsinline src="/videos/redesign/empire-bg.mp4"></video>
       <canvas id="pill-canvas"></canvas>
       <img src="/mofa-logo.png" alt="MoFA" class="hero-logo" />
       <div class="glitch-word" id="glitch-el"></div>
@@ -288,6 +289,9 @@
       <div class="scanlines"></div>
       <div class="caption caption-top caption-blue">
         <h2 data-en="Their algorithm. Their content. <strong>Their rules.</strong>" data-zh="他们的算法。他们的内容。<strong>他们的规则。</strong>">Their algorithm. Their content. <strong>Their rules.</strong></h2>
+      </div>
+      <div class="caption caption-bottom caption-escape">
+        <h2 data-en="...or <strong>break free</strong>" data-zh="...或者，<strong>挣脱</strong>">...or <strong>break free</strong></h2>
       </div>
     </section>
 
@@ -391,8 +395,8 @@ let cx=0,cy=0;
   let tRX=0,tRY=0;
   addEventListener('mousemove',e=>{tRY=(e.clientX/innerWidth-.5)*.6;tRX=(e.clientY/innerHeight-.5)*.4});
   // Color palettes: blue-world → shatter → red-world
-  const cBlue=[.23,.51,.96],cCyan=[.02,.71,.83],cPurple=[.49,.23,.93];
-  const cRed=[.94,.27,.27],cOrange=[.98,.45,.09],cGold=[.96,.62,.04],cMagenta=[.93,.3,.6];
+  const cBlue=[0,.27,.8],cCyan=[0,.4,.67],cPurple=[.2,0,.6];
+  const cRed=[.8,0,0],cOrange=[.8,.27,0],cGold=[.8,.53,0],cMagenta=[.6,0,.2];
   !function anim(){
     requestAnimationFrame(anim);
     pts.rotation.y+=(tRY-pts.rotation.y)*.015;pts.rotation.x+=(tRX-pts.rotation.x)*.015;
@@ -428,8 +432,8 @@ let cx=0,cy=0;
   const scene=new THREE.Scene(),cam=new THREE.PerspectiveCamera(50,innerWidth/innerHeight,.1,100);
   cam.position.z=8;
   scene.add(new THREE.AmbientLight(0x404040,.6));
-  const bL=new THREE.PointLight(0x3b82f6,4,25);bL.position.set(-5,3,5);scene.add(bL);
-  const rL=new THREE.PointLight(0xef4444,4,25);rL.position.set(5,-2,5);scene.add(rL);
+  const bL=new THREE.PointLight(0x0044cc,4,25);bL.position.set(-5,3,5);scene.add(bL);
+  const rL=new THREE.PointLight(0xcc0000,4,25);rL.position.set(5,-2,5);scene.add(rL);
   const cL=new THREE.PointLight(0x7c3aed,2,20);cL.position.set(0,4,3);scene.add(cL);
   const gL=new THREE.PointLight(0xf59e0b,1.5,15);gL.position.set(0,-3,4);scene.add(gL);
   scene.add(new THREE.DirectionalLight(0xffffff,.5).translateZ(-5).translateY(5));
@@ -445,8 +449,8 @@ let cx=0,cy=0;
     g.userData.type=px<0?'blue':'red';
     return g;
   }
-  const bPill=pill(0x3b82f6,0x1e40af,-2.4);
-  const rPill=pill(0xef4444,0x991b1b,2.4);
+  const bPill=pill(0x0044cc,0x001a66,-2.4);
+  const rPill=pill(0xcc0000,0x660000,2.4);
   scene.add(bPill,rPill);
 
   // Raycaster for click
@@ -483,7 +487,7 @@ let cx=0,cy=0;
     const origTopY=topHalf.position.y, origBotY=botHalf.position.y;
 
     // Add inner glow light
-    const innerGlow=new THREE.PointLight(type==='blue'?0x3b82f6:0xef4444,8,5);
+    const innerGlow=new THREE.PointLight(type==='blue'?0x0044cc:0xcc0000,8,5);
     innerGlow.position.set(0,0,0);
     clickedPill.add(innerGlow);
 
