@@ -3,7 +3,7 @@ type: "contributors"
 category: "mofa"
 title: "MoFA Contributors"
 title_zh: "MoFA 贡献者"
-last_updated: "2026-04-22"
+last_updated: "2026-04-23"
 repositories: ["mofa-org/mofa","mofa-org/mofa-new"]
 total_contributors: 69
 ---
@@ -11,7 +11,7 @@ total_contributors: 69
 
 这个文件在构建时自动更新，缓存从GitHub API获取的贡献者数据。
 
-**最后更新**: 2026-04-22
+**最后更新**: 2026-04-23
 **总贡献者数**: 69
 **数据来源**: mofa-org/mofa, mofa-org/mofa-new
 
@@ -85,7 +85,7 @@ total_contributors: 69
 - **Repositories**: mofa-org/mofa
 
 ### aayank13
-- **Contributions**: 40
+- **Contributions**: 41
 - **Avatar**: https://avatars.githubusercontent.com/u/139646065?v=4
 - **GitHub**: https://github.com/aayank13
 - **Repositories**: mofa-org/mofa
