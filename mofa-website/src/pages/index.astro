@@ -318,7 +318,7 @@
       <div class="caption caption-top caption-blue">
         <h2 data-en="Their algorithm. Their content. <strong>Their rules.</strong>" data-zh="他们的算法。他们的内容。<strong>他们的规则。</strong>">Their algorithm. Their content. <strong>Their rules.</strong></h2>
       </div>
-      <div class="break-free" id="break-free" data-en="break free" data-zh="挣脱">break free</div>
+      <div class="break-free" id="break-free" data-en="take the other pill" data-zh="选另一颗药丸">take the other pill</div>
     </section>
 
 
@@ -902,9 +902,21 @@ document.querySelectorAll('.vid-bg').forEach(v=>{
     const vCalm=document.getElementById('vid-hero-calm');
     const vShatter=document.getElementById('vid-hero-shatter');
     if(vCalm&&vShatter){vCalm.style.opacity='1';vShatter.style.opacity='0'}
-    // Scroll back
+    // Scroll back + pulse red pill to draw attention
     setTimeout(()=>{
       document.getElementById('act-choice').scrollIntoView({behavior:'smooth'});
+      // After scroll completes, flash the red pill
+      setTimeout(()=>{
+        rPill.children.forEach(m=>{if(m.material)m.material.emissiveIntensity=.8});
+        let pulseCount=0;
+        const pulseIv=setInterval(()=>{
+          const on=pulseCount%2===0;
+          rPill.children.forEach(m=>{if(m.material)m.material.emissiveIntensity=on?.7:.15});
+          rPill.scale.setScalar(on?1.12:1);
+          pulseCount++;
+          if(pulseCount>6)clearInterval(pulseIv);
+        },300);
+      },800);
     },300);
   });
 }();
