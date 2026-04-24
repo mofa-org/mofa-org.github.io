@@ -206,15 +206,15 @@
     .empire-title em{font-style:normal;background:linear-gradient(135deg,var(--red),var(--orange),var(--gold));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 
     /* 4 channels — big, prominent */
-    .channels{display:grid;grid-template-columns:1fr 1fr;gap:2px;max-width:900px;width:90vw;opacity:0;transition:opacity 1.2s .5s}
+    .channels{display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:960px;width:90vw;opacity:0;transition:opacity 1.2s .5s}
     #act-empire.in .channels{opacity:1}
     @media(max-width:768px){.channels{grid-template-columns:1fr}}
     .channel{display:flex;align-items:center;gap:24px;padding:36px 32px;position:relative;overflow:hidden;transition:all .4s;background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.04)}
     .channel:hover{background:rgba(255,255,255,.06)}
-    .channel:nth-child(1){--ch-color:#e74c3c;transform:translateX(-15px)}
-    .channel:nth-child(2){--ch-color:#f0c040;transform:translateX(15px) translateY(12px)}
-    .channel:nth-child(3){--ch-color:#5cc8c8;transform:translateX(-8px) translateY(-8px)}
-    .channel:nth-child(4){--ch-color:#3a7bd5;transform:translateX(20px) translateY(4px)}
+    .channel:nth-child(1){--ch-color:#e74c3c}
+    .channel:nth-child(2){--ch-color:#f0c040}
+    .channel:nth-child(3){--ch-color:#5cc8c8}
+    .channel:nth-child(4){--ch-color:#3a7bd5}
     .channel:hover{border-color:var(--ch-color,#fff)}
     .channel-circle{width:88px;height:88px;min-width:88px;border-radius:50%;display:flex;align-items:center;justify-content:center;border:1.5px solid color-mix(in srgb,var(--ch-color) 30%,transparent);background:color-mix(in srgb,var(--ch-color) 5%,transparent);transition:all .4s;color:color-mix(in srgb,var(--ch-color) 70%,#fff);box-shadow:0 0 20px color-mix(in srgb,var(--ch-color) 8%,transparent)}
     .channel:hover .channel-circle{border-color:color-mix(in srgb,var(--ch-color) 60%,transparent);color:var(--ch-color);box-shadow:0 0 35px color-mix(in srgb,var(--ch-color) 20%,transparent)}
@@ -667,13 +667,23 @@ let cx=0,cy=0;
     rL.position.set(5+Math.sin(t+2)*2,-2+Math.cos(t*.7)*1.5,5);
     cL.position.set(Math.sin(t*.4)*3,4+Math.cos(t*.3),3);
     gL.position.set(Math.cos(t*.5)*2,-3+Math.sin(t*.4),4);
-    // Hover glow + idle breathing pulse + hover vibrate
+    // Hover glow + idle breathing + beckon after 5s
     const breath=.12+Math.sin(t*1.5)*.06;
-    const hoverScale=1+Math.sin(t*8)*.008; // subtle vibration
-    bPill.children.forEach(m=>{if(m.material)m.material.emissiveIntensity=hovered==='blue'?.5:breath});
-    rPill.children.forEach(m=>{if(m.material)m.material.emissiveIntensity=hovered==='red'?.5:breath});
-    if(hovered==='blue'){bPill.scale.setScalar(hoverScale*1.06);bL.intensity=6+Math.sin(t*4)*2}else{bPill.scale.setScalar(1);bL.intensity=4}
-    if(hovered==='red'){rPill.scale.setScalar(hoverScale*1.06);rL.intensity=6+Math.sin(t*4)*2}else{rPill.scale.setScalar(1);rL.intensity=4}
+    const hoverScale=1+Math.sin(t*8)*.008;
+    // After 5s, alternate flash to beckon clicks
+    const beckon=t>5&&!hovered;
+    const beckonBlue=beckon?(.15+Math.max(0,Math.sin(t*2))*.4):breath;
+    const beckonRed=beckon?(.15+Math.max(0,Math.sin(t*2+Math.PI))*.4):breath;
+    const beckonScaleB=beckon?(1+Math.max(0,Math.sin(t*2))*.08):1;
+    const beckonScaleR=beckon?(1+Math.max(0,Math.sin(t*2+Math.PI))*.08):1;
+    bPill.children.forEach(m=>{if(m.material)m.material.emissiveIntensity=hovered==='blue'?.5:beckonBlue});
+    rPill.children.forEach(m=>{if(m.material)m.material.emissiveIntensity=hovered==='red'?.5:beckonRed});
+    if(hovered==='blue'){bPill.scale.setScalar(hoverScale*1.06);bL.intensity=6+Math.sin(t*4)*2}
+    else{bPill.scale.setScalar(beckonScaleB);bL.intensity=4+beckonBlue*8}
+    if(hovered==='red'){rPill.scale.setScalar(hoverScale*1.06);rL.intensity=6+Math.sin(t*4)*2}
+    else{rPill.scale.setScalar(beckonScaleR);rL.intensity=4+beckonRed*8}
+    // Also pulse hint text after 5s
+    if(beckon){const h=document.getElementById('pill-hint');if(h)h.style.color='rgba(255,255,255,'+(0.1+Math.sin(t*2)*.1)+')'}
     r.render(scene,cam);
   }();
   addEventListener('resize',()=>{cam.aspect=innerWidth/innerHeight;cam.updateProjectionMatrix();r.setSize(innerWidth,innerHeight)});
