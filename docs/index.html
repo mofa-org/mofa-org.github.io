@@ -102,15 +102,20 @@ let cx=0,cy=0;
   const mouse=new THREE.Vector2();
   let hovered=null;
 
+  function getPillType(obj){
+    let o=obj;
+    while(o){if(o.userData&&o.userData.type)return o.userData.type;o=o.parent}
+    return null;
+  }
   function getIntersects(ex,ey){
     mouse.x=(ex/innerWidth)*2-1;mouse.y=-(ey/innerHeight)*2+1;
     raycaster.setFromCamera(mouse,cam);
-    return raycaster.intersectObjects([...bPill.children,...rPill.children]);
+    return raycaster.intersectObjects([...bPill.children,...rPill.children],true);
   }
 
   c.addEventListener('mousemove',e=>{
     const hits=getIntersects(e.clientX,e.clientY);
-    const newH=hits.length?hits[0].object.parent.userData.type:null;
+    const newH=hits.length?getPillType(hits[0].object):null;
     if(newH!==hovered){
       hovered=newH;
       document.getElementById('cursor').classList.toggle('hover',!!newH);
@@ -121,7 +126,7 @@ let cx=0,cy=0;
   c.addEventListener('click',e=>{
     const hits=getIntersects(e.clientX,e.clientY);
     if(!hits.length)return;
-    const type=hits[0].object.parent.userData.type;
+    const type=getPillType(hits[0].object);
     const chosenPill=type==='blue'?bPill:rPill;
     const otherPill=type==='blue'?rPill:bPill;
     const origZ=chosenPill.position.z;
