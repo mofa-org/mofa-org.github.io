@@ -138,9 +138,9 @@
     .caption{text-align:left}
     .caption h2{font-family:'Cormorant Garamond','Noto Serif SC',serif;font-size:clamp(2rem,4.5vw,3.5rem);font-weight:700;letter-spacing:.02em;line-height:1.3;text-shadow:0 0 40px rgba(0,0,0,.8),0 0 80px rgba(0,0,0,.5)}
     .caption h2 strong{font-weight:900}
-    .caption-blue h2{color:rgba(130,180,255,.85);text-shadow:0 0 30px rgba(0,68,204,.4),0 4px 20px rgba(0,0,0,.9)}
+    .caption-blue h2{color:rgba(160,200,255,.9);text-shadow:0 0 30px rgba(0,68,204,.5),0 4px 20px rgba(0,0,0,.9)}
     .caption-red{left:auto;right:8vw;text-align:right}
-    .caption-red h2{color:rgba(255,130,130,.85);text-shadow:0 0 30px rgba(204,0,0,.4),0 4px 20px rgba(0,0,0,.9)}
+    .caption-red h2{color:rgba(255,170,170,.9);text-shadow:0 0 30px rgba(204,0,0,.5),0 4px 20px rgba(0,0,0,.9)}
     /* Red pill lure in blue world */
     .red-pill-lure{
       position:absolute;z-index:20;bottom:10%;left:8vw;
@@ -174,10 +174,10 @@
     .lure-text{
       font-family:'Cormorant Garamond','Noto Serif SC',serif;
       font-size:1.2rem;font-style:italic;letter-spacing:.08em;
-      color:rgba(255,120,120,.4);transition:color .3s;
-      text-shadow:0 0 10px rgba(204,0,0,.15);
+      color:rgba(255,150,150,.6);transition:color .3s;
+      text-shadow:0 0 15px rgba(204,0,0,.25);
     }
-    .red-pill-lure:hover .lure-text{color:rgba(255,150,150,.8);text-shadow:0 0 20px rgba(204,0,0,.3)}
+    .red-pill-lure:hover .lure-text{color:rgba(255,200,200,.9);text-shadow:0 0 25px rgba(204,0,0,.4)}
     @keyframes lurePulse{0%,100%{box-shadow:0 0 20px rgba(204,0,0,.5),0 0 40px rgba(204,0,0,.2)}50%{box-shadow:0 0 35px rgba(255,0,0,.7),0 0 60px rgba(255,0,0,.3)}}
     .hero-sub{position:absolute;z-index:4;bottom:20%;left:50%;transform:translateX(-50%);font-size:clamp(.85rem,1.5vw,1.1rem);font-weight:300;color:rgba(255,255,255,.2);letter-spacing:.15em;text-align:center;white-space:nowrap;opacity:0;animation:fadeUp 1s 1.8s forwards}
     @keyframes fadeUp{from{opacity:0;transform:translate(-50%,15px)}to{opacity:1;transform:translate(-50%,0)}}
@@ -194,23 +194,23 @@
     .empire-title em{font-style:normal;background:linear-gradient(135deg,var(--red),var(--orange),var(--gold));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 
     /* 4 channels — big, prominent */
-    .channels{display:grid;grid-template-columns:1.3fr 1fr 1fr 1.3fr;gap:0;max-width:1100px;width:90vw;opacity:0;transition:opacity 1.2s .5s}
+    .channels{display:grid;grid-template-columns:1fr 1fr;gap:4px;max-width:900px;width:90vw;opacity:0;transition:opacity 1.2s .5s}
     #act-empire.in .channels{opacity:1}
-    @media(max-width:768px){.channels{grid-template-columns:repeat(2,1fr)}}
-    .channel{display:flex;flex-direction:column;align-items:center;gap:16px;padding:40px 20px;position:relative;overflow:hidden;transition:transform .5s cubic-bezier(.16,1,.3,1)}
-    .channel:nth-child(1){transform:translateY(0)}
-    .channel:nth-child(2){transform:translateY(30px)}
-    .channel:nth-child(3){transform:translateY(-10px)}
-    .channel:nth-child(4){transform:translateY(20px)}
-    .channel::before{content:'';position:absolute;inset:0;border:1px solid rgba(255,255,255,.04);border-radius:999px;opacity:0;transition:opacity .5s}
-    .channel:hover::before{opacity:1}
-    .channel-circle{width:96px;height:96px;border-radius:50%;display:flex;align-items:center;justify-content:center;border:2px solid rgba(255,255,255,.2);background:rgba(255,255,255,.06);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);transition:all .4s;color:rgba(255,255,255,.85);box-shadow:0 0 30px rgba(239,68,68,.08)}
-    .channel:hover .channel-circle{border-color:rgba(239,68,68,.5);background:rgba(239,68,68,.12);color:#fff;transform:scale(1.12);box-shadow:0 0 50px rgba(239,68,68,.2)}
-    .channel-circle svg{width:36px;height:36px}
-    .channel-name{font-size:.85rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.7);transition:color .4s}
+    @media(max-width:768px){.channels{grid-template-columns:1fr}}
+    .channel{display:flex;align-items:center;gap:28px;padding:44px 40px;position:relative;overflow:hidden;transition:all .4s cubic-bezier(.16,1,.3,1);background:rgba(255,255,255,.02)}
+    .channel:hover{background:rgba(255,255,255,.06)}
+    .channel:nth-child(1){transform:translateX(-20px)}
+    .channel:nth-child(2){transform:translateX(20px) translateY(15px)}
+    .channel:nth-child(3){transform:translateX(-10px) translateY(-10px)}
+    .channel:nth-child(4){transform:translateX(30px) translateY(5px)}
+    .channel-circle{width:80px;height:80px;min-width:80px;border-radius:50%;display:flex;align-items:center;justify-content:center;border:2px solid rgba(255,255,255,.15);background:rgba(255,255,255,.04);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);transition:all .4s;color:rgba(255,255,255,.8);box-shadow:0 0 25px rgba(204,0,0,.06)}
+    .channel:hover .channel-circle{border-color:rgba(204,0,0,.4);color:#fff;transform:scale(1.1);box-shadow:0 0 40px rgba(204,0,0,.2)}
+    .channel-circle svg{width:32px;height:32px}
+    .channel-info{display:flex;flex-direction:column;gap:6px}
+    .channel-name{font-family:'Cormorant Garamond','Noto Serif SC',serif;font-size:1.4rem;font-weight:600;letter-spacing:.05em;color:rgba(255,255,255,.85);transition:color .4s}
     .channel:hover .channel-name{color:#fff}
-    .channel-desc{font-size:.8rem;font-weight:300;color:rgba(255,255,255,.35);text-align:center;line-height:1.5;max-width:180px;transition:color .4s}
-    .channel:hover .channel-desc{color:rgba(255,255,255,.6)}
+    .channel-desc{font-size:.85rem;font-weight:300;color:rgba(255,255,255,.3);line-height:1.5;max-width:260px;transition:color .4s}
+    .channel:hover .channel-desc{color:rgba(255,255,255,.55)}
 
     /* Pulse rings around empire hero */
     .empire-rings{position:absolute;top:0;left:50%;transform:translateX(-50%);width:200px;height:200px;pointer-events:none}
@@ -345,7 +345,7 @@
       <video class="vid-bg" id="vid-blue" autoplay muted loop playsinline src="/videos/redesign/blue-dystopia.mp4"></video>
       <div class="scanlines"></div>
       <div class="caption caption-top caption-blue">
-        <h2 data-en="Their algorithm. Their content. <strong>Their rules.</strong>" data-zh="他们的算法。他们的内容。<strong>他们的规则。</strong>">Their algorithm. Their content. <strong>Their rules.</strong></h2>
+        <h2 data-en="Their algorithm.<br>Their content.<br><strong>Their rules.</strong>" data-zh="他们的算法。<br>他们的内容。<br><strong>他们的规则。</strong>">Their algorithm.<br>Their content.<br><strong>Their rules.</strong></h2>
       </div>
       <div class="red-pill-lure" id="red-pill-lure">
         <div class="lure-pill"></div>
@@ -394,29 +394,37 @@
           <div class="channel-circle">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 7.5h1.5m-1.5 3h1.5m-7.5 3h7.5m-7.5 3h7.5m3-9h3.375c.621 0 1.125.504 1.125 1.125V18a2.25 2.25 0 0 1-2.25 2.25M16.5 7.5V18a2.25 2.25 0 0 0 2.25 2.25M16.5 7.5V4.875c0-.621-.504-1.125-1.125-1.125H4.125C3.504 3.75 3 4.254 3 4.875V18a2.25 2.25 0 0 0 2.25 2.25h13.5M6 7.5h3v3H6V7.5Z"/></svg>
           </div>
-          <span class="channel-name" data-en="News Agency" data-zh="私人新闻社">News Agency</span>
-          <span class="channel-desc" data-en="56 sources. Deep research. Your daily briefing." data-zh="56 个信源。深度研究。你的每日简报。">56 sources. Deep research. Your daily briefing.</span>
+          <div class="channel-info">
+            <span class="channel-name" data-en="News Agency" data-zh="私人新闻社">News Agency</span>
+            <span class="channel-desc" data-en="56 sources. Deep research. Your daily briefing." data-zh="56 个信源。深度研究。你的每日简报。">56 sources. Deep research. Your daily briefing.</span>
+          </div>
         </div>
         <div class="channel">
           <div class="channel-circle">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M19.114 5.636a9 9 0 0 1 0 12.728M16.463 8.288a5.25 5.25 0 0 1 0 7.424M6.75 8.25l4.72-4.72a.75.75 0 0 1 1.28.53v15.88a.75.75 0 0 1-1.28.53l-4.72-4.72H4.51c-.88 0-1.704-.507-1.938-1.354A9.009 9.009 0 0 1 2.25 12c0-.83.112-1.633.322-2.396C2.806 8.756 3.63 8.25 4.51 8.25H6.75Z"/></svg>
           </div>
-          <span class="channel-name" data-en="Radio Station" data-zh="私人电台">Radio Station</span>
-          <span class="channel-desc" data-en="Voice cloning. Multi-speaker. Runs on your Mac." data-zh="声音克隆。多人对话。本地运行。">Voice cloning. Multi-speaker. Runs on your Mac.</span>
+          <div class="channel-info">
+            <span class="channel-name" data-en="Radio Station" data-zh="私人电台">Radio Station</span>
+            <span class="channel-desc" data-en="Voice cloning. Multi-speaker. Runs on your Mac." data-zh="声音克隆。多人对话。本地运行。">Voice cloning. Multi-speaker. Runs on your Mac.</span>
+          </div>
         </div>
         <div class="channel">
           <div class="channel-circle">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="m15.75 10.5 4.72-4.72a.75.75 0 0 1 1.28.53v11.38a.75.75 0 0 1-1.28.53l-4.72-4.72M4.5 18.75h9a2.25 2.25 0 0 0 2.25-2.25v-9a2.25 2.25 0 0 0-2.25-2.25h-9A2.25 2.25 0 0 0 2.25 7.5v9a2.25 2.25 0 0 0 2.25 2.25Z"/></svg>
           </div>
-          <span class="channel-name" data-en="TV Studio" data-zh="私人电视台">TV Studio</span>
-          <span class="channel-desc" data-en="Slides. Comics. Videos. 48 visual styles." data-zh="演示。漫画。视频。48 种视觉风格。">Slides. Comics. Videos. 48 visual styles.</span>
+          <div class="channel-info">
+            <span class="channel-name" data-en="TV Studio" data-zh="私人电视台">TV Studio</span>
+            <span class="channel-desc" data-en="Slides. Comics. Videos. 48 visual styles." data-zh="演示。漫画。视频。48 种视觉风格。">Slides. Comics. Videos. 48 visual styles.</span>
+          </div>
         </div>
         <div class="channel">
           <div class="channel-circle">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3.75 3v11.25A2.25 2.25 0 0 0 6 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0 1 18 16.5h-2.25m-7.5 0h7.5m-7.5 0-1 3m8.5-3 1 3m0 0 .5 1.5m-.5-1.5h-9.5m0 0-.5 1.5M9 11.25v1.5M12 9v3.75m3-6v6"/></svg>
           </div>
-          <span class="channel-name" data-en="Think Tank" data-zh="私人智库">Think Tank</span>
-          <span class="channel-desc" data-en="Parallel research agents. Sites. One-click publish." data-zh="并行研究。建站。一键发布。">Parallel research agents. Sites. One-click publish.</span>
+          <div class="channel-info">
+            <span class="channel-name" data-en="Think Tank" data-zh="私人智库">Think Tank</span>
+            <span class="channel-desc" data-en="Parallel research agents. Sites. One-click publish." data-zh="并行研究。建站。一键发布。">Parallel research agents. Sites. One-click publish.</span>
+          </div>
         </div>
       </div>
     </section>
