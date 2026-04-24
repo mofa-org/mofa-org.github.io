@@ -561,19 +561,26 @@ let cx=0,cy=0;
   scene.add(new THREE.DirectionalLight(0xffffff,.5).translateZ(-5).translateY(5));
 
   function pill(color,emColor,px){
-    const g=new THREE.Group();const rad=.5,bh=1.9;
-    const mT=new THREE.MeshPhysicalMaterial({color,emissive:emColor,emissiveIntensity:.15,metalness:.1,roughness:.15,clearcoat:1,clearcoatRoughness:.03,transparent:true,opacity:.94});
-    const mB=new THREE.MeshPhysicalMaterial({color:new THREE.Color(color).multiplyScalar(.6),emissive:emColor,emissiveIntensity:.1,metalness:.1,roughness:.2,clearcoat:.8,clearcoatRoughness:.06,transparent:true,opacity:.94});
+    const g=new THREE.Group();
+    // Flat oval softgel capsule — like Matrix pills
+    const rad=.45,bh=1.4;
+    const mT=new THREE.MeshPhysicalMaterial({color,emissive:emColor,emissiveIntensity:.15,metalness:.05,roughness:.12,clearcoat:1,clearcoatRoughness:.02,transparent:true,opacity:.95,transmission:.15,thickness:.5});
+    const mB=new THREE.MeshPhysicalMaterial({color:new THREE.Color(color).multiplyScalar(.55),emissive:emColor,emissiveIntensity:.1,metalness:.05,roughness:.18,clearcoat:.9,clearcoatRoughness:.04,transparent:true,opacity:.95});
     const body=new THREE.Mesh(new THREE.CylinderGeometry(rad,rad,bh,32,1,true),mT);
     const top=new THREE.Mesh(new THREE.SphereGeometry(rad,32,16,0,Math.PI*2,0,Math.PI/2),mT);top.position.y=bh/2;
     const bot=new THREE.Mesh(new THREE.SphereGeometry(rad,32,16,0,Math.PI*2,Math.PI/2,Math.PI/2),mB);bot.position.y=-bh/2;
-    g.add(body,top,bot);g.position.x=px;g.rotation.set(.35,0,px>0?.22:-.22);
+    g.add(body,top,bot);
+    // Lie flat (horizontal) + squash to oval
+    g.rotation.set(0,0,Math.PI/2);
+    g.scale.set(1,.7,1);
+    g.position.x=px;
     g.userData.type=px<0?'blue':'red';
     return g;
   }
-  const bPill=window._bPill=pill(0x0044cc,0x001a66,-2.4);
-  bPill.position.y=1.0;
-  const rPill=window._rPill=pill(0xcc0000,0x660000,2.4);
+  const bPill=window._bPill=pill(0x0044cc,0x001a66,-2.0);
+  bPill.position.y=.3;
+  const rPill=window._rPill=pill(0xcc0000,0x660000,2.0);
+  rPill.position.y=-.3;
   scene.add(bPill,rPill);
 
   // Raycaster for click
@@ -692,8 +699,8 @@ let cx=0,cy=0;
   const clock=new THREE.Clock();
   !function anim(){
     requestAnimationFrame(anim);const t=clock.getElapsedTime();
-    bPill.position.y=1.0+Math.sin(t*.7)*.35;bPill.rotation.y=t*.25;
-    rPill.position.y=Math.sin(t*.7+1.8)*.4;rPill.rotation.y=-t*.3;
+    bPill.position.y=.3+Math.sin(t*.6)*.15;bPill.rotation.y=t*.15;bPill.rotation.x=Math.sin(t*.4)*.08;
+    rPill.position.y=-.3+Math.sin(t*.6+1.5)*.15;rPill.rotation.y=-t*.15;rPill.rotation.x=Math.sin(t*.5)*.08;
     bPill.position.x=-2.4+pmx*.35;rPill.position.x=2.4+pmx*.35;
     cam.position.y=pmy*-.4;cam.lookAt(0,0,0);
     bL.position.set(-5+Math.sin(t)*2,3+Math.cos(t*.6)*1.5,5);
