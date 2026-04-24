@@ -281,6 +281,45 @@
     /* L9: Mouse trail */
     #trail-canvas{position:fixed;inset:0;z-index:9995;pointer-events:none}
 
+    /* ===== MOBILE ===== */
+    @media(max-width:768px){
+      .hero-logo{width:120px;height:120px}
+      .glitch-word{font-size:clamp(3rem,12vw,5rem)}
+      .pill-hint{font-size:.6rem}
+      .caption-top{left:5vw;top:8%}
+      .caption h2{font-size:clamp(1.5rem,6vw,2.2rem)}
+      .caption-red{right:5vw}
+      #act-blue{min-height:100dvh}
+      .red-pill-lure{bottom:12%;left:5vw;gap:16px}
+      .lure-pill{width:30px;height:68px}
+      .lure-text{font-size:1rem}
+      .rabbit-hole-wrap{right:5vw;bottom:8%;gap:16px}
+      .rabbit-hole{width:120px;height:120px}
+      .rh-label{font-size:1.1rem}
+      .channel{padding:28px 20px;gap:16px}
+      .channel-circle{width:64px;height:64px;min-width:64px}
+      .channel-circle svg{width:28px;height:28px}
+      .channel-name{font-size:1.1rem}
+      .channel-desc{font-size:.8rem}
+      .empire-title{font-size:clamp(2rem,8vw,3rem)}
+      .deco{display:none}
+      .float-ring{display:none}
+      .f-nav{top:12px;right:12px;gap:10px}
+      .f-nav a,.f-nav span{font-size:.55rem}
+      .quiet-footer a{font-size:.55rem}
+    }
+    @media(max-width:480px){
+      .hero-logo{width:90px;height:90px}
+      .channels{gap:8px}
+      .channel{padding:20px 16px}
+      .channel-circle{width:52px;height:52px;min-width:52px}
+      .channel-circle svg{width:24px;height:24px}
+      .channel-name{font-size:.95rem}
+      .channel-desc{font-size:.7rem}
+      .lure-pill{width:24px;height:54px}
+      .rabbit-hole{width:90px;height:90px}
+    }
+
     /* L10: Screen shake */
     .shake{animation:screenShake .4s ease-out}
     @keyframes screenShake{0%{transform:translate(0)}15%{transform:translate(-8px,6px)}30%{transform:translate(6px,-8px)}45%{transform:translate(-4px,4px)}60%{transform:translate(4px,-2px)}75%{transform:translate(-2px,2px)}100%{transform:translate(0)}}
