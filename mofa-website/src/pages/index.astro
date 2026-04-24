@@ -542,95 +542,50 @@ let cx=0,cy=0;
     const hits=getIntersects(e.clientX,e.clientY);
     if(!hits.length)return;
     const type=hits[0].object.parent.userData.type;
-    const clickedPill=type==='blue'?bPill:rPill;
+    const chosenPill=type==='blue'?bPill:rPill;
+    const otherPill=type==='blue'?rPill:bPill;
+    const origZ=chosenPill.position.z;
 
-    // Split-open animation: top half up, bottom half down, inner glow
-    const topHalf=clickedPill.children[1]; // sphere top
-    const botHalf=clickedPill.children[2]; // sphere bottom
-    const body=clickedPill.children[0]; // cylinder
-    const origTopY=topHalf.position.y, origBotY=botHalf.position.y;
+    // Chosen pill: glow → float toward camera → dissolve
+    let dt=0;
+    function dissolveAnim(){
+      dt+=0.02;
+      const t=Math.min(dt,1);
+      const ease=1-Math.pow(1-t,3);
 
-    // Add inner glow light
-    // Inner glow — warm core light
-    const glowColor=type==='blue'?0x0044cc:0xcc0000;
-    const innerGlow=new THREE.PointLight(glowColor,0,8);
-    innerGlow.position.set(0,0,0);
-    clickedPill.add(innerGlow);
+      // Float toward camera + glow intensely
+      chosenPill.position.z=origZ+ease*4;
+      chosenPill.scale.setScalar(1+ease*.3);
+      chosenPill.children.forEach(m=>{
+        if(!m.material)return;
+        m.material.emissiveIntensity=.15+ease*.8;
+        if(dt>.5) m.material.opacity=Math.max(0,.94-(dt-.5)*1.88);
+      });
 
-    // Scatter micro-particles from the seam
-    const sparkGeo=new THREE.BufferGeometry();
-    const sparkCount=60;
-    const sparkPos=new Float32Array(sparkCount*3);
-    const sparkVel=[];
-    for(let i=0;i<sparkCount;i++){
-      sparkPos[i*3]=0;sparkPos[i*3+1]=0;sparkPos[i*3+2]=0;
-      const a=Math.random()*Math.PI*2,sp=.02+Math.random()*.08;
-      sparkVel.push({vx:Math.cos(a)*sp,vy:(Math.random()-.3)*sp*1.5,vz:Math.sin(a)*sp});
-    }
-    sparkGeo.setAttribute('position',new THREE.BufferAttribute(sparkPos,3));
-    const sparkMat=new THREE.PointsMaterial({color:glowColor,size:.08,transparent:true,opacity:.9,blending:THREE.AdditiveBlending});
-    const sparks=new THREE.Points(sparkGeo,sparkMat);
-    clickedPill.add(sparks);
+      // Unchosen pill: dim down
+      otherPill.children.forEach(m=>{
+        if(!m.material)return;
+        m.material.emissiveIntensity=Math.max(.03,.15-ease*.12);
+        m.material.opacity=Math.max(.3,.94-ease*.5);
+      });
+      otherPill.scale.setScalar(Math.max(.7,1-ease*.3));
 
-    let splitT=0;
-    const flashEl=document.getElementById('pill-flash');
-    function splitAnim(){
-      splitT+=0.025;
-      // Spring-like overshoot: ease with damped oscillation
-      const t=Math.min(splitT,1.2);
-      const spring=1-Math.exp(-6*t)*Math.cos(t*8);
-      const ease=Math.min(spring,1.3);
-
-      // Split with slight outward rotation
-      topHalf.position.y=origTopY+ease*2.2;
-      topHalf.rotation.x=ease*.15;
-      topHalf.rotation.z=ease*.08;
-      botHalf.position.y=origBotY-ease*2.2;
-      botHalf.rotation.x=-ease*.12;
-      botHalf.rotation.z=-ease*.06;
-
-      // Body dissolves
-      body.scale.y=Math.max(0,1-ease*.9);
-      body.material.opacity=Math.max(0,.94-ease*.94);
-
-      // Inner glow ramps up with warmth
-      innerGlow.intensity=ease*40;
-      innerGlow.distance=3+ease*12;
-
-      // Sparks fly outward
-      const sp=sparks.geometry.attributes.position.array;
-      for(let i=0;i<sparkCount;i++){
-        const v=sparkVel[i];
-        sp[i*3]+=v.vx;sp[i*3+1]+=v.vy;sp[i*3+2]+=v.vz;
-      }
-      sparks.geometry.attributes.position.needsUpdate=true;
-      sparkMat.opacity=Math.max(0,1-splitT*.6);
-
-      // Screen flash: brief white burst then colored glow
-      if(splitT<.1){
-        const f=1-splitT/.1;
-        flashEl.style.background='radial-gradient(circle,rgba(255,255,255,'+f*.7+'),transparent 50%)';
+      // Screen color flash
+      const flashEl=document.getElementById('pill-flash');
+      if(dt<.15){
+        flashEl.style.background='radial-gradient(circle,rgba(255,255,255,'+(1-dt/.15)*.5+'),transparent 50%)';
         flashEl.style.opacity='1';
-      }else if(splitT<.4){
-        const f=1-(splitT-.1)/.3;
+      }else if(dt<.5){
         const rgb=type==='blue'?'0,68,204':'204,0,0';
-        flashEl.style.background='radial-gradient(circle,rgba('+rgb+','+f*.3+'),transparent 60%)';
-        flashEl.style.opacity='1';
+        flashEl.style.background='radial-gradient(circle,rgba('+rgb+','+(1-(dt-.15)/.35)*.25+'),transparent 60%)';
       }else{
         flashEl.style.opacity='0';
       }
 
-      // Fade out everything after split
-      if(splitT>1){
-        const fade=Math.max(0,1-(splitT-1)*1.5);
-        clickedPill.children.forEach(m=>{if(m.material)m.material.opacity=fade*.5});
-        sparkMat.opacity=fade*.3;
-        innerGlow.intensity=Math.max(0,innerGlow.intensity*fade);
-        if(fade<=0){clickedPill.visible=false;return}
-      }
-      requestAnimationFrame(splitAnim);
+      if(dt<1.2) requestAnimationFrame(dissolveAnim);
+      else chosenPill.visible=false;
     }
-    splitAnim();
+    dissolveAnim();
 
     // Red pill: shatter video as FIXED OVERLAY during scroll (no waiting)
     if(type==='red'){
@@ -666,6 +621,7 @@ let cx=0,cy=0;
         const vc=document.getElementById('vid-hero-calm');
         const vs=document.getElementById('vid-hero-shatter');
         if(vc&&vs){vc.style.opacity='1';vs.style.opacity='0'}
+        document.getElementById('pill-canvas').style.opacity='0';
         resetObs.disconnect();
       }
     },{threshold:0});
@@ -916,10 +872,9 @@ document.querySelectorAll('.vid-bg').forEach(v=>{
     const vCalm=document.getElementById('vid-hero-calm');
     const vShatter=document.getElementById('vid-hero-shatter');
     if(vCalm&&vShatter){vCalm.style.opacity='1';vShatter.style.opacity='0'}
-    // Make pills visible again for re-choosing
+    // Restore both pills to full state
     const bp=window._bPill,rp=window._rPill;
-    if(bp){bp.visible=true;bp.children.forEach(m=>{if(m.material)m.material.opacity=.94})}
-    if(rp){rp.visible=true;rp.children.forEach(m=>{if(m.material)m.material.opacity=.94})}
+    [bp,rp].forEach(p=>{if(!p)return;p.visible=true;p.scale.setScalar(1);p.position.z=0;p.children.forEach(m=>{if(m.material){m.material.opacity=.94;m.material.emissiveIntensity=.15}})})
     // Scroll back
     document.getElementById('act-choice').scrollIntoView({behavior:'smooth'});
     // Pulse the red pill after arrival
