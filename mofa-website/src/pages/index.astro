@@ -234,14 +234,15 @@
     @keyframes ringPulse{0%{transform:translate(-50%,-50%) scale(1);opacity:.5}100%{transform:translate(-50%,-50%) scale(6);opacity:0}}
 
     /* Rabbit hole portal */
-    .rabbit-hole-wrap{position:absolute;z-index:5;bottom:8%;right:8vw;display:flex;align-items:center;gap:20px;cursor:pointer;opacity:0;transition:opacity 1.2s 1s}
+    .rabbit-hole-wrap{position:absolute;z-index:5;bottom:12%;right:8vw;display:flex;align-items:center;gap:28px;cursor:pointer;opacity:0;transition:opacity 1.2s 1s;animation:rhBeckon 2s ease-in-out 3s infinite}
     .act.in .rabbit-hole-wrap{opacity:1}
-    .rabbit-hole{position:relative;width:140px;height:140px}
+    @keyframes rhBeckon{0%,100%{transform:scale(1)}50%{transform:scale(1.06)}}
+    .rabbit-hole{position:relative;width:200px;height:200px}
     .rh-ring{position:absolute;inset:0;border-radius:50%;border:2px solid transparent;animation:rhSpin linear infinite}
-    .rh-ring-1{border-top-color:rgba(0,255,0,.7);border-right-color:rgba(0,255,0,.25);animation-duration:4s;box-shadow:0 0 15px rgba(0,255,0,.1)}
-    .rh-ring-2{inset:14px;border-bottom-color:rgba(0,220,0,.6);border-left-color:rgba(0,220,0,.2);animation-duration:3s;animation-direction:reverse}
-    .rh-ring-3{inset:28px;border-top-color:rgba(204,0,0,.7);border-left-color:rgba(204,0,0,.25);animation-duration:5s;box-shadow:0 0 15px rgba(204,0,0,.1)}
-    .rh-core{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:18px;height:18px;border-radius:50%;background:#ff0000;box-shadow:0 0 20px #ff0000,0 0 40px rgba(255,0,0,.5),0 0 60px rgba(255,0,0,.2);animation:rhPulse 2s ease-in-out infinite}
+    .rh-ring-1{border-top-color:rgba(0,255,0,.8);border-right-color:rgba(0,255,0,.3);animation-duration:4s;box-shadow:0 0 20px rgba(0,255,0,.15)}
+    .rh-ring-2{inset:20px;border-bottom-color:rgba(0,220,0,.7);border-left-color:rgba(0,220,0,.25);animation-duration:3s;animation-direction:reverse;box-shadow:0 0 15px rgba(0,220,0,.1)}
+    .rh-ring-3{inset:40px;border-top-color:rgba(204,0,0,.8);border-left-color:rgba(204,0,0,.3);animation-duration:5s;box-shadow:0 0 20px rgba(204,0,0,.15)}
+    .rh-core{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:24px;height:24px;border-radius:50%;background:#ff2200;box-shadow:0 0 25px #ff0000,0 0 50px rgba(255,0,0,.5),0 0 80px rgba(255,0,0,.25);animation:rhPulse 2s ease-in-out infinite}
     @keyframes rhSpin{to{transform:rotate(360deg)}}
     @keyframes rhPulse{0%,100%{transform:translate(-50%,-50%) scale(1);box-shadow:0 0 15px var(--red),0 0 30px rgba(204,0,0,.4)}50%{transform:translate(-50%,-50%) scale(1.3);box-shadow:0 0 25px var(--red),0 0 50px rgba(204,0,0,.6)}}
     .rabbit-hole-wrap:hover .rh-ring-1{animation-duration:1.5s}
@@ -249,7 +250,33 @@
     .rabbit-hole-wrap:hover .rh-ring-3{animation-duration:1.8s}
     .rabbit-hole-wrap:hover .rh-core{background:#ff0000;box-shadow:0 0 40px #ff0000,0 0 80px rgba(255,0,0,.6)}
     .rabbit-hole-wrap:hover .rh-label{color:rgba(0,255,0,.8)}
-    .rh-label{font-family:'Cormorant Garamond','Noto Serif SC',serif;font-size:1.1rem;font-style:italic;letter-spacing:.1em;color:rgba(0,255,0,.35);transition:color .4s;text-shadow:0 0 15px rgba(0,255,0,.1)}
+    .rh-label{font-family:'Cormorant Garamond','Noto Serif SC',serif;font-size:1.5rem;font-style:italic;letter-spacing:.08em;color:rgba(0,255,0,.5);transition:color .4s;text-shadow:0 0 20px rgba(0,255,0,.2)}
+
+    /* Decorative images — parallax, masked, faint */
+    .deco{position:absolute;pointer-events:none;z-index:1;border-radius:50%;opacity:0;transition:opacity 1.5s;object-fit:cover}
+    .act.in .deco{opacity:1}
+
+    .deco-orb{width:320px;height:320px;top:10%;right:8%;opacity:0;filter:blur(1px);animation:decoFloat1 12s ease-in-out infinite}
+    .act.in .deco-orb{opacity:.15}
+
+    .deco-surveillance{width:500px;height:300px;border-radius:20px;bottom:5%;right:5%;filter:saturate(1.5) brightness(.6);mask-image:radial-gradient(ellipse,black 40%,transparent 75%);-webkit-mask-image:radial-gradient(ellipse,black 40%,transparent 75%);animation:decoFloat2 15s ease-in-out infinite}
+    .act.in .deco-surveillance{opacity:.2}
+
+    .deco-rain{width:400px;height:250px;border-radius:20px;top:8%;right:15%;filter:brightness(.5);mask-image:radial-gradient(ellipse,black 30%,transparent 70%);-webkit-mask-image:radial-gradient(ellipse,black 30%,transparent 70%);animation:decoFloat3 18s ease-in-out infinite}
+    .act.in .deco-rain{opacity:.12}
+
+    .deco-studio{width:450px;height:280px;border-radius:999px;bottom:8%;left:5%;filter:saturate(1.3);mask-image:radial-gradient(ellipse,black 35%,transparent 70%);-webkit-mask-image:radial-gradient(ellipse,black 35%,transparent 70%);animation:decoFloat1 14s ease-in-out infinite}
+    .act.in .deco-studio{opacity:.18}
+
+    .deco-nodes{width:380px;height:250px;border-radius:50%;top:10%;right:5%;mask-image:radial-gradient(ellipse,black 35%,transparent 70%);-webkit-mask-image:radial-gradient(ellipse,black 35%,transparent 70%);animation:decoFloat3 16s ease-in-out infinite}
+    .act.in .deco-nodes{opacity:.15}
+
+    .deco-terminal{width:300px;height:200px;border-radius:20px;bottom:15%;right:12%;filter:saturate(1.2);mask-image:radial-gradient(ellipse,black 40%,transparent 75%);-webkit-mask-image:radial-gradient(ellipse,black 40%,transparent 75%);animation:decoFloat2 13s ease-in-out infinite}
+    .act.in .deco-terminal{opacity:.12}
+
+    @keyframes decoFloat1{0%,100%{transform:translate(0,0) rotate(0deg)}50%{transform:translate(-15px,20px) rotate(2deg)}}
+    @keyframes decoFloat2{0%,100%{transform:translate(0,0) rotate(0deg)}33%{transform:translate(20px,-10px) rotate(-1deg)}66%{transform:translate(-10px,15px) rotate(1.5deg)}}
+    @keyframes decoFloat3{0%,100%{transform:translate(0,0)}25%{transform:translate(12px,18px)}75%{transform:translate(-18px,-8px)}}
 
     /* L9: Mouse trail */
     #trail-canvas{position:fixed;inset:0;z-index:9995;pointer-events:none}
@@ -346,6 +373,7 @@
     <section class="act" id="act-choice">
       <video class="vid-bg" id="vid-hero-calm" autoplay muted loop playsinline src="/videos/redesign/empire-bg.mp4" style="transition:opacity 1s"></video>
       <video class="vid-bg" id="vid-hero-shatter" muted playsinline preload="auto" src="/videos/redesign/shatter-clip.mp4" style="opacity:0;transition:opacity 1s"></video>
+      <img src="/images/redesign/mofa-orb.png" alt="" class="deco deco-orb" />
       <canvas id="pill-canvas"></canvas>
       <img src="/mofa-logo.png" alt="MoFA" class="hero-logo" />
       <div class="glitch-word" id="glitch-el"></div>
@@ -356,6 +384,8 @@
     <!-- ACT 2: OPPRESSION -->
     <section class="act" id="act-blue">
       <video class="vid-bg" id="vid-blue" autoplay muted loop playsinline src="/videos/redesign/blue-dystopia.mp4"></video>
+      <img src="/images/redesign/surveillance-wall.png" alt="" class="deco deco-surveillance" />
+      <img src="/images/redesign/digital-rain-cubes.png" alt="" class="deco deco-rain" />
       <div class="scanlines"></div>
       <div class="caption caption-top caption-blue">
         <h2 data-en="Their algorithm.<br>Their content.<br><strong>Their rules.</strong>" data-zh="算法喂养。<br>千篇一律。<br><strong>身不由己。</strong>">Their algorithm.<br>Their content.<br><strong>Their rules.</strong></h2>
@@ -375,6 +405,7 @@
     <!-- ACT 4: LIBERATION -->
     <section class="act" id="act-red">
       <video class="vid-bg" id="vid-empire" autoplay muted loop playsinline src="/videos/redesign/empire.mp4"></video>
+      <img src="/images/redesign/floating-studio.png" alt="" class="deco deco-studio" />
       <div class="caption caption-top caption-red">
         <h2 data-en="Your voice.<br>Your audience.<br><strong>Your empire.</strong>" data-zh="你的声音。<br>你的观众。<br><strong>你的帝国。</strong>">Your voice.<br>Your audience.<br><strong>Your empire.</strong></h2>
       </div>
@@ -392,6 +423,8 @@
     <!-- ACT 5: YOUR EMPIRE -->
     <section class="act" id="act-empire">
       <video class="vid-bg" id="vid-empire2" autoplay muted loop playsinline src="/videos/redesign/empire-bg.mp4"></video>
+      <img src="/images/redesign/network-nodes.png" alt="" class="deco deco-nodes" />
+      <img src="/images/redesign/retro-terminal.png" alt="" class="deco deco-terminal" />
       <div class="empire-hero">
         <div style="position:relative">
           <div class="empire-rings">
