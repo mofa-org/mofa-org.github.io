@@ -410,12 +410,26 @@ document.querySelectorAll('#act-blue,#act-red,#act-empire').forEach(el=>obs.obse
 const vidObs=new IntersectionObserver(entries=>{entries.forEach(e=>{const v=e.target.querySelector('video');if(v){if(e.isIntersecting)v.play().catch(()=>{});else v.pause()}})},{threshold:0});
 document.querySelectorAll('.act').forEach(el=>vidObs.observe(el));
 
-// Smooth video loop: fade out before end, fade back in on restart
-document.querySelectorAll('.vid-bg').forEach(v=>{
+// Smooth video loop via CSS crossfade
+document.querySelectorAll('.vid-bg[loop]').forEach(v=>{
+  let fading=false;
   v.addEventListener('timeupdate',()=>{
-    if(v.duration&&v.currentTime>v.duration-1){v.style.opacity=Math.max(0,(v.duration-v.currentTime)*parseFloat(getComputedStyle(v).opacity||1)).toString()}
+    if(!v.duration)return;
+    if(v.currentTime>v.duration-1.5&&!fading){
+      fading=true;
+      v.style.transition='opacity 1.5s ease-out';
+      v.style.opacity='0';
+    }
   });
-  v.addEventListener('seeked',()=>{v.style.opacity=''});
+  v.addEventListener('seeked',()=>{
+    if(fading){
+      fading=false;
+      requestAnimationFrame(()=>{
+        v.style.transition='opacity .8s ease-in';
+        v.style.opacity='';
+      });
+    }
+  });
 });
 
 // ======== RABBIT HOLE — click to scroll to empire ========
