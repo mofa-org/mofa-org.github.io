@@ -211,10 +211,10 @@
     @media(max-width:768px){.channels{grid-template-columns:1fr}}
     .channel{display:flex;align-items:center;gap:24px;padding:36px 32px;position:relative;overflow:hidden;transition:all .4s;background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.04)}
     .channel:hover{background:rgba(255,255,255,.06)}
-    .channel:nth-child(1){--ch-color:#e74c3c}
-    .channel:nth-child(2){--ch-color:#f0c040}
-    .channel:nth-child(3){--ch-color:#5cc8c8}
-    .channel:nth-child(4){--ch-color:#3a7bd5}
+    .channel:nth-child(1){--ch-color:#e74c3c;transform:translateX(-10px)}
+    .channel:nth-child(2){--ch-color:#f0c040;transform:translateX(10px) translateY(8px)}
+    .channel:nth-child(3){--ch-color:#5cc8c8;transform:translateX(-5px) translateY(-5px)}
+    .channel:nth-child(4){--ch-color:#3a7bd5;transform:translateX(12px)}
     .channel:hover{border-color:var(--ch-color,#fff)}
     .channel-circle{width:88px;height:88px;min-width:88px;border-radius:50%;display:flex;align-items:center;justify-content:center;border:1.5px solid color-mix(in srgb,var(--ch-color) 30%,transparent);background:color-mix(in srgb,var(--ch-color) 5%,transparent);transition:all .4s;color:color-mix(in srgb,var(--ch-color) 70%,#fff);box-shadow:0 0 20px color-mix(in srgb,var(--ch-color) 8%,transparent)}
     .channel:hover .channel-circle{border-color:color-mix(in srgb,var(--ch-color) 60%,transparent);color:var(--ch-color);box-shadow:0 0 35px color-mix(in srgb,var(--ch-color) 20%,transparent)}
