@@ -3,7 +3,7 @@ type: "contributors"
 category: "mofa"
 title: "MoFA Contributors"
 title_zh: "MoFA 贡献者"
-last_updated: "2026-04-25"
+last_updated: "2026-04-26"
 repositories: ["mofa-org/mofa","mofa-org/mofa-new"]
 total_contributors: 69
 ---
@@ -11,7 +11,7 @@ total_contributors: 69
 
 这个文件在构建时自动更新，缓存从GitHub API获取的贡献者数据。
 
-**最后更新**: 2026-04-25
+**最后更新**: 2026-04-26
 **总贡献者数**: 69
 **数据来源**: mofa-org/mofa, mofa-org/mofa-new
 
