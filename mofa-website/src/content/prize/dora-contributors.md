@@ -3,23 +3,23 @@ type: "contributors"
 category: "dora"
 title: "Dora-rs Contributors"
 title_zh: "Dora-rs 贡献者"
-last_updated: "2026-04-28"
+last_updated: "2026-04-29"
 repositories: ["dora-rs/dora"]
-total_contributors: 77
+total_contributors: 78
 ---
 # Dora-rs Contributors Cache
 
 这个文件在构建时自动更新，缓存从GitHub API获取的贡献者数据。
 
-**最后更新**: 2026-04-28
-**总贡献者数**: 77
+**最后更新**: 2026-04-29
+**总贡献者数**: 78
 **数据来源**: dora-rs/dora
 
 ## Contributors Data
 
 
 ### phil-opp
-- **Contributions**: 2051
+- **Contributions**: 2056
 - **Avatar**: https://avatars.githubusercontent.com/u/1131315?v=4
 - **GitHub**: https://github.com/phil-opp
 - **Repositories**: dora-rs/dora
@@ -145,7 +145,7 @@ total_contributors: 77
 - **Repositories**: dora-rs/dora
 
 ### Bhanudahiyaa
-- **Contributions**: 9
+- **Contributions**: 10
 - **Avatar**: https://avatars.githubusercontent.com/u/179860247?v=4
 - **GitHub**: https://github.com/Bhanudahiyaa
 - **Repositories**: dora-rs/dora
@@ -370,6 +370,12 @@ total_contributors: 77
 - **Contributions**: 1
 - **Avatar**: https://avatars.githubusercontent.com/u/73983677?v=4
 - **GitHub**: https://github.com/omahs
+- **Repositories**: dora-rs/dora
+
+### onthebed
+- **Contributions**: 1
+- **Avatar**: https://avatars.githubusercontent.com/u/63764207?v=4
+- **GitHub**: https://github.com/onthebed
 - **Repositories**: dora-rs/dora
 
 ### shivanibhat24
