@@ -3,7 +3,7 @@ type: "contributors"
 category: "mofa"
 title: "MoFA Contributors"
 title_zh: "MoFA 贡献者"
-last_updated: "2026-05-06"
+last_updated: "2026-05-07"
 repositories: ["mofa-org/mofa","mofa-org/mofa-new"]
 total_contributors: 70
 ---
@@ -11,7 +11,7 @@ total_contributors: 70
 
 这个文件在构建时自动更新，缓存从GitHub API获取的贡献者数据。
 
-**最后更新**: 2026-05-06
+**最后更新**: 2026-05-07
 **总贡献者数**: 70
 **数据来源**: mofa-org/mofa, mofa-org/mofa-new
 
@@ -25,7 +25,7 @@ total_contributors: 70
 - **Repositories**: mofa-org/mofa, mofa-org/mofa-new
 
 ### lijingrs
-- **Contributions**: 262
+- **Contributions**: 263
 - **Avatar**: https://avatars.githubusercontent.com/u/20733031?v=4
 - **GitHub**: https://github.com/lijingrs
 - **Repositories**: mofa-org/mofa
@@ -73,7 +73,7 @@ total_contributors: 70
 - **Repositories**: mofa-org/mofa
 
 ### mugiwaraluffy56
-- **Contributions**: 57
+- **Contributions**: 58
 - **Avatar**: https://avatars.githubusercontent.com/u/202161831?v=4
 - **GitHub**: https://github.com/mugiwaraluffy56
 - **Repositories**: mofa-org/mofa
@@ -138,16 +138,16 @@ total_contributors: 70
 - **GitHub**: https://github.com/Ishita-190
 - **Repositories**: mofa-org/mofa
 
+### diiviikk5
+- **Contributions**: 15
+- **Avatar**: https://avatars.githubusercontent.com/u/131183253?v=4
+- **GitHub**: https://github.com/diiviikk5
+- **Repositories**: mofa-org/mofa
+
 ### alabulei1
 - **Contributions**: 14
 - **Avatar**: https://avatars.githubusercontent.com/u/45785633?v=4
 - **GitHub**: https://github.com/alabulei1
-- **Repositories**: mofa-org/mofa
-
-### diiviikk5
-- **Contributions**: 14
-- **Avatar**: https://avatars.githubusercontent.com/u/131183253?v=4
-- **GitHub**: https://github.com/diiviikk5
 - **Repositories**: mofa-org/mofa
 
 ### SUNNYsyy2005
@@ -348,16 +348,16 @@ total_contributors: 70
 - **GitHub**: https://github.com/Gitjay11
 - **Repositories**: mofa-org/mofa
 
+### peterish8
+- **Contributions**: 3
+- **Avatar**: https://avatars.githubusercontent.com/u/181628466?v=4
+- **GitHub**: https://github.com/peterish8
+- **Repositories**: mofa-org/mofa
+
 ### mandeepsingh2007
 - **Contributions**: 3
 - **Avatar**: https://avatars.githubusercontent.com/u/177451296?v=4
 - **GitHub**: https://github.com/mandeepsingh2007
-- **Repositories**: mofa-org/mofa
-
-### peterish8
-- **Contributions**: 2
-- **Avatar**: https://avatars.githubusercontent.com/u/181628466?v=4
-- **GitHub**: https://github.com/peterish8
 - **Repositories**: mofa-org/mofa
 
 ### 451846939
