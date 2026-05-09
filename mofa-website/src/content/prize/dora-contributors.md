@@ -3,7 +3,7 @@ type: "contributors"
 category: "dora"
 title: "Dora-rs Contributors"
 title_zh: "Dora-rs 贡献者"
-last_updated: "2026-05-08"
+last_updated: "2026-05-09"
 repositories: ["dora-rs/dora"]
 total_contributors: 79
 ---
@@ -11,7 +11,7 @@ total_contributors: 79
 
 这个文件在构建时自动更新，缓存从GitHub API获取的贡献者数据。
 
-**最后更新**: 2026-05-08
+**最后更新**: 2026-05-09
 **总贡献者数**: 79
 **数据来源**: dora-rs/dora
 
@@ -180,16 +180,16 @@ total_contributors: 79
 - **GitHub**: https://github.com/PavelGuzenfeld
 - **Repositories**: dora-rs/dora
 
+### bobdingAI
+- **Contributions**: 7
+- **Avatar**: https://avatars.githubusercontent.com/u/4655609?v=4
+- **GitHub**: https://github.com/bobdingAI
+- **Repositories**: dora-rs/dora
+
 ### starlitxiling
 - **Contributions**: 6
 - **Avatar**: https://avatars.githubusercontent.com/u/62335818?v=4
 - **GitHub**: https://github.com/starlitxiling
-- **Repositories**: dora-rs/dora
-
-### bobdingAI
-- **Contributions**: 6
-- **Avatar**: https://avatars.githubusercontent.com/u/4655609?v=4
-- **GitHub**: https://github.com/bobdingAI
 - **Repositories**: dora-rs/dora
 
 ### sauhardh
