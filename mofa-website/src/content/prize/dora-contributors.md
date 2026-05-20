@@ -3,16 +3,16 @@ type: "contributors"
 category: "dora"
 title: "Dora-rs Contributors"
 title_zh: "Dora-rs 贡献者"
-last_updated: "2026-05-19"
+last_updated: "2026-05-20"
 repositories: ["dora-rs/dora"]
-total_contributors: 79
+total_contributors: 80
 ---
 # Dora-rs Contributors Cache
 
 这个文件在构建时自动更新，缓存从GitHub API获取的贡献者数据。
 
-**最后更新**: 2026-05-19
-**总贡献者数**: 79
+**最后更新**: 2026-05-20
+**总贡献者数**: 80
 **数据来源**: dora-rs/dora
 
 ## Contributors Data
@@ -37,7 +37,7 @@ total_contributors: 79
 - **Repositories**: dora-rs/dora
 
 ### heyong4725
-- **Contributions**: 102
+- **Contributions**: 109
 - **Avatar**: https://avatars.githubusercontent.com/u/45980096?v=4
 - **GitHub**: https://github.com/heyong4725
 - **Repositories**: dora-rs/dora
@@ -454,6 +454,12 @@ total_contributors: 79
 - **Contributions**: 1
 - **Avatar**: https://avatars.githubusercontent.com/u/121748506?v=4
 - **GitHub**: https://github.com/Krishnadubey1008
+- **Repositories**: dora-rs/dora
+
+### GHX5T-SOL
+- **Contributions**: 1
+- **Avatar**: https://avatars.githubusercontent.com/u/200635707?v=4
+- **GitHub**: https://github.com/GHX5T-SOL
 - **Repositories**: dora-rs/dora
 
 ### francocipollone
