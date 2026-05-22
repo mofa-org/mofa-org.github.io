@@ -3,7 +3,7 @@ type: "contributors"
 category: "dora"
 title: "Dora-rs Contributors"
 title_zh: "Dora-rs 贡献者"
-last_updated: "2026-05-21"
+last_updated: "2026-05-22"
 repositories: ["dora-rs/dora"]
 total_contributors: 80
 ---
@@ -11,7 +11,7 @@ total_contributors: 80
 
 这个文件在构建时自动更新，缓存从GitHub API获取的贡献者数据。
 
-**最后更新**: 2026-05-21
+**最后更新**: 2026-05-22
 **总贡献者数**: 80
 **数据来源**: dora-rs/dora
 
@@ -37,7 +37,7 @@ total_contributors: 80
 - **Repositories**: dora-rs/dora
 
 ### heyong4725
-- **Contributions**: 112
+- **Contributions**: 116
 - **Avatar**: https://avatars.githubusercontent.com/u/45980096?v=4
 - **GitHub**: https://github.com/heyong4725
 - **Repositories**: dora-rs/dora
@@ -162,6 +162,12 @@ total_contributors: 80
 - **GitHub**: https://github.com/suhr25
 - **Repositories**: dora-rs/dora
 
+### PavelGuzenfeld
+- **Contributions**: 9
+- **Avatar**: https://avatars.githubusercontent.com/u/67074795?v=4
+- **GitHub**: https://github.com/PavelGuzenfeld
+- **Repositories**: dora-rs/dora
+
 ### Harsh-Sahu43
 - **Contributions**: 8
 - **Avatar**: https://avatars.githubusercontent.com/u/147322826?v=4
@@ -172,12 +178,6 @@ total_contributors: 80
 - **Contributions**: 8
 - **Avatar**: https://avatars.githubusercontent.com/u/3278489?v=4
 - **GitHub**: https://github.com/oortlieb
-- **Repositories**: dora-rs/dora
-
-### PavelGuzenfeld
-- **Contributions**: 7
-- **Avatar**: https://avatars.githubusercontent.com/u/67074795?v=4
-- **GitHub**: https://github.com/PavelGuzenfeld
 - **Repositories**: dora-rs/dora
 
 ### bobdingAI
