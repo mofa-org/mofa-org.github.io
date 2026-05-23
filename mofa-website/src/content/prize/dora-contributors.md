@@ -3,16 +3,16 @@ type: "contributors"
 category: "dora"
 title: "Dora-rs Contributors"
 title_zh: "Dora-rs 贡献者"
-last_updated: "2026-05-22"
+last_updated: "2026-05-23"
 repositories: ["dora-rs/dora"]
-total_contributors: 80
+total_contributors: 81
 ---
 # Dora-rs Contributors Cache
 
 这个文件在构建时自动更新，缓存从GitHub API获取的贡献者数据。
 
-**最后更新**: 2026-05-22
-**总贡献者数**: 80
+**最后更新**: 2026-05-23
+**总贡献者数**: 81
 **数据来源**: dora-rs/dora
 
 ## Contributors Data
@@ -37,7 +37,7 @@ total_contributors: 80
 - **Repositories**: dora-rs/dora
 
 ### heyong4725
-- **Contributions**: 116
+- **Contributions**: 118
 - **Avatar**: https://avatars.githubusercontent.com/u/45980096?v=4
 - **GitHub**: https://github.com/heyong4725
 - **Repositories**: dora-rs/dora
@@ -150,6 +150,12 @@ total_contributors: 80
 - **GitHub**: https://github.com/7SOMAY
 - **Repositories**: dora-rs/dora
 
+### PavelGuzenfeld
+- **Contributions**: 11
+- **Avatar**: https://avatars.githubusercontent.com/u/67074795?v=4
+- **GitHub**: https://github.com/PavelGuzenfeld
+- **Repositories**: dora-rs/dora
+
 ### Bhanudahiyaa
 - **Contributions**: 10
 - **Avatar**: https://avatars.githubusercontent.com/u/179860247?v=4
@@ -162,22 +168,16 @@ total_contributors: 80
 - **GitHub**: https://github.com/suhr25
 - **Repositories**: dora-rs/dora
 
-### PavelGuzenfeld
-- **Contributions**: 9
-- **Avatar**: https://avatars.githubusercontent.com/u/67074795?v=4
-- **GitHub**: https://github.com/PavelGuzenfeld
+### oortlieb
+- **Contributions**: 8
+- **Avatar**: https://avatars.githubusercontent.com/u/3278489?v=4
+- **GitHub**: https://github.com/oortlieb
 - **Repositories**: dora-rs/dora
 
 ### Harsh-Sahu43
 - **Contributions**: 8
 - **Avatar**: https://avatars.githubusercontent.com/u/147322826?v=4
 - **GitHub**: https://github.com/Harsh-Sahu43
-- **Repositories**: dora-rs/dora
-
-### oortlieb
-- **Contributions**: 8
-- **Avatar**: https://avatars.githubusercontent.com/u/3278489?v=4
-- **GitHub**: https://github.com/oortlieb
 - **Repositories**: dora-rs/dora
 
 ### bobdingAI
@@ -412,6 +412,12 @@ total_contributors: 80
 - **Contributions**: 1
 - **Avatar**: https://avatars.githubusercontent.com/u/16250688?v=4
 - **GitHub**: https://github.com/yjhmelody
+- **Repositories**: dora-rs/dora
+
+### leno23
+- **Contributions**: 1
+- **Avatar**: https://avatars.githubusercontent.com/u/39647285?v=4
+- **GitHub**: https://github.com/leno23
 - **Repositories**: dora-rs/dora
 
 ### wlee1248
