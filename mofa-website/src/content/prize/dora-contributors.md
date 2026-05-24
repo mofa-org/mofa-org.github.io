@@ -3,7 +3,7 @@ type: "contributors"
 category: "dora"
 title: "Dora-rs Contributors"
 title_zh: "Dora-rs 贡献者"
-last_updated: "2026-05-23"
+last_updated: "2026-05-24"
 repositories: ["dora-rs/dora"]
 total_contributors: 81
 ---
@@ -11,7 +11,7 @@ total_contributors: 81
 
 这个文件在构建时自动更新，缓存从GitHub API获取的贡献者数据。
 
-**最后更新**: 2026-05-23
+**最后更新**: 2026-05-24
 **总贡献者数**: 81
 **数据来源**: dora-rs/dora
 
@@ -144,16 +144,16 @@ total_contributors: 81
 - **GitHub**: https://github.com/meua
 - **Repositories**: dora-rs/dora
 
+### PavelGuzenfeld
+- **Contributions**: 12
+- **Avatar**: https://avatars.githubusercontent.com/u/67074795?v=4
+- **GitHub**: https://github.com/PavelGuzenfeld
+- **Repositories**: dora-rs/dora
+
 ### 7SOMAY
 - **Contributions**: 11
 - **Avatar**: https://avatars.githubusercontent.com/u/77838712?v=4
 - **GitHub**: https://github.com/7SOMAY
-- **Repositories**: dora-rs/dora
-
-### PavelGuzenfeld
-- **Contributions**: 11
-- **Avatar**: https://avatars.githubusercontent.com/u/67074795?v=4
-- **GitHub**: https://github.com/PavelGuzenfeld
 - **Repositories**: dora-rs/dora
 
 ### Bhanudahiyaa
