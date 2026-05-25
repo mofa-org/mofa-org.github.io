@@ -3,7 +3,7 @@ type: "contributors"
 category: "mofa"
 title: "MoFA Contributors"
 title_zh: "MoFA 贡献者"
-last_updated: "2026-05-24"
+last_updated: "2026-05-25"
 repositories: ["mofa-org/mofa","mofa-org/mofa-new"]
 total_contributors: 70
 ---
@@ -11,7 +11,7 @@ total_contributors: 70
 
 这个文件在构建时自动更新，缓存从GitHub API获取的贡献者数据。
 
-**最后更新**: 2026-05-24
+**最后更新**: 2026-05-25
 **总贡献者数**: 70
 **数据来源**: mofa-org/mofa, mofa-org/mofa-new
 
@@ -25,7 +25,7 @@ total_contributors: 70
 - **Repositories**: mofa-org/mofa, mofa-org/mofa-new
 
 ### lijingrs
-- **Contributions**: 264
+- **Contributions**: 265
 - **Avatar**: https://avatars.githubusercontent.com/u/20733031?v=4
 - **GitHub**: https://github.com/lijingrs
 - **Repositories**: mofa-org/mofa
