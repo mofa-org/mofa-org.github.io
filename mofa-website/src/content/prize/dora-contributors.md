@@ -3,16 +3,16 @@ type: "contributors"
 category: "dora"
 title: "Dora-rs Contributors"
 title_zh: "Dora-rs 贡献者"
-last_updated: "2026-06-07"
+last_updated: "2026-06-08"
 repositories: ["dora-rs/dora"]
-total_contributors: 84
+total_contributors: 85
 ---
 # Dora-rs Contributors Cache
 
 这个文件在构建时自动更新，缓存从GitHub API获取的贡献者数据。
 
-**最后更新**: 2026-06-07
-**总贡献者数**: 84
+**最后更新**: 2026-06-08
+**总贡献者数**: 85
 **数据来源**: dora-rs/dora
 
 ## Contributors Data
@@ -354,6 +354,12 @@ total_contributors: 84
 - **GitHub**: https://github.com/imajij
 - **Repositories**: dora-rs/dora
 
+### jerry73204
+- **Contributions**: 1
+- **Avatar**: https://avatars.githubusercontent.com/u/7629150?v=4
+- **GitHub**: https://github.com/jerry73204
+- **Repositories**: dora-rs/dora
+
 ### iccccccccccccc
 - **Contributions**: 1
 - **Avatar**: https://avatars.githubusercontent.com/u/286839273?v=4
@@ -432,12 +438,6 @@ total_contributors: 84
 - **GitHub**: https://github.com/leno23
 - **Repositories**: dora-rs/dora
 
-### jerry73204
-- **Contributions**: 1
-- **Avatar**: https://avatars.githubusercontent.com/u/7629150?v=4
-- **GitHub**: https://github.com/jerry73204
-- **Repositories**: dora-rs/dora
-
 ### wlee1248
 - **Contributions**: 1
 - **Avatar**: https://avatars.githubusercontent.com/u/99924265?v=4
@@ -454,6 +454,12 @@ total_contributors: 84
 - **Contributions**: 1
 - **Avatar**: https://avatars.githubusercontent.com/u/92193194?v=4
 - **GitHub**: https://github.com/khanhtuanvo
+- **Repositories**: dora-rs/dora
+
+### Supull
+- **Contributions**: 1
+- **Avatar**: https://avatars.githubusercontent.com/u/136597973?v=4
+- **GitHub**: https://github.com/Supull
 - **Repositories**: dora-rs/dora
 
 ### Nitish4144
