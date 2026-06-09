@@ -3,7 +3,7 @@ type: "contributors"
 category: "dora"
 title: "Dora-rs Contributors"
 title_zh: "Dora-rs 贡献者"
-last_updated: "2026-06-08"
+last_updated: "2026-06-09"
 repositories: ["dora-rs/dora"]
 total_contributors: 85
 ---
@@ -11,7 +11,7 @@ total_contributors: 85
 
 这个文件在构建时自动更新，缓存从GitHub API获取的贡献者数据。
 
-**最后更新**: 2026-06-08
+**最后更新**: 2026-06-09
 **总贡献者数**: 85
 **数据来源**: dora-rs/dora
 
@@ -31,7 +31,7 @@ total_contributors: 85
 - **Repositories**: dora-rs/dora
 
 ### heyong4725
-- **Contributions**: 176
+- **Contributions**: 178
 - **Avatar**: https://avatars.githubusercontent.com/u/45980096?v=4
 - **GitHub**: https://github.com/heyong4725
 - **Repositories**: dora-rs/dora
@@ -114,16 +114,16 @@ total_contributors: 85
 - **GitHub**: https://github.com/Mati-ur-rehman-017
 - **Repositories**: dora-rs/dora
 
+### LeonRust
+- **Contributions**: 16
+- **Avatar**: https://avatars.githubusercontent.com/u/1485219?v=4
+- **GitHub**: https://github.com/LeonRust
+- **Repositories**: dora-rs/dora
+
 ### sjfhsjfh
 - **Contributions**: 15
 - **Avatar**: https://avatars.githubusercontent.com/u/58244206?v=4
 - **GitHub**: https://github.com/sjfhsjfh
-- **Repositories**: dora-rs/dora
-
-### LeonRust
-- **Contributions**: 15
-- **Avatar**: https://avatars.githubusercontent.com/u/1485219?v=4
-- **GitHub**: https://github.com/LeonRust
 - **Repositories**: dora-rs/dora
 
 ### rozgo
