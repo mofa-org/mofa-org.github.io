@@ -3,7 +3,7 @@ type: "contributors"
 category: "mofa"
 title: "MoFA Contributors"
 title_zh: "MoFA 贡献者"
-last_updated: "2026-06-14"
+last_updated: "2026-06-15"
 repositories: ["mofa-org/mofa","mofa-org/mofa-new"]
 total_contributors: 70
 ---
@@ -11,7 +11,7 @@ total_contributors: 70
 
 这个文件在构建时自动更新，缓存从GitHub API获取的贡献者数据。
 
-**最后更新**: 2026-06-14
+**最后更新**: 2026-06-15
 **总贡献者数**: 70
 **数据来源**: mofa-org/mofa, mofa-org/mofa-new
 
@@ -25,7 +25,7 @@ total_contributors: 70
 - **Repositories**: mofa-org/mofa, mofa-org/mofa-new
 
 ### lijingrs
-- **Contributions**: 265
+- **Contributions**: 266
 - **Avatar**: https://avatars.githubusercontent.com/u/20733031?v=4
 - **GitHub**: https://github.com/lijingrs
 - **Repositories**: mofa-org/mofa
@@ -306,6 +306,12 @@ total_contributors: 70
 - **GitHub**: https://github.com/Deepak-negi11
 - **Repositories**: mofa-org/mofa
 
+### peterish8
+- **Contributions**: 5
+- **Avatar**: https://avatars.githubusercontent.com/u/181628466?v=4
+- **GitHub**: https://github.com/peterish8
+- **Repositories**: mofa-org/mofa
+
 ### Nely0
 - **Contributions**: 4
 - **Avatar**: https://avatars.githubusercontent.com/u/124752826?v=4
@@ -346,12 +352,6 @@ total_contributors: 70
 - **Contributions**: 3
 - **Avatar**: https://avatars.githubusercontent.com/u/233622891?v=4
 - **GitHub**: https://github.com/Gitjay11
-- **Repositories**: mofa-org/mofa
-
-### peterish8
-- **Contributions**: 3
-- **Avatar**: https://avatars.githubusercontent.com/u/181628466?v=4
-- **GitHub**: https://github.com/peterish8
 - **Repositories**: mofa-org/mofa
 
 ### mandeepsingh2007
