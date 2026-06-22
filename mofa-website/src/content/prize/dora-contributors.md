@@ -3,7 +3,7 @@ type: "contributors"
 category: "dora"
 title: "Dora-rs Contributors"
 title_zh: "Dora-rs 贡献者"
-last_updated: "2026-06-21"
+last_updated: "2026-06-22"
 repositories: ["dora-rs/dora"]
 total_contributors: 87
 ---
@@ -11,7 +11,7 @@ total_contributors: 87
 
 这个文件在构建时自动更新，缓存从GitHub API获取的贡献者数据。
 
-**最后更新**: 2026-06-21
+**最后更新**: 2026-06-22
 **总贡献者数**: 87
 **数据来源**: dora-rs/dora
 
@@ -306,6 +306,12 @@ total_contributors: 87
 - **GitHub**: https://github.com/dipeshbabu
 - **Repositories**: dora-rs/dora
 
+### tang-canran
+- **Contributions**: 2
+- **Avatar**: https://avatars.githubusercontent.com/u/140955784?v=4
+- **GitHub**: https://github.com/tang-canran
+- **Repositories**: dora-rs/dora
+
 ### sahilshingate01
 - **Contributions**: 2
 - **Avatar**: https://avatars.githubusercontent.com/u/118622202?v=4
@@ -358,6 +364,12 @@ total_contributors: 87
 - **Contributions**: 2
 - **Avatar**: https://avatars.githubusercontent.com/u/67888293?v=4
 - **GitHub**: https://github.com/imajij
+- **Repositories**: dora-rs/dora
+
+### jerry73204
+- **Contributions**: 1
+- **Avatar**: https://avatars.githubusercontent.com/u/7629150?v=4
+- **GitHub**: https://github.com/jerry73204
 - **Repositories**: dora-rs/dora
 
 ### iccccccccccccc
@@ -414,12 +426,6 @@ total_contributors: 87
 - **GitHub**: https://github.com/sunxunle
 - **Repositories**: dora-rs/dora
 
-### tang-canran
-- **Contributions**: 1
-- **Avatar**: https://avatars.githubusercontent.com/u/140955784?v=4
-- **GitHub**: https://github.com/tang-canran
-- **Repositories**: dora-rs/dora
-
 ### yuntongtre
 - **Contributions**: 1
 - **Avatar**: https://avatars.githubusercontent.com/u/206019065?v=4
@@ -438,16 +444,10 @@ total_contributors: 87
 - **GitHub**: https://github.com/yjhmelody
 - **Repositories**: dora-rs/dora
 
-### leno23
+### wyf027
 - **Contributions**: 1
 - **Avatar**: https://avatars.githubusercontent.com/u/39647285?v=4
-- **GitHub**: https://github.com/leno23
-- **Repositories**: dora-rs/dora
-
-### jerry73204
-- **Contributions**: 1
-- **Avatar**: https://avatars.githubusercontent.com/u/7629150?v=4
-- **GitHub**: https://github.com/jerry73204
+- **GitHub**: https://github.com/wyf027
 - **Repositories**: dora-rs/dora
 
 ### wlee1248
