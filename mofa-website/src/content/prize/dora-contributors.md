@@ -3,7 +3,7 @@ type: "contributors"
 category: "dora"
 title: "Dora-rs Contributors"
 title_zh: "Dora-rs 贡献者"
-last_updated: "2026-06-28"
+last_updated: "2026-06-29"
 repositories: ["dora-rs/dora"]
 total_contributors: 87
 ---
@@ -11,7 +11,7 @@ total_contributors: 87
 
 这个文件在构建时自动更新，缓存从GitHub API获取的贡献者数据。
 
-**最后更新**: 2026-06-28
+**最后更新**: 2026-06-29
 **总贡献者数**: 87
 **数据来源**: dora-rs/dora
 
@@ -19,7 +19,7 @@ total_contributors: 87
 
 
 ### phil-opp
-- **Contributions**: 2160
+- **Contributions**: 2170
 - **Avatar**: https://avatars.githubusercontent.com/u/1131315?v=4
 - **GitHub**: https://github.com/phil-opp
 - **Repositories**: dora-rs/dora
@@ -432,10 +432,10 @@ total_contributors: 87
 - **GitHub**: https://github.com/yuntongtre
 - **Repositories**: dora-rs/dora
 
-### umar0x
+### umar0xx
 - **Contributions**: 1
 - **Avatar**: https://avatars.githubusercontent.com/u/233221870?v=4
-- **GitHub**: https://github.com/umar0x
+- **GitHub**: https://github.com/umar0xx
 - **Repositories**: dora-rs/dora
 
 ### yjhmelody
