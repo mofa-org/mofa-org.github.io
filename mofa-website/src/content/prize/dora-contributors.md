@@ -3,7 +3,7 @@ type: "contributors"
 category: "dora"
 title: "Dora-rs Contributors"
 title_zh: "Dora-rs 贡献者"
-last_updated: "2026-06-30"
+last_updated: "2026-07-01"
 repositories: ["dora-rs/dora"]
 total_contributors: 87
 ---
@@ -11,7 +11,7 @@ total_contributors: 87
 
 这个文件在构建时自动更新，缓存从GitHub API获取的贡献者数据。
 
-**最后更新**: 2026-06-30
+**最后更新**: 2026-07-01
 **总贡献者数**: 87
 **数据来源**: dora-rs/dora
 
@@ -19,7 +19,7 @@ total_contributors: 87
 
 
 ### phil-opp
-- **Contributions**: 2187
+- **Contributions**: 2194
 - **Avatar**: https://avatars.githubusercontent.com/u/1131315?v=4
 - **GitHub**: https://github.com/phil-opp
 - **Repositories**: dora-rs/dora
@@ -270,6 +270,12 @@ total_contributors: 87
 - **GitHub**: https://github.com/GHX5T-SOL
 - **Repositories**: dora-rs/dora
 
+### tang-canran
+- **Contributions**: 3
+- **Avatar**: https://avatars.githubusercontent.com/u/140955784?v=4
+- **GitHub**: https://github.com/tang-canran
+- **Repositories**: dora-rs/dora
+
 ### fayekelmith
 - **Contributions**: 3
 - **Avatar**: https://avatars.githubusercontent.com/u/86343732?v=4
@@ -304,12 +310,6 @@ total_contributors: 87
 - **Contributions**: 3
 - **Avatar**: https://avatars.githubusercontent.com/u/59379458?v=4
 - **GitHub**: https://github.com/dipeshbabu
-- **Repositories**: dora-rs/dora
-
-### tang-canran
-- **Contributions**: 2
-- **Avatar**: https://avatars.githubusercontent.com/u/140955784?v=4
-- **GitHub**: https://github.com/tang-canran
 - **Repositories**: dora-rs/dora
 
 ### sahilshingate01
