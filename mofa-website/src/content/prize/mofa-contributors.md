@@ -3,7 +3,7 @@ type: "contributors"
 category: "mofa"
 title: "MoFA Contributors"
 title_zh: "MoFA 贡献者"
-last_updated: "2026-07-05"
+last_updated: "2026-07-06"
 repositories: ["mofa-org/mofa","mofa-org/mofa-new"]
 total_contributors: 70
 ---
@@ -11,7 +11,7 @@ total_contributors: 70
 
 这个文件在构建时自动更新，缓存从GitHub API获取的贡献者数据。
 
-**最后更新**: 2026-07-05
+**最后更新**: 2026-07-06
 **总贡献者数**: 70
 **数据来源**: mofa-org/mofa, mofa-org/mofa-new
 
@@ -25,7 +25,7 @@ total_contributors: 70
 - **Repositories**: mofa-org/mofa, mofa-org/mofa-new
 
 ### lijingrs
-- **Contributions**: 266
+- **Contributions**: 267
 - **Avatar**: https://avatars.githubusercontent.com/u/20733031?v=4
 - **GitHub**: https://github.com/lijingrs
 - **Repositories**: mofa-org/mofa
@@ -180,10 +180,22 @@ total_contributors: 70
 - **GitHub**: https://github.com/FireFistisDead
 - **Repositories**: mofa-org/mofa
 
+### tkshsbcue
+- **Contributions**: 10
+- **Avatar**: https://avatars.githubusercontent.com/u/32425567?v=4
+- **GitHub**: https://github.com/tkshsbcue
+- **Repositories**: mofa-org/mofa
+
 ### tangdm9527
 - **Contributions**: 10
 - **Avatar**: https://avatars.githubusercontent.com/u/200504346?v=4
 - **GitHub**: https://github.com/tangdm9527
+- **Repositories**: mofa-org/mofa
+
+### AftAb-25
+- **Contributions**: 9
+- **Avatar**: https://avatars.githubusercontent.com/u/234581236?v=4
+- **GitHub**: https://github.com/AftAb-25
 - **Repositories**: mofa-org/mofa
 
 ### Bhup-GitHUB
@@ -202,18 +214,6 @@ total_contributors: 70
 - **Contributions**: 9
 - **Avatar**: https://avatars.githubusercontent.com/u/258870032?v=4
 - **GitHub**: https://github.com/adityars07
-- **Repositories**: mofa-org/mofa
-
-### tkshsbcue
-- **Contributions**: 9
-- **Avatar**: https://avatars.githubusercontent.com/u/32425567?v=4
-- **GitHub**: https://github.com/tkshsbcue
-- **Repositories**: mofa-org/mofa
-
-### AftAb-25
-- **Contributions**: 9
-- **Avatar**: https://avatars.githubusercontent.com/u/234581236?v=4
-- **GitHub**: https://github.com/AftAb-25
 - **Repositories**: mofa-org/mofa
 
 ### wysh3
