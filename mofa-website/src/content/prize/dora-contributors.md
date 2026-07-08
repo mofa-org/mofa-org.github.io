@@ -3,16 +3,16 @@ type: "contributors"
 category: "dora"
 title: "Dora-rs Contributors"
 title_zh: "Dora-rs 贡献者"
-last_updated: "2026-07-07"
+last_updated: "2026-07-08"
 repositories: ["dora-rs/dora"]
-total_contributors: 87
+total_contributors: 86
 ---
 # Dora-rs Contributors Cache
 
 这个文件在构建时自动更新，缓存从GitHub API获取的贡献者数据。
 
-**最后更新**: 2026-07-07
-**总贡献者数**: 87
+**最后更新**: 2026-07-08
+**总贡献者数**: 86
 **数据来源**: dora-rs/dora
 
 ## Contributors Data
@@ -118,12 +118,6 @@ total_contributors: 87
 - **Contributions**: 16
 - **Avatar**: https://avatars.githubusercontent.com/u/145843744?v=4
 - **GitHub**: https://github.com/Mati-ur-rehman-017
-- **Repositories**: dora-rs/dora
-
-### sjfhsjfh
-- **Contributions**: 15
-- **Avatar**: https://avatars.githubusercontent.com/u/58244206?v=4
-- **GitHub**: https://github.com/sjfhsjfh
 - **Repositories**: dora-rs/dora
 
 ### rozgo
