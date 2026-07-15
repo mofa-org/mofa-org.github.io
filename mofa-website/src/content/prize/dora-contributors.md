@@ -3,7 +3,7 @@ type: "contributors"
 category: "dora"
 title: "Dora-rs Contributors"
 title_zh: "Dora-rs 贡献者"
-last_updated: "2026-07-14"
+last_updated: "2026-07-15"
 repositories: ["dora-rs/dora"]
 total_contributors: 86
 ---
@@ -11,7 +11,7 @@ total_contributors: 86
 
 这个文件在构建时自动更新，缓存从GitHub API获取的贡献者数据。
 
-**最后更新**: 2026-07-14
+**最后更新**: 2026-07-15
 **总贡献者数**: 86
 **数据来源**: dora-rs/dora
 
@@ -19,7 +19,7 @@ total_contributors: 86
 
 
 ### phil-opp
-- **Contributions**: 2206
+- **Contributions**: 2213
 - **Avatar**: https://avatars.githubusercontent.com/u/1131315?v=4
 - **GitHub**: https://github.com/phil-opp
 - **Repositories**: dora-rs/dora
@@ -180,46 +180,16 @@ total_contributors: 86
 - **GitHub**: https://github.com/bobdingAI
 - **Repositories**: dora-rs/dora
 
-### starlitxiling
-- **Contributions**: 6
-- **Avatar**: https://avatars.githubusercontent.com/u/62335818?v=4
-- **GitHub**: https://github.com/starlitxiling
-- **Repositories**: dora-rs/dora
-
 ### sauhardh
 - **Contributions**: 6
 - **Avatar**: https://avatars.githubusercontent.com/u/84185378?v=4
 - **GitHub**: https://github.com/sauhardh
 - **Repositories**: dora-rs/dora
 
-### Felixhuangsiling
-- **Contributions**: 5
-- **Avatar**: https://avatars.githubusercontent.com/u/77993249?v=4
-- **GitHub**: https://github.com/Felixhuangsiling
-- **Repositories**: dora-rs/dora
-
-### Supull
-- **Contributions**: 5
-- **Avatar**: https://avatars.githubusercontent.com/u/136597973?v=4
-- **GitHub**: https://github.com/Supull
-- **Repositories**: dora-rs/dora
-
-### rahat2134
-- **Contributions**: 5
-- **Avatar**: https://avatars.githubusercontent.com/u/136263179?v=4
-- **GitHub**: https://github.com/rahat2134
-- **Repositories**: dora-rs/dora
-
-### Pankajkumar2608
-- **Contributions**: 5
-- **Avatar**: https://avatars.githubusercontent.com/u/125138274?v=4
-- **GitHub**: https://github.com/Pankajkumar2608
-- **Repositories**: dora-rs/dora
-
-### MunishMummadi
-- **Contributions**: 5
-- **Avatar**: https://avatars.githubusercontent.com/u/141582088?v=4
-- **GitHub**: https://github.com/MunishMummadi
+### starlitxiling
+- **Contributions**: 6
+- **Avatar**: https://avatars.githubusercontent.com/u/62335818?v=4
+- **GitHub**: https://github.com/starlitxiling
 - **Repositories**: dora-rs/dora
 
 ### Gege-Wang
@@ -228,10 +198,46 @@ total_contributors: 86
 - **GitHub**: https://github.com/Gege-Wang
 - **Repositories**: dora-rs/dora
 
+### MunishMummadi
+- **Contributions**: 5
+- **Avatar**: https://avatars.githubusercontent.com/u/141582088?v=4
+- **GitHub**: https://github.com/MunishMummadi
+- **Repositories**: dora-rs/dora
+
+### Pankajkumar2608
+- **Contributions**: 5
+- **Avatar**: https://avatars.githubusercontent.com/u/125138274?v=4
+- **GitHub**: https://github.com/Pankajkumar2608
+- **Repositories**: dora-rs/dora
+
+### rahat2134
+- **Contributions**: 5
+- **Avatar**: https://avatars.githubusercontent.com/u/136263179?v=4
+- **GitHub**: https://github.com/rahat2134
+- **Repositories**: dora-rs/dora
+
+### Supull
+- **Contributions**: 5
+- **Avatar**: https://avatars.githubusercontent.com/u/136597973?v=4
+- **GitHub**: https://github.com/Supull
+- **Repositories**: dora-rs/dora
+
 ### claude
 - **Contributions**: 5
 - **Avatar**: https://avatars.githubusercontent.com/u/81847?v=4
 - **GitHub**: https://github.com/claude
+- **Repositories**: dora-rs/dora
+
+### Felixhuangsiling
+- **Contributions**: 5
+- **Avatar**: https://avatars.githubusercontent.com/u/77993249?v=4
+- **GitHub**: https://github.com/Felixhuangsiling
+- **Repositories**: dora-rs/dora
+
+### DGHX12345
+- **Contributions**: 5
+- **Avatar**: https://avatars.githubusercontent.com/u/266683282?v=4
+- **GitHub**: https://github.com/DGHX12345
 - **Repositories**: dora-rs/dora
 
 ### TomCC7
@@ -292,12 +298,6 @@ total_contributors: 86
 - **Contributions**: 3
 - **Avatar**: https://avatars.githubusercontent.com/u/145272067?v=4
 - **GitHub**: https://github.com/Monti-27
-- **Repositories**: dora-rs/dora
-
-### DGHX12345
-- **Contributions**: 3
-- **Avatar**: https://avatars.githubusercontent.com/u/266683282?v=4
-- **GitHub**: https://github.com/DGHX12345
 - **Repositories**: dora-rs/dora
 
 ### dipeshbabu
