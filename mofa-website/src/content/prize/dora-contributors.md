@@ -3,23 +3,23 @@ type: "contributors"
 category: "dora"
 title: "Dora-rs Contributors"
 title_zh: "Dora-rs 贡献者"
-last_updated: "2026-07-15"
+last_updated: "2026-07-16"
 repositories: ["dora-rs/dora"]
-total_contributors: 86
+total_contributors: 88
 ---
 # Dora-rs Contributors Cache
 
 这个文件在构建时自动更新，缓存从GitHub API获取的贡献者数据。
 
-**最后更新**: 2026-07-15
-**总贡献者数**: 86
+**最后更新**: 2026-07-16
+**总贡献者数**: 88
 **数据来源**: dora-rs/dora
 
 ## Contributors Data
 
 
 ### phil-opp
-- **Contributions**: 2213
+- **Contributions**: 2221
 - **Avatar**: https://avatars.githubusercontent.com/u/1131315?v=4
 - **GitHub**: https://github.com/phil-opp
 - **Repositories**: dora-rs/dora
@@ -180,6 +180,12 @@ total_contributors: 86
 - **GitHub**: https://github.com/bobdingAI
 - **Repositories**: dora-rs/dora
 
+### DGHX12345
+- **Contributions**: 6
+- **Avatar**: https://avatars.githubusercontent.com/u/266683282?v=4
+- **GitHub**: https://github.com/DGHX12345
+- **Repositories**: dora-rs/dora
+
 ### sauhardh
 - **Contributions**: 6
 - **Avatar**: https://avatars.githubusercontent.com/u/84185378?v=4
@@ -190,12 +196,6 @@ total_contributors: 86
 - **Contributions**: 6
 - **Avatar**: https://avatars.githubusercontent.com/u/62335818?v=4
 - **GitHub**: https://github.com/starlitxiling
-- **Repositories**: dora-rs/dora
-
-### Gege-Wang
-- **Contributions**: 5
-- **Avatar**: https://avatars.githubusercontent.com/u/67888311?v=4
-- **GitHub**: https://github.com/Gege-Wang
 - **Repositories**: dora-rs/dora
 
 ### MunishMummadi
@@ -222,6 +222,12 @@ total_contributors: 86
 - **GitHub**: https://github.com/Supull
 - **Repositories**: dora-rs/dora
 
+### Gege-Wang
+- **Contributions**: 5
+- **Avatar**: https://avatars.githubusercontent.com/u/67888311?v=4
+- **GitHub**: https://github.com/Gege-Wang
+- **Repositories**: dora-rs/dora
+
 ### claude
 - **Contributions**: 5
 - **Avatar**: https://avatars.githubusercontent.com/u/81847?v=4
@@ -232,12 +238,6 @@ total_contributors: 86
 - **Contributions**: 5
 - **Avatar**: https://avatars.githubusercontent.com/u/77993249?v=4
 - **GitHub**: https://github.com/Felixhuangsiling
-- **Repositories**: dora-rs/dora
-
-### DGHX12345
-- **Contributions**: 5
-- **Avatar**: https://avatars.githubusercontent.com/u/266683282?v=4
-- **GitHub**: https://github.com/DGHX12345
 - **Repositories**: dora-rs/dora
 
 ### TomCC7
@@ -360,6 +360,12 @@ total_contributors: 86
 - **GitHub**: https://github.com/imajij
 - **Repositories**: dora-rs/dora
 
+### abdelrhmaneldenary
+- **Contributions**: 1
+- **Avatar**: https://avatars.githubusercontent.com/u/138318355?v=4
+- **GitHub**: https://github.com/abdelrhmaneldenary
+- **Repositories**: dora-rs/dora
+
 ### jerry73204
 - **Contributions**: 1
 - **Avatar**: https://avatars.githubusercontent.com/u/7629150?v=4
@@ -444,76 +450,10 @@ total_contributors: 86
 - **GitHub**: https://github.com/wyf027
 - **Repositories**: dora-rs/dora
 
-### wlee1248
+### JustInCache
 - **Contributions**: 1
-- **Avatar**: https://avatars.githubusercontent.com/u/99924265?v=4
-- **GitHub**: https://github.com/wlee1248
-- **Repositories**: dora-rs/dora
-
-### VIKAS7216
-- **Contributions**: 1
-- **Avatar**: https://avatars.githubusercontent.com/u/166967375?v=4
-- **GitHub**: https://github.com/VIKAS7216
-- **Repositories**: dora-rs/dora
-
-### khanhtuanvo
-- **Contributions**: 1
-- **Avatar**: https://avatars.githubusercontent.com/u/92193194?v=4
-- **GitHub**: https://github.com/khanhtuanvo
-- **Repositories**: dora-rs/dora
-
-### Nitish4144
-- **Contributions**: 1
-- **Avatar**: https://avatars.githubusercontent.com/u/190355771?v=4
-- **GitHub**: https://github.com/Nitish4144
-- **Repositories**: dora-rs/dora
-
-### mshr-h
-- **Contributions**: 1
-- **Avatar**: https://avatars.githubusercontent.com/u/8973217?v=4
-- **GitHub**: https://github.com/mshr-h
-- **Repositories**: dora-rs/dora
-
-### kush124k
-- **Contributions**: 1
-- **Avatar**: https://avatars.githubusercontent.com/u/225659053?v=4
-- **GitHub**: https://github.com/kush124k
-- **Repositories**: dora-rs/dora
-
-### Krishnadubey1008
-- **Contributions**: 1
-- **Avatar**: https://avatars.githubusercontent.com/u/121748506?v=4
-- **GitHub**: https://github.com/Krishnadubey1008
-- **Repositories**: dora-rs/dora
-
-### sjh9714
-- **Contributions**: 1
-- **Avatar**: https://avatars.githubusercontent.com/u/163989462?v=4
-- **GitHub**: https://github.com/sjh9714
-- **Repositories**: dora-rs/dora
-
-### francocipollone
-- **Contributions**: 1
-- **Avatar**: https://avatars.githubusercontent.com/u/53065142?v=4
-- **GitHub**: https://github.com/francocipollone
-- **Repositories**: dora-rs/dora
-
-### edgarriba
-- **Contributions**: 1
-- **Avatar**: https://avatars.githubusercontent.com/u/5157099?v=4
-- **GitHub**: https://github.com/edgarriba
-- **Repositories**: dora-rs/dora
-
-### Chris79OG
-- **Contributions**: 1
-- **Avatar**: https://avatars.githubusercontent.com/u/222899698?v=4
-- **GitHub**: https://github.com/Chris79OG
-- **Repositories**: dora-rs/dora
-
-### CarolinePascal
-- **Contributions**: 1
-- **Avatar**: https://avatars.githubusercontent.com/u/29127300?v=4
-- **GitHub**: https://github.com/CarolinePascal
+- **Avatar**: https://avatars.githubusercontent.com/u/105823120?v=4
+- **GitHub**: https://github.com/JustInCache
 - **Repositories**: dora-rs/dora
 
 ### Ben-PH
@@ -522,16 +462,88 @@ total_contributors: 86
 - **GitHub**: https://github.com/Ben-PH
 - **Repositories**: dora-rs/dora
 
-### JustInCache
+### CarolinePascal
 - **Contributions**: 1
-- **Avatar**: https://avatars.githubusercontent.com/u/105823120?v=4
-- **GitHub**: https://github.com/JustInCache
+- **Avatar**: https://avatars.githubusercontent.com/u/29127300?v=4
+- **GitHub**: https://github.com/CarolinePascal
 - **Repositories**: dora-rs/dora
 
-### abdelrhmaneldenary
+### Chris79OG
 - **Contributions**: 1
-- **Avatar**: https://avatars.githubusercontent.com/u/138318355?v=4
-- **GitHub**: https://github.com/abdelrhmaneldenary
+- **Avatar**: https://avatars.githubusercontent.com/u/222899698?v=4
+- **GitHub**: https://github.com/Chris79OG
+- **Repositories**: dora-rs/dora
+
+### edgarriba
+- **Contributions**: 1
+- **Avatar**: https://avatars.githubusercontent.com/u/5157099?v=4
+- **GitHub**: https://github.com/edgarriba
+- **Repositories**: dora-rs/dora
+
+### francocipollone
+- **Contributions**: 1
+- **Avatar**: https://avatars.githubusercontent.com/u/53065142?v=4
+- **GitHub**: https://github.com/francocipollone
+- **Repositories**: dora-rs/dora
+
+### sjh9714
+- **Contributions**: 1
+- **Avatar**: https://avatars.githubusercontent.com/u/163989462?v=4
+- **GitHub**: https://github.com/sjh9714
+- **Repositories**: dora-rs/dora
+
+### Krishnadubey1008
+- **Contributions**: 1
+- **Avatar**: https://avatars.githubusercontent.com/u/121748506?v=4
+- **GitHub**: https://github.com/Krishnadubey1008
+- **Repositories**: dora-rs/dora
+
+### kush124k
+- **Contributions**: 1
+- **Avatar**: https://avatars.githubusercontent.com/u/225659053?v=4
+- **GitHub**: https://github.com/kush124k
+- **Repositories**: dora-rs/dora
+
+### keirsalterego
+- **Contributions**: 1
+- **Avatar**: https://avatars.githubusercontent.com/u/121482214?v=4
+- **GitHub**: https://github.com/keirsalterego
+- **Repositories**: dora-rs/dora
+
+### mshr-h
+- **Contributions**: 1
+- **Avatar**: https://avatars.githubusercontent.com/u/8973217?v=4
+- **GitHub**: https://github.com/mshr-h
+- **Repositories**: dora-rs/dora
+
+### mvanhorn
+- **Contributions**: 1
+- **Avatar**: https://avatars.githubusercontent.com/u/455140?v=4
+- **GitHub**: https://github.com/mvanhorn
+- **Repositories**: dora-rs/dora
+
+### Nitish4144
+- **Contributions**: 1
+- **Avatar**: https://avatars.githubusercontent.com/u/190355771?v=4
+- **GitHub**: https://github.com/Nitish4144
+- **Repositories**: dora-rs/dora
+
+### khanhtuanvo
+- **Contributions**: 1
+- **Avatar**: https://avatars.githubusercontent.com/u/92193194?v=4
+- **GitHub**: https://github.com/khanhtuanvo
+- **Repositories**: dora-rs/dora
+
+### VIKAS7216
+- **Contributions**: 1
+- **Avatar**: https://avatars.githubusercontent.com/u/166967375?v=4
+- **GitHub**: https://github.com/VIKAS7216
+- **Repositories**: dora-rs/dora
+
+### wlee1248
+- **Contributions**: 1
+- **Avatar**: https://avatars.githubusercontent.com/u/99924265?v=4
+- **GitHub**: https://github.com/wlee1248
 - **Repositories**: dora-rs/dora
 
 
