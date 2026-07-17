@@ -3,7 +3,7 @@ type: "contributors"
 category: "dora"
 title: "Dora-rs Contributors"
 title_zh: "Dora-rs 贡献者"
-last_updated: "2026-07-16"
+last_updated: "2026-07-17"
 repositories: ["dora-rs/dora"]
 total_contributors: 88
 ---
@@ -11,7 +11,7 @@ total_contributors: 88
 
 这个文件在构建时自动更新，缓存从GitHub API获取的贡献者数据。
 
-**最后更新**: 2026-07-16
+**最后更新**: 2026-07-17
 **总贡献者数**: 88
 **数据来源**: dora-rs/dora
 
@@ -19,13 +19,13 @@ total_contributors: 88
 
 
 ### phil-opp
-- **Contributions**: 2221
+- **Contributions**: 2228
 - **Avatar**: https://avatars.githubusercontent.com/u/1131315?v=4
 - **GitHub**: https://github.com/phil-opp
 - **Repositories**: dora-rs/dora
 
 ### haixuanTao
-- **Contributions**: 1896
+- **Contributions**: 1897
 - **Avatar**: https://avatars.githubusercontent.com/u/22787340?v=4
 - **GitHub**: https://github.com/haixuanTao
 - **Repositories**: dora-rs/dora
@@ -198,6 +198,12 @@ total_contributors: 88
 - **GitHub**: https://github.com/starlitxiling
 - **Repositories**: dora-rs/dora
 
+### claude
+- **Contributions**: 6
+- **Avatar**: https://avatars.githubusercontent.com/u/81847?v=4
+- **GitHub**: https://github.com/claude
+- **Repositories**: dora-rs/dora
+
 ### MunishMummadi
 - **Contributions**: 5
 - **Avatar**: https://avatars.githubusercontent.com/u/141582088?v=4
@@ -226,12 +232,6 @@ total_contributors: 88
 - **Contributions**: 5
 - **Avatar**: https://avatars.githubusercontent.com/u/67888311?v=4
 - **GitHub**: https://github.com/Gege-Wang
-- **Repositories**: dora-rs/dora
-
-### claude
-- **Contributions**: 5
-- **Avatar**: https://avatars.githubusercontent.com/u/81847?v=4
-- **GitHub**: https://github.com/claude
 - **Repositories**: dora-rs/dora
 
 ### Felixhuangsiling
