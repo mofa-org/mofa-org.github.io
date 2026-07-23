@@ -3,7 +3,7 @@ type: "contributors"
 category: "dora"
 title: "Dora-rs Contributors"
 title_zh: "Dora-rs 贡献者"
-last_updated: "2026-07-22"
+last_updated: "2026-07-23"
 repositories: ["dora-rs/dora"]
 total_contributors: 89
 ---
@@ -11,7 +11,7 @@ total_contributors: 89
 
 这个文件在构建时自动更新，缓存从GitHub API获取的贡献者数据。
 
-**最后更新**: 2026-07-22
+**最后更新**: 2026-07-23
 **总贡献者数**: 89
 **数据来源**: dora-rs/dora
 
@@ -19,13 +19,13 @@ total_contributors: 89
 
 
 ### phil-opp
-- **Contributions**: 2278
+- **Contributions**: 2318
 - **Avatar**: https://avatars.githubusercontent.com/u/1131315?v=4
 - **GitHub**: https://github.com/phil-opp
 - **Repositories**: dora-rs/dora
 
 ### haixuanTao
-- **Contributions**: 1898
+- **Contributions**: 1899
 - **Avatar**: https://avatars.githubusercontent.com/u/22787340?v=4
 - **GitHub**: https://github.com/haixuanTao
 - **Repositories**: dora-rs/dora
@@ -336,6 +336,12 @@ total_contributors: 89
 - **GitHub**: https://github.com/dieu-detruit
 - **Repositories**: dora-rs/dora
 
+### keirsalterego
+- **Contributions**: 2
+- **Avatar**: https://avatars.githubusercontent.com/u/121482214?v=4
+- **GitHub**: https://github.com/keirsalterego
+- **Repositories**: dora-rs/dora
+
 ### gaumrab
 - **Contributions**: 2
 - **Avatar**: https://avatars.githubusercontent.com/u/109735369?v=4
@@ -360,10 +366,10 @@ total_contributors: 89
 - **GitHub**: https://github.com/imajij
 - **Repositories**: dora-rs/dora
 
-### wlee1248
+### abdelrhmaneldenary
 - **Contributions**: 1
-- **Avatar**: https://avatars.githubusercontent.com/u/99924265?v=4
-- **GitHub**: https://github.com/wlee1248
+- **Avatar**: https://avatars.githubusercontent.com/u/138318355?v=4
+- **GitHub**: https://github.com/abdelrhmaneldenary
 - **Repositories**: dora-rs/dora
 
 ### jerry73204
@@ -450,12 +456,6 @@ total_contributors: 89
 - **GitHub**: https://github.com/wyf027
 - **Repositories**: dora-rs/dora
 
-### abdelrhmaneldenary
-- **Contributions**: 1
-- **Avatar**: https://avatars.githubusercontent.com/u/138318355?v=4
-- **GitHub**: https://github.com/abdelrhmaneldenary
-- **Repositories**: dora-rs/dora
-
 ### JustInCache
 - **Contributions**: 1
 - **Avatar**: https://avatars.githubusercontent.com/u/105823120?v=4
@@ -516,12 +516,6 @@ total_contributors: 89
 - **GitHub**: https://github.com/kush124k
 - **Repositories**: dora-rs/dora
 
-### keirsalterego
-- **Contributions**: 1
-- **Avatar**: https://avatars.githubusercontent.com/u/121482214?v=4
-- **GitHub**: https://github.com/keirsalterego
-- **Repositories**: dora-rs/dora
-
 ### mshr-h
 - **Contributions**: 1
 - **Avatar**: https://avatars.githubusercontent.com/u/8973217?v=4
@@ -550,6 +544,12 @@ total_contributors: 89
 - **Contributions**: 1
 - **Avatar**: https://avatars.githubusercontent.com/u/166967375?v=4
 - **GitHub**: https://github.com/VIKAS7216
+- **Repositories**: dora-rs/dora
+
+### wlee1248
+- **Contributions**: 1
+- **Avatar**: https://avatars.githubusercontent.com/u/99924265?v=4
+- **GitHub**: https://github.com/wlee1248
 - **Repositories**: dora-rs/dora
 
 
