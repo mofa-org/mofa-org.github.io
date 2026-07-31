@@ -3,7 +3,7 @@ type: "contributors"
 category: "dora"
 title: "Dora-rs Contributors"
 title_zh: "Dora-rs 贡献者"
-last_updated: "2026-07-30"
+last_updated: "2026-07-31"
 repositories: ["dora-rs/dora"]
 total_contributors: 90
 ---
@@ -11,7 +11,7 @@ total_contributors: 90
 
 这个文件在构建时自动更新，缓存从GitHub API获取的贡献者数据。
 
-**最后更新**: 2026-07-30
+**最后更新**: 2026-07-31
 **总贡献者数**: 90
 **数据来源**: dora-rs/dora
 
@@ -19,7 +19,7 @@ total_contributors: 90
 
 
 ### phil-opp
-- **Contributions**: 2366
+- **Contributions**: 2367
 - **Avatar**: https://avatars.githubusercontent.com/u/1131315?v=4
 - **GitHub**: https://github.com/phil-opp
 - **Repositories**: dora-rs/dora
@@ -168,6 +168,12 @@ total_contributors: 90
 - **GitHub**: https://github.com/suhr25
 - **Repositories**: dora-rs/dora
 
+### DGHX12345
+- **Contributions**: 8
+- **Avatar**: https://avatars.githubusercontent.com/u/266683282?v=4
+- **GitHub**: https://github.com/DGHX12345
+- **Repositories**: dora-rs/dora
+
 ### oortlieb
 - **Contributions**: 8
 - **Avatar**: https://avatars.githubusercontent.com/u/3278489?v=4
@@ -178,12 +184,6 @@ total_contributors: 90
 - **Contributions**: 8
 - **Avatar**: https://avatars.githubusercontent.com/u/147322826?v=4
 - **GitHub**: https://github.com/Harsh-Sahu43
-- **Repositories**: dora-rs/dora
-
-### DGHX12345
-- **Contributions**: 7
-- **Avatar**: https://avatars.githubusercontent.com/u/266683282?v=4
-- **GitHub**: https://github.com/DGHX12345
 - **Repositories**: dora-rs/dora
 
 ### claude
@@ -246,6 +246,12 @@ total_contributors: 90
 - **GitHub**: https://github.com/TomCC7
 - **Repositories**: dora-rs/dora
 
+### tang-canran
+- **Contributions**: 4
+- **Avatar**: https://avatars.githubusercontent.com/u/140955784?v=4
+- **GitHub**: https://github.com/tang-canran
+- **Repositories**: dora-rs/dora
+
 ### AnshKumar200
 - **Contributions**: 4
 - **Avatar**: https://avatars.githubusercontent.com/u/124369727?v=4
@@ -268,12 +274,6 @@ total_contributors: 90
 - **Contributions**: 3
 - **Avatar**: https://avatars.githubusercontent.com/u/200635707?v=4
 - **GitHub**: https://github.com/GHX5T-SOL
-- **Repositories**: dora-rs/dora
-
-### tang-canran
-- **Contributions**: 3
-- **Avatar**: https://avatars.githubusercontent.com/u/140955784?v=4
-- **GitHub**: https://github.com/tang-canran
 - **Repositories**: dora-rs/dora
 
 ### fayekelmith
