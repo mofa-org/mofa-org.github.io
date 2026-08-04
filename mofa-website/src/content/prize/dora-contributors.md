@@ -3,16 +3,16 @@ type: "contributors"
 category: "dora"
 title: "Dora-rs Contributors"
 title_zh: "Dora-rs 贡献者"
-last_updated: "2026-08-03"
+last_updated: "2026-08-04"
 repositories: ["dora-rs/dora"]
-total_contributors: 90
+total_contributors: 91
 ---
 # Dora-rs Contributors Cache
 
 这个文件在构建时自动更新，缓存从GitHub API获取的贡献者数据。
 
-**最后更新**: 2026-08-03
-**总贡献者数**: 90
+**最后更新**: 2026-08-04
+**总贡献者数**: 91
 **数据来源**: dora-rs/dora
 
 ## Contributors Data
@@ -31,7 +31,7 @@ total_contributors: 90
 - **Repositories**: dora-rs/dora
 
 ### heyong4725
-- **Contributions**: 222
+- **Contributions**: 233
 - **Avatar**: https://avatars.githubusercontent.com/u/45980096?v=4
 - **GitHub**: https://github.com/heyong4725
 - **Repositories**: dora-rs/dora
@@ -372,10 +372,10 @@ total_contributors: 90
 - **GitHub**: https://github.com/imajij
 - **Repositories**: dora-rs/dora
 
-### abdelrhmaneldenary
+### wlee1248
 - **Contributions**: 1
-- **Avatar**: https://avatars.githubusercontent.com/u/138318355?v=4
-- **GitHub**: https://github.com/abdelrhmaneldenary
+- **Avatar**: https://avatars.githubusercontent.com/u/99924265?v=4
+- **GitHub**: https://github.com/wlee1248
 - **Repositories**: dora-rs/dora
 
 ### jerry73204
@@ -462,6 +462,12 @@ total_contributors: 90
 - **GitHub**: https://github.com/wyf027
 - **Repositories**: dora-rs/dora
 
+### abdelrhmaneldenary
+- **Contributions**: 1
+- **Avatar**: https://avatars.githubusercontent.com/u/138318355?v=4
+- **GitHub**: https://github.com/abdelrhmaneldenary
+- **Repositories**: dora-rs/dora
+
 ### JustInCache
 - **Contributions**: 1
 - **Avatar**: https://avatars.githubusercontent.com/u/105823120?v=4
@@ -502,6 +508,12 @@ total_contributors: 90
 - **Contributions**: 1
 - **Avatar**: https://avatars.githubusercontent.com/u/211547361?v=4
 - **GitHub**: https://github.com/HYLTE
+- **Repositories**: dora-rs/dora
+
+### trippyogi
+- **Contributions**: 1
+- **Avatar**: https://avatars.githubusercontent.com/u/43531035?v=4
+- **GitHub**: https://github.com/trippyogi
 - **Repositories**: dora-rs/dora
 
 ### sjh9714
@@ -550,12 +562,6 @@ total_contributors: 90
 - **Contributions**: 1
 - **Avatar**: https://avatars.githubusercontent.com/u/166967375?v=4
 - **GitHub**: https://github.com/VIKAS7216
-- **Repositories**: dora-rs/dora
-
-### wlee1248
-- **Contributions**: 1
-- **Avatar**: https://avatars.githubusercontent.com/u/99924265?v=4
-- **GitHub**: https://github.com/wlee1248
 - **Repositories**: dora-rs/dora
 
 
