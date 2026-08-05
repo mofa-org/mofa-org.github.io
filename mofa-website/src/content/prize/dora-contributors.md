@@ -3,23 +3,23 @@ type: "contributors"
 category: "dora"
 title: "Dora-rs Contributors"
 title_zh: "Dora-rs 贡献者"
-last_updated: "2026-08-04"
+last_updated: "2026-08-05"
 repositories: ["dora-rs/dora"]
-total_contributors: 91
+total_contributors: 93
 ---
 # Dora-rs Contributors Cache
 
 这个文件在构建时自动更新，缓存从GitHub API获取的贡献者数据。
 
-**最后更新**: 2026-08-04
-**总贡献者数**: 91
+**最后更新**: 2026-08-05
+**总贡献者数**: 93
 **数据来源**: dora-rs/dora
 
 ## Contributors Data
 
 
 ### phil-opp
-- **Contributions**: 2367
+- **Contributions**: 2391
 - **Avatar**: https://avatars.githubusercontent.com/u/1131315?v=4
 - **GitHub**: https://github.com/phil-opp
 - **Repositories**: dora-rs/dora
@@ -31,7 +31,7 @@ total_contributors: 91
 - **Repositories**: dora-rs/dora
 
 ### heyong4725
-- **Contributions**: 233
+- **Contributions**: 237
 - **Avatar**: https://avatars.githubusercontent.com/u/45980096?v=4
 - **GitHub**: https://github.com/heyong4725
 - **Repositories**: dora-rs/dora
@@ -372,6 +372,12 @@ total_contributors: 91
 - **GitHub**: https://github.com/imajij
 - **Repositories**: dora-rs/dora
 
+### VIKAS7216
+- **Contributions**: 1
+- **Avatar**: https://avatars.githubusercontent.com/u/166967375?v=4
+- **GitHub**: https://github.com/VIKAS7216
+- **Repositories**: dora-rs/dora
+
 ### wlee1248
 - **Contributions**: 1
 - **Avatar**: https://avatars.githubusercontent.com/u/99924265?v=4
@@ -504,6 +510,12 @@ total_contributors: 91
 - **GitHub**: https://github.com/francocipollone
 - **Repositories**: dora-rs/dora
 
+### GuTS805
+- **Contributions**: 1
+- **Avatar**: https://avatars.githubusercontent.com/u/180920165?v=4
+- **GitHub**: https://github.com/GuTS805
+- **Repositories**: dora-rs/dora
+
 ### HYLTE
 - **Contributions**: 1
 - **Avatar**: https://avatars.githubusercontent.com/u/211547361?v=4
@@ -552,16 +564,16 @@ total_contributors: 91
 - **GitHub**: https://github.com/Nitish4144
 - **Repositories**: dora-rs/dora
 
+### caothu2k1
+- **Contributions**: 1
+- **Avatar**: https://avatars.githubusercontent.com/u/177229234?v=4
+- **GitHub**: https://github.com/caothu2k1
+- **Repositories**: dora-rs/dora
+
 ### khanhtuanvo
 - **Contributions**: 1
 - **Avatar**: https://avatars.githubusercontent.com/u/92193194?v=4
 - **GitHub**: https://github.com/khanhtuanvo
-- **Repositories**: dora-rs/dora
-
-### VIKAS7216
-- **Contributions**: 1
-- **Avatar**: https://avatars.githubusercontent.com/u/166967375?v=4
-- **GitHub**: https://github.com/VIKAS7216
 - **Repositories**: dora-rs/dora
 
 
