@@ -3,7 +3,7 @@ type: "contributors"
 category: "dora"
 title: "Dora-rs Contributors"
 title_zh: "Dora-rs 贡献者"
-last_updated: "2026-08-16"
+last_updated: "2026-08-17"
 repositories: ["dora-rs/dora"]
 total_contributors: 95
 ---
@@ -11,7 +11,7 @@ total_contributors: 95
 
 这个文件在构建时自动更新，缓存从GitHub API获取的贡献者数据。
 
-**最后更新**: 2026-08-16
+**最后更新**: 2026-08-17
 **总贡献者数**: 95
 **数据来源**: dora-rs/dora
 
@@ -240,6 +240,12 @@ total_contributors: 95
 - **GitHub**: https://github.com/SunSunSun689
 - **Repositories**: dora-rs/dora
 
+### tang-canran
+- **Contributions**: 5
+- **Avatar**: https://avatars.githubusercontent.com/u/140955784?v=4
+- **GitHub**: https://github.com/tang-canran
+- **Repositories**: dora-rs/dora
+
 ### Felixhuangsiling
 - **Contributions**: 5
 - **Avatar**: https://avatars.githubusercontent.com/u/77993249?v=4
@@ -250,12 +256,6 @@ total_contributors: 95
 - **Contributions**: 4
 - **Avatar**: https://avatars.githubusercontent.com/u/124369727?v=4
 - **GitHub**: https://github.com/AnshKumar200
-- **Repositories**: dora-rs/dora
-
-### tang-canran
-- **Contributions**: 4
-- **Avatar**: https://avatars.githubusercontent.com/u/140955784?v=4
-- **GitHub**: https://github.com/tang-canran
 - **Repositories**: dora-rs/dora
 
 ### TomCC7
