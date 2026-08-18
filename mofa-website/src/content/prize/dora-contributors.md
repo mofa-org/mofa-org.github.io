@@ -3,7 +3,7 @@ type: "contributors"
 category: "dora"
 title: "Dora-rs Contributors"
 title_zh: "Dora-rs 贡献者"
-last_updated: "2026-08-17"
+last_updated: "2026-08-18"
 repositories: ["dora-rs/dora"]
 total_contributors: 95
 ---
@@ -11,7 +11,7 @@ total_contributors: 95
 
 这个文件在构建时自动更新，缓存从GitHub API获取的贡献者数据。
 
-**最后更新**: 2026-08-17
+**最后更新**: 2026-08-18
 **总贡献者数**: 95
 **数据来源**: dora-rs/dora
 
@@ -19,7 +19,7 @@ total_contributors: 95
 
 
 ### phil-opp
-- **Contributions**: 2462
+- **Contributions**: 2465
 - **Avatar**: https://avatars.githubusercontent.com/u/1131315?v=4
 - **GitHub**: https://github.com/phil-opp
 - **Repositories**: dora-rs/dora
@@ -378,16 +378,22 @@ total_contributors: 95
 - **GitHub**: https://github.com/BhaveshAgarwal67
 - **Repositories**: dora-rs/dora
 
+### CapThunder19
+- **Contributions**: 2
+- **Avatar**: https://avatars.githubusercontent.com/u/161865581?v=4
+- **GitHub**: https://github.com/CapThunder19
+- **Repositories**: dora-rs/dora
+
 ### imajij
 - **Contributions**: 2
 - **Avatar**: https://avatars.githubusercontent.com/u/67888293?v=4
 - **GitHub**: https://github.com/imajij
 - **Repositories**: dora-rs/dora
 
-### VIKAS7216
+### abdelrhmaneldenary
 - **Contributions**: 1
-- **Avatar**: https://avatars.githubusercontent.com/u/166967375?v=4
-- **GitHub**: https://github.com/VIKAS7216
+- **Avatar**: https://avatars.githubusercontent.com/u/138318355?v=4
+- **GitHub**: https://github.com/abdelrhmaneldenary
 - **Repositories**: dora-rs/dora
 
 ### wlee1248
@@ -478,18 +484,6 @@ total_contributors: 95
 - **Contributions**: 1
 - **Avatar**: https://avatars.githubusercontent.com/u/39647285?v=4
 - **GitHub**: https://github.com/wyf027
-- **Repositories**: dora-rs/dora
-
-### abdelrhmaneldenary
-- **Contributions**: 1
-- **Avatar**: https://avatars.githubusercontent.com/u/138318355?v=4
-- **GitHub**: https://github.com/abdelrhmaneldenary
-- **Repositories**: dora-rs/dora
-
-### CapThunder19
-- **Contributions**: 1
-- **Avatar**: https://avatars.githubusercontent.com/u/161865581?v=4
-- **GitHub**: https://github.com/CapThunder19
 - **Repositories**: dora-rs/dora
 
 ### JustInCache
@@ -586,6 +580,12 @@ total_contributors: 95
 - **Contributions**: 1
 - **Avatar**: https://avatars.githubusercontent.com/u/92193194?v=4
 - **GitHub**: https://github.com/khanhtuanvo
+- **Repositories**: dora-rs/dora
+
+### VIKAS7216
+- **Contributions**: 1
+- **Avatar**: https://avatars.githubusercontent.com/u/166967375?v=4
+- **GitHub**: https://github.com/VIKAS7216
 - **Repositories**: dora-rs/dora
 
 
