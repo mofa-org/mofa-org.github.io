@@ -3,7 +3,7 @@ type: "contributors"
 category: "dora"
 title: "Dora-rs Contributors"
 title_zh: "Dora-rs 贡献者"
-last_updated: "2026-08-20"
+last_updated: "2026-08-21"
 repositories: ["dora-rs/dora"]
 total_contributors: 95
 ---
@@ -11,7 +11,7 @@ total_contributors: 95
 
 这个文件在构建时自动更新，缓存从GitHub API获取的贡献者数据。
 
-**最后更新**: 2026-08-20
+**最后更新**: 2026-08-21
 **总贡献者数**: 95
 **数据来源**: dora-rs/dora
 
@@ -19,7 +19,7 @@ total_contributors: 95
 
 
 ### phil-opp
-- **Contributions**: 2530
+- **Contributions**: 2551
 - **Avatar**: https://avatars.githubusercontent.com/u/1131315?v=4
 - **GitHub**: https://github.com/phil-opp
 - **Repositories**: dora-rs/dora
@@ -138,16 +138,22 @@ total_contributors: 95
 - **GitHub**: https://github.com/PavelGuzenfeld
 - **Repositories**: dora-rs/dora
 
+### swar09
+- **Contributions**: 12
+- **Avatar**: https://avatars.githubusercontent.com/u/68743524?v=4
+- **GitHub**: https://github.com/swar09
+- **Repositories**: dora-rs/dora
+
 ### meua
 - **Contributions**: 12
 - **Avatar**: https://avatars.githubusercontent.com/u/11570442?v=4
 - **GitHub**: https://github.com/meua
 - **Repositories**: dora-rs/dora
 
-### swar09
-- **Contributions**: 12
-- **Avatar**: https://avatars.githubusercontent.com/u/68743524?v=4
-- **GitHub**: https://github.com/swar09
+### SunSunSun689
+- **Contributions**: 11
+- **Avatar**: https://avatars.githubusercontent.com/u/203076833?v=4
+- **GitHub**: https://github.com/SunSunSun689
 - **Repositories**: dora-rs/dora
 
 ### 7SOMAY
@@ -162,14 +168,8 @@ total_contributors: 95
 - **GitHub**: https://github.com/Bhanudahiyaa
 - **Repositories**: dora-rs/dora
 
-### SunSunSun689
-- **Contributions**: 9
-- **Avatar**: https://avatars.githubusercontent.com/u/203076833?v=4
-- **GitHub**: https://github.com/SunSunSun689
-- **Repositories**: dora-rs/dora
-
 ### DGHX12345
-- **Contributions**: 9
+- **Contributions**: 10
 - **Avatar**: https://avatars.githubusercontent.com/u/266683282?v=4
 - **GitHub**: https://github.com/DGHX12345
 - **Repositories**: dora-rs/dora
@@ -330,6 +330,12 @@ total_contributors: 95
 - **GitHub**: https://github.com/dipeshbabu
 - **Repositories**: dora-rs/dora
 
+### CapThunder19
+- **Contributions**: 3
+- **Avatar**: https://avatars.githubusercontent.com/u/161865581?v=4
+- **GitHub**: https://github.com/CapThunder19
+- **Repositories**: dora-rs/dora
+
 ### sahilshingate01
 - **Contributions**: 2
 - **Avatar**: https://avatars.githubusercontent.com/u/118622202?v=4
@@ -382,12 +388,6 @@ total_contributors: 95
 - **Contributions**: 2
 - **Avatar**: https://avatars.githubusercontent.com/u/102348436?v=4
 - **GitHub**: https://github.com/BhaveshAgarwal67
-- **Repositories**: dora-rs/dora
-
-### CapThunder19
-- **Contributions**: 2
-- **Avatar**: https://avatars.githubusercontent.com/u/161865581?v=4
-- **GitHub**: https://github.com/CapThunder19
 - **Repositories**: dora-rs/dora
 
 ### imajij
