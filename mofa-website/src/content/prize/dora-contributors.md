@@ -3,23 +3,23 @@ type: "contributors"
 category: "dora"
 title: "Dora-rs Contributors"
 title_zh: "Dora-rs 贡献者"
-last_updated: "2026-08-26"
+last_updated: "2026-08-27"
 repositories: ["dora-rs/dora"]
-total_contributors: 95
+total_contributors: 96
 ---
 # Dora-rs Contributors Cache
 
 这个文件在构建时自动更新，缓存从GitHub API获取的贡献者数据。
 
-**最后更新**: 2026-08-26
-**总贡献者数**: 95
+**最后更新**: 2026-08-27
+**总贡献者数**: 96
 **数据来源**: dora-rs/dora
 
 ## Contributors Data
 
 
 ### phil-opp
-- **Contributions**: 2559
+- **Contributions**: 2576
 - **Avatar**: https://avatars.githubusercontent.com/u/1131315?v=4
 - **GitHub**: https://github.com/phil-opp
 - **Repositories**: dora-rs/dora
@@ -396,6 +396,12 @@ total_contributors: 95
 - **GitHub**: https://github.com/imajij
 - **Repositories**: dora-rs/dora
 
+### abdelrhmaneldenary
+- **Contributions**: 1
+- **Avatar**: https://avatars.githubusercontent.com/u/138318355?v=4
+- **GitHub**: https://github.com/abdelrhmaneldenary
+- **Repositories**: dora-rs/dora
+
 ### wlee1248
 - **Contributions**: 1
 - **Avatar**: https://avatars.githubusercontent.com/u/99924265?v=4
@@ -486,16 +492,16 @@ total_contributors: 95
 - **GitHub**: https://github.com/wyf027
 - **Repositories**: dora-rs/dora
 
-### abdelrhmaneldenary
-- **Contributions**: 1
-- **Avatar**: https://avatars.githubusercontent.com/u/138318355?v=4
-- **GitHub**: https://github.com/abdelrhmaneldenary
-- **Repositories**: dora-rs/dora
-
 ### JustInCache
 - **Contributions**: 1
 - **Avatar**: https://avatars.githubusercontent.com/u/105823120?v=4
 - **GitHub**: https://github.com/JustInCache
+- **Repositories**: dora-rs/dora
+
+### anushkagupta200615-jpg
+- **Contributions**: 1
+- **Avatar**: https://avatars.githubusercontent.com/u/234345224?v=4
+- **GitHub**: https://github.com/anushkagupta200615-jpg
 - **Repositories**: dora-rs/dora
 
 ### Ben-PH
