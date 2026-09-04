@@ -3,23 +3,23 @@ type: "contributors"
 category: "dora"
 title: "Dora-rs Contributors"
 title_zh: "Dora-rs 贡献者"
-last_updated: "2026-09-03"
+last_updated: "2026-09-04"
 repositories: ["dora-rs/dora"]
-total_contributors: 96
+total_contributors: 97
 ---
 # Dora-rs Contributors Cache
 
 这个文件在构建时自动更新，缓存从GitHub API获取的贡献者数据。
 
-**最后更新**: 2026-09-03
-**总贡献者数**: 96
+**最后更新**: 2026-09-04
+**总贡献者数**: 97
 **数据来源**: dora-rs/dora
 
 ## Contributors Data
 
 
 ### phil-opp
-- **Contributions**: 2615
+- **Contributions**: 2616
 - **Avatar**: https://avatars.githubusercontent.com/u/1131315?v=4
 - **GitHub**: https://github.com/phil-opp
 - **Repositories**: dora-rs/dora
@@ -396,12 +396,6 @@ total_contributors: 96
 - **GitHub**: https://github.com/imajij
 - **Repositories**: dora-rs/dora
 
-### abdelrhmaneldenary
-- **Contributions**: 1
-- **Avatar**: https://avatars.githubusercontent.com/u/138318355?v=4
-- **GitHub**: https://github.com/abdelrhmaneldenary
-- **Repositories**: dora-rs/dora
-
 ### VIKAS7216
 - **Contributions**: 1
 - **Avatar**: https://avatars.githubusercontent.com/u/166967375?v=4
@@ -442,6 +436,12 @@ total_contributors: 96
 - **Contributions**: 1
 - **Avatar**: https://avatars.githubusercontent.com/u/1556054?v=4
 - **GitHub**: https://github.com/messense
+- **Repositories**: dora-rs/dora
+
+### pucedoteth
+- **Contributions**: 1
+- **Avatar**: https://avatars.githubusercontent.com/u/119044801?v=4
+- **GitHub**: https://github.com/pucedoteth
 - **Repositories**: dora-rs/dora
 
 ### omahs
@@ -490,6 +490,12 @@ total_contributors: 96
 - **Contributions**: 1
 - **Avatar**: https://avatars.githubusercontent.com/u/39647285?v=4
 - **GitHub**: https://github.com/wyf027
+- **Repositories**: dora-rs/dora
+
+### abdelrhmaneldenary
+- **Contributions**: 1
+- **Avatar**: https://avatars.githubusercontent.com/u/138318355?v=4
+- **GitHub**: https://github.com/abdelrhmaneldenary
 - **Repositories**: dora-rs/dora
 
 ### JustInCache
