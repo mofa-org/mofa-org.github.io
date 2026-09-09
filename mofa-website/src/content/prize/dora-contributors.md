@@ -3,7 +3,7 @@ type: "contributors"
 category: "dora"
 title: "Dora-rs Contributors"
 title_zh: "Dora-rs 贡献者"
-last_updated: "2026-09-08"
+last_updated: "2026-09-09"
 repositories: ["dora-rs/dora"]
 total_contributors: 97
 ---
@@ -11,7 +11,7 @@ total_contributors: 97
 
 这个文件在构建时自动更新，缓存从GitHub API获取的贡献者数据。
 
-**最后更新**: 2026-09-08
+**最后更新**: 2026-09-09
 **总贡献者数**: 97
 **数据来源**: dora-rs/dora
 
@@ -19,7 +19,7 @@ total_contributors: 97
 
 
 ### phil-opp
-- **Contributions**: 2616
+- **Contributions**: 2666
 - **Avatar**: https://avatars.githubusercontent.com/u/1131315?v=4
 - **GitHub**: https://github.com/phil-opp
 - **Repositories**: dora-rs/dora
@@ -366,6 +366,12 @@ total_contributors: 97
 - **GitHub**: https://github.com/dieu-detruit
 - **Repositories**: dora-rs/dora
 
+### sanyyam0305
+- **Contributions**: 2
+- **Avatar**: https://avatars.githubusercontent.com/u/225067484?v=4
+- **GitHub**: https://github.com/sanyyam0305
+- **Repositories**: dora-rs/dora
+
 ### trippyogi
 - **Contributions**: 2
 - **Avatar**: https://avatars.githubusercontent.com/u/43531035?v=4
@@ -396,10 +402,10 @@ total_contributors: 97
 - **GitHub**: https://github.com/imajij
 - **Repositories**: dora-rs/dora
 
-### VIKAS7216
+### abdelrhmaneldenary
 - **Contributions**: 1
-- **Avatar**: https://avatars.githubusercontent.com/u/166967375?v=4
-- **GitHub**: https://github.com/VIKAS7216
+- **Avatar**: https://avatars.githubusercontent.com/u/138318355?v=4
+- **GitHub**: https://github.com/abdelrhmaneldenary
 - **Repositories**: dora-rs/dora
 
 ### wlee1248
@@ -492,12 +498,6 @@ total_contributors: 97
 - **GitHub**: https://github.com/wyf027
 - **Repositories**: dora-rs/dora
 
-### abdelrhmaneldenary
-- **Contributions**: 1
-- **Avatar**: https://avatars.githubusercontent.com/u/138318355?v=4
-- **GitHub**: https://github.com/abdelrhmaneldenary
-- **Repositories**: dora-rs/dora
-
 ### JustInCache
 - **Contributions**: 1
 - **Avatar**: https://avatars.githubusercontent.com/u/105823120?v=4
@@ -582,12 +582,6 @@ total_contributors: 97
 - **GitHub**: https://github.com/Nitish4144
 - **Repositories**: dora-rs/dora
 
-### sanyyam0305
-- **Contributions**: 1
-- **Avatar**: https://avatars.githubusercontent.com/u/225067484?v=4
-- **GitHub**: https://github.com/sanyyam0305
-- **Repositories**: dora-rs/dora
-
 ### caothu2k1
 - **Contributions**: 1
 - **Avatar**: https://avatars.githubusercontent.com/u/177229234?v=4
@@ -598,6 +592,12 @@ total_contributors: 97
 - **Contributions**: 1
 - **Avatar**: https://avatars.githubusercontent.com/u/92193194?v=4
 - **GitHub**: https://github.com/khanhtuanvo
+- **Repositories**: dora-rs/dora
+
+### VIKAS7216
+- **Contributions**: 1
+- **Avatar**: https://avatars.githubusercontent.com/u/166967375?v=4
+- **GitHub**: https://github.com/VIKAS7216
 - **Repositories**: dora-rs/dora
 
 
