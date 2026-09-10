@@ -3,23 +3,23 @@ type: "contributors"
 category: "dora"
 title: "Dora-rs Contributors"
 title_zh: "Dora-rs 贡献者"
-last_updated: "2026-09-09"
+last_updated: "2026-09-10"
 repositories: ["dora-rs/dora"]
-total_contributors: 97
+total_contributors: 98
 ---
 # Dora-rs Contributors Cache
 
 这个文件在构建时自动更新，缓存从GitHub API获取的贡献者数据。
 
-**最后更新**: 2026-09-09
-**总贡献者数**: 97
+**最后更新**: 2026-09-10
+**总贡献者数**: 98
 **数据来源**: dora-rs/dora
 
 ## Contributors Data
 
 
 ### phil-opp
-- **Contributions**: 2666
+- **Contributions**: 2694
 - **Avatar**: https://avatars.githubusercontent.com/u/1131315?v=4
 - **GitHub**: https://github.com/phil-opp
 - **Repositories**: dora-rs/dora
@@ -330,6 +330,12 @@ total_contributors: 97
 - **GitHub**: https://github.com/dipeshbabu
 - **Repositories**: dora-rs/dora
 
+### anushkagupta200615-jpg
+- **Contributions**: 3
+- **Avatar**: https://avatars.githubusercontent.com/u/234345224?v=4
+- **GitHub**: https://github.com/anushkagupta200615-jpg
+- **Repositories**: dora-rs/dora
+
 ### CapThunder19
 - **Contributions**: 3
 - **Avatar**: https://avatars.githubusercontent.com/u/161865581?v=4
@@ -504,12 +510,6 @@ total_contributors: 97
 - **GitHub**: https://github.com/JustInCache
 - **Repositories**: dora-rs/dora
 
-### anushkagupta200615-jpg
-- **Contributions**: 1
-- **Avatar**: https://avatars.githubusercontent.com/u/234345224?v=4
-- **GitHub**: https://github.com/anushkagupta200615-jpg
-- **Repositories**: dora-rs/dora
-
 ### Ben-PH
 - **Contributions**: 1
 - **Avatar**: https://avatars.githubusercontent.com/u/16680090?v=4
@@ -580,6 +580,12 @@ total_contributors: 97
 - **Contributions**: 1
 - **Avatar**: https://avatars.githubusercontent.com/u/190355771?v=4
 - **GitHub**: https://github.com/Nitish4144
+- **Repositories**: dora-rs/dora
+
+### Duckaet
+- **Contributions**: 1
+- **Avatar**: https://avatars.githubusercontent.com/u/127123897?v=4
+- **GitHub**: https://github.com/Duckaet
 - **Repositories**: dora-rs/dora
 
 ### caothu2k1
