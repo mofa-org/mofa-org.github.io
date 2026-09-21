@@ -3,23 +3,23 @@ type: "contributors"
 category: "dora"
 title: "Dora-rs Contributors"
 title_zh: "Dora-rs 贡献者"
-last_updated: "2026-09-20"
+last_updated: "2026-09-21"
 repositories: ["dora-rs/dora"]
-total_contributors: 103
+total_contributors: 104
 ---
 # Dora-rs Contributors Cache
 
 这个文件在构建时自动更新，缓存从GitHub API获取的贡献者数据。
 
-**最后更新**: 2026-09-20
-**总贡献者数**: 103
+**最后更新**: 2026-09-21
+**总贡献者数**: 104
 **数据来源**: dora-rs/dora
 
 ## Contributors Data
 
 
 ### phil-opp
-- **Contributions**: 2723
+- **Contributions**: 2740
 - **Avatar**: https://avatars.githubusercontent.com/u/1131315?v=4
 - **GitHub**: https://github.com/phil-opp
 - **Repositories**: dora-rs/dora
@@ -426,10 +426,10 @@ total_contributors: 103
 - **GitHub**: https://github.com/imajij
 - **Repositories**: dora-rs/dora
 
-### abdelrhmaneldenary
+### tunglambk
 - **Contributions**: 1
-- **Avatar**: https://avatars.githubusercontent.com/u/138318355?v=4
-- **GitHub**: https://github.com/abdelrhmaneldenary
+- **Avatar**: https://avatars.githubusercontent.com/u/53996158?v=4
+- **GitHub**: https://github.com/tunglambk
 - **Repositories**: dora-rs/dora
 
 ### VIKAS7216
@@ -528,10 +528,22 @@ total_contributors: 103
 - **GitHub**: https://github.com/wyf027
 - **Repositories**: dora-rs/dora
 
+### abdelrhmaneldenary
+- **Contributions**: 1
+- **Avatar**: https://avatars.githubusercontent.com/u/138318355?v=4
+- **GitHub**: https://github.com/abdelrhmaneldenary
+- **Repositories**: dora-rs/dora
+
 ### JustInCache
 - **Contributions**: 1
 - **Avatar**: https://avatars.githubusercontent.com/u/105823120?v=4
 - **GitHub**: https://github.com/JustInCache
+- **Repositories**: dora-rs/dora
+
+### montmejat
+- **Contributions**: 1
+- **Avatar**: https://avatars.githubusercontent.com/u/29719028?v=4
+- **GitHub**: https://github.com/montmejat
 - **Repositories**: dora-rs/dora
 
 ### AutoPtrLab
@@ -628,12 +640,6 @@ total_contributors: 103
 - **Contributions**: 1
 - **Avatar**: https://avatars.githubusercontent.com/u/92193194?v=4
 - **GitHub**: https://github.com/khanhtuanvo
-- **Repositories**: dora-rs/dora
-
-### tunglambk
-- **Contributions**: 1
-- **Avatar**: https://avatars.githubusercontent.com/u/53996158?v=4
-- **GitHub**: https://github.com/tunglambk
 - **Repositories**: dora-rs/dora
 
 
