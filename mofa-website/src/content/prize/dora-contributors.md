@@ -3,7 +3,7 @@ type: "contributors"
 category: "dora"
 title: "Dora-rs Contributors"
 title_zh: "Dora-rs 贡献者"
-last_updated: "2026-09-23"
+last_updated: "2026-09-24"
 repositories: ["dora-rs/dora"]
 total_contributors: 104
 ---
@@ -11,7 +11,7 @@ total_contributors: 104
 
 这个文件在构建时自动更新，缓存从GitHub API获取的贡献者数据。
 
-**最后更新**: 2026-09-23
+**最后更新**: 2026-09-24
 **总贡献者数**: 104
 **数据来源**: dora-rs/dora
 
@@ -19,7 +19,7 @@ total_contributors: 104
 
 
 ### phil-opp
-- **Contributions**: 2747
+- **Contributions**: 2755
 - **Avatar**: https://avatars.githubusercontent.com/u/1131315?v=4
 - **GitHub**: https://github.com/phil-opp
 - **Repositories**: dora-rs/dora
@@ -132,10 +132,10 @@ total_contributors: 104
 - **GitHub**: https://github.com/rozgo
 - **Repositories**: dora-rs/dora
 
-### PavelGuzenfeld
-- **Contributions**: 12
-- **Avatar**: https://avatars.githubusercontent.com/u/67074795?v=4
-- **GitHub**: https://github.com/PavelGuzenfeld
+### SunSunSun689
+- **Contributions**: 13
+- **Avatar**: https://avatars.githubusercontent.com/u/203076833?v=4
+- **GitHub**: https://github.com/SunSunSun689
 - **Repositories**: dora-rs/dora
 
 ### swar09
@@ -150,10 +150,10 @@ total_contributors: 104
 - **GitHub**: https://github.com/meua
 - **Repositories**: dora-rs/dora
 
-### SunSunSun689
-- **Contributions**: 11
-- **Avatar**: https://avatars.githubusercontent.com/u/203076833?v=4
-- **GitHub**: https://github.com/SunSunSun689
+### PavelGuzenfeld
+- **Contributions**: 12
+- **Avatar**: https://avatars.githubusercontent.com/u/67074795?v=4
+- **GitHub**: https://github.com/PavelGuzenfeld
 - **Repositories**: dora-rs/dora
 
 ### 7SOMAY
