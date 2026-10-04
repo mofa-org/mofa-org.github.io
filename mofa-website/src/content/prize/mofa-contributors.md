@@ -3,7 +3,7 @@ type: "contributors"
 category: "mofa"
 title: "MoFA Contributors"
 title_zh: "MoFA 贡献者"
-last_updated: "2026-10-03"
+last_updated: "2026-10-04"
 repositories: ["mofa-org/mofa","mofa-org/mofa-new"]
 total_contributors: 69
 ---
@@ -11,7 +11,7 @@ total_contributors: 69
 
 这个文件在构建时自动更新，缓存从GitHub API获取的贡献者数据。
 
-**最后更新**: 2026-10-03
+**最后更新**: 2026-10-04
 **总贡献者数**: 69
 **数据来源**: mofa-org/mofa, mofa-org/mofa-new
 
@@ -24,10 +24,10 @@ total_contributors: 69
 - **GitHub**: https://github.com/chengzi0103
 - **Repositories**: mofa-org/mofa, mofa-org/mofa-new
 
-### amosgeek
+### amosarc
 - **Contributions**: 267
 - **Avatar**: https://avatars.githubusercontent.com/u/20733031?v=4
-- **GitHub**: https://github.com/amosgeek
+- **GitHub**: https://github.com/amosarc
 - **Repositories**: mofa-org/mofa
 
 ### Nixxx19
