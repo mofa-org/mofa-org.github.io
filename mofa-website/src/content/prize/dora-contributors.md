@@ -3,23 +3,23 @@ type: "contributors"
 category: "dora"
 title: "Dora-rs Contributors"
 title_zh: "Dora-rs 贡献者"
-last_updated: "2026-10-12"
+last_updated: "2026-10-13"
 repositories: ["dora-rs/dora"]
-total_contributors: 108
+total_contributors: 109
 ---
 # Dora-rs Contributors Cache
 
 这个文件在构建时自动更新，缓存从GitHub API获取的贡献者数据。
 
-**最后更新**: 2026-10-12
-**总贡献者数**: 108
+**最后更新**: 2026-10-13
+**总贡献者数**: 109
 **数据来源**: dora-rs/dora
 
 ## Contributors Data
 
 
 ### phil-opp
-- **Contributions**: 2868
+- **Contributions**: 2869
 - **Avatar**: https://avatars.githubusercontent.com/u/1131315?v=4
 - **GitHub**: https://github.com/phil-opp
 - **Repositories**: dora-rs/dora
@@ -132,6 +132,12 @@ total_contributors: 108
 - **GitHub**: https://github.com/Mati-ur-rehman-017
 - **Repositories**: dora-rs/dora
 
+### sjfhsjfh
+- **Contributions**: 15
+- **Avatar**: https://avatars.githubusercontent.com/u/58244206?v=4
+- **GitHub**: https://github.com/sjfhsjfh
+- **Repositories**: dora-rs/dora
+
 ### SunSunSun689
 - **Contributions**: 13
 - **Avatar**: https://avatars.githubusercontent.com/u/203076833?v=4
@@ -204,16 +210,16 @@ total_contributors: 108
 - **GitHub**: https://github.com/Harsh-Sahu43
 - **Repositories**: dora-rs/dora
 
+### Deepak-negi11
+- **Contributions**: 7
+- **Avatar**: https://avatars.githubusercontent.com/u/177688787?v=4
+- **GitHub**: https://github.com/Deepak-negi11
+- **Repositories**: dora-rs/dora
+
 ### claude
 - **Contributions**: 6
 - **Avatar**: https://avatars.githubusercontent.com/u/81847?v=4
 - **GitHub**: https://github.com/claude
-- **Repositories**: dora-rs/dora
-
-### Deepak-negi11
-- **Contributions**: 6
-- **Avatar**: https://avatars.githubusercontent.com/u/177688787?v=4
-- **GitHub**: https://github.com/Deepak-negi11
 - **Repositories**: dora-rs/dora
 
 ### starlitxiling
@@ -238,6 +244,12 @@ total_contributors: 108
 - **Contributions**: 5
 - **Avatar**: https://avatars.githubusercontent.com/u/140955784?v=4
 - **GitHub**: https://github.com/tang-canran
+- **Repositories**: dora-rs/dora
+
+### tunglambk
+- **Contributions**: 5
+- **Avatar**: https://avatars.githubusercontent.com/u/53996158?v=4
+- **GitHub**: https://github.com/tunglambk
 - **Repositories**: dora-rs/dora
 
 ### Supull
@@ -292,12 +304,6 @@ total_contributors: 108
 - **Contributions**: 4
 - **Avatar**: https://avatars.githubusercontent.com/u/177382098?v=4
 - **GitHub**: https://github.com/SaitejaKommi
-- **Repositories**: dora-rs/dora
-
-### tunglambk
-- **Contributions**: 4
-- **Avatar**: https://avatars.githubusercontent.com/u/53996158?v=4
-- **GitHub**: https://github.com/tunglambk
 - **Repositories**: dora-rs/dora
 
 ### TomCC7
