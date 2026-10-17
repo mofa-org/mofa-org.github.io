@@ -3,7 +3,7 @@ type: "contributors"
 category: "dora"
 title: "Dora-rs Contributors"
 title_zh: "Dora-rs 贡献者"
-last_updated: "2026-10-16"
+last_updated: "2026-10-17"
 repositories: ["dora-rs/dora"]
 total_contributors: 109
 ---
@@ -11,7 +11,7 @@ total_contributors: 109
 
 这个文件在构建时自动更新，缓存从GitHub API获取的贡献者数据。
 
-**最后更新**: 2026-10-16
+**最后更新**: 2026-10-17
 **总贡献者数**: 109
 **数据来源**: dora-rs/dora
 
@@ -19,7 +19,7 @@ total_contributors: 109
 
 
 ### phil-opp
-- **Contributions**: 2869
+- **Contributions**: 2875
 - **Avatar**: https://avatars.githubusercontent.com/u/1131315?v=4
 - **GitHub**: https://github.com/phil-opp
 - **Repositories**: dora-rs/dora
@@ -114,16 +114,16 @@ total_contributors: 109
 - **GitHub**: https://github.com/EricLBuehler
 - **Repositories**: dora-rs/dora
 
+### sanyyam0305
+- **Contributions**: 18
+- **Avatar**: https://avatars.githubusercontent.com/u/225067484?v=4
+- **GitHub**: https://github.com/sanyyam0305
+- **Repositories**: dora-rs/dora
+
 ### chrislearn
 - **Contributions**: 17
 - **Avatar**: https://avatars.githubusercontent.com/u/5874864?v=4
 - **GitHub**: https://github.com/chrislearn
-- **Repositories**: dora-rs/dora
-
-### sanyyam0305
-- **Contributions**: 16
-- **Avatar**: https://avatars.githubusercontent.com/u/225067484?v=4
-- **GitHub**: https://github.com/sanyyam0305
 - **Repositories**: dora-rs/dora
 
 ### Mati-ur-rehman-017
