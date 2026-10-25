@@ -3,7 +3,7 @@ type: "contributors"
 category: "dora"
 title: "Dora-rs Contributors"
 title_zh: "Dora-rs 贡献者"
-last_updated: "2026-10-24"
+last_updated: "2026-10-25"
 repositories: ["dora-rs/dora"]
 total_contributors: 109
 ---
@@ -11,7 +11,7 @@ total_contributors: 109
 
 这个文件在构建时自动更新，缓存从GitHub API获取的贡献者数据。
 
-**最后更新**: 2026-10-24
+**最后更新**: 2026-10-25
 **总贡献者数**: 109
 **数据来源**: dora-rs/dora
 
@@ -19,7 +19,7 @@ total_contributors: 109
 
 
 ### phil-opp
-- **Contributions**: 2923
+- **Contributions**: 2933
 - **Avatar**: https://avatars.githubusercontent.com/u/1131315?v=4
 - **GitHub**: https://github.com/phil-opp
 - **Repositories**: dora-rs/dora
@@ -174,6 +174,12 @@ total_contributors: 109
 - **GitHub**: https://github.com/7SOMAY
 - **Repositories**: dora-rs/dora
 
+### Deepak-negi11
+- **Contributions**: 11
+- **Avatar**: https://avatars.githubusercontent.com/u/177688787?v=4
+- **GitHub**: https://github.com/Deepak-negi11
+- **Repositories**: dora-rs/dora
+
 ### Bhanudahiyaa
 - **Contributions**: 10
 - **Avatar**: https://avatars.githubusercontent.com/u/179860247?v=4
@@ -184,12 +190,6 @@ total_contributors: 109
 - **Contributions**: 10
 - **Avatar**: https://avatars.githubusercontent.com/u/266683282?v=4
 - **GitHub**: https://github.com/DGHX12345
-- **Repositories**: dora-rs/dora
-
-### Deepak-negi11
-- **Contributions**: 9
-- **Avatar**: https://avatars.githubusercontent.com/u/177688787?v=4
-- **GitHub**: https://github.com/Deepak-negi11
 - **Repositories**: dora-rs/dora
 
 ### suhr25
