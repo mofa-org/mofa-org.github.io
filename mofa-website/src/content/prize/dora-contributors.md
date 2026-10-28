@@ -3,7 +3,7 @@ type: "contributors"
 category: "dora"
 title: "Dora-rs Contributors"
 title_zh: "Dora-rs 贡献者"
-last_updated: "2026-10-27"
+last_updated: "2026-10-28"
 repositories: ["dora-rs/dora"]
 total_contributors: 110
 ---
@@ -11,7 +11,7 @@ total_contributors: 110
 
 这个文件在构建时自动更新，缓存从GitHub API获取的贡献者数据。
 
-**最后更新**: 2026-10-27
+**最后更新**: 2026-10-28
 **总贡献者数**: 110
 **数据来源**: dora-rs/dora
 
@@ -19,7 +19,7 @@ total_contributors: 110
 
 
 ### phil-opp
-- **Contributions**: 2940
+- **Contributions**: 2962
 - **Avatar**: https://avatars.githubusercontent.com/u/1131315?v=4
 - **GitHub**: https://github.com/phil-opp
 - **Repositories**: dora-rs/dora
@@ -132,16 +132,16 @@ total_contributors: 110
 - **GitHub**: https://github.com/Mati-ur-rehman-017
 - **Repositories**: dora-rs/dora
 
+### Deepak-negi11
+- **Contributions**: 15
+- **Avatar**: https://avatars.githubusercontent.com/u/177688787?v=4
+- **GitHub**: https://github.com/Deepak-negi11
+- **Repositories**: dora-rs/dora
+
 ### sjfhsjfh
 - **Contributions**: 15
 - **Avatar**: https://avatars.githubusercontent.com/u/58244206?v=4
 - **GitHub**: https://github.com/sjfhsjfh
-- **Repositories**: dora-rs/dora
-
-### Deepak-negi11
-- **Contributions**: 13
-- **Avatar**: https://avatars.githubusercontent.com/u/177688787?v=4
-- **GitHub**: https://github.com/Deepak-negi11
 - **Repositories**: dora-rs/dora
 
 ### SunSunSun689
@@ -498,10 +498,10 @@ total_contributors: 110
 - **GitHub**: https://github.com/khanhtuanvo
 - **Repositories**: dora-rs/dora
 
-### sohamc-codes
+### abdelrhmaneldenary
 - **Contributions**: 1
-- **Avatar**: https://avatars.githubusercontent.com/u/174377329?v=4
-- **GitHub**: https://github.com/sohamc-codes
+- **Avatar**: https://avatars.githubusercontent.com/u/138318355?v=4
+- **GitHub**: https://github.com/abdelrhmaneldenary
 - **Repositories**: dora-rs/dora
 
 ### pucedoteth
@@ -556,12 +556,6 @@ total_contributors: 110
 - **Contributions**: 1
 - **Avatar**: https://avatars.githubusercontent.com/u/39647285?v=4
 - **GitHub**: https://github.com/wyf027
-- **Repositories**: dora-rs/dora
-
-### abdelrhmaneldenary
-- **Contributions**: 1
-- **Avatar**: https://avatars.githubusercontent.com/u/138318355?v=4
-- **GitHub**: https://github.com/abdelrhmaneldenary
 - **Repositories**: dora-rs/dora
 
 ### ajaypen19
@@ -676,6 +670,12 @@ total_contributors: 110
 - **Contributions**: 1
 - **Avatar**: https://avatars.githubusercontent.com/u/127123897?v=4
 - **GitHub**: https://github.com/parasunc
+- **Repositories**: dora-rs/dora
+
+### sohamc-codes
+- **Contributions**: 1
+- **Avatar**: https://avatars.githubusercontent.com/u/174377329?v=4
+- **GitHub**: https://github.com/sohamc-codes
 - **Repositories**: dora-rs/dora
 
 
