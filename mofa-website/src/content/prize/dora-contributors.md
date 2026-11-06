@@ -3,7 +3,7 @@ type: "contributors"
 category: "dora"
 title: "Dora-rs Contributors"
 title_zh: "Dora-rs 贡献者"
-last_updated: "2026-11-05"
+last_updated: "2026-11-06"
 repositories: ["dora-rs/dora"]
 total_contributors: 116
 ---
@@ -11,7 +11,7 @@ total_contributors: 116
 
 这个文件在构建时自动更新，缓存从GitHub API获取的贡献者数据。
 
-**最后更新**: 2026-11-05
+**最后更新**: 2026-11-06
 **总贡献者数**: 116
 **数据来源**: dora-rs/dora
 
@@ -19,7 +19,7 @@ total_contributors: 116
 
 
 ### phil-opp
-- **Contributions**: 3014
+- **Contributions**: 3015
 - **Avatar**: https://avatars.githubusercontent.com/u/1131315?v=4
 - **GitHub**: https://github.com/phil-opp
 - **Repositories**: dora-rs/dora
@@ -252,6 +252,12 @@ total_contributors: 116
 - **GitHub**: https://github.com/tunglambk
 - **Repositories**: dora-rs/dora
 
+### SaitejaKommi
+- **Contributions**: 5
+- **Avatar**: https://avatars.githubusercontent.com/u/177382098?v=4
+- **GitHub**: https://github.com/SaitejaKommi
+- **Repositories**: dora-rs/dora
+
 ### Supull
 - **Contributions**: 5
 - **Avatar**: https://avatars.githubusercontent.com/u/136597973?v=4
@@ -298,12 +304,6 @@ total_contributors: 116
 - **Contributions**: 4
 - **Avatar**: https://avatars.githubusercontent.com/u/55869557?v=4
 - **GitHub**: https://github.com/TomCC7
-- **Repositories**: dora-rs/dora
-
-### SaitejaKommi
-- **Contributions**: 4
-- **Avatar**: https://avatars.githubusercontent.com/u/177382098?v=4
-- **GitHub**: https://github.com/SaitejaKommi
 - **Repositories**: dora-rs/dora
 
 ### keirsalterego
