@@ -3,23 +3,23 @@ type: "contributors"
 category: "dora"
 title: "Dora-rs Contributors"
 title_zh: "Dora-rs 贡献者"
-last_updated: "2026-11-06"
+last_updated: "2026-11-07"
 repositories: ["dora-rs/dora"]
-total_contributors: 116
+total_contributors: 117
 ---
 # Dora-rs Contributors Cache
 
 这个文件在构建时自动更新，缓存从GitHub API获取的贡献者数据。
 
-**最后更新**: 2026-11-06
-**总贡献者数**: 116
+**最后更新**: 2026-11-07
+**总贡献者数**: 117
 **数据来源**: dora-rs/dora
 
 ## Contributors Data
 
 
 ### phil-opp
-- **Contributions**: 3015
+- **Contributions**: 3019
 - **Avatar**: https://avatars.githubusercontent.com/u/1131315?v=4
 - **GitHub**: https://github.com/phil-opp
 - **Repositories**: dora-rs/dora
@@ -216,6 +216,18 @@ total_contributors: 116
 - **GitHub**: https://github.com/harsh839
 - **Repositories**: dora-rs/dora
 
+### SaitejaKommi
+- **Contributions**: 7
+- **Avatar**: https://avatars.githubusercontent.com/u/177382098?v=4
+- **GitHub**: https://github.com/SaitejaKommi
+- **Repositories**: dora-rs/dora
+
+### tunglambk
+- **Contributions**: 7
+- **Avatar**: https://avatars.githubusercontent.com/u/53996158?v=4
+- **GitHub**: https://github.com/tunglambk
+- **Repositories**: dora-rs/dora
+
 ### claude
 - **Contributions**: 6
 - **Avatar**: https://avatars.githubusercontent.com/u/81847?v=4
@@ -228,6 +240,12 @@ total_contributors: 116
 - **GitHub**: https://github.com/starlitxiling
 - **Repositories**: dora-rs/dora
 
+### tang-canran
+- **Contributions**: 6
+- **Avatar**: https://avatars.githubusercontent.com/u/140955784?v=4
+- **GitHub**: https://github.com/tang-canran
+- **Repositories**: dora-rs/dora
+
 ### sauhardh
 - **Contributions**: 6
 - **Avatar**: https://avatars.githubusercontent.com/u/84185378?v=4
@@ -238,24 +256,6 @@ total_contributors: 116
 - **Contributions**: 5
 - **Avatar**: https://avatars.githubusercontent.com/u/77993249?v=4
 - **GitHub**: https://github.com/Felixhuangsiling
-- **Repositories**: dora-rs/dora
-
-### tang-canran
-- **Contributions**: 5
-- **Avatar**: https://avatars.githubusercontent.com/u/140955784?v=4
-- **GitHub**: https://github.com/tang-canran
-- **Repositories**: dora-rs/dora
-
-### tunglambk
-- **Contributions**: 5
-- **Avatar**: https://avatars.githubusercontent.com/u/53996158?v=4
-- **GitHub**: https://github.com/tunglambk
-- **Repositories**: dora-rs/dora
-
-### SaitejaKommi
-- **Contributions**: 5
-- **Avatar**: https://avatars.githubusercontent.com/u/177382098?v=4
-- **GitHub**: https://github.com/SaitejaKommi
 - **Repositories**: dora-rs/dora
 
 ### Supull
@@ -510,10 +510,10 @@ total_contributors: 116
 - **GitHub**: https://github.com/khanhtuanvo
 - **Repositories**: dora-rs/dora
 
-### sohamc-codes
+### abdelrhmaneldenary
 - **Contributions**: 1
-- **Avatar**: https://avatars.githubusercontent.com/u/174377329?v=4
-- **GitHub**: https://github.com/sohamc-codes
+- **Avatar**: https://avatars.githubusercontent.com/u/138318355?v=4
+- **GitHub**: https://github.com/abdelrhmaneldenary
 - **Repositories**: dora-rs/dora
 
 ### pucedoteth
@@ -576,10 +576,10 @@ total_contributors: 116
 - **GitHub**: https://github.com/wyf027
 - **Repositories**: dora-rs/dora
 
-### abdelrhmaneldenary
+### Goldloli
 - **Contributions**: 1
-- **Avatar**: https://avatars.githubusercontent.com/u/138318355?v=4
-- **GitHub**: https://github.com/abdelrhmaneldenary
+- **Avatar**: https://avatars.githubusercontent.com/u/39011904?v=4
+- **GitHub**: https://github.com/Goldloli
 - **Repositories**: dora-rs/dora
 
 ### ajaypen19
@@ -712,6 +712,12 @@ total_contributors: 116
 - **Contributions**: 1
 - **Avatar**: https://avatars.githubusercontent.com/u/191299?v=4
 - **GitHub**: https://github.com/pratikgx
+- **Repositories**: dora-rs/dora
+
+### sohamc-codes
+- **Contributions**: 1
+- **Avatar**: https://avatars.githubusercontent.com/u/174377329?v=4
+- **GitHub**: https://github.com/sohamc-codes
 - **Repositories**: dora-rs/dora
 
 
