@@ -3,7 +3,7 @@ type: "contributors"
 category: "dora"
 title: "Dora-rs Contributors"
 title_zh: "Dora-rs 贡献者"
-last_updated: "2026-11-12"
+last_updated: "2026-11-13"
 repositories: ["dora-rs/dora"]
 total_contributors: 123
 ---
@@ -11,7 +11,7 @@ total_contributors: 123
 
 这个文件在构建时自动更新，缓存从GitHub API获取的贡献者数据。
 
-**最后更新**: 2026-11-12
+**最后更新**: 2026-11-13
 **总贡献者数**: 123
 **数据来源**: dora-rs/dora
 
@@ -19,7 +19,7 @@ total_contributors: 123
 
 
 ### phil-opp
-- **Contributions**: 3048
+- **Contributions**: 3058
 - **Avatar**: https://avatars.githubusercontent.com/u/1131315?v=4
 - **GitHub**: https://github.com/phil-opp
 - **Repositories**: dora-rs/dora
@@ -72,16 +72,16 @@ total_contributors: 123
 - **GitHub**: https://github.com/Michael-J-Ward
 - **Repositories**: dora-rs/dora
 
+### sanyyam0305
+- **Contributions**: 31
+- **Avatar**: https://avatars.githubusercontent.com/u/225067484?v=4
+- **GitHub**: https://github.com/sanyyam0305
+- **Repositories**: dora-rs/dora
+
 ### Hennzau
 - **Contributions**: 30
 - **Avatar**: https://avatars.githubusercontent.com/u/72349109?v=4
 - **GitHub**: https://github.com/Hennzau
-- **Repositories**: dora-rs/dora
-
-### sanyyam0305
-- **Contributions**: 30
-- **Avatar**: https://avatars.githubusercontent.com/u/225067484?v=4
-- **GitHub**: https://github.com/sanyyam0305
 - **Repositories**: dora-rs/dora
 
 ### drindr
@@ -384,6 +384,12 @@ total_contributors: 123
 - **GitHub**: https://github.com/CapThunder19
 - **Repositories**: dora-rs/dora
 
+### sypsyp97
+- **Contributions**: 2
+- **Avatar**: https://avatars.githubusercontent.com/u/17694291?v=4
+- **GitHub**: https://github.com/sypsyp97
+- **Repositories**: dora-rs/dora
+
 ### sahilshingate01
 - **Contributions**: 2
 - **Avatar**: https://avatars.githubusercontent.com/u/118622202?v=4
@@ -418,6 +424,12 @@ total_contributors: 123
 - **Contributions**: 2
 - **Avatar**: https://avatars.githubusercontent.com/u/27790373?v=4
 - **GitHub**: https://github.com/dieu-detruit
+- **Repositories**: dora-rs/dora
+
+### Shauryan0207
+- **Contributions**: 2
+- **Avatar**: https://avatars.githubusercontent.com/u/250601736?v=4
+- **GitHub**: https://github.com/Shauryan0207
 - **Repositories**: dora-rs/dora
 
 ### Aschenbath
@@ -492,12 +504,6 @@ total_contributors: 123
 - **GitHub**: https://github.com/jerry73204
 - **Repositories**: dora-rs/dora
 
-### sypsyp97
-- **Contributions**: 1
-- **Avatar**: https://avatars.githubusercontent.com/u/17694291?v=4
-- **GitHub**: https://github.com/sypsyp97
-- **Repositories**: dora-rs/dora
-
 ### Priyanshu-choudhary
 - **Contributions**: 1
 - **Avatar**: https://avatars.githubusercontent.com/u/84007868?v=4
@@ -520,12 +526,6 @@ total_contributors: 123
 - **Contributions**: 1
 - **Avatar**: https://avatars.githubusercontent.com/u/92193194?v=4
 - **GitHub**: https://github.com/khanhtuanvo
-- **Repositories**: dora-rs/dora
-
-### abdelrhmaneldenary
-- **Contributions**: 1
-- **Avatar**: https://avatars.githubusercontent.com/u/138318355?v=4
-- **GitHub**: https://github.com/abdelrhmaneldenary
 - **Repositories**: dora-rs/dora
 
 ### pucedoteth
@@ -598,6 +598,12 @@ total_contributors: 123
 - **Contributions**: 1
 - **Avatar**: https://avatars.githubusercontent.com/u/39011904?v=4
 - **GitHub**: https://github.com/Goldloli
+- **Repositories**: dora-rs/dora
+
+### abdelrhmaneldenary
+- **Contributions**: 1
+- **Avatar**: https://avatars.githubusercontent.com/u/138318355?v=4
+- **GitHub**: https://github.com/abdelrhmaneldenary
 - **Repositories**: dora-rs/dora
 
 ### ajaypen19
@@ -742,12 +748,6 @@ total_contributors: 123
 - **Contributions**: 1
 - **Avatar**: https://avatars.githubusercontent.com/u/191299?v=4
 - **GitHub**: https://github.com/pratikgx
-- **Repositories**: dora-rs/dora
-
-### Shauryan0207
-- **Contributions**: 1
-- **Avatar**: https://avatars.githubusercontent.com/u/250601736?v=4
-- **GitHub**: https://github.com/Shauryan0207
 - **Repositories**: dora-rs/dora
 
 ### sohamc-codes
