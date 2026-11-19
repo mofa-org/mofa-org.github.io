@@ -3,7 +3,7 @@ type: "contributors"
 category: "dora"
 title: "Dora-rs Contributors"
 title_zh: "Dora-rs 贡献者"
-last_updated: "2026-11-18"
+last_updated: "2026-11-19"
 repositories: ["dora-rs/dora"]
 total_contributors: 125
 ---
@@ -11,7 +11,7 @@ total_contributors: 125
 
 这个文件在构建时自动更新，缓存从GitHub API获取的贡献者数据。
 
-**最后更新**: 2026-11-18
+**最后更新**: 2026-11-19
 **总贡献者数**: 125
 **数据来源**: dora-rs/dora
 
@@ -19,7 +19,7 @@ total_contributors: 125
 
 
 ### phil-opp
-- **Contributions**: 3073
+- **Contributions**: 3075
 - **Avatar**: https://avatars.githubusercontent.com/u/1131315?v=4
 - **GitHub**: https://github.com/phil-opp
 - **Repositories**: dora-rs/dora
@@ -402,6 +402,12 @@ total_contributors: 125
 - **GitHub**: https://github.com/sahilshingate01
 - **Repositories**: dora-rs/dora
 
+### pojeesahil
+- **Contributions**: 2
+- **Avatar**: https://avatars.githubusercontent.com/u/83576063?v=4
+- **GitHub**: https://github.com/pojeesahil
+- **Repositories**: dora-rs/dora
+
 ### kingchou007
 - **Contributions**: 2
 - **Avatar**: https://avatars.githubusercontent.com/u/44578147?v=4
@@ -480,12 +486,6 @@ total_contributors: 125
 - **GitHub**: https://github.com/imajij
 - **Repositories**: dora-rs/dora
 
-### messense
-- **Contributions**: 1
-- **Avatar**: https://avatars.githubusercontent.com/u/1556054?v=4
-- **GitHub**: https://github.com/messense
-- **Repositories**: dora-rs/dora
-
 ### mac146
 - **Contributions**: 1
 - **Avatar**: https://avatars.githubusercontent.com/u/201369671?v=4
@@ -540,6 +540,18 @@ total_contributors: 125
 - **GitHub**: https://github.com/khanhtuanvo
 - **Repositories**: dora-rs/dora
 
+### abdelrhmaneldenary
+- **Contributions**: 1
+- **Avatar**: https://avatars.githubusercontent.com/u/138318355?v=4
+- **GitHub**: https://github.com/abdelrhmaneldenary
+- **Repositories**: dora-rs/dora
+
+### messense
+- **Contributions**: 1
+- **Avatar**: https://avatars.githubusercontent.com/u/1556054?v=4
+- **GitHub**: https://github.com/messense
+- **Repositories**: dora-rs/dora
+
 ### pucedoteth
 - **Contributions**: 1
 - **Avatar**: https://avatars.githubusercontent.com/u/119044801?v=4
@@ -556,12 +568,6 @@ total_contributors: 125
 - **Contributions**: 1
 - **Avatar**: https://avatars.githubusercontent.com/u/63764207?v=4
 - **GitHub**: https://github.com/onthebed
-- **Repositories**: dora-rs/dora
-
-### pojeesahil
-- **Contributions**: 1
-- **Avatar**: https://avatars.githubusercontent.com/u/83576063?v=4
-- **GitHub**: https://github.com/pojeesahil
 - **Repositories**: dora-rs/dora
 
 ### shivanibhat24
@@ -610,12 +616,6 @@ total_contributors: 125
 - **Contributions**: 1
 - **Avatar**: https://avatars.githubusercontent.com/u/39011904?v=4
 - **GitHub**: https://github.com/Goldloli
-- **Repositories**: dora-rs/dora
-
-### abdelrhmaneldenary
-- **Contributions**: 1
-- **Avatar**: https://avatars.githubusercontent.com/u/138318355?v=4
-- **GitHub**: https://github.com/abdelrhmaneldenary
 - **Repositories**: dora-rs/dora
 
 ### Nas01010101
