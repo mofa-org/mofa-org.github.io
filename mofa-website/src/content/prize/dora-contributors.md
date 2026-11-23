@@ -3,7 +3,7 @@ type: "contributors"
 category: "dora"
 title: "Dora-rs Contributors"
 title_zh: "Dora-rs 贡献者"
-last_updated: "2026-11-22"
+last_updated: "2026-11-23"
 repositories: ["dora-rs/dora"]
 total_contributors: 125
 ---
@@ -11,7 +11,7 @@ total_contributors: 125
 
 这个文件在构建时自动更新，缓存从GitHub API获取的贡献者数据。
 
-**最后更新**: 2026-11-22
+**最后更新**: 2026-11-23
 **总贡献者数**: 125
 **数据来源**: dora-rs/dora
 
@@ -84,16 +84,16 @@ total_contributors: 125
 - **GitHub**: https://github.com/Hennzau
 - **Repositories**: dora-rs/dora
 
+### bobdingAI
+- **Contributions**: 28
+- **Avatar**: https://avatars.githubusercontent.com/u/4655609?v=4
+- **GitHub**: https://github.com/bobdingAI
+- **Repositories**: dora-rs/dora
+
 ### drindr
 - **Contributions**: 27
 - **Avatar**: https://avatars.githubusercontent.com/u/34709601?v=4
 - **GitHub**: https://github.com/drindr
-- **Repositories**: dora-rs/dora
-
-### bobdingAI
-- **Contributions**: 27
-- **Avatar**: https://avatars.githubusercontent.com/u/4655609?v=4
-- **GitHub**: https://github.com/bobdingAI
 - **Repositories**: dora-rs/dora
 
 ### Deepak-negi11
