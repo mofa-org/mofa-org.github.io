@@ -3,16 +3,16 @@ type: "contributors"
 category: "mofa"
 title: "MoFA Contributors"
 title_zh: "MoFA 贡献者"
-last_updated: "2026-11-24"
+last_updated: "2026-11-25"
 repositories: ["mofa-org/mofa","mofa-org/mofa-new"]
-total_contributors: 73
+total_contributors: 74
 ---
 # MoFA Contributors Cache
 
 这个文件在构建时自动更新，缓存从GitHub API获取的贡献者数据。
 
-**最后更新**: 2026-11-24
-**总贡献者数**: 73
+**最后更新**: 2026-11-25
+**总贡献者数**: 74
 **数据来源**: mofa-org/mofa, mofa-org/mofa-new
 
 ## Contributors Data
@@ -222,10 +222,16 @@ total_contributors: 73
 - **GitHub**: https://github.com/AftAb-25
 - **Repositories**: mofa-org/mofa
 
-### cshbli
+### SH20RAJ
 - **Contributions**: 8
-- **Avatar**: https://avatars.githubusercontent.com/u/18582329?v=4
-- **GitHub**: https://github.com/cshbli
+- **Avatar**: https://avatars.githubusercontent.com/u/66713844?v=4
+- **GitHub**: https://github.com/SH20RAJ
+- **Repositories**: mofa-org/mofa
+
+### xforcevesa
+- **Contributions**: 8
+- **Avatar**: https://avatars.githubusercontent.com/u/101607521?v=4
+- **GitHub**: https://github.com/xforcevesa
 - **Repositories**: mofa-org/mofa
 
 ### jv1i
@@ -234,10 +240,10 @@ total_contributors: 73
 - **GitHub**: https://github.com/jv1i
 - **Repositories**: mofa-org/mofa
 
-### xforcevesa
+### cshbli
 - **Contributions**: 8
-- **Avatar**: https://avatars.githubusercontent.com/u/101607521?v=4
-- **GitHub**: https://github.com/xforcevesa
+- **Avatar**: https://avatars.githubusercontent.com/u/18582329?v=4
+- **GitHub**: https://github.com/cshbli
 - **Repositories**: mofa-org/mofa
 
 ### santu8597
@@ -252,16 +258,10 @@ total_contributors: 73
 - **GitHub**: https://github.com/GrimNej
 - **Repositories**: mofa-org/mofa
 
-### nanana2002
-- **Contributions**: 11
-- **Avatar**: https://avatars.githubusercontent.com/u/98224910?v=4
-- **GitHub**: https://github.com/nanana2002
-- **Repositories**: mofa-org/mofa, mofa-org/mofa-new
-
-### starlitxiling
+### Ansh934
 - **Contributions**: 6
-- **Avatar**: https://avatars.githubusercontent.com/u/62335818?v=4
-- **GitHub**: https://github.com/starlitxiling
+- **Avatar**: https://avatars.githubusercontent.com/u/59768120?v=4
+- **GitHub**: https://github.com/Ansh934
 - **Repositories**: mofa-org/mofa
 
 ### Gege-Wang
@@ -270,11 +270,17 @@ total_contributors: 73
 - **GitHub**: https://github.com/Gege-Wang
 - **Repositories**: mofa-org/mofa
 
-### Ansh934
+### starlitxiling
 - **Contributions**: 6
-- **Avatar**: https://avatars.githubusercontent.com/u/59768120?v=4
-- **GitHub**: https://github.com/Ansh934
+- **Avatar**: https://avatars.githubusercontent.com/u/62335818?v=4
+- **GitHub**: https://github.com/starlitxiling
 - **Repositories**: mofa-org/mofa
+
+### nanana2002
+- **Contributions**: 11
+- **Avatar**: https://avatars.githubusercontent.com/u/98224910?v=4
+- **GitHub**: https://github.com/nanana2002
+- **Repositories**: mofa-org/mofa, mofa-org/mofa-new
 
 ### amrrdev
 - **Contributions**: 5
